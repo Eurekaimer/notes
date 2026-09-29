@@ -98,6 +98,7 @@ nav = [
             { "Math and Statistics" = "WebSource/数学(统计学)资源汇总.md"},
         ]},
         { "克林索尔的最后夏天" = "WebSource/克林索尔的最后夏天.md" },
+        { "Video Archive" = "WebSource/videos/index.md" },
         ]},
     { "Friends Link" = "friends-link.md" },
 ]
@@ -108,11 +109,13 @@ extra_css = [
     "stylesheets/anime-grid.css",
     "stylesheets/key.css",
     "stylesheets/mouse-color.css",
+    "stylesheets/videos.css",
     "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",  # 霞鹜文楷
 ]
 
 extra_javascript = [
     "javascripts/mathjax.js",
+    "javascripts/videos.js",
     "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
     "javascripts/mermaid.mjs"
 ]
