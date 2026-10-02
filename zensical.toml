@@ -119,26 +119,6 @@ nav = [
             "CS/CS231n/CS231n.md",
             { "Lecture 1 - Introduction" = "CS/CS231n/CS231n-Lecture1 Introduction.md" },
         ]},
-        { "Deep Learning" = "CS/DL/index.md" },
-        { "Machine Learning (西瓜书)" = "CS/西瓜书/index.md" },
-        { "Data Mining & Machine Learning" = [
-            "CS/数据挖掘与机器学习/index.md",
-            { "DMML_24Fall_Re" = "CS/数据挖掘与机器学习/DMML_24Fall_Re.md" },
-            { "关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明" = "CS/数据挖掘与机器学习/关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明.md" },
-            { "Lecture 3 信息论基础" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture3 信息论基础.md" },
-            { "Lecture 9 判别分析" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture9 判别分析.md" },
-            { "Lecture 12 KNN" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture12 KNN.md" },
-            { "Lecture 13 NNs" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture13 NNs.md" },
-        ]},
-        { "Distributed Storage & Computing" = [
-            "CS/分布式存储与计算/index.md",
-            { "LAB" = "CS/分布式存储与计算/分布式存储与计算_LAB.md" },
-        ]},
-        { "Statistical & Big Data Software" = [
-            "CS/统计与大数据软件/index.md",
-            { "Py-Lecture 1 基本操作" = "CS/统计与大数据软件/Py-Lecture-1 基本操作.md" },
-        ]},
-        { "Practical Tutorials" = "CS/实用教程/index.md" },
     ]},
     { "Tech" = [
         "Tech/index.md",
