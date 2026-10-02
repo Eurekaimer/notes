@@ -62,3 +62,24 @@
 - 脚本统一 IIFE + `document$` 订阅（兼容 instant navigation）+ 目标元素守卫；用 `const`/`let`、2 空格缩进、写分号；注释成句说明“为什么”
 - 组件逻辑只保留一份；跨页面复用抽到 `docs/javascripts/`，不复制 `<style>`/`<script>`
 - 一次性迁移脚本用完即删，不长期留在仓库
+
+## 字体分工
+
+字体按语义分工，变量定义在 `docs/stylesheets/extra.css`，并同步覆盖 Material 的
+`--md-text-font-family` / `--md-code-font-family`：
+
+| 变量 | 字体 | 用在哪里 |
+|---|---|---|
+| `--font-body` | Comic Neue + Noto Serif SC | 正文段落、列表（个人叙述） |
+| `--font-serif` | Source Serif 4 + Noto Serif SC | `blockquote`、定义/定理/引述类 admonition、`cite`、`.references` |
+| `--font-sans` | Lato + Noto Sans SC | 标题、导航、标签、页脚、卡片标题 |
+| `--font-mono` | Inconsolata | 代码、`pre`、`kbd` |
+
+Comic Neue 等英文字体没有中文字形，中文一律由后面的 CJK 字体回落（正文走宋体，
+标题走黑体）。新增组件时用变量而不是写死字体名。
+
+## 未发布内容
+
+未完成的笔记放在仓库根的 `_wip/` 下（在 `docs_dir` 之外），不会被构建、索引或出现在
+`nav` 中；准备好后再 `git mv` 回 `docs/` 并登记 nav。
+
