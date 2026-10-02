@@ -1,11 +1,13 @@
 /* 字体按「语义」分工：正文是个人叙述，引用/定义是正式内容，
-   标题与 UI 是结构，代码是机器文本。 */
+   标题与 UI 是结构，代码是机器文本。
+   注意：当前是「全部英文都用 Comic Neue」的试验状态（待确认），
+   恢复分工只需把下面的 --font-serif / --font-sans 改回原值。 */
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Lato:wght@400;700&family=Inconsolata:wght@400;700&display=swap");
 
 :root {
   --font-body: "Comic Neue", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
-  --font-serif: "Source Serif 4", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
-  --font-sans: "Lato", "Noto Sans SC", "Noto Sans CJK SC", "LXGW WenKai", sans-serif;
+  --font-serif: "Comic Neue", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
+  --font-sans: "Comic Neue", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
   --font-mono: "Inconsolata", "LXGW WenKai Mono", ui-monospace, monospace;
 
   /* 让 Material 自带的字体变量跟随同一套栈（导航、admonition 标题等） */
