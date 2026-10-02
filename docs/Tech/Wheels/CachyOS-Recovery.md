@@ -11,7 +11,7 @@ tags:
 
     声明：本文内容基本由 AI（LLM）扩写整理，主要就为方便我自己照着复制 CLI 命令——从零装好 CachyOS 并复原开发环境，命令照抄即可。
 
-    全文也发布在我的个人网站：[CachyOS-Recovery](https://www.eurekaimer.icu/Stathelper/Tech/Wheels/CachyOS-Recovery/) —— 外网 / GitHub 临时不通时，可以打开这个页面照抄。
+    全文也发布在我的个人网站：[CachyOS-Recovery](https://www.eurekaimer.icu/notes/Tech/Wheels/CachyOS-Recovery/) —— 外网 / GitHub 临时不通时，可以打开这个页面照抄。
 
 ## 目录 {#toc}
 
@@ -265,7 +265,7 @@ Niri 默认键大量用到 `Super`，它就是**键盘上的 Windows / 徽标键
 | 想干什么 | 快捷键 |
 |---|---|
 | 打开终端 | `Super` + `T` |
-| 打开帮助（快捷键悬浮窗） | `Super` + `Shift` + `/` |
+| 打开帮助（快捷键悬浮窗）| `Super` + `Shift` + `/` |
 | 打开应用启动器 | `Super` + `D` |
 
 记不住就按 `Super+Shift+/`，屏幕会弹出快捷键悬浮窗，照着按就行。
@@ -280,13 +280,13 @@ Niri 默认键大量用到 `Super`，它就是**键盘上的 Windows / 徽标键
 | 关闭窗口 | `Super+Q` |
 | 切换工作区 1~9 | `Super+1` … `Super+9` |
 | 把窗口移到工作区 1~9 | `Super+Ctrl+1` … `Super+Ctrl+9` |
-| 焦点移动（左/下/上/右） | `Super+←/↓/↑/→`（也支持 `Super+H/J/K/L`） |
+| 焦点移动（左/下/上/右）| `Super+←/↓/↑/→`（也支持 `Super+H/J/K/L`）|
 | 移动当前窗口位置 | `Super+Ctrl+←/↓/↑/→` |
 | 最大化窗口到屏幕边缘 | `Super+M` |
 | 全屏 | `Super+Shift+F` |
-| 概览（所有工作区总览） | `Super+O` |
+| 概览（所有工作区总览）| `Super+O` |
 | 锁屏 | `Super+Alt+L` |
-| 退出 Niri（带确认弹窗） | `Super+Shift+E` |
+| 退出 Niri（带确认弹窗）| `Super+Shift+E` |
 
 !!! question "按了没反应？"
 

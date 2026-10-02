@@ -4,7 +4,7 @@
 
 >In this project, you will write a program that measures typing speed. Additionally, you will implement typing autocorrect, which is a feature that attempts to correct the spelling of a word after a user types it. This project is inspired by [typeracer](https://play.typeracer.com/).
 
-大约需要4h
+大约需要 4h
 
 ## Phase 1: Typing
 
@@ -78,17 +78,17 @@ s  4  0  0  0  0
  s 4  3  4  3  2
 ```
 
-实际上就是利用二维数组的思路，然后结合**递推公式**填充矩阵即可，动态规划类型.
+实际上就是利用二维数组的思路，然后结合**递推公式**填充矩阵即可，动态规划类型。
 
 
 关于这个算法的正确性证明我翻了很多中文平台都没有看到写的比较像人的，如果理解不了为什么这样做就是最小的还是看一下这篇[paper](https://dl.acm.org/doi/pdf/10.1145/321796.321811)，这里也贴一个本人的理解，首先我们需要对三种操作都进行分析，三种操作分别是替换，插入，删除权重相同，并且三种操作可选取的位置都是任意的，那么就会出现一个问题，采用**逆向思维**，再进行**最后一步操作**的时候恰好两个字符串对齐，那么String1和String2的大半部分一定已经相同了(一定存在一个特别大程度相似的公共字符串)
 
 下面开始分类讨论：
 
-+ 替换：只需要一步替换就可以完成的话，两个字符串的长度一定已经相同并且替换位点的后续已经对齐，前面也是对齐的，那么不妨假设前面有$i$个，那么问题就是前面$i$个对齐的最小次数+1
-+ 插入、删除：长度相差1，同样对位点考虑即可，后续问题即变为一个小矩阵，以那个位点为新的顶点进行递归
++ 替换：只需要一步替换就可以完成的话，两个字符串的长度一定已经相同并且替换位点的后续已经对齐，前面也是对齐的，那么不妨假设前面有 $i$ 个，那么问题就是前面 $i$ 个对齐的最小次数+1
++ 插入、删除：长度相差 1，同样对位点考虑即可，后续问题即变为一个小矩阵，以那个位点为新的顶点进行递归
 
-可以参考Leetcode 72虽然我觉得题解写的也不清楚
+可以参考 Leetcode 72 虽然我觉得题解写的也不清楚
 
 ### (Optional) Extension: Final Diff (0 pts)
 

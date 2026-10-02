@@ -387,7 +387,7 @@ sudo iptables -I FORWARD 1 -o waydroid0 -j ACCEPT
 
 如果加入以后 Waydroid 可以正常联网，就说明问题确实在 Docker/防火墙转发这一层。
 
-对于长期同时使用 Docker 和 Waydroid 的机器，也可以在 Docker 配置中避免 Docker主动把 forwarding policy 修改成 DROP。
+对于长期同时使用 Docker 和 Waydroid 的机器，也可以在 Docker 配置中避免 Docker 主动把 forwarding policy 修改成 DROP。
 
 如果 `/etc/docker/daemon.json` 已经存在其他设置，请将下面的字段合并进去，而不是直接覆盖整个文件：
 

@@ -4,7 +4,7 @@
 
 这主要是一个二人的零和博弈游戏，深究应该会涉及到博弈论相关的知识
 
-大约需要4h
+大约需要 4h
 
 ## Rule
 
@@ -17,12 +17,12 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 - **Boar Brawl**. A player who rolls zero dice scores three times the absolute difference between the tens digit of the opponent’s score and the ones digit of the current player’s score, or 1, whichever is higher. The ones digit refers to the rightmost digit and the tens digit refers to the second-rightmost digit. If a player's score is a single digit (less than 10), the tens digit of that player's score is 0.
 
-可以选择不掷色子获得自身个位数与对方十位数差的绝对值的三倍的分数(最小为1)
+可以选择不掷色子获得自身个位数与对方十位数差的绝对值的三倍的分数（最小为 1）
 
 
 - **Sus Fuss**. We call a number [_sus_](https://en.wikipedia.org/wiki/Sus_%28genus%29) if it has exactly 3 or 4 factors, including 1 and the number itself. If, after rolling, the current player's score is a sus number, they gain enough points such that their score instantly increases to the next prime number.
 
-掷色子后的分数如果恰好有三个或四个因数(包括1和本身)，那么自动将分数提高到下一个质数
+掷色子后的分数如果恰好有三个或四个因数（包括 1 和本身），那么自动将分数提高到下一个质数
 
 ## Begin
 
@@ -34,7 +34,7 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 >In the first phase, you will develop a simulator for the game of Hog.
 
-值得注意的是每个Problem在正式进行代码书写前，都有一个增进理解的What printed？的项目，主要是有一个对问题的划分意识
+值得注意的是每个 Problem 在正式进行代码书写前，都有一个增进理解的 What printed？的项目，主要是有一个对问题的划分意识
 
 ### Problem 0 (0 pt)
 
@@ -42,11 +42,11 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 ### Problem 1 (2 pt)
 
-完成对于sow_sad的判断，单个回合掷色子得到的分数计算
+完成对于 sow_sad 的判断，单个回合掷色子得到的分数计算
 
 ### Problem 2 (2 pt)
 
-完成Boar-Brawl的实现，计算不抛掷色子情况下的得分判断
+完成 Boar-Brawl 的实现，计算不抛掷色子情况下的得分判断
 
 ### Problem 3 (2 pt)
 
@@ -54,11 +54,11 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 ### Problem 4 (2 pt)
 
-这是为了sus规则的函数，到这里实现了所有的规则
+这是为了 sus 规则的函数，到这里实现了所有的规则
 
 ### Problem 5 (4 pt)
 
-实现最核心的play函数
+实现最核心的 play 函数
 
 ## Interlude: User Interfaces
 
@@ -76,7 +76,7 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 ### Problem 6 (2 pt)
 
-直接lambda实现就好了
+直接 lambda 实现就好了
 
 ### Problem 7 (2 pt)
 
@@ -88,11 +88,11 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 >**Important:** To implement this function, you will need to use a new piece of Python syntax. We would like to write a function that accepts an arbitrary number of arguments, and then calls another function using exactly those arguments. Here's how it works.
 
 
-只需要使用例子中的`*args`即可
+只需要使用例子中的 `*args` 即可
 
 ### Problem 9 (2 pt)
 
-下面是一个有问题的代码，笔者想了很久，发现在比较时会调用roll_dice函数，而判断后赋值调用第二次，这就会导致结果受到影响
+下面是一个有问题的代码，笔者想了很久，发现在比较时会调用 roll_dice 函数，而判断后赋值调用第二次，这就会导致结果受到影响
 
 ```Python
 num = 1  
@@ -149,6 +149,6 @@ return 0 if sus_update(0, score, opponent_score) >= GOAL else 6
 
 
 
-在绝对的运气面前策略似乎不太有效呢(欧皇发言doge)
+在绝对的运气面前策略似乎不太有效呢（欧皇发言 doge）
 
 ![hog](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/hog)

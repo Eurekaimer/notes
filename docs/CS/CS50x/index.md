@@ -22,9 +22,9 @@ tags:
 采用如下工作流：
 
 
-1. 课程提供了相当丰富的Notes几乎可以自学(bushi)
+1. 课程提供了相当丰富的 Notes 几乎可以自学 (bushi)
 2. 完全可以不做笔记认真听，因为确实难度不太大
-3. 语言debuff在经过长时间听力后可以有好转
+3. 语言 debuff 在经过长时间听力后可以有好转
 
 ## My Timeline and some learning tips
 
@@ -34,59 +34,59 @@ tags:
 2. Reading the syllabus in the [CS50x](https://cs50.harvard.edu/x/2025/syllabus/) and get a concept of the workflow.
 
 
-> [!todo] [Week 0 Scratch](./Week%200%20Scratch.md) 
-> - [x] Finish Time: 2024.12.06
-> 	- [x] Video(2h) 
-> - [x] Problem Set 0
-> 	Have a try in problem set (not make a project but know basic operations)
-> - [x] Scratch [website](https://scratch.mit.edu/)
+!!! info "[Week 0 Scratch](./Week%200%20Scratch.md)"
+    - [x] Finish Time: 2024.12.06
+    	- [x] Video(2h)
+    - [x] Problem Set 0
+    	Have a try in problem set (not make a project but know basic operations)
+    - [x] Scratch [website](https://scratch.mit.edu/)
 
 
-> [!todo] [Week 1 C](./Week%201%20C.md)
-> - [x] Finish Time: 2025.1.10
-> 	- [x] Video(2h) 
-> - [x] Problem Set 1
-> 	- [x]  Hello
-> 	- [x]  mario-more
-> 	- [x]  cash
-> 	- [x]  credit
+!!! info "[Week 1 C](./Week%201%20C.md)"
+    - [x] Finish Time: 2025.1.10
+    	- [x] Video(2h)
+    - [x] Problem Set 1
+    	- [x]  Hello
+    	- [x]  mario-more
+    	- [x]  cash
+    	- [x]  credit
 
 
-> [!todo] [Week 2 Arrays](./Week%202%20Arrays.md)
-> - [x] Finished Time: 2025.7.4
-> 	- [x] Video(2h)
-> 	- [x] Section(1h)
-> 	- [x] Shorts 
-> - [x] Problem Set 2
-> 	- [x] Scrabble 
-> 	- [x] Readability
-> 	- [x] Caesar 
-> 	- [x] Substitution
+!!! info "[Week 2 Arrays](./Week%202%20Arrays.md)"
+    - [x] Finished Time: 2025.7.4
+    	- [x] Video(2h)
+    	- [x] Section(1h)
+    	- [x] Shorts
+    - [x] Problem Set 2
+    	- [x] Scrabble
+    	- [x] Readability
+    	- [x] Caesar
+    	- [x] Substitution
 
 
-> [!todo] [Week 3  Algorithms]()
-> - [x] Finished Time: 2025.7.4
-> 	- [x] Video(2h)
-> 	- [x] Section
-> 	- [x] Shorts 
-> - [x] Problem Set 3
+!!! info "Week 3  Algorithms"
+    - [x] Finished Time: 2025.7.4
+    	- [x] Video(2h)
+    	- [x] Section
+    	- [x] Shorts
+    - [x] Problem Set 3
 
 
-> [!todo] [Week 4 Memory]()
-> - [x] Finished Time: 2025.7.4
-> 	- [x] Video(2h)
-> 	- [x] Section
-> 	- [x] Shorts 
-> - [x] Problem Set 4
+!!! info "Week 4 Memory"
+    - [x] Finished Time: 2025.7.4
+    	- [x] Video(2h)
+    	- [x] Section
+    	- [x] Shorts
+    - [x] Problem Set 4
 
 
 
-> [!todo] [Week 5 Data Structures]()
-> - [x] Finished Time: 2025.7.4
-> 	- [x] Video(2h)
-> 	- [x] Section
-> 	- [x] Shorts 
-> - [x] Problem Set 5
+!!! info "Week 5 Data Structures"
+    - [x] Finished Time: 2025.7.4
+    	- [x] Video(2h)
+    	- [x] Section
+    	- [x] Shorts
+    - [x] Problem Set 5
 
 
 

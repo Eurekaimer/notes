@@ -2,14 +2,14 @@
 
 ## Lecture1 - 绪论 & 基础复习
 
-### 1. 课程考核与大作业 (关键信息)
+### 1. 课程考核与大作业（关键信息）
 
 - [x] **成绩构成**: 闭卷考试 (60%) + 实验 (20%) + 大作业 (20%)
-- [x] **大作业 (四选一, 15-18周展示)**:
+- [x] **大作业（四选一，15-18 周展示）**:
     1.  **遥感图像飞机检测**: 目标检测 (Object Detection).
-    2.  **“福”字识别**: 图像分类, 重点解决**类别不平衡 (Class Imbalance)**.
-    3.  **台风预报**: 序列预测/回归, 需处理时空数据.
-    4.  **图像区域分割提取**: 语义分割, 核心难点是**保持空间相关性**.
+    2.  **“福”字识别**: 图像分类，重点解决**类别不平衡 (Class Imbalance)**.
+    3.  **台风预报**: 序列预测/回归，需处理时空数据。
+    4.  **图像区域分割提取**: 语义分割，核心难点是**保持空间相关性**.
 
 ### 2. 数据挖掘核心概念 (Data Mining Fundamentals)
 
@@ -17,10 +17,10 @@
 
 传统的统计分析面临新数据的四大挑战，这也是引入机器学习算法的动机：
 
-*   **可伸缩性 (Scalability)**: 数据无法一次性放入内存，需要 Out-of-core 或分布式算法.
-*   **高维性 (High Dimensionality)**: 维度灾难 (Curse of Dimensionality), 数据稀疏.
-*   **异构性 (Heterogeneous)**: 混合属性 (非结构化文本, 图像, 时间序列).
-*   **分布性 (Distributed)**: 数据地理分布, 需解决隐私与通信代价.
+*   **可伸缩性 (Scalability)**: 数据无法一次性放入内存，需要 Out-of-core 或分布式算法。
+*   **高维性 (High Dimensionality)**: 维度灾难 (Curse of Dimensionality), 数据稀疏。
+*   **异构性 (Heterogeneous)**: 混合属性（非结构化文本，图像，时间序列）.
+*   **分布性 (Distributed)**: 数据地理分布，需解决隐私与通信代价。
 
 #### 2.2 任务分类 (Taxonomy)
 
@@ -31,15 +31,15 @@
 利用训练数据学习映射函数 $y=f(x|\theta)$
 
 1.  **分类 (Classification)**
-    *   **输入**: 样本 $\mathbf{x} \in \mathbb{R}^n$, 标签 $c$ (离散).
-    *   **目标**: 学习判别界面或概率分布.
+    *   **输入**: 样本 $\mathbf{x} \in \mathbb{R}^n$, 标签 $c$ （离散）.
+    *   **目标**: 学习判别界面或概率分布。
     *   **常用算法**: Decision Tree, KNN, SVM, ANN, Naive Bayes.
 2.  **回归 (Regression)**
-    *   **输入**: 样本 $\mathbf{x}$, 标签 $y$ (连续).
-    *   **目标**: 最小化预测误差.
-    *   **公式**: $(w^*, b^*) = \arg\min_{w,b} \sum_{i=1}^{m} (f(x_i) - y_i)^2$ (以线性回归MSE为例).
+    *   **输入**: 样本 $\mathbf{x}$, 标签 $y$ （连续）.
+    *   **目标**: 最小化预测误差。
+    *   **公式**: $(w^*, b^*) = \arg\min_{w,b} \sum_{i=1}^{m} (f(x_i) - y_i)^2$ （以线性回归 MSE 为例）.
 3.  **异常检测 (Anomaly Detection)**
-    *   **目标**: 识别显著偏离分布的 $x$. 应用于欺诈检测、网络入侵.
+    *   **目标**: 识别显著偏离分布的 $x$. 应用于欺诈检测、网络入侵。
 
 ##### B. 描述性任务 (Descriptive) - Unsupervised
 
@@ -49,7 +49,7 @@
     *   **目标**: 最大化类间距离 (Inter-cluster), 最小化类内距离 (Intra-cluster).
     *   **度量**: 常用欧氏距离 (Euclidean Distance).
 2.  **关联规则 (Association Rule)**
-    *   **形式**: $A \rightarrow B$ (蕴含关系).
+    *   **形式**: $A \rightarrow B$ （蕴含关系）.
     *   **应用**: 购物篮分析 (Market Basket Analysis).
 3.  **序列模式 (Sequential Pattern)**
     *   关联规则 + **时间维度** (Time attribute).
@@ -58,11 +58,11 @@
 
 #### 3.1 问题抽象化 (Abstraction) - 以“鱼类分类”为例
 
-*   **输入**: 物理对象 (鱼).
+*   **输入**: 物理对象（鱼）.
 *   **特征工程 (Feature Extraction)**:
-    *   物理特征 $\rightarrow$ 数值特征向量 $\mathbf{x} = [x_1, x_2]^T$ (如 $x_1$=长度, $x_2$=亮度).
-    *   **特征优选**: 权衡特征数量 (维度) 与 计算复杂度/过拟合风险.
-*   **类别抽象**: $\omega_1$ (鲑鱼), $\omega_2$ (鲈鱼).
+    *   物理特征 $\rightarrow$ 数值特征向量 $\mathbf{x} = [x_1, x_2]^T$ （如 $x_1$=长度， $x_2$=亮度）.
+    *   **特征优选**: 权衡特征数量（维度）与 计算复杂度/过拟合风险。
+*   **类别抽象**: $\omega_1$ （鲑鱼）, $\omega_2$ （鲈鱼）.
 *   **决策规则 (Decision Rule)**:
     *   设定阈值 $x_0$ (Threshold).
     *   Rule: If $x < x_0$ then $\omega_1$, else $\omega_2$.
@@ -614,10 +614,10 @@ $$ w^* = S_W^{-1} (m_1 - m_2) $$
 
 $$ J_p(a) = \sum_{y \in Y_{error}} (-a^T y) $$
 
-*   若所有样本正确分类，$Y_{error}$ 为空，$J_p(a) = 0$ (极小值)。
+*   若所有样本正确分类，$Y_{error}$ 为空，$J_p(a) = 0$ （极小值）。
 *   若有错分，错分样本的 $a^T y < 0$，则 $-a^T y > 0$，导致 $J_p(a) > 0$。
 
-#### 4.4 优化算法 (梯度下降)
+#### 4.4 优化算法（梯度下降）
 使用梯度下降法迭代求解 $a$：
 
 $$ a(k+1) = a(k) + \rho_k \sum_{y \in Y_{error}} y $$
@@ -652,9 +652,9 @@ $$ a(k+1) = a(k) + \rho_k \sum_{y \in Y_{error}} y $$
     $$ \text{Decide } \omega_i \text{ if } P(\omega_i | x) > P(\omega_j | x), \forall j \neq i $$
 
 *   **等价规则**:
-    *   比较分子 (忽略 $P(x)$): $p(x | \omega_i) P(\omega_i) > p(x | \omega_j) P(\omega_j)$
-    *   似然比检验: $\frac{p(x | \omega_i)}{p(x | \omega_j)} > \frac{P(\omega_j)}{P(\omega_i)}$
-    *   对数似然比: $\ln p(x | \omega_i) + \ln P(\omega_i) > \ln p(x | \omega_j) + \ln P(\omega_j)$
+    *   比较分子（忽略 $P(x)$）: $p(x | \omega_i) P(\omega_i) > p(x | \omega_j) P(\omega_j)$
+    *   似然比检验： $\frac{p(x | \omega_i)}{p(x | \omega_j)} > \frac{P(\omega_j)}{P(\omega_i)}$
+    *   对数似然比： $\ln p(x | \omega_i) + \ln P(\omega_i) > \ln p(x | \omega_j) + \ln P(\omega_j)$
 
 #### 2.2 特点
 *   在概率意义上是最优的。
@@ -678,7 +678,7 @@ $$ a(k+1) = a(k) + \rho_k \sum_{y \in Y_{error}} y $$
 
     $$ \alpha^* = \arg \min_{\alpha_i} R(\alpha_i | x) $$
 
-*   **与最小错误率的关系**: 当采用 **0-1 损失函数** (对错分惩罚为1，正确为0) 时，最小风险决策等价于最小错误率决策。
+*   **与最小错误率的关系**: 当采用 **0-1 损失函数**（对错分惩罚为 1，正确为 0）时，最小风险决策等价于最小错误率决策。
 
 ### 4. 最小最大决策 (Minimax Decision)
 
@@ -701,8 +701,8 @@ $$ g_i(x) = -\frac{1}{2}(x - \mu_i)^T \Sigma_i^{-1} (x - \mu_i) - \frac{1}{2} \l
 
 #### 特殊情况下的决策面
 
-1.  **$\Sigma_i = \sigma^2 I$ (各维度独立等方差)**: 决策面是**线性**的，退化为最小欧氏距离分类器（考虑先验修正）。
-2.  **$\Sigma_i = \Sigma$ (各类协方差矩阵相同)**: 决策面是**线性**的 (Linear Discriminant Analysis, LDA)。
+1.  **$\Sigma_i = \sigma^2 I$ （各维度独立等方差）**: 决策面是**线性**的，退化为最小欧氏距离分类器（考虑先验修正）。
+2.  **$\Sigma_i = \Sigma$ （各类协方差矩阵相同）**: 决策面是**线性**的 (Linear Discriminant Analysis, LDA)。
 3.  **$\Sigma_i$ 任意**: 决策面是**二次曲面** (Quadratic Discriminant Analysis, QDA)，如双曲线、椭圆、抛物线等。
 
 ## Lecture8 - 线性分类器进阶 (Advanced Linear Classifiers)
@@ -722,7 +722,7 @@ $$ g_i(x) = -\frac{1}{2}(x - \mu_i)^T \Sigma_i^{-1} (x - \mu_i) - \frac{1}{2} \l
     $$ J(a) = || Ya - b ||^2 $$
 
     *   $Y$: 样本矩阵。
-    *   $b$: 正常数向量（如全1向量）。
+    *   $b$: 正常数向量（如全 1 向量）。
 *   **准则二**: 利用不等式约束。
 
     $$ \max J(a) = \sum_{i=1}^N \frac{1 + \text{sgn}(a^T y_i)}{2} $$
@@ -748,7 +748,7 @@ $$ g_i(x) = -\frac{1}{2}(x - \mu_i)^T \Sigma_i^{-1} (x - \mu_i) - \frac{1}{2} \l
 
 $$ J(a) = || Ya - b ||^2 = \sum_{i=1}^N (a^T y_i - b_i)^2 $$
 
-其中 $Y$ 是样本矩阵（每一行为一个样本），$b$ 是目标向量（通常设为全1）。
+其中 $Y$ 是样本矩阵（每一行为一个样本），$b$ 是目标向量（通常设为全 1）。
 
 #### 2.3 极值解
 通过对 $J(a)$ 求导并令其为 0，可得解析解：
@@ -776,8 +776,8 @@ $$ a^* = (Y^T Y)^{-1} Y^T b $$
 
 #### 3.2 实验与应用
 
-*   **实验1**: 手写LBP特征提取。LBP (Local Binary Pattern) 是一种纹理特征，对光照变化鲁棒。
-*   **实验2**: 垂直平分分类器编程实现。
+*   **实验 1**: 手写 LBP 特征提取。LBP (Local Binary Pattern) 是一种纹理特征，对光照变化鲁棒。
+*   **实验 2**: 垂直平分分类器编程实现。
 
 **Final Note**: 线性分类器是机器学习的基石。虽然现代深度学习模型（如 CNN, Transformer）在复杂任务上表现更好，但线性模型因其可解释性强、计算效率高，在很多场景下仍然是首选基准模型。
 

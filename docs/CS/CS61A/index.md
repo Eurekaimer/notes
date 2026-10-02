@@ -64,9 +64,9 @@ tags:
 
 - [x] 版本选用：2024spring
 
-> 由于一些版权上的问题UCB似乎向非UCB的学习者封闭了Archive的通道，所以这里建议选用国内的备份站点和B站的视频
+> 由于一些版权上的问题 UCB 似乎向非 UCB 的学习者封闭了 Archive 的通道，所以这里建议选用国内的备份站点和 B 站的视频
 
-- [x] 时间安排：预计200h
+- [x] 时间安排：预计 200h
 
 - [x] 语言：Python
 
@@ -74,11 +74,11 @@ tags:
 
 - [x] 参考学习顺序：videos-reading-q&a-(lab/disc/hw)-project
 
-  
+
 
 完成的时间轴：TBA(2025.04.05-)
 
-以下是所有内容的完成情况(按照顺序排列):
+以下是所有内容的完成情况（按照顺序排列）:
 
 
 
@@ -124,8 +124,8 @@ tags:
 
 ## 资源汇总
 
-CS61a的资源参考(24spring)如下：
-1. [ZJU课程评价平台](https://conanhujinming.github.io/comments-for-awesome-courses/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AF%BC%E8%AE%BA/UC%20BerkeleyCS61A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9E%84%E9%80%A0%E4%B8%8E%E8%A7%A3%E9%87%8A/)
+CS61a 的资源参考 (24spring) 如下：
+1. [ZJU 课程评价平台](https://conanhujinming.github.io/comments-for-awesome-courses/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AF%BC%E8%AE%BA/UC%20BerkeleyCS61A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9E%84%E9%80%A0%E4%B8%8E%E8%A7%A3%E9%87%8A/)
 2. [CSDIY](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Python/CS61A/?h=cs61a#_1)
 3. [Videos/Recordings](https://www.bilibili.com/video/BV1sy411z7nA/?vd_source=483c12ed150608294868953a0c6e7078)
 4. [参考实现](https://github.com/shuo-liu16/CS61A)
@@ -134,26 +134,26 @@ CS61a的资源参考(24spring)如下：
 
 文章参考：
 
-1. [CS61a学习总结](https://zhuanlan.zhihu.com/p/640290712)
+1. [CS61a 学习总结](https://zhuanlan.zhihu.com/p/640290712)
 2. [CS61A 学习经验&感想](https://zhuanlan.zhihu.com/p/486323075)
 
 
-也可以使用[24fall备份(可fork完成作业)](https://github.com/InsideEmpire/CS61A-Assignments?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E)
+也可以使用[24fall 备份（可 fork 完成作业）](https://github.com/InsideEmpire/CS61A-Assignments?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E)
 
 
 ## Question and Feedback
 
 
-实际上，这门课的视频几乎可以说是完全包含于textbook中了，我认为如果有一定基础完全可以不看视频直接看书本然后完成lab和hw即可
+实际上，这门课的视频几乎可以说是完全包含于 textbook 中了，我认为如果有一定基础完全可以不看视频直接看书本然后完成 lab 和 hw 即可
 
 
 
 ### Lab 00
 
-+ 在线评测如何local使用OK(不通过UCBedu邮箱)的问题: 在正确的目录中(ls contains ok) type `python ok --local` in terminal
++ 在线评测如何 local 使用 OK（不通过 UCBedu 邮箱）的问题：在正确的目录中 (ls contains ok) type `python ok --local` in terminal
 
 
 
-### HW 03 
+### HW 03
 
 + 关于匿名实现递归的信仰之跃

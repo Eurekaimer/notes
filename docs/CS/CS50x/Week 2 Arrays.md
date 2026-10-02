@@ -131,18 +131,18 @@ float average(int length, int array[])
 
 - A `string` is simply an array of variables of type `char`: an array of characters.
 - To explore `char` and `string`, type `code hi.c` in the terminal window and write code as follows:
-  
+
 ```
     // Prints chars
-    
+
     #include <stdio.h>
-    
+
     int main(void)
     {
         char c1 = 'H';
         char c2 = 'I';
         char c3 = '!';
-    
+
         printf("%c%c%c\n", c1, c2, c3);
     }
 ```
@@ -150,7 +150,7 @@ float average(int length, int array[])
 Notice that this will output a string of characters.
 
 
-A string is a sequence of characters like a array of the type of characters. 
+A string is a sequence of characters like a array of the type of characters.
 
 > NUL says string end here.
 
@@ -234,13 +234,13 @@ Notice that the program iterates through each character of the string. The `tou
 
 - `Command-line arguments` are those arguments that are passed to your program at the command line. For example, all those statements you typed after `clang` are **considered command line arguments**. You can use these arguments in your own programs!
 - In your terminal window, type `code greet.c` and write code as follows:
-  
+
     ```
     // Uses get_string
-    
+
     #include <cs50.h>
     #include <stdio.h>
-    
+
     int main(void)
     {
         string answer = get_string("What's your name? ");
@@ -254,10 +254,10 @@ Notice that this says `hello` to the user.
 
     ```
     // Prints a command-line argument
-    
+
     #include <cs50.h>
     #include <stdio.h>
-    
+
     int main(int argc, string argv[])
     {
         if (argc == 2)
@@ -281,10 +281,10 @@ Notice that this program knows both `argc`, **the number of command line argume
 
 ```
     // Prints command-line arguments
-    
+
     #include <cs50.h>
     #include <stdio.h>
-    
+
     int main(int argc, string argv[])
     {
         for (int i = 0; i < argc; i++)
@@ -301,13 +301,13 @@ Notice that this program knows both `argc`, **the number of command line argume
 - When a program ends, a special exit code is provided to the computer.
 - When a program exits without error, a status code of `0` is provided to the computer. Often, when an error occurs that results in the program ending, a status of `1` is provided by the computer.
 - You could write a program as follows that illustrates this by typing `code status.c` and writing code as follows:
-  
+
     ```
     // Returns explicit value from main
-    
+
     #include <cs50.h>
     #include <stdio.h>
-    
+
     int main(int argc, string argv[])
     {
         if (argc != 2)
@@ -319,7 +319,7 @@ Notice that this program knows both `argc`, **the number of command line argume
         return 0;
     }
     ```
-    
+
 
 Notice that if you fail to provide `./status David`, you will get an exit status of `1`. However, if you do provide `./status David`, you will get an exit status of `0`.
 

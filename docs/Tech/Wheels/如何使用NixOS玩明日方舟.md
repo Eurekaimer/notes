@@ -6,7 +6,7 @@ tags:
 
 # 如何使用 NixOS 玩明日方舟
 
->本文档总结在 NixOS 系统下完美运行明日方舟 PC 版的完整流程。核心要点是使用 unstable 分支的最新工具(Lutris+ProtonPlus)，并配合 dwproton 兼容层来绕过 ACE 反作弊系统的检测
+>本文档总结在 NixOS 系统下完美运行明日方舟 PC 版的完整流程。核心要点是使用 unstable 分支的最新工具 (Lutris+ProtonPlus)，并配合 dwproton 兼容层来绕过 ACE 反作弊系统的检测
 
 最后你会得到下面的结果：
 
@@ -20,7 +20,7 @@ tags:
 
 具体操作过程如下：
 
-+ inputs 区域(configuration.nix or others)加入：
++ inputs 区域 (configuration.nix or others) 加入：
 
 ```
 nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -36,7 +36,7 @@ pkgs-unstable.protonplus
 pkgs-unstable.umu-launcher
 ```
 
-+ 应用更改并重建系统(如果你使用了flake)：
++ 应用更改并重建系统（如果你使用了 flake）：
 
 ```
 sudo nixos-rebuild switch --flake .

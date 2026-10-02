@@ -3,7 +3,7 @@
 
 ## Summary
 
-大概需要2.5小时，Lab质量相当高，可以很好的弥补理解上的一些问题
+大概需要 2.5 小时，Lab 质量相当高，可以很好的弥补理解上的一些问题
 
 ## Videos(1h)
 
@@ -60,7 +60,7 @@ sqrt = inverse(square)
 
 Choose a name for valued function or parameters.
 
-Some name guideline. 
+Some name guideline.
 
 #### Errors & Tracebacks
 
@@ -103,13 +103,13 @@ def horse(mask):
 	def mask(horse):
 		return horse
 	return horse(mask)
-	
+
 mask = lambda horse: horse(2)
 
 horse(mask)
 ```
 
-有一种当年玩指针的美感(只要正确的指向就可以明白，这里的环境图确实是加进理解的一种手段)
+有一种当年玩指针的美感（只要正确的指向就可以明白，这里的环境图确实是加进理解的一种手段）
 
 
 ![env-horse-mask](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/horse-mask)
@@ -166,9 +166,9 @@ def sum_squares_ up_to(n):
 
 ## Lab 02(1h)
 
-前面是一些基础的Review部分，算是强行带你复习吗?感觉还是不错的，给出了Short-circuiting这个概念详细的解释
+前面是一些基础的 Review 部分，算是强行带你复习吗？感觉还是不错的，给出了 Short-circuiting 这个概念详细的解释
 
-这里需要注意lambda表达式和def表达式的一些细微区别
+这里需要注意 lambda 表达式和 def 表达式的一些细微区别
 
 
 ```Python
@@ -229,7 +229,7 @@ print(3) or ''
 
 
 
-注：这个lab真是大开眼界了
+注：这个 lab 真是大开眼界了
 
 
 ### Coding Practice
@@ -269,7 +269,7 @@ while True:
 
 #### Q8: I Heard You Liked Functions...
 
-这个题目也是够套娃的...但是也还好逻辑比较简单
+这个题目也是够套娃的……但是也还好逻辑比较简单
 
 Define a function `cycle` that takes in three functions `f1`, `f2`, and `f3`, as arguments. `cycle` will return another function `g` that should take in an integer argument `n` and return another function `h`. That final function `h` should take in an argument `x` and cycle through applying `f1`, `f2`, and `f3` to `x`, depending on what `n` was. Here's what the final function `h` should do to `x` for a few values of `n`:
 
@@ -319,7 +319,7 @@ return g
 
 ## Disc 02(30min)
 
-相应的测试代码在CS61A的仓库内
+相应的测试代码在 CS61A 的仓库内
 
 
 ### Q1: Warm Up
@@ -352,7 +352,7 @@ return give_digit
 ```
 
 
-答案使用的是lambda匿名封装(效果可能差不多但是有点帅，想学)
+答案使用的是 lambda 匿名封装（效果可能差不多但是有点帅，想学）
 
 ```Python
 return lambda x: (x // pow(10, k-1)) % 10
@@ -374,5 +374,5 @@ return check
 ```
 
 
-总的来说Disc还是比较简单的
+总的来说 Disc 还是比较简单的
 

@@ -12,7 +12,7 @@ Todays's agenda:
 
 ## Brief History
 
-How is the vision intelligence work? That's the core of the course. If you know the human's vision principle you can pass. Introduce the principle of vision(Nobel Prize), and the first Ph.D paper in CV btw and more history. 
+How is the vision intelligence work? That's the core of the course. If you know the human's vision principle you can pass. Introduce the principle of vision(Nobel Prize), and the first Ph.D paper in CV btw and more history.
 
 How to recover information from 2D to 3D is the core question. You should use some validation tools(like triangle methods). And our language is 1D(generated "thing") but the real world is not 1D, so the language and vision is very different(CV and NLP).
 

@@ -19,10 +19,10 @@ Video was deployed in [Youtube](https://www.youtube.com/watch?v=RaHRvnb0dY8), th
 
 + 快速调用目录： <kbd>:</kbd>
 + 翻页 <kbd>Space</kbd> 下翻一屏， <kbd>Shift</kbd> + <kbd>Space</kbd> 上翻一屏
-+ 适应宽度： 按 <kbd>F9</kbd> 。让页面宽度自动填满屏幕（最常用的视图设置）
++ 适应宽度：按 <kbd>F9</kbd> 。让页面宽度自动填满屏幕（最常用的视图设置）
 + 开头/结尾： <kbd>gg</kbd> 去第一页， <kbd>G</kbd> / <kbd>shift</kbd> + <kbd>G</kbd> 去最后一页
-+ 去特定页码： 输入数字（例如 NUM），然后按 <kbd>gg</kbd> 
-+ 目录： 按 <kbd>t</kbd> 打开可搜索的目录
++ 去特定页码：输入数字（例如 NUM），然后按 <kbd>gg</kbd>
++ 目录：按 <kbd>t</kbd> 打开可搜索的目录
 
 ### 行聚焦的功能
 
@@ -35,9 +35,9 @@ Video was deployed in [Youtube](https://www.youtube.com/watch?v=RaHRvnb0dY8), th
 
 ### Smart Jump
 
-- 查看引用（预览）： **鼠标右键**点击绿色的引用链接（如 `[1]` 或 `Figure 3`）。
+- 查看引用（预览）：**鼠标右键**点击绿色的引用链接（如 `[1]` 或 `Figure 3`）。
     - _效果_：会在屏幕中间弹出一个小窗口预览那个位置的内容，不用真正跳过去。
-- 跳转引用： **鼠标中键点击**（或 <kbd>ctrl</kbd> + 点击）。
+- 跳转引用：**鼠标中键点击**（或 <kbd>ctrl</kbd> + 点击）。
     - _效果_：直接跳转到引用位置。
 - **History:** 按 <kbd>Backspace</kbd> 或 <kbd>shift</kbd> + <kbd>Backspace</kbd>。
     - _效果_：看完引用后，按一下马上回到刚才读的正文
@@ -45,9 +45,9 @@ Video was deployed in [Youtube](https://www.youtube.com/watch?v=RaHRvnb0dY8), th
 
 ### 高亮与标注 (Highlights)
 
-- 高亮文本： 选中文字 -> 按 <kbd>h</kbd> -> 再按一个**小写字母**（作为分类，例如 <kbd>a</kbd> ）
-    - _例如：选中一段话，按 <kbd>h</kbd> 然后按 <kbd>r</kbd> (代表 Red)，这段话就会被标记
-- 查看所有高亮： 按 <kbd>gh</kbd>
+- 高亮文本：选中文字 -> 按 <kbd>h</kbd> -> 再按一个**小写字母**（作为分类，例如 <kbd>a</kbd> ）
+    - _例如：选中一段话，按 <kbd>h</kbd> 然后按 <kbd>r</kbd> （代表 Red），这段话就会被标记
+- 查看所有高亮：按 <kbd>gh</kbd>
 - 删除高亮：点击高亮处 -> 按 <kbd>dh</kbd>
 
 ![20260216174454](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/20260216174454.png)

@@ -4,7 +4,7 @@
 
 大概需要六小时
 
-本节总的来说出现了两个基本且重要的数据结构就是链表和树，从递归算法上说是自然的，还有Mutable Data这一在Python中非常重要的事情的讲述，很感动的是老师通过讲述A History Stroy去说明了这件事情，感觉正常学习过Python的人都会对这个部分有很深的共鸣，因为期末考老是喜欢考啊(doge)。
+本节总的来说出现了两个基本且重要的数据结构就是链表和树，从递归算法上说是自然的，还有 Mutable Data 这一在 Python 中非常重要的事情的讲述，很感动的是老师通过讲述 A History Stroy 去说明了这件事情，感觉正常学习过 Python 的人都会对这个部分有很深的共鸣，因为期末考老是喜欢考啊 (doge)。
 
 
 ## Lab 04(30min)
@@ -34,7 +34,7 @@
 #### Q6: Don't violate the abstraction barrier!
 
 
-所谓数据抽象，抽象屏障(Abstraction Barrier)就好像递归中的信仰之跃，我们初始时不关心函数的实现细节只是使用构造的函数进行操作，只要写的代码有合适的屏障，只需要更改上游部分下游自然会发生变化.实际上就是**通过函数来承载抽象**的功能，所操作和修改的对象也只是函数而不是具体的values.
+所谓数据抽象，抽象屏障 (Abstraction Barrier) 就好像递归中的信仰之跃，我们初始时不关心函数的实现细节只是使用构造的函数进行操作，只要写的代码有合适的屏障，只需要更改上游部分下游自然会发生变化。实际上就是**通过函数来承载抽象**的功能，所操作和修改的对象也只是函数而不是具体的 values.
 
 
 
@@ -53,9 +53,9 @@ Chapter 2: Building Abstractions with Data
 >A tree has a root label and a sequence of branches. Each branch of a tree is a tree. A tree with no branches is called a leaf. Any tree contained within a tree is called a sub-tree of that tree (such as a branch of a branch). The root of each sub-tree of a tree is called a node in that tree.
 
 
-树是一种非常基本的数据结构，这里只是做了简单的阐述，如果想要深入的了解树、二叉树、甚至线段树、红黑树最好还是学一下数据结构然后去手搓一些算法题.树本身就蕴含着recursion的思想，包括遍历的思想，学会用树应当是递归能力的一个提高节点.
+树是一种非常基本的数据结构，这里只是做了简单的阐述，如果想要深入的了解树、二叉树、甚至线段树、红黑树最好还是学一下数据结构然后去手搓一些算法题。树本身就蕴含着 recursion 的思想，包括遍历的思想，学会用树应当是递归能力的一个提高节点。
 
->树这种东西在图论里面经常用，所以如果有OI训练的话确实有利于组合题能力提高...
+>树这种东西在图论里面经常用，所以如果有 OI 训练的话确实有利于组合题能力提高……
 
 
 为了方便起见，再这里将所有的数据抽象列出
@@ -103,7 +103,7 @@ Linked lists have recursive structure: the rest of a linked list is a linked lis
 
 Reference:
 
-[洛谷-B3631单向链表](https://www.luogu.com.cn/problem/B3631)
+[洛谷-B3631 单向链表](https://www.luogu.com.cn/problem/B3631)
 
 ### Ch. 2.4
 
@@ -111,9 +111,9 @@ Reference:
 >One powerful technique for creating modular programs is to incorporate data that may change state over time. In this way, a single data object can represent something that evolves independently of the rest of the program. The behavior of a changing object may be influenced by its history, just like an entity in the world. Adding state to data is a central ingredient of a paradigm called object-oriented programming.
 
 
-主要讲述了Python中Non local的一些问题，关于值的绑定(Non-Local Assignment)等等，尤其是Non local函数的好处进行了一些讲解
+主要讲述了 Python 中 Non local 的一些问题，关于值的绑定 (Non-Local Assignment) 等等，尤其是 Non local 函数的好处进行了一些讲解
 
-也讲解了一些基本的编程范式，可能需要对后面的OOP进行深入学习之后会有更深的理解.
+也讲解了一些基本的编程范式，可能需要对后面的 OOP 进行深入学习之后会有更深的理解。
 
 
 ## Videos(1h30min)
@@ -289,13 +289,13 @@ def find_path(t, x):
 
 #### Q1: Deep Map
 
-原地修改(in-place modification)，不需要返回值return value
+原地修改 (in-place modification)，不需要返回值 return value
 
 ### Data Abstraction
 
 #### Q2: Mass
 
-不知道有什么作用，感觉只是为了确认你的理解，但是又感觉有点多余了，不如让实现total_mass function
+不知道有什么作用，感觉只是为了确认你的理解，但是又感觉有点多余了，不如让实现 total_mass function
 
 
 #### Q3: Balanced
@@ -304,9 +304,9 @@ def find_path(t, x):
 由定义可知：
 
 + 左右臂力矩相等
-+ 左右臂子系统Balanced -> Recursion
++ 左右臂子系统 Balanced -> Recursion
 
-利用Data Abstraction即可，然后需要注意判断尾端planet情况(函数调用要求对象为mobile所以planet会报错)
+利用 Data Abstraction 即可，然后需要注意判断尾端 planet 情况（函数调用要求对象为 mobile 所以 planet 会报错）
 
 
 ### Trees

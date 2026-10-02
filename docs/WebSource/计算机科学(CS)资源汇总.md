@@ -4,14 +4,14 @@ tags:
     - 资源
 ---
 
-# 计算机科学(CS)资源汇总
+# 计算机科学 (CS) 资源汇总
 
 !!! tldr "专栏说明"
-    CS是开源氛围最为浓厚的一个领域，网络上有着大量的资料和优质的博客，这里主要收录一些我曾经阅读过的优秀资料，帮助更多的人节约检索资料的时间。但是需要注意的是：能够放在这里的资料基本是**粒度较大**的（也就是说关于一些过于细节的问题或者小众的方向并不会收录，**比如某个语言的特性和语法糖之类的，这类我推荐去专门的社区或者相关的文档查找引用，这里还是尽量避免产生深度的逻辑嵌套**）
+    CS 是开源氛围最为浓厚的一个领域，网络上有着大量的资料和优质的博客，这里主要收录一些我曾经阅读过的优秀资料，帮助更多的人节约检索资料的时间。但是需要注意的是：能够放在这里的资料基本是**粒度较大**的（也就是说关于一些过于细节的问题或者小众的方向并不会收录，**比如某个语言的特性和语法糖之类的，这类我推荐去专门的社区或者相关的文档查找引用，这里还是尽量避免产生深度的逻辑嵌套**）
 
 ## 基本教程
 
-+ [CS自学指南](https://csdiy.wiki/) 对我非常关键的一个教程，我也向很多人推荐
++ [CS 自学指南](https://csdiy.wiki/) 对我非常关键的一个教程，我也向很多人推荐
 + [CS 61B Spring 2021](https://sp21.datastructur.es/)
 + [CLRS](https://walkccc.me/CLRS/Chap07/Problems/7-3/) 算法导论的解答
 + [2025 年秋冬学期计算机学院朋辈辅学「技能拾遗」](https://inuebisu.github.io/SkillsTutorial/)
@@ -37,8 +37,8 @@ tags:
 	+ [The Java HotSpot Performance Engine Architecture](https://www.oracle.com/java/technologies/whitepaper.html)
 	+ [Learn Java - Dev.java](https://dev.java/learn/) 官方的教程文档
 	+ [Core Java](https://horstmann.com/corejava/) 一本经典的 Java 教材的官方网站
-	+ [Java学习路线 - 南开飞书云文档](https://my.feishu.cn/wiki/VVv1w0kCzirT04kmHwKc5PDWnBg) Java 后端的学习路径，我认为是非常简洁和直接的一份教程
-	+ [Java实习速成学习路线](https://www.wolai.com/ustcse/3VVBxRwpafQYtB5fH8M7TH) USTC 的 Java 路线
+	+ [Java 学习路线 - 南开飞书云文档](https://my.feishu.cn/wiki/VVv1w0kCzirT04kmHwKc5PDWnBg) Java 后端的学习路径，我认为是非常简洁和直接的一份教程
+	+ [Java 实习速成学习路线](https://www.wolai.com/ustcse/3VVBxRwpafQYtB5fH8M7TH) USTC 的 Java 路线
 	+ [The Java® Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html) JVMS 文档
 + **Go** 这是我当前最喜欢的一门语言了，有点古板的语法，谨慎的语言特性选择，甚至还有对于代码格式的一些偏执的严格，写起来又简单效果又好，**极大的减轻了码风不同带来的对于 review 别人代码的心智负担**
 	+ [The Go Blog](https://go.dev/blog/) 官方的 Blog 发布，可以得到一些最新的特性消息
@@ -72,7 +72,7 @@ tags:
 
 下面结合我的一些看法对于 Linux 社区的常见问题做一个批判（主要的观点来源是 [FreeBSD 从入门到跑路](https://docs.bsdcn.org/README#%E8%B4%A1%E7%8C%AE%E8%80%85) ）：
 
-+ **技术本应服务于人，而不是反过来规训人**。一个人如果只是想用 Linux 拯救一台老电脑，那么能简单、舒服地满足这个需求就已经足够了，没有必要因为社区的某种审美而强迫自己使用命令行、Vim 或高门槛的 WM。每次在各种寻求解决问题方法的帖子底下，看到回答者完全无理地要求提问者直接把问题原因破坏的（Just change your distro to Arch/Debian/Ubunutu/Fedora/Gentoo/OpenSUSE），我都觉得那个答者是来捣乱的
++ **技术本应服务于人，而不是反过来规训人**。一个人如果只是想用 Linux 拯救一台老电脑，那么能简单、舒服地满足这个需求就已经足够了，没有必要因为社区的某种审美而强迫自己使用命令行、Vim 或高门槛的 WM。每次在各种寻求解决问题方法的帖子底下，看到回答者完全无理地要求提问者直接把问题原因破坏的（Just change your distro to Arch/Debian/Ubuntu/Fedora/Gentoo/OpenSUSE），我都觉得那个答者是来捣乱的
 + **工具只是手段，人的需求和快乐才是目的**。说到底，就像 Linus 那句 **Just For Fun**：喜欢怎么用、怎么折腾就怎么折腾，不必把自己的玩法变成别人的义务，也是出于这种原则现在的软件设计越来越臃肿和复杂（实际上这有点反 UNIX 哲学了，越想要让一个程序能够尽量满足人的需求，那个程序的功能也就会越复杂，和 UNIX Principles 中的单一性是矛盾的）
 + 一方面，**社区没有义务为完全拒绝阅读和思考的人承担成本**。如果提示已经足够明确，一个问题通过最基本的阅读、搜索或尝试就能够解决，那么要求提问者先完成这些工作并不是所谓精英主义（主要反对的是那些在技术社区中一直低效提问而不去查询文档或者询问大模型的人）。《提问的智慧》中要求提问者展示自己的思考过程，本质上也是对其他社区成员时间的尊重（换句话说**没有必要无偿回答一些极其显然的问题而不是鼓励搜索和思考**，对于学习数理的同学这更加明显，因为大部分的问题是没有答案的，**你必须通过自己的思考找到线索并且基本上无法得到权威的帮助**，很大的概率是那个权威跟你距离一个太平洋或者大西洋）。
 + 另一方面，复杂也并不天然意味着糟糕（主要反对的是那些认为使用 Vim/NeoVim/Emacs 等键盘流工具的都是嘉豪的言论）。很多技术工具之所以复杂，之所以前置难度高，是因为它们试图解决更加复杂的问题，而这种学习成本往往能够换来更高的效率、更强的自动化能力和更大的表达空间。GUI 可以让第一次操作更简单，而 CLI 和脚本可能让第一千次操作更简单。**真正应该反对的不是复杂度，而是没有收益的复杂度**。
@@ -107,8 +107,8 @@ tags:
 ## 数据科学
 
 + [CS224N](https://web.stanford.edu/class/cs224n/) Stanford 自然语言处理与深度学习（NLP 经典课程）
-+ [ML and DL这类统计学类数据科学甚至转cs的方法](https://www.zhihu.com/question/395556369/answer/2102149123)
-+ [Kaggle入门经验贴 - 知乎](https://www.zhihu.com/question/23987009/answer/3111007309)
++ [ML and DL 这类统计学类数据科学甚至转 cs 的方法](https://www.zhihu.com/question/395556369/answer/2102149123)
++ [Kaggle 入门经验贴 - 知乎](https://www.zhihu.com/question/23987009/answer/3111007309)
 + [Recod.ai/LUC - 科学图像伪造检测 | Kaggle --- Recod.ai/LUC - Scientific Image Forgery Detection](https://www.kaggle.com/competitions/recodai-luc-scientific-image-forgery-detection) 我参加的第一个 Kaggle 比赛，差一点拿牌了，早知道当时期末不复习了，不过想一想金牌的方案感觉非常巧妙
 + [2026 年机器学习指南 IBM](https://www.ibm.com/cn-zh/think/machine-learning#605511093)
 
@@ -126,10 +126,10 @@ tags:
 + 扩散模型研究
 	+ 下面三篇苏剑林的博客我认为是很有必要读的，对于掌握 DDPM 有成效
 	+ [生成扩散模型漫谈（一）：DDPM = 拆楼 + 建楼 - 科学空间|Scientific Spaces](https://spaces.ac.cn/archives/9119)
-	+ [生成扩散模型漫谈（二）：DDPM = 自回归式VAE - 科学空间|Scientific Spaces](https://spaces.ac.cn/archives/9152)
+	+ [生成扩散模型漫谈（二）：DDPM = 自回归式 VAE - 科学空间|Scientific Spaces](https://spaces.ac.cn/archives/9152)
 	+ [生成扩散模型漫谈（三）：DDPM = 贝叶斯 + 去噪 - 科学空间|Scientific Spaces](https://spaces.ac.cn/archives/9164)
 	+ [Generative Modeling by Estimating Gradients of the Data Distribution | Yang Song](https://yang-song.net/blog/2021/score/) Song Yang 的一篇文章，他的 taste 是很好的，可以学习
-	+ [Diffusion综述阅读笔记 - 瓜瓜没有瓜子](https://www.cnblogs.com/Meloniala/p/18285101)
+	+ [Diffusion 综述阅读笔记 - 瓜瓜没有瓜子](https://www.cnblogs.com/Meloniala/p/18285101)
 	+ [Diffusion LM / D3PM](https://zhuanlan.zhihu.com/p/1909197530278896656) 当时做随机过程的大作业有参考，非常适合学习马尔可夫链和扩散模型的关系
 
 
@@ -149,12 +149,12 @@ tags:
 	+ [Readme Typing SVG - Demo Site](https://readme-typing-svg.demolab.com/demo/?font=Buda&weight=500&size=25&color=F760C4%C2%A2er=true&lines=Welcome+to+Eurekaimer%27s+GitHub!) - 打字特效
 	+ [Platane/snk](https://github.com/Platane/snk) - GitHub Contributions 贪吃蛇动画
 	+ [yoshi389111/github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib) - 3D GitHub Contributions 贡献图
-+ [Mkdocs部署的yml说明](https://zhuanlan.zhihu.com/p/62460160?utm_campaign=)
-+ [Hugo框架的搭建](https://zhuanlan.zhihu.com/p/901399736)
++ [Mkdocs 部署的 yml 说明](https://zhuanlan.zhihu.com/p/62460160?utm_campaign=)
++ [Hugo 框架的搭建](https://zhuanlan.zhihu.com/p/901399736)
 + [Butterfly - A Simple and Card UI Design theme for Hexo](https://butterfly.js.org/) 一个 Hexo 主题
 + [Astro-Firefly](https://docs-firefly.cuteleaf.cn/zh/)
 + [NameBeta: 域名注册比价 - 全网域名价格实时查询与比价平台](https://namebeta.com/)
-+ [Unami](https://cloud.umami.is/analytics/us/websites) 一个能够检测博客访问量的小工具
++ [Umami](https://cloud.umami.is/analytics/us/websites) 一个能够检测博客访问量的小工具
 + [MapMyVisitors — Real-Time Visitor Map Widget for Your Website](https://mapmyvisitors.com/)
 + [域名注册_阿里云](https://wanwang.aliyun.com/domain/) 我租域名使用的，阿里云的价格基本是比较划算的
 + [Cloudflare 免费套餐能做什么：一份独立开发者的零成本部署指南 | Monolith](https://monolith-client.pages.dev/posts/cloudflare-free-tier-guide)
@@ -185,19 +185,19 @@ tags:
 + 虚拟化
 	+ [QEMU](https://www.qemu.org/) 模拟器
 	+ [KVM](https://linux-kvm.org/) Linux 内核虚拟化（配合 QEMU/libvirt）
-+ LaTeX使用
++ LaTeX 使用
 	+ [LaTeX 官方](https://www.latex-project.org/)
-	+ [LaTeX的Snippets设置](https://zhuanlan.zhihu.com/p/350249305)
-	+ [LaTeX的一个简单模板(彩色底框填充)](https://www.zhihu.com/question/362654946/answer/2364047739)
-	+ [Tikz的使用](https://zhuanlan.zhihu.com/p/48300815) 其实最好自己学习一下如何书写（或者 LLM 直接穿）
+	+ [LaTeX 的 Snippets 设置](https://zhuanlan.zhihu.com/p/350249305)
+	+ [LaTeX 的一个简单模板（彩色底框填充）](https://www.zhihu.com/question/362654946/answer/2364047739)
+	+ [Tikz 的使用](https://zhuanlan.zhihu.com/p/48300815) 其实最好自己学习一下如何书写（或者 LLM 直接穿）
 	+ [tikzcd-editor](https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRADM4oBGEAX1LpMufIRTdyVWoxZsodBAKHY8BIhIAsU+s1aIQ-QSAwrRRAMykATNpl6DfKTCgBzeEVDsAThAC2SK2ocCCRzRz4gA) 快速生成 tikz 代码的辅助网站
 	+ [SimpleTex-OCR](https://simpletex.cn/ai/latex_ocr) 现在使用 LLM 可以直接打穿常用的 OCR 工具
-		+ 如果你实在懒得打可以使用这个OCR工具，网页端支持的扫描数量更大但是都会出现遇到高峰期需要排队的问题，因此如果有需要最好平常就在一些少人的时间将需要的资料识别好，笔者曾经多次在随机过程课上现场OCR老师的Notes有点手忙脚乱了.
-	+ [国外小哥的Vim+LaTeX](https://castel.dev/post/lecture-notes-1/#environments) 昔人已逝，缅怀
-+ Obsidian使用
+		+ 如果你实在懒得打可以使用这个 OCR 工具，网页端支持的扫描数量更大但是都会出现遇到高峰期需要排队的问题，因此如果有需要最好平常就在一些少人的时间将需要的资料识别好，笔者曾经多次在随机过程课上现场 OCR 老师的 Notes 有点手忙脚乱了。
+	+ [国外小哥的 Vim+LaTeX](https://castel.dev/post/lecture-notes-1/#environments) 昔人已逝，缅怀
++ Obsidian 使用
 	+ [Obsidian 官方](https://obsidian.md/)
-	+ [Obsidian的使用--一位研究生](https://www.zhihu.com/question/401972085/answer/3365454194)
-	+ [一位学长使用Obsidian的心得](https://zhuanlan.zhihu.com/p/657343154)
+	+ [Obsidian 的使用--一位研究生](https://www.zhihu.com/question/401972085/answer/3365454194)
+	+ [一位学长使用 Obsidian 的心得](https://zhuanlan.zhihu.com/p/657343154)
 + 其他
 	+ [uv](https://docs.astral.sh/uv/) Python 包与项目管理器
 	+ [OpenList 文档](https://doc.oplist.org.cn/guide) 网盘项目（fork Alist）

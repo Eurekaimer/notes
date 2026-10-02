@@ -3,17 +3,17 @@
 ## Lab 1
 
 !!! note "第一次上机实验"
-    目的：熟悉Linux系统和基本命令
-    实验环境：Linux操作系统(可以使用Ubuntu on windows,iOS系统中的Term)
+    目的：熟悉 Linux 系统和基本命令
+    实验环境：Linux 操作系统（可以使用 Ubuntu on windows,iOS 系统中的 Term）
 
 
-    对于大多数未曾使用过Linux操作系统的人来说，使用WSL是一种捷径，使用Ubuntu则可以更好的修改各种错误(因为大多数人都使用这一发行版，并且本教程也基于Ubuntu)
+    对于大多数未曾使用过 Linux 操作系统的人来说，使用 WSL 是一种捷径，使用 Ubuntu 则可以更好的修改各种错误（因为大多数人都使用这一发行版，并且本教程也基于 Ubuntu）
 
-    跳过WSL的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用Virtual Box，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况
+    跳过 WSL 的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用 Virtual Box，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况
 
-### 0.帮助命令 
+### 0.帮助命令
 
-比如查看ls命令的帮助，可以输入 
+比如查看 ls 命令的帮助，可以输入
 
 ```Shell
 man ls & ls --help 
@@ -21,7 +21,7 @@ man ls & ls --help
 
 ### 1.文件操作命令的使用
 
-+ 查看文件与目录ls 进入Linux系统，输入 ls 回车(回车后命令运行，此后的说明中省略回车 尝试ls的其它参数
++ 查看文件与目录 ls 进入 Linux 系统，输入 ls 回车(回车后命令运行，此后的说明中省略回车 尝试 ls 的其它参数
 
 ```Shell
 ls -a
@@ -29,7 +29,7 @@ ls -l
 ls -lrth
 ```
 
-+ 用vim或者vi编辑器新建一个test.txt文件(使用方式请自行搜索)，在文件中键入任意内容：比如 this is test 保存，退出
++ 用 vim 或者 vi 编辑器新建一个 test.txt 文件（使用方式请自行搜索），在文件中键入任意内容：比如 this is test 保存，退出
 
 ```Shell
 vi test.txt
@@ -41,42 +41,42 @@ this is test
 :wq
 ```
 
-+  ls查看当前目录下新生成的文件test.txt 
++  ls 查看当前目录下新生成的文件 test.txt
 
-+ 显示文件内容cat 
++ 显示文件内容 cat
 
 ```Shell
 cat test.txt 
 ```
 
-+ 复制文件test.txt 到文件
++ 复制文件 test.txt 到文件
 
 ```Shell
 cp test.txt test1.txt
 cp test.txt test2.txt 
 ```
 
-+ 删除命令rm，输入 rm testl.txt 
++ 删除命令 rm，输入 rm testl.txt
 
 
-+ 移动命令,输入 mv test2.txt test1.txt 
++ 移动命令，输入 mv test2.txt test1.txt
 
-### 2.目录命令的使用 
- 
-+ cd命令（该命令用来改变当前目录）
+### 2.目录命令的使用
+
++ cd 命令（该命令用来改变当前目录）
 
 ```Shell
 cd mytest
 ```
 
-+ mkdir命令（用于在当前目录下建立一个子目录）
++ mkdir 命令（用于在当前目录下建立一个子目录）
 
 ```Shell
 mkdir mytest
 ```
 
 
-+ rmdir命令（移除当前目录下的目录）
++ rmdir 命令（移除当前目录下的目录）
 
 ```Shell
 rmdir mytest1
@@ -88,14 +88,14 @@ rmdir mytest1
 pwd
 ```
 
-+ 移动test.txt文件（假设该文件在~/目录下)到当前目录下
++ 移动 test.txt 文件（假设该文件在~/目录下)到当前目录下
 
 ```Shell
 mv test.txt ./ cd ~ rmdir mytest\
 rm -rf mytest
 ```
- 
-### 3.重定向输入输出，比较>和>>的作用 
+
+### 3.重定向输入输出，比较>和>>的作用
 
 
 ```Shell
@@ -106,8 +106,8 @@ rm -rf mytest
  cat test.txt test1.txt >> test2.txt 
 ```
 
- 
-### 4.管道命令 
+
+### 4.管道命令
 
 ```Shell
  cat test2.txt|wc 
@@ -121,9 +121,9 @@ rm -rf mytest
 
 ## Lab 2
 
-这个部分老师的操作文档写的非常混乱，我结合林子雨老师的教材和自己的经验进行一些修改以便于操作(也修改了一些安装顺序)，下面是修改后的安装步骤
+这个部分老师的操作文档写的非常混乱，我结合林子雨老师的教材和自己的经验进行一些修改以便于操作（也修改了一些安装顺序），下面是修改后的安装步骤
 
-### 1.创建新的hadoop账户
+### 1.创建新的 hadoop 账户
 
 ```Shell
 // sudo adduser <username>
@@ -156,15 +156,15 @@ mkdir module
 !!! warning "软件版本"
     需要注意的是，软件是会随着时间迭代的，因此版本号和文件名显然也会跟着改变，所以下面的一切与这两个文件有关的命令都需要注意修改对应的版本号进行操作
 
-+ JDK的安装
++ JDK 的安装
 
 首先进入网址：[JDK_downloads](https://www.oracle.com/java/technologies/downloads/)，你可以在Java achieve中找到对应的版本，例如我使用JDK8就使用了[jdk-8u451-linux-x64.tar.gz](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)，安装在windows下即可
 
-+ Hadoop的安装
++ Hadoop 的安装
 
 直接进入[官网](https://hadoop.apache.org/releases.html)安装即可，选择Binary版本，同样安装在windows下
 
-安装之后需要记住位置，后续需要在wsl中通过mnt来进行传输
+安装之后需要记住位置，后续需要在 wsl 中通过 mnt 来进行传输
 
 如何传输？
 
@@ -178,15 +178,15 @@ wsl：/mnt/d/Users/YourName/Documents/my_file.txt
 
 
 !!! tip "窍门"
-    只需要在前面加上/mnt，在哪个盘就在后面跟上盘符，例如D盘就加上/d，后面只需要改变反斜杠即可
+    只需要在前面加上/mnt，在哪个盘就在后面跟上盘符，例如 D 盘就加上/d，后面只需要改变反斜杠即可
 
-然后就是mv命令，前面是原位置，后面是移动后希望文件所处的位置
+然后就是 mv 命令，前面是原位置，后面是移动后希望文件所处的位置
 
 ```Shell
 mv /mnt/d/Users/YourName/Documents/my_file.txt ~/target_directory/
 ```
 
-将那两个安装包从windows下移动到 `~/software` 下(注意文件名需要根据你下载到的实际文件修改，路径也需要根据实际所处的位置修改)
+将那两个安装包从 windows 下移动到 `~/software` 下（注意文件名需要根据你下载到的实际文件修改，路径也需要根据实际所处的位置修改）
 
 以 `hadoop-3.4.2.tar.gz` 为例
 
@@ -194,7 +194,7 @@ mv /mnt/d/Users/YourName/Documents/my_file.txt ~/target_directory/
 mv /mnt/d/Users/lenovo/Desktop/hadoop-3.4.2.tar.gz ~/software/
 ```
 
-使用ls命令会得到如下结果
+使用 ls 命令会得到如下结果
 
 ```Shell
 hadoop@Eurekaimer:~/software$ ls
@@ -213,16 +213,16 @@ tar -xvzf jdk-8u451-linux-x64.tar.gz -C ~/module
 
 ### 3.配置环境变量
 
-+ 先配置JDK的环境变量，首先回到最初的目录，然后使用vim打开配置文件
++ 先配置 JDK 的环境变量，首先回到最初的目录，然后使用 vim 打开配置文件
 
 ```Shell
 cd
 vim ~/.bashrc
 ```
 
-加入以下内容(推荐加入位置在末尾，内容需要根据实际文件名修改)
+加入以下内容（推荐加入位置在末尾，内容需要根据实际文件名修改）
 
-注：可以在 `module` 目录下使用ls得到
+注：可以在 `module` 目录下使用 ls 得到
 
 ```Shell
 hadoop@Eurekaimer:~/module$ ls
@@ -246,7 +246,7 @@ source ~/.bashrc
 java -version
 ```
 
-+ 配置Hadoop环境变量
++ 配置 Hadoop 环境变量
 
 类似的
 
@@ -255,9 +255,9 @@ cd
 vim ~/.bashrc
 ```
 
-加入以下内容(推荐加入位置在末尾，内容需要根据实际文件名修改)
+加入以下内容（推荐加入位置在末尾，内容需要根据实际文件名修改）
 
-注：可以在 `module` 目录下使用ls得到
+注：可以在 `module` 目录下使用 ls 得到
 
 ```Shell
 hadoop@Eurekaimer:~/module$ ls
@@ -281,9 +281,9 @@ source ~/.bashrc
 hadoop version
 ```
 
-### 4.设置ssh免密登录
+### 4.设置 ssh 免密登录
 
-需要先安装openssh
+需要先安装 openssh
 
 ```Shell
 sudo apt-get install openssh-server pdsh
@@ -313,7 +313,7 @@ exit
 ```
 
 !!! tip "关于免密登录的目的"
-    为什么要免密登录？ 想要体会这一点应当在设置免密登录之前直接进行一次 `ssh localhost` 操作，我们会发现登录需要输入密码，而输入密码对于多节点的操作而言是非常麻烦的，因此我们需要设置免密登录
+    为什么要免密登录？想要体会这一点应当在设置免密登录之前直接进行一次 `ssh localhost` 操作，我们会发现登录需要输入密码，而输入密码对于多节点的操作而言是非常麻烦的，因此我们需要设置免密登录
 
 ### 5.修改配置文件
 
@@ -327,7 +327,7 @@ vim core-site.xml
 
 `<configuration>` 和 `</configuration>` 之间加入
 
-注意缩进(类似html标签)
+注意缩进（类似 html 标签）
 
 ```Shell
 
@@ -380,7 +380,7 @@ export HDFS_DATANODE_USER=hadoop
 export HDFS_SECONDARYNAME_USER=hadoop
 ```
 
-### 6.格式化HDFS文件系统
+### 6.格式化 HDFS 文件系统
 
 ```Shell
 hdfs namenode -format
@@ -404,9 +404,9 @@ cd input
 ```
 
 
-使用vim生成测试文件 `test1.txt` 和 `test2.txt`，每个文件输入若干单词
+使用 vim 生成测试文件 `test1.txt` 和 `test2.txt`，每个文件输入若干单词
 
-将目录上传到hdfs文件系统
+将目录上传到 hdfs 文件系统
 
 ```Shell
 hdfs dfs -put ~/input /input
@@ -432,20 +432,20 @@ hdfs dfs -cat /output/part-r-00000
 
 !!! note "彩蛋"
     如果统计结果正确，那么说明你的 Hadoop 伪分布式集群就搭建成功并验证完成了！
-    我写的是microsoft love linux!
+    我写的是 microsoft love linux!
 
 ## Lab 3
 
-第四次上机实验的内容为YARN的配置，具体内容如下：
+第四次上机实验的内容为 YARN 的配置，具体内容如下：
 
-+ 配置并启动YARN
-+ Yarn中添加队列small,并将任务提交至small队列运行
-	+ 修改capacity-scheduler.xml文件（最好提前备份该文件cp capacity-scheduler.xml capacity-scheduler.xml.bak).修改内容包括增加所有和small队列相关的属性，并且分配default队列和small队列之间的资源占有比例。
++ 配置并启动 YARN
++ Yarn 中添加队列 small,并将任务提交至 small 队列运行
+	+ 修改 capacity-scheduler.xml 文件（最好提前备份该文件 cp capacity-scheduler.xml capacity-scheduler.xml.bak).修改内容包括增加所有和 small 队列相关的属性，并且分配 default 队列和 small 队列之间的资源占有比例。
 	+ 向指定队列提交任务
 		$hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-example-3.4.2.jar pi -Dmapreduce.job.queuename=small 10 10
-	+ 在yarn的web服务页面查看提交的任务情况和队列情况
+	+ 在 yarn 的 web 服务页面查看提交的任务情况和队列情况
 
-### 1. YARN环境配置（承接HDFS配置）
+### 1. YARN 环境配置（承接 HDFS 配置）
 
 主要是修改三个文件
 
@@ -453,7 +453,7 @@ hdfs dfs -cat /output/part-r-00000
 + yarn-site.xml
 + hadoop-env.sh
 
-$\mathbf{Remark:}$下面的软件版本都是我的版本，相应的使用需修改
+$\mathbf{Remark:}$ 下面的软件版本都是我的版本，相应的使用需修改
 
 配置第一个
 
@@ -521,7 +521,7 @@ vim yarn-site.xml
 </configuration>
 ```
 
-第一个property主机名(hostname)
+第一个 property 主机名 (hostname)
 
 
 配置第三个
@@ -538,7 +538,7 @@ export YARN_NODEMANAGER_USER=hadoop
 ```
 
 
-### 2. 启动Yarn服务
+### 2. 启动 Yarn 服务
 
 ```Shell
 # 如果之前启动过的关闭
@@ -551,7 +551,7 @@ $HADOOP_HOME/sbin/mr-jobhistory-daemon.sh start historyserver
 
 ![Lab3_1](lab3_1.png)
 
-第三条命令报错是因为给出的这个命令是Hadoop2.x版本的，但是它会自动转换为3.x
+第三条命令报错是因为给出的这个命令是 Hadoop2.x 版本的，但是它会自动转换为 3.x
 
 如果在 `$HADOOP_HOME` 目录下：
 
@@ -592,7 +592,7 @@ cp capacity-scheduler.xml capacity-scheduler.xml.bak
 vim capacity-scheduler.xml
 ```
 
-这个是比较麻烦的，你需要在文件的 `<configuration>` 和 `</configuration>` 标签之间，加入以下内容。这些配置定义了 `root` 队列下的子队列 `default` 和 `small`，并分配了资源比例（70% 给 `default`，30% 给 `small`）(比例可以调，只需要加和100%即可)
+这个是比较麻烦的，你需要在文件的 `<configuration>` 和 `</configuration>` 标签之间，加入以下内容。这些配置定义了 `root` 队列下的子队列 `default` 和 `small`，并分配了资源比例（70% 给 `default`，30% 给 `small`）（比例可以调，只需要加和 100%即可）
 
 ```Shell
 <property>
@@ -621,7 +621,7 @@ vim capacity-scheduler.xml
 </property>
 ```
 
-保险起见应该给每个property标签都类似定义相关的small队列的版本，例如上面的部分就是两个default和两个small，但是使用时其他属性都存在默认值，所以不配置small的标签也可以跑通
+保险起见应该给每个 property 标签都类似定义相关的 small 队列的版本，例如上面的部分就是两个 default 和两个 small，但是使用时其他属性都存在默认值，所以不配置 small 的标签也可以跑通
 
 ```Shell
 # 确保配置small队列能够使用(刷新)
@@ -634,12 +634,12 @@ yarn rmadmin -refreshQueues
 hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.2.jar pi -Dmapreduce.job.queuename=small 10 10
 ```
 
-精度相当差，如果要更高的精度可以调整后面参数(10 10)
+精度相当差，如果要更高的精度可以调整后面参数 (10 10)
 
 
 ![Lab3_2](Lab3_2.png)
 
-如果要使用web端的话，检查一下端口：
+如果要使用 web 端的话，检查一下端口：
 
 ```Shell
 sudo vim /etc/hosts
@@ -668,22 +668,22 @@ yarn rmadmin -refreshQueues
 
 然后尝试访问http://localhost:8088
 
-有时候因为防火墙无法访问，所以采取http协议，或者把电脑防火墙关掉
+有时候因为防火墙无法访问，所以采取 http 协议，或者把电脑防火墙关掉
 
 
 !!! warning "关于最后一步提交之后但是无法开始任务"
-    也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况(如果使用虚拟机)，你需要调整节点最大可用内存，或者降低任务需要内存，也可以虚报内存(所以说安装虚拟机的时候不要把自己的内存配置写的太小了)
+    也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况（如果使用虚拟机），你需要调整节点最大可用内存，或者降低任务需要内存，也可以虚报内存（所以说安装虚拟机的时候不要把自己的内存配置写的太小了）
 
 
 ## Lab 4
 
 一切文件版本和路径根据自己情况调整
 
-### 1.安装Spark 3.4.2
+### 1.安装 Spark 3.4.2
 
-使用之前需要Java和Hadoop环境(很好安装，在之前的Lab中已经安装过)
+使用之前需要 Java 和 Hadoop 环境（很好安装，在之前的 Lab 中已经安装过）
 
-注：下面需要根据自己的Java/Hadoop/Spark版本进行，可以使用下面的命令查看
+注：下面需要根据自己的 Java/Hadoop/Spark 版本进行，可以使用下面的命令查看
 
 ```Shell
 cat ~/.bashrc
@@ -700,7 +700,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 # Spark 版本（假设下载）: spark-3.4.2-bin-without-hadoop.tgz
 ```
 
-由于老师的安装文档比较老因此使用的是比较古老的Spark版本，只能去[Apache Archive](https://archive.apache.org/dist/spark/spark-3.4.2/)下载(这是本次实验耗时最久的地方)，然后就是正常移动文件(WSL)，如果是虚拟机或是本地Linux正常移动即可
+由于老师的安装文档比较老因此使用的是比较古老的 Spark 版本，只能去[Apache Archive](https://archive.apache.org/dist/spark/spark-3.4.2/)下载(这是本次实验耗时最久的地方)，然后就是正常移动文件(WSL)，如果是虚拟机或是本地Linux正常移动即可
 
 ```shell
 mv /mnt/e/spark-3.4.2-bin-without-hadoop.tgz ~/software/
@@ -712,9 +712,9 @@ mv /mnt/e/spark-3.4.2-bin-without-hadoop.tgz ~/software/
 tar -xvzf ~/software/spark-3.4.2-bin-without-hadoop.tgz -C ~/module/
 ```
 
->PPT复制下来-C前面横线格式不对
+>PPT 复制下来-C 前面横线格式不对
 
-移动解压文件并改名spark
+移动解压文件并改名 spark
 
 ```shell
 mv ~/module/spark-3.4.2-bin-without-hadoop/ ~/module/spark
@@ -722,7 +722,7 @@ mv ~/module/spark-3.4.2-bin-without-hadoop/ ~/module/spark
 
 #### 本地模式
 
-然后开始配置文件` spark-env.sh`
+然后开始配置文件 ` spark-env.sh`
 
 ```shell
 # 仍然备份，但是改动较少不太可能改错
@@ -731,7 +731,7 @@ cp spark-env.sh.template spark-env.sh
 vim spark-env.sh
 ```
 
-在最后加上(老师的课件需要打开两次，这里方便就把后续的配置文件一起写上)
+在最后加上（老师的课件需要打开两次，这里方便就把后续的配置文件一起写上）
 
 ```Shell
 # 这是原本的
@@ -745,11 +745,11 @@ SPARK_MASTER_HOST=localhost
 SPARK_MASTER_PORT=7077
 ```
 
-由此可以使用本地模式，如果要使用HDFS则需要提前打开Hadoop
+由此可以使用本地模式，如果要使用 HDFS 则需要提前打开 Hadoop
 
-#### Standalone模式
+#### Standalone 模式
 
-仍然是那个`conf`文件夹
+仍然是那个 `conf` 文件夹
 
 ```shell
  cp workers.template workers
@@ -759,7 +759,7 @@ SPARK_MASTER_PORT=7077
  # 里面的默认应该就是，这步没必要做
 ```
 
-启动Standalone模式，没必要运行，不想运行直接跳过
+启动 Standalone 模式，没必要运行，不想运行直接跳过
 
 ```shell
 # 需要在spark目录下
@@ -796,7 +796,7 @@ spark-shell
 ```
 
 
-### 2.安装sbt并配置环境
+### 2.安装 sbt 并配置环境
 
 sbt（Simple Build Tool）用于打包 Scala 编写的 Spark 应用程序
 
@@ -850,7 +850,7 @@ object SimpleApp {
 }
 ```
 
-声明该应用程序的信息以及与Spark的依赖关系
+声明该应用程序的信息以及与 Spark 的依赖关系
 
 ```shell
 vim ~/sparkapp/simple.sbt
@@ -872,7 +872,7 @@ sbt package
 # 成功后，生成的 JAR 包应当位于 ~/sparkapp/target/scala-2.12/simple-project_2.12-1.0.jar
 ```
 
-应该会生成一个jar包
+应该会生成一个 jar 包
 
 ### 4.提交任务
 
@@ -916,5 +916,5 @@ jps
     ~/sparkapp/target/scala-2.12/simple-project_2.12-1.0.jar
 ```
 
-到这里所有的需要上机签字的部分就结束了(算平时分的部分)，但是对于想要学好分布式的同学来说，熟悉Scala语法和代码实现也是不得不品的一环，但是由于本人比较懒就跳过后续的两次Scala语言的上机作业了，因为在LLM的时代下，你写不出正确的代码说明这门科目不是很适合你了！！！
+到这里所有的需要上机签字的部分就结束了（算平时分的部分），但是对于想要学好分布式的同学来说，熟悉 Scala 语法和代码实现也是不得不品的一环，但是由于本人比较懒就跳过后续的两次 Scala 语言的上机作业了，因为在 LLM 的时代下，你写不出正确的代码说明这门科目不是很适合你了！！！
 

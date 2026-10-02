@@ -4,19 +4,19 @@
 !!! tldr "Outline"
     + 引言
     + 信息熵
-    + KL散度：分布差异的度量
+    + KL 散度：分布差异的度量
     + 互信息：变量相关性的度量
 
 
-    [!cite] References
-    + [Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf)
-    + [Shannon entropy in the context of machine learning and AI](https://medium.com/swlh/shannon-entropy-in-the-context-of-machine-learning-and-ai-24aee2709e32)
-    + Lecture Slides(NKU_DMML, Lecturer: Fu)
+    !!! quote "References"
+        + [Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf)
+        + [Shannon entropy in the context of machine learning and AI](https://medium.com/swlh/shannon-entropy-in-the-context-of-machine-learning-and-ai-24aee2709e32)
+        + Lecture Slides(NKU_DMML, Lecturer: Fu)
 
 关于[Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf) 本人很推荐，写的很有趣，开篇是三个信息论在工程学中的应用，然后对于信息论的一些基本概念也都有所提及，且讲述的很详细
 
-> [!cite] Birth
-> It is among the few disciplines fortunate to have a precise date of birth: 1948, with the publication of Claude E. Shannon’s paper entitled A Mathematical Theory of Communication. Shannon’s Information theory had a profound impact on our understanding of the concepts in communication.
+!!! quote "Birth"
+    It is among the few disciplines fortunate to have a precise date of birth: 1948, with the publication of Claude E. Shannon’s paper entitled A Mathematical Theory of Communication. Shannon’s Information theory had a profound impact on our understanding of the concepts in communication.
 
 ## Some applications
 
@@ -28,7 +28,7 @@
 
 
 !!! tip "扩展"
-    关于上述的这三个例子在Stanford的Notes的后续章节中都有一个Chapter进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入的了解的话，建议仔细阅读后续的章节
+    关于上述的这三个例子在 Stanford 的 Notes 的后续章节中都有一个 Chapter 进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入的了解的话，建议仔细阅读后续的章节
 
 
 ### Lossless compression
@@ -65,9 +65,9 @@ Can we do it better? Yes! We can encode two values at a time instead of encoding
 
 If we use the above encoding scheme the the expected number of bits used per source symbol is **1.1975**
 
-推广上述思想，我们可以考虑一族以整数$k$为索引的编码方案。给定一个整数$k$，我们可以用一个满足前缀条件的方案一次编码$k$个值，并将较短的码字分配给更多的普通符号。在某种最优编码方案下，每个值的期望比特数会随着$k$的增加而减少，这似乎是合理且work的
+推广上述思想，我们可以考虑一族以整数 $k$ 为索引的编码方案。给定一个整数 $k$，我们可以用一个满足前缀条件的方案一次编码 $k$ 个值，并将较短的码字分配给更多的普通符号。在某种最优编码方案下，每个值的期望比特数会随着 $k$ 的增加而减少，这似乎是合理且 work 的
 
-那么很自然的我们会想到这个$\overline{L}$是否会有一个下界(Lower bound)，Shannon证明了对于任意给定的源，他所能达到的最优下界称为该源的**熵(Entropy)** $H(U)$，定义为：
+那么很自然的我们会想到这个 $\overline{L}$ 是否会有一个下界 (Lower bound)，Shannon 证明了对于任意给定的源，他所能达到的最优下界称为该源的**熵 (Entropy)** $H(U)$，定义为：
 
 $$
 H(U)\overset{\Delta}{=}\sum\limits_{u\in U}p(u)\log_{2} \frac{1}{p(u)}
@@ -91,7 +91,7 @@ $\forall \varepsilon >0$, $\exists$ family of schemes, such that the average cod
 
 ### Channel coding
 
-仍然考虑一个源向外发射信号，但是这次只有两个可能$U_{i}\in \left\{ 0,1 \right\}$，服从伯努利分布，此外增加噪声，有$q< \frac{1}{2}$的概率使得原本的编码反转，因此令最终的输出为$Y_{i}$
+仍然考虑一个源向外发射信号，但是这次只有两个可能 $U_{i}\in \left\{ 0,1 \right\}$，服从伯努利分布，此外增加噪声，有$q< \frac{1}{2}$的概率使得原本的编码反转，因此令最终的输出为$Y_{i}$
 
 $$
 Y_{i}=X_{i} \oplus W_{i},W_{i}\sim Ber(q)
@@ -164,18 +164,18 @@ $$
 ### What is information theory
 
 
-> [!cite] Background
-> 信息论由Claude Shannon(1916 - 2001)于1948年创立，核心任务是研究信息如何量化、存储与运输，探索其基本极限
-> 
-> 几个关键概念：
-> 
-> + 熵(Entropy)：刻画**不确定性**的大小
-> + 信息量与互信息：度量信息的多少与变量间的**相关性**
-> + 传输效率与极限：信息如何高效、可靠地传递
-> 
-> 所以我们可以认为信息论=研究如何度量与利用信息的不确定性
-> 
-> 几个典型应用：特征选择、模型评估、正则化、生成模型
+!!! quote "Background"
+    信息论由Claude Shannon(1916 - 2001)于1948年创立，核心任务是研究信息如何量化、存储与运输，探索其基本极限
+
+    几个关键概念：
+
+    + 熵(Entropy)：刻画**不确定性**的大小
+    + 信息量与互信息：度量信息的多少与变量间的**相关性**
+    + 传输效率与极限：信息如何高效、可靠地传递
+
+    所以我们可以认为信息论=研究如何度量与利用信息的不确定性
+
+    几个典型应用：特征选择、模型评估、正则化、生成模型
 
 
 !!! tip "信息量的三大规律"
@@ -340,7 +340,7 @@ $$
     &=\sum\limits_{x}P(x)\log P(x) - \sum\limits_{x}P(x)\log Q(x)
     \end{aligned}$$
 
-    前一部分代表$-H(P)$，后一部分代表$-H(P;Q)$，$D_{KL}(P||Q)=H(P;Q)-H(P)$，其中$H(P;Q)$即为交叉熵
+    前一部分代表 $-H(P)$，后一部分代表 $-H(P;Q)$，$D_{KL}(P||Q)=H(P;Q)-H(P)$，其中 $H(P;Q)$ 即为交叉熵
 
 
 

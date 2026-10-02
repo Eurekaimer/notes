@@ -115,7 +115,7 @@ hide: title
         font-size: 1.6rem;      /* 字号：1.8倍根字号，适中 */
         color: #3f6d9b;         /* 颜色：深灰蓝，比纯黑更现代 */
         /* 如果是暗黑模式笔记，请把上面改成 color: #e0e0e0; */
-        
+
         display: flex;
         justify-content: center; /* 居中 */
         align-items: center;
@@ -152,7 +152,7 @@ hide: title
         let loopIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        
+
         // 速度设置 (单位: 毫秒)
         const typeSpeed = 90;    // 打字速度
         const deleteSpeed = 50;  // 删除速度
@@ -193,14 +193,14 @@ hide: title
 </script>
 
 <div class="blog-card-container">
-    <a href="/ACG/Yuri/" class="blog-card-link"></a>
+    <a href="https://www.eurekaimer.icu/notes/WebSource/计算机科学(CS)资源汇总/" class="blog-card-link"></a>
     <div class="blog-card-left">
         <img src="https://lain.bgm.tv/r/400/pic/cover/l/f6/0f/604826_2XWRN.jpg" alt="Cover">
     </div>
     <div class="blog-card-right">
-        <div class="blog-card-title">Yuri Anime List</div>
+        <div class="blog-card-title">Computer Science Resources</div>
         <div class="blog-card-desc">
-            收录百合题材TV+剧场版的详细列表与评分排行(Ref: Bangumi)
+            计算机科学学习资源汇总
         </div>
     </div>
 </div>

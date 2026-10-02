@@ -27,7 +27,7 @@ int main(void) //void -no input
 ```
 
 
-The computer can onlrecy ognize the binary numbers so we need a compiler(编译器) to make the higher level language to a lower level language.
+The computer can onlrecy ognize the binary numbers so we need a compiler（编译器）to make the higher level language to a lower level language.
 
 ![[compiler.svg]]
 
@@ -54,7 +54,7 @@ Some little concepts:
 `#include stdio.h` - include standard io.h
 `curly braces` - 大括号{}
 `printf` - F means formatted
-`semicolon` - 分号;
+`semicolon` - 分号；
 `syntax` - 句法
 
 In the terminal
@@ -71,10 +71,10 @@ hello world$(\n)
 ```
 
 
-### Library(Header Files) 
+### Library(Header Files)
 
-We can use the code others write before via library and for example we can find the stdio.h 
-[Manual Pages](https:/manual.cs50.io/#stdio.h) 
+We can use the code others write before via library and for example we can find the stdio.h
+[Manual Pages](https://manual.cs50.io/#stdio.h)
 
 ```
 printf("hello, %s\n", answer)
@@ -138,7 +138,7 @@ Types with which you might interact during this course include:
 - `long`, integers with more bits, so they can count higher than an int
 - `string`, a string of characters
 
-Followings are make the Scratch codes to C. 
+Followings are make the Scratch codes to C.
 
 ### Conditionals
 
@@ -199,11 +199,11 @@ void meow(int n)
 >Comments
 >Typically, each comment is a few words or more, providing the reader an opportunity to understand what is happening in a specific block of code. Further, such comments serve as a reminder for you later when you need to revise your code.
 
-### Functions 
+### Functions
 
 An inspiring idea is to make the repeating parts a new role that we can use them by include or write the function's name.
 
-Here's a example from Mario(循环嵌套).
+Here's a example from Mario（循环嵌套）.
 Notice how printing a row is accomplished through a new function.
 
 ```
@@ -214,7 +214,7 @@ Notice how printing a row is accomplished through a new function.
 void print_row(int width);
 
 //void means no output , int width means we have one input
-  
+
 int main(void)
 {
     const int n = 3;
@@ -459,7 +459,7 @@ int main(void)
     int checksum = 0;
     // 指示变量
     int digit = 1;
-    
+
     // checksum part
     int reminder;
     int save1 = 0;
@@ -493,7 +493,7 @@ int main(void)
         digit += 1;
     }
     digit -= 1;
-    
+
     // claim
     if (checksum % 10 == 0)
     {

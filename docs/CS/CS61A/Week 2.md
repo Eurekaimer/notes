@@ -3,9 +3,9 @@
 
 ## Summary
 
-先看Videos再看Reading，需要注意的是Ch 1.6内容很多，每天的Videos只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完Videos再看Reading
+先看 Videos 再看 Reading，需要注意的是 Ch 1.6 内容很多，每天的 Videos 只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完 Videos 再看 Reading
 
-大致需要6h完成(不包括project)
+大致需要 6h 完成（不包括 project）
 
 
 
@@ -54,7 +54,7 @@ def divide_exact(n,d):
 # We can type python3 -m doctest -v filename.py to get results 
 ```
 
-default value (not assignment)： 只是作为一个占位符，在没有赋值的情况下使用，并不是赋值操作
+default value (not assignment)：只是作为一个占位符，在没有赋值的情况下使用，并不是赋值操作
 
 #### Conditional statements
 
@@ -82,7 +82,7 @@ while i < 3:
 	total = total + i
 ```
 
-这个部分就是讲解简单的循环逻辑，感觉可以不用看.
+这个部分就是讲解简单的循环逻辑，感觉可以不用看。
 
 ### Higher-Order Functions
 
@@ -98,7 +98,7 @@ talk about Fibonacci sequence and quite trivial
 
 #### Control Expressions
 
-Some expressions can be passed in Python like (left and right && or) 
+Some expressions can be passed in Python like (left and right && or)
 
 ```Python
 def has_big_sqrt(x)
@@ -182,7 +182,7 @@ result = apply_twice(square, 2)
 #### Environments for Nested Definitions
 
 
-Mainly about how to draw environment diagram and decide the parent frame of any function. 
+Mainly about how to draw environment diagram and decide the parent frame of any function.
 
 #### Local names
 
@@ -203,12 +203,12 @@ def compose1(f, g):
 
 #### Lambda Expressions
 
-由于它没有return部分，使用lambda只能创建简单的函数，在Python中也不经常用，但是对于其他语言常用(我学Python和R的，我可以不看吗？)
+由于它没有 return 部分，使用 lambda 只能创建简单的函数，在 Python 中也不经常用，但是对于其他语言常用（我学 Python 和 R 的，我可以不看吗？）
 
 
 ![lambda-def](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/lambda-def)
 
-Only the def statement gives the function an intrinsic name. 
+Only the def statement gives the function an intrinsic name.
 
 #### Function Currying
 
@@ -225,7 +225,7 @@ curry2 = lambda f : lambda x : lambda y : f(x, y)
 
 Here should be an environment diagram but none.
 
-more clear case: 
+more clear case:
 
 ```Python
 def curried_pow(x):
@@ -242,7 +242,7 @@ def curried_pow(x):
 Chapter 1: Building Abstractions with Functions
 
 + 1.4  Designing Functions
-+ 1.5  Control 
++ 1.5  Control
 + 1.6  Higher-Order Functions
 
 
@@ -277,7 +277,7 @@ Comment will be passed by complier but can be read by person.
 >Instead of computing something, executing a control statement determines what the interpreter should do next.
 
 Compound statements:
-1. header 
+1. header
 2. suite
 3. clause
 
@@ -354,9 +354,9 @@ two key advantages of lexical scoping in Python
 
 已经学了不知道多少遍了
 
-既然讲了Newton-Raphson Algorithm也应该讲一下Fisher-scoring Algorithm吧(From Mathematical Statistic)
+既然讲了 Newton-Raphson Algorithm 也应该讲一下 Fisher-scoring Algorithm 吧 (From Mathematical Statistic)
 
-#### Currying(柯里化)
+#### Currying（柯里化）
 
 >"Currying" 在英语中，尤其是在编程和数学领域，指的是“柯里化”。柯里化是一种将使用多个参数的函数转换为一系列使用单一参数的函数的技术。
 
@@ -366,14 +366,14 @@ Currying allows us to do so without writing a specific function for each number 
 
 #### Lambda function
 
-是一种简洁的函数表示方法但是由于理解的不容易不怎么使用，在Python中更倾向于使用def而不是lambda函数(为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了)
+是一种简洁的函数表示方法但是由于理解的不容易不怎么使用，在 Python 中更倾向于使用 def 而不是 lambda 函数（为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了）
 
 Standard formal:
 
 lambda x : f(g(x)) means "A function that  takes x  and returns  f(g(x))"
 
 
-Case: 
+Case:
 
 `compose1 = lambda f, g : lambda x: f(g(x))`
 
@@ -386,19 +386,19 @@ The significance of higher-order functions is that they enable us to represent t
 
 Question: 为什么不直接重构呢？
 
-以下是一些可能的原因(瞎琢磨)：
+以下是一些可能的原因（瞎琢磨）：
 
-+ 代码复用(用一个片段一直修饰不同的函数)
++ 代码复用（用一个片段一直修饰不同的函数）
 + 保证原本函数的简洁
 + 所谓的"开闭原则"
-+ 方便维护和扩展(装饰器的部分应该不是函数核心的功能，如果不用或是修改的话可以直接重构多个函数)
++ 方便维护和扩展（装饰器的部分应该不是函数核心的功能，如果不用或是修改的话可以直接重构多个函数）
 
 
 ## Lab 01(1h)
 
 
 !!! tip
-    写完一定要对答案!
+    写完一定要对答案！
 
 
 ### What Would Python Display? (WWPD)
@@ -406,7 +406,7 @@ Question: 为什么不直接重构呢？
 
 #### Q1: WWPD: Control
 
-注意：Python的函数在没有显式使用return的情况下默认返回None，print后就会得到None
+注意：Python 的函数在没有显式使用 return 的情况下默认返回 None，print 后就会得到 None
 
 例子
 
@@ -430,16 +430,16 @@ line3 None
 
 #### Q2: Debugging Quiz
 
-有点搞，不知道为什么交互式做选择题比单纯做题有乐子，做题家基因觉醒了.
+有点搞，不知道为什么交互式做选择题比单纯做题有乐子，做题家基因觉醒了。
 
 
 ### Write Code
 
 #### Q3: Falling Factorial
 
-唯一的问题是要把所有的doctest和题目看完，不要直接写
+唯一的问题是要把所有的 doctest 和题目看完，不要直接写
 
-答案没有专门对0判断而是用了更聪明的做法(移项可知$k>0$)
+答案没有专门对 0 判断而是用了更聪明的做法（移项可知 $k>0$）
 
 
 ```Python
@@ -452,14 +452,14 @@ return total
 
 #### Q4: Divisible By k
 
-相当于实现一个更完整的range函数
+相当于实现一个更完整的 range 函数
 
 感觉写的不是特别好
 
 
 #### Q5: Sum Digits
 
-经典的OJ题，做法太多了
+经典的 OJ 题，做法太多了
 
 ### Syllabus Quiz
 
@@ -477,7 +477,7 @@ return total
 
 #### Q8: Double Eights
 
-同样非常容易，OJ老题
+同样非常容易，OJ 老题
 
 这个参考答案节约了一些空间
 
@@ -524,19 +524,19 @@ def race(x, y):
 
 Wrong value：(2，3),(6, 11)
 
-注1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，$(10+t)x=(5+t)y$，此时只需要取整数解即可$(1\leqslant t \leqslant 5)$，随便取一个好算的分数通分即可(注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对(x, y)且gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离)
+注 1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，$(10+t)x=(5+t)y$，此时只需要取整数解即可 $(1\leqslant t \leqslant 5)$，随便取一个好算的分数通分即可(注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对 (x, y) 且 gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离)
 
-注2：好像应该用试的但是没忍住分析了一下
+注 2：好像应该用试的但是没忍住分析了一下
 
 无限运行应该是乌龟超过兔子后兔子追不上
 
 Runs forever：(4, 5)
 
-注3：延续上面的思路即可$(10k+t)x=(5k+t)y$，考虑互素的情形，并且不为两倍关系直接令$y=5$，令$t=5$排除$x=3\implies x=4$
+注 3：延续上面的思路即可 $(10k+t)x=(5k+t)y$，考虑互素的情形，并且不为两倍关系直接令 $y=5$，令 $t=5$ 排除 $x=3\implies x=4$
 
 #### Q2: Fizzbuzz
 
-非常简单的判断，代码参考repo
+非常简单的判断，代码参考 repo
 
 #### Q3: Is Prime?
 
@@ -556,7 +556,7 @@ return True
 
 #### Q4: Unique Digits
 
-完成两个函数即可，第一个只需要在第二个函数基础上写while循环
+完成两个函数即可，第一个只需要在第二个函数基础上写 while 循环
 
 
 #### Q5: Bottles

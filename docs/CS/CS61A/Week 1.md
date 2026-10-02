@@ -6,18 +6,18 @@ title: Week 1
 
 ## Summary
 
-大致需要3.5h完成
+大致需要 3.5h 完成
 
-1. 建议先看Videos再看Reading，这样对Reading的内容有一个粗略的把握看书会更快
-2. 一定要写Lab和HW
-3. 可以先写Lab 00再写HW01
+1. 建议先看 Videos 再看 Reading，这样对 Reading 的内容有一个粗略的把握看书会更快
+2. 一定要写 Lab 和 HW
+3. 可以先写 Lab 00 再写 HW01
 
 ## Disc 00(5min)
 
-- [x] Part 0 没有Group pass
-- [x] Part 1 没有Discord账号 pass
+- [x] Part 0 没有 Group pass
+- [x] Part 1 没有 Discord 账号 pass
 - [x] Part 2 破冰小游戏 pass
-- [x] Part 3 唯一的问题(30 min)
+- [x] Part 3 唯一的问题 (30 min)
 
 >Imagine you can call only the following three functions: - f(x): **Subtracts one** from an integer x - g(x): **Doubles** an integer x - h(x, y): **Concatenates the digits of two different positive integers** x and y. For example, h(789, 12) evaluates to 78912 and h(12, 789) evaluates to 12789.
 
@@ -26,7 +26,7 @@ title: Week 1
 Q:What’s the shortest small expression you can find that evaluates to 2024?
 A:h(g(g(5)),g(g(g(f(f(5))))))?
 
-- [x] Part 4 拍合照/考勤/讨论Part 3的计算机实现
+- [x] Part 4 拍合照/考勤/讨论 Part 3 的计算机实现
 
 
 ## Reading(2h)
@@ -96,7 +96,7 @@ Answer: 3
 
 #### Environment Diagrams
 
-给出了Environment Diagrams的概念，目前粗略感觉就是一个简单的可视化过程(类似单纯形表的东西)
+给出了 Environment Diagrams 的概念，目前粗略感觉就是一个简单的可视化过程（类似单纯形表的东西）
 
 #### Defining Functions
 
@@ -139,9 +139,9 @@ None  None
 
 ## HW01(15min)
 
-还是比较简单的，比较有趣的是Q4是冰雹猜想，不过确实也是很多OJ上的老题了
+还是比较简单的，比较有趣的是 Q4 是冰雹猜想，不过确实也是很多 OJ 上的老题了
 
 Remark:
-+ Q1注意返回的是`f(a,b)`，所以你需要输入的是函数
-+ Q4冰雹猜想需要注意初始的数和迭代后的1也都需要print
-+ 61A的AIdebug真的好玩，玩过头了
++ Q1 注意返回的是 `f(a,b)`，所以你需要输入的是函数
++ Q4 冰雹猜想需要注意初始的数和迭代后的 1 也都需要 print
++ 61A 的 AIdebug 真的好玩，玩过头了

@@ -1,112 +1,186 @@
 # Zensical configuration file
 
 [project]
-site_name = "Eurekaimer's Digital Garden"
+site_name = "Notes"
 site_description = "My Learning Note Repository"
 site_author = "Eurekaimer"
-site_url = "https://www.eurekaimer.icu/Stathelper"
-repo_url = "https://github.com/Eurekaimer/Stathelper"
+site_url = "https://www.eurekaimer.icu/notes"
+repo_url = "https://github.com/Eurekaimer/notes"
 
 copyright = """
 Copyright &copy; 2024-2026 Eurekaimer
 """
 
-edit_uri = "https://github.com/Eurekaimer/Stathelper/edit/main/docs/"
+edit_uri = "https://github.com/Eurekaimer/notes/edit/main/docs/"
 
 nav = [
-   { "Stathelper" = "index.md" },
-   { "HDP" = [
-        "HDP/index.md",
-        { "Chapter 1" = "HDP/Chapter-1.md" },
-        ]},
-    { "STAT260" = [
-        "STAT260/index.md",
-        { "Chapter 1" = "STAT260/Chapter-1.md" },
-        ]},
-    { "CS" = [
-        { "CS Learning" = "CS/index.md" },
-        { "Deep Learning" = [
-            { "Deep Learning" = "CS/DL/index.md" },
-            { "CS231n" = "CS/CS231n/CS231n.md" },
-        ]},
-        { "CS Introduction" = [
-            {"DL" = "CS/DL/index.md"},
-            {"CS61A" = "CS/CS61A/index.md"},
-        ]},
-    ]},
+    { "Home" = "index.md" },
     { "Analysis" = [
         "Analysis/index.md",
         { "Mathematical Analysis" = [
-            { "南开大学数学分析课本答案" = [
-                "Analysis/南开大学数学分析答案/index.md",
-                { "多元函数的极限与连续" = "Analysis/南开大学数学分析答案/多元函数的极限与连续.md"},
+            "Analysis/MathematicalAnalysis/index.md",
+            { "Preliminaries" = "Analysis/MathematicalAnalysis/预备知识(数学分析).md" },
+            { "Textbook Answers" = [
+                "Analysis/MathematicalAnalysis/Answers/index.md",
+                { "多元函数的极限与连续" = "Analysis/MathematicalAnalysis/Answers/多元函数的极限与连续.md" },
             ]},
-            { "Lecture Notes" = [
-                "Analysis/数学分析(Lecture Notes)/index.md",
-                { "多元函数的极限与连续" = "Analysis/数学分析(Lecture Notes)/预备知识(数学分析).md"},
+            { "Monthly Exams" = "Analysis/MathematicalAnalysis/MonthlyExams/index.md" },
+        ]},
+        { "Real Analysis" = [
+            "Analysis/RealAnalysis/index.md",
+            { "第1章 集合与实数集" = "Analysis/RealAnalysis/第1章 集合与实数集.md" },
+            { "周性伟 Ch1" = "Analysis/RealAnalysis/周性伟-Ch1.md" },
+            { "周性伟 Ch2" = "Analysis/RealAnalysis/周性伟-Ch2.md" },
+        ]},
+        { "Functional Analysis" = [
+            "Analysis/FunctionalAnalysis/index.md",
+            { "Preliminaries" = "Analysis/FunctionalAnalysis/Functional_Analysis-Preliminaries(Lecture).md" },
+            { "Banach Spaces" = "Analysis/FunctionalAnalysis/Banach Spaces.md" },
+            { "Hilbert Spaces" = "Analysis/FunctionalAnalysis/Hilbert Spaces.md" },
+            { "Continuous Linear Operators" = "Analysis/FunctionalAnalysis/Continuous linear operators.md" },
+            { "Some Big Theorems" = "Analysis/FunctionalAnalysis/Some big theorems.md" },
+            { "2020-2021 Final" = "Analysis/FunctionalAnalysis/泛函分析2020-2021期末.md" },
+            { "2021-2022 Final" = "Analysis/FunctionalAnalysis/泛函分析2021-2022期末.md" },
+            { "2023-2024 Final" = "Analysis/FunctionalAnalysis/泛函分析2023-2024期末.md" },
+        ]},
+        { "Reading Notes" = [
+            "Analysis/ReadingNotes/index.md",
+            { "Principles of Mathematical Analysis (Rudin)" = [
+                { "The Real and Complex Number Systems" = "Analysis/ReadingNotes/Principles of Mathematical Analysis(Rudin)/The Real and Complex Number Systems.md" },
             ]},
+        ]},
+    ]},
+    { "Algebra" = [
+        "Algebra/index.md",
+        { "Advanced Algebra" = [
+            "Algebra/AdvancedAlgebra/index.md",
+            { "二次型" = "Algebra/AdvancedAlgebra/二次型.md" },
         ]},
     ]},
     { "Probability" = [
         "Probability/index.md",
+        { "Elementary Probability" = [
+            "Probability/ElementaryProbability/index.md",
+            { "Combinatorial Analysis" = "Probability/ElementaryProbability/Combinatorial Analysis.md" },
+            { "Sets, Axioms of Probability" = "Probability/ElementaryProbability/Sets, Axioms of Probability.md" },
+        ]},
         { "Stochastic Process" = [
-            "Probability/Stochastic_Process/index.md",
-            { "Lecture 2" = "Probability/Stochastic_Process/Poisson_Processes.md"},
+            "Probability/StochasticProcess/index.md",
+            { "Poisson Processes" = "Probability/StochasticProcess/PoissonProcesses.md" },
+            { "Lecture 1 - Introduction & Preliminaries" = "Probability/StochasticProcess/Assets/Lecture 1 - Introduction & Preliminaries.md" },
+            { "Lecture 2 - Poisson Processes" = "Probability/StochasticProcess/Assets/Lecture 2 - Poisson Processes.md" },
+            { "Lecture 3 - Extensions of Poisson Process" = "Probability/StochasticProcess/Assets/Lecture 3 - Extensions of Poisson Process.md" },
+            { "Lecture 4 - Discrete-time Markov Chains" = "Probability/StochasticProcess/Assets/Lecture 4 - Discrete-time Markov Chains.md" },
+            { "Lecture 5 - Classification of States" = "Probability/StochasticProcess/Assets/Lecture 5 - Classification of States.md" },
+            { "Lecture 6 - Limit Behaviour & Ergodic Theory" = "Probability/StochasticProcess/Assets/Lecture 6 - Limit Behaviour & Ergodic Theory.md" },
         ]},
     ]},
-    { "Boring" = [
-        { "大学物理2" = [
-            "Boring/大学物理2/index.md",
-            { "真空中的静电场" = "Boring/大学物理2/大学物理2-1-真空中的静电场.md" },
-            { "静电场中的导体和电介质" = "Boring/大学物理2/大学物理2-2-静电场中的导体和电介质.md" },
-            { "直流电和交流电" = "Boring/大学物理2/大学物理2-3-直流电和交流电.md" },
-            { "恒定磁场" = "Boring/大学物理2/大学物理2-4-恒定磁场.md" },
-            { "电磁感应" = "Boring/大学物理2/大学物理2-5-电磁感应.md" },
+    { "Statistics" = [
+        "Statistics/index.md",
+        { "Mathematical Statistics" = [
+            "Statistics/MathematicalStatistics/index.md",
+            { "基本概念" = "Statistics/MathematicalStatistics/Assets/基本概念.md" },
+            { "点估计" = "Statistics/MathematicalStatistics/Assets/点估计.md" },
+            { "假设检验——显著性检验" = "Statistics/MathematicalStatistics/Assets/假设检验——显著性检验.md" },
+            { "25 数理统计期中" = "Statistics/MathematicalStatistics/Assets/25数理统计期中.md" },
         ]},
+        { "Regression Analysis" = [
+            "Statistics/RegressionAnalysis/index.md",
+            { "第一章 引论（王松桂）" = "Statistics/RegressionAnalysis/第一章-引论-王松桂.md" },
+        ]},
+        { "Operations Research" = [
+            "Statistics/OperationsResearch/index.md",
+            { "线性规划与目标规划" = "Statistics/OperationsResearch/线性规划与目标规划.md" },
+            { "无约束问题" = "Statistics/OperationsResearch/无约束问题.md" },
+        ]},
+        { "STAT260" = "Statistics/STAT260/index.md" },
     ]},
-    { "ACGN" = [
-        { "Anime Rank" = "ACGN/Anime.md"},
-        { "Yuri Rank" = "ACGN/Yuri.md"},
-        { "Yuri Novel" = "ACGN/百合文盘点.md"},
-        { "Galgame" = [
-            "Galgame/index.md",
-            { "仅你一人" = "Galgame/only-you.md"},
-            { "Flowers Spring" = "Galgame/only-you.md"},
+    { "Computer Science" = [
+        "CS/index.md",
+        { "CS50x" = [
+            "CS/CS50x/index.md",
+            { "Week 0 Scratch" = "CS/CS50x/Week 0 Scratch.md" },
+            { "Week 1 C" = "CS/CS50x/Week 1 C.md" },
+            { "Week 2 Arrays" = "CS/CS50x/Week 2 Arrays.md" },
         ]},
+        { "CS61A" = [
+            "CS/CS61A/index.md",
+            { "Project 1 - The Game of Hog" = "CS/CS61A/Project 1-The Game of Hog.md" },
+            { "Project 2 - Autocorrected Typing Software" = "CS/CS61A/Project 2-CS 61A Autocorrected Typing Software.md" },
+            { "Week 1" = "CS/CS61A/Week 1.md" },
+            { "Week 2" = "CS/CS61A/Week 2.md" },
+            { "Week 3" = "CS/CS61A/Week 3.md" },
+            { "Week 4" = "CS/CS61A/Week 4.md" },
+            { "Week 5" = "CS/CS61A/Week 5.md" },
+            { "Week 6" = "CS/CS61A/Week 6.md" },
+            { "Week 7" = "CS/CS61A/Week 7.md" },
         ]},
+        { "CS231n" = [
+            "CS/CS231n/CS231n.md",
+            { "Lecture 1 - Introduction" = "CS/CS231n/CS231n-Lecture1 Introduction.md" },
+        ]},
+        { "Deep Learning" = "CS/DL/index.md" },
+        { "Machine Learning (西瓜书)" = "CS/西瓜书/index.md" },
+        { "Data Mining & Machine Learning" = [
+            "CS/数据挖掘与机器学习/index.md",
+            { "DMML_24Fall_Re" = "CS/数据挖掘与机器学习/DMML_24Fall_Re.md" },
+            { "关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明" = "CS/数据挖掘与机器学习/关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明.md" },
+            { "Lecture 3 信息论基础" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture3 信息论基础.md" },
+            { "Lecture 9 判别分析" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture9 判别分析.md" },
+            { "Lecture 12 KNN" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture12 KNN.md" },
+            { "Lecture 13 NNs" = "CS/数据挖掘与机器学习/Assets/DMML_Lecture13 NNs.md" },
+        ]},
+        { "Distributed Storage & Computing" = [
+            "CS/分布式存储与计算/index.md",
+            { "LAB" = "CS/分布式存储与计算/分布式存储与计算_LAB.md" },
+        ]},
+        { "Statistical & Big Data Software" = [
+            "CS/统计与大数据软件/index.md",
+            { "Py-Lecture 1 基本操作" = "CS/统计与大数据软件/Py-Lecture-1 基本操作.md" },
+        ]},
+        { "Practical Tutorials" = "CS/实用教程/index.md" },
+    ]},
     { "Tech" = [
         "Tech/index.md",
         { "Wheels" = [
-            { "轮子大家族" = "Tech/Wheels/轮子大家族.md"},
-            { "LaTeX" = "Tech/Wheels/LaTeX(VScode).md"},
-            { "Sioyek" = "Tech/Wheels/Sioyek.md"},
-            { "CachyOS-Recovery" = "Tech/Wheels/CachyOS-Recovery.md"},
-            { "Mermaid" = "Tech/Wheels/Mermaid Note.md"},
-            { "图床搭建(PicGo)" = "Tech/Wheels/图床搭建(PicGo).md"},
-            { "Stata18安装" = "Tech/Wheels/Stata18安装.md"},
-            { "Python环境安装和配置" = "Tech/Wheels/Python环境安装和配置.md"},
-            { "Python的项目管理" = "Tech/Wheels/Python的项目管理.md"},
-            { "Rust环境安装" = "Tech/Wheels/Rust环境安装.md"},
-            { "如何使用NixOS玩明日方舟" = "Tech/Wheels/如何使用NixOS玩明日方舟.md"},
-            { "CachyOS-YYS" = "Tech/Wheels/CachyOS-YYS.md"},
+            { "Overview" = "Tech/Wheels/轮子大家族.md" },
+            { "LaTeX (VSCode)" = "Tech/Wheels/LaTeX(VScode).md" },
+            { "Mermaid" = "Tech/Wheels/Mermaid Note.md" },
+            { "Sioyek" = "Tech/Wheels/Sioyek.md" },
+            { "PicGo" = "Tech/Wheels/图床搭建(PicGo).md" },
+            { "Stata 18" = "Tech/Wheels/Stata18安装.md" },
+            { "Python Environment" = "Tech/Wheels/Python环境安装和配置.md" },
+            { "Python Projects" = "Tech/Wheels/Python的项目管理.md" },
+            { "Rust" = "Tech/Wheels/Rust环境安装.md" },
+            { "CachyOS Recovery" = "Tech/Wheels/CachyOS-Recovery.md" },
+            { "CachyOS YYS" = "Tech/Wheels/CachyOS-YYS.md" },
+            { "NixOS Arknights" = "Tech/Wheels/如何使用NixOS玩明日方舟.md" },
         ]},
     ]},
     { "WebSource" = [
         "WebSource/index.md",
-        { "Source Websites" = [
-            { "Computer Science" = "WebSource/计算机科学(CS)资源汇总.md"},
-            { "Math and Statistics" = "WebSource/数学(统计学)资源汇总.md"},
-        ]},
-        { "克林索尔的最后夏天" = "WebSource/克林索尔的最后夏天.md" },
+        { "CS Resources" = "WebSource/计算机科学(CS)资源汇总.md" },
+        { "Math & Statistics Resources" = "WebSource/数学(统计学)资源汇总.md" },
+        { "Wandering" = "WebSource/wandering.md" },
         { "Video Archive" = "WebSource/videos/index.md" },
+    ]},
+    { "Research" = "Research/index.md" },
+    { "Physics" = [
+        { "University Physics 2" = [
+            "Physics/UniversityPhysics2/index.md",
+            { "真空中的静电场" = "Physics/UniversityPhysics2/大学物理2-1-真空中的静电场.md" },
+            { "静电场中的导体和电介质" = "Physics/UniversityPhysics2/大学物理2-2-静电场中的导体和电介质.md" },
+            { "直流电和交流电" = "Physics/UniversityPhysics2/大学物理2-3-直流电和交流电.md" },
+            { "恒定磁场" = "Physics/UniversityPhysics2/大学物理2-4-恒定磁场.md" },
+            { "电磁感应" = "Physics/UniversityPhysics2/大学物理2-5-电磁感应.md" },
         ]},
+    ]},
     { "Friends Link" = "friends-link.md" },
 ]
 
 
 extra_css = [
     "stylesheets/extra.css",
-    "stylesheets/anime-grid.css",
     "stylesheets/key.css",
     "stylesheets/mouse-color.css",
     "stylesheets/videos.css",

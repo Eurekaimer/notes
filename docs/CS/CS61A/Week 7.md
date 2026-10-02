@@ -2,11 +2,11 @@
 
 ## Summary
 
-大致需要4h的时间完成，该Week任务量不大，题目也比较简单，主要是刚入门OOP，掌握OOP的设计思想和理念即可
+大致需要 4h 的时间完成，该 Week 任务量不大，题目也比较简单，主要是刚入门 OOP，掌握 OOP 的设计思想和理念即可
 
->OOP的设计理念核心是==通过将现实世界的实体抽象为具有数据（属性）和操作（方法）的对象来构建软件系统，并利用类、封装、继承、多态等概念来模拟现实世界的逻辑，从而达到代码的模块化、可重用性、灵活性和可维护性==。它强调将数据和行为绑定在一起，并允许对象通过消息传递来相互通信，以构建复杂且易于扩展的系统。
+>OOP 的设计理念核心是==通过将现实世界的实体抽象为具有数据（属性）和操作（方法）的对象来构建软件系统，并利用类、封装、继承、多态等概念来模拟现实世界的逻辑，从而达到代码的模块化、可重用性、灵活性和可维护性==。它强调将数据和行为绑定在一起，并允许对象通过消息传递来相互通信，以构建复杂且易于扩展的系统。
 
-OOP主要有以下核心理念与概念：
+OOP 主要有以下核心理念与概念：
 
 + Object
 + Class
@@ -15,7 +15,7 @@ OOP主要有以下核心理念与概念：
 + Polymorphism
 + Message Passing
 
-值得一提的是末尾附带了往年期末考试的相关试题，明显可以看出知识共享的普及(难度倒是不高)，对比神秘打印店和祖传资料高级了不少
+值得一提的是末尾附带了往年期末考试的相关试题，明显可以看出知识共享的普及（难度倒是不高），对比神秘打印店和祖传资料高级了不少
 
 ## Reading(2h)
 
@@ -78,7 +78,7 @@ try:
 		pass
 ```
 
-Python 文档中的迭代器类型章节建议迭代器应具有一个返回迭代器本身的``__iter__``方法，因此所有迭代器都是可迭代的
+Python 文档中的迭代器类型章节建议迭代器应具有一个返回迭代器本身的 ``__iter__`` 方法，因此所有迭代器都是可迭代的
 
 #### Generators and Yield Statements
 
@@ -105,13 +105,13 @@ list(all_pairs([1, 2, 3]))
 
 #### Streams
 
-To Do(至25Fall该处仍然为空)
+To Do（至 25Fall 该处仍然为空）
 
 
 #### Python Streams
 
 
-SICP中叙述的有点抽象，我建议阅读[官方的文档](https://docs.python.org/3/library/asyncio-stream.html)
+SICP 中叙述的有点抽象，我建议阅读[官方的文档](https://docs.python.org/3/library/asyncio-stream.html)
 
 Chapter 2: Building Abstractions with Data
 + Ch.2.5 Object-Oriented Programming
@@ -215,7 +215,7 @@ Learning to identify when to introduce a new class, as opposed to a new function
 
 ### Objects
 
-简单介绍了OOP编程的基本概念和结构，建议去看textbook写的比较详细
+简单介绍了 OOP 编程的基本概念和结构，建议去看 textbook 写的比较详细
 
 ## Lab 05(30min)
 
@@ -234,11 +234,11 @@ Learning to identify when to introduce a new class, as opposed to a new function
 
 #### Q2: Insert Items
 
-很容易，只需要记得如果满足条件使指针向前挪动，否则`before == after`时会发生死循环
+很容易，只需要记得如果满足条件使指针向前挪动，否则 `before == after` 时会发生死循环
 
 #### Q3: Group By
 
-如果对于SQL熟悉的话，这就相当于复现聚集函数了
+如果对于 SQL 熟悉的话，这就相当于复现聚集函数了
 
 ### Iterators
 
@@ -268,7 +268,7 @@ Q8: Partial Reverse
 
 Q1: Big Fib
 
-主要是要对几个内置函数有认识(相关的代码在Week 7文件夹中)
+主要是要对几个内置函数有认识（相关的代码在 Week 7 文件夹中）
 
 >such as map, filter, list, any, all, etc.
 
@@ -278,7 +278,7 @@ def gen_fib2():
     while True:  
         yield n  
         n, add = n + add, n  
-  
+
 next(filter(lambda n : n > 2024, gen_fib2()))
 ```
 
@@ -286,7 +286,7 @@ next(filter(lambda n : n > 2024, gen_fib2()))
 Q2: Something Different
 
 
-Q3： Partitions
+Q3：Partitions
 
 使用迭代器优化树结构的一个例子
 
@@ -309,7 +309,7 @@ def partition_gen(n, m):
 
 ### Q1: Infinite Hailstone
 
-练习yield from
+练习 yield from
 
 ```Python
 def hailstone(n):  
@@ -347,7 +347,7 @@ def merge(a, b):
 
 ### Q3: Yield Paths
 
-不知道为什么代码注释写的是Q4，合理怀疑之前还有一道题删除之后没有更改下一道题的注释
+不知道为什么代码注释写的是 Q4，合理怀疑之前还有一道题删除之后没有更改下一道题的注释
 
 ```Python
 def yield_paths(t, value):  

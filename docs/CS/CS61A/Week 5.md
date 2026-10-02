@@ -3,9 +3,9 @@
 ## Summary
 
 
-大概需要5h，不包括完成Project的时间，终于进入了Python比较核心的部分，有了Lists, Slicing, Container等概念，发现软件老师使用的例子与61A的例子一模一样.
+大概需要 5h，不包括完成 Project 的时间，终于进入了 Python 比较核心的部分，有了 Lists, Slicing, Container 等概念，发现软件老师使用的例子与 61A 的例子一模一样。
 
-总的来说，抽象化的教学还是有益的，虽然前期进展的很慢，但是培养了比较良好的习惯，比如Absraction Barriers方便后续维护的这种意识.
+总的来说，抽象化的教学还是有益的，虽然前期进展的很慢，但是培养了比较良好的习惯，比如 Absraction Barriers 方便后续维护的这种意识。
 
 
 ## Videos(2h)
@@ -15,7 +15,7 @@
 
 #### Lists
 
-Note that the begining index is 0 not 1, and elements of lists can be various 
+Note that the begining index is 0 not 1, and elements of lists can be various
 
 #### Containers
 
@@ -86,7 +86,7 @@ Remark: Like conditional probability trick used in probability theory, we get co
 ### Containers
 
 
-#### Box-and-Pointer Notation 
+#### Box-and-Pointer Notation
 
 Just a way like environmental diagram to explain the list operations.
 
@@ -272,7 +272,7 @@ def paths(m, n):
 ```Python
 def max_product(s):  
     """Return the maximum product of non-consecutive elements of s.  
-  
+
     >>> max_product([10, 3, 1, 9, 2])   # 10 * 9  
     90    >>> max_product([5, 10, 5, 10, 5])  # 5 * 5 * 5  
     125    >>> max_product([])                 # The product of no numbers is 1  
@@ -309,4 +309,4 @@ def sums(n, m):
 ```
 
 
-Remark: Slicing操作简直是为Recursion准备的，非常好用!
+Remark: Slicing 操作简直是为 Recursion 准备的，非常好用!

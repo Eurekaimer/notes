@@ -1,21 +1,19 @@
 ---
-title: 分析学总站
+title: Analysis
 comments: true
 tags:
   - Analysis
 ---
 
-# 分析学总站
+# Analysis
 
-与标题一致，这里主要存放关于分析学的课程笔记或是站长自己阅读的一些分析学书籍的笔记
+这里存放分析学（Analysis）相关的课程笔记、读书笔记与习题答案。
 
 目前已有：
 
-+ [数学分析(Mathematical Analysis)](./数学分析(Lecture Notes)/index.md)
-    + [南开大学数学分析月考](./南开大学数学分析月考真题/index.md)
-    + [南开大学数学分析答案](./南开大学数学分析答案(在编)/index.md)
-+ [实分析(Real Analysis)](./实分析/index.md)
-+ [初等概率论(Elementary Probability Theory)](./概率论/index.md)
-+ [随机过程(Stochastic Process)](./随机过程/index.md)
++ [Mathematical Analysis](./MathematicalAnalysis/index.md)
++ [Real Analysis](./RealAnalysis/index.md)
++ [Functional Analysis](./FunctionalAnalysis/index.md)
++ [Reading Notes](./ReadingNotes/index.md)
 
-以上内容均遵循[CC BY-SA 4.0 license](https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License)，如发现错误或是有反馈建议请email联系
+以上内容均遵循 [CC BY-SA 4.0 license](https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License)，如发现错误或是有反馈建议请 email 联系

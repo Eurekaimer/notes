@@ -50,10 +50,10 @@ Assign every letter a number -for some reasons the A strats with 65(64+1).
 
 ### Unicode
 
-Unicode code point U+1F602 
+Unicode code point U+1F602
 
 Remark:
-The U+ is a conventional mark for unicode in computer science. 
+The U+ is a conventional mark for unicode in computer science.
 
 
 ### Color
@@ -72,9 +72,9 @@ It's algorithms!
 
 Case: Find John Harvard in the book and take three algorithms.
 
-1. one step each 
+1. one step each
 2. two steps each
-3. half of the remainings 
+3. half of the remainings
 
 We can solve the problem correctly and more efficiently as well.
 
@@ -157,7 +157,7 @@ This was CS50! Welcome aboard! See you next time!
 - Your project must use at least one custom block that you have made yourself (via **Make a Block**), which must take at least one input.
 - Your project should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than [Oscartime](https://scratch.mit.edu/projects/277537196) and [Ivy’s Hardest Game](https://scratch.mit.edu/projects/326129433).
 
-Due the Scratch's high freedom property I pass the problem set(Or make an easy one?). 
+Due the Scratch's high freedom property I pass the problem set(Or make an easy one?).
 
 
 
