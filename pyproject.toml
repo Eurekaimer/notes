@@ -1,7 +1,7 @@
 [project]
-name = "zensical-homepage"
+name = "notes"
 version = "0.1.0"
-description = "Add your description here"
+description = "Eurekaimer's notes site built with Zensical"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

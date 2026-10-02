@@ -3,17 +3,21 @@ window.MathJax = {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
-    processEnvironments: true
+    processEnvironments: true,
   },
   options: {
     ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
-  }
+    processHtmlClass: "arithmatex",
+  },
 };
 
-document$.subscribe(() => { 
-  MathJax.startup.output.clearCache()
-  MathJax.typesetClear()
-  MathJax.texReset()
-  MathJax.typesetPromise()
-})
+function typeset() {
+  if (!window.MathJax?.startup?.output) return;
+  MathJax.startup.output.clearCache();
+  MathJax.typesetClear();
+  MathJax.texReset();
+  MathJax.typesetPromise();
+}
+
+if (typeof document$ !== "undefined") document$.subscribe(typeset);
+else window.addEventListener("load", typeset, { once: true });

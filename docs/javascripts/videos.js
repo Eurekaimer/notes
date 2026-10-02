@@ -24,7 +24,7 @@
     if (!root || mounted.has(root)) return;
     mounted.add(root);
     const pageURL = new URL(location.href);
-    // Relative to the page, not the domain root: also works under /Stathelper/.
+    // Relative to the page, not the domain root: also works under /notes/.
     const source = new URL(root.dataset.source, pageURL);
     const search = root.querySelector("#video-search");
     const sort = root.querySelector("#video-sort");

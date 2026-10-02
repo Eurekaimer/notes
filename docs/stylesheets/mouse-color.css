@@ -1,10 +1,4 @@
 ::selection {
-  background: #fbd2ea;  /* 你想要的背景色 */
-  color: #000;          /* 可选：选中文字的颜色 */
-}
-
-/* 对 Firefox 的兼容性写法 */
-::-moz-selection {
   background: #fbd2ea;
   color: #000;
 }
