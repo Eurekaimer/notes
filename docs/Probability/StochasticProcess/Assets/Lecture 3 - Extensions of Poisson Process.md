@@ -3,8 +3,8 @@
 
 
 !!! tldr "Syllabus"
-    + 非时齐 Poisson 过程
-    + 复合 Poisson 过程
+    + 非时齐 Poisson 过程  
+    + 复合 Poisson 过程  
     + 条件 Poisson 过程
 
 

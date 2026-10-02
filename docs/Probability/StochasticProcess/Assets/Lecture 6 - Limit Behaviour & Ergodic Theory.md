@@ -2,8 +2,8 @@
 # Lecture 6 - Limit Behaviour & Ergodic Theory
 
 !!! tldr "Syllabus"
-    + 正常返
-    + 遍历定理
+    + 正常返  
+    + 遍历定理  
     + 不变分布的存在性与唯一性
 
 本节课接着常返性的内容，考虑 $n\to\infty$ 的情形，继续研究随时间推移,Markov 链转移的规律。由上一节课中 Corollary 5.12，若状态 $j$ 是暂留的，那么对任意状态

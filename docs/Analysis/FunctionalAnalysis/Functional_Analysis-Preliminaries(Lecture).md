@@ -1,10 +1,10 @@
 # 绪论
 
 !!! tldr "Outline"
-    + Zorn's lemma
-    + Vector spaces
-    + Metric spaces
-    + Topological spaces
+    + Zorn's lemma  
+    + Vector spaces  
+    + Metric spaces  
+    + Topological spaces  
     + Topological Vector Spaces
 
 声明：关于本书中所采用的 $\mathbb{K}$，指代 $\mathbb{R}$ 或 $\mathbb{C}$

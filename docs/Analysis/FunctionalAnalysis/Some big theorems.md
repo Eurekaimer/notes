@@ -2,10 +2,10 @@
 
 
 !!! tldr "Outline"
-    + Hahn-Banach Extension Theorem
-    + Continuous linear functionals of a TVS
-    + Seperation Theorems
-    + Uniform Boundness Principle
+    + Hahn-Banach Extension Theorem  
+    + Continuous linear functionals of a TVS  
+    + Seperation Theorems  
+    + Uniform Boundness Principle  
     + Open Mapping Theorem and Closed Graph Theorem
 
 ## Hahn-Banach Extension Theorem

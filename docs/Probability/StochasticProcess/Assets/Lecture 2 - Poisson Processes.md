@@ -3,8 +3,8 @@
 
 
 !!! tldr "Syllabus"
-    + Poisson 过程
-    + 到达间隔
+    + Poisson 过程  
+    + 到达间隔  
     + 到达时间
 
 

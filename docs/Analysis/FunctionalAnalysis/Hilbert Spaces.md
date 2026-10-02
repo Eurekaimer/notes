@@ -2,9 +2,9 @@
 
 
 !!! tldr "Outline"
-    + Basic properties
-    + Best approximation
-    + Orthogonal Decomposition
+    + Basic properties  
+    + Best approximation  
+    + Orthogonal Decomposition  
     + Orthonormal basis
 
 第三章主要研究的是 Hilbert 空间，也就是**完备内积空间**，第二章是为向量空间配备了范数（长度），这一章则是通过引入内积为其添加了角度和投影的概念，使得空间的几何结构更加接近我们熟悉的 $\mathbb{R}^{n}$，从而我们可以通过使用内积来同时表示长度和角度

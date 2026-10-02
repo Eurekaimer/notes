@@ -2,8 +2,8 @@
 # Lecture 5 - Classification of States
 
 !!! tldr "Syllabus"
-    + 可约性
-    + 周期性
+    + 可约性  
+    + 周期性  
     + 常返性
 
 ## 可约性与周期性

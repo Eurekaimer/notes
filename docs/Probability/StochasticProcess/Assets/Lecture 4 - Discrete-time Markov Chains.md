@@ -3,8 +3,8 @@
 
 
 !!! tldr "Syllabus"
-    + Markou 链
-    + Chapman-Kolmogorou 方程
+    + Markou 链  
+    + Chapman-Kolmogorou 方程  
     + 不变分布
 
 

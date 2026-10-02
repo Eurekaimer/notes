@@ -2,9 +2,9 @@
 
 
 !!! tldr "Outline"
-    + Normed spaces
-    + Banach spaces
-    + Seperable Banach spaces
+    + Normed spaces  
+    + Banach spaces  
+    + Seperable Banach spaces  
     + Completeness and Compactness in Banach spaces
 
 泛函分析的基础就是下面所提到的赋范空间，在一个向量空间上赋以一个范数，因此称为赋范空间 (Normed space)，这是泛函分析中最为基本的研究对象，我们将完备性引入其中得到 Banach 空间
