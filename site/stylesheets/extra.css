@@ -1,79 +1,131 @@
-/* 字体按「语义」分工：正文是个人叙述，引用/定义是正式内容，
-   标题与 UI 是结构，代码是机器文本。
-   注意：当前是「全部英文都用 Comic Neue」的试验状态（待确认），
-   恢复分工只需把下面的 --font-serif / --font-sans 改回原值。 */
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Lato:wght@400;700&family=Inconsolata:wght@400;700&display=swap");
+/* ------------------------------------------------------------------ 字体系统
+   统一使用霞鹜文楷（LXGW WenKai，中英文同一字形家族），代码用 JetBrains Mono。
+   Markdown 无需任何 HTML/class：**加粗** 与 *斜体* 都由 CSS 呈现为 Italic。
+   zensical.toml 里 [project.theme] font = false 关掉了主题的 Google Fonts 拉取。 */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 :root {
-  --font-body: "Comic Neue", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
-  --font-serif: "Comic Neue", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
-  --font-sans: "Comic Neue", "Noto Serif SC", "Source Han Serif SC", "LXGW WenKai", serif;
-  --font-mono: "Inconsolata", "LXGW WenKai Mono", ui-monospace, monospace;
+  --font-serif: "LXGW WenKai", "LXGW WenKai TC", "Noto Serif SC", serif;
+  --font-mono: "JetBrains Mono", "LXGW WenKai Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
 
-  /* 让 Material 自带的字体变量跟随同一套栈（导航、admonition 标题等） */
-  --md-text-font-family: var(--font-body);
+  /* Material 的字体变量跟随同一套栈（导航、admonition 标题、页脚等） */
+  --md-text-font-family: var(--font-serif);
   --md-code-font-family: var(--font-mono);
 }
 
-/* 英文正文用 Comic Neue；中文回落到衬线体 */
-body,
-.md-typeset {
-  font-family: var(--font-body);
+/* LXGW 没有独立的 Italic 字面，允许浏览器合成，否则强调会完全看不出来 */
+html {
+  font-synthesis-style: auto;
 }
 
-/* 标题 / 导航 / 标签 / 页脚：结构性的 UI 声音 */
+/* 正文与各级标题统一 LXGW，不加粗 */
+body,
+.md-typeset,
+.md-typeset p,
+.md-typeset li,
+.md-typeset blockquote,
+.md-typeset td,
+.md-typeset th,
+.md-typeset dd,
+.md-typeset dt,
+.md-typeset figcaption,
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5,
-.md-typeset h6,
-.md-typeset time,
-.md-header,
-.md-tabs,
-.md-nav,
-.md-footer {
-  font-family: var(--font-sans);
-}
-
-/* 引用、定义、定理、参考文献：正式内容切换为衬线 */
-.md-typeset blockquote,
-.md-typeset cite,
-.md-typeset .admonition.quote,
-.md-typeset details.quote,
-.md-typeset .admonition.abstract,
-.md-typeset details.abstract,
-.md-typeset .references,
-.md-typeset .bibliography {
+.md-typeset h6 {
   font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
 }
 
-/* 引用块明显换一套排版，而不只是加一条竖线 */
-.md-typeset blockquote {
-  font-size: 1.02em;
-  line-height: 1.75;
-  margin: 1.5rem 0;
-  padding: 0.8rem 1.2rem;
-  border-left: 3px solid #aaa;
+/* 一级、二级标题整体用 Italic */
+.md-typeset h1,
+.md-typeset h2 {
+  font-style: italic;
 }
 
-/* 代码：等宽 */
+/* 正文里的链接文字也用 Italic；锚点（⚓︎）和按钮保持 Regular */
+.md-typeset a:not(.headerlink):not(.md-button):not(.md-icon) {
+  font-style: italic;
+}
+
+.md-typeset a.headerlink,
+.md-typeset .md-button,
+.md-typeset .md-icon {
+  font-style: normal;
+}
+
+/* **strong** / *em* / ***both*** 一律显示为 Italic（不是 Bold） */
+.md-typeset strong,
+.md-typeset b,
+.md-typeset em,
+.md-typeset i,
+.md-typeset strong em,
+.md-typeset em strong,
+.md-typeset strong strong,
+.md-typeset em em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* 提示框标题、折叠块标题、导航属于 UI 文本，保持 Regular */
+.md-typeset .admonition-title,
+.md-typeset summary,
+.md-typeset .md-nav__title,
+.md-nav__link,
+.md-tabs__link {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* 代码：一律等宽，且不要被强调规则带跑 */
 .md-typeset code,
 .md-typeset pre,
-.md-typeset kbd {
+.md-typeset pre > code,
+.md-typeset kbd,
+.md-typeset samp {
   font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 400;
 }
 
-/* 需要单独指定英文手写风的片段 */
-.english {
-  font-family: "Comic Neue", cursive;
+.md-typeset code em,
+.md-typeset code strong,
+.md-typeset pre em,
+.md-typeset pre strong {
+  font-family: var(--font-mono);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* 引用块：书籍式的内缩排版。显式收窄左右边距并清掉主题残留的右边框，
+   否则框会占满整列、看起来比里面的文字宽很多 */
+.md-typeset blockquote {
+  font-size: 1em;
+  line-height: 1.7;
+  margin: 1.25rem 1.5rem;
+  padding: 0.25rem 0 0.25rem 0.9rem;
+  border-left: 3px solid #aaa;
+  border-right: 0;
 }
 
 /* 返回顶部按钮字体 */
 button.md-top {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* ---------------------------------------------------------------- 首页卡片 */
@@ -126,9 +178,10 @@ button.md-top {
 }
 
 .blog-card-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
   font-size: 1.25rem;
-  font-weight: bold;
   margin-bottom: 0.6rem;
   line-height: 1.3;
   color: var(--md-typeset-color);
@@ -175,8 +228,9 @@ body:has(.blog-card-container) .md-grid {
 
 /* ------------------------------------------------------------ 打字机组件 */
 .modern-typewriter {
-  font-family: "Comic Neue", var(--font-sans);
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
   font-size: 1.6rem;
   color: #3f6d9b;
   display: flex;

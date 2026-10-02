@@ -164,7 +164,7 @@ extra_css = [
     "stylesheets/key.css",
     "stylesheets/mouse-color.css",
     "stylesheets/videos.css",
-    "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",  # 霞鹜文楷
+    "https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css",  # 霞鹜文楷：只负责中文字形
 ]
 
 extra_javascript = [
@@ -206,6 +206,7 @@ toc_depth = 3
 
 [project.theme]
 variant = "modern"
+font = false
 custom_dir = "overrides"
 favicon = "images/xiaoju.jpg"
 language = "zh"
@@ -221,7 +222,6 @@ features = [
     "content.tabs.link",
     "content.tooltips",
     "header.autohide",
-    "navigation.expand",
     "navigation.footer",
     "navigation.indexes",
     "navigation.instant",
@@ -257,10 +257,6 @@ media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
-
-[project.theme.font]
-text = "LXGW WenKai"  
-code = "Roboto Mono" 
 
 [project.theme.icon]
 logo = "lucide/pi"

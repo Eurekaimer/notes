@@ -76,20 +76,33 @@
 - 组件逻辑只保留一份；跨页面复用抽到 `docs/javascripts/`，不复制 `<style>`/`<script>`
 - 一次性迁移脚本用完即删，不长期留在仓库
 
-## 字体分工
+## 字体
 
-字体按语义分工，变量定义在 `docs/stylesheets/extra.css`，并同步覆盖 Material 的
-`--md-text-font-family` / `--md-code-font-family`：
+统一、简单：**全站霞鹜文楷（LXGW WenKai）**，代码用 **JetBrains Mono**，全部在
+`docs/stylesheets/extra.css` 里用 CSS 变量声明，写 Markdown 时不需要任何 HTML 或 class。
 
-| 变量 | 字体 | 用在哪里 |
+| Markdown | 生成 HTML | 呈现 |
 |---|---|---|
-| `--font-body` | Comic Neue + Noto Serif SC | 正文段落、列表（个人叙述） |
-| `--font-serif` | Source Serif 4 + Noto Serif SC | `blockquote`、定义/定理/引述类 admonition、`cite`、`.references` |
-| `--font-sans` | Lato + Noto Sans SC | 标题、导航、标签、页脚、卡片标题 |
-| `--font-mono` | Inconsolata | 代码、`pre`、`kbd` |
+| 普通正文 | `<p>` / `<li>` / `<blockquote>` | LXGW Regular |
+| `**加粗**` | `<strong>` | LXGW **Italic**（不是 Bold） |
+| `*斜体*` | `<em>` | LXGW Italic |
+| `***两者***` | `<strong><em>` | LXGW Italic |
+| `[文字](url)` | `<a>` | LXGW Italic（锚点 ⚓︎ 与按钮除外） |
+| `` `代码` `` | `<code>` / `<pre>` | JetBrains Mono |
 
-Comic Neue 等英文字体没有中文字形，中文一律由后面的 CJK 字体回落（正文走宋体，
-标题走黑体）。新增组件时用变量而不是写死字体名。
+- `h1`、`h2` 用 Italic；`h3`–`h6` 与正文同字重（400），靠字号与间距区分层级
+- 提示框标题、折叠块标题、导航属于 UI 文本，固定 Regular，不参与强调规则
+- LXGW 没有独立 Italic 字面，因此 `html { font-synthesis-style: auto }` 让浏览器合成倾斜；
+  换成自带 Italic 的字体时应改回 `none` 并补 `@font-face` 的 italic
+- `zensical.toml` 里 `[project.theme] font = false` 关闭主题的 Google Fonts 拉取；
+  JetBrains Mono 的 woff2 放在 `docs/fonts/`，LXGW 走 `extra_css` 里的 webfont CDN
+- **CSS 覆盖主题时注意残留**：主题给 `blockquote` 设了右边框和左右 padding，
+  覆盖时要显式清掉（`border-right: 0`），否则引用框会比正文列还宽
+
+## 导航
+
+- `navigation.expand` 会强制展开侧边栏的所有章节、导致无法折叠，已移除；
+  需要「展开/折叠」行为时不要开启它，只保留 `navigation.sections` / `navigation.prune`
 
 ## 未发布内容
 
