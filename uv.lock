@@ -42,6 +42,17 @@ wheels = [
 ]
 
 [[package]]
+name = "notes"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "zensical" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "zensical", specifier = ">=0.0.19" }]
+
+[[package]]
 name = "pygments"
 version = "2.19.2"
 source = { registry = "https://pypi.org/simple" }
@@ -209,14 +220,3 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/85/f5/098aa203a3a9c4dcf27af17b5977f8c6fbf67d45cc36049f0bea8ecb7320/zensical-0.0.19-cp310-abi3-win32.whl", hash = "sha256:4ab624ce2852b3e4455913f2473df6f8e42b8a7f1a9ee853cd3fe2ce02dcfd4a", size = 11888846, upload-time = "2026-01-24T16:21:21.222Z" },
     { url = "https://files.pythonhosted.org/packages/9a/61/73d130bce8ac3251a43723bf33db74733ce354cbc6aeff08d7c2d10f12d0/zensical-0.0.19-cp310-abi3-win_amd64.whl", hash = "sha256:b06e6cfd0167927e4a0eba2c29c16d7703d01c242daf0a46e5b9fdc422a17676", size = 12077587, upload-time = "2026-01-24T16:21:23.978Z" },
 ]
-
-[[package]]
-name = "zensical-homepage"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "zensical" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "zensical", specifier = ">=0.0.19" }]

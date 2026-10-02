@@ -433,22 +433,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../Research/" class="md-tabs__link">
-        
-  
-  Research
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
     
     
       
@@ -593,8 +577,6 @@
     
       
       
-        
-      
     
     
       
@@ -653,8 +635,6 @@
     
     
       
-      
-        
       
     
     
@@ -716,8 +696,6 @@
     
     
       
-      
-        
       
     
     
@@ -784,8 +762,6 @@
     
       
       
-        
-      
     
     
       
@@ -848,8 +824,6 @@
     
     
       
-      
-        
       
     
     
@@ -914,8 +888,6 @@
         
         
       
-      
-        
       
     
     
@@ -1006,23 +978,18 @@
     
       
       
-        
-          
-          
-        
-      
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -1509,8 +1476,6 @@
     
       
       
-        
-      
     
     
       
@@ -1556,33 +1521,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../Research/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1592,8 +1530,6 @@
     
     
       
-      
-        
       
     
     
@@ -1839,13 +1775,13 @@
 <p>可以使用腾讯云 COS 的这个<a href="https://github.com/Molunerfinn/PicGo/releases">链接</a>下载</p>
 <h2 id="github">配置 GitHub 图床<a class="headerlink" href="#github" title="Permanent link">⚓︎</a></h2>
 <p>配置的手法主要来自于官方的<a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A">配置手册</a></p>
-<div class="highlight"><pre><span></span><code>{
-  &quot;repo&quot;: &quot;&quot;, // 仓库名，格式是username/reponame
-  &quot;token&quot;: &quot;&quot;, // github token
-  &quot;path&quot;: &quot;&quot;, // 自定义存储路径，比如img/
-  &quot;customUrl&quot;: &quot;&quot;, // 自定义域名，注意要加http://或者https://
-  &quot;branch&quot;: &quot;&quot; // 分支名，默认是main
-}
+<div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"repo"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">// 仓库名，格式是username/reponame</span>
+<span class="w">  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">// github token</span>
+<span class="w">  </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">// 自定义存储路径，比如img/</span>
+<span class="w">  </span><span class="nt">"customUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">// 自定义域名，注意要加http://或者https://</span>
+<span class="w">  </span><span class="nt">"branch"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w"> </span><span class="c1">// 分支名，默认是main</span>
+<span class="p">}</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">使用什么平台？</p>
@@ -1874,20 +1810,20 @@
 <p>因为今年将自己的笔记本改为了 NixOS，并且没有人对于 PicGo 进行 Nix 打包 <a href="https://github.com/Molunerfinn/PicGo/issues/1224">Issue</a>，因此很尴尬的事情就是我没有办法使用Nix安装PicGo，于是就动了些小聪明选择了在VSC内置的插件vs-picgo(这样就可以避开系统的限制了)</p>
 <p>下面给出简要的安装和使用说明：</p>
 <p>首先在 VSC 的扩展栏中安装<a href="https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo">PicGo</a>插件，然后需要对于json文件进行一个简单的配置：</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// 激活 GitHub 模式</span>
-<span class="nt">&quot;picgo.picBed.current&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;github&quot;</span><span class="p">,</span>
+<div class="language-Json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="c1">// 激活 GitHub 模式</span>
+<span class="nt">"picgo.picBed.current"</span><span class="p">:</span><span class="w"> </span><span class="s2">"github"</span><span class="p">,</span>
 <span class="c1">// 详细参数</span>
-<span class="nt">&quot;picgo.picBed.github&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;repo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Eurekaimer/MyIMGs&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 你的仓库</span>
-<span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ghp_&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 你的Token</span>
-<span class="w">    </span><span class="nt">&quot;branch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;main&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 分支</span>
-<span class="w">    </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;img/&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 存放在 img 目录下</span>
+<span class="nt">"picgo.picBed.github"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"repo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eurekaimer/MyIMGs"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 你的仓库</span>
+<span class="w">    </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ghp_"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 你的Token</span>
+<span class="w">    </span><span class="nt">"branch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 分支</span>
+<span class="w">    </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"img/"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 存放在 img 目录下</span>
 <span class="w">    </span><span class="c1">// 自动使用 jsDelivr CDN 加速访问，避免图片在国内裂开</span>
 <span class="w">    </span><span class="c1">// 格式: https://cdn.jsdelivr.net/gh/用户名/仓库名@分支</span>
-<span class="w">    </span><span class="nt">&quot;customUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main&quot;</span>
+<span class="w">    </span><span class="nt">"customUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main"</span>
 <span class="p">},</span>
 <span class="c1">// 上传前自动重命名，防止文件名重复导致上传失败 (强烈建议开启)</span>
-<span class="nt">&quot;picgo.settings.autoRename&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">"picgo.settings.autoRename"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 </code></pre></div>
 <p>不会写 json 建议去问 AI</p>
 <p>然后就可以使用了，使用方法也非常简单，只需要复制你需要插入进 md 文档的图片，然后 <code>Ctrl+Alt+U</code> 即可插入，需要注意的是还需要安装 <code>xclip</code> ，对于 NixOS 来说是非常简单的（直接安装 xclip 包即可）</p>
@@ -2085,7 +2021,7 @@
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
@@ -2093,6 +2029,8 @@
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/reading-stats.js"></script>
       
         <script src="../../../javascripts/videos.js"></script>
       

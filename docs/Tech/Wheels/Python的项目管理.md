@@ -40,7 +40,7 @@ source .venv/bin/activate
 
 激活 (Win)
 
-```Shell
+```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 

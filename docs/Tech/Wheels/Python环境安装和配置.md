@@ -33,7 +33,7 @@ pip config list
 
 应该会返回
 
-```
+```text
 global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
 ```
 
@@ -67,7 +67,7 @@ global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
 
 在 PATH 中加入以下三条即可：
 
-```
+```text
 #文件路径取决于你的Anaconda安装在哪
 D:\Anaconda
 D:\Anaconda\Scripts
@@ -79,7 +79,7 @@ D:\Anaconda\Library\bin
 
 ### 相关的基本命令
 
-```
+```bash
 #换源
 #添加源
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/

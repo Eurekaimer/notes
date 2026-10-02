@@ -81,7 +81,7 @@ We can solve the problem correctly and more efficiently as well.
 One graph can draw the efficientcy.
 
 
-```
+```text
 Pick up phone book
 Open to middle of phone book
 look at page 
@@ -110,7 +110,7 @@ If use simple input the binary question each an answer, it will be difficult.
 Large language models(LLMs)
 
 
-```
+```c
 #include<stdio.h>
 
 int main(void)

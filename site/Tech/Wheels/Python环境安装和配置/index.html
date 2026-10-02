@@ -433,22 +433,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../Research/" class="md-tabs__link">
-        
-  
-  Research
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
     
     
       
@@ -593,8 +577,6 @@
     
       
       
-        
-      
     
     
       
@@ -653,8 +635,6 @@
     
     
       
-      
-        
       
     
     
@@ -716,8 +696,6 @@
     
     
       
-      
-        
       
     
     
@@ -784,8 +762,6 @@
     
       
       
-        
-      
     
     
       
@@ -848,8 +824,6 @@
     
     
       
-      
-        
       
     
     
@@ -914,8 +888,6 @@
         
         
       
-      
-        
       
     
     
@@ -1006,23 +978,18 @@
     
       
       
-        
-          
-          
-        
-      
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -1559,8 +1526,6 @@
     
       
       
-        
-      
     
     
       
@@ -1606,33 +1571,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../Research/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1642,8 +1580,6 @@
     
     
       
-      
-        
       
     
     
@@ -1937,13 +1873,13 @@
 <p>测试安装成功方法：<code>win</code>+<code>R</code> type <code>cmd</code> 进入 shell type <code>python</code> 若是返回版本则说明安装成功</p>
 <h2 id="pip">pip 配置<a class="headerlink" href="#pip" title="Permanent link">⚓︎</a></h2>
 <p>换为国内镜像源（可以永久，在需要使用官方时再临时换源）</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
+<div class="language-Bash highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre></div>
 <p>检测换源成功与否</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span>list
+<div class="language-Bash highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span>list
 </code></pre></div>
 <p>应该会返回</p>
-<div class="highlight"><pre><span></span><code>global.index-url=&#39;https://pypi.tuna.tsinghua.edu.cn/simple&#39;
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
 </code></pre></div>
 <h2 id="vscode">Vscode<a class="headerlink" href="#vscode" title="Permanent link">⚓︎</a></h2>
 <p>我比较倾向于在 Vscode 中使用 Python，只需要在扩展栏中输入 Python 然后选择安装数量最大的那个（起码现在是）扩展，即可使用</p>
@@ -1966,7 +1902,7 @@
 <p>检验方式是在 <code>Anaconda Powershell</code> 中 type <code>conda --version</code></p>
 <p>因为新版 Anaconda 不建议你直接将 Anaconda 添加入 PATH 变量（出于自我保护的目的），因此如果你想要添加到 PATH 可能需要自己设置</p>
 <p>在 PATH 中加入以下三条即可：</p>
-<div class="highlight"><pre><span></span><code>#文件路径取决于你的Anaconda安装在哪
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>#文件路径取决于你的Anaconda安装在哪
 D:\Anaconda
 D:\Anaconda\Scripts
 D:\Anaconda\Library\bin
@@ -1976,35 +1912,35 @@ D:\Anaconda\Library\bin
 <p>如果添加到 PATH 你可以直接在 cmd 或是终端中使用 conda --version 以及 conda 相关的命令，如果不添加你可以在 Anaconda Powershell 中使用，官方应该是不建议直接添加到 PATH 的，为了隔离环境和安全性的考虑笔者也不建议这么做，但是如果是新手可以考虑直接添加，日后删除即可。</p>
 </div>
 <h3 id="_3">相关的基本命令<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code>#换源
-#添加源
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --set show_channel_urls yes
-#检验
-conda config --show
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1">#换源</span>
+<span class="c1">#添加源</span>
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
+<span class="c1">#检验</span>
+conda<span class="w"> </span>config<span class="w"> </span>--show
 
-#添加虚拟环境路径
-conda config --add envs_dirs *newdir*
-#注意除了查看.condarc文件中的envs_dirs参数外还需要对新的envs文件夹的权限进行设置
-#需要修改对象为All Users以及完全控制和写入权限
+<span class="c1">#添加虚拟环境路径</span>
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>envs_dirs<span class="w"> </span>*newdir*
+<span class="c1">#注意除了查看.condarc文件中的envs_dirs参数外还需要对新的envs文件夹的权限进行设置</span>
+<span class="c1">#需要修改对象为All Users以及完全控制和写入权限</span>
 
-#创建虚拟环境
-conda create -n *name* python=3.10
-#删除虚拟环境
-conda remove -n *name* --all
-#切换环境
-conda activate *name*
-#列出当前环境所有的包
-conda list
-#列出所有环境
-conda env list
-#安装Jupyter Notebook
-#可以直接使用Anaconda Navigator
-#或者使用命令行
-conda install ipykernel
-#注意：安装之后还需要进行注册内核
-python -m ipykernel install --user --name my_data_env --display-name &quot;My Data Analysis Environment&quot;
-#这么操作之后你才可以进行Select Kernel
+<span class="c1">#创建虚拟环境</span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>*name*<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+<span class="c1">#删除虚拟环境</span>
+conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>*name*<span class="w"> </span>--all
+<span class="c1">#切换环境</span>
+conda<span class="w"> </span>activate<span class="w"> </span>*name*
+<span class="c1">#列出当前环境所有的包</span>
+conda<span class="w"> </span>list
+<span class="c1">#列出所有环境</span>
+conda<span class="w"> </span>env<span class="w"> </span>list
+<span class="c1">#安装Jupyter Notebook</span>
+<span class="c1">#可以直接使用Anaconda Navigator</span>
+<span class="c1">#或者使用命令行</span>
+conda<span class="w"> </span>install<span class="w"> </span>ipykernel
+<span class="c1">#注意：安装之后还需要进行注册内核</span>
+python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>my_data_env<span class="w"> </span>--display-name<span class="w"> </span><span class="s2">"My Data Analysis Environment"</span>
+<span class="c1">#这么操作之后你才可以进行Select Kernel</span>
 </code></pre></div>
 
 
@@ -2200,7 +2136,7 @@ python -m ipykernel install --user --name my_data_env --display-name &quot;My Da
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
@@ -2208,6 +2144,8 @@ python -m ipykernel install --user --name my_data_env --display-name &quot;My Da
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/reading-stats.js"></script>
       
         <script src="../../../javascripts/videos.js"></script>
       

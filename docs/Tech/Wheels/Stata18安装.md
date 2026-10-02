@@ -5,7 +5,7 @@ tags:
 ---
 # Stata18 安装
 
-```
+```text
 Stata 18 MP永久版序列号： 
 Name:随意填 
 Organization:随意填 

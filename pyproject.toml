@@ -7,3 +7,10 @@ requires-python = ">=3.10"
 dependencies = [
     "zensical>=0.0.19",
 ]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["notes_extensions"]

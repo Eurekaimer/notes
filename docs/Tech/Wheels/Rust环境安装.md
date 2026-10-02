@@ -17,7 +17,7 @@ tags:
 
 + 使用清华/中科大镜像源（最简单，推荐）
 
-```shell
+```powershell
 # 1. 设置 Rust 核心组件的下载镜像（这里用清华源）
 $env:RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
 
@@ -30,7 +30,7 @@ $env:RUSTUP_UPDATE_ROOT="https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup"
 
 + 因为终端默认不走代理，所以把代理挂上
 
-```shell
+```powershell
 $env:HTTP_PROXY="http://127.0.0.1:7890"
 $env:HTTPS_PROXY="http://127.0.0.1:7890"
 

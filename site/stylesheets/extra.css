@@ -25,7 +25,7 @@ html {
   font-synthesis-style: auto;
 }
 
-/* 正文与各级标题统一 LXGW，不加粗 */
+/* 正文与各级标题统一 LXGW，默认使用 Regular。 */
 body,
 .md-typeset,
 .md-typeset p,
@@ -48,10 +48,11 @@ body,
   letter-spacing: normal;
 }
 
-/* 一级、二级标题整体用 Italic */
+/* 一级、二级标题加粗并倾斜，区别于正文强调。 */
 .md-typeset h1,
 .md-typeset h2 {
   font-style: italic;
+  font-weight: 700;
 }
 
 /* 正文里的链接文字也用 Italic；锚点（⚓︎）和按钮保持 Regular */
@@ -77,6 +78,12 @@ body,
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
+}
+
+/* 标题里的 Markdown 强调不应被正文规则降回 400 字重。 */
+.md-typeset h1 :is(strong, b, em, i),
+.md-typeset h2 :is(strong, b, em, i) {
+  font-weight: inherit;
 }
 
 /* 提示框标题、折叠块标题、导航属于 UI 文本，保持 Regular */
@@ -110,15 +117,72 @@ body,
   font-weight: 400;
 }
 
-/* 引用块：书籍式的内缩排版。显式收窄左右边距并清掉主题残留的右边框，
-   否则框会占满整列、看起来比里面的文字宽很多 */
-.md-typeset blockquote {
+/* 匹配主题的方向选择器优先级，防止左边框和内边距被覆盖。 */
+[dir] .md-typeset blockquote,
+.md-typeset .admonition.quote {
+  --cite-accent: #bc527d;
+  --cite-border: #efd0dc;
+  --cite-bg: #fff5f8;
+  --cite-shadow: rgb(188 82 125 / 7%);
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
   font-size: 1em;
   line-height: 1.7;
-  margin: 1.25rem 1.5rem;
-  padding: 0.25rem 0 0.25rem 0.9rem;
-  border-left: 3px solid #aaa;
-  border-right: 0;
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem 0.65rem;
+  border: 1px solid var(--cite-border);
+  border-left: 3px solid var(--cite-accent);
+  border-radius: 12px;
+  background: var(--cite-bg);
+  box-shadow: 0 4px 16px var(--cite-shadow);
+  color: var(--md-default-fg-color);
+  overflow-wrap: anywhere;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote,
+[data-md-color-scheme="slate"] .md-typeset .admonition.quote {
+  --cite-accent: #e59ab8;
+  --cite-border: #684757;
+  --cite-bg: #342a33;
+  --cite-shadow: rgb(0 0 0 / 12%);
+}
+
+/* 标识独占一行，长引用和移动端换行时不会遮住正文。 */
+.md-typeset blockquote::after,
+.md-typeset .admonition.quote::after {
+  content: "cite";
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--cite-accent);
+  font-size: 0.8em;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  text-align: right;
+}
+
+.md-typeset blockquote > :first-child,
+.md-typeset .admonition.quote > :first-child {
+  margin-top: 0;
+}
+
+.md-typeset blockquote > :last-child,
+.md-typeset .admonition.quote > :last-child {
+  margin-bottom: 0;
+}
+
+/* 保留专栏标题，移除主题的色带和图标，避免两套引用装饰叠加。 */
+.md-typeset .admonition.quote > .admonition-title {
+  margin: 0 0 0.6rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cite-accent);
+  font-size: 0.85em;
+}
+
+.md-typeset .admonition.quote > .admonition-title::before {
+  display: none;
 }
 
 /* 返回顶部按钮字体 */
@@ -224,6 +288,16 @@ body:has(.blog-card-container) .md-grid {
     margin-right: 0;
     margin-bottom: 12px;
   }
+}
+
+/* 阅读统计只作用于笔记标题下方，不改变导航与正文的排版。 */
+.md-typeset .note-reading-meta {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 /* ------------------------------------------------------------ 打字机组件 */

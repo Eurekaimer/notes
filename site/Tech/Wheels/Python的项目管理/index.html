@@ -433,22 +433,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../Research/" class="md-tabs__link">
-        
-  
-  Research
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
     
     
       
@@ -593,8 +577,6 @@
     
       
       
-        
-      
     
     
       
@@ -653,8 +635,6 @@
     
     
       
-      
-        
       
     
     
@@ -716,8 +696,6 @@
     
     
       
-      
-        
       
     
     
@@ -784,8 +762,6 @@
     
       
       
-        
-      
     
     
       
@@ -848,8 +824,6 @@
     
     
       
-      
-        
       
     
     
@@ -914,8 +888,6 @@
         
         
       
-      
-        
       
     
     
@@ -1006,23 +978,18 @@
     
       
       
-        
-          
-          
-        
-      
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -1498,8 +1465,6 @@
     
       
       
-        
-      
     
     
       
@@ -1545,33 +1510,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../Research/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1581,8 +1519,6 @@
     
     
       
-      
-        
       
     
     
@@ -1819,16 +1755,16 @@
 <p>过时</p>
 </blockquote>
 <p>创建虚拟环境</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </code></pre></div>
 <p>指定版本的创建</p>
-<div class="highlight"><pre><span></span><code>py<span class="w"> </span>-3.10<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>py<span class="w"> </span>-3.10<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </code></pre></div>
 <p>激活 (Linux/Mac)</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 </code></pre></div>
 <p>激活 (Win)</p>
-<div class="highlight"><pre><span></span><code>.<span class="se">\.</span>venv<span class="se">\S</span>cripts<span class="se">\A</span>ctivate.ps1
+<div class="language-powershell highlight"><span class="filename">PowerShell</span><pre><span></span><code><span class="p">.\.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
 </code></pre></div>
 <p>注：实际上修改的是 sys.path 列表（将全局目录改为自己创建的环境）</p>
 <div class="admonition question">
@@ -1837,15 +1773,15 @@
 <li>pip freeze（打印所有安装的包）</li>
 </ul>
 </div>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
 </code></pre></div>
 <p>根据 requirements 文件安装</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
 <p>缺点是无法识别直接依赖和间接依赖，卸载包之后间接依赖在 <code>requirement.txt</code> 无法被删除</p>
 <p>解决方法是 <code>pyproject.toml</code></p>
 <p>然后就可以直接安装</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </code></pre></div>
 <p>这里的 <code>-e</code> 是使用了一个链接文件，确保虚拟环境内不会有两份源代码</p>
 <h2 id="uv">uv<a class="headerlink" href="#uv" title="Permanent link">⚓︎</a></h2>
@@ -1862,19 +1798,19 @@
 </ul>
 <p>我们只需要 <code>main.py</code> 和 <code>pyproject.toml</code></p>
 <p>之前的过程大概是：</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 <span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 edit<span class="w"> </span>pyproject.toml
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </code></pre></div>
 <p>现在可以使用</p>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>&lt;package-name&gt;
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>&lt;package-name&gt;
 </code></pre></div>
 <p>协作者可以直接使用</p>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>sync
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>uv<span class="w"> </span>sync
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># On windows</span>
-powershell<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>ByPass<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</span>
+<div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1"># On windows</span>
+powershell<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>ByPass<span class="w"> </span>-c<span class="w"> </span><span class="s2">"irm https://astral.sh/uv/install.ps1 | iex"</span>
 </code></pre></div>
 
 
@@ -2077,7 +2013,7 @@ powershell<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>ByPass
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
@@ -2085,6 +2021,8 @@ powershell<span class="w"> </span>-ExecutionPolicy<span class="w"> </span>ByPass
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/reading-stats.js"></script>
       
         <script src="../../../javascripts/videos.js"></script>
       

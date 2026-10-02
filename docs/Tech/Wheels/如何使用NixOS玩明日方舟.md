@@ -22,7 +22,7 @@ tags:
 
 + inputs 区域 (configuration.nix or others) 加入：
 
-```
+```nix
 nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 ```
 
@@ -30,7 +30,7 @@ nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
 加入以下包。这里使用 pkgs-unstable 变量指代 unstable 源：
 
-```
+```nix
 pkgs-unstable.lutris
 pkgs-unstable.protonplus
 pkgs-unstable.umu-launcher
@@ -38,7 +38,7 @@ pkgs-unstable.umu-launcher
 
 + 应用更改并重建系统（如果你使用了 flake）：
 
-```
+```bash
 sudo nixos-rebuild switch --flake .
 ```
 

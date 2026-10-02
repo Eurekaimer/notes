@@ -433,22 +433,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../Research/" class="md-tabs__link">
-        
-  
-  Research
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
     
     
       
@@ -593,8 +577,6 @@
     
       
       
-        
-      
     
     
       
@@ -653,8 +635,6 @@
     
     
       
-      
-        
       
     
     
@@ -716,8 +696,6 @@
     
     
       
-      
-        
       
     
     
@@ -784,8 +762,6 @@
     
       
       
-        
-      
     
     
       
@@ -848,8 +824,6 @@
     
     
       
-      
-        
       
     
     
@@ -914,8 +888,6 @@
         
         
       
-      
-        
       
     
     
@@ -1006,23 +978,18 @@
     
       
       
-        
-          
-          
-        
-      
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -1614,8 +1581,6 @@
     
       
       
-        
-      
     
     
       
@@ -1661,33 +1626,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../Research/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1697,8 +1635,6 @@
     
     
       
-      
-        
       
     
     
@@ -2040,7 +1976,7 @@
 </blockquote>
 <p><img alt="CPU + Waydroid" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/20260826164338429.png" /></p>
 <p>我使用的主要环境为：</p>
-<div class="highlight"><pre><span></span><code>CachyOS
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>CachyOS
 Wayland + niri
 Intel x86_64 CPU
 NVIDIA RTX 5060
@@ -2049,7 +1985,7 @@ Waydroid
 libhoudini
 </code></pre></div>
 <p>最终运行路径大致为：</p>
-<div class="highlight"><pre><span></span><code>阴阳师 ARM Android 版
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>阴阳师 ARM Android 版
         ↓
 libhoudini
         ↓
@@ -2064,73 +2000,73 @@ NVIDIA RTX 5060
 <hr />
 <h2 id="waydroid">准备工作：安装 Waydroid<a class="headerlink" href="#waydroid" title="Permanent link">⚓︎</a></h2>
 <p>首先安装 Waydroid：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>waydroid
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>waydroid
 </code></pre></div>
 <p>初始化 Android 镜像：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>init
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>init
 </code></pre></div>
 <p>启动并启用容器服务：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>waydroid-container.service
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>waydroid-container.service
 </code></pre></div>
 <p>然后启动 Android Session：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>start
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>start
 </code></pre></div>
 <p>正常情况下会看到类似：</p>
-<div class="highlight"><pre><span></span><code>[gbinder] Service manager /dev/binder has appeared
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>[gbinder] Service manager /dev/binder has appeared
 Android with user 0 is ready
 </code></pre></div>
 <p>打开完整 Android 界面：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>show-full-ui
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>show-full-ui
 </code></pre></div>
 <p>也可以查看当前安装的 Android 应用：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>list
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>list
 </code></pre></div>
 <hr />
 <h2 id="arm-libhoudini">第一步：安装 ARM 转译 libhoudini<a class="headerlink" href="#arm-libhoudini" title="Permanent link">⚓︎</a></h2>
 <p>Waydroid 本身运行的是 x86_64 Android，而包括《阴阳师》在内的大量 Android 游戏包含 ARM native library。</p>
 <p>因此首先需要给 Waydroid 加入 ARM 转译。</p>
 <p>可以先确认 CPU：</p>
-<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-m1<span class="w"> </span><span class="s1">&#39;vendor_id&#39;</span><span class="w"> </span>/proc/cpuinfo
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>grep<span class="w"> </span>-m1<span class="w"> </span><span class="s1">'vendor_id'</span><span class="w"> </span>/proc/cpuinfo
 </code></pre></div>
 <p>我的结果为：</p>
-<div class="highlight"><pre><span></span><code>vendor_id : GenuineIntel
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>vendor_id : GenuineIntel
 </code></pre></div>
 <p>因此使用 Intel 的 <code>libhoudini</code>。</p>
 <p>安装需要的工具：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>--needed<span class="w"> </span>git<span class="w"> </span>lzip
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>--needed<span class="w"> </span>git<span class="w"> </span>lzip
 </code></pre></div>
 <p>克隆 Waydroid Extras Script：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Projects
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Projects
 
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/casualsnek/waydroid_script
 <span class="nb">cd</span><span class="w"> </span>waydroid_script
 </code></pre></div>
 <p>项目官方文档使用传统的 <code>venv + pip</code>，这里我使用自己更习惯的 <code>uv</code> 管理 Python 环境：</p>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>venv
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>uv<span class="w"> </span>venv
 uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
 <p>然后安装 libhoudini：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>.venv/bin/python<span class="w"> </span>main.py<span class="w"> </span>install<span class="w"> </span>libhoudini
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>.venv/bin/python<span class="w"> </span>main.py<span class="w"> </span>install<span class="w"> </span>libhoudini
 </code></pre></div>
 <p>脚本会下载并修改 Waydroid 对应的 system/vendor 环境。</p>
 <p>完成后重新启动 Waydroid：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>stop
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>stop
 
 sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>waydroid-container.service
 
 waydroid<span class="w"> </span>session<span class="w"> </span>start
 </code></pre></div>
 <p>检查 native bridge：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
 </code></pre></div>
 <p>正常应该输出：</p>
-<div class="highlight"><pre><span></span><code>libhoudini.so
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>libhoudini.so
 </code></pre></div>
 <p>继续检查 ABI：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.product.cpu.abilist
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.product.cpu.abilist
 </code></pre></div>
 <p>我的结果为：</p>
-<div class="highlight"><pre><span></span><code>x86_64,x86,arm64-v8a,armeabi-v7a,armeabi
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>x86_64,x86,arm64-v8a,armeabi-v7a,armeabi
 </code></pre></div>
 <p>这说明 Waydroid 已经具备运行 ARM Android 应用的能力。</p>
 <blockquote>
@@ -2140,67 +2076,67 @@ waydroid<span class="w"> </span>session<span class="w"> </span>start
 <h2 id="_1">第二步：安装《阴阳师》<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
 <p>前往《阴阳师》官方渠道下载 Android APK。</p>
 <p>假设 APK 位于：</p>
-<div class="highlight"><pre><span></span><code>~/Downloads/yys/onmyoji.apk
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>~/Downloads/yys/onmyoji.apk
 </code></pre></div>
 <p>使用 Waydroid 安装：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>install<span class="w"> </span>~/Downloads/yys/onmyoji.apk
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>install<span class="w"> </span>~/Downloads/yys/onmyoji.apk
 </code></pre></div>
 <p>安装完成后可以直接让 Android Package Manager 检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-Ei<span class="w"> </span><span class="s1">&#39;netease|onmyoji&#39;</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-Ei<span class="w"> </span><span class="s1">'netease|onmyoji'</span>
 </code></pre></div>
 <p>正常情况下会看到：</p>
-<div class="highlight"><pre><span></span><code>package:com.netease.onmyoji
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>package:com.netease.onmyoji
 </code></pre></div>
 <p>需要注意的是，《阴阳师》在部分情况下可能不会出现在：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>list
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>list
 </code></pre></div>
 <p>的 Launcher 应用列表中。</p>
 <p>只要：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages
 </code></pre></div>
 <p>能够看到：</p>
-<div class="highlight"><pre><span></span><code>com.netease.onmyoji
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>com.netease.onmyoji
 </code></pre></div>
 <p>就说明 APK 已经成功安装。</p>
 <p>直接启动：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>com.netease.onmyoji
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>com.netease.onmyoji
 </code></pre></div>
 <hr />
 <h2 id="waydroid_1">第三步：解决 Waydroid 没有网络的问题<a class="headerlink" href="#waydroid_1" title="Permanent link">⚓︎</a></h2>
 <p>正常情况下 Waydroid 应该可以自动联网，但如果系统使用 UFW、Docker 等工具，可能出现：</p>
-<div class="highlight"><pre><span></span><code>Android 可以启动
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>Android 可以启动
 ↓
 应用可以运行
 ↓
 但是 Browser 和游戏完全无法联网
 </code></pre></div>
 <p>可以先检查 Waydroid 网桥：</p>
-<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>waydroid0
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>waydroid0
 </code></pre></div>
 <p>正常情况下宿主机会有：</p>
-<div class="highlight"><pre><span></span><code>inet 192.168.240.1/24
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>inet 192.168.240.1/24
 </code></pre></div>
 <p>再检查 Android 内部：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
 </code></pre></div>
 <p>正常应该获得：</p>
-<div class="highlight"><pre><span></span><code>192.168.240.x/24
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>192.168.240.x/24
 </code></pre></div>
 <p>例如：</p>
-<div class="highlight"><pre><span></span><code>inet 192.168.240.112/24
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>inet 192.168.240.112/24
 </code></pre></div>
 <p>检查 Android 的路由表：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>table<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>table<span class="w"> </span>eth0
 </code></pre></div>
 <p>正常结果应该类似：</p>
-<div class="highlight"><pre><span></span><code>default via 192.168.240.1 dev eth0 proto static
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>default via 192.168.240.1 dev eth0 proto static
 192.168.240.0/24 dev eth0 proto static scope link
 </code></pre></div>
 <p>如果 <code>eth0</code> 完全没有 IPv4 地址，或者没有默认路由，可以检查 UFW：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>verbose
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>verbose
 </code></pre></div>
 <p>如果 UFW 开启，可以仅针对 Waydroid 放行 DHCP、DNS 与转发流量，而不是直接开放整个系统的 FORWARD：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="k">in</span><span class="w"> </span>on<span class="w"> </span>waydroid0<span class="w"> </span>proto<span class="w"> </span>udp<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">67</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="k">in</span><span class="w"> </span>on<span class="w"> </span>waydroid0<span class="w"> </span>proto<span class="w"> </span>udp<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">67</span>
 
 sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="k">in</span><span class="w"> </span>on<span class="w"> </span>waydroid0<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>to<span class="w"> </span><span class="m">192</span>.168.240.1<span class="w"> </span>port<span class="w"> </span><span class="m">53</span><span class="w"> </span>proto<span class="w"> </span>udp
@@ -2212,36 +2148,36 @@ sudo<span class="w"> </span>ufw<span class="w"> </span>route<span class="w"> </s
 <span class="w">  </span>from<span class="w"> </span><span class="m">192</span>.168.240.0/24<span class="w"> </span>to<span class="w"> </span>any
 </code></pre></div>
 <p>应用配置：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>reload
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>reload
 </code></pre></div>
 <p>然后重启 Waydroid：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>stop
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>stop
 
 sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>waydroid-container.service
 
 waydroid<span class="w"> </span>session<span class="w"> </span>start
 </code></pre></div>
 <p>重新检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
 sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>table<span class="w"> </span>eth0
 </code></pre></div>
 <hr />
 <h3 id="docker">Docker 用户额外注意<a class="headerlink" href="#docker" title="Permanent link">⚓︎</a></h3>
 <p>如果同时使用 Docker：</p>
-<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>is-active<span class="w"> </span>docker
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>systemctl<span class="w"> </span>is-active<span class="w"> </span>docker
 </code></pre></div>
 <p>可能看到：</p>
-<div class="highlight"><pre><span></span><code>active
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>active
 </code></pre></div>
 <p>检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-S<span class="w"> </span>FORWARD
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-S<span class="w"> </span>FORWARD
 </code></pre></div>
 <p>如果出现：</p>
-<div class="highlight"><pre><span></span><code>-P FORWARD DROP
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>-P FORWARD DROP
 </code></pre></div>
 <p>说明 Docker 修改了 Linux 的转发策略。</p>
 <p>这可能导致 Waydroid：</p>
-<div class="highlight"><pre><span></span><code>Android
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>Android
   ↓
 waydroid0
   ↓
@@ -2250,36 +2186,36 @@ FORWARD DROP
 无法访问公网
 </code></pre></div>
 <p>可以先临时验证：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> </span>FORWARD<span class="w"> </span><span class="m">1</span><span class="w"> </span>-i<span class="w"> </span>waydroid0<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> </span>FORWARD<span class="w"> </span><span class="m">1</span><span class="w"> </span>-i<span class="w"> </span>waydroid0<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> </span>FORWARD<span class="w"> </span><span class="m">1</span><span class="w"> </span>-o<span class="w"> </span>waydroid0<span class="w"> </span>-j<span class="w"> </span>ACCEPT
 </code></pre></div>
 <p>如果加入以后 Waydroid 可以正常联网，就说明问题确实在 Docker/防火墙转发这一层。</p>
 <p>对于长期同时使用 Docker 和 Waydroid 的机器，也可以在 Docker 配置中避免 Docker 主动把 forwarding policy 修改成 DROP。</p>
 <p>如果 <code>/etc/docker/daemon.json</code> 已经存在其他设置，请将下面的字段合并进去，而不是直接覆盖整个文件：</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;ip-forward-no-drop&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"ip-forward-no-drop"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>然后重新启动 Docker：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>docker.service
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>docker.service
 </code></pre></div>
 <hr />
 <h2 id="waydroid_2">第四步：测试 Waydroid 网络<a class="headerlink" href="#waydroid_2" title="Permanent link">⚓︎</a></h2>
 <p>Waydroid 自带 LineageOS Browser，可以直接启动：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>org.lineageos.jelly
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>org.lineageos.jelly
 </code></pre></div>
 <p>尝试访问百度。</p>
 <p>也可以从命令行测试：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">3</span><span class="w"> </span>www.baidu.com
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">3</span><span class="w"> </span>www.baidu.com
 </code></pre></div>
 <p>正常情况下应该能够完成 DNS 解析并收到响应。</p>
 <p>如果：</p>
-<div class="highlight"><pre><span></span><code>192.168.240.1 能 ping
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>192.168.240.1 能 ping
 公网 IP 不能访问
 </code></pre></div>
 <p>重点检查宿主机 FORWARD 和 NAT。</p>
 <p>如果：</p>
-<div class="highlight"><pre><span></span><code>公网 IP 可以访问
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>公网 IP 可以访问
 域名无法解析
 </code></pre></div>
 <p>则重点检查 DNS。</p>
@@ -2288,15 +2224,15 @@ sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> <
 <h2 id="waydroid-nvidia-gpu">第五步：给 Waydroid 启用 NVIDIA GPU 加速<a class="headerlink" href="#waydroid-nvidia-gpu" title="Permanent link">⚓︎</a></h2>
 <p>普通 Waydroid 在 NVIDIA 显卡上很可能退化到 SwiftShader 软件渲染。</p>
 <p>可以检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
 </code></pre></div>
 <p>如果看到类似：</p>
-<div class="highlight"><pre><span></span><code>ANGLE
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>ANGLE
 Vulkan
 SwiftShader Device
 </code></pre></div>
 <p>说明：</p>
-<div class="highlight"><pre><span></span><code>阴阳师
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>阴阳师
   ↓
 ANGLE
   ↓
@@ -2305,69 +2241,69 @@ SwiftShader
 CPU 软件渲染
 </code></pre></div>
 <p>此时虽然游戏可能可以启动，但通常会出现：</p>
-<div class="highlight"><pre><span></span><code>CPU 占用非常高
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>CPU 占用非常高
 画质较差
 帧率低
 发热严重
 </code></pre></div>
 <p>对于 NVIDIA RTX 显卡，可以使用 <code>waydroid-nvidia</code>。</p>
 <p>首先确认当前使用 NVIDIA Open Kernel Module：</p>
-<div class="highlight"><pre><span></span><code>pacman<span class="w"> </span>-Q<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;nvidia|waydroid&#39;</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>pacman<span class="w"> </span>-Q<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'nvidia|waydroid'</span>
 </code></pre></div>
 <p>我的 CachyOS 使用：</p>
-<div class="highlight"><pre><span></span><code>linux-cachyos-nvidia-open
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>linux-cachyos-nvidia-open
 nvidia-utils
 </code></pre></div>
 <p>停止当前 Waydroid：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>stop
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>stop
 sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>waydroid-container.service
 </code></pre></div>
 <p>然后使用 <code>paru</code> 安装：</p>
-<div class="highlight"><pre><span></span><code>paru<span class="w"> </span>-S<span class="w"> </span>waydroid-nvidia-bin
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>paru<span class="w"> </span>-S<span class="w"> </span>waydroid-nvidia-bin
 </code></pre></div>
 <p><code>waydroid-nvidia-bin</code> 与普通 <code>waydroid</code> 冲突。</p>
 <p>安装过程中如果提示：</p>
-<div class="highlight"><pre><span></span><code>waydroid-nvidia-bin and waydroid are in conflict.
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>waydroid-nvidia-bin and waydroid are in conflict.
 Remove waydroid?
 </code></pre></div>
 <p>选择删除普通 <code>waydroid</code> 即可。</p>
 <p>这里替换的是 Waydroid 软件包，并不需要主动删除：</p>
-<div class="highlight"><pre><span></span><code>/var/lib/waydroid
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>/var/lib/waydroid
 </code></pre></div>
 <p>也不要重新清空 Android 数据，否则已经安装的《阴阳师》和其他 Android 数据也会一起消失。</p>
 <p>安装完成后：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>init
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>init
 </code></pre></div>
 <p>然后部署 NVIDIA guest stack：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid-nvidia-setup
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid-nvidia-setup
 </code></pre></div>
 <p>启用服务：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>waydroid-container.service
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>waydroid-container.service
 
 systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>wd-venus.service
 </code></pre></div>
 <p>完成后建议注销当前 Wayland/niri 会话，然后重新登录一次。</p>
 <p>重新登录后：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>start
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>session<span class="w"> </span>start
 </code></pre></div>
 <p>检查 Venus 服务：</p>
-<div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>--user<span class="w"> </span>status<span class="w"> </span>wd-venus.service
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>systemctl<span class="w"> </span>--user<span class="w"> </span>status<span class="w"> </span>wd-venus.service
 </code></pre></div>
 <p>然后检查 GPU：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
 </code></pre></div>
 <p>普通软件渲染时会看到：</p>
-<div class="highlight"><pre><span></span><code>SwiftShader
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>SwiftShader
 </code></pre></div>
 <p>正确启用 NVIDIA 后，应该变成类似：</p>
-<div class="highlight"><pre><span></span><code>ANGLE
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>ANGLE
 NVIDIA
 Vulkan
 Venus
 NVIDIA GeForce RTX 5060
 </code></pre></div>
 <p>也就是说最终渲染链路变成：</p>
-<div class="highlight"><pre><span></span><code>阴阳师
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>阴阳师
   ↓
 ANGLE
   ↓
@@ -2379,34 +2315,34 @@ RTX 5060
 <hr />
 <h2 id="libhoudini">第六步：确认 libhoudini 没有失效<a class="headerlink" href="#libhoudini" title="Permanent link">⚓︎</a></h2>
 <p>切换到 <code>waydroid-nvidia</code> 后，建议再次检查 ARM 转译：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
 </code></pre></div>
 <p>应该仍然是：</p>
-<div class="highlight"><pre><span></span><code>libhoudini.so
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>libhoudini.so
 </code></pre></div>
 <p>然后：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.product.cpu.abilist
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.product.cpu.abilist
 </code></pre></div>
 <p>应该仍包含：</p>
-<div class="highlight"><pre><span></span><code>arm64-v8a
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>arm64-v8a
 armeabi-v7a
 </code></pre></div>
 <p>如果这两项正常，就说明：</p>
-<div class="highlight"><pre><span></span><code>ARM 转译     OK
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>ARM 转译     OK
 NVIDIA GPU   OK
 Waydroid     OK
 </code></pre></div>
 <hr />
 <h2 id="_2">第七步：启动《阴阳师》<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
 <p>现在直接运行：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>com.netease.onmyoji
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>com.netease.onmyoji
 </code></pre></div>
 <p>也可以先进入完整 Android：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>show-full-ui
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>show-full-ui
 </code></pre></div>
 <p>再从 Android 界面启动游戏。</p>
 <p>至此完整结构为：</p>
-<div class="highlight"><pre><span></span><code>CachyOS
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>CachyOS
    │
    └── Waydroid
           │
@@ -2425,7 +2361,7 @@ Waydroid     OK
 <hr />
 <h2 id="_3">更新《阴阳师》<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
 <p>《阴阳师》日常的资源更新通常直接由游戏客户端完成，例如：</p>
-<div class="highlight"><pre><span></span><code>活动资源
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>活动资源
 新式神资源
 语音
 地图
@@ -2433,14 +2369,14 @@ Waydroid     OK
 </code></pre></div>
 <p>这部分与 Android 手机上的游戏基本一致，不需要重新安装 Waydroid。</p>
 <p>如果以后遇到必须更新 APK 的大版本，可以下载新的官方 APK，再执行：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>install<span class="w"> </span>/path/to/new-onmyoji.apk
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>install<span class="w"> </span>/path/to/new-onmyoji.apk
 </code></pre></div>
 <p>只要依然使用同一个：</p>
-<div class="highlight"><pre><span></span><code>com.netease.onmyoji
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>com.netease.onmyoji
 </code></pre></div>
 <p>并且 APK 签名一致，Android 会按照应用升级处理。</p>
 <p>因此一般不需要：</p>
-<div class="highlight"><pre><span></span><code>卸载旧版
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>卸载旧版
 重新安装
 重新下载所有数据
 </code></pre></div>
@@ -2448,7 +2384,7 @@ Waydroid     OK
 <h2 id="waydroid_3">更新 Waydroid 后的注意事项<a class="headerlink" href="#waydroid_3" title="Permanent link">⚓︎</a></h2>
 <p>Waydroid、Android image 和《阴阳师》本身是三套不同的更新。</p>
 <p>平时：</p>
-<div class="highlight"><pre><span></span><code>阴阳师资源
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>阴阳师资源
 → 游戏自己更新
 
 阴阳师 APK
@@ -2458,66 +2394,66 @@ Waydroid 软件包
 → CachyOS / paru 更新
 </code></pre></div>
 <p>如果以后 Waydroid system/vendor image 发生较大更新，建议重新检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
 </code></pre></div>
 <p>如果不再是：</p>
-<div class="highlight"><pre><span></span><code>libhoudini.so
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>libhoudini.so
 </code></pre></div>
 <p>重新进入：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Projects/waydroid_script
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Projects/waydroid_script
 </code></pre></div>
 <p>执行：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>.venv/bin/python<span class="w"> </span>main.py<span class="w"> </span>install<span class="w"> </span>libhoudini
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>.venv/bin/python<span class="w"> </span>main.py<span class="w"> </span>install<span class="w"> </span>libhoudini
 </code></pre></div>
 <p>对于 NVIDIA 环境，如果升级后 GPU 加速失效，也可以重新执行：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid-nvidia-setup
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid-nvidia-setup
 </code></pre></div>
 <p>然后检查：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
 </code></pre></div>
 <hr />
 <h2 id="_4">常用检查命令<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
 <p>检查 Waydroid 状态：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>status
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>status
 </code></pre></div>
 <p>打开完整 Android：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>show-full-ui
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>show-full-ui
 </code></pre></div>
 <p>查看应用：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>list
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>list
 </code></pre></div>
 <p>检查《阴阳师》是否安装：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>onmyoji
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>pm<span class="w"> </span>list<span class="w"> </span>packages<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>onmyoji
 </code></pre></div>
 <p>启动《阴阳师》：</p>
-<div class="highlight"><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>com.netease.onmyoji
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>waydroid<span class="w"> </span>app<span class="w"> </span>launch<span class="w"> </span>com.netease.onmyoji
 </code></pre></div>
 <p>检查 ARM 转译：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.dalvik.vm.native.bridge
 </code></pre></div>
 <p>检查 ABI：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.product.cpu.abilist
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>getprop<span class="w"> </span>ro.product.cpu.abilist
 </code></pre></div>
 <p>检查 GPU：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>dumpsys<span class="w"> </span>SurfaceFlinger<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>GLES
 </code></pre></div>
 <p>检查 Android IPv4：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
 </code></pre></div>
 <p>检查默认路由：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>table<span class="w"> </span>eth0
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>table<span class="w"> </span>eth0
 </code></pre></div>
 <p>测试网络：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">3</span><span class="w"> </span>www.baidu.com
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>shell<span class="w"> </span>--<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">3</span><span class="w"> </span>www.baidu.com
 </code></pre></div>
 <p>查看日志：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>logcat
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>logcat
 </code></pre></div>
 <p>如果《阴阳师》出现闪退、黑屏或者无法进入游戏，可以一边运行：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>logcat
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>waydroid<span class="w"> </span>logcat
 </code></pre></div>
 <p>一边重新启动游戏，从日志中寻找：</p>
-<div class="highlight"><pre><span></span><code>FATAL
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>FATAL
 SIGSEGV
 houdini
 ANGLE
@@ -2528,7 +2464,7 @@ onmyoji
 <p>相关报错。</p>
 <hr />
 <p>最终，这套方案的优势是整个 Android 游戏仍然运行在 Linux 容器中：</p>
-<div class="highlight"><pre><span></span><code>Linux Kernel
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>Linux Kernel
       ↓
 Waydroid Container
       ↓
@@ -2539,7 +2475,7 @@ libhoudini + Venus
 RTX 5060
 </code></pre></div>
 <p>不需要：</p>
-<div class="highlight"><pre><span></span><code>Linux
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>Linux
 → Wine
 → Windows Android 模拟器
 → Android
@@ -2740,7 +2676,7 @@ RTX 5060
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
@@ -2748,6 +2684,8 @@ RTX 5060
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/reading-stats.js"></script>
       
         <script src="../../../javascripts/videos.js"></script>
       

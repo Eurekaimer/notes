@@ -17,7 +17,7 @@ tags:
 
 ### Machine Code
 
-```
+```c
 #include<stdio.h> //standard io.h
 
 int main(void) //void -no input
@@ -38,7 +38,7 @@ Some words you should know: GUI CLI
 
 ### Hello world
 
-```
+```c
 #include<stdio.h>
 //pronounced "include standard io.h"
 
@@ -59,7 +59,7 @@ Some little concepts:
 
 In the terminal
 
-```
+```console
 $ code hello.c
 $ make hello
 // not need to input hello.c make can look the folder
@@ -76,7 +76,7 @@ hello world$(\n)
 We can use the code others write before via library and for example we can find the stdio.h
 [Manual Pages](https://manual.cs50.io/#stdio.h)
 
-```
+```c
 printf("hello, %s\n", answer)
 // %s means a place holder
 ```
@@ -84,7 +84,7 @@ printf("hello, %s\n", answer)
 
 Case 1
 
-```
+```c
 #include <stdio.h>
 
 int main(void)
@@ -98,7 +98,7 @@ int main(void)
 
 Case 2
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -146,7 +146,7 @@ Some tips:
 	Don't make some unnecessary operations.
 	Focus on how to design the better structure of codes.
 
-```
+```c
 if (x < y)
 {
     printf("x is less than y\n");
@@ -169,7 +169,7 @@ But not make the three ifs because it will waste the time.
 Motivation: We want to let the vsc meows like the Scratch and how should we do?
 Answer: We can make a loop to decrease our codes.
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -206,7 +206,7 @@ An inspiring idea is to make the repeating parts a new role that we can use them
 Here's a example from Mario（循环嵌套）.
 Notice how printing a row is accomplished through a new function.
 
-```
+```c
 // Helper function
 
 #include <stdio.h>
@@ -237,7 +237,7 @@ void print_row(int width)
 
 ### Calculator
 
-```
+```c
 // int
 
 #include <cs50.h>
@@ -268,7 +268,7 @@ int main(void)
 - We can correct this by using a data type called `long`.
 
 
-```
+```c
 // long
 
 #include <cs50.h>
@@ -296,7 +296,7 @@ int main(void)
 
 ### Truncation
 
-```
+```c
 // Division with ints, demonstrating truncation
 
 #include <cs50.h>
@@ -317,7 +317,7 @@ int main(void)
 
 An integer divided by an integer will **always result in an integer** in C. Accordingly, the above code will often result in any digits after the decimal being thrown away.
 
-```
+```c
 // Floats
 
 #include <cs50.h>
@@ -357,7 +357,7 @@ int main(void)
 
 ### [Hello, It’s Me](https://cs50.harvard.edu/x/2025/psets/1/me/)
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -372,7 +372,7 @@ int main(void)
 
 ### [Mario-more](https://cs50.harvard.edu/x/2025/psets/1/mario/more/),
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -411,7 +411,7 @@ int main(void)
 ### [Cash](https://cs50.harvard.edu/x/2025/psets/1/cash/),
 
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -446,7 +446,7 @@ int main(void)
 
 ### [Credit](https://cs50.harvard.edu/x/2025/psets/1/credit/),
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 

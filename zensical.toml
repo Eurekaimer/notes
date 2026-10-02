@@ -144,7 +144,6 @@ nav = [
         { "Wandering" = "WebSource/wandering.md" },
         { "Video Archive" = "WebSource/videos/index.md" },
     ]},
-    { "Research" = "Research/index.md" },
     { "Physics" = [
         { "University Physics 2" = [
             "Physics/UniversityPhysics2/index.md",
@@ -170,6 +169,7 @@ extra_css = [
 extra_javascript = [
     "javascripts/mathjax.js",
     "javascripts/typewriter.js",
+    "javascripts/reading-stats.js",
     "javascripts/videos.js",
     "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
     "javascripts/mermaid.mjs"
@@ -181,6 +181,11 @@ generic = true
 # Admonitions and details
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.notes_extensions]
+
+[project.markdown_extensions.pymdownx.highlight]
+auto_title = true
+pygments_lang_class = true
 
 # Mermaid
 [project.markdown_extensions.pymdownx.superfences]
@@ -229,7 +234,6 @@ features = [
     "navigation.instant.progress",
     "navigation.path",
     "navigation.prune",
-    "navigation.sections",
     "navigation.tabs",
     "navigation.tabs.sticky",
     "navigation.top",

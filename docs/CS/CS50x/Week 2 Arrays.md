@@ -24,12 +24,12 @@ Source Code -> Compiler -> Machine Code
 
 What's actually happend in the process of translating?(Compiling)
 
-```
+```bash
 clang hello.c
 ./a.out
 ```
 
-```
+```bash
 clang -o hello hello.c -lcs50
 //If you want to use the cs50 library
 ```
@@ -40,7 +40,7 @@ If you want to code C or other languages, the CPU will process the code from C i
 
 And focus on compiling
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -64,7 +64,7 @@ Four steps of compiling:
 - Everyone will make mistakes while coding.
 - _Debugging_ is the process of locating and removing bugs from your code.
 
-```
+```c
 #include <stdio.h>
 
 int main(void)
@@ -81,7 +81,7 @@ int main(void)
 
 Motivation: We don't want so many variables for a same type(or same purpose)
 
-```
+```c
 int scores[3];
 scores[0] = 72;
 scores[1] = 73;
@@ -90,7 +90,7 @@ scores[2] = 33;
 
 So this tech has an advantage that we can change it easily and sustained.
 
-```
+```c
 // Averages three numbers using an array, a constant, and a helper function
 
 #include <cs50.h>
@@ -132,7 +132,7 @@ float average(int length, int array[])
 - A `string` is simply an array of variables of type `char`: an array of characters.
 - To explore `char` and `string`, type `code hi.c` in the terminal window and write code as follows:
 
-```
+```c
     // Prints chars
 
     #include <stdio.h>
@@ -154,7 +154,7 @@ A string is a sequence of characters like a array of the type of characters.
 
 > NUL says string end here.
 
-```
+```c
 #include <cs50.h>
 #include <stdio.h>
 
@@ -177,7 +177,7 @@ int main(void)
 
 Since this is such a common problem within programming, other programmers have created code in the `string.h` library to find the length of a string. You can find the length of a string by modifying your code as follows:
 
-```
+```c
 // Determines the length of a string using a function
 
 #include <cs50.h>
@@ -201,7 +201,7 @@ Notice that this code uses the `string.h` library, declared at the top of the 
 
 While the program does what we want, there is an easier way using the `ctype.h` library. Modify your program as follows:
 
-```
+```c
 // Uppercases string using ctype library (and an unnecessary condition)
 
 #include <cs50.h>
@@ -235,7 +235,7 @@ Notice that the program iterates through each character of the string. The `tou
 - `Command-line arguments` are those arguments that are passed to your program at the command line. For example, all those statements you typed after `clang` are **considered command line arguments**. You can use these arguments in your own programs!
 - In your terminal window, type `code greet.c` and write code as follows:
 
-    ```
+    ```c
     // Uses get_string
 
     #include <cs50.h>
@@ -252,7 +252,7 @@ Notice that this says `hello` to the user.
 
 - Still, would it not be nice to be able to take arguments before the program even runs? Modify your code as follows:
 
-    ```
+    ```c
     // Prints a command-line argument
 
     #include <cs50.h>
@@ -279,7 +279,7 @@ Notice that this program knows both `argc`, **the number of command line argume
 - Therefore, using the syntax of this program, executing `./greet David` would result in the program saying `hello, David`.
 - You can print each of the command-line arguments with the following:
 
-```
+```c
     // Prints command-line arguments
 
     #include <cs50.h>
@@ -302,7 +302,7 @@ Notice that this program knows both `argc`, **the number of command line argume
 - When a program exits without error, a status code of `0` is provided to the computer. Often, when an error occurs that results in the program ending, a status of `1` is provided by the computer.
 - You could write a program as follows that illustrates this by typing `code status.c` and writing code as follows:
 
-    ```
+    ```c
     // Returns explicit value from main
 
     #include <cs50.h>

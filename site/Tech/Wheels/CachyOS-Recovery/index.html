@@ -433,22 +433,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../Research/" class="md-tabs__link">
-        
-  
-  Research
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
     
     
       
@@ -593,8 +577,6 @@
     
       
       
-        
-      
     
     
       
@@ -653,8 +635,6 @@
     
     
       
-      
-        
       
     
     
@@ -716,8 +696,6 @@
     
     
       
-      
-        
       
     
     
@@ -784,8 +762,6 @@
     
       
       
-        
-      
     
     
       
@@ -848,8 +824,6 @@
     
     
       
-      
-        
       
     
     
@@ -914,8 +888,6 @@
         
         
       
-      
-        
       
     
     
@@ -1006,23 +978,18 @@
     
       
       
-        
-          
-          
-        
-      
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -1797,8 +1764,6 @@
     
       
       
-        
-      
     
     
       
@@ -1844,33 +1809,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../Research/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1880,8 +1818,6 @@
     
     
       
-      
-        
       
     
     
@@ -2508,7 +2444,7 @@
 </div>
 <h2 id="s5">换源<a class="headerlink" href="#s5" title="Permanent link">⚓︎</a></h2>
 <p><code>cachyos-rate-mirrors</code> 是 CachyOS 的<strong>统一换源命令</strong>：按你所在地区测速、自动生成最快镜像列表，不用手动改配置。装完先跑一次，再用 <code>-Syyu</code> 强制刷新。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 按地区测速，自动生成最优镜像（会要 sudo 密码）</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1"># 按地区测速，自动生成最优镜像（会要 sudo 密码）</span>
 sudo<span class="w"> </span>cachyos-rate-mirrors
 
 <span class="c1"># 强制刷新软件源数据库并更新系统</span>
@@ -2520,7 +2456,7 @@ sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
 </div>
 <h2 id="s6">装基础工具<a class="headerlink" href="#s6" title="Permanent link">⚓︎</a></h2>
 <p>代码框从上到下依次装：编译依赖 → 常用工具/字体 → 代理客户端 → GitHub Desktop → bun → omp → QQ。<strong>每步确认没报错</strong>再继续下一步。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># —— 1. 官方仓库：编译依赖 + 常用工具 + 中文字体（优先级最高）——</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1"># —— 1. 官方仓库：编译依赖 + 常用工具 + 中文字体（优先级最高）——</span>
 sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>--needed<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>unzip<span class="w"> </span>zip<span class="w"> </span>base-devel
 sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>neovim<span class="w"> </span>yazi<span class="w"> </span>fish<span class="w"> </span>eza<span class="w"> </span>bat<span class="w"> </span>fd<span class="w"> </span>ripgrep<span class="w"> </span>fzf<span class="w"> </span>btop<span class="w"> </span>fastfetch<span class="w"> </span><span class="se">\</span>
 <span class="w">               </span>noto-fonts<span class="w"> </span>noto-fonts-cjk<span class="w"> </span>noto-fonts-emoji<span class="w"> </span>ttf-jetbrains-mono-nerd
@@ -2599,7 +2535,7 @@ paru<span class="w"> </span>-S<span class="w"> </span>linuxqq
 <div class="admonition question">
 <p class="admonition-title">提示 paru: command not found</p>
 <p>CachyOS 一般自带 paru。真没有就临时编译装一个：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>--needed<span class="w"> </span>base-devel<span class="w"> </span>git
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>--needed<span class="w"> </span>base-devel<span class="w"> </span>git
 git<span class="w"> </span>clone<span class="w"> </span>https://aur.archlinux.org/paru-bin.git<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>paru-bin<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>makepkg<span class="w"> </span>-si
 <span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>paru-bin
 </code></pre></div>
@@ -2607,7 +2543,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://aur.archlinux.or
 <div class="admonition question">
 <p class="admonition-title">omp: command not found</p>
 <p>bun 装完后全局命令在 <code>~/.bun/bin</code>。先确认：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/.bun/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w">   </span><span class="c1"># fish: set -Ua fish_user_paths $HOME/.bun/bin</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">'export PATH="$HOME/.bun/bin:$PATH"'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w">   </span><span class="c1"># fish: set -Ua fish_user_paths $HOME/.bun/bin</span>
 <span class="nb">source</span><span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>which<span class="w"> </span>bun<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>which<span class="w"> </span>omp
 </code></pre></div>
 </div>
@@ -2626,7 +2562,7 @@ git<span class="w"> </span>clone<span class="w"> </span>https://aur.archlinux.or
 </div>
 <h2 id="s8">omp：连 API Key + 一键复原<a class="headerlink" href="#s8" title="Permanent link">⚓︎</a></h2>
 <p>我的配置仓库 <code>cachyos-config</code> 里已包含整套配置 + 复原脚本：让 omp 连上 API Key，再按脚本跑一遍，环境就自动复原。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. 第一次运行 omp，按提示填入 API Key</span>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1"># 1. 第一次运行 omp，按提示填入 API Key</span>
 <span class="c1">#    （花一两块钱创建个「稍微正常模型」的 Key，照提示粘贴即可）</span>
 omp
 
@@ -2648,7 +2584,7 @@ sudo<span class="w"> </span>reboot
 <div class="admonition question">
 <p class="admonition-title">克隆仓库一直超时？</p>
 <p>回到「外网/代理」一节：确保 <strong>clash-verge-rev → 导入订阅 → 打开系统代理</strong>。也可以临时只让 git 走代理：</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>http.proxy<span class="w"> </span>http://127.0.0.1:7897
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>http.proxy<span class="w"> </span>http://127.0.0.1:7897
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>https.proxy<span class="w"> </span>http://127.0.0.1:7897
 <span class="c1"># 复原完不想走代理：git config --global --unset http.proxy（https 同理）</span>
 </code></pre></div>
@@ -2761,7 +2697,7 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 <div class="admonition question">
 <p class="admonition-title">pacman 报 signature is unknown / keyring 问题</p>
 <p>多半是旧 ISO 或源没刷新，先跑：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
 sudo<span class="w"> </span>pacman-key<span class="w"> </span>--refresh-keys
 </code></pre></div>
 </div>
@@ -2772,7 +2708,7 @@ sudo<span class="w"> </span>pacman-key<span class="w"> </span>--refresh-keys
 <div class="admonition question">
 <p class="admonition-title">NVIDIA 显卡黑屏/花屏</p>
 <p>装闭源驱动再重启用它：</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>nvidia<span class="w"> </span>nvidia-utils
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>nvidia<span class="w"> </span>nvidia-utils
 </code></pre></div>
 <p>重启后跑 <code>nvidia-smi</code>，能显示显卡型号 / 显存就是驱动连通了，报错就是没装上。</p>
 <p>启动菜单若有 NVIDIA 相关选项，优先选它。</p>
@@ -2989,7 +2925,7 @@ sudo<span class="w"> </span>pacman-key<span class="w"> </span>--refresh-keys
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
@@ -2997,6 +2933,8 @@ sudo<span class="w"> </span>pacman-key<span class="w"> </span>--refresh-keys
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/reading-stats.js"></script>
       
         <script src="../../../javascripts/videos.js"></script>
       

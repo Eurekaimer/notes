@@ -5,13 +5,16 @@
 
 ## 构建与预览
 
++ 初始化环境：`uv sync`（会安装本仓库的 `notes_extensions`；CI 使用 `pip install .`）
 - 预览：`.venv/bin/zensical serve -a 127.0.0.1:8000`
 - 构建：`.venv/bin/zensical build --clean`（输出到 `site/`，`site/` 已入库，构建后一并提交）
 - 新增页面必须登记到 `zensical.toml` 的 `nav`，否则不出现在侧边栏
++ 本地 Python 3.12 构建曾在 emoji 扩展的 `deepcopy` 中段错误；已验证的替代命令为
+  `uv run --isolated --no-project --python 3.11 --with . --with zensical==0.0.19 zensical build --clean`。
 
 ## 目录结构
 
-- 顶级分区：Home / Analysis / Algebra / Probability / Statistics / Computer Science / Tech / WebSource / Research / Physics / Friends Link
+- 顶级分区：Home / Analysis / Algebra / Probability / Statistics / Computer Science / Tech / WebSource / Physics / Friends Link
 - 目录名用英文 PascalCase（如 `MathematicalAnalysis`、`StochasticProcess`）；笔记文件名可以保留中文（历史文件不强制改名），新文件建议英文
 - 每个分区必须有 `index.md`，其一级标题用英文（如 `# Analysis`），正文可用中文
 - 新笔记归属：数学分析/实分析/泛函分析 → Analysis；高等代数 → Algebra；概率论/随机过程 → Probability；数理统计/回归分析/运筹 → Statistics；课程与工具分别进 Computer Science / Tech
@@ -43,18 +46,16 @@
 - 行尾只有两种状态：无空格，或恰好 2 个空格（表示换行 `<br>`）
 - 块级公式 `$$` 前后空行、公式内部不留空行；Admonition 用 `!!! type "标题"` + 4 空格缩进
 
-### Admonition 的换行（易错）
+### Admonition 的换行
 
-`!!!` 的正文里连续的多行**默认会被合并成一个段落**（按 HTML 规则渲染成一行），必须靠
-行尾 2 个空格转成 `<br>`。所以：
+本仓库的 `notes_extensions` 扩展自动保留 `!!!`、`???` 和普通 `>` 引用正文里的单次换行，
+不再要求行尾加两个空格；普通段落仍遵循标准 Markdown 软换行规则。
 
-- 课程简介 `!!! tldr` 这类「每项占一行」的块，除最后一行外**每行结尾都要有 2 个空格**，
-  中文全角标点之间的空格不会被保留：`所属大学：南开大学  ` 后面的两个空格才是换行
-- 绝对不要用 `.rstrip()` / 尾随空格清理脚本处理 `!!!`、`???`、`>` 引用的正文，会把换行
-  全部吃掉；需要批量清理时先排除这些区域，或只清理 1 个和 ≥3 个空格、保留恰好 2 个
-- 段落之间要空一行（缩进 4 格内的空行），而不是靠换行
-- 对照验收：构建后 `site/<page>/index.html` 里该块内应出现 `<br />`；若整块只有一个
-  `<p>` 且没有 `<br />`，说明换行已经丢失
++ 课程简介可直接每项写一行，保留原有的 4 空格缩进即可。
++ 两个尾随空格的旧写法仍兼容，不会生成重复换行；不要批量清理已有的显式换行。
++ 段落之间仍空一行；列表结构、代码块、行内代码、公式和原始 HTML 不做换行改写。
++ 对照验收：构建后连续两行的提示框正文应由 `<br />` 分隔；代码和公式内部不能出现
+  自动插入的 `<br />`。
 
 ### 专有名词
 
@@ -90,19 +91,30 @@
 | `[文字](url)` | `<a>` | LXGW Italic（锚点 ⚓︎ 与按钮除外） |
 | `` `代码` `` | `<code>` / `<pre>` | JetBrains Mono |
 
-- `h1`、`h2` 用 Italic；`h3`–`h6` 与正文同字重（400），靠字号与间距区分层级
++ `h1`、`h2` 用 Bold Italic（字重 700）；`h3`–`h6` 与正文同字重（400）。
 - 提示框标题、折叠块标题、导航属于 UI 文本，固定 Regular，不参与强调规则
 - LXGW 没有独立 Italic 字面，因此 `html { font-synthesis-style: auto }` 让浏览器合成倾斜；
   换成自带 Italic 的字体时应改回 `none` 并补 `@font-face` 的 italic
 - `zensical.toml` 里 `[project.theme] font = false` 关闭主题的 Google Fonts 拉取；
   JetBrains Mono 的 woff2 放在 `docs/fonts/`，LXGW 走 `extra_css` 里的 webfont CDN
-- **CSS 覆盖主题时注意残留**：主题给 `blockquote` 设了右边框和左右 padding，
-  覆盖时要显式清掉（`border-right: 0`），否则引用框会比正文列还宽
+- 全局引用样式在 `docs/stylesheets/extra.css` 中统一维护：普通 `>` 引用和 `!!! quote`
+  使用粉色圆角框、玫粉色左侧粗边、右下角斜体 `cite`；深色模式使用配套暗粉色。
+- 引用框外沿与正文列对齐；选择器须匹配主题 `[dir]` 的优先级，避免左边框被灰色覆盖。
+- WebSource 两个资源汇总页的「专栏说明」使用 `!!! quote`，不再使用蓝色 `!!! tldr`。
+- 修改引用样式时只改引用规则，不覆盖相邻的 `.blog-card-*` 首页卡片样式。
++ 代码块必须写语言标识；使用 Pygments 高亮并自动显示语言名，普通文本或无法判断的
+  伪代码使用 `text`，命令及终端输出按内容区分 `bash`、`powershell`、`console`。
++ 阅读统计由 `docs/javascripts/reading-stats.js` 维护，标题下显示字数与预计阅读时间，
+  仅排除 Home 与 Friends Link；汉字按字、其他连续词语按词计数，不计代码、公式和评论。
++ 阅读速度按中文 300 字/分钟、其他词语 200 词/分钟估算，向上取整，最少 1 分钟；
+  使用 `document$` 在即时导航时重新初始化，不重复插入统计行。
++ MathJax 显式启用 `boldsymbol`；右侧目录的公式标签需补上 `arithmatex` 标记，
+  初次加载和即时导航都由 `docs/javascripts/mathjax.js` 统一处理。
 
 ## 导航
 
-- `navigation.expand` 会强制展开侧边栏的所有章节、导致无法折叠，已移除；
-  需要「展开/折叠」行为时不要开启它，只保留 `navigation.sections` / `navigation.prune`
+- 保持 `navigation.expand` 和 `navigation.sections` 关闭：前者强制展开章节，
+  后者让桌面端章节常驻展开；`navigation.prune` 保留，当前章节可点击箭头折叠。
 
 ## 未发布内容
 

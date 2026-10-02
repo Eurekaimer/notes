@@ -18,7 +18,7 @@ tags:
 
 ### Flowchart
 
-```
+```text
  graph LR
 	 A --> B
 	 B --> C
@@ -34,7 +34,7 @@ tags:
 
 ### Sequence Diagram
 
-```
+```text
 sequenceDiagram
    A->>B: Message 1
    B-->>A: Message 2
@@ -48,7 +48,7 @@ sequenceDiagram
 
 ### Gantt Chart
 
-```
+```text
 gantt
    title Example Gantt Chart
    dateFormat  YYYY-MM-DD
@@ -69,7 +69,7 @@ gantt
 ```
 ### Pie Chart
 
-```
+```text
 pie
    title Example Pie Chart
    "First slice": 30
@@ -87,7 +87,7 @@ pie
 
 ### Radar Graph
 
-```
+```text
 radar-beta
   axis m["Math"], s["Science"], e["English"]
   axis h["History"], g["Geography"], a["Art"]
@@ -104,7 +104,7 @@ radar-beta
 
 ### graph and subgraph
 
-```
+```text
 graph LR
     A --> B
     B --> C
@@ -152,13 +152,13 @@ pie
 
 ### Style 关键字语法
 
-```
+```text
 style <shape-id> <style-attr>:<style-value>[;<style-attr>:<style-value>]...
 ```
 
 其中 \<shape-id\> 是形状的 ID，而 \<shape-attr\> 是样式属性，\<style-value\> 是样式属性的值。可以为形状设置多个样式属性，多个样式属性之间用分号 ; 分隔。
 
-```
+```text
 graph LR;
   A[Square] --> B((Circle));
   C(Rectangle) --> D{Diamond};
@@ -195,7 +195,7 @@ graph LR;
 
 + loop 语法 用于定义一个循环块
 
-```
+```text
 loop [循环次数]
    [形状 1]
    [形状 2]
@@ -205,7 +205,7 @@ end
 
 + alt 语法 用于定义一个条件块，根据条件选择不同的路径
 
-```
+```text
 alt [条件 1]
    [路径 1]
 else if [条件 2]

@@ -433,22 +433,6 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../Research/" class="md-tabs__link">
-        
-  
-  Research
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
     
     
       
@@ -593,8 +577,6 @@
     
       
       
-        
-      
     
     
       
@@ -653,8 +635,6 @@
     
     
       
-      
-        
       
     
     
@@ -716,8 +696,6 @@
     
     
       
-      
-        
       
     
     
@@ -784,8 +762,6 @@
     
       
       
-        
-      
     
     
       
@@ -848,8 +824,6 @@
     
     
       
-      
-        
       
     
     
@@ -914,8 +888,6 @@
         
         
       
-      
-        
       
     
     
@@ -1006,23 +978,18 @@
     
       
       
-        
-          
-          
-        
-      
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -1520,8 +1487,6 @@
     
       
       
-        
-      
     
     
       
@@ -1567,33 +1532,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../Research/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Research
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
       
@@ -1603,8 +1541,6 @@
     
     
       
-      
-        
       
     
     
@@ -1861,20 +1797,20 @@
 <ul>
 <li>inputs 区域 (configuration.nix or others) 加入：</li>
 </ul>
-<div class="highlight"><pre><span></span><code>nixpkgs-unstable.url = &quot;github:nixos/nixpkgs/nixos-unstable&quot;;
+<div class="language-nix highlight"><span class="filename">Nix</span><pre><span></span><code>nixpkgs-unstable<span class="o">.</span><span class="ss">url</span> <span class="o">=</span> <span class="s2">"github:nixos/nixpkgs/nixos-unstable"</span><span class="p">;</span>
 </code></pre></div>
 <ul>
 <li>修改 configuration.nix 文件，安装必要软件</li>
 </ul>
 <p>加入以下包。这里使用 pkgs-unstable 变量指代 unstable 源：</p>
-<div class="highlight"><pre><span></span><code>pkgs-unstable.lutris
-pkgs-unstable.protonplus
-pkgs-unstable.umu-launcher
+<div class="language-nix highlight"><span class="filename">Nix</span><pre><span></span><code>pkgs-unstable<span class="o">.</span>lutris
+pkgs-unstable<span class="o">.</span>protonplus
+pkgs-unstable<span class="o">.</span>umu-launcher
 </code></pre></div>
 <ul>
 <li>应用更改并重建系统（如果你使用了 flake）：</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo nixos-rebuild switch --flake .
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>nixos-rebuild<span class="w"> </span>switch<span class="w"> </span>--flake<span class="w"> </span>.
 </code></pre></div>
 <h2 id="protonplus">第一步：配置 ProtonPlus 并下载兼容层<a class="headerlink" href="#protonplus" title="Permanent link">⚓︎</a></h2>
 <p>我们需要下载专门修复国产游戏反作弊和 WebView 组件的 Wine 版本，打开 ProtonPlus 软件并下载 dwproton：</p>
@@ -2097,7 +2033,7 @@ pkgs-unstable.umu-launcher
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
@@ -2105,6 +2041,8 @@ pkgs-unstable.umu-launcher
         <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/reading-stats.js"></script>
       
         <script src="../../../javascripts/videos.js"></script>
       
