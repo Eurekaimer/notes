@@ -12,9 +12,13 @@
         <meta name="author" content="Eurekaimer">
       
       
-        <link rel="canonical" href="https://www.eurekaimer.icu/Stathelper/CS/CS61A/Week%206/">
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/CS/CS61A/Week%206/">
       
       
+        <link rel="prev" href="../Week%205/">
+      
+      
+        <link rel="next" href="../Week%207/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>Week 6 - Eurekaimer's Digital Garden</title>
+        <title>Week 6 - Notes</title>
       
     
     
@@ -128,11 +132,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/anime-grid.css">
-    
       <link rel="stylesheet" href="../../../stylesheets/key.css">
     
       <link rel="stylesheet" href="../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/videos.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
@@ -177,7 +181,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-header__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
@@ -191,7 +195,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eurekaimer's Digital Garden
+            Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -260,7 +264,7 @@
     
     <div class="md-header__source">
       
-        <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -288,67 +292,10 @@
       <a href="../../.." class="md-tabs__link">
         
   
-  Stathelper
+  Home
 
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../HDP/" class="md-tabs__link">
-          
-  
-  HDP
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../STAT260/" class="md-tabs__link">
-          
-  
-  STAT260
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
-          
-  
-  CS
-
-        </a>
-      </li>
-    
   
 
       
@@ -364,6 +311,25 @@
           
   
   Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
 
         </a>
       </li>
@@ -397,24 +363,14 @@
   
     
     
-      
-  
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-tabs__link">
+        <a href="../../../Statistics/" class="md-tabs__link">
           
   
-  Boring
+  Statistics
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -423,14 +379,16 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../ACGN/Anime/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
-  ACGN
+  Computer Science
 
         </a>
       </li>
@@ -482,6 +440,51 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../friends-link/" class="md-tabs__link">
         
   
@@ -520,17 +523,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-nav__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
 
     </a>
-    Eurekaimer's Digital Garden
+    Notes
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -557,7 +560,7 @@
   <span class="md-ellipsis">
     
   
-    Stathelper
+    Home
   
 
     
@@ -585,187 +588,8 @@
       
         
       
-    
-    
-    
-      
-      
         
       
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../HDP/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Index
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../STAT260/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    STAT260 2021
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CS Learning
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -797,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    分析学总站
+    Analysis
   
 
     
@@ -827,6 +651,69 @@
       
         
           
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -887,6 +774,16 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     
     
@@ -908,18 +805,14 @@
   
   
   
-    
-  
-  
-  
-    <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-nav__link">
+    <a href="../../../Statistics/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Boring
+    Statistics
   
 
     
@@ -931,8 +824,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -944,47 +835,65 @@
       
   
   
-  
-  
     
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
   
-    <a href="../../../ACGN/Anime/" class="md-nav__link">
+    
+    
       
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    ACGN
+    Computer Science
   
 
     
@@ -992,12 +901,1529 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Computer Science
   
 
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CS50x/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS50x
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS50x
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%200%20Scratch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 0 Scratch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%201%20C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1 C
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%202%20Arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2 Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS61A
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS61A
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%201-The%20Game%20of%20Hog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1 - The Game of Hog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%202-CS%2061A%20Autocorrected%20Typing%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2 - Autocorrected Typing Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 6
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-0430min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 04(30min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 04(30min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Abstraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading2h30min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading(2h30min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading(2h30min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ch-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ch. 2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ch. 2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos1h30min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Videos(1h30min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Videos(1h30min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trees
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mutability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disc-0530min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disc 05(30min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disc 05(30min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-warm-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1: Warm Up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-has-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2: Has Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-find-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3: Find Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw041h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HW04(1h)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HW04(1h)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-abstraction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Abstraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trees_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trees
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS231n
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS231n/CS231n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS231n/CS231n-Lecture1%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (西瓜书)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Mining & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Mining & Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/DMML_24Fall_Re/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DMML_24Fall_Re
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%AD%E4%B8%A4%E7%A7%8D%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB%E4%B8%8B%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7%E8%AF%81%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture3%20%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 信息论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture9%20%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 判别分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture12%20KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 12 KNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture13%20NNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 13 NNs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Storage & Computing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Distributed Storage & Computing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97_LAB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical & Big Data Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistical & Big Data Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/Py-Lecture-1%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Py-Lecture 1 基本操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1045,7 +2471,7 @@
   <span class="md-ellipsis">
     
   
-    Index
+    Tech
   
 
     
@@ -1081,6 +2507,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1108,7 +2538,7 @@
   <span class="md-ellipsis">
     
   
-    Technology
+    WebSource
   
 
     
@@ -1120,6 +2550,96 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
   
 
       
@@ -1427,12 +2947,70 @@
   
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CS61A
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
                   
   
-    <a href="https://github.com/Eurekaimer/Stathelper/edit/main/docs/CS/CS61A/Week 6.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/CS/CS61A/Week 6.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -1441,7 +3019,7 @@
     
       
     
-    <a href="https://github.com/Eurekaimer/Stathelper/raw/main/docs/CS/CS61A/Week 6.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/CS/CS61A/Week 6.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
@@ -1451,7 +3029,7 @@
 <h1 id="week-6">Week 6<a class="headerlink" href="#week-6" title="Permanent link">⚓︎</a></h1>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">⚓︎</a></h2>
 <p>大概需要六小时</p>
-<p>本节总的来说出现了两个基本且重要的数据结构就是链表和树，从递归算法上说是自然的，还有Mutable Data这一在Python中非常重要的事情的讲述，很感动的是老师通过讲述A History Stroy去说明了这件事情，感觉正常学习过Python的人都会对这个部分有很深的共鸣，因为期末考老是喜欢考啊(doge)。</p>
+<p>本节总的来说出现了两个基本且重要的数据结构就是链表和树，从递归算法上说是自然的，还有 Mutable Data 这一在 Python 中非常重要的事情的讲述，很感动的是老师通过讲述 A History Stroy 去说明了这件事情，感觉正常学习过 Python 的人都会对这个部分有很深的共鸣，因为期末考老是喜欢考啊 (doge)。</p>
 <h2 id="lab-0430min">Lab 04(30min)<a class="headerlink" href="#lab-0430min" title="Permanent link">⚓︎</a></h2>
 <h3 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">⚓︎</a></h3>
 <h4 id="q1-dictionaries">Q1: Dictionaries<a class="headerlink" href="#q1-dictionaries" title="Permanent link">⚓︎</a></h4>
@@ -1465,7 +3043,7 @@
 <h4 id="q4-distance">Q4: Distance<a class="headerlink" href="#q4-distance" title="Permanent link">⚓︎</a></h4>
 <h4 id="q5-closer-city">Q5: Closer City<a class="headerlink" href="#q5-closer-city" title="Permanent link">⚓︎</a></h4>
 <h4 id="q6-dont-violate-the-abstraction-barrier">Q6: Don't violate the abstraction barrier!<a class="headerlink" href="#q6-dont-violate-the-abstraction-barrier" title="Permanent link">⚓︎</a></h4>
-<p>所谓数据抽象，抽象屏障(Abstraction Barrier)就好像递归中的信仰之跃，我们初始时不关心函数的实现细节只是使用构造的函数进行操作，只要写的代码有合适的屏障，只需要更改上游部分下游自然会发生变化.实际上就是<strong>通过函数来承载抽象</strong>的功能，所操作和修改的对象也只是函数而不是具体的values.</p>
+<p>所谓数据抽象，抽象屏障 (Abstraction Barrier) 就好像递归中的信仰之跃，我们初始时不关心函数的实现细节只是使用构造的函数进行操作，只要写的代码有合适的屏障，只需要更改上游部分下游自然会发生变化。实际上就是<strong>通过函数来承载抽象</strong>的功能，所操作和修改的对象也只是函数而不是具体的 values.</p>
 <h2 id="reading2h30min">Reading(2h30min)<a class="headerlink" href="#reading2h30min" title="Permanent link">⚓︎</a></h2>
 <p>Chapter 2: Building Abstractions with Data
 + 2.3   Sequences
@@ -1474,9 +3052,9 @@
 <blockquote>
 <p>A tree has a root label and a sequence of branches. Each branch of a tree is a tree. A tree with no branches is called a leaf. Any tree contained within a tree is called a sub-tree of that tree (such as a branch of a branch). The root of each sub-tree of a tree is called a node in that tree.</p>
 </blockquote>
-<p>树是一种非常基本的数据结构，这里只是做了简单的阐述，如果想要深入的了解树、二叉树、甚至线段树、红黑树最好还是学一下数据结构然后去手搓一些算法题.树本身就蕴含着recursion的思想，包括遍历的思想，学会用树应当是递归能力的一个提高节点.</p>
+<p>树是一种非常基本的数据结构，这里只是做了简单的阐述，如果想要深入的了解树、二叉树、甚至线段树、红黑树最好还是学一下数据结构然后去手搓一些算法题。树本身就蕴含着 recursion 的思想，包括遍历的思想，学会用树应当是递归能力的一个提高节点。</p>
 <blockquote>
-<p>树这种东西在图论里面经常用，所以如果有OI训练的话确实有利于组合题能力提高...</p>
+<p>树这种东西在图论里面经常用，所以如果有 OI 训练的话确实有利于组合题能力提高……</p>
 </blockquote>
 <p>为了方便起见，再这里将所有的数据抽象列出</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 基本的树抽象，要求root的值和分支也是树</span>
@@ -1511,13 +3089,13 @@
 <p>链表的第二位存储下一个链表的位置，显然也是一种递归的结构</p>
 <p><strong>Recursive Construction.</strong> Linked lists are particularly useful when constructing sequences incrementally, a situation that arises often in recursive computations.</p>
 <p>Reference:</p>
-<p><a href="https://www.luogu.com.cn/problem/B3631">洛谷-B3631单向链表</a></p>
+<p><a href="https://www.luogu.com.cn/problem/B3631">洛谷-B3631 单向链表</a></p>
 <h3 id="ch-24">Ch. 2.4<a class="headerlink" href="#ch-24" title="Permanent link">⚓︎</a></h3>
 <blockquote>
 <p>One powerful technique for creating modular programs is to incorporate data that may change state over time. In this way, a single data object can represent something that evolves independently of the rest of the program. The behavior of a changing object may be influenced by its history, just like an entity in the world. Adding state to data is a central ingredient of a paradigm called object-oriented programming.</p>
 </blockquote>
-<p>主要讲述了Python中Non local的一些问题，关于值的绑定(Non-Local Assignment)等等，尤其是Non local函数的好处进行了一些讲解</p>
-<p>也讲解了一些基本的编程范式，可能需要对后面的OOP进行深入学习之后会有更深的理解.</p>
+<p>主要讲述了 Python 中 Non local 的一些问题，关于值的绑定 (Non-Local Assignment) 等等，尤其是 Non local 函数的好处进行了一些讲解</p>
+<p>也讲解了一些基本的编程范式，可能需要对后面的 OOP 进行深入学习之后会有更深的理解。</p>
 <h2 id="videos1h30min">Videos(1h30min)<a class="headerlink" href="#videos1h30min" title="Permanent link">⚓︎</a></h2>
 <h3 id="trees">Trees<a class="headerlink" href="#trees" title="Permanent link">⚓︎</a></h3>
 <h4 id="trees_1">Trees<a class="headerlink" href="#trees_1" title="Permanent link">⚓︎</a></h4>
@@ -1630,17 +3208,17 @@
 <h2 id="hw041h">HW04(1h)<a class="headerlink" href="#hw041h" title="Permanent link">⚓︎</a></h2>
 <h3 id="sequences">Sequences<a class="headerlink" href="#sequences" title="Permanent link">⚓︎</a></h3>
 <h4 id="q1-deep-map">Q1: Deep Map<a class="headerlink" href="#q1-deep-map" title="Permanent link">⚓︎</a></h4>
-<p>原地修改(in-place modification)，不需要返回值return value</p>
+<p>原地修改 (in-place modification)，不需要返回值 return value</p>
 <h3 id="data-abstraction_1">Data Abstraction<a class="headerlink" href="#data-abstraction_1" title="Permanent link">⚓︎</a></h3>
 <h4 id="q2-mass">Q2: Mass<a class="headerlink" href="#q2-mass" title="Permanent link">⚓︎</a></h4>
-<p>不知道有什么作用，感觉只是为了确认你的理解，但是又感觉有点多余了，不如让实现total_mass function</p>
+<p>不知道有什么作用，感觉只是为了确认你的理解，但是又感觉有点多余了，不如让实现 total_mass function</p>
 <h4 id="q3-balanced">Q3: Balanced<a class="headerlink" href="#q3-balanced" title="Permanent link">⚓︎</a></h4>
 <p>由定义可知：</p>
 <ul>
 <li>左右臂力矩相等</li>
-<li>左右臂子系统Balanced -&gt; Recursion</li>
+<li>左右臂子系统 Balanced -&gt; Recursion</li>
 </ul>
-<p>利用Data Abstraction即可，然后需要注意判断尾端planet情况(函数调用要求对象为mobile所以planet会报错)</p>
+<p>利用 Data Abstraction 即可，然后需要注意判断尾端 planet 情况（函数调用要求对象为 mobile 所以 planet 会报错）</p>
 <h3 id="trees_2">Trees<a class="headerlink" href="#trees_2" title="Permanent link">⚓︎</a></h3>
 <h4 id="q4-maximum-path-sum">Q4: Maximum Path Sum<a class="headerlink" href="#q4-maximum-path-sum" title="Permanent link">⚓︎</a></h4>
 
@@ -1676,10 +3254,10 @@
       </main>
       
         <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      
-      <div class="md-footer-copyright">
-        <div class="md-copyright">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -1693,21 +3271,21 @@
     </a>
   
 </div>
-      </div>
+    </div>
 
-      <div class="footer-center-box">
-          <div class="runtime-info">
-              <span>本站已运行</span>
-              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
-              <span>天</span>
-          </div>
-          <div class="icp-info">
-              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
-          </div>
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
       </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
 
+    
       
-        
 <div class="md-social">
   
     
@@ -1751,59 +3329,58 @@
     </a>
   
 </div>
-      
+    
 
-    </div>
   </div>
+</div>
 
-  <style>
-    .footer-center-box {
-        flex: 1; 
-        text-align: center; 
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin: 0 1rem;
-    }
-    .runtime-info {
-        color: #8C495A; 
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-    }
-    .icp-info a {
-        color: inherit;
-        opacity: 0.7;
-        font-size: 0.85rem;
-        text-decoration: none;
-    }
-    .icp-info a:hover {
-        opacity: 1;
-        color: var(--md-accent-fg-color);
-    }
-    @media (max-width: 76.1875em) {
-        .md-footer-meta__inner {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-    }
-  </style>
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
 
-  <script>
-    (function() {
-        var start = new Date('2024/10/28'); /* 建站日期 */
-        var now = new Date(); 
-        var diff = now - start;
-        
-        /* 直接算出总天数，取整 */
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        
-        var el = document.getElementById('run_days');
-        if(el) {
-            el.innerHTML = days;
-        }
-    })();
-  </script>
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -1823,6 +3400,10 @@
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/videos.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

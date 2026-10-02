@@ -12,9 +12,13 @@
         <meta name="author" content="Eurekaimer">
       
       
-        <link rel="canonical" href="https://www.eurekaimer.icu/Stathelper/CS/CS61A/Week%202/">
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/CS/CS61A/Week%202/">
       
       
+        <link rel="prev" href="../Week%201/">
+      
+      
+        <link rel="next" href="../Week%203/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>Week 2 - Eurekaimer's Digital Garden</title>
+        <title>Week 2 - Notes</title>
       
     
     
@@ -128,11 +132,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/anime-grid.css">
-    
       <link rel="stylesheet" href="../../../stylesheets/key.css">
     
       <link rel="stylesheet" href="../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/videos.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
@@ -177,7 +181,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-header__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
@@ -191,7 +195,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eurekaimer's Digital Garden
+            Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -260,7 +264,7 @@
     
     <div class="md-header__source">
       
-        <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -288,67 +292,10 @@
       <a href="../../.." class="md-tabs__link">
         
   
-  Stathelper
+  Home
 
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../HDP/" class="md-tabs__link">
-          
-  
-  HDP
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../STAT260/" class="md-tabs__link">
-          
-  
-  STAT260
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
-          
-  
-  CS
-
-        </a>
-      </li>
-    
   
 
       
@@ -364,6 +311,25 @@
           
   
   Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
 
         </a>
       </li>
@@ -397,24 +363,14 @@
   
     
     
-      
-  
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-tabs__link">
+        <a href="../../../Statistics/" class="md-tabs__link">
           
   
-  Boring
+  Statistics
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -423,14 +379,16 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../ACGN/Anime/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
-  ACGN
+  Computer Science
 
         </a>
       </li>
@@ -482,6 +440,51 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../friends-link/" class="md-tabs__link">
         
   
@@ -520,17 +523,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-nav__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
 
     </a>
-    Eurekaimer's Digital Garden
+    Notes
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -557,7 +560,7 @@
   <span class="md-ellipsis">
     
   
-    Stathelper
+    Home
   
 
     
@@ -585,187 +588,8 @@
       
         
       
-    
-    
-    
-      
-      
         
       
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../HDP/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Index
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../STAT260/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    STAT260 2021
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CS Learning
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -797,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    分析学总站
+    Analysis
   
 
     
@@ -827,6 +651,69 @@
       
         
           
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -887,6 +774,16 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     
     
@@ -908,18 +805,14 @@
   
   
   
-    
-  
-  
-  
-    <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-nav__link">
+    <a href="../../../Statistics/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Boring
+    Statistics
   
 
     
@@ -931,8 +824,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -944,47 +835,65 @@
       
   
   
-  
-  
     
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
   
-    <a href="../../../ACGN/Anime/" class="md-nav__link">
+    
+    
       
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    ACGN
+    Computer Science
   
 
     
@@ -992,12 +901,1512 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Computer Science
   
 
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CS50x/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS50x
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS50x
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%200%20Scratch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 0 Scratch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%201%20C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1 C
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%202%20Arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2 Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS61A
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS61A
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%201-The%20Game%20of%20Hog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1 - The Game of Hog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%202-CS%2061A%20Autocorrected%20Typing%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2 - Autocorrected Typing Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos2h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Videos(2h)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Videos(2h)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#higher-order-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Higher-Order Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading2h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading(2h)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading(2h)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ch-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ch. 1.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ch. 1.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ch. 1.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-011h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 01(1h)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 01(1h)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-would-python-display-wwpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Would Python Display? (WWPD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Write Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syllabus-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syllabus Quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disc-0130min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disc 01(30min)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disc 01(30min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while-and-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        While and If
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hw0230min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HW02(30min)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS231n
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS231n/CS231n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS231n/CS231n-Lecture1%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (西瓜书)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Mining & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Mining & Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/DMML_24Fall_Re/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DMML_24Fall_Re
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%AD%E4%B8%A4%E7%A7%8D%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB%E4%B8%8B%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7%E8%AF%81%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture3%20%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 信息论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture9%20%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 判别分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture12%20KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 12 KNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture13%20NNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 13 NNs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Storage & Computing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Distributed Storage & Computing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97_LAB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical & Big Data Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistical & Big Data Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/Py-Lecture-1%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Py-Lecture 1 基本操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1045,7 +2454,7 @@
   <span class="md-ellipsis">
     
   
-    Index
+    Tech
   
 
     
@@ -1081,6 +2490,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1108,7 +2521,7 @@
   <span class="md-ellipsis">
     
   
-    Technology
+    WebSource
   
 
     
@@ -1120,6 +2533,96 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
   
 
       
@@ -1410,12 +2913,70 @@
   
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    CS61A
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
                   
   
-    <a href="https://github.com/Eurekaimer/Stathelper/edit/main/docs/CS/CS61A/Week 2.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/CS/CS61A/Week 2.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -1424,7 +2985,7 @@
     
       
     
-    <a href="https://github.com/Eurekaimer/Stathelper/raw/main/docs/CS/CS61A/Week 2.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/CS/CS61A/Week 2.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
@@ -1433,8 +2994,8 @@
 
 <h1 id="week-2">Week 2<a class="headerlink" href="#week-2" title="Permanent link">⚓︎</a></h1>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">⚓︎</a></h2>
-<p>先看Videos再看Reading，需要注意的是Ch 1.6内容很多，每天的Videos只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完Videos再看Reading</p>
-<p>大致需要6h完成(不包括project)</p>
+<p>先看 Videos 再看 Reading，需要注意的是 Ch 1.6 内容很多，每天的 Videos 只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完 Videos 再看 Reading</p>
+<p>大致需要 6h 完成（不包括 project）</p>
 <h2 id="videos2h">Videos(2h)<a class="headerlink" href="#videos2h" title="Permanent link">⚓︎</a></h2>
 <h3 id="control">Control<a class="headerlink" href="#control" title="Permanent link">⚓︎</a></h3>
 <h4 id="multiple-environments">Multiple Environments<a class="headerlink" href="#multiple-environments" title="Permanent link">⚓︎</a></h4>
@@ -1468,7 +3029,7 @@
 
 <span class="c1"># We can type python3 -m doctest -v filename.py to get results </span>
 </code></pre></div>
-<p>default value (not assignment)： 只是作为一个占位符，在没有赋值的情况下使用，并不是赋值操作</p>
+<p>default value (not assignment)：只是作为一个占位符，在没有赋值的情况下使用，并不是赋值操作</p>
 <h4 id="conditional-statements">Conditional statements<a class="headerlink" href="#conditional-statements" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">absolute_value</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the absolute value of x&quot;&quot;&quot;</span>
@@ -1487,14 +3048,14 @@
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">i</span>
 </code></pre></div>
-<p>这个部分就是讲解简单的循环逻辑，感觉可以不用看.</p>
+<p>这个部分就是讲解简单的循环逻辑，感觉可以不用看。</p>
 <h3 id="higher-order-functions">Higher-Order Functions<a class="headerlink" href="#higher-order-functions" title="Permanent link">⚓︎</a></h3>
 <h4 id="iteration-example">Iteration Example<a class="headerlink" href="#iteration-example" title="Permanent link">⚓︎</a></h4>
 <p>talk about Fibonacci sequence and quite trivial</p>
 <h4 id="control_1">Control<a class="headerlink" href="#control_1" title="Permanent link">⚓︎</a></h4>
 <p>用一个函数来表达判断的结构</p>
 <h4 id="control-expressions">Control Expressions<a class="headerlink" href="#control-expressions" title="Permanent link">⚓︎</a></h4>
-<p>Some expressions can be passed in Python like (left and right &amp;&amp; or) </p>
+<p>Some expressions can be passed in Python like (left and right &amp;&amp; or)</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">has_big_sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span>
 
@@ -1547,7 +3108,7 @@
 <span class="n">result</span> <span class="o">=</span> <span class="n">apply_twice</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="environments-for-nested-definitions">Environments for Nested Definitions<a class="headerlink" href="#environments-for-nested-definitions" title="Permanent link">⚓︎</a></h4>
-<p>Mainly about how to draw environment diagram and decide the parent frame of any function. </p>
+<p>Mainly about how to draw environment diagram and decide the parent frame of any function.</p>
 <h4 id="local-names">Local names<a class="headerlink" href="#local-names" title="Permanent link">⚓︎</a></h4>
 <p>Formal parameters of functions have a local scope means that if we call a function but the parameter of it doesn't be defined in local frame, it will cause an error.</p>
 <h4 id="function-composition">Function Composition<a class="headerlink" href="#function-composition" title="Permanent link">⚓︎</a></h4>
@@ -1558,9 +3119,9 @@
     <span class="k">return</span> <span class="n">h</span>
 </code></pre></div>
 <h4 id="lambda-expressions">Lambda Expressions<a class="headerlink" href="#lambda-expressions" title="Permanent link">⚓︎</a></h4>
-<p>由于它没有return部分，使用lambda只能创建简单的函数，在Python中也不经常用，但是对于其他语言常用(我学Python和R的，我可以不看吗？)</p>
+<p>由于它没有 return 部分，使用 lambda 只能创建简单的函数，在 Python 中也不经常用，但是对于其他语言常用（我学 Python 和 R 的，我可以不看吗？）</p>
 <p><img alt="lambda-def" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/lambda-def" /></p>
-<p>Only the def statement gives the function an intrinsic name. </p>
+<p>Only the def statement gives the function an intrinsic name.</p>
 <h4 id="function-currying">Function Currying<a class="headerlink" href="#function-currying" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">curry2</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -1572,7 +3133,7 @@
 <span class="n">curry2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="k">lambda</span> <span class="n">y</span> <span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 <p>Here should be an environment diagram but none.</p>
-<p>more clear case: </p>
+<p>more clear case:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -1585,7 +3146,7 @@
 <p>Chapter 1: Building Abstractions with Functions</p>
 <ul>
 <li>1.4  Designing Functions</li>
-<li>1.5  Control </li>
+<li>1.5  Control</li>
 <li>1.6  Higher-Order Functions</li>
 </ul>
 <h3 id="ch-14">Ch. 1.4<a class="headerlink" href="#ch-14" title="Permanent link">⚓︎</a></h3>
@@ -1613,7 +3174,7 @@
 <p>Instead of computing something, executing a control statement determines what the interpreter should do next.</p>
 </blockquote>
 <p>Compound statements:
-1. header 
+1. header
 2. suite
 3. clause</p>
 <p><strong>Practical Guidance.</strong> When indenting a suite, all lines must be indented the same amount and in the same way (use spaces, not tabs). Any variation in indentation will cause an error.</p>
@@ -1666,37 +3227,37 @@
 <p>还需要注意环境和函数的关系</p>
 <h4 id="newtons-method">Newton's Method<a class="headerlink" href="#newtons-method" title="Permanent link">⚓︎</a></h4>
 <p>已经学了不知道多少遍了</p>
-<p>既然讲了Newton-Raphson Algorithm也应该讲一下Fisher-scoring Algorithm吧(From Mathematical Statistic)</p>
-<h4 id="currying">Currying(柯里化)<a class="headerlink" href="#currying" title="Permanent link">⚓︎</a></h4>
+<p>既然讲了 Newton-Raphson Algorithm 也应该讲一下 Fisher-scoring Algorithm 吧 (From Mathematical Statistic)</p>
+<h4 id="currying">Currying（柯里化）<a class="headerlink" href="#currying" title="Permanent link">⚓︎</a></h4>
 <blockquote>
 <p>"Currying" 在英语中，尤其是在编程和数学领域，指的是“柯里化”。柯里化是一种将使用多个参数的函数转换为一系列使用单一参数的函数的技术。</p>
 </blockquote>
 <p>Currying allows us to do so without writing a specific function for each number whose powers we wish to compute.</p>
 <h4 id="lambda-function">Lambda function<a class="headerlink" href="#lambda-function" title="Permanent link">⚓︎</a></h4>
-<p>是一种简洁的函数表示方法但是由于理解的不容易不怎么使用，在Python中更倾向于使用def而不是lambda函数(为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了)</p>
+<p>是一种简洁的函数表示方法但是由于理解的不容易不怎么使用，在 Python 中更倾向于使用 def 而不是 lambda 函数（为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了）</p>
 <p>Standard formal:</p>
 <p>lambda x : f(g(x)) means "A function that  takes x  and returns  f(g(x))"</p>
-<p>Case: </p>
+<p>Case:</p>
 <p><code>compose1 = lambda f, g : lambda x: f(g(x))</code></p>
 <p>The significance of higher-order functions is that they enable us to represent these abstractions explicitly as elements in our programming language, so that they can be handled just like other computational elements.</p>
 <h4 id="function-decorators">Function Decorators<a class="headerlink" href="#function-decorators" title="Permanent link">⚓︎</a></h4>
 <p>相当于在原本函数的基础上增加一些新的小功能并且不更改函数名和原本调用</p>
 <p>Question: 为什么不直接重构呢？</p>
-<p>以下是一些可能的原因(瞎琢磨)：</p>
+<p>以下是一些可能的原因（瞎琢磨）：</p>
 <ul>
-<li>代码复用(用一个片段一直修饰不同的函数)</li>
+<li>代码复用（用一个片段一直修饰不同的函数）</li>
 <li>保证原本函数的简洁</li>
 <li>所谓的"开闭原则"</li>
-<li>方便维护和扩展(装饰器的部分应该不是函数核心的功能，如果不用或是修改的话可以直接重构多个函数)</li>
+<li>方便维护和扩展（装饰器的部分应该不是函数核心的功能，如果不用或是修改的话可以直接重构多个函数）</li>
 </ul>
 <h2 id="lab-011h">Lab 01(1h)<a class="headerlink" href="#lab-011h" title="Permanent link">⚓︎</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>写完一定要对答案!</p>
+<p>写完一定要对答案！</p>
 </div>
 <h3 id="what-would-python-display-wwpd">What Would Python Display? (WWPD)<a class="headerlink" href="#what-would-python-display-wwpd" title="Permanent link">⚓︎</a></h3>
 <h4 id="q1-wwpd-control">Q1: WWPD: Control<a class="headerlink" href="#q1-wwpd-control" title="Permanent link">⚓︎</a></h4>
-<p>注意：Python的函数在没有显式使用return的情况下默认返回None，print后就会得到None</p>
+<p>注意：Python 的函数在没有显式使用 return 的情况下默认返回 None，print 后就会得到 None</p>
 <p>例子</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">how_big</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span> 
@@ -1714,21 +3275,21 @@
 <span class="n">line3</span> <span class="kc">None</span>
 </code></pre></div>
 <h4 id="q2-debugging-quiz">Q2: Debugging Quiz<a class="headerlink" href="#q2-debugging-quiz" title="Permanent link">⚓︎</a></h4>
-<p>有点搞，不知道为什么交互式做选择题比单纯做题有乐子，做题家基因觉醒了.</p>
+<p>有点搞，不知道为什么交互式做选择题比单纯做题有乐子，做题家基因觉醒了。</p>
 <h3 id="write-code">Write Code<a class="headerlink" href="#write-code" title="Permanent link">⚓︎</a></h3>
 <h4 id="q3-falling-factorial">Q3: Falling Factorial<a class="headerlink" href="#q3-falling-factorial" title="Permanent link">⚓︎</a></h4>
-<p>唯一的问题是要把所有的doctest和题目看完，不要直接写</p>
-<p>答案没有专门对0判断而是用了更聪明的做法(移项可知<span class="arithmatex">\(k&gt;0\)</span>)</p>
+<p>唯一的问题是要把所有的 doctest 和题目看完，不要直接写</p>
+<p>答案没有专门对 0 判断而是用了更聪明的做法（移项可知 <span class="arithmatex">\(k&gt;0\)</span>）</p>
 <div class="highlight"><pre><span></span><code><span class="n">total</span><span class="p">,</span> <span class="n">stop</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">k</span>  
 <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">stop</span><span class="p">:</span>  
     <span class="n">total</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">total</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>  
 <span class="k">return</span> <span class="n">total</span>
 </code></pre></div>
 <h4 id="q4-divisible-by-k">Q4: Divisible By k<a class="headerlink" href="#q4-divisible-by-k" title="Permanent link">⚓︎</a></h4>
-<p>相当于实现一个更完整的range函数</p>
+<p>相当于实现一个更完整的 range 函数</p>
 <p>感觉写的不是特别好</p>
 <h4 id="q5-sum-digits">Q5: Sum Digits<a class="headerlink" href="#q5-sum-digits" title="Permanent link">⚓︎</a></h4>
-<p>经典的OJ题，做法太多了</p>
+<p>经典的 OJ 题，做法太多了</p>
 <h3 id="syllabus-quiz">Syllabus Quiz<a class="headerlink" href="#syllabus-quiz" title="Permanent link">⚓︎</a></h3>
 <h4 id="q6-syllabus-quiz">Q6: Syllabus Quiz<a class="headerlink" href="#q6-syllabus-quiz" title="Permanent link">⚓︎</a></h4>
 <p>做不了</p>
@@ -1736,7 +3297,7 @@
 <h4 id="q7-wwpd-what-if">Q7: WWPD: What If?<a class="headerlink" href="#q7-wwpd-what-if" title="Permanent link">⚓︎</a></h4>
 <p>非常容易不知道和前面比难在哪</p>
 <h4 id="q8-double-eights">Q8: Double Eights<a class="headerlink" href="#q8-double-eights" title="Permanent link">⚓︎</a></h4>
-<p>同样非常容易，OJ老题</p>
+<p>同样非常容易，OJ 老题</p>
 <p>这个参考答案节约了一些空间</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">double_eights_alt</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>  
     <span class="k">while</span> <span class="n">n</span><span class="p">:</span>  
@@ -1769,13 +3330,13 @@
 </code></pre></div>
 <p>错误应该为乌龟超越兔子但二者行走距离不同，第二次追及</p>
 <p>Wrong value：(2，3),(6, 11)</p>
-<p>注1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，<span class="arithmatex">\((10+t)x=(5+t)y\)</span>，此时只需要取整数解即可<span class="arithmatex">\((1\leqslant t \leqslant 5)\)</span>，随便取一个好算的分数通分即可(注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对(x, y)且gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离)</p>
-<p>注2：好像应该用试的但是没忍住分析了一下</p>
+<p>注 1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，<span class="arithmatex">\((10+t)x=(5+t)y\)</span>，此时只需要取整数解即可 <span class="arithmatex">\((1\leqslant t \leqslant 5)\)</span>，随便取一个好算的分数通分即可(注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对 (x, y) 且 gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离)</p>
+<p>注 2：好像应该用试的但是没忍住分析了一下</p>
 <p>无限运行应该是乌龟超过兔子后兔子追不上</p>
 <p>Runs forever：(4, 5)</p>
-<p>注3：延续上面的思路即可<span class="arithmatex">\((10k+t)x=(5k+t)y\)</span>，考虑互素的情形，并且不为两倍关系直接令<span class="arithmatex">\(y=5\)</span>，令<span class="arithmatex">\(t=5\)</span>排除<span class="arithmatex">\(x=3\implies x=4\)</span></p>
+<p>注 3：延续上面的思路即可 <span class="arithmatex">\((10k+t)x=(5k+t)y\)</span>，考虑互素的情形，并且不为两倍关系直接令 <span class="arithmatex">\(y=5\)</span>，令 <span class="arithmatex">\(t=5\)</span> 排除 <span class="arithmatex">\(x=3\implies x=4\)</span></p>
 <h4 id="q2-fizzbuzz">Q2: Fizzbuzz<a class="headerlink" href="#q2-fizzbuzz" title="Permanent link">⚓︎</a></h4>
-<p>非常简单的判断，代码参考repo</p>
+<p>非常简单的判断，代码参考 repo</p>
 <h4 id="q3-is-prime">Q3: Is Prime?<a class="headerlink" href="#q3-is-prime" title="Permanent link">⚓︎</a></h4>
 <p>经典素数筛，理论上有许多筛法，这里偷懒直接选用了一个最基本的数论结果</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  
@@ -1789,7 +3350,7 @@
 <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div>
 <h4 id="q4-unique-digits">Q4: Unique Digits<a class="headerlink" href="#q4-unique-digits" title="Permanent link">⚓︎</a></h4>
-<p>完成两个函数即可，第一个只需要在第二个函数基础上写while循环</p>
+<p>完成两个函数即可，第一个只需要在第二个函数基础上写 while 循环</p>
 <h4 id="q5-bottles">Q5: Bottles<a class="headerlink" href="#q5-bottles" title="Permanent link">⚓︎</a></h4>
 <p>pass</p>
 <h4 id="q6-double-trouble">Q6: Double Trouble<a class="headerlink" href="#q6-double-trouble" title="Permanent link">⚓︎</a></h4>
@@ -1829,10 +3390,10 @@
       </main>
       
         <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      
-      <div class="md-footer-copyright">
-        <div class="md-copyright">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -1846,21 +3407,21 @@
     </a>
   
 </div>
-      </div>
+    </div>
 
-      <div class="footer-center-box">
-          <div class="runtime-info">
-              <span>本站已运行</span>
-              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
-              <span>天</span>
-          </div>
-          <div class="icp-info">
-              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
-          </div>
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
       </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
 
+    
       
-        
 <div class="md-social">
   
     
@@ -1904,59 +3465,58 @@
     </a>
   
 </div>
-      
+    
 
-    </div>
   </div>
+</div>
 
-  <style>
-    .footer-center-box {
-        flex: 1; 
-        text-align: center; 
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin: 0 1rem;
-    }
-    .runtime-info {
-        color: #8C495A; 
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-    }
-    .icp-info a {
-        color: inherit;
-        opacity: 0.7;
-        font-size: 0.85rem;
-        text-decoration: none;
-    }
-    .icp-info a:hover {
-        opacity: 1;
-        color: var(--md-accent-fg-color);
-    }
-    @media (max-width: 76.1875em) {
-        .md-footer-meta__inner {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-    }
-  </style>
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
 
-  <script>
-    (function() {
-        var start = new Date('2024/10/28'); /* 建站日期 */
-        var now = new Date(); 
-        var diff = now - start;
-        
-        /* 直接算出总天数，取整 */
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        
-        var el = document.getElementById('run_days');
-        if(el) {
-            el.innerHTML = days;
-        }
-    })();
-  </script>
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -1976,6 +3536,10 @@
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/videos.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

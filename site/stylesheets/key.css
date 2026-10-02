@@ -1,36 +1,33 @@
-/* 还原 Sioyek 文档风格的立体按键 CSS */
+/* 还原 Sioyek 文档风格的立体按键 */
 kbd {
-    /* 核心结构 */
-    display: inline-block;
-    min-width: 1.2em;
-    text-align: center;
-    
-    /* 颜色与字体 */
-    background-color: #ffffff; /* 键帽表面是白色的 */
-    color: #000000;            /* 字体是黑色的 */
-    font-family: "Consolas", "Menlo", monospace;
-    font-size: 0.85em;
-    font-weight: bold;
-    
-    /* 立体边框效果 - 模拟截图中的倒角 */
-    border: 1px solid #777;    /* 整体边框 */
-    border-bottom: 3px solid #666; /* 底部加厚，形成立体感 */
-    border-right: 3px solid #666;  /* 右侧加厚 */
-    border-radius: 4px;        /* 圆角 */
-    
-    /* 细节微调 */
-    padding: 0px 6px;
-    margin: 0 3px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* 淡淡的投影 */
-    
-    /* 位置修正，防止把行撑得太高 */
-    vertical-align: text-bottom;
-    line-height: 1.2;
+  display: inline-block;
+  min-width: 1.2em;
+  text-align: center;
+
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 0.85em;
+  font-weight: bold;
+
+  /* 立体边框：底、右加厚形成键帽倒角 */
+  border: 1px solid #777;
+  border-bottom: 3px solid #666;
+  border-right: 3px solid #666;
+  border-radius: 4px;
+
+  padding: 0 6px;
+  margin: 0 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+  /* 防止把行撑得太高 */
+  vertical-align: text-bottom;
+  line-height: 1.2;
 }
 
-/* 适配暗色模式（可选，防止晚上亮瞎眼） */
-.theme-dark kbd {
-    background-color: #eee;
-    border-color: #555;
-    box-shadow: none;
+/* 暗色方案（Material 的暗色 palette 是 slate） */
+[data-md-color-scheme="slate"] kbd {
+  background-color: #eee;
+  border-color: #555;
+  box-shadow: none;
 }

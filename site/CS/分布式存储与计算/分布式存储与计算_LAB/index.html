@@ -12,9 +12,13 @@
         <meta name="author" content="Eurekaimer">
       
       
-        <link rel="canonical" href="https://www.eurekaimer.icu/Stathelper/CS/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97_LAB/">
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/CS/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97_LAB/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>分布式存储与计算_LAB - Eurekaimer's Digital Garden</title>
+        <title>分布式存储与计算_LAB - Notes</title>
       
     
     
@@ -128,11 +132,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/anime-grid.css">
-    
       <link rel="stylesheet" href="../../../stylesheets/key.css">
     
       <link rel="stylesheet" href="../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/videos.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
@@ -177,7 +181,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-header__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
@@ -191,7 +195,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eurekaimer's Digital Garden
+            Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -260,7 +264,7 @@
     
     <div class="md-header__source">
       
-        <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -288,67 +292,10 @@
       <a href="../../.." class="md-tabs__link">
         
   
-  Stathelper
+  Home
 
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../HDP/" class="md-tabs__link">
-          
-  
-  HDP
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../STAT260/" class="md-tabs__link">
-          
-  
-  STAT260
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
-          
-  
-  CS
-
-        </a>
-      </li>
-    
   
 
       
@@ -364,6 +311,25 @@
           
   
   Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
 
         </a>
       </li>
@@ -397,24 +363,14 @@
   
     
     
-      
-  
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-tabs__link">
+        <a href="../../../Statistics/" class="md-tabs__link">
           
   
-  Boring
+  Statistics
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -423,14 +379,16 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../ACGN/Anime/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
-  ACGN
+  Computer Science
 
         </a>
       </li>
@@ -482,6 +440,51 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../friends-link/" class="md-tabs__link">
         
   
@@ -520,17 +523,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-nav__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
 
     </a>
-    Eurekaimer's Digital Garden
+    Notes
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -557,7 +560,7 @@
   <span class="md-ellipsis">
     
   
-    Stathelper
+    Home
   
 
     
@@ -585,187 +588,8 @@
       
         
       
-    
-    
-    
-      
-      
         
       
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../HDP/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Index
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../STAT260/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    STAT260 2021
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CS Learning
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -797,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    分析学总站
+    Analysis
   
 
     
@@ -827,6 +651,69 @@
       
         
           
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -887,6 +774,16 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     
     
@@ -908,18 +805,14 @@
   
   
   
-    
-  
-  
-  
-    <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-nav__link">
+    <a href="../../../Statistics/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Boring
+    Statistics
   
 
     
@@ -931,8 +824,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -944,47 +835,65 @@
       
   
   
-  
-  
     
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
   
-    <a href="../../../ACGN/Anime/" class="md-nav__link">
+    
+    
       
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    ACGN
+    Computer Science
   
 
     
@@ -992,12 +901,1611 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Computer Science
   
 
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CS50x/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS50x
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS50x
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%200%20Scratch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 0 Scratch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%201%20C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1 C
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS50x/Week%202%20Arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2 Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CS61A/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS61A
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS61A
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Project%201-The%20Game%20of%20Hog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1 - The Game of Hog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Project%202-CS%2061A%20Autocorrected%20Typing%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2 - Autocorrected Typing Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/Week%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS231n
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS231n/CS231n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS231n/CS231n-Lecture1%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (西瓜书)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Mining & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Mining & Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/DMML_24Fall_Re/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DMML_24Fall_Re
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%AD%E4%B8%A4%E7%A7%8D%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB%E4%B8%8B%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7%E8%AF%81%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture3%20%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 信息论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture9%20%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 判别分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture12%20KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 12 KNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture13%20NNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 13 NNs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Storage & Computing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Distributed Storage & Computing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lab-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.帮助命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.文件操作命令的使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.目录命令的使用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.重定向输入输出，比较&gt;和&gt;&gt;的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.管道命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hadoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.创建新的 hadoop 账户
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.安装两个基本文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.配置环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.设置 ssh 免密登录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.修改配置文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.格式化 HDFS 文件系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.启动集群
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.运行例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-yarn-hdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. YARN 环境配置（承接 HDFS 配置）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-yarn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 启动 Yarn 服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-small" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 配置并启动 small 队列
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 提交任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab 4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lab 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-spark-342" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.安装 Spark 3.4.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sbt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.安装 sbt 并配置环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.创建任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.提交任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.快速签字检查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical & Big Data Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistical & Big Data Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/Py-Lecture-1%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Py-Lecture 1 基本操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1045,7 +2553,7 @@
   <span class="md-ellipsis">
     
   
-    Index
+    Tech
   
 
     
@@ -1081,6 +2589,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1108,7 +2620,7 @@
   <span class="md-ellipsis">
     
   
-    Technology
+    WebSource
   
 
     
@@ -1120,6 +2632,96 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
   
 
       
@@ -1266,10 +2868,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1hadoop" class="md-nav__link">
+  <a href="#1-hadoop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.创建新的hadoop账户
+        1.创建新的 hadoop 账户
       
     </span>
   </a>
@@ -1299,10 +2901,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4ssh" class="md-nav__link">
+  <a href="#4-ssh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.设置ssh免密登录
+        4.设置 ssh 免密登录
       
     </span>
   </a>
@@ -1321,10 +2923,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6hdfs" class="md-nav__link">
+  <a href="#6-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.格式化HDFS文件系统
+        6.格式化 HDFS 文件系统
       
     </span>
   </a>
@@ -1371,10 +2973,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-yarnhdfs" class="md-nav__link">
+  <a href="#1-yarn-hdfs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. YARN环境配置（承接HDFS配置）
+        1. YARN 环境配置（承接 HDFS 配置）
       
     </span>
   </a>
@@ -1385,7 +2987,7 @@
   <a href="#2-yarn" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 启动Yarn服务
+        2. 启动 Yarn 服务
       
     </span>
   </a>
@@ -1432,10 +3034,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1spark-342" class="md-nav__link">
+  <a href="#1-spark-342" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.安装Spark 3.4.2
+        1.安装 Spark 3.4.2
       
     </span>
   </a>
@@ -1443,10 +3045,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2sbt" class="md-nav__link">
+  <a href="#2-sbt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.安装sbt并配置环境
+        2.安装 sbt 并配置环境
       
     </span>
   </a>
@@ -1509,12 +3111,70 @@
   
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Distributed Storage & Computing
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
                   
   
-    <a href="https://github.com/Eurekaimer/Stathelper/edit/main/docs/CS/分布式存储与计算/分布式存储与计算_LAB.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/CS/分布式存储与计算/分布式存储与计算_LAB.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -1523,7 +3183,7 @@
     
       
     
-    <a href="https://github.com/Eurekaimer/Stathelper/raw/main/docs/CS/分布式存储与计算/分布式存储与计算_LAB.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/CS/分布式存储与计算/分布式存储与计算_LAB.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
@@ -1534,25 +3194,25 @@
 <h2 id="lab-1">Lab 1<a class="headerlink" href="#lab-1" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">第一次上机实验</p>
-<p>目的：熟悉Linux系统和基本命令
-实验环境：Linux操作系统(可以使用Ubuntu on windows,iOS系统中的Term)</p>
-<p>对于大多数未曾使用过Linux操作系统的人来说，使用WSL是一种捷径，使用Ubuntu则可以更好的修改各种错误(因为大多数人都使用这一发行版，并且本教程也基于Ubuntu)</p>
-<p>跳过WSL的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用Virtual Box，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况</p>
+<p>目的：熟悉 Linux 系统和基本命令
+实验环境：Linux 操作系统（可以使用 Ubuntu on windows,iOS 系统中的 Term）</p>
+<p>对于大多数未曾使用过 Linux 操作系统的人来说，使用 WSL 是一种捷径，使用 Ubuntu 则可以更好的修改各种错误（因为大多数人都使用这一发行版，并且本教程也基于 Ubuntu）</p>
+<p>跳过 WSL 的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用 Virtual Box，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况</p>
 </div>
 <h3 id="0">0.帮助命令<a class="headerlink" href="#0" title="Permanent link">⚓︎</a></h3>
-<p>比如查看ls命令的帮助，可以输入 </p>
+<p>比如查看 ls 命令的帮助，可以输入</p>
 <div class="highlight"><pre><span></span><code>man<span class="w"> </span>ls<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>ls<span class="w"> </span>--help<span class="w"> </span>
 </code></pre></div>
 <h3 id="1">1.文件操作命令的使用<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>查看文件与目录ls 进入Linux系统，输入 ls 回车(回车后命令运行，此后的说明中省略回车 尝试ls的其它参数</li>
+<li>查看文件与目录 ls 进入 Linux 系统，输入 ls 回车(回车后命令运行，此后的说明中省略回车 尝试 ls 的其它参数</li>
 </ul>
 <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-a
 ls<span class="w"> </span>-l
 ls<span class="w"> </span>-lrth
 </code></pre></div>
 <ul>
-<li>用vim或者vi编辑器新建一个test.txt文件(使用方式请自行搜索)，在文件中键入任意内容：比如 this is test 保存，退出</li>
+<li>用 vim 或者 vi 编辑器新建一个 test.txt 文件（使用方式请自行搜索），在文件中键入任意内容：比如 this is test 保存，退出</li>
 </ul>
 <div class="highlight"><pre><span></span><code>vi<span class="w"> </span>test.txt
 //<span class="w"> </span>如果安装了vim可以直接使用vim
@@ -1564,41 +3224,41 @@ this<span class="w"> </span>is<span class="w"> </span><span class="nb">test</spa
 </code></pre></div>
 <ul>
 <li>
-<p>ls查看当前目录下新生成的文件test.txt </p>
+<p>ls 查看当前目录下新生成的文件 test.txt</p>
 </li>
 <li>
-<p>显示文件内容cat </p>
+<p>显示文件内容 cat</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>test.txt<span class="w"> </span>
 </code></pre></div>
 <ul>
-<li>复制文件test.txt 到文件</li>
+<li>复制文件 test.txt 到文件</li>
 </ul>
 <div class="highlight"><pre><span></span><code>cp<span class="w"> </span>test.txt<span class="w"> </span>test1.txt
 cp<span class="w"> </span>test.txt<span class="w"> </span>test2.txt<span class="w"> </span>
 </code></pre></div>
 <ul>
 <li>
-<p>删除命令rm，输入 rm testl.txt </p>
+<p>删除命令 rm，输入 rm testl.txt</p>
 </li>
 <li>
-<p>移动命令,输入 mv test2.txt test1.txt </p>
+<p>移动命令，输入 mv test2.txt test1.txt</p>
 </li>
 </ul>
 <h3 id="2">2.目录命令的使用<a class="headerlink" href="#2" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>cd命令（该命令用来改变当前目录）</li>
+<li>cd 命令（该命令用来改变当前目录）</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>mytest
 </code></pre></div>
 <ul>
-<li>mkdir命令（用于在当前目录下建立一个子目录）</li>
+<li>mkdir 命令（用于在当前目录下建立一个子目录）</li>
 </ul>
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>mytest
 </code></pre></div>
 <ul>
-<li>rmdir命令（移除当前目录下的目录）</li>
+<li>rmdir 命令（移除当前目录下的目录）</li>
 </ul>
 <div class="highlight"><pre><span></span><code>rmdir<span class="w"> </span>mytest1
 </code></pre></div>
@@ -1608,7 +3268,7 @@ cp<span class="w"> </span>test.txt<span class="w"> </span>test2.txt<span class="
 <div class="highlight"><pre><span></span><code><span class="nb">pwd</span>
 </code></pre></div>
 <ul>
-<li>移动test.txt文件（假设该文件在~/目录下)到当前目录下</li>
+<li>移动 test.txt 文件（假设该文件在~/目录下)到当前目录下</li>
 </ul>
 <div class="highlight"><pre><span></span><code>mv<span class="w"> </span>test.txt<span class="w"> </span>./<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span>rmdir<span class="w"> </span>mytest<span class="se">\</span>
 rm<span class="w"> </span>-rf<span class="w"> </span>mytest
@@ -1626,8 +3286,8 @@ rm<span class="w"> </span>-rf<span class="w"> </span>mytest
 </code></pre></div>
 <p><img alt="wsl_file_system" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/wsl_fIle_system.png" /></p>
 <h2 id="lab-2">Lab 2<a class="headerlink" href="#lab-2" title="Permanent link">⚓︎</a></h2>
-<p>这个部分老师的操作文档写的非常混乱，我结合林子雨老师的教材和自己的经验进行一些修改以便于操作(也修改了一些安装顺序)，下面是修改后的安装步骤</p>
-<h3 id="1hadoop">1.创建新的hadoop账户<a class="headerlink" href="#1hadoop" title="Permanent link">⚓︎</a></h3>
+<p>这个部分老师的操作文档写的非常混乱，我结合林子雨老师的教材和自己的经验进行一些修改以便于操作（也修改了一些安装顺序），下面是修改后的安装步骤</p>
+<h3 id="1-hadoop">1.创建新的 hadoop 账户<a class="headerlink" href="#1-hadoop" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code>//<span class="w"> </span>sudo<span class="w"> </span>adduser<span class="w"> </span>&lt;username&gt;
 sudo<span class="w"> </span>adduser<span class="w"> </span>hadoop
 sudo<span class="w"> </span>vim<span class="w"> </span>/etc/sudoers
@@ -1652,14 +3312,14 @@ mkdir<span class="w"> </span>module
 <p>需要注意的是，软件是会随着时间迭代的，因此版本号和文件名显然也会跟着改变，所以下面的一切与这两个文件有关的命令都需要注意修改对应的版本号进行操作</p>
 </div>
 <ul>
-<li>JDK的安装</li>
+<li>JDK 的安装</li>
 </ul>
 <p>首先进入网址：<a href="https://www.oracle.com/java/technologies/downloads/">JDK_downloads</a>，你可以在Java achieve中找到对应的版本，例如我使用JDK8就使用了<a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk-8u451-linux-x64.tar.gz</a>，安装在windows下即可</p>
 <ul>
-<li>Hadoop的安装</li>
+<li>Hadoop 的安装</li>
 </ul>
 <p>直接进入<a href="https://hadoop.apache.org/releases.html">官网</a>安装即可，选择Binary版本，同样安装在windows下</p>
-<p>安装之后需要记住位置，后续需要在wsl中通过mnt来进行传输</p>
+<p>安装之后需要记住位置，后续需要在 wsl 中通过 mnt 来进行传输</p>
 <p>如何传输？</p>
 <p>假设您的文件在 Windows 路径为 <code>D:\Users\YourName\Documents\my_file.txt</code>，并且您想把它转移到 WSL 中当前用户的家目录 (<code>~</code>) 下</p>
 <p>示例路径：</p>
@@ -1667,16 +3327,16 @@ mkdir<span class="w"> </span>module
 <p>wsl：/mnt/d/Users/YourName/Documents/my_file.txt</p>
 <div class="admonition tip">
 <p class="admonition-title">窍门</p>
-<p>只需要在前面加上/mnt，在哪个盘就在后面跟上盘符，例如D盘就加上/d，后面只需要改变反斜杠即可</p>
+<p>只需要在前面加上/mnt，在哪个盘就在后面跟上盘符，例如 D 盘就加上/d，后面只需要改变反斜杠即可</p>
 </div>
-<p>然后就是mv命令，前面是原位置，后面是移动后希望文件所处的位置</p>
+<p>然后就是 mv 命令，前面是原位置，后面是移动后希望文件所处的位置</p>
 <div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/mnt/d/Users/YourName/Documents/my_file.txt<span class="w"> </span>~/target_directory/
 </code></pre></div>
-<p>将那两个安装包从windows下移动到 <code>~/software</code> 下(注意文件名需要根据你下载到的实际文件修改，路径也需要根据实际所处的位置修改)</p>
+<p>将那两个安装包从 windows 下移动到 <code>~/software</code> 下（注意文件名需要根据你下载到的实际文件修改，路径也需要根据实际所处的位置修改）</p>
 <p>以 <code>hadoop-3.4.2.tar.gz</code> 为例</p>
 <div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/mnt/d/Users/lenovo/Desktop/hadoop-3.4.2.tar.gz<span class="w"> </span>~/software/
 </code></pre></div>
-<p>使用ls命令会得到如下结果</p>
+<p>使用 ls 命令会得到如下结果</p>
 <div class="highlight"><pre><span></span><code>hadoop@Eurekaimer:~/software$<span class="w"> </span>ls
 hadoop-3.4.2.tar.gz<span class="w">  </span>jdk-8u451-linux-x64.tar.gz
 </code></pre></div>
@@ -1687,13 +3347,13 @@ hadoop-3.4.2.tar.gz<span class="w">  </span>jdk-8u451-linux-x64.tar.gz
 <p>关于上面命令的 <code>-xvzf</code> 中的四个选项的含义可以直接搜索，在此不赘述</p>
 <h3 id="3_1">3.配置环境变量<a class="headerlink" href="#3_1" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>先配置JDK的环境变量，首先回到最初的目录，然后使用vim打开配置文件</li>
+<li>先配置 JDK 的环境变量，首先回到最初的目录，然后使用 vim 打开配置文件</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span>
 vim<span class="w"> </span>~/.bashrc
 </code></pre></div>
-<p>加入以下内容(推荐加入位置在末尾，内容需要根据实际文件名修改)</p>
-<p>注：可以在 <code>module</code> 目录下使用ls得到</p>
+<p>加入以下内容（推荐加入位置在末尾，内容需要根据实际文件名修改）</p>
+<p>注：可以在 <code>module</code> 目录下使用 ls 得到</p>
 <div class="highlight"><pre><span></span><code>hadoop@Eurekaimer:~/module$<span class="w"> </span>ls
 hadoop-3.4.2<span class="w">  </span>jdk1.8.0_451
 </code></pre></div>
@@ -1709,14 +3369,14 @@ hadoop-3.4.2<span class="w">  </span>jdk1.8.0_451
 java<span class="w"> </span>-version
 </code></pre></div>
 <ul>
-<li>配置Hadoop环境变量</li>
+<li>配置 Hadoop 环境变量</li>
 </ul>
 <p>类似的</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span>
 vim<span class="w"> </span>~/.bashrc
 </code></pre></div>
-<p>加入以下内容(推荐加入位置在末尾，内容需要根据实际文件名修改)</p>
-<p>注：可以在 <code>module</code> 目录下使用ls得到</p>
+<p>加入以下内容（推荐加入位置在末尾，内容需要根据实际文件名修改）</p>
+<p>注：可以在 <code>module</code> 目录下使用 ls 得到</p>
 <div class="highlight"><pre><span></span><code>hadoop@Eurekaimer:~/module$<span class="w"> </span>ls
 hadoop-3.4.2<span class="w">  </span>jdk1.8.0_451
 </code></pre></div>
@@ -1731,8 +3391,8 @@ hadoop-3.4.2<span class="w">  </span>jdk1.8.0_451
 //<span class="w"> </span>测试安装是否成功
 hadoop<span class="w"> </span>version
 </code></pre></div>
-<h3 id="4ssh">4.设置ssh免密登录<a class="headerlink" href="#4ssh" title="Permanent link">⚓︎</a></h3>
-<p>需要先安装openssh</p>
+<h3 id="4-ssh">4.设置 ssh 免密登录<a class="headerlink" href="#4-ssh" title="Permanent link">⚓︎</a></h3>
+<p>需要先安装 openssh</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>openssh-server<span class="w"> </span>pdsh
 </code></pre></div>
 <p>可以先创建一个文件夹 <code>~/.ssh</code></p>
@@ -1751,7 +3411,7 @@ cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>&gt;&gt;<spa
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">关于免密登录的目的</p>
-<p>为什么要免密登录？ 想要体会这一点应当在设置免密登录之前直接进行一次 <code>ssh localhost</code> 操作，我们会发现登录需要输入密码，而输入密码对于多节点的操作而言是非常麻烦的，因此我们需要设置免密登录</p>
+<p>为什么要免密登录？想要体会这一点应当在设置免密登录之前直接进行一次 <code>ssh localhost</code> 操作，我们会发现登录需要输入密码，而输入密码对于多节点的操作而言是非常麻烦的，因此我们需要设置免密登录</p>
 </div>
 <h3 id="5">5.修改配置文件<a class="headerlink" href="#5" title="Permanent link">⚓︎</a></h3>
 <p>主要是三个文件</p>
@@ -1761,7 +3421,7 @@ cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>&gt;&gt;<spa
 <div class="highlight"><pre><span></span><code>vim<span class="w"> </span>core-site.xml
 </code></pre></div>
 <p><code>&lt;configuration&gt;</code> 和 <code>&lt;/configuration&gt;</code> 之间加入</p>
-<p>注意缩进(类似html标签)</p>
+<p>注意缩进（类似 html 标签）</p>
 <div class="highlight"><pre><span></span><code>&lt;property&gt;
 <span class="w">    </span>&lt;name&gt;fs.defaultFS&lt;/name&gt;
 <span class="w">    </span>&lt;value&gt;hdfs://localhost:9820&lt;/value&gt;
@@ -1801,7 +3461,7 @@ cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>&gt;&gt;<spa
 <span class="nb">export</span><span class="w"> </span><span class="nv">HDFS_DATANODE_USER</span><span class="o">=</span>hadoop
 <span class="nb">export</span><span class="w"> </span><span class="nv">HDFS_SECONDARYNAME_USER</span><span class="o">=</span>hadoop
 </code></pre></div>
-<h3 id="6hdfs">6.格式化HDFS文件系统<a class="headerlink" href="#6hdfs" title="Permanent link">⚓︎</a></h3>
+<h3 id="6-hdfs">6.格式化 HDFS 文件系统<a class="headerlink" href="#6-hdfs" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>namenode<span class="w"> </span>-format
 </code></pre></div>
 <h3 id="7">7.启动集群<a class="headerlink" href="#7" title="Permanent link">⚓︎</a></h3>
@@ -1814,8 +3474,8 @@ jps
 mkdir<span class="w"> </span>input
 <span class="nb">cd</span><span class="w"> </span>input
 </code></pre></div>
-<p>使用vim生成测试文件 <code>test1.txt</code> 和 <code>test2.txt</code>，每个文件输入若干单词</p>
-<p>将目录上传到hdfs文件系统</p>
+<p>使用 vim 生成测试文件 <code>test1.txt</code> 和 <code>test2.txt</code>，每个文件输入若干单词</p>
+<p>将目录上传到 hdfs 文件系统</p>
 <div class="highlight"><pre><span></span><code>hdfs<span class="w"> </span>dfs<span class="w"> </span>-put<span class="w"> </span>~/input<span class="w"> </span>/input
 <span class="nb">cd</span><span class="w"> </span><span class="nv">$HADOOP_HOME</span>/share/hadoop/mapreduce
 hadoop<span class="w"> </span>jar<span class="w"> </span>hadoop-mapreduce-examples-3.4.2.jar<span class="w"> </span>wordcount<span class="w"> </span>/input<span class="w"> </span>/output
@@ -1830,28 +3490,28 @@ hadoop<span class="w"> </span>jar<span class="w"> </span>hadoop-mapreduce-exampl
 <div class="admonition note">
 <p class="admonition-title">彩蛋</p>
 <p>如果统计结果正确，那么说明你的 Hadoop 伪分布式集群就搭建成功并验证完成了！
-我写的是microsoft love linux!</p>
+我写的是 microsoft love linux!</p>
 </div>
 <h2 id="lab-3">Lab 3<a class="headerlink" href="#lab-3" title="Permanent link">⚓︎</a></h2>
-<p>第四次上机实验的内容为YARN的配置，具体内容如下：</p>
+<p>第四次上机实验的内容为 YARN 的配置，具体内容如下：</p>
 <ul>
-<li>配置并启动YARN</li>
-<li>Yarn中添加队列small,并将任务提交至small队列运行<ul>
-<li>修改capacity-scheduler.xml文件（最好提前备份该文件cp capacity-scheduler.xml capacity-scheduler.xml.bak).修改内容包括增加所有和small队列相关的属性，并且分配default队列和small队列之间的资源占有比例。</li>
+<li>配置并启动 YARN</li>
+<li>Yarn 中添加队列 small,并将任务提交至 small 队列运行<ul>
+<li>修改 capacity-scheduler.xml 文件（最好提前备份该文件 cp capacity-scheduler.xml capacity-scheduler.xml.bak).修改内容包括增加所有和 small 队列相关的属性，并且分配 default 队列和 small 队列之间的资源占有比例。</li>
 <li>向指定队列提交任务
     $hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-example-3.4.2.jar pi -Dmapreduce.job.queuename=small 10 10</li>
-<li>在yarn的web服务页面查看提交的任务情况和队列情况</li>
+<li>在 yarn 的 web 服务页面查看提交的任务情况和队列情况</li>
 </ul>
 </li>
 </ul>
-<h3 id="1-yarnhdfs">1. YARN环境配置（承接HDFS配置）<a class="headerlink" href="#1-yarnhdfs" title="Permanent link">⚓︎</a></h3>
+<h3 id="1-yarn-hdfs">1. YARN 环境配置（承接 HDFS 配置）<a class="headerlink" href="#1-yarn-hdfs" title="Permanent link">⚓︎</a></h3>
 <p>主要是修改三个文件</p>
 <ul>
 <li>mapred-site.xml</li>
 <li>yarn-site.xml</li>
 <li>hadoop-env.sh</li>
 </ul>
-<p><span class="arithmatex">\(\mathbf{Remark:}\)</span>下面的软件版本都是我的版本，相应的使用需修改</p>
+<p><span class="arithmatex">\(\mathbf{Remark:}\)</span> 下面的软件版本都是我的版本，相应的使用需修改</p>
 <p>配置第一个</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="nv">$HADOOP_HOME</span>/etc/hadoop
 <span class="c1"># 备份可以不备</span>
@@ -1907,7 +3567,7 @@ vim<span class="w"> </span>mapred-site.xml
 <span class="w">    </span>&lt;/property&gt;
 &lt;/configuration&gt;
 </code></pre></div>
-<p>第一个property主机名(hostname)</p>
+<p>第一个 property 主机名 (hostname)</p>
 <p>配置第三个</p>
 <div class="highlight"><pre><span></span><code>vim<span class="w"> </span>hadoop-env.sh
 </code></pre></div>
@@ -1915,7 +3575,7 @@ vim<span class="w"> </span>mapred-site.xml
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">YARN_RESOURCEMANAGER_USER</span><span class="o">=</span>hadoop
 <span class="nb">export</span><span class="w"> </span><span class="nv">YARN_NODEMANAGER_USER</span><span class="o">=</span>hadoop
 </code></pre></div>
-<h3 id="2-yarn">2. 启动Yarn服务<a class="headerlink" href="#2-yarn" title="Permanent link">⚓︎</a></h3>
+<h3 id="2-yarn">2. 启动 Yarn 服务<a class="headerlink" href="#2-yarn" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># 如果之前启动过的关闭</span>
 <span class="nv">$HADOOP_HOME</span>/sbin/stop-all.sh
 <span class="c1"># 启动HDFS和YARN</span>
@@ -1924,7 +3584,7 @@ vim<span class="w"> </span>mapred-site.xml
 <span class="nv">$HADOOP_HOME</span>/sbin/mr-jobhistory-daemon.sh<span class="w"> </span>start<span class="w"> </span>historyserver
 </code></pre></div>
 <p><img alt="Lab3_1" src="../lab3_1.png" /></p>
-<p>第三条命令报错是因为给出的这个命令是Hadoop2.x版本的，但是它会自动转换为3.x</p>
+<p>第三条命令报错是因为给出的这个命令是 Hadoop2.x 版本的，但是它会自动转换为 3.x</p>
 <p>如果在 <code>$HADOOP_HOME</code> 目录下：</p>
 <div class="highlight"><pre><span></span><code>stop-all.sh
 <span class="c1"># HDFS</span>
@@ -1952,7 +3612,7 @@ mr-jobhistory-daemon.sh<span class="w"> </span>start<span class="w"> </span>hist
 cp<span class="w"> </span>capacity-scheduler.xml<span class="w"> </span>capacity-scheduler.xml.bak
 vim<span class="w"> </span>capacity-scheduler.xml
 </code></pre></div>
-<p>这个是比较麻烦的，你需要在文件的 <code>&lt;configuration&gt;</code> 和 <code>&lt;/configuration&gt;</code> 标签之间，加入以下内容。这些配置定义了 <code>root</code> 队列下的子队列 <code>default</code> 和 <code>small</code>，并分配了资源比例（70% 给 <code>default</code>，30% 给 <code>small</code>）(比例可以调，只需要加和100%即可)</p>
+<p>这个是比较麻烦的，你需要在文件的 <code>&lt;configuration&gt;</code> 和 <code>&lt;/configuration&gt;</code> 标签之间，加入以下内容。这些配置定义了 <code>root</code> 队列下的子队列 <code>default</code> 和 <code>small</code>，并分配了资源比例（70% 给 <code>default</code>，30% 给 <code>small</code>）（比例可以调，只需要加和 100%即可）</p>
 <div class="highlight"><pre><span></span><code>&lt;property&gt;
 <span class="w">    </span>&lt;name&gt;yarn.scheduler.capacity.root.queues&lt;/name&gt;
 <span class="w">    </span>&lt;value&gt;default,small&lt;/value&gt;#<span class="w"> </span>这行加入small队列
@@ -1978,16 +3638,16 @@ vim<span class="w"> </span>capacity-scheduler.xml
 <span class="w">    </span>&lt;value&gt;30&lt;/value&gt;
 &lt;/property&gt;
 </code></pre></div>
-<p>保险起见应该给每个property标签都类似定义相关的small队列的版本，例如上面的部分就是两个default和两个small，但是使用时其他属性都存在默认值，所以不配置small的标签也可以跑通</p>
+<p>保险起见应该给每个 property 标签都类似定义相关的 small 队列的版本，例如上面的部分就是两个 default 和两个 small，但是使用时其他属性都存在默认值，所以不配置 small 的标签也可以跑通</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 确保配置small队列能够使用(刷新)</span>
 yarn<span class="w"> </span>rmadmin<span class="w"> </span>-refreshQueues
 </code></pre></div>
 <h3 id="4_1">4. 提交任务<a class="headerlink" href="#4_1" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code>hadoop<span class="w"> </span>jar<span class="w"> </span><span class="nv">$HADOOP_HOME</span>/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.2.jar<span class="w"> </span>pi<span class="w"> </span>-Dmapreduce.job.queuename<span class="o">=</span>small<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">10</span>
 </code></pre></div>
-<p>精度相当差，如果要更高的精度可以调整后面参数(10 10)</p>
+<p>精度相当差，如果要更高的精度可以调整后面参数 (10 10)</p>
 <p><img alt="Lab3_2" src="../Lab3_2.png" /></p>
-<p>如果要使用web端的话，检查一下端口：</p>
+<p>如果要使用 web 端的话，检查一下端口：</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/hosts
 </code></pre></div>
 <p>打开之后进行配置</p>
@@ -2006,16 +3666,16 @@ start-yarn.sh
 yarn<span class="w"> </span>rmadmin<span class="w"> </span>-refreshQueues
 </code></pre></div>
 <p>然后尝试访问http://localhost:8088</p>
-<p>有时候因为防火墙无法访问，所以采取http协议，或者把电脑防火墙关掉</p>
+<p>有时候因为防火墙无法访问，所以采取 http 协议，或者把电脑防火墙关掉</p>
 <div class="admonition warning">
 <p class="admonition-title">关于最后一步提交之后但是无法开始任务</p>
-<p>也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况(如果使用虚拟机)，你需要调整节点最大可用内存，或者降低任务需要内存，也可以虚报内存(所以说安装虚拟机的时候不要把自己的内存配置写的太小了)</p>
+<p>也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况（如果使用虚拟机），你需要调整节点最大可用内存，或者降低任务需要内存，也可以虚报内存（所以说安装虚拟机的时候不要把自己的内存配置写的太小了）</p>
 </div>
 <h2 id="lab-4">Lab 4<a class="headerlink" href="#lab-4" title="Permanent link">⚓︎</a></h2>
 <p>一切文件版本和路径根据自己情况调整</p>
-<h3 id="1spark-342">1.安装Spark 3.4.2<a class="headerlink" href="#1spark-342" title="Permanent link">⚓︎</a></h3>
-<p>使用之前需要Java和Hadoop环境(很好安装，在之前的Lab中已经安装过)</p>
-<p>注：下面需要根据自己的Java/Hadoop/Spark版本进行，可以使用下面的命令查看</p>
+<h3 id="1-spark-342">1.安装 Spark 3.4.2<a class="headerlink" href="#1-spark-342" title="Permanent link">⚓︎</a></h3>
+<p>使用之前需要 Java 和 Hadoop 环境（很好安装，在之前的 Lab 中已经安装过）</p>
+<p>注：下面需要根据自己的 Java/Hadoop/Spark 版本进行，可以使用下面的命令查看</p>
 <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.bashrc
 
 <span class="c1"># 这是我的输出</span>
@@ -2029,26 +3689,26 @@ yarn<span class="w"> </span>rmadmin<span class="w"> </span>-refreshQueues
 <span class="c1"># Hadoop 版本:hadoop-3.4.2</span>
 <span class="c1"># Spark 版本（假设下载）: spark-3.4.2-bin-without-hadoop.tgz</span>
 </code></pre></div>
-<p>由于老师的安装文档比较老因此使用的是比较古老的Spark版本，只能去<a href="https://archive.apache.org/dist/spark/spark-3.4.2/">Apache Archive</a>下载(这是本次实验耗时最久的地方)，然后就是正常移动文件(WSL)，如果是虚拟机或是本地Linux正常移动即可</p>
+<p>由于老师的安装文档比较老因此使用的是比较古老的 Spark 版本，只能去<a href="https://archive.apache.org/dist/spark/spark-3.4.2/">Apache Archive</a>下载(这是本次实验耗时最久的地方)，然后就是正常移动文件(WSL)，如果是虚拟机或是本地Linux正常移动即可</p>
 <div class="highlight"><pre><span></span><code>mv<span class="w"> </span>/mnt/e/spark-3.4.2-bin-without-hadoop.tgz<span class="w"> </span>~/software/
 </code></pre></div>
 <p>解压</p>
 <div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvzf<span class="w"> </span>~/software/spark-3.4.2-bin-without-hadoop.tgz<span class="w"> </span>-C<span class="w"> </span>~/module/
 </code></pre></div>
 <blockquote>
-<p>PPT复制下来-C前面横线格式不对</p>
+<p>PPT 复制下来-C 前面横线格式不对</p>
 </blockquote>
-<p>移动解压文件并改名spark</p>
+<p>移动解压文件并改名 spark</p>
 <div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/module/spark-3.4.2-bin-without-hadoop/<span class="w"> </span>~/module/spark
 </code></pre></div>
 <h4 id="_1">本地模式<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h4>
-<p>然后开始配置文件<code>spark-env.sh</code></p>
+<p>然后开始配置文件 <code>spark-env.sh</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 仍然备份，但是改动较少不太可能改错</span>
 <span class="nb">cd</span><span class="w"> </span>~/module/spark/conf
 cp<span class="w"> </span>spark-env.sh.template<span class="w"> </span>spark-env.sh
 vim<span class="w"> </span>spark-env.sh
 </code></pre></div>
-<p>在最后加上(老师的课件需要打开两次，这里方便就把后续的配置文件一起写上)</p>
+<p>在最后加上（老师的课件需要打开两次，这里方便就把后续的配置文件一起写上）</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 这是原本的</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">SPARK_DIST_CLASSPATH</span><span class="o">=</span><span class="k">$(</span>/home/hadoop/module/hadoop-3.3.6/bin/hadoop<span class="w"> </span>classpath<span class="k">)</span>
 <span class="c1"># 这是后面的</span>
@@ -2059,16 +3719,16 @@ vim<span class="w"> </span>spark-env.sh
 <span class="nv">SPARK_MASTER_HOST</span><span class="o">=</span>localhost<span class="w"> </span>
 <span class="nv">SPARK_MASTER_PORT</span><span class="o">=</span><span class="m">7077</span>
 </code></pre></div>
-<p>由此可以使用本地模式，如果要使用HDFS则需要提前打开Hadoop</p>
-<h4 id="standalone">Standalone模式<a class="headerlink" href="#standalone" title="Permanent link">⚓︎</a></h4>
-<p>仍然是那个<code>conf</code>文件夹</p>
+<p>由此可以使用本地模式，如果要使用 HDFS 则需要提前打开 Hadoop</p>
+<h4 id="standalone">Standalone 模式<a class="headerlink" href="#standalone" title="Permanent link">⚓︎</a></h4>
+<p>仍然是那个 <code>conf</code> 文件夹</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span>cp<span class="w"> </span>workers.template<span class="w"> </span>workers
 <span class="w"> </span>vim<span class="w"> </span>workers
 <span class="w"> </span><span class="c1"># 里面的改为</span>
 <span class="w"> </span>localhost
 <span class="w"> </span><span class="c1"># 里面的默认应该就是，这步没必要做</span>
 </code></pre></div>
-<p>启动Standalone模式，没必要运行，不想运行直接跳过</p>
+<p>启动 Standalone 模式，没必要运行，不想运行直接跳过</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 需要在spark目录下</span>
 <span class="w"> </span>./sbin/start-master.sh
 <span class="w"> </span>./sbin/start-workers.sh<span class="w"> </span>spark://localhost:7077
@@ -2098,7 +3758,7 @@ jps<span class="w"> </span>
 spark-shell
 <span class="c1"># 应该就可以使用spark了，这个需要确认一下，确认完了ctrl C退出</span>
 </code></pre></div>
-<h3 id="2sbt">2.安装sbt并配置环境<a class="headerlink" href="#2sbt" title="Permanent link">⚓︎</a></h3>
+<h3 id="2-sbt">2.安装 sbt 并配置环境<a class="headerlink" href="#2-sbt" title="Permanent link">⚓︎</a></h3>
 <p>sbt（Simple Build Tool）用于打包 Scala 编写的 Spark 应用程序</p>
 <p>安装的话：<a href="https://github.com/sbt/sbt/releases/download/v1.9.9/sbt-1.9.9.tgz">Github</a>，<a href="https://www.scala-sbt.org/download/">官网</a></p>
 <p>安装好了仍然解压安装包</p>
@@ -2136,7 +3796,7 @@ mkdir<span class="w"> </span>–p<span class="w"> </span>~/sparkapp/src/main/sca
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>声明该应用程序的信息以及与Spark的依赖关系</p>
+<p>声明该应用程序的信息以及与 Spark 的依赖关系</p>
 <div class="highlight"><pre><span></span><code>vim<span class="w"> </span>~/sparkapp/simple.sbt
 
 <span class="c1"># 加入</span>
@@ -2152,7 +3812,7 @@ sbt<span class="w"> </span>package<span class="w"> </span>
 <span class="c1"># 第一次运行时 sbt 会下载依赖包，耗时较久</span>
 <span class="c1"># 成功后，生成的 JAR 包应当位于 ~/sparkapp/target/scala-2.12/simple-project_2.12-1.0.jar</span>
 </code></pre></div>
-<p>应该会生成一个jar包</p>
+<p>应该会生成一个 jar 包</p>
 <h3 id="4_2">4.提交任务<a class="headerlink" href="#4_2" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1">#建议使用下面的命令 注意$前面还有$ 并非笔误，那个老师的提交命令又有毛病，class和master前面的横线都少了一个</span>
 <span class="nv">$SPARK_HOME</span>/bin/spark-submit<span class="w"> </span><span class="se">\</span>
@@ -2179,7 +3839,7 @@ jps
 <span class="w">    </span>--master<span class="w"> </span>spark://localhost:7077<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>~/sparkapp/target/scala-2.12/simple-project_2.12-1.0.jar
 </code></pre></div>
-<p>到这里所有的需要上机签字的部分就结束了(算平时分的部分)，但是对于想要学好分布式的同学来说，熟悉Scala语法和代码实现也是不得不品的一环，但是由于本人比较懒就跳过后续的两次Scala语言的上机作业了，因为在LLM的时代下，你写不出正确的代码说明这门科目不是很适合你了！！！</p>
+<p>到这里所有的需要上机签字的部分就结束了（算平时分的部分），但是对于想要学好分布式的同学来说，熟悉 Scala 语法和代码实现也是不得不品的一环，但是由于本人比较懒就跳过后续的两次 Scala 语言的上机作业了，因为在 LLM 的时代下，你写不出正确的代码说明这门科目不是很适合你了！！！</p>
 
 
 
@@ -2213,10 +3873,10 @@ jps
       </main>
       
         <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      
-      <div class="md-footer-copyright">
-        <div class="md-copyright">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -2230,21 +3890,21 @@ jps
     </a>
   
 </div>
-      </div>
+    </div>
 
-      <div class="footer-center-box">
-          <div class="runtime-info">
-              <span>本站已运行</span>
-              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
-              <span>天</span>
-          </div>
-          <div class="icp-info">
-              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
-          </div>
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
       </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
 
+    
       
-        
 <div class="md-social">
   
     
@@ -2288,59 +3948,58 @@ jps
     </a>
   
 </div>
-      
+    
 
-    </div>
   </div>
+</div>
 
-  <style>
-    .footer-center-box {
-        flex: 1; 
-        text-align: center; 
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin: 0 1rem;
-    }
-    .runtime-info {
-        color: #8C495A; 
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-    }
-    .icp-info a {
-        color: inherit;
-        opacity: 0.7;
-        font-size: 0.85rem;
-        text-decoration: none;
-    }
-    .icp-info a:hover {
-        opacity: 1;
-        color: var(--md-accent-fg-color);
-    }
-    @media (max-width: 76.1875em) {
-        .md-footer-meta__inner {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-    }
-  </style>
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
 
-  <script>
-    (function() {
-        var start = new Date('2024/10/28'); /* 建站日期 */
-        var now = new Date(); 
-        var diff = now - start;
-        
-        /* 直接算出总天数，取整 */
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        
-        var el = document.getElementById('run_days');
-        if(el) {
-            el.innerHTML = days;
-        }
-    })();
-  </script>
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -2360,6 +4019,10 @@ jps
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/videos.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

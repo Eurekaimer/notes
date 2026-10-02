@@ -12,7 +12,7 @@
         <meta name="author" content="Eurekaimer">
       
       
-        <link rel="canonical" href="https://www.eurekaimer.icu/Stathelper/Tech/Wheels/Python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/Tech/Wheels/Python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/">
       
       
         <link rel="prev" href="../Stata18%E5%AE%89%E8%A3%85/">
@@ -29,7 +29,7 @@
     
     
       
-        <title>Python环境安装和配置 - Eurekaimer's Digital Garden</title>
+        <title>Python 环境安装和配置 - Notes</title>
       
     
     
@@ -132,11 +132,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/anime-grid.css">
-    
       <link rel="stylesheet" href="../../../stylesheets/key.css">
     
       <link rel="stylesheet" href="../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/videos.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
@@ -181,7 +181,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-header__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
@@ -195,13 +195,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eurekaimer's Digital Garden
+            Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python环境安装和配置
+              Python 环境安装和配置
             
           </span>
         </div>
@@ -264,7 +264,7 @@
     
     <div class="md-header__source">
       
-        <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -292,67 +292,10 @@
       <a href="../../.." class="md-tabs__link">
         
   
-  Stathelper
+  Home
 
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../HDP/" class="md-tabs__link">
-          
-  
-  HDP
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../STAT260/" class="md-tabs__link">
-          
-  
-  STAT260
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../CS/" class="md-tabs__link">
-          
-  
-  CS
-
-        </a>
-      </li>
-    
   
 
       
@@ -368,6 +311,25 @@
           
   
   Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
 
         </a>
       </li>
@@ -401,24 +363,14 @@
   
     
     
-      
-  
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-tabs__link">
+        <a href="../../../Statistics/" class="md-tabs__link">
           
   
-  Boring
+  Statistics
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -431,10 +383,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ACGN/Anime/" class="md-tabs__link">
+        <a href="../../../CS/" class="md-tabs__link">
           
   
-  ACGN
+  Computer Science
 
         </a>
       </li>
@@ -488,6 +440,51 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../friends-link/" class="md-tabs__link">
         
   
@@ -526,17 +523,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-nav__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
 
     </a>
-    Eurekaimer's Digital Garden
+    Notes
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -563,7 +560,7 @@
   <span class="md-ellipsis">
     
   
-    Stathelper
+    Home
   
 
     
@@ -591,187 +588,8 @@
       
         
       
-    
-    
-    
-      
-      
         
       
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../HDP/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Index
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../STAT260/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    STAT260 2021
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../CS/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CS Learning
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -803,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    分析学总站
+    Analysis
   
 
     
@@ -833,6 +651,69 @@
       
         
           
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -893,6 +774,16 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     
     
@@ -914,18 +805,14 @@
   
   
   
-    
-  
-  
-  
-    <a href="../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-nav__link">
+    <a href="../../../Statistics/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Boring
+    Statistics
   
 
     
@@ -937,8 +824,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -956,6 +841,20 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -983,14 +882,14 @@
   
   
   
-    <a href="../../../ACGN/Anime/" class="md-nav__link">
+    <a href="../../../CS/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    ACGN
+    Computer Science
   
 
     
@@ -1044,7 +943,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -1066,14 +965,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1138,10 +1037,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
             
   
   
@@ -1159,8 +1058,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1184,7 +1083,7 @@
   <span class="md-ellipsis">
     
   
-    轮子大家族
+    Overview
   
 
     
@@ -1212,63 +1111,7 @@
   <span class="md-ellipsis">
     
   
-    LaTeX
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Sioyek/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Sioyek
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CachyOS-Recovery/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CachyOS-Recovery
+    LaTeX (VSCode)
   
 
     
@@ -1317,6 +1160,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Sioyek/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sioyek
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA(PicGo)/" class="md-nav__link">
         
   
@@ -1324,7 +1195,7 @@
   <span class="md-ellipsis">
     
   
-    图床搭建(PicGo)
+    PicGo
   
 
     
@@ -1352,7 +1223,7 @@
   <span class="md-ellipsis">
     
   
-    Stata18安装
+    Stata 18
   
 
     
@@ -1389,7 +1260,7 @@
   <span class="md-ellipsis">
     
   
-    Python环境安装和配置
+    Python Environment
   
 
     
@@ -1407,7 +1278,7 @@
   <span class="md-ellipsis">
     
   
-    Python环境安装和配置
+    Python Environment
   
 
     
@@ -1448,7 +1319,7 @@
   <a href="#pip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        pip配置
+        pip 配置
       
     </span>
   </a>
@@ -1470,7 +1341,7 @@
   <a href="#pycharm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        安装Pycharm
+        安装 Pycharm
       
     </span>
   </a>
@@ -1481,12 +1352,12 @@
   <a href="#anaconda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        安装Anaconda
+        安装 Anaconda
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="安装Anaconda">
+    <nav class="md-nav" aria-label="安装 Anaconda">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1539,7 +1410,7 @@
   <span class="md-ellipsis">
     
   
-    Python的项目管理
+    Python Projects
   
 
     
@@ -1567,7 +1438,7 @@
   <span class="md-ellipsis">
     
   
-    Rust环境安装
+    Rust
   
 
     
@@ -1588,14 +1459,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8NixOS%E7%8E%A9%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/" class="md-nav__link">
+      <a href="../CachyOS-Recovery/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    如何使用NixOS玩明日方舟
+    CachyOS Recovery
   
 
     
@@ -1623,7 +1494,35 @@
   <span class="md-ellipsis">
     
   
-    CachyOS-YYS
+    CachyOS YYS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8NixOS%E7%8E%A9%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NixOS Arknights
   
 
     
@@ -1669,6 +1568,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1696,7 +1599,7 @@
   <span class="md-ellipsis">
     
   
-    Technology
+    WebSource
   
 
     
@@ -1708,6 +1611,96 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
   
 
       
@@ -1784,7 +1777,7 @@
   <a href="#pip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        pip配置
+        pip 配置
       
     </span>
   </a>
@@ -1806,7 +1799,7 @@
   <a href="#pycharm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        安装Pycharm
+        安装 Pycharm
       
     </span>
   </a>
@@ -1817,12 +1810,12 @@
   <a href="#anaconda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        安装Anaconda
+        安装 Anaconda
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="安装Anaconda">
+    <nav class="md-nav" aria-label="安装 Anaconda">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1880,7 +1873,7 @@
       <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
-    Stathelper
+    Home
   </span>
 
       </a>
@@ -1933,7 +1926,7 @@
                 
                   
   
-    <a href="https://github.com/Eurekaimer/Stathelper/edit/main/docs/Tech/Wheels/Python环境安装和配置.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/Tech/Wheels/Python环境安装和配置.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -1942,26 +1935,26 @@
     
       
     
-    <a href="https://github.com/Eurekaimer/Stathelper/raw/main/docs/Tech/Wheels/Python环境安装和配置.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/Tech/Wheels/Python环境安装和配置.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
   
 
 
-<h1 id="python">Python环境安装和配置<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h1>
+<h1 id="python">Python 环境安装和配置<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h1>
 <ul>
-<li>Python本体安装</li>
-<li>pip配置</li>
-<li>安装Pycharm</li>
-<li>VSC的Python环境配置</li>
-<li>Anaconda安装与配置</li>
+<li>Python 本体安装</li>
+<li>pip 配置</li>
+<li>安装 Pycharm</li>
+<li>VSC 的 Python 环境配置</li>
+<li>Anaconda 安装与配置</li>
 </ul>
 <h2 id="_1">本体安装<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
 <p>直接去<a href="https://www.python.org/downloads/">官方网站</a>下载，如果速度偏慢可以使用国内镜像</p>
-<p>测试安装成功方法：<code>win</code>+<code>R</code> type <code>cmd</code> 进入shell type <code>python</code> 若是返回版本则说明安装成功</p>
-<h2 id="pip">pip配置<a class="headerlink" href="#pip" title="Permanent link">⚓︎</a></h2>
-<p>换为国内镜像源(可以永久，在需要使用官方时再临时换源)</p>
+<p>测试安装成功方法：<code>win</code>+<code>R</code> type <code>cmd</code> 进入 shell type <code>python</code> 若是返回版本则说明安装成功</p>
+<h2 id="pip">pip 配置<a class="headerlink" href="#pip" title="Permanent link">⚓︎</a></h2>
+<p>换为国内镜像源（可以永久，在需要使用官方时再临时换源）</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span>https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre></div>
 <p>检测换源成功与否</p>
@@ -1971,26 +1964,26 @@
 <div class="highlight"><pre><span></span><code>global.index-url=&#39;https://pypi.tuna.tsinghua.edu.cn/simple&#39;
 </code></pre></div>
 <h2 id="vscode">Vscode<a class="headerlink" href="#vscode" title="Permanent link">⚓︎</a></h2>
-<p>我比较倾向于在Vscode中使用Python，只需要在扩展栏中输入Python然后选择安装数量最大的那个(起码现在是)扩展，即可使用</p>
-<h2 id="pycharm">安装Pycharm<a class="headerlink" href="#pycharm" title="Permanent link">⚓︎</a></h2>
+<p>我比较倾向于在 Vscode 中使用 Python，只需要在扩展栏中输入 Python 然后选择安装数量最大的那个（起码现在是）扩展，即可使用</p>
+<h2 id="pycharm">安装 Pycharm<a class="headerlink" href="#pycharm" title="Permanent link">⚓︎</a></h2>
 <blockquote>
-<p>我高中比较喜欢的IDE，但是后面因为VSCODE的强大而弃用，但是时常有人问我怎么装干脆也写一下</p>
+<p>我高中比较喜欢的 IDE，但是后面因为 VSCODE 的强大而弃用，但是时常有人问我怎么装干脆也写一下</p>
 </blockquote>
 <p>直接去官网下载<a href="https://www.jetbrains.com/pycharm/download/?section=windows">免费的</a>，后续的步骤只是阅读英文</p>
 <blockquote>
-<p>即使你完全不懂电脑也尽量不要使用金币找人帮忙下载这种免费软件，请你上网(贴吧、小红书、知乎、CSDN、博客园)寻找解决方案或者求助，安装从来不是很复杂的事情！</p>
+<p>即使你完全不懂电脑也尽量不要使用金币找人帮忙下载这种免费软件，请你上网（贴吧、小红书、知乎、CSDN、博客园）寻找解决方案或者求助，安装从来不是很复杂的事情！</p>
 </blockquote>
-<h2 id="anaconda">安装Anaconda<a class="headerlink" href="#anaconda" title="Permanent link">⚓︎</a></h2>
+<h2 id="anaconda">安装 Anaconda<a class="headerlink" href="#anaconda" title="Permanent link">⚓︎</a></h2>
 <blockquote>
 <p>可以参考博客园的这一<a href="https://www.cnblogs.com/ajianbeyourself/p/17654155.html">教程</a></p>
 </blockquote>
 <h3 id="_2">基本的安装和注意事项<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
-<p>先安装Anaconda或者Miniconda：<a href="https://www.anaconda.com/download">官网链接</a> 速度较慢可以使用<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华源</a></p>
+<p>先安装 Anaconda 或者 Miniconda：<a href="https://www.anaconda.com/download">官网链接</a> 速度较慢可以使用<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华源</a></p>
 <p>下载前可以先按时间排序选择最新的版本，不要下载一些很古老的版本</p>
-<p>下载安装过程中可以勾选一下Recommend的选项(能看懂意思当然自己定义最好)</p>
-<p>检验方式是在<code>Anaconda Powershell</code>中 type <code>conda --version</code></p>
-<p>因为新版Anaconda不建议你直接将Anaconda添加入PATH变量(出于自我保护的目的)，因此如果你想要添加到PATH可能需要自己设置</p>
-<p>在PATH中加入以下三条即可：</p>
+<p>下载安装过程中可以勾选一下 Recommend 的选项（能看懂意思当然自己定义最好）</p>
+<p>检验方式是在 <code>Anaconda Powershell</code> 中 type <code>conda --version</code></p>
+<p>因为新版 Anaconda 不建议你直接将 Anaconda 添加入 PATH 变量（出于自我保护的目的），因此如果你想要添加到 PATH 可能需要自己设置</p>
+<p>在 PATH 中加入以下三条即可：</p>
 <div class="highlight"><pre><span></span><code>#文件路径取决于你的Anaconda安装在哪
 D:\Anaconda
 D:\Anaconda\Scripts
@@ -1998,7 +1991,7 @@ D:\Anaconda\Library\bin
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">验证效果</p>
-<p>如果添加到PATH你可以直接在cmd或是终端中使用conda --version以及conda相关的命令，如果不添加你可以在Anaconda Powershell中使用，官方应该是不建议直接添加到PATH的，为了隔离环境和安全性的考虑笔者也不建议这么做，但是如果是新手可以考虑直接添加，日后删除即可。</p>
+<p>如果添加到 PATH 你可以直接在 cmd 或是终端中使用 conda --version 以及 conda 相关的命令，如果不添加你可以在 Anaconda Powershell 中使用，官方应该是不建议直接添加到 PATH 的，为了隔离环境和安全性的考虑笔者也不建议这么做，但是如果是新手可以考虑直接添加，日后删除即可。</p>
 </div>
 <h3 id="_3">相关的基本命令<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code>#换源
@@ -2085,10 +2078,10 @@ python -m ipykernel install --user --name my_data_env --display-name &quot;My Da
       </main>
       
         <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      
-      <div class="md-footer-copyright">
-        <div class="md-copyright">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -2102,21 +2095,21 @@ python -m ipykernel install --user --name my_data_env --display-name &quot;My Da
     </a>
   
 </div>
-      </div>
+    </div>
 
-      <div class="footer-center-box">
-          <div class="runtime-info">
-              <span>本站已运行</span>
-              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
-              <span>天</span>
-          </div>
-          <div class="icp-info">
-              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
-          </div>
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
       </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
 
+    
       
-        
 <div class="md-social">
   
     
@@ -2160,59 +2153,58 @@ python -m ipykernel install --user --name my_data_env --display-name &quot;My Da
     </a>
   
 </div>
-      
+    
 
-    </div>
   </div>
+</div>
 
-  <style>
-    .footer-center-box {
-        flex: 1; 
-        text-align: center; 
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin: 0 1rem;
-    }
-    .runtime-info {
-        color: #8C495A; 
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-    }
-    .icp-info a {
-        color: inherit;
-        opacity: 0.7;
-        font-size: 0.85rem;
-        text-decoration: none;
-    }
-    .icp-info a:hover {
-        opacity: 1;
-        color: var(--md-accent-fg-color);
-    }
-    @media (max-width: 76.1875em) {
-        .md-footer-meta__inner {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-    }
-  </style>
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
 
-  <script>
-    (function() {
-        var start = new Date('2024/10/28'); /* 建站日期 */
-        var now = new Date(); 
-        var diff = now - start;
-        
-        /* 直接算出总天数，取整 */
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        
-        var el = document.getElementById('run_days');
-        if(el) {
-            el.innerHTML = days;
-        }
-    })();
-  </script>
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -2232,6 +2224,10 @@ python -m ipykernel install --user --name my_data_env --display-name &quot;My Da
       <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/videos.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

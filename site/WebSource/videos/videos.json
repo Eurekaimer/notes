@@ -1,0 +1,59 @@
+[
+  {
+    "id": "uncle-bob-software-ai",
+    "title": "LIVE: Uncle Bob on Software Fundamentals in the Age of AI",
+    "platform": "youtube",
+    "video_id": "zcLPGC-tvgk",
+    "url": "https://www.youtube.com/watch?v=zcLPGC-tvgk",
+    "channel": "Matt Pocock",
+    "published_at": "2026-08-19",
+    "description": "Matt Pocock 对话 Robert C. Martin：在使用 AI 编程智能体时，软件工程基础为什么仍然重要。",
+    "tags": ["software-engineering", "ai", "agent", "interview"]
+  },
+  {
+    "id": "two-programming-languages",
+    "title": "You only need 2 programming languages",
+    "platform": "youtube",
+    "video_id": "9PKSKMsFi2E",
+    "url": "https://www.youtube.com/watch?v=9PKSKMsFi2E",
+    "channel": "dacctal",
+    "published_at": "2026-09-16",
+    "description": "围绕 C 与 Lua 的语言选择与组合，讨论编程工具的取舍。",
+    "tags": ["programming-language", "c", "lua", "discussion"]
+  },
+  {
+    "id": "mit-6824-introduction",
+    "title": "Lecture 1: Introduction",
+    "platform": "youtube",
+    "video_id": "cQP8WApzIQQ",
+    "url": "https://www.youtube.com/watch?v=cQP8WApzIQQ",
+    "channel": "MIT 6.824: Distributed Systems",
+    "published_at": "2020-02-06",
+    "description": "MIT 6.824 分布式系统课程（2020 年春季）第一讲：Introduction。",
+    "tags": ["systems", "distributed-system", "lecture", "reference"]
+  },
+  {
+    "id": "nvidia-ming-yu-liu-cosmos",
+    "title": "对英伟达研究副总裁刘洺堉的4小时访谈：Cosmos 3、世界模型、武术、黄仁勋影响我的，和你不需要击败所有对手",
+    "platform": "bilibili",
+    "video_id": "BV1fmgj66EtD",
+    "thumbnail": "https://i0.hdslb.com/bfs/archive/a453c103223d8530efe58d1f44c106d42eaa6ae7.jpg",
+    "url": "https://www.bilibili.com/video/BV1fmgj66EtD/",
+    "channel": "张小珺商业访谈录",
+    "published_at": "2026-08-13",
+    "description": "围绕 Cosmos、世界模型与物理 AI，聊英伟达的研究方向、组织哲学和竞争观。",
+    "tags": ["ai", "world-model", "robotics", "interview", "podcast"]
+  },
+  {
+    "id": "tianyin-xu-systems-agent-infra",
+    "title": "徐天音：系统，UIUC，教授，最佳论文，Agent Infra，云计算，形式化验证，容错，纯粹",
+    "platform": "bilibili",
+    "video_id": "BV1F1846pEYT",
+    "thumbnail": "https://i2.hdslb.com/bfs/archive/3410fb9850a77adbb0262c8a0c04fb360daf5c77.jpg",
+    "url": "https://www.bilibili.com/video/BV1F1846pEYT/",
+    "channel": "月球大叔",
+    "published_at": "2026-08-23",
+    "description": "与 UIUC 教授徐天音聊系统研究、Agent 基础设施、云计算、形式化验证与容错。",
+    "tags": ["systems", "ai-infra", "agent", "formal-verification", "interview", "podcast"]
+  }
+]

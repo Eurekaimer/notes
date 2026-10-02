@@ -1,0 +1,3218 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My Learning Note Repository">
+      
+      
+        <meta name="author" content="Eurekaimer">
+      
+      
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/Statistics/OperationsResearch/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E4%B8%8E%E7%9B%AE%E6%A0%87%E8%A7%84%E5%88%92/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../%E6%97%A0%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../images/xiaoju.jpg">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+      
+        <title>线性规划与目标规划 - Notes</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--tldr:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M224.3-2.5c19.8-11.4%2044.2-11.4%2064%200L464.2%2099c19.8%2011.4%2032%2032.6%2032%2055.4v203c0%2022.9-12.2%2044-32%2055.4L288.3%20514.5a64.16%2064.16%200%200%201-64%200L48.5%20413c-19.8-11.4-32-32.6-32-55.4v-203c0-22.9%2012.2-44%2032-55.4zm207.8%20360V191.4l-143.8%2083v166.1z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/key.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/videos.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              线性规划与目标规划
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="查找">
+  <button type="button" class="md-search__button">
+    查找
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Analysis/" class="md-tabs__link">
+          
+  
+  Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Probability/" class="md-tabs__link">
+          
+  
+  Probability
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Statistics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CS/" class="md-tabs__link">
+          
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Tech/" class="md-tabs__link">
+          
+  
+  Tech
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../WebSource/" class="md-tabs__link">
+          
+  
+  WebSource
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../friends-link/" class="md-tabs__link">
+        
+  
+  Friends Link
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
+
+    </a>
+    Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Analysis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Probability/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probability
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../MathematicalStatistics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mathematical Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathematicalStatistics/Assets/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathematicalStatistics/Assets/%E7%82%B9%E4%BC%B0%E8%AE%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    点估计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathematicalStatistics/Assets/%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E2%80%94%E2%80%94%E6%98%BE%E8%91%97%E6%80%A7%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    假设检验——显著性检验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathematicalStatistics/Assets/25%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E6%9C%9F%E4%B8%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    25 数理统计期中
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../RegressionAnalysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regression Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regression Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RegressionAnalysis/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%95%E8%AE%BA-%E7%8E%8B%E6%9D%BE%E6%A1%82/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章 引论（王松桂）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations Research
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations Research
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性规划与目标规划
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性规划与目标规划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划与单纯形法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="线性规划与单纯形法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划问题及其数学模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划问题的几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法的计算步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法的进一步讨论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法的矩阵描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        改进单纯形法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶理论和灵敏度分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对偶理论和灵敏度分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题的提出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划的对偶理论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题的经济解释——影子价格
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶单纯形法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        灵敏度分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%97%A0%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无约束问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STAT260/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    STAT260
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../CS/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Computer Science
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebSource/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSource
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends-link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Friends Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划与单纯形法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="线性规划与单纯形法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划问题及其数学模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划问题的几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法的计算步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法的进一步讨论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形法的矩阵描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        改进单纯形法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶理论和灵敏度分析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="对偶理论和灵敏度分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题的提出
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性规划的对偶理论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶问题的经济解释——影子价格
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶单纯形法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        灵敏度分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Statistics
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Operations Research
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/Statistics/OperationsResearch/线性规划与目标规划.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/Statistics/OperationsResearch/线性规划与目标规划.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">线性规划与目标规划<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="_2">线性规划与单纯形法<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>重要性</th>
+<th>描述和注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单纯形表（单纯形法）</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>整个线性规划问题的核心，剩余的方法都建立在这之上</td>
+</tr>
+<tr>
+<td>对偶问题转换</td>
+<td>⭐⭐⭐</td>
+<td>注意变量约束和条件约束的符号变化即可</td>
+</tr>
+<tr>
+<td>利用对偶原理快速计算最优解</td>
+<td>⭐⭐⭐⭐</td>
+<td>主要掌握对偶定理和互补松弛性</td>
+</tr>
+<tr>
+<td>对偶单纯形法</td>
+<td>⭐⭐⭐⭐</td>
+<td>与单纯形表极其类似所以前面掌握的好会比较容易掌握</td>
+</tr>
+<tr>
+<td>灵敏度分析</td>
+<td>⭐⭐⭐</td>
+<td>改变原本的一些参数判断最优解的变化</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">线性规划问题及其数学模型<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">目标</p>
+<ol>
+<li>了解线性规划模型的提出和背景</li>
+<li>能够使用图解法求解线性规划问题</li>
+</ol>
+</div>
+<p>参考资料：<a href="https://www.zhihu.com/question/26840528/answer/2991662034">如何理解线性规划中的单纯形法和单纯形表？</a></p>
+<h4 id="_4">问题提出<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h4>
+<p>简单来说就是约束条件为线性函数，并且想要求解某个函数（目标函数）的最值的优化问题，从实际问题中抽象出线性规划模型。</p>
+<h4 id="_5">图解法<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h4>
+<p>非常的容易，实际上就是利用图形解决二维的线性规划问题，我们曾经在<strong>小学二年级</strong>学习过这种方法。</p>
+<p>主要的聚焦点在于这个简单的二维情形给出的一些启发：</p>
+<ul>
+<li>解的情况<ul>
+<li>无穷多最优解</li>
+<li>无界解</li>
+<li>无可行解</li>
+<li>唯一最优解</li>
+</ul>
+</li>
+</ul>
+<h4 id="_6">线性规划问题的标准形式<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h4>
+<p>可以使用向量表示也可以使用矩阵</p>
+<p>将多种情况化归为简单的一种情况讨论是数学上常用的思想，我们在这里也可以将多种情况都归结于标准形式的线性规划问题的解决：</p>
+<ul>
+<li>目标函数（最大化）<ul>
+<li>如果是最小化，则加负号即可</li>
+</ul>
+</li>
+<li>约束条件（不等式）<ul>
+<li>如果是 <span class="arithmatex">\(\leqslant\)</span> 形式，可以采取在左边加入松弛变量的方法</li>
+<li>相反是 <span class="arithmatex">\(\geqslant\)</span> 形式，则采用在左边减去一个松弛变量的做法</li>
+<li>如果是无约束的变量可以使用两个非负变量相减代替</li>
+</ul>
+</li>
+</ul>
+<h4 id="_7">线性规划问题的解概念<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">可行解</p>
+<p>满足约束条件的解称为可行解，使目标函数达到最大值的可行解称为最优解</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">基，基向量，基变量</p>
+<p><span class="arithmatex">\(B\)</span> 是系数矩阵 <span class="arithmatex">\(A\)</span> 中的 <span class="arithmatex">\(m\times m\)</span> 阶非奇异子矩阵 (<span class="arithmatex">\(\lvert B \rvert\neq 0\)</span>)，则称 <span class="arithmatex">\(B\)</span> 为基</p>
+<div class="arithmatex">\[ B=\begin{pmatrix}
+a_{11}&amp;a_{12}\dots&amp;a_{1m} \\
+a_{21}&amp;a_{22}\dots&amp;a_{2m} \\
+\vdots \\
+a_{m1}&amp;a_{m2}\dots&amp;a_{mm}
+\end{pmatrix}=\left( P_{1},P_{2}\dots P_{m} \right) \]</div>
+<p><span class="arithmatex">\(P_{j}(j=1,2\dots,m)\)</span> 为基向量
+<span class="arithmatex">\(x_{j}(j=1,2\dots,m)\)</span> 为基变量</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">基解</p>
+<p><span class="arithmatex">\(m\)</span> 个方程，<span class="arithmatex">\(n\)</span> 个变量 (n&gt;m)，选择其中 <span class="arithmatex">\(\binom{n}{n-m}\)</span> 个为 0，求出基解:max=<span class="arithmatex">\(\binom{n}{m}\)</span></p>
+</div>
+<p>由于选取的矩阵是非异阵所以满秩，也就是线性无关</p>
+<div class="admonition note">
+<p class="admonition-title">基可行解，可行基</p>
+<p>满足非负条件的基解也称为基可行解，对应基可行解的基，称为可行基</p>
+</div>
+<h3 id="_8">线性规划问题的几何意义<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">目标</p>
+<ol>
+<li>了解解的概念</li>
+<li>理解部分基本定理</li>
+<li>理解单纯形法迭代原理</li>
+</ol>
+</div>
+<h4 id="_9">基本概念<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>凸集</li>
+<li>凸组合</li>
+<li>顶点</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">利用顶点的定义</p>
+<p>顶点的定义是无法用凸集中不同两点进行线性组合得到，本节的部分定理用到了这一定义进行反证。</p>
+</div>
+<h4 id="_10">几个定理<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Theorem 1</p>
+<p>若线性规划问题存在可行域，则可行域为凸集</p>
+</div>
+<p><code>Proof  is easy</code></p>
+<div class="admonition info">
+<p class="admonition-title">Lemma 1</p>
+<p>线性规划问题的可行解为基可行解<span class="arithmatex">\(\iff\)</span><span class="arithmatex">\(X\)</span>的正分量对应的系数列向量是线性无关的</p>
+</div>
+<p><code>Proof.</code></p>
+<p><span class="arithmatex">\(\implies\)</span>
+由定义可以知道，基可行解的基变量对应系数列向量组成一个基(线性无关的向量组的子集仍然线性无关)，基是系数矩阵的满秩子矩阵，所以各系数列向量必线性独立</p>
+<p><span class="arithmatex">\(\impliedby\)</span>
+不妨设出k个正分量且线性独立，必有<span class="arithmatex">\(k\leqslant m\)</span>，相等时构成基，显然成立，否则可以使用基扩张定理构造出新的基，使其为X</p>
+<div class="admonition note">
+<p class="admonition-title">Theorem 2</p>
+<p>线性规划问题的基可行解<span class="arithmatex">\(X\)</span>对应于可行域<span class="arithmatex">\(D\)</span>的顶点</p>
+</div>
+<p><code>Proof.</code></p>
+<p>反证法，转而证明非可行域顶点<span class="arithmatex">\(\iff\)</span>非基可行解</p>
+<p><span class="arithmatex">\(\impliedby\)</span>
+构造<span class="arithmatex">\(X=\left( X_{1},X_{2},\dots,X_{k},0,\dots,0 \right)\)</span>，前k个系数列向量线性相关(利用引理)，得到一个零元，利用零元构造两个可行解，对其进行线性表出，证明X不是顶点</p>
+<p><span class="arithmatex">\(\implies\)</span>
+利用不是顶点，就可以用顶点线性表出，构造出线性相关即可</p>
+<div class="admonition note">
+<p class="admonition-title">Lemma 2</p>
+<p>若<span class="arithmatex">\(K\)</span>是有界闭凸集，则任何一点<span class="arithmatex">\(X\in K\)</span>可表示为<span class="arithmatex">\(K\)</span>的顶点的凸组合</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Theorem 3</p>
+<p>若是可行域有界，线性规划问题的目标函数一定可以在可行域顶点上达到最优</p>
+</div>
+<p>换言之，若线性规划问题有最优解，一定存在一个基可行解为最优解</p>
+<p>假设最优解，利用定理2，反证不是顶点，构造<span class="arithmatex">\(X_{0}+\mu\delta,X_{0}-\mu\delta\)</span>，得到无穷多个最优解(那么可以移动至顶点，有界性保证了一定可以取到) </p>
+<div class="admonition tldr">
+<p class="admonition-title">基本结论</p>
+<p>线性规划问题所有的可行解构成一个凸集，或者无界域，有限多个顶点，每个基可行解对应可行域的一个顶点
+若是有最优解，一定可以在顶点上得到，而顶点数目有限那么全部遍历后一定就可以得到最优解，但是如果<span class="arithmatex">\(m,n\)</span>较大，全部遍历是不太现实的，所以提出了单纯形法
+如果在一个顶点上的值优于周围顶点，一定是最优解</p>
+</div>
+<h3 id="_11">单纯形法<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">目标</p>
+<ol>
+<li>掌握单纯形法的计算步骤</li>
+<li>利用单纯形法判别解的形式</li>
+<li>掌握单纯形法的几种变形</li>
+<li>了解修正单纯形法的改进</li>
+</ol>
+<p>1947年在美国五角大楼工作，<strong>Dantzig</strong>常常被空军要求去解实际的计划问题：分配空军的人力、经费、飞机和其它资 源。他给这些问题建立了线性规划模型，并提出著名的单纯形法(Simplex Method)。</p>
+</div>
+<h4 id="_12">粗糙过程<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h4>
+<p><strong>基本思路</strong>：从线性方程组中找出一个个单纯形，每个单纯形可以求得一组解，然后判断该解使目标函数变大或变小，决定下一步的单纯形，也就是迭代的过程，直到实现了最大值或最小值为止.</p>
+<p>要想更好的掌握这种方法最好是选取两三个例子自己进行迭代，这里只是给出普通的<strong>理论方法</strong></p>
+<ol>
+<li>先化为标准形式</li>
+<li>找出一组基(base，通常为单位阵)，用非基变量表示基变量</li>
+<li>将目标函数化为非基变量的组合</li>
+<li>取非基变量为0，得到一个基可行解</li>
+<li>判定：如果目标函数中还有正系数的非基变量就可以更换(如果是求最大值)</li>
+<li>迭代4,5</li>
+</ol>
+<p>这里就涉及到换入换出变量的确定问题</p>
+<ul>
+<li>选择正系数最大的非基变量为换入变量(直观上这使得增速最大)，然后找出换出变量</li>
+<li>让非基变量中的不换入变量为0，就可以得出一个用换入变量表示原基变量的线性方程组，为了满足非负的要求，选取先接触到极限也就是0的那个变量</li>
+</ul>
+<p>确定换入换出变量后就可以重新构建方程组和基变量了，再使所谓的非基变量为0(重复4)，得到另一个基可行解，如果非基变量的系数还是正的，说明可以继续迭代，重复上述过程，确认换入换出变量，然后取0，得到新的基可行解，当所有的非基变量系数为负数时，说明达到了最大值.</p>
+<h4 id="_13">初始基可行解的确定<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h4>
+<p>对于上面给出的做法，我们发现首先要确定初始的基可行解，方法如下
+1. 直接观察
+2. 加入松弛变量
+3. 加入非负人工变量</p>
+<div class="admonition info">
+<p class="admonition-title">加入人工变量的方法</p>
+<p>实际上是为了构造出类似松弛变量那样的单位矩阵，采用人造基的方法，可以使用大<span class="arithmatex">\(M\)</span>法，<span class="arithmatex">\(M\)</span>是相当大的正数(可以理解为正无穷),对人工变量起到惩罚的作用,逼迫辅助线性规划的最优解中人工变量均为0</p>
+</div>
+<p>这里给出一个矩阵方法的简单推导：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+Ax &amp; =b \\
+\left[ B \ N \right] \left[ \begin{matrix}
+x_{B} \\
+x_{N}
+\end{matrix} \right] &amp; =Bx_{B}+Nx_{N}=b \\
+x_{B} &amp; =B^{-1}b-B^{-1}Nx_{N}   \\
+f &amp; =cx=f_{0}-\sum\limits_{j\in R}\left( z_{j}-c_{j} \right) x_{j}
+\end{aligned}
+\]</div>
+<p>还需要一个单纯形乘子的定义<span class="arithmatex">\(w=c_{B}B^{-1},z_{i}=wp_{i}\)</span></p>
+<h4 id="_14">最优性检验与解的判别<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h4>
+<p>由于线性规划问题求解过程中解的多样性，我们需要建立解的判别准则</p>
+<div class="arithmatex">\[
+\begin{aligned}
+z= &amp; \sum\limits_{j=1}^{n} c_{j}x_{j}=\sum\limits_{j=1}^{m} c_{j}x_{j}+\sum\limits_{i=m+1}^{n} c_{i}x_{i} \\
+ &amp; =\sum\limits_{i=1}^{m} c_{i}b_{i}' +\sum\limits_{j=m+1}^{n} \left( c_{j}-\sum\limits_{i=1}^{m} c_{i}a_{ij}' \right) x_{j} \\
+x_{i} &amp; =b_{i}'-\sum\limits_{j=m+1}^{n}a_{ij}' x_{j} \ i=1,2\dots m \\
+ z&amp; =z_{0} +\sum\limits_{j=m+1}^{n }(c_{j}-z_{j})x_{j}  \\
+\sigma_{j} &amp; =c_{j}-z_{j} \\
+z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
+\end{aligned}
+\]</div>
+<ol>
+<li>最优解的判别定理</li>
+</ol>
+<p>由此可得<strong>最优解判定定理</strong>，若<span class="arithmatex">\(X_{0}\)</span>代表一个基可行解，而且对于一切的<span class="arithmatex">\(j=m+1,\dots,n，\sigma_{j}\leqslant 0\)</span>，则称为最优解，其中<span class="arithmatex">\(\sigma_{j}\)</span>为检验数.</p>
+<ol>
+<li>无穷多最优解判别定理</li>
+</ol>
+<p>同样符合1中的条件，检验数均非正，如果存在某个非基变量的检验数为0，那么线性规划问题有无穷多最优解</p>
+<ol>
+<li>无界解判别定理</li>
+</ol>
+<h4 id="_15">基变换<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h4>
+<p>针对初始基可行解不是最优解也不能判别无界时，需要找新的基可行解</p>
+<p>方法是从原本的可行解基中更换一个列向量，并且保证线性独立，得到新的可行基，称为基变换.</p>
+<p>涉及到前面的一些规则再次阐述，尤其是<span class="arithmatex">\(\theta\)</span>规则的部分，选择最小的换出</p>
+<h4 id="_16">迭代(旋转)<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h4>
+<p>由于原本是单位阵，那么逆阵应该也是单位阵，进行主元消去恰好是进行逆变换也就是乘上逆矩阵的做法，得到的下一个矩阵也是单位阵，于是可以一直使用主元消去的方法.</p>
+<h3 id="_17">单纯形法的计算步骤<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h3>
+<p>综合上方的矩阵做法和理论推导，将运算简化为表格计算，得到下方的单纯形表</p>
+<h4 id="_18">单纯形表<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h4>
+<p>为了便于理解计算关系，设计一种表用于计算，称为单纯形表，功能与增广矩阵相似，可以将线性约束关系与目标函数组成<span class="arithmatex">\(m+1 \times n+1\)</span>的方程组</p>
+<p>给出一个矩阵的表示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">f</th>
+<th style="text-align: center;"><span class="arithmatex">\(x_{B}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x_{N}\)</span></th>
+<th style="text-align: center;">右端</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(x_{B}\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(I_{m}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(B^{-1}N\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(B^{-1}b\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">f</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(c_{B}B^{-1}N-c_{N}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(c_{B}B^{-1}b\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>这是一种展开的表示方法，其中第一行不是表的一部分，只是表头</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+-z &amp; x_{1} &amp; x_{2}\dots  &amp; x_{m} &amp; x_{m+1} &amp; \dots  &amp; x_{n} &amp; b \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; a_{1,m+1} &amp; \dots &amp; a_{1n} &amp; b_{1} \\
+\vdots \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; a_{m,m+1} &amp; \dots &amp; a_{mn} &amp; b_{m} \\
+1 &amp; c_{1} &amp; \dots &amp; c_{m} &amp; c_{m+1}   &amp; \dots &amp; c_{n} &amp; 0
+\end{pmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{pmatrix}
+-z &amp; x_{1} &amp; x_{2}\dots  &amp; x_{m} &amp; x_{m+1} &amp; \dots  &amp; x_{n} &amp; b \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; a_{1,m+1} &amp; \dots &amp; a_{1n} &amp; b_{1} \\
+\vdots \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; a_{m,m+1} &amp; \dots &amp; a_{mn} &amp; b_{m} \\
+1 &amp;0&amp; \dots &amp; 0 &amp; c_{m+1}-\sum\limits_{i=1}^{m} c_{i}a_{i,m+1}   &amp; \dots &amp; c_{n}-\sum\limits_{i=1}^{m} c_{i}a_{i,n} &amp; -\sum\limits_{i=1}^{m} c_{i}b_{i}
+\end{pmatrix}
+\]</div>
+<h4 id="_19">计算步骤<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h4>
+<p>第二张表称为初始单纯形表，每迭代一次就构造一个新的单纯形表</p>
+<ol>
+<li>先建立初始单纯形表</li>
+<li>检查检验数，如果没有得到最优解，转入下一步</li>
+<li>在检验数为正的列向量中确认最大的为换入向量</li>
+<li>找到出基变量，方法是<span class="arithmatex">\(\theta\)</span>检验法</li>
+<li>高斯消去法得到新的单纯形表</li>
+<li>重复2-5</li>
+</ol>
+<p>只需要一个例子就可以明白了.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(c_{j}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\to\)</span></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(C_{B}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(X_{B}\)</span></td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">x1</td>
+<td style="text-align: center;">x2</td>
+<td style="text-align: center;">x3</td>
+<td style="text-align: center;">x4</td>
+<td style="text-align: center;">x5</td>
+<td style="text-align: center;"><span class="arithmatex">\(\theta\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X4</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X5</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">[4]</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">z</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>可知x2为换入变量，再计算<span class="arithmatex">\(\theta\)</span>，得到最小值是3，它所在行对应的x5是换出变量，所在行和所在列交叉处的[4]称为主元素或枢元素(pivot element)</p>
+<p>利用主元素将所在列变为<span class="arithmatex">\((0,0,1)^{T}\)</span>，然后将<span class="arithmatex">\(x_{2}\to x_{5}\)</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(c_{j}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\to\)</span></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(C_{B}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(X_{B}\)</span></td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">x1</td>
+<td style="text-align: center;">x2</td>
+<td style="text-align: center;">x3</td>
+<td style="text-align: center;">x4</td>
+<td style="text-align: center;">x5</td>
+<td style="text-align: center;"><span class="arithmatex">\(\theta\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">[1]</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(-\frac{1}{2}\)</span></td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X4</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">X2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">z</td>
+<td style="text-align: center;">-9</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(-\frac{3}{4}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>发现有<span class="arithmatex">\(c_{1}-z_{1}=2&gt;0\)</span>，说明x1为换入变量，换出变量是x3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(c_{j}\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\to\)</span></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(C_{B}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(X_{B}\)</span></td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">x1</td>
+<td style="text-align: center;">x2</td>
+<td style="text-align: center;">x3</td>
+<td style="text-align: center;">x4</td>
+<td style="text-align: center;">x5</td>
+<td style="text-align: center;"><span class="arithmatex">\(\theta\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">X1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(-\frac{1}{2}\)</span></td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">[2]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">X2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">z</td>
+<td style="text-align: center;">-13</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{4}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>x5为换入变量，换出变量是x4</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(c_{j}\)</span>   <span class="arithmatex">\(\to\)</span></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(C_{B}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(X_{B}\)</span></td>
+<td style="text-align: center;">b</td>
+<td style="text-align: center;">x1</td>
+<td style="text-align: center;">x2</td>
+<td style="text-align: center;">x3</td>
+<td style="text-align: center;">x4</td>
+<td style="text-align: center;">x5</td>
+<td style="text-align: center;"><span class="arithmatex">\(\theta\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">X1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}4\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-2</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">X2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\frac{1}{8}\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">z</td>
+<td style="text-align: center;">-14</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(-\frac{3}{2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\frac{1}{8}\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_20">单纯形法的进一步讨论<a class="headerlink" href="#_20" title="Permanent link">⚓︎</a></h3>
+<h4 id="_21">人工变量法<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h4>
+<div class="admonition tldr">
+<p class="admonition-title">基本思想</p>
+<p>原本的做法需要依靠加入松弛变量构造出初始的单位阵作为基向量，但是如果不是符合<span class="arithmatex">\(\leqslant\)</span>的方程就无法按照原本的方法进行，这时候可以考虑人工变量法直接加入基变量构造出单位矩阵，仍然得到初始基可行解，但是如果不加以约束，这显然会出现不符合题设的解
++ 由于人工变量是加入原本约束条件的虚拟变量，所以必须要将它们从基变量中逐个替换出来
++ 基变量不再含有非零的人工变量表示有解，反之无可行解</p>
+</div>
+<ol>
+<li>大M法</li>
+</ol>
+<p>思路：如果是求最小值，目标函数中给人工变量赋以很大的系数(惩罚函数)，那么如果要求最小值，就不可能仍然含有人工变量</p>
+<ol>
+<li>两阶段法<ol>
+<li>第一阶段：不考虑原问题是否存在基可行解，加入人工变量，构造仅含人工变量的目标函数和要求实现最小化，如果最小值为0，则说明原问题存在基可行解，可以进行二阶段计算</li>
+<li>第二阶段：第一阶段计算得到的最终表除去人工变量，将目标函数换回原问题的目标函数系数，然后以此作为初始表，启动单纯形法</li>
+</ol>
+</li>
+</ol>
+<h4 id="_22">退化<a class="headerlink" href="#_22" title="Permanent link">⚓︎</a></h4>
+<p>使用最小比值规则确定换出变量时发现存在两个以上相同的最小比值，下一次迭代中将出现一个或者几个基变量等于零，这就出现退化解，这时可以采用一些方法规避循环：“摄动法”，“字典序法”.</p>
+<p>Remark：Bland规则
+1. 选取检验数大于零中下标最小的非基变量为换入变量
+2. 按照最小比值规则计算出现两个以上最小比值选取下标最小(或最大)的基变量为换出变量
+3. 一定要统一规则</p>
+<h4 id="_23">检验数的几种表示形式<a class="headerlink" href="#_23" title="Permanent link">⚓︎</a></h4>
+<p>最大值和最小值选择不同的方向</p>
+<h3 id="_24">单纯形法的矩阵描述<a class="headerlink" href="#_24" title="Permanent link">⚓︎</a></h3>
+<p>在上文已提前给出，在此不再赘述(矩阵描述更加简洁但是可能会更依赖代数功底一些)</p>
+<h3 id="_25">改进单纯形法<a class="headerlink" href="#_25" title="Permanent link">⚓︎</a></h3>
+<p>传统单纯形法的局限性，换基后新的基变量对应的原始矩阵求逆会造成无谓的计算浪费</p>
+<p>求解线性规划问题的关键就是找到<span class="arithmatex">\(B^{-1}\)</span>，如果能简化逆阵计算就可以大大缩短时间，做法也是比较固定的：找到主元素，计算新的向量，左乘得到逆阵后即可化为单位阵.</p>
+<p>也就是将入基的向量化为出基向量的列向量的样子</p>
+<ul>
+<li>锁定主元</li>
+<li>非主元化为零</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">小结</p>
+<p>实际上就是用简单的高斯消去法代替求逆阵的过程，如果是提取阅读了课本或是网上的一些资料可能会发现一开始用的就是改进后的方法.
+笔者前面也是直接按照改进后方法计算和书写，老师的讲义中在3.5提到了这一点，也使用的是这一简单方法</p>
+</div>
+<h4 id="_26">单纯形法的小结<a class="headerlink" href="#_26" title="Permanent link">⚓︎</a></h4>
+<ul>
+<li>变量处理</li>
+<li>约束条件处理</li>
+<li>目标函数</li>
+<li>大M法</li>
+<li>两阶段法</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">大M法</p>
+<p>如果需要使用计算机的机器语言进行求解，大M法中的M不够明确就有可能出现无法正确求解的问题，所以进一步讨论两阶段法，保证过程的明确且唯一。</p>
+</div>
+<h2 id="_27">对偶理论和灵敏度分析<a class="headerlink" href="#_27" title="Permanent link">⚓︎</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">目标</p>
+<ul>
+<li>对偶问题<ul>
+<li>对偶的含义</li>
+<li>对偶问题的一般形式</li>
+</ul>
+</li>
+<li>基本性质<ul>
+<li>单纯形法的矩阵描述</li>
+<li>对偶问题的基本性质</li>
+</ul>
+</li>
+<li>影子价格</li>
+</ul>
+</div>
+<h3 id="_28">对偶问题的提出<a class="headerlink" href="#_28" title="Permanent link">⚓︎</a></h3>
+<p>网课中有一个例子笔者觉得不错，就是以两个公司相互交易的角度，原本是卖方而转换为买方，那么如何获利最大化就是将收购对方公司的资本降到最低，这也就是目标，然后就是对方凭什么让出资源，那么就需要约束，让出所得不低于原有盈利。这也就是经典的生产问题和资源收购问题。</p>
+<p>注意：但是有些问题的对偶问题不一定有比较明确的现实意义，但是只要是线性规划问题一定有它对应的对偶问题。</p>
+<p>简单来说就是最大和最小对偶，大于号和小于号调换，将<span class="arithmatex">\(C\iff b\)</span>，系数矩阵转置(对调一下自变量)，这样就得到了原线性规划问题(LP)的对偶问题(DP)</p>
+<div class="arithmatex">\[
+\begin{aligned}
+max z  &amp; =CX \\
+AX &amp; \leqslant b \\
+X  &amp; \geqslant   0
+\end{aligned}
+\]</div>
+<p>转换为：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+min w  &amp; =b^{T}Y \\
+A^{T}Y &amp; \geqslant C^{T} \\
+Y &amp; \geqslant   0
+\end{aligned}
+\]</div>
+<p>但是这种方程毕竟还是太简单和特殊了，我们最好还是给出对偶问题的一般形式-非对称形式的转化方法</p>
+<p>注：由于对偶问题的对偶问题就是原问题所以可以只掌握最小化或是最大化问题的变化根据不同的原问题选择正推或者逆推进行检验，为了保险起见应当两个都学相互检验。</p>
+<p>理论上都应该转化为标准形式然后再进行对偶问题的转换，但是下面给出了一种直接写出的方法。 </p>
+<div class="admonition tip">
+<p class="admonition-title">关于非对称形式的详细解释</p>
+<p>可以参考中山大学郭老师的<a href="https://www.bilibili.com/list/watchlater?oid=335337529&amp;bvid=BV1Uw411f7WM&amp;spm_id_from=333.788.top_right_bar_window_view_later.content.click&amp;p=5">讲解</a></p>
+</div>
+<h3 id="_29">线性规划的对偶理论<a class="headerlink" href="#_29" title="Permanent link">⚓︎</a></h3>
+<h4 id="_30">转换方法<a class="headerlink" href="#_30" title="Permanent link">⚓︎</a></h4>
+<p>对称的就按照之前的方法进行，如果是不对称的可以将等式分解为两个不等式，再通过加负号的方法转换为单边的不等式约束，然后按对称形式变换关系可写出它的对偶问题(不用那么麻烦直接转置了按照法则对应也可以)</p>
+<ul>
+<li>目标函数符号相反：最大对偶最小，最小对偶最大(非常容易)</li>
+<li>将原本的<span class="arithmatex">\(b\)</span>系数对调目标函数的系数(也非常容易)</li>
+<li>新的对偶问题系数矩阵是原矩阵的转置(同样非常容易)</li>
+<li>下面是唯一具有难度的约束条件和变量的符号转换问题，笔者自己总结了一套规律<ul>
+<li>给出一组对应关系极小化问题对应<span class="arithmatex">\(\geqslant\)</span>，极大化问题对应<span class="arithmatex">\(\leqslant\)</span>，然后再看下面的问题</li>
+<li>先看原问题的约束条件，如果符合上面的对应关系，变量约束为<span class="arithmatex">\(\geqslant 0\)</span>，如果不符合则改为<span class="arithmatex">\(\leqslant 0\)</span>，如果取等就是无约束情况反而简单了</li>
+<li>再看原问题的变量约束，仍然是那条对应关系只不过以0为分界(极小化问题就是非负限制<span class="arithmatex">\(\geqslant 0\)</span>，极大化问题就是非正的限制<span class="arithmatex">\(\leqslant 0\)</span>)，符合的话约束就是<span class="arithmatex">\(\leqslant\)</span>，不符合就是<span class="arithmatex">\(\geqslant\)</span>，无约束实际是最简单的直接取等</li>
+<li>注意：这种对应关系是符合最初的优化生产问题的</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">复杂一点的例子</p>
+<div class="arithmatex">\[\begin{aligned}
+\max -x_{1}+x_{2}&amp;+x_{3}\\
+x_{1}+x_{2}+2x_{3}&amp;\leqslant 25\\
+-x_{1}+2x_{2}-x_{3}&amp;\geqslant 2\\
+x_{1}-x_{2}+x_{3}&amp;=3\\
+x_{1},x_{2}&amp;\geqslant 0
+\end{aligned}\]</div>
+</div>
+<p>根据上面的法则写出对偶问题：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\min 25y_{1}+2y_{2}&amp;+3y_{3}\\
+y_{1}-y_{2}+y_{3}&amp;\geqslant -1\\
+ y_{1}+2y_{2}-y_{3}&amp;\geqslant 1\\
+ 2y_{1}-y_{2}+y_{3}&amp;=1\\
+y_{1}\geqslant 0,y_{2}&amp;\leqslant 0
+\end{aligned}
+\]</div>
+<h4 id="_31">对偶问题的基本性质<a class="headerlink" href="#_31" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>对称性：</li>
+<li>对偶问题的对偶是原问题</li>
+<li>弱对偶性：<strong>每一个问题的可行解的目标函数值都给出对偶问题的目标函数的界</strong></li>
+<li><span class="arithmatex">\(\overline{X}\)</span>为原问题可行解，<span class="arithmatex">\(\overline{Y}\)</span>是对偶问题可行解，<span class="arithmatex">\(C \overline{X}\leqslant \overline{Y}b\)</span></li>
+<li>无界性：</li>
+<li>若是原问题为无界解，则对偶问题无可行解</li>
+<li>最优性：  </li>
+<li><span class="arithmatex">\(C \overline{X}=\overline{Y}b\)</span>，<span class="arithmatex">\(\overline{X},\overline{Y}\)</span>是最优解</li>
+<li>对偶定理：</li>
+<li>两个问题均有可行解</li>
+<li>若原问题有最优解，那么对偶问题也有最优解，且最优解目标函数值相等</li>
+<li><strong>互补松弛性</strong>：很重要，可以很好的简化得到对偶问题最优解的过程</li>
+<li><span class="arithmatex">\(\overline{X},\overline{Y}\)</span>为原问题和对偶问题可行解，<span class="arithmatex">\(\overline{Y}X_{S}=0,Y_{S}\overline{X}=0 \iff  \overline{X},\overline{Y}\)</span>最优解</li>
+<li>以下是从课本(最优化理论与算法-陈宝林)中的摘取(感觉比Slides详细)<ul>
+<li>如果<span class="arithmatex">\(x^{(0)},w^{(0)}\)</span>是原问题和对偶问题的可行解，那么两者均为最优解的充要条件是对于任意的<span class="arithmatex">\(i,j\)</span>，满足</li>
+<li>
+<ol>
+<li>如果<span class="arithmatex">\(x_{j}^{(0)}&gt;0\)</span>，就有<span class="arithmatex">\(w^{(0)}p_{j}=c_{j}\)</span></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>如果<span class="arithmatex">\(w^{(0)}p_{j}&lt;c_{j}\)</span>，<span class="arithmatex">\(x_{j}^{(0)}=0\)</span></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>如果<span class="arithmatex">\(w_{j}^{(0)}&gt;0\)</span>，就有<span class="arithmatex">\(A_{i}x^{(0)}=b_{i}\)</span></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>如果<span class="arithmatex">\(A_{i}x^{(0)}&gt;b_{i}\)</span>，<span class="arithmatex">\(w_{j}^{(0)}=0\)</span></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>原问题检验数与对偶问题解的关系</li>
+</ol>
+<p>补充互补松弛性的应用：
+1. 对偶问题取到最优解中变量如果非零，它所对应的约束条件在原问题中取等；如果取零则忽略
+2. 原问题也是同理，原因是如果没有办法取等那么松弛变量一定大于零</p>
+<h3 id="_32">对偶问题的经济解释——影子价格<a class="headerlink" href="#_32" title="Permanent link">⚓︎</a></h3>
+<p>给出乘子，实际意义应当是其他条件不变的情况下，单位资源变化所引起的目标函数的最优值的变化，本质上是对于具体工厂的具体产品而存在的特殊价格，在完全市场经济条件下，如果某种资源市场价格低于该厂影子价格就可以买进以扩大生产，如果高于企业影子价格则应当卖掉.</p>
+<h3 id="_33">对偶单纯形法<a class="headerlink" href="#_33" title="Permanent link">⚓︎</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">目标</p>
+<ul>
+<li>理解对偶单纯形法的基本思路，与普通的单纯形法对比</li>
+<li>了解对偶单纯形法的计算步骤</li>
+</ul>
+<p>根据对偶问题的对称性，可以这样考虑：若保持对偶问题的解是基可行解，即<span class="arithmatex">\(c_j−C_BB^{-1}P_j \leqslant 0\)</span>，而原问题在非可行解的基础上，通过逐步迭代达到基可行解，这样也得到了最优解。其优点是原问题的初始解不一定是基可行解，可从非基可行解开始迭代.</p>
+</div>
+<p>基本思路：</p>
+<ul>
+<li>满足两条性质：可行性和最优性</li>
+<li>单纯形法：先满足可行性再逐渐逼近最优性</li>
+<li>对偶单纯形法：先满足最优性，再逐渐逼近可行性</li>
+</ul>
+<p>这里的原理还需要了解一下，可以参考胡运权老师书的写法(实际主要就是利用了对偶定理)</p>
+<p><img alt="对偶单纯形法" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/%E5%AF%B9%E5%81%B6%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95.png" /></p>
+<h4 id="_34">计算步骤<a class="headerlink" href="#_34" title="Permanent link">⚓︎</a></h4>
+<ol>
+<li>检验数均小于零-对偶问题可行解</li>
+<li>判断<span class="arithmatex">\(b\)</span>列向量是否全部非负，若是，达到最优，停止迭代，否则进入3</li>
+<li>决定出基变量，选取最小的一个(负值中绝对值最大的一个)</li>
+<li>
+<p>确定换入变量，找到主元素</p>
+</li>
+<li>
+<p>确定出基变量
+找到<span class="arithmatex">\(b\)</span>列中小于零的一行(如果不止一个就选择最小的为出基变量)</p>
+</li>
+<li>确定入基变量
+确定行之后还需要寻找对应行中<span class="arithmatex">\(a_{rj}&lt;0\)</span>的非基变量考虑作为入基变量</li>
+</ol>
+<div class="arithmatex">\[
+\theta=min\left\{ \frac{c_{j}-z_{j}}{a_{rj}}\big|a_{rj}&lt;0 \right\} = \frac{c_{s}-z_{s}}{a_{rs}}
+\]</div>
+<p>注：为什么要找小于 0 的呢，因为换基之后需要化为 1，如果是正数无法改变 <span class="arithmatex">\(b\)</span> 的符号仍然为负相当于没有变化</p>
+<h3 id="_35">灵敏度分析<a class="headerlink" href="#_35" title="Permanent link">⚓︎</a></h3>
+<p>讨论线性规划问题时其中的常数值实际往往是估计值和预测值，那么就会问
+1. 已求得的线性规划问题的最优解有什么变化在系数变化时
+2. 在什么范围变化，最优解不会发生什么变化</p>
+<p>以下也是针对各种线性规划中常量值的变化进行分析讨论</p>
+<h4 id="_36">资源数量变化的分析<a class="headerlink" href="#_36" title="Permanent link">⚓︎</a></h4>
+<p>也就是增加一个矩阵，将变化后的值加到 <span class="arithmatex">\(b\)</span> 列上即可</p>
+<h4 id="c_j">目标函数中价值系数 <span class="arithmatex">\(c_{j}\)</span> 的变化分析<a class="headerlink" href="#c_j" title="Permanent link">⚓︎</a></h4>
+<p>不影响约束增广矩阵，直接在最终的单纯形表里改就可以了，其他的除了检验数应该都不变，也就是只需要重新计算检验数，那么就可以重新迭代。</p>
+<p>如果最优解不变需要检验数仍然小于等于 0，也就是不需要迭代了，只需要进行不等式组求解就可以了。</p>
+<h4 id="a_ij">技术系数 <span class="arithmatex">\(a_{ij}\)</span> 的变化<a class="headerlink" href="#a_ij" title="Permanent link">⚓︎</a></h4>
+<p>两种情况</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span> 的变化带来 <span class="arithmatex">\(B\)</span> 的变化
+过于复杂了，为什么不重做？类似不变化的操作步骤，然后将那一列修正为基向量的 0、1 形式，构造后可能发现可行性和最优性都发生了变化。</li>
+<li><span class="arithmatex">\(A\)</span> 的变化不带来 <span class="arithmatex">\(B\)</span> 的变化
+体现在最终的单纯形表上也就是 <span class="arithmatex">\(B^{-1}A+B^{-1}\Delta A\)</span></li>
+</ul>
+<h4 id="_37">新增变量<a class="headerlink" href="#_37" title="Permanent link">⚓︎</a></h4>
+<p>直接在终表中左乘 <span class="arithmatex">\(B^{-1}\)</span> 和它的系数后加上，但是还需要增加新的基变量，构造新的单位阵</p>
+<h4 id="_38">决定是否继续迭代的总结<a class="headerlink" href="#_38" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>可行性</th>
+<th>最优性</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不满足</td>
+<td>满足</td>
+<td>对偶单纯形法继续迭代</td>
+</tr>
+<tr>
+<td>满足</td>
+<td>不满足</td>
+<td>单纯形法继续迭代</td>
+</tr>
+<tr>
+<td>不满足</td>
+<td>不满足</td>
+<td>引进人工变量，重新计算</td>
+</tr>
+<tr>
+<td>满足</td>
+<td>满足</td>
+<td>最优解不变，停止迭代</td>
+</tr>
+</tbody>
+</table>
+<p>这里需要比较多的练习进行适应，这样才能确保能够快速选择合适的方法进行计算</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 Eurekaimer
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+    </div>
+
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
+      </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
+
+    
+      
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Eurekaimer" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/QQ.png" target="_blank" rel="noopener" title="QQ" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M434.1 420.4c-11.5 1.4-44.9-52.7-44.9-52.7 0 31.3-16.1 72.2-51 101.8 16.8 5.2 54.8 19.2 45.8 34.4-7.3 12.3-125.5 7.9-159.6 4-34.1 3.8-152.3 8.3-159.6-4-9-15.2 28.9-29.2 45.8-34.4-34.9-29.5-51.1-70.4-51.1-101.8 0 0-33.3 54.1-44.9 52.7-5.4-.6-12.4-29.6 9.3-99.7 10.3-33 22-60.5 40.1-105.8C60.9 98 109.2-.1 224.3-.1 338-.1 387.5 96 384.6 214.9c18.1 45.2 29.9 72.9 40.1 105.8 21.8 70.1 14.7 99.1 9.3 99.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/Wechat.jpg" target="_blank" rel="noopener" title="WeChat" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.33.33 0 0 0 .167-.054l1.903-1.114a.86.86 0 0 1 .717-.098 10.2 10.2 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348M5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18m5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.72.72 0 0 1 .598.082l1.584.926a.3.3 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.6.6 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/702046230?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<2507983039@qq.com>" target="_blank" rel="noopener" title="Email 2507983039@qq.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+    
+
+  </div>
+</div>
+
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.expand","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/videos.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mermaid.mjs" type="module"></script>
+      
+    
+  </body>
+</html>

@@ -12,9 +12,13 @@
         <meta name="author" content="Eurekaimer">
       
       
-        <link rel="canonical" href="https://www.eurekaimer.icu/Stathelper/CS/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture9%20%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90/">
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/CS/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Assets/DMML_Lecture9%20%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90/">
       
       
+        <link rel="prev" href="../DMML_Lecture3%20%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/">
+      
+      
+        <link rel="next" href="../DMML_Lecture12%20KNN/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>Chapter 9 判别分析 - Eurekaimer's Digital Garden</title>
+        <title>Chapter 9 判别分析 - Notes</title>
       
     
     
@@ -128,11 +132,11 @@
     
       <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/anime-grid.css">
-    
       <link rel="stylesheet" href="../../../../stylesheets/key.css">
     
       <link rel="stylesheet" href="../../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/videos.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
@@ -177,7 +181,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-header__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
@@ -191,7 +195,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eurekaimer's Digital Garden
+            Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -260,7 +264,7 @@
     
     <div class="md-header__source">
       
-        <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -288,67 +292,10 @@
       <a href="../../../.." class="md-tabs__link">
         
   
-  Stathelper
+  Home
 
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../HDP/" class="md-tabs__link">
-          
-  
-  HDP
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../STAT260/" class="md-tabs__link">
-          
-  
-  STAT260
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../" class="md-tabs__link">
-          
-  
-  CS
-
-        </a>
-      </li>
-    
   
 
       
@@ -364,6 +311,25 @@
           
   
   Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
 
         </a>
       </li>
@@ -397,24 +363,14 @@
   
     
     
-      
-  
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-tabs__link">
+        <a href="../../../../Statistics/" class="md-tabs__link">
           
   
-  Boring
+  Statistics
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -423,14 +379,16 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../ACGN/Anime/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
           
   
-  ACGN
+  Computer Science
 
         </a>
       </li>
@@ -482,6 +440,51 @@
   
   
     <li class="md-tabs__item">
+      <a href="../../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../../../../friends-link/" class="md-tabs__link">
         
   
@@ -520,17 +523,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Eurekaimer&#x27;s Digital Garden" class="md-nav__button md-logo" aria-label="Eurekaimer's Digital Garden" data-md-component="logo">
+    <a href="../../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
 
     </a>
-    Eurekaimer's Digital Garden
+    Notes
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Eurekaimer/Stathelper" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -557,7 +560,7 @@
   <span class="md-ellipsis">
     
   
-    Stathelper
+    Home
   
 
     
@@ -585,187 +588,8 @@
       
         
       
-    
-    
-    
-      
-      
         
       
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../../HDP/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Index
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../../STAT260/" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    STAT260 2021
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../../" class="md-nav__link">
-      
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    CS Learning
-  
-
-    
-  </span>
-  
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
         
       
         
@@ -797,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    分析学总站
+    Analysis
   
 
     
@@ -827,6 +651,69 @@
       
         
           
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -887,6 +774,16 @@
     
       
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     
     
@@ -908,18 +805,14 @@
   
   
   
-    
-  
-  
-  
-    <a href="../../../../Boring/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/" class="md-nav__link">
+    <a href="../../../../Statistics/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Boring
+    Statistics
   
 
     
@@ -931,8 +824,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -944,47 +835,65 @@
       
   
   
-  
-  
     
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
   
-    <a href="../../../../ACGN/Anime/" class="md-nav__link">
+    
+    
       
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    ACGN
+    Computer Science
   
 
     
@@ -992,12 +901,1434 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Computer Science
   
 
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CS50x/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS50x
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS50x
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS50x/Week%200%20Scratch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 0 Scratch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS50x/Week%201%20C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1 C
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS50x/Week%202%20Arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2 Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CS61A/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS61A
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS61A
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Project%201-The%20Game%20of%20Hog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 1 - The Game of Hog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Project%202-CS%2061A%20Autocorrected%20Typing%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project 2 - Autocorrected Typing Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS61A/Week%207/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CS231n
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS231n/CS231n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS231n
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS231n/CS231n-Lecture1%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 1 - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%A5%BF%E7%93%9C%E4%B9%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning (西瓜书)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Mining & Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Mining & Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DMML_24Fall_Re/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DMML_24Fall_Re
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B3%E4%BA%8E%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%AD%E4%B8%A4%E7%A7%8D%E6%A0%87%E7%AD%BE%E4%BD%93%E7%B3%BB%E4%B8%8B%E9%80%BB%E8%BE%91%E6%96%AF%E8%B0%9B%E5%9B%9E%E5%BD%92%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E7%AD%89%E4%BB%B7%E6%80%A7%E8%AF%81%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于二分类问题中两种标签体系下逻辑斯谛回归损失函数的等价性证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DMML_Lecture3%20%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 3 信息论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 判别分析
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 9 判别分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性分类器
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        垂直平分分类器
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        判别分析准则
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="判别分析准则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        判别分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bayes 判别准则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fisher 判别分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两总体的判别
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两总体的判别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个多元正态总体-同方差
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个多元正态总体-异方差
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        先验概率不存在的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多总体的判别
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DMML_Lecture12%20KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 12 KNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DMML_Lecture13%20NNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 13 NNs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Storage & Computing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Distributed Storage & Computing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AE%A1%E7%AE%97_LAB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical & Big Data Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistical & Big Data Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%BD%AF%E4%BB%B6/Py-Lecture-1%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Py-Lecture 1 基本操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1045,7 +2376,7 @@
   <span class="md-ellipsis">
     
   
-    Index
+    Tech
   
 
     
@@ -1081,6 +2412,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1108,7 +2443,7 @@
   <span class="md-ellipsis">
     
   
-    Technology
+    WebSource
   
 
     
@@ -1120,6 +2455,96 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
   
 
       
@@ -1230,7 +2655,7 @@
   <a href="#bayes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bayes判别准则
+        Bayes 判别准则
       
     </span>
   </a>
@@ -1241,7 +2666,7 @@
   <a href="#fisher" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fisher判别分析
+        Fisher 判别分析
       
     </span>
   </a>
@@ -1332,12 +2757,70 @@
   
 
 
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Data Mining & Machine Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
                   
   
-    <a href="https://github.com/Eurekaimer/Stathelper/edit/main/docs/CS/数据挖掘与机器学习/Assets/DMML_Lecture9 判别分析.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/CS/数据挖掘与机器学习/Assets/DMML_Lecture9 判别分析.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
     </a>
@@ -1346,7 +2829,7 @@
     
       
     
-    <a href="https://github.com/Eurekaimer/Stathelper/raw/main/docs/CS/数据挖掘与机器学习/Assets/DMML_Lecture9 判别分析.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/CS/数据挖掘与机器学习/Assets/DMML_Lecture9 判别分析.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
     </a>
@@ -1371,15 +2854,15 @@
 <div class="arithmatex">\[
 w^{T}x+b=0
 \]</div>
-<p>其中<span class="arithmatex">\(w\)</span>是权重向量，<span class="arithmatex">\(b\)</span>是偏置</p>
-<p>判别规则就是<span class="arithmatex">\(w^{T}x+b\)</span>与<span class="arithmatex">\(0\)</span>的大小关系，大于0即为1，小于0即为-1，这种判别规则也应用于支持向量机(SVM)、感知机、逻辑回归等</p>
+<p>其中 <span class="arithmatex">\(w\)</span> 是权重向量，<span class="arithmatex">\(b\)</span> 是偏置</p>
+<p>判别规则就是 <span class="arithmatex">\(w^{T}x+b\)</span> 与 <span class="arithmatex">\(0\)</span> 的大小关系，大于 0 即为 1，小于 0 即为-1，这种判别规则也应用于支持向量机 (SVM)、感知机、逻辑回归等</p>
 <h2 id="_2">垂直平分分类器<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
 <p>通过划分两类样本中心的垂直平面实现分类，做法相当简单：</p>
 <p>先计算得到两类样本的均值：</p>
 <div class="arithmatex">\[
 \mu_{1}= \frac{1}{n_{1}}\sum\limits_{i\in C_{1}}x_{i},\mu_{2}= \frac{1}{n_{2}}\sum\limits_{i\in C_{2}}x_{i}
 \]</div>
-<p>决策边界为(实际上这里看出与线性分类器的联系)：</p>
+<p>决策边界为（实际上这里看出与线性分类器的联系）：</p>
 <div class="arithmatex">\[
 w=\mu_{1}-\mu_{2},b=- \frac{1}{2}(\mu_{1}^{T}\mu_{1}-\mu_{2}^{T}\mu_{2})
 \]</div>
@@ -1387,40 +2870,40 @@ w=\mu_{1}-\mu_{2},b=- \frac{1}{2}(\mu_{1}^{T}\mu_{1}-\mu_{2}^{T}\mu_{2})
 <div class="arithmatex">\[
 g(x)=w^{T}x+b
 \]</div>
-<p>分类的规则仍然是判断与0的关系分为<span class="arithmatex">\(\pm 1\)</span>，实际上本质是比较<span class="arithmatex">\(\lVert x-\mu_{1} \rVert^{2},\lVert x-\mu_{2} \rVert^{2}\)</span>的距离远近</p>
-<blockquote>
-<p>[!cite] 垂直平分分类器的主要特点
-别名：最小距离分类器，是可以解决两类分类问题的线性分类器，本质上对于样本集无特殊要求。没有采用准则函数求极值解(非最佳的决策)，它假设两类数据的分布形状（协方差）是圆形的且相等的，如果数据是椭圆分布或两类分布松散程度不同，效果很差。算法简单，实现容易</p>
-</blockquote>
+<p>分类的规则仍然是判断与 0 的关系分为 <span class="arithmatex">\(\pm 1\)</span>，实际上本质是比较 <span class="arithmatex">\(\lVert x-\mu_{1} \rVert^{2},\lVert x-\mu_{2} \rVert^{2}\)</span> 的距离远近</p>
+<div class="admonition quote">
+<p class="admonition-title">垂直平分分类器的主要特点</p>
+<p>别名：最小距离分类器，是可以解决两类分类问题的线性分类器，本质上对于样本集无特殊要求。没有采用准则函数求极值解（非最佳的决策），它假设两类数据的分布形状（协方差）是圆形的且相等的，如果数据是椭圆分布或两类分布松散程度不同，效果很差。算法简单，实现容易</p>
+</div>
 <h2 id="_3">判别分析准则<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
 <h3 id="_4">判别分析<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h3>
-<blockquote>
-<p>[!cite] 判别分析(discrimination analysis)
-使用具有类别信息的观测数据建立一个分类器或分类法则，其能够最大可能区分事先定义的类，需要注意它是一种有监督的统计学习方法，应用时经常将判别分析与分类结合起来</p>
-</blockquote>
+<div class="admonition quote">
+<p class="admonition-title">判别分析(discriminant analysis)</p>
+<p>使用具有类别信息的观测数据建立一个分类器或分类法则，其能够最大可能区分事先定义的类，需要注意它是一种有监督的统计学习方法，应用时经常将判别分析与分类结合起来</p>
+</div>
 <p>先给出一些基本的记号和假设：</p>
-<p>对于两个总体的情况，存在两个总体<span class="arithmatex">\(\pi_{1},\pi_{2}\)</span>给定一个个体的测量值向量<span class="arithmatex">\(x=(x_{1},\dots,x_{p})^{T}\)</span>，判断该个体是来自总体<span class="arithmatex">\(\pi_{1},\pi_{2}\)</span>? 判别分析的做法是找到一种判别方法，将<span class="arithmatex">\(\mathbb{R}^{p}\)</span>空间分为两个区域<span class="arithmatex">\(R_{1},R_{2}\)</span>，记为<span class="arithmatex">\(R=(R_{1},R_{2})\)</span>，如果个体的观测值向量<span class="arithmatex">\(x\in R_{1}\)</span>，归为<span class="arithmatex">\(\pi_{1}\)</span></p>
+<p>对于两个总体的情况，存在两个总体 <span class="arithmatex">\(\pi_{1},\pi_{2}\)</span> 给定一个个体的测量值向量 <span class="arithmatex">\(x=(x_{1},\dots,x_{p})^{T}\)</span>，判断该个体是来自总体 <span class="arithmatex">\(\pi_{1},\pi_{2}\)</span>? 判别分析的做法是找到一种判别方法，将 <span class="arithmatex">\(\mathbb{R}^{p}\)</span> 空间分为两个区域 <span class="arithmatex">\(R_{1},R_{2}\)</span>，记为 <span class="arithmatex">\(R=(R_{1},R_{2})\)</span>，如果个体的观测值向量 <span class="arithmatex">\(x\in R_{1}\)</span>，归为 <span class="arithmatex">\(\pi_{1}\)</span></p>
 <p>那么显然根据假设会知道可能会有两种错误发生：</p>
 <ul>
-<li><span class="arithmatex">\(C(2| 1)\)</span>: 个体来自<span class="arithmatex">\(\pi_{1}\)</span>，却被误判为<span class="arithmatex">\(\pi_{2}\)</span>的损失</li>
-<li><span class="arithmatex">\(C(1| 2)\)</span>: 个体来自<span class="arithmatex">\(\pi_{2}\)</span>，却被误判为<span class="arithmatex">\(\pi_{1}\)</span>的损失</li>
+<li><span class="arithmatex">\(C(2| 1)\)</span>: 个体来自 <span class="arithmatex">\(\pi_{1}\)</span>，却被误判为 <span class="arithmatex">\(\pi_{2}\)</span> 的损失</li>
+<li><span class="arithmatex">\(C(1| 2)\)</span>: 个体来自 <span class="arithmatex">\(\pi_{2}\)</span>，却被误判为 <span class="arithmatex">\(\pi_{1}\)</span> 的损失</li>
 </ul>
 <p>很自然的我们会将错判带来的损失最小作为好的判别方法的评判标准</p>
 <p>一些记号：</p>
 <ul>
-<li>先验概率：<span class="arithmatex">\(q_{1},q_{2}\)</span>是来自<span class="arithmatex">\(\pi_{1},\pi_{2}\)</span>的观测值的先验概率，满足<span class="arithmatex">\(q_{1}+q_{2}=1\)</span></li>
+<li>先验概率：<span class="arithmatex">\(q_{1},q_{2}\)</span> 是来自 <span class="arithmatex">\(\pi_{1},\pi_{2}\)</span> 的观测值的先验概率，满足 <span class="arithmatex">\(q_{1}+q_{2}=1\)</span></li>
 <li>密度函数：<span class="arithmatex">\(\pi_{1}\sim f_{1}(x),\pi_{2}\sim f_{2}(x)\)</span></li>
 <li>正确判别概率：<span class="arithmatex">\(\mathbb{P}(1|1,R)=\int_{R_{1}}f_{1}(x)dx,dx=dx_{1}\dots dx_{p}\)</span></li>
 <li>错判概率：<span class="arithmatex">\(\mathbb{P}(2|1,R)=\int_{R_{2}}f_{1}(x)dx\)</span></li>
 </ul>
-<h3 id="bayes">Bayes判别准则<a class="headerlink" href="#bayes" title="Permanent link">⚓︎</a></h3>
-<p>这里需要用到一个很重要的准则ECM(Expected Cost of Misclassification)</p>
+<h3 id="bayes">Bayes 判别准则<a class="headerlink" href="#bayes" title="Permanent link">⚓︎</a></h3>
+<p>这里需要用到一个很重要的准则 ECM(Expected Cost of Misclassification)</p>
 <div class="arithmatex">\[
 ECM(R_{1},R_{2})=C(2| 1)\mathbb{P}(2|1,R)q_{1}+C(1| 2)\mathbb{P}(1|2,R)q_{2}
 \]</div>
-<p>对于给定先验概率<span class="arithmatex">\(q_{1},q_{2}\)</span>使得错判的平均损失ECM达到最小的方法称为Bayes判别方法</p>
-<p>理论上，能够使得<span class="arithmatex">\(ECM(R_{1},R_{2})\)</span>最小的Bayes判别准则是一个最优的黄金准则，在实际应用中，需要给定密度函数、错判损失、先验概率，如果密度函数未知可以通过训练样本进行估计然后应用判别分析的方法</p>
-<p>根据ECM的目的是使得平均损失最小，我们很自然会想不同的错判损失是否相同，显然在大多数应用场景下损失是完全不同的，例如关于假阳性的判别和忽略阳性患者所带来的负面影响是完全不同的，因此对于原本的定义式推导如下：</p>
+<p>对于给定先验概率 <span class="arithmatex">\(q_{1},q_{2}\)</span> 使得错判的平均损失 ECM 达到最小的方法称为 Bayes 判别方法</p>
+<p>理论上，能够使得 <span class="arithmatex">\(ECM(R_{1},R_{2})\)</span> 最小的 Bayes 判别准则是一个最优的黄金准则，在实际应用中，需要给定密度函数、错判损失、先验概率，如果密度函数未知可以通过训练样本进行估计然后应用判别分析的方法</p>
+<p>根据 ECM 的目的是使得平均损失最小，我们很自然会想不同的错判损失是否相同，显然在大多数应用场景下损失是完全不同的，例如关于假阳性的判别和忽略阳性患者所带来的负面影响是完全不同的，因此对于原本的定义式推导如下：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 ECM(R_{1},R_{2})&amp;=C(2| 1)\mathbb{P}(2|1,R)q_{1}+C(1| 2)\mathbb{P}(1|2,R)q_{2}\\
@@ -1429,12 +2912,12 @@ ECM(R_{1},R_{2})&amp;=C(2| 1)\mathbb{P}(2|1,R)q_{1}+C(1| 2)\mathbb{P}(1|2,R)q_{2
 &amp;=q_{1}C(2|1)+\int_{R_{1}}q_{2}C(1|2)f_{2}-q_{1}C(2|1)f_{1}dx
 \end{aligned}
 \]</div>
-<p>因此我们想要使得积分部分尽量小，也就是内部函数小于0时，应该划入<span class="arithmatex">\(R_{1}\)</span>：</p>
+<p>因此我们想要使得积分部分尽量小，也就是内部函数小于 0 时，应该划入 <span class="arithmatex">\(R_{1}\)</span>：</p>
 <div class="arithmatex">\[
 q_{2}C(1|2)f_{2}-q_{1}C(2|1)f_{1}&lt;0\implies \frac{f_{1}}{f_{2}}&gt; \frac{q_{2}}{q_{1}} \frac{C(1|2)}{C(2|1)}
 \]</div>
 <p>实质就是做似然比检验</p>
-<h3 id="fisher">Fisher判别分析<a class="headerlink" href="#fisher" title="Permanent link">⚓︎</a></h3>
+<h3 id="fisher">Fisher 判别分析<a class="headerlink" href="#fisher" title="Permanent link">⚓︎</a></h3>
 <p>对于[[#两个多元正态总体-同方差]]的情况，我们先考虑协方差矩阵的无偏估计：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1443,34 +2926,34 @@ V^{(1)}&amp;=\sum\limits_{i=1}^{n_{1}} (x_{i}^{(1)}-\overline{x}^{(1)})(x_{i}^{(
 V^{(2)}&amp;=\sum\limits_{i=1}^{n_{2}} (x_{i}^{(2)}-\overline{x}^{(2)})(x_{i}^{(2)}-\overline{x}^{(2)})^{T}
 \end{aligned}
 \]</div>
-<p><span class="arithmatex">\(V^{(1)},V^{(2)}\)</span>为两组训练样本的样本离差矩阵</p>
-<p>把参数估计的结果代入线性判别函数可以得到下面的<span class="arithmatex">\(Fisher\)</span>线性判别函数：</p>
+<p><span class="arithmatex">\(V^{(1)},V^{(2)}\)</span> 为两组训练样本的样本离差矩阵</p>
+<p>把参数估计的结果代入线性判别函数可以得到下面的 <span class="arithmatex">\(Fisher\)</span> 线性判别函数：</p>
 <div class="arithmatex">\[
 W(x)=x^{T}S^{-1}(\overline{x}^{(1)}-\overline{x}^{(2)})- \frac{1}{2}( \overline{x}^{(1)}+ \overline{x}^{(2)})^{T}S^{-1}(\overline{x}^{(1)}- \overline{x}^{(2)})
 \]</div>
-<p>如果先验概率给定，我们得到Fisher线性判别准则为：</p>
+<p>如果先验概率给定，我们得到 Fisher 线性判别准则为：</p>
 <div class="arithmatex">\[
 R_{1}=\left\{ x:W(x)\geqslant \log k \right\},k = \frac{q_{2}C(1|2)}{q_{1}C(2|1)}
 \]</div>
-<p>需要注意，Fisher线性判别函数仅仅是估计的最优准则，无法保证<span class="arithmatex">\(ECM(R_{1},R_{2})\)</span>最小，在大样本情形下，<span class="arithmatex">\(\overline{x}^{(1)}, \overline{x}^{(2)},S\)</span>为<span class="arithmatex">\(\mu_{1},\mu_{2},\Sigma\)</span>的强相合估计，此时判别准则渐近最优</p>
+<p>需要注意，Fisher 线性判别函数仅仅是估计的最优准则，无法保证 <span class="arithmatex">\(ECM(R_{1},R_{2})\)</span> 最小，在大样本情形下，<span class="arithmatex">\(\overline{x}^{(1)}, \overline{x}^{(2)},S\)</span> 为 <span class="arithmatex">\(\mu_{1},\mu_{2},\Sigma\)</span> 的强相合估计，此时判别准则渐近最优</p>
 <div class="admonition tip">
 <p class="admonition-title">Fisher判别的思路和方法</p>
-<p>将一个<span class="arithmatex">\(p\)</span>维向量<span class="arithmatex">\(X=(X_{1},\dots,X_{p})^{T}\)</span>投影到某个方向，使得其最容易判别</p>
-<p>考虑<span class="arithmatex">\(Y=\xi^{T}X\)</span>，使得</p>
+<p>将一个 <span class="arithmatex">\(p\)</span> 维向量 <span class="arithmatex">\(X=(X_{1},\dots,X_{p})^{T}\)</span> 投影到某个方向，使得其最容易判别</p>
+<p>考虑 <span class="arithmatex">\(Y=\xi^{T}X\)</span>，使得</p>
 <div class="arithmatex">\[
 \frac{[E_{1}(\xi^{T}X)-E_{2}(\xi^{T}X)]^{2}}{Var(\xi^{T}X)}= \frac{\xi^{T}(\mu_{1}-\mu_{2})(\mu_{1}-\mu_{2})^{T}\xi}{\xi^{T}\Sigma \xi}
 \]</div>
 <p>达到最大</p>
 </div>
-<p>我们的目标是使得上方分式最大，使用代换<span class="arithmatex">\(\beta=\Sigma^{1/2}\xi\)</span>，运用Cauchy-Schwarz不等式，可以知道分子最大时必须存在比例关系，<span class="arithmatex">\(\beta=a\Sigma^{-1/2}(\mu_{1}-\mu_{2})\)</span>，由此我们可以得到<span class="arithmatex">\(\xi=a\Sigma^{-1}(\mu_{1}-\mu_{2}):= a\theta\)</span></p>
-<p>其中<span class="arithmatex">\(a\)</span>只是尺度参数，不影响判别方向，且Fisher判别不要求假设<span class="arithmatex">\(\pi_{1},\pi_{2}\)</span>来自正态分布，只需要有相同的协方差矩阵即可</p>
-<p>下面的内容主要是利用Bayes判别准则、Fisher判别准则的不同情形下的结果</p>
+<p>我们的目标是使得上方分式最大，使用代换 <span class="arithmatex">\(\beta=\Sigma^{1/2}\xi\)</span>，运用 Cauchy-Schwarz 不等式，可以知道分子最大时必须存在比例关系，<span class="arithmatex">\(\beta=a\Sigma^{-1/2}(\mu_{1}-\mu_{2})\)</span>，由此我们可以得到 <span class="arithmatex">\(\xi=a\Sigma^{-1}(\mu_{1}-\mu_{2}):= a\theta\)</span></p>
+<p>其中 <span class="arithmatex">\(a\)</span> 只是尺度参数，不影响判别方向，且 Fisher 判别不要求假设 <span class="arithmatex">\(\pi_{1},\pi_{2}\)</span> 来自正态分布，只需要有相同的协方差矩阵即可</p>
+<p>下面的内容主要是利用 Bayes 判别准则、Fisher 判别准则的不同情形下的结果</p>
 <h2 id="_5">两总体的判别<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <h3 id="-">两个多元正态总体-同方差<a class="headerlink" href="#-" title="Permanent link">⚓︎</a></h3>
 <div class="arithmatex">\[
 f_{j}(x)= \frac{1}{(2\pi)^{p /2}\lvert \Sigma_{j} \rvert ^{1 / 2}}\exp \left[ - \frac{1}{2}(x-\mu_{j})^{T}\Sigma_{j}^{-1}(x-\mu_{j}) \right] 
 \]</div>
-<p>则似然比可以显然得到，利用同方差即<span class="arithmatex">\(\Sigma_{1}=\Sigma_{2}=\Sigma\)</span>：</p>
+<p>则似然比可以显然得到，利用同方差即 <span class="arithmatex">\(\Sigma_{1}=\Sigma_{2}=\Sigma\)</span>：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{f_{1}}{f_{2}}&amp;=\exp \left\{  - \frac{1}{2}[(x-\mu_{1})^{T}\Sigma^{-1}(x-\mu_{1})-(x-\mu_{2})^{T}\Sigma^{-1}(x-\mu_{2})] \right\} \\
@@ -1478,27 +2961,27 @@ f_{j}(x)= \frac{1}{(2\pi)^{p /2}\lvert \Sigma_{j} \rvert ^{1 / 2}}\exp \left[ - 
 &amp;\implies x^{T}\Sigma^{-1}(\mu_{1}-\mu_{2})- \frac{1}{2}(\mu_{1}+\mu_{2})^{T}\Sigma^{-1}(\mu_{1}-\mu_{2}) \geqslant \log k
 \end{aligned}
 \]</div>
-<p>仍然令<span class="arithmatex">\(k= \frac{q_{2}C(1|2)}{q_{1}C(2|1)}\)</span>即可(先验概率已知的情况)</p>
+<p>仍然令 <span class="arithmatex">\(k= \frac{q_{2}C(1|2)}{q_{1}C(2|1)}\)</span> 即可（先验概率已知的情况）</p>
 <h3 id="-_1">两个多元正态总体-异方差<a class="headerlink" href="#-_1" title="Permanent link">⚓︎</a></h3>
 <p>使用似然比检验方法简单计算后得到：</p>
 <div class="arithmatex">\[
 R_{1}=\left\{ x: -\frac{1}{2}x^{T}(\Sigma_{1}^{-1}- \Sigma_{2}^{-1})x+(\mu_{1}^{T}\Sigma^{-1}_{1}-\mu_{2}^{T}\Sigma_{2}^{-1})x- \zeta \geqslant \log k\right\} 
 \]</div>
-<p>其中<span class="arithmatex">\(k= \frac{q_{2}C(1|2)}{q_{1}C(2|1)}\)</span>，<span class="arithmatex">\(\zeta= \frac{1}{2}\log\left(  \frac{\lvert \Sigma_{1} \rvert}{\lvert \Sigma_{2} \rvert} \right)+ \frac{1}{2}(\mu_{1}^{T}\Sigma_{1}^{-1}\mu_{1}-\mu_{2}^{T}\Sigma_{2}^{-1}\mu_{2})\)</span></p>
-<p>将整体记为<span class="arithmatex">\(\delta(x)\)</span></p>
+<p>其中 <span class="arithmatex">\(k= \frac{q_{2}C(1|2)}{q_{1}C(2|1)}\)</span>，<span class="arithmatex">\(\zeta= \frac{1}{2}\log\left(  \frac{\lvert \Sigma_{1} \rvert}{\lvert \Sigma_{2} \rvert} \right)+ \frac{1}{2}(\mu_{1}^{T}\Sigma_{1}^{-1}\mu_{1}-\mu_{2}^{T}\Sigma_{2}^{-1}\mu_{2})\)</span></p>
+<p>将整体记为 <span class="arithmatex">\(\delta(x)\)</span></p>
 <div class="arithmatex">\[
 \delta(x)= -\frac{1}{2}x^{T}(\Sigma_{1}^{-1}- \Sigma_{2}^{-1})x+(\mu_{1}^{T}\Sigma^{-1}_{1}-\mu_{2}^{T}\Sigma_{2}^{-1})x- \zeta
 \]</div>
 <p>由于函数中含有二次项，因此记为二次判别函数</p>
 <h3 id="_6">先验概率不存在的情形<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
 <p>重点讨论协方差矩阵相等的情形，<span class="arithmatex">\(\Sigma_{1}=\Sigma_{2}=\Sigma\)</span></p>
-<p>先验概率未知带来的最大问题就是<span class="arithmatex">\(\log k=c\)</span>未知，为了进行判别分析，我们应当想办法确定<span class="arithmatex">\(c\)</span>，定义一个随机变量<span class="arithmatex">\(U\)</span></p>
+<p>先验概率未知带来的最大问题就是 <span class="arithmatex">\(\log k=c\)</span> 未知，为了进行判别分析，我们应当想办法确定 <span class="arithmatex">\(c\)</span>，定义一个随机变量 <span class="arithmatex">\(U\)</span></p>
 <p>$$
 U=X^{T}\Sigma^{-1}(\mu_{1}-\mu_{2})- \frac{1}{2}(\mu_{1}+\mu_{2})^{T} \Sigma^{-1}(\mu_{1}-\mu_{2})
 $$
-如果<span class="arithmatex">\(X\sim N_{p}(\mu_{1},\Sigma)\)</span>，那么有<span class="arithmatex">\(E_{1}(U)= \frac{1}{2}(\mu_{1}-\mu_{2})^{T}\Sigma^{-1}(\mu_{1}-\mu_{2})\)</span>，同理可知方差(<span class="arithmatex">\(N_{p}(\mu_{1},\Sigma)\)</span>和<span class="arithmatex">\(N_{p}(\mu_{2},\Sigma)\)</span>之间的马氏距离)</p>
+如果 <span class="arithmatex">\(X\sim N_{p}(\mu_{1},\Sigma)\)</span>，那么有 <span class="arithmatex">\(E_{1}(U)= \frac{1}{2}(\mu_{1}-\mu_{2})^{T}\Sigma^{-1}(\mu_{1}-\mu_{2})\)</span>，同理可知方差（<span class="arithmatex">\(N_{p}(\mu_{1},\Sigma)\)</span> 和 <span class="arithmatex">\(N_{p}(\mu_{2},\Sigma)\)</span> 之间的马氏距离）</p>
 <div class="arithmatex">\[Var_{1}(U)=(\mu_{1}-\mu_{2})^{T}\Sigma^{-1}(\mu_{1}-\mu_{2})=\Delta^{2}\]</div>
-<p>此时关于<span class="arithmatex">\(c\)</span>的给定可以使用Neyman-Pearson准则</p>
+<p>此时关于 <span class="arithmatex">\(c\)</span> 的给定可以使用 Neyman-Pearson 准则</p>
 <h2 id="_7">多总体的判别<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h2>
 <p>应用前面的记号和方法，容易得到：</p>
 <div class="arithmatex">\[
@@ -1506,25 +2989,25 @@ $$
 ECM(R_{1},\dots,R_{J})&amp;=\sum\limits_{j=1}^{J} q_{j}\left\{ \sum\limits_{k=1,k\neq j}^{J}C(k|j)\mathbb{P}(k|j,R) \right\} 
 \end{aligned}
 \]</div>
-<p>若是有<span class="arithmatex">\(q_{i}f_{i}&gt;q_{k}f_{k},k\neq i\)</span>，那么将<span class="arithmatex">\(x\)</span>划归为<span class="arithmatex">\(\pi_{i}\)</span></p>
+<p>若是有 <span class="arithmatex">\(q_{i}f_{i}&gt;q_{k}f_{k},k\neq i\)</span>，那么将 <span class="arithmatex">\(x\)</span> 划归为 <span class="arithmatex">\(\pi_{i}\)</span></p>
 <p>基本上方法和思想是雷同的，不想赘述，只给出一些结论</p>
 <ul>
 <li>多正态总体 异方差</li>
 <li>多正态总体 同方差</li>
-<li>Fisher判别分析 多总体</li>
+<li>Fisher 判别分析 多总体</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Fisher判别分析-多总体，最优投影方向<span class="arithmatex">\(\hat{\xi}\)</span>：</p>
-<p>当<span class="arithmatex">\(W\)</span>可逆时，有</p>
+<p>当 <span class="arithmatex">\(W\)</span> 可逆时，有</p>
 <div class="arithmatex">\[\hat{\xi}=arg \sup\limits_{\lVert \xi \rVert _{2}=1} \frac{\xi^{T}B\xi}{\xi^{T}W\xi}= \hat{e}_{1}\]</div>
-<p>其中<span class="arithmatex">\(\hat{e}_{1}\)</span>为矩阵<span class="arithmatex">\(W^{-1}B\)</span>的最大特征值对应的单位正交特征向量，<span class="arithmatex">\(B\)</span>为样本的类间离差矩阵，<span class="arithmatex">\(W\)</span>为类内离差矩阵</p>
+<p>其中 <span class="arithmatex">\(\hat{e}_{1}\)</span> 为矩阵 <span class="arithmatex">\(W^{-1}B\)</span> 的最大特征值对应的单位正交特征向量，<span class="arithmatex">\(B\)</span> 为样本的类间离差矩阵，<span class="arithmatex">\(W\)</span> 为类内离差矩阵</p>
 </div>
-<p>记<span class="arithmatex">\(W^{-1}B\)</span>的所有非零特征值分别为<span class="arithmatex">\(\hat{\lambda}_{1}\geqslant \hat{\lambda}_{2}\geqslant \dots \geqslant \hat{\lambda}_{s}&gt; 0\)</span>，其中<span class="arithmatex">\(s\leqslant \min(J-1,p)\)</span>，当<span class="arithmatex">\(\hat{\xi}_{1}= \hat{e}_{1}\)</span>，把<span class="arithmatex">\(\hat{\xi}_{1}^{T}x\)</span>称为样本第一判别函数，其判别效率为<span class="arithmatex">\(\hat{\lambda}_{1}\)</span>，以此类推，最多有<span class="arithmatex">\(\min(J-1,p)\)</span>个样本判别函数</p>
+<p>记 <span class="arithmatex">\(W^{-1}B\)</span> 的所有非零特征值分别为 <span class="arithmatex">\(\hat{\lambda}_{1}\geqslant \hat{\lambda}_{2}\geqslant \dots \geqslant \hat{\lambda}_{s}&gt; 0\)</span>，其中 <span class="arithmatex">\(s\leqslant \min(J-1,p)\)</span>，当 <span class="arithmatex">\(\hat{\xi}_{1}= \hat{e}_{1}\)</span>，把 <span class="arithmatex">\(\hat{\xi}_{1}^{T}x\)</span> 称为样本第一判别函数，其判别效率为 <span class="arithmatex">\(\hat{\lambda}_{1}\)</span>，以此类推，最多有 <span class="arithmatex">\(\min(J-1,p)\)</span> 个样本判别函数</p>
 <p><span class="arithmatex">\(\mathbf{Fisher判别准则}:\forall i\neq j\)</span></p>
 <div class="arithmatex">\[
 \sum\limits_{k=1}^{r} (\hat{y}_{k}- \overline{y}_{k}^{(j)})^{2}=\sum\limits_{k=1}^{r} [\hat{\xi}_{k}^{T}(x- \overline{x}^{(j)})]^{2} \leqslant \sum\limits_{k=1}^{r}[\hat{\xi}_{k}^{T}(x- \overline{x}^{(i)})]^{2} 
 \]</div>
-<p>成立，那么把观测样本<span class="arithmatex">\(x\)</span>划归为<span class="arithmatex">\(\pi_{j}\)</span></p>
+<p>成立，那么把观测样本 <span class="arithmatex">\(x\)</span> 划归为 <span class="arithmatex">\(\pi_{j}\)</span></p>
 <p>给出一个例子：</p>
 <div class="admonition example">
 <p class="admonition-title">使用Fisher判别准则</p>
@@ -1543,7 +3026,7 @@ X^{(1)}=\begin{pmatrix}
 -1 &amp; -4
 \end{pmatrix}
 \]</div>
-<p>试建立Fisher样本判别函数，并对新的观测样本<span class="arithmatex">\(x_{0}=(1,3)^{T}\)</span>，用建立的判别函数分类</p>
+<p>试建立 Fisher 样本判别函数，并对新的观测样本 <span class="arithmatex">\(x_{0}=(1,3)^{T}\)</span>，用建立的判别函数分类</p>
 </div>
 <div class="arithmatex">\[
 \overline{x}^{(1)}=\begin{pmatrix}
@@ -1580,10 +3063,10 @@ W&amp;= \sum\limits_{j=1}^{3} \sum\limits_{i=1}^{n_{j}} (x_{i}^{(j)}- \overline{
 0.0714 &amp; 0.9000-\lambda
 \end{vmatrix} =0 \implies \hat{\lambda}_{1}=0.9556, \hat{\lambda}_{2}=0.3015
 \]</div>
-<p>在约束条件<span class="arithmatex">\(\hat{\xi}_{j}^{T}S \hat{\xi}_{j}=1\)</span>，求解<span class="arithmatex">\((W^{-1}B- \hat{\lambda}_{j}I_{2}) \hat{\xi}_{j}=0\)</span>，得到相应特征向量：</p>
+<p>在约束条件 <span class="arithmatex">\(\hat{\xi}_{j}^{T}S \hat{\xi}_{j}=1\)</span>，求解 <span class="arithmatex">\((W^{-1}B- \hat{\lambda}_{j}I_{2}) \hat{\xi}_{j}=0\)</span>，得到相应特征向量：</p>
 <div class="arithmatex">\[\hat{\xi}_{1}=(0.386,0.495)^{T}, \hat{\xi}_{2}=(0.938,-0.112)^{T}\]</div>
-<p>可以得到<span class="arithmatex">\(\hat{y}_{1}=\hat{\xi}_{1}^{T}x=0.386x_{1}+0.495x_{2},\hat{y}_{2}=\hat{\xi}_{2}^{T}x=0.938x_{1}-0.112x_{2}\)</span></p>
-<p>再代入<span class="arithmatex">\(x_{0}=(1,3)^{T}\)</span>，然后就可以得到相应的一系列数值，最后得到划归为<span class="arithmatex">\(\pi_{2}\)</span></p>
+<p>可以得到 <span class="arithmatex">\(\hat{y}_{1}=\hat{\xi}_{1}^{T}x=0.386x_{1}+0.495x_{2},\hat{y}_{2}=\hat{\xi}_{2}^{T}x=0.938x_{1}-0.112x_{2}\)</span></p>
+<p>再代入 <span class="arithmatex">\(x_{0}=(1,3)^{T}\)</span>，然后就可以得到相应的一系列数值，最后得到划归为 <span class="arithmatex">\(\pi_{2}\)</span></p>
 
 
 
@@ -1617,10 +3100,10 @@ W&amp;= \sum\limits_{j=1}^{3} \sum\limits_{i=1}^{n_{j}} (x_{i}^{(j)}- \overline{
       </main>
       
         <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      
-      <div class="md-footer-copyright">
-        <div class="md-copyright">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2024-2026 Eurekaimer
@@ -1634,21 +3117,21 @@ W&amp;= \sum\limits_{j=1}^{3} \sum\limits_{i=1}^{n_{j}} (x_{i}^{(j)}- \overline{
     </a>
   
 </div>
-      </div>
+    </div>
 
-      <div class="footer-center-box">
-          <div class="runtime-info">
-              <span>本站已运行</span>
-              <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
-              <span>天</span>
-          </div>
-          <div class="icp-info">
-              <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
-          </div>
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
       </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
 
+    
       
-        
 <div class="md-social">
   
     
@@ -1692,59 +3175,58 @@ W&amp;= \sum\limits_{j=1}^{3} \sum\limits_{i=1}^{n_{j}} (x_{i}^{(j)}- \overline{
     </a>
   
 </div>
-      
+    
 
-    </div>
   </div>
+</div>
 
-  <style>
-    .footer-center-box {
-        flex: 1; 
-        text-align: center; 
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin: 0 1rem;
-    }
-    .runtime-info {
-        color: #8C495A; 
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-    }
-    .icp-info a {
-        color: inherit;
-        opacity: 0.7;
-        font-size: 0.85rem;
-        text-decoration: none;
-    }
-    .icp-info a:hover {
-        opacity: 1;
-        color: var(--md-accent-fg-color);
-    }
-    @media (max-width: 76.1875em) {
-        .md-footer-meta__inner {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-    }
-  </style>
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
 
-  <script>
-    (function() {
-        var start = new Date('2024/10/28'); /* 建站日期 */
-        var now = new Date(); 
-        var diff = now - start;
-        
-        /* 直接算出总天数，取整 */
-        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        
-        var el = document.getElementById('run_days');
-        if(el) {
-            el.innerHTML = days;
-        }
-    })();
-  </script>
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -1764,6 +3246,10 @@ W&amp;= \sum\limits_{j=1}^{3} \sum\limits_{i=1}^{n_{j}} (x_{i}^{(j)}- \overline{
       <script src="../../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
       
         <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../../javascripts/videos.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

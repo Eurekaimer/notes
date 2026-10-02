@@ -1,0 +1,3538 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My Learning Note Repository">
+      
+      
+        <meta name="author" content="Eurekaimer">
+      
+      
+        <link rel="canonical" href="https://www.eurekaimer.icu/notes/Analysis/FunctionalAnalysis/Banach%20Spaces/">
+      
+      
+        <link rel="prev" href="../Functional_Analysis-Preliminaries(Lecture)/">
+      
+      
+        <link rel="next" href="../Hilbert%20Spaces/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../images/xiaoju.jpg">
+      <meta name="generator" content="zensical-0.0.19">
+    
+    
+      
+        <title>Banach Spaces - Notes</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.d4922b3c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M384%20512H96c-53%200-96-43-96-96V96C0%2043%2043%200%2096%200h304c26.5%200%2048%2021.5%2048%2048v288c0%2020.9-13.4%2038.7-32%2045.3V448c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032zM96%20384c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h256v-64zm32-232c0%2013.3%2010.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24H152c-13.3%200-24%2010.7-24%2024m24%2072c-13.3%200-24%2010.7-24%2024s10.7%2024%2024%2024h176c13.3%200%2024-10.7%2024-24s-10.7-24-24-24z%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M352%200c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v64h-96c-53%200-96%2043-96%2096v224c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96V160c0-53-43-96-96-96h-96zM160%20368c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24m120%200c0-13.3%2010.7-24%2024-24h32c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-32c-13.3%200-24-10.7-24-24M224%20176a48%2048%200%201%201%200%2096%2048%2048%200%201%201%200-96m144%2048a48%2048%200%201%201%2096%200%2048%2048%200%201%201-96%200m-304%200c0-17.7-14.3-32-32-32S0%20206.3%200%20224v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32zm544-32c-17.7%200-32%2014.3-32%2032v96c0%2017.7%2014.3%2032%2032%2032s32-14.3%2032-32v-96c0-17.7-14.3-32-32-32%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M416%20427.4c58.5-44%2096-111.6%2096-187.4C512%20107.5%20397.4%200%20256%200S0%20107.5%200%20240c0%2075.8%2037.5%20143.4%2096%20187.4V464c0%2026.5%2021.5%2048%2048%2048h32v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h64v-40c0-13.3%2010.7-24%2024-24s24%2010.7%2024%2024v40h32c26.5%200%2048-21.5%2048-48zM96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v151.5L7.5%20426.3C2.6%20435%200%20444.7%200%20454.7%200%20486.4%2025.6%20512%2057.3%20512h333.4c31.6%200%2057.3-25.6%2057.3-57.3%200-10-2.6-19.8-7.5-28.4L320%20215.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20215.5V64h64v151.5c0%2011.1%202.9%2022.1%208.4%2031.8L306%20320H142l41.6-72.7c5.5-9.7%208.4-20.6%208.4-31.8%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20576%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M480-16c6.9%200%2013%204.4%2015.2%2010.9l13.5%2040.4%2040.4%2013.5C555.6%2051%20560%2057.1%20560%2064s-4.4%2013-10.9%2015.2l-40.4%2013.5-13.5%2040.4c-2.2%206.5-8.3%2010.9-15.2%2010.9s-13-4.4-15.2-10.9l-13.5-40.4-40.4-13.5C404.4%2077%20400%2070.9%20400%2064s4.4-13%2010.9-15.2l40.4-13.5%2013.5-40.4C467-11.6%20473.1-16%20480-16M321.4%2097.4c12.5-12.5%2032.8-12.5%2045.3%200l80%2080c12.5%2012.5%2012.5%2032.8%200%2045.3l-10.9%2010.9c7.9%2022%2012.2%2045.7%2012.2%2070.5%200%20114.9-93.1%20208-208%20208S32%20418.9%2032%20304%20125.1%2096%20240%2096c24.7%200%2048.5%204.3%2070.5%2012.3zM144%20304c0-53%2043-96%2096-96%2013.3%200%2024-10.7%2024-24s-10.7-24-24-24c-79.5%200-144%2064.5-144%20144%200%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-32-352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200m-8%2064h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24%22/%3E%3C/svg%3E');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M64%20480c-35.3%200-64-28.7-64-64V96c0-35.3%2028.7-64%2064-64h320c35.3%200%2064%2028.7%2064%2064v213.5c0%2017-6.7%2033.3-18.7%2045.3L322.7%20461.3c-12%2012-28.3%2018.7-45.3%2018.7zm325.5-176H296c-13.3%200-24%2010.7-24%2024v93.5z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m0-336c-17.7%200-32%2014.3-32%2032%200%2013.3-10.7%2024-24%2024s-24-10.7-24-24c0-44.2%2035.8-80%2080-80s80%2035.8%2080%2080c0%2047.2-36%2067.2-56%2074.5v3.8c0%2013.3-10.7%2024-24%2024s-24-10.7-24-24v-8.1c0-20.5%2014.8-35.2%2030.1-40.2%206.4-2.1%2013.2-5.5%2018.2-10.3%204.3-4.2%207.7-10%207.7-19.6%200-17.7-14.3-32-32-32zm-32%20192a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64zm256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M434.8%2070.1c14.3%2010.4%2017.5%2030.4%207.1%2044.7l-256%20352c-5.5%207.6-14%2012.3-23.4%2013.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200l101.5%20101.5%20234-321.7c10.4-14.3%2030.4-17.5%2044.7-7.1z%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M461.2%2018.9C472.7%2024%20480%2035.4%20480%2048v416c0%2012.6-7.3%2024-18.8%2029.1s-24.8%203.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63V480c0%2017.7-14.3%2032-32%2032h-32c-17.7%200-32-14.3-32-32v-96C57.3%20384%200%20326.7%200%20256s57.3-128%20128-128h84.5c61.8-.2%20121.4-22.7%20167.9-63.3L427%2024c9.4-8.3%2022.9-10.2%2034.3-5.1zM224%20320v.2c70.3%202.7%20137.8%2028.5%20192%2073.4V118.3c-54.2%2044.9-121.7%2070.7-192%2073.4z%22/%3E%3C/svg%3E');--md-admonition-icon--tldr:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M224.3-2.5c19.8-11.4%2044.2-11.4%2064%200L464.2%2099c19.8%2011.4%2032%2032.6%2032%2055.4v203c0%2022.9-12.2%2044-32%2055.4L288.3%20514.5a64.16%2064.16%200%200%201-64%200L48.5%20413c-19.8-11.4-32-32.6-32-55.4v-203c0-22.9%2012.2-44%2032-55.4zm207.8%20360V191.4l-143.8%2083v166.1z%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M256%200c14.7%200%2028.2%208.1%2035.2%2021l216%20400c6.7%2012.4%206.4%2027.4-.8%2039.5S486.1%20480%20472%20480H40c-14.1%200-27.2-7.4-34.4-19.5s-7.5-27.1-.8-39.5l216-400c7-12.9%2020.5-21%2035.2-21m0%20352a32%2032%200%201%200%200%2064%2032%2032%200%201%200%200-64m0-192c-18.2%200-32.7%2015.5-31.4%2033.7l7.4%20104c.9%2012.5%2011.4%2022.3%2023.9%2022.3%2012.6%200%2023-9.7%2023.9-22.3l7.4-104c1.3-18.2-13.1-33.7-31.4-33.7z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/key.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mouse-color.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/videos.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#banach-spaces" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Banach Spaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="查找">
+  <button type="button" class="md-search__button">
+    查找
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Algebra/" class="md-tabs__link">
+          
+  
+  Algebra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Probability/" class="md-tabs__link">
+          
+  
+  Probability
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Statistics/" class="md-tabs__link">
+          
+  
+  Statistics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CS/" class="md-tabs__link">
+          
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Tech/" class="md-tabs__link">
+          
+  
+  Tech
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../WebSource/" class="md-tabs__link">
+          
+  
+  WebSource
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Research/" class="md-tabs__link">
+        
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Physics/UniversityPhysics2/" class="md-tabs__link">
+          
+  
+  Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../friends-link/" class="md-tabs__link">
+        
+  
+  Friends Link
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-pi" viewBox="0 0 24 24"><path d="M9 4v16M4 7c0-1.7 1.3-3 3-3h13"/><path d="M18 20c-1.7 0-3-1.3-3-3V4"/></svg>
+
+    </a>
+    Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Eurekaimer/notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../MathematicalAnalysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mathematical Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathematicalAnalysis/%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86(%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../MathematicalAnalysis/Answers/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    南开大学数学分析答案
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathematicalAnalysis/MonthlyExams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monthly Exams
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../RealAnalysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Real Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RealAnalysis/%E7%AC%AC1%E7%AB%A0%20%E9%9B%86%E5%90%88%E4%B8%8E%E5%AE%9E%E6%95%B0%E9%9B%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 集合与实数集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RealAnalysis/%E5%91%A8%E6%80%A7%E4%BC%9F-Ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    周性伟 Ch1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RealAnalysis/%E5%91%A8%E6%80%A7%E4%BC%9F-Ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    周性伟 Ch2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Functional Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Functional_Analysis-Preliminaries(Lecture)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banach Spaces
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banach Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normed-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normed spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises 2.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#banach-spaces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Banach spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises 2.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seperable-banach-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seperable Banach spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seperable Banach spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可分性 (Separability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completeness-and-compactness-in-banach-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completeness and Compactness in Banach spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Completeness and Compactness in Banach spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完备性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hilbert%20Spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hilbert Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Continuous%20linear%20operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Continuous Linear Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Some%20big%20theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Some Big Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%902020-2021%E6%9C%9F%E6%9C%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020-2021 Final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%902021-2022%E6%9C%9F%E6%9C%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021-2022 Final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%902023-2024%E6%9C%9F%E6%9C%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023-2024 Final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ReadingNotes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading Notes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reading Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ReadingNotes/Principles%20of%20Mathematical%20Analysis(Rudin)/The%20Real%20and%20Complex%20Number%20Systems/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principles of Mathematical Analysis (Rudin)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Algebra/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Probability/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probability
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Statistics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../CS/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Computer Science
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../Tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../WebSource/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSource
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../Physics/UniversityPhysics2/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physics
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends-link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Friends Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normed-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normed spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises 2.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#banach-spaces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Banach spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises 2.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seperable-banach-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seperable Banach spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seperable Banach spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可分性 (Separability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completeness-and-compactness-in-banach-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completeness and Compactness in Banach spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Completeness and Compactness in Banach spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完备性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Analysis
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Functional Analysis
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+    <a href="https://github.com/Eurekaimer/notes/edit/main/docs/Analysis/FunctionalAnalysis/Banach Spaces.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Eurekaimer/notes/raw/main/docs/Analysis/FunctionalAnalysis/Banach Spaces.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-code-2" viewBox="0 0 24 24"><path d="M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5M5 16l-3 3 3 3M9 22l3-3-3-3"/></svg>
+    </a>
+  
+
+
+<h1 id="banach-spaces">Banach Spaces<a class="headerlink" href="#banach-spaces" title="Permanent link">⚓︎</a></h1>
+<div class="admonition tldr">
+<p class="admonition-title">Outline</p>
+<ul>
+<li>Normed spaces</li>
+<li>Banach spaces</li>
+<li>Seperable Banach spaces</li>
+<li>Completeness and Compactness in Banach spaces</li>
+</ul>
+</div>
+<p>泛函分析的基础就是下面所提到的赋范空间，在一个向量空间上赋以一个范数，因此称为赋范空间 (Normed space)，这是泛函分析中最为基本的研究对象，我们将完备性引入其中得到 Banach 空间</p>
+<div class="admonition tip">
+<p class="admonition-title">补充</p>
+<p>也可以参考张恭庆的《泛函分析》一书，其中详细讲述了这一类空间是如何加强条件而产生的，由准范数的定义出发定义 <span class="arithmatex">\(F^{*}\)</span> 空间，进而完备化定义 <span class="arithmatex">\(Frechet\)</span> 空间，再添加齐次性使得准范数加强为范数，诱导出下面的赋范线性空间（<span class="arithmatex">\(B^{*}\)</span> 空间），完备化后就是本章要重点讲述的 <span class="arithmatex">\(Banach\)</span> 空间</p>
+<div class="admonition quote">
+<p class="admonition-title">注：拓扑向量空间</p>
+<p>而<strong>拓扑向量空间 (TVS)(Topological Vector Space, TVS)</strong>则是泛函分析的基本研究对象，是指带有拓扑的向量空间，这样的拓扑对无限维向量空间有不同选择，而有限维实或复向量空间上符合 Hausdorff 条件的拓扑向量空间结构唯一，需要注意 TVS 是对赋范空间的推广，它允许使用比范数诱导的拓扑更弱，更一般的拓扑（有些 TVS 的拓扑不能被任何度量诱导），因此有更加一般的性质！</p>
+<p>比较重要的拓扑向量空间的例子就是 Banach 空间和 Hilbert 空间，它们是满足额外条件的拓扑向量空间，而大致的包含关系是这样的：</p>
+<p>内积空间 <span class="arithmatex">\(\subset\)</span> 赋范空间 <span class="arithmatex">\(\subset\)</span> 可度量化的 TVS<span class="arithmatex">\(\subset\)</span> 拓扑向量空间</p>
+</div>
+</div>
+<p>下面先介绍赋范（线性）空间</p>
+<h2 id="normed-spaces">Normed spaces<a class="headerlink" href="#normed-spaces" title="Permanent link">⚓︎</a></h2>
+<p>所谓的“赋范”就是指给空间赋以一个范数，那么就应当先给出范数的定义：</p>
+<div class="admonition note">
+<p class="admonition-title">Definition(norm)</p>
+<p>Let <span class="arithmatex">\(E\)</span> be a vector space over the field <span class="arithmatex">\(\mathbb{K}=\mathbb{R}\ or\ \mathbb{C}\)</span>, and let a function <span class="arithmatex">\(\lVert \cdot \rVert: E\to \mathbb{R}_{+}:=[0,\infty)\)</span> is a <em>norm</em> if the following 3 conditions are satisfied:
+1. <span class="arithmatex">\(\lVert x \rVert \geqslant 0\)</span> for all <span class="arithmatex">\(x\in E\)</span> and <span class="arithmatex">\(\lVert x \rVert = 0\iff x=0\)</span>
+2. <span class="arithmatex">\(\lVert \lambda x \rVert =\lvert \lambda \rvert\lVert x \rVert\)</span> for all <span class="arithmatex">\(\lambda\in \mathbb{K}\)</span> and <span class="arithmatex">\(x\in E\)</span>
+3. <span class="arithmatex">\(\lVert x+y \rVert \leqslant \lVert x \rVert + \lVert y \rVert\)</span> for all <span class="arithmatex">\(x,y\in E\)</span> (Triangle inequality)</p>
+<p>and we call <span class="arithmatex">\((E,\lVert \cdot \rVert)\)</span> a <strong>normed(vector) space</strong></p>
+</div>
+<p>A norm will induce a metric <span class="arithmatex">\(d\)</span> and it's defined by</p>
+<div class="arithmatex">\[
+d(x,y)=\lVert x-y \rVert ,\forall x,y,z\in E
+\]</div>
+<p>这是非常显然的，度量就是两个向量差的范数，所以有了范数就一定有度量和距离的概念</p>
+<div class="admonition warning">
+<p class="admonition-title">Remark：LCS and TVS</p>
+<p>Some terms may be used later: locally convex space(LCS for short), topological vector spaces(TVS)
+We note that <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\ or\ \mathbb{R}\)</span>, so we should consider <span class="arithmatex">\(\overline{x}y\not\neq x \overline{y}\)</span></p>
+</div>
+<p>We should know some about <em>topological vector spaces(TVS)</em>. You can find more about TVS in 拓扑向量空间 (TVS)(赋予了范数拓扑的赋范空间是一个局部凸拓扑向量空间 (LCS))</p>
+<p>给出一些简单范数的例子（证明只需要根据定义 check）</p>
+<div class="admonition example">
+<p class="admonition-title">范数例子</p>
+<ol>
+<li>欧式范数
+在有限维的向量空间上定义一组基，定义范数 (<span class="arithmatex">\(\lVert \cdot \rVert : E\to[0,+\infty)\)</span>) 为：</li>
+</ol>
+<div class="arithmatex">\[\lVert x \rVert _{2}:= \left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{2} \right) ^{ \frac{1}{2}},\forall x=\sum\limits_{i=1}^{n} x_{i}e_{i}\in E\]</div>
+<ol>
+<li><span class="arithmatex">\(p\)</span> 范数
+对于<span class="arithmatex">\(1\leqslant p &lt; \infty\)</span>，定义在<span class="arithmatex">\(\mathbb{K}^{n}\)</span>上的范数为</li>
+</ol>
+<div class="arithmatex">\[\lVert x \rVert _{p}=\left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{p} \right)^{\frac{1}{p}}\]</div>
+<p>比较特别的是无穷范数<span class="arithmatex">\(\lVert x \rVert_{\infty}=\max\limits_{1\leqslant i \leqslant n}\lvert x_{i} \rvert\)</span>，事实上这只是针对于序列的，关于函数空间也有相应的<span class="arithmatex">\(p\)</span>范数会在后续定义</p>
+<ol>
+<li><em>Frobenius norm</em> or <em>Hilbert-Schmidt norm</em>
+定义矩阵函数：<span class="arithmatex">\(M_{mn}\to[0,+\infty)\)</span>如下：</li>
+</ol>
+<div class="arithmatex">\[\lVert A \rVert =\left( \sum\limits_{i=1}^{m} \sum\limits_{j=1}^{n} \lvert a_{ij} \rvert ^{2} \right)^{\frac{1}{2}},\forall A=(a_{ij}){1\leqslant i \leqslant m, 1\leqslant j \leqslant n}\in M_{mn}\]</div>
+</div>
+<p>下面给出一些关于<span class="arithmatex">\(l_{\infty}\)</span>的子空间的例子</p>
+<div class="admonition example">
+<p class="admonition-title">important normed subspaces of <span class="arithmatex">\(l_{\infty}\)</span></p>
+<p>(1) <span class="arithmatex">\(c=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}\ exists \right\}\)</span>
+(2) <span class="arithmatex">\(c_{0}=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}=0 \right\}\)</span>
+(3) <span class="arithmatex">\(c_{00}=\left\{ (x_{n})_{n=1}^{\infty}:x_{n}=0 \right\}\)</span> <span class="arithmatex">\(x_{n}=0\)</span> for all but at most finitely many <span class="arithmatex">\(n\)</span></p>
+</div>
+<p>其中第一个就是一个极限存在的数列，第二个就是一个极限是0的数列，第三个则是一个至多有有限多个项能够取到0的极限为0的数列</p>
+<p>有一个不那么显然的范数判断留作习题，请参考<em>Exercises 2.1 8</em></p>
+<p>实际上在上面关于<span class="arithmatex">\(p\)</span>范数的三角不等式性质证明中我们需要两个著名的不等式(<span class="arithmatex">\(H \ddot{o} lder\)</span> inequality and Minkowski inequality)，在此citing with proof，后续不再赘述</p>
+<div class="admonition tip">
+<p class="admonition-title">Theorem(<span class="arithmatex">\(H\ddot{o}lder\)</span>'s inequality)</p>
+<p>Here use <span class="arithmatex">\(\mu\)</span> as a positive measure and a set <span class="arithmatex">\(\Omega\)</span>, let <span class="arithmatex">\(1&lt;p&lt;\infty\)</span>. For any <span class="arithmatex">\(f\in L^{p}(\Omega,\mu)\)</span> and <span class="arithmatex">\(g\in L^{q}(\Omega,\mu)\)</span>, where <span class="arithmatex">\(\frac{1}{p}+ \frac{1}{q}=1\)</span>, we have <span class="arithmatex">\(fg\in L^{1}(\Omega,\mu)\)</span> and</p>
+<div class="arithmatex">\[\lVert fg \rVert _{1}=\int_{\Omega}\lvert fg \rvert d \mu \leqslant \left( \int_{\Omega}\lvert f \rvert ^{p} d\mu \right)^{\frac{1}{p}}\left( \int_{\Omega}\lvert g \rvert ^{q}d\mu \right)^{\frac{1}{q}}=\lVert f \rVert _{p}\lVert g \rVert _{q}\]</div>
+</div>
+<p><code>Proof.</code></p>
+<p>Step 1</p>
+<p>Consider a convex function <span class="arithmatex">\(\varphi(t) = \frac{t^{p}}{p}+ \frac{1}{q}-t,t\in[0,\infty)\)</span>, so its minimum <span class="arithmatex">\(\varphi(1) =0\)</span> when <span class="arithmatex">\(t=1\)</span>, we can get <span class="arithmatex">\(\frac{t^{p}}{p}+ \frac{1}{q}\geqslant t,\forall t\in[0,\infty)\)</span>. Let <span class="arithmatex">\(t=uv^{-\frac{q}{p}}\)</span> for any <span class="arithmatex">\(u,v\geqslant 0\)</span> and one can derive that <span class="arithmatex">\(uv \leqslant \frac{u^{p}}{p}+ \frac{v^{q}}{q}\)</span></p>
+<p>Step 2</p>
+<p>Setting <span class="arithmatex">\(u= \frac{\lvert f(t) \rvert}{\lVert f \rVert_{p}},v= \frac{\lvert g(t) \rvert}{\lVert g \rVert_{q}}\)</span>(Obviously we should assume they are greater than zero) we derive that</p>
+<div class="arithmatex">\[
+\frac{\lvert f(t)g(t) \rvert }{\lVert f \rVert _{p}\lVert g \rVert _{q}}\leqslant \frac{\lvert f(t) \rvert ^{p}}{p\lVert f \rVert _{p}^{p}}+ \frac{\lvert g(t) \rvert ^{q}}{q\lVert g \rVert _{q}^{q}},\forall t\in\Omega
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+\frac{\int_{\Omega} \lvert fg \rvert d\mu }{\lVert f \rVert _{p}\lVert g \rVert _{q}}\leqslant \frac{1}{p} \frac{\int_{\Omega}\lvert f\rvert ^{p}d\mu}{\lVert f \rVert _{p}^{p}}+ \frac{1}{q} \frac{\int_{\Omega}\lvert g\rvert ^{q}d\mu}{\lVert g \rVert _{q}^{q}}= \frac{1}{p}+ \frac{1}{q}=1
+\]</div>
+<p>So we get it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Theorem(Minkowski inequality)</p>
+<p>Let <span class="arithmatex">\(\mu\)</span> be a positive measure on a set <span class="arithmatex">\(\Omega\)</span>，<span class="arithmatex">\(1\leqslant p &lt; \infty\)</span> and <span class="arithmatex">\(f,g\in L^{p}(\Omega,\mu)\)</span>. We have</p>
+<div class="arithmatex">\[\lVert f+g \rVert _{p}\leqslant \lVert f \rVert _{p}+\lVert g \rVert _{p}\]</div>
+<p>that is,</p>
+<div class="arithmatex">\[\left( \int_{\Omega}\lvert f+g \rvert ^{p}d\mu \right)^{\frac{1}{p}}\leqslant\left( \int_{\Omega}\lvert f \rvert ^{p}d\mu \right)^{ \frac{1}{p}}+\left( \int_{\Omega}\lvert g \rvert ^{p} d\mu\right)^{\frac{1}{p}}\]</div>
+</div>
+<p><code>Proof.</code></p>
+<p>稍微陈述一下证明脉络：做一个拆分然后使用<span class="arithmatex">\(H \ddot{o} lder\)</span>不等式进行放缩</p>
+<p>Very easy.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert f+g \rVert _{p}^{p}&amp;=\int_{\Omega}\lvert f+ g\rvert^{p}d\mu=\int_{\Omega}\lvert f+g \rvert ^{p-1}\lvert f+g \rvert d\mu\\
+&amp;\leqslant\int_{\Omega}\lvert f+g \rvert ^{p-1}(\lvert f \rvert +\lvert g \rvert )d\mu\\
+&amp;\overset{H \ddot{o} lder \ Inequality}{\leqslant}\lVert \lvert f+g \rvert ^{p-1} \rVert _{q}\lVert f \rVert _{p}+\lVert \lvert f+g \rvert ^{p-1} \rVert _{q}\lVert g \rVert _{p}\left( q= \frac{p}{p-1} \right)\\
+&amp;=\lVert \lvert f+g \rvert ^{p-1} \rVert _{q}(\lVert f \rVert _{p}+\lVert g \rVert _{p})\\
+&amp;=\lVert f+g \rVert ^{p-1}_{p}(\lVert f \rVert _{p}+\lVert g \rVert _{p})\\
+\lVert f+g \rVert _{p}&amp;\leqslant\lVert f \rVert _{p}+\lVert g \rVert _{p}
+\end{aligned}
+\]</div>
+<p>定义了范数（Norm）的向量空间称为<strong>赋范空间</strong>(Normed Space，或赋范线性空间)</p>
+<p>在泛函分析中，我们主要研究这类空间。其中，最基本且最早被深入研究的一类是实数域或复数域上的<strong>完备赋范空间</strong>，这类空间被称为<strong>Banach空间</strong>。另一个重要的例子是<strong>Hilbert空间</strong>，它是一种特殊的 Banach 空间(准确的说是完备的内积空间)，其范数由一个内积所诱导</p>
+<p>由于我们上面所介绍的范数和对应的空间都是针对于序列的，因此我们不免想要专门抽象出一个空间来进行表示，我们希望它能够将已有的范数概念推广到无穷维的序列上(推广至无穷也正是泛函分析这一学科研究的核心内容)，序列空间正是作为<strong>有限维向量空间<span class="arithmatex">\(\mathbb{K}^{n}\)</span>在无限维情况下的自然抽象和推广</strong>，为无限维背景下研究收敛性、完备性、连续性提供了基础的模型</p>
+<p>下面介绍一下Sequence spaces(序列空间)的内容，在泛函分析及其他领域中，序列空间就是一个向量空间，元素为实数或复数，等价地是一个函数空间(<span class="arithmatex">\(\mathbb{N}(\mathbb{Z})\to \mathbb{K}\)</span>)，所有的函数集自然与可能的元素在<span class="arithmatex">\(\mathbb{K}\)</span>中的无限序列集相对应，并且在逐点加法与数乘运算中构成一个向量空间</p>
+<p>那么关于上面的序列空间，我们仍然需要为它配备一个范数，这就引出了<span class="arithmatex">\(\ell_{p}\)</span>空间，它很好继承了有限维情况下结构良好的<span class="arithmatex">\(p\)</span>范数的性质，又兼具无穷求和有限的性质，便于进行分析，保证了范数的有界性，并且它也是完备的(Banach空间)</p>
+<p>给出<span class="arithmatex">\(\ell_{p}\)</span>空间的定义：</p>
+<div class="admonition note">
+<p class="admonition-title">Definiotion(<span class="arithmatex">\(l_{p}\)</span> space)</p>
+<p>Let <span class="arithmatex">\(I\)</span> be a set and <span class="arithmatex">\(1\leqslant p &lt; \infty\)</span> and <span class="arithmatex">\(l_{p}(I)\)</span> to be the set of all functions <span class="arithmatex">\(x:I\to \mathbb{K}\)</span> s.t.</p>
+<div class="arithmatex">\[\sum\limits_{i\in I}\lvert x(i) \rvert^{p}:=\lim\limits_{ F\in \mathcal{F} }\lvert x(i) \rvert ^{p}&lt;\infty   \]</div>
+<p>where <span class="arithmatex">\(\mathcal{F}\)</span> is the direct family of finite subsets of <span class="arithmatex">\(I\)</span> ordered by set inclusion</p>
+</div>
+<p>实际上<span class="arithmatex">\(\ell^{p}\)</span>空间是<span class="arithmatex">\(L^{p}\)</span>空间在计数测度的一种特殊情况</p>
+<blockquote>
+<p>The most important sequence spaces in analysis are the ⁠⁠ spaces, consisting of the ⁠⁠power summable sequences, with the ⁠⁠-norm. These are special cases of <a href="https://en.wikipedia.org/wiki/Lp_space" title="Lp space">⁠Lp spaces</a> for the <a href="https://en.wikipedia.org/wiki/Counting_measure" title="Counting measure">counting measure</a> on the set of natural numbers. Other important classes of sequences like <a href="https://en.wikipedia.org/wiki/Convergent_sequence" title="Convergent sequence">convergent sequences</a> or <a href="https://en.wikipedia.org/wiki/Sequence_space#c,_c0_and_c00">null sequences</a> form sequence spaces, respectively denoted ⁠⁠ and ⁠⁠, with the <a href="https://en.wikipedia.org/wiki/Supremum_norm" title="Supremum norm">sup norm</a>. Any sequence space can also be equipped with the <a href="https://en.wikipedia.org/wiki/Topology" title="Topology">topology</a> of <a href="https://en.wikipedia.org/wiki/Pointwise_convergence" title="Pointwise convergence">pointwise convergence</a>, under which it becomes a special kind of <a href="https://en.wikipedia.org/wiki/Fr%C3%A9chet_space" title="Fréchet space">Fréchet space</a>called <a href="https://en.wikipedia.org/wiki/FK-space" title="FK-space">FK-space</a>.</p>
+</blockquote>
+<p>关于 <span class="arithmatex">\(L^{p}\)</span> 空间的内容可以参考实分析教材或是 wikipedia，相关的博客<a href="https://www.bananaspace.org/wiki/Lp_%E7%A9%BA%E9%97%B4">香蕉空间</a>的撰写也很有意思，列在下面(老师的讲义中也有这一部分，所以不重复叙述了)</p>
+<div class="admonition tip">
+<p class="admonition-title">Generation(<span class="arithmatex">\(L^{p}\)</span> space)</p>
+<p>设 <span class="arithmatex">\((X,\mathcal{A},\mu)\)</span> 为测度空间，<span class="arithmatex">\(f:X\to \mathbb{K}\)</span> 为可测函数，<span class="arithmatex">\(p\in[0,+\infty]\)</span>，则 <span class="arithmatex">\(f\)</span> 的 <span class="arithmatex">\(L^{p}\)</span> 范数（<span class="arithmatex">\(p-\)</span> 范数），记为 <span class="arithmatex">\(\lVert f \rVert_{p}\in[0,+\infty]\)</span>，定义如下</p>
+<div class="arithmatex">\[\lVert f \rVert _{p}=\left( \int_{X}\lvert f \rvert ^{p}d\mu \right)^{\frac{1}{p}}\]</div>
+<p>其中的积分为 Lebesgue 积分，若是 <span class="arithmatex">\(p=\infty\)</span>，将 <span class="arithmatex">\(\lVert f \rVert_{\infty}\)</span> 定义为对于几乎所有 <span class="arithmatex">\(x\in X\)</span> 成立的最小上确界 (essential)，当 <span class="arithmatex">\(\mu(X)&gt;0\)</span>，称作 <span class="arithmatex">\(\lvert f \rvert\)</span> 的本质上确界 (essential supremum)，此时 <span class="arithmatex">\(L^{\infty}\)</span> 范数也称为一致范数</p>
+<div class="arithmatex">\[ess\ \sup\ f = inf\left\{ \beta:\lvert f(t) \rvert \leqslant \beta\ \mu-a.e. \right\}  \]</div>
+<p><span class="arithmatex">\(\ell^{p}\)</span> 是取 <span class="arithmatex">\(X=\mathbb{Z}_{&gt;0}\)</span> 并采用计数测度而得到的 <span class="arithmatex">\(L^{p}\)</span> 空间，其元素可视为形如 <span class="arithmatex">\(x=(x_{1},x_{2},\dots)\)</span> 并使得范数 <span class="arithmatex">\(\lVert x \rVert_{p}=\left( \sum\limits_{i=1}^{\infty}\lvert x_{i} \rvert ^{p}\right) ^{\frac{1}{p}}\)</span> 有限的实数列</p>
+</div>
+<p>essential supremum 的定义是很好用的，它说明 <span class="arithmatex">\(ess\ \sup(f-g)=0\)</span> 等价于两函数相差一个零测集，可以视作等价，记为 <span class="arithmatex">\([f]\)</span> 或是简单的 <span class="arithmatex">\(f\)</span> 表示在 <span class="arithmatex">\(\Omega\)</span> 上只与 <span class="arithmatex">\(f\)</span> 相差一个零测集的可测函数的等价类</p>
+<p>关于 <span class="arithmatex">\(L^{p}(\Omega,\mu)\)</span> 是 <span class="arithmatex">\(p\)</span> 范数下的赋范线性空间的证明留做习题</p>
+<p>再给出一个比较特殊情况的 <span class="arithmatex">\(p\)</span> 范数，就是在连续的函数空间 <span class="arithmatex">\(C[a,b]\)</span>(real or complex valued continuous functions defined on the closed interval <span class="arithmatex">\([a,b]\)</span>) 中：</p>
+<div class="arithmatex">\[
+\lVert f \rVert _{p}=\left( \int_{a}^{b} \lvert f(t) \rvert ^{p} \, dt  \right) ^{\frac{1}{p}}
+\]</div>
+<p>显而易见，<span class="arithmatex">\(\lVert f \rVert_{\infty}=\max\limits_{t\in[a,b]}\lvert f(t) \rvert\)</span>，这就是原本在一般测度空间 <span class="arithmatex">\((X,\mathcal{A},\mu)\)</span> 和 Lebesgue 积分下 <span class="arithmatex">\(p\)</span> 范数的特殊化，将测度空间定义在闭区间上，测度即为区间长度（连续性），根据连续函数积分的定理，其上 Lebesgue 积分值与 Riemann 积分相同，因此可以直接使用 R 积分</p>
+<div class="admonition quote">
+<p class="admonition-title">一些术语</p>
+<p>BV(Bounded Variation) 即有界变差</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(E,F\)</span> be two normed spaces. A linear operator <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(E\)</span> into <span class="arithmatex">\(F\)</span> is continuous with respect to the norm topology of <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(F\)</span> if and only if for any sequence <span class="arithmatex">\((x_{n})_{n\in \mathbb{N}}\)</span> in <span class="arithmatex">\(E\)</span></p>
+<div class="arithmatex">\[x_{n}\to 0\ in \ E \implies Tx_{n}\to 0\ in\ F\]</div>
+</div>
+<p>这个定理回答了赋范线性空间下如何判断线性算子连续性的问题，当且仅当它在零点处是序列连续的，这个定理成立的关键就是线性算子的线性性和赋范空间的平移不变性</p>
+<p>给出范数等价的定义</p>
+<div class="admonition note">
+<p class="admonition-title">Definition(equivalent of norms)</p>
+<p>Two norms <span class="arithmatex">\(\lVert \cdot \rVert_{1},\lVert \cdot \rVert_{2}\)</span> defined on a vector space <span class="arithmatex">\(E\)</span> are equivalent if there are constants <span class="arithmatex">\(\alpha,\beta&gt;0\)</span> such that</p>
+<div class="arithmatex">\[\alpha \lVert x \rVert_{1}\leqslant \lVert x \rVert_{2}\leqslant \beta \lVert x \rVert _{1}\]</div>
+<p>in this case, we write <span class="arithmatex">\(\lVert \cdot \rVert_{1}\sim \lVert \cdot \rVert_{2}\)</span></p>
+</div>
+<p>关于 norm topology 的定义可以参考<a href="https://en.wikipedia.org/wiki/Operator_topologies">wikipedia</a>，简单来说就是拓扑诱导生成度量，而度量产生拓扑(一个满足相应条件的集族)，范数拓扑就可以简单理解为所有开球的任意并集构成的集合，而开球族可以利用球心和半径定义(实际上是拓扑基的定义)</p>
+<p>用范数拓扑的语言来写范数等价性条件就是：</p>
+<div class="admonition note">
+<p class="admonition-title">Proposition(equivalent of norms)</p>
+<p>Two norms <span class="arithmatex">\(\lVert \cdot \rVert_{1},\lVert \cdot \rVert_{2}\)</span> defined on a vector space <span class="arithmatex">\(E\)</span> are equivalent if and only if they define the same norm topology on <span class="arithmatex">\(E\)</span></p>
+</div>
+<p>实际上对于有限维向量空间 <span class="arithmatex">\(E\)</span> 而言，任意两个范数是等价的，也就是说只有一种范数拓扑定义在 <span class="arithmatex">\(E\)</span> 上</p>
+<p>再给出赋范线性空间等价的定义</p>
+<div class="admonition note">
+<p class="admonition-title">Definition(equivalent of normed spaces)</p>
+<p>Two normed spaces <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(F\)</span> are equivalent(resp. isometrically isomorphic) if there is a bijective linear map <span class="arithmatex">\(T:E\to F\)</span> such that both <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(T^{-1}\)</span> are continuous(resp. isometries)</p>
+</div>
+<h2 id="exercises-21">Exercises 2.1<a class="headerlink" href="#exercises-21" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">(1)</p>
+<p>If <span class="arithmatex">\(E\)</span> is a linear space on which is given a mapping <span class="arithmatex">\(p: E \to [0, \infty)\)</span> with the properties:
+(a) <span class="arithmatex">\(p(x) = 0 \iff x = 0\)</span>;
+(b) <span class="arithmatex">\(p(\lambda x) = |\lambda|p(x)\)</span> for any <span class="arithmatex">\(x \in E\)</span> and <span class="arithmatex">\(\lambda \in \mathbb{K}\)</span>.
+Prove that <span class="arithmatex">\(p\)</span> is a norm if and only if <span class="arithmatex">\(U_E := \{x \in E : p(x) \le 1\}\)</span> is convex.</p>
+<p>纯定义，Gemini3 写的</p>
+</div>
+<p><code>Proof.</code></p>
+<p>First, assume <span class="arithmatex">\(p\)</span> is a norm. Then <span class="arithmatex">\(p\)</span> satisfies the triangle inequality <span class="arithmatex">\(p(x+y) \le p(x) + p(y)\)</span>. Let <span class="arithmatex">\(x, y \in U_E\)</span> and <span class="arithmatex">\(t \in [0, 1]\)</span>. We have <span class="arithmatex">\(p(x) \le 1\)</span> and <span class="arithmatex">\(p(y) \le 1\)</span>.</p>
+<div class="arithmatex">\[p(tx + (1-t)y) \le p(tx) + p((1-t)y) = |t|p(x) + |1-t|p(y)\]</div>
+<p>Since <span class="arithmatex">\(t \in [0, 1]\)</span>, this equals <span class="arithmatex">\(t p(x) + (1-t)p(y) \le t(1) + (1-t)(1) = 1\)</span>. Thus <span class="arithmatex">\(tx + (1-t)y \in U_E\)</span>, so <span class="arithmatex">\(U_E\)</span> is convex.</p>
+<p>Conversely, assume <span class="arithmatex">\(U_E\)</span> is convex. We must show the triangle inequality <span class="arithmatex">\(p(x+y) \le p(x) + p(y)\)</span> to prove <span class="arithmatex">\(p\)</span> is a norm.</p>
+<p>Let <span class="arithmatex">\(x, y \in E\)</span> be non-zero vectors (the zero case is trivial). As following:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac{p(x)}{p(x)+p(y)} \frac{x}{p(x)}+\frac{p(y)}{p(x)+p(y)} \frac{y}{p(y)}&amp; = \frac{x+y}{p(x)+p(y)}\\
+p\left( \frac{x+y}{p(x)+p(y)} \right)&amp;\leqslant 1\\
+p(x+y)\leqslant p(x)+&amp;p(y)
+\end{aligned}
+\]</div>
+<p>Thus <span class="arithmatex">\(p\)</span> is a norm.</p>
+<div class="admonition question">
+<p class="admonition-title">(2)</p>
+<p>Prove that the norm topology defined by a norm <span class="arithmatex">\(\|\cdot\|\)</span> of a normed space <span class="arithmatex">\(E\)</span> is a vector topology.</p>
+<p>需要熟知向量拓扑和范数拓扑的定义，由范数生成的拓扑一定是一个向量拓扑，所以每一个赋范空间都是一个</p>
+</div>
+<p><code>Proof.</code></p>
+<p>A topology on a vector space is a vector topology if vector addition and scalar multiplication are continuous mappings.</p>
+<ol>
+<li>Continuity of addition <span class="arithmatex">\((x, y) \mapsto x+y\)</span>:</li>
+</ol>
+<p>We need to show that if <span class="arithmatex">\(x_n \to x\)</span> and <span class="arithmatex">\(y_n \to y\)</span> in the norm topology, then <span class="arithmatex">\(x_n + y_n \to x + y\)</span>.
+Using the triangle inequality:</p>
+<div class="arithmatex">\[\|(x_n + y_n) - (x + y)\| = \|(x_n - x) + (y_n - y)\| \le \|x_n - x\| + \|y_n - y\|\]</div>
+<p>Since <span class="arithmatex">\(\|x_n - x\| \to 0\)</span> and <span class="arithmatex">\(\|y_n - y\| \to 0\)</span>, the right side converges to 0. Thus <span class="arithmatex">\(x_n + y_n \to x + y\)</span>.</p>
+<ol>
+<li>Continuity of scalar multiplication <span class="arithmatex">\((\lambda, x) \mapsto \lambda x\)</span>:</li>
+</ol>
+<p>We need to show that if <span class="arithmatex">\(\lambda_n \to \lambda\)</span> in <span class="arithmatex">\(\mathbb{K}\)</span> and <span class="arithmatex">\(x_n \to x\)</span> in <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(\lambda_n x_n \to \lambda x\)</span>.</p>
+<p>Consider the difference:</p>
+<div class="arithmatex">\[\begin{aligned}
+\|\lambda_n x_n - \lambda x\| = \|\lambda_n x_n - \lambda_n x + \lambda_n x - \lambda x\| &amp;= \|\lambda_n(x_n - x) + (\lambda_n - \lambda)x\|\\
+&amp;\le |\lambda_n| \|x_n - x\| + |\lambda_n - \lambda| \|x\|
+\end{aligned}\]</div>
+<p>Since the sequence <span class="arithmatex">\(\lambda_n\)</span> is convergent, it is bounded, so there exists <span class="arithmatex">\(M &gt; 0\)</span> such that <span class="arithmatex">\(|\lambda_n| \le M\)</span> for all <span class="arithmatex">\(n\)</span>.</p>
+<div class="arithmatex">\[\|\lambda_n x_n - \lambda x\| \le M \|x_n - x\| + |\lambda_n - \lambda| \|x\|\]</div>
+<p>As <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(\|x_n - x\| \to 0\)</span> and <span class="arithmatex">\(|\lambda_n - \lambda| \to 0\)</span>, so the entire expression converges to 0. Thus the norm topology is a vector topology.</p>
+<div class="admonition question">
+<p class="admonition-title">(3)</p>
+<p>Prove that the norm function is continuous with respect to the norm topology, that is,
+<span class="arithmatex">\(x_n \to x\)</span> in <span class="arithmatex">\(E \implies \|x_n\| \to \|x\|\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p>范数函数关于它所生成的拓扑是连续的，有点废话，实际上算是 Lipschitz 连续</p>
+</div>
+<p><code>Proof.</code></p>
+<p>From the triangle inequality, we have <span class="arithmatex">\(\|x_n\| = \|x_n - x + x\| \le \|x_n - x\| + \|x\|\)</span>, which implies <span class="arithmatex">\(\|x_n\| - \|x\| \le \|x_n - x\|\)</span>. Similarly, <span class="arithmatex">\(\|x\| = \|x - x_n + x_n\| \le \|x - x_n\| + \|x_n\|\)</span>, which implies <span class="arithmatex">\(\|x\| - \|x_n\| \le \|x_n - x\|\)</span>. Combining these gives the reverse triangle inequality:</p>
+<p><span class="arithmatex">\(| \|x_n\| - \|x\| | \le \|x_n - x\|\)</span></p>
+<p>If <span class="arithmatex">\(x_n \to x\)</span> in <span class="arithmatex">\(E\)</span>, then by definition <span class="arithmatex">\(\|x_n - x\| \to 0\)</span>. Therefore, <span class="arithmatex">\(| \|x_n\| - \|x\| | \to 0\)</span>, which means <span class="arithmatex">\(\|x_n\| \to \|x\|\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<div class="admonition question">
+<p class="admonition-title">(4)</p>
+<p>Convergent sequence in a normed space is a bounded sequence.</p>
+<p>纯无聊，这是数学分析的定义问题</p>
+</div>
+<p><code>Proof.</code></p>
+<p>Let <span class="arithmatex">\((x_n)\)</span> be a convergent sequence in a normed space <span class="arithmatex">\(E\)</span> with limit <span class="arithmatex">\(x\)</span>. By the definition of convergence, taking <span class="arithmatex">\(\epsilon = 1\)</span>, there exists a natural number <span class="arithmatex">\(N\)</span> such that for all <span class="arithmatex">\(n &gt; N\)</span>, <span class="arithmatex">\(\|x_n - x\| &lt; 1\)</span>. For these <span class="arithmatex">\(n &gt; N\)</span>, using the triangle inequality:</p>
+<div class="arithmatex">\[\|x_n\| = \|x_n - x + x\| \le \|x_n - x\| + \|x\| &lt; 1 + \|x\|\]</div>
+<p>Let <span class="arithmatex">\(M = \max\{\|x_1\|, \|x_2\|, \dots, \|x_N\|, 1 + \|x\|\}\)</span>. Then <span class="arithmatex">\(\|x_n\| \le M\)</span> for all <span class="arithmatex">\(n \in \mathbb{N}\)</span>. Thus, the sequence is bounded.</p>
+<div class="admonition question">
+<p class="admonition-title">(5)</p>
+<p>Let <span class="arithmatex">\(E\)</span> be a normed space and <span class="arithmatex">\(x_0, y_0\)</span> in <span class="arithmatex">\(E\)</span> such that <span class="arithmatex">\(\|x_0 + y_0\| = \|x_0\| + \|y_0\|\)</span>. Prove that for all <span class="arithmatex">\(\lambda, \mu \ge 0\)</span>, <span class="arithmatex">\(\|\lambda x_0 + \mu y_0\| = \lambda\|x_0\| + \mu\|y_0\|\)</span>.</p>
+<p>仍然非常简单</p>
+</div>
+<p><code>Proof.</code></p>
+<p>不妨假设 <span class="arithmatex">\(\lambda \le \mu\)</span> (如果 <span class="arithmatex">\(\lambda &gt; \mu\)</span>，则交换 <span class="arithmatex">\(x_0\)</span> 和 <span class="arithmatex">\(y_0\)</span> 的位置即可，证明是对称的)</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert \lambda x_{0}+\mu y_{0} \rVert &amp; = \lVert \mu(x_{0}+y_{0})-(\mu-\lambda)x_{0} \rVert \\
+&amp;\geqslant \mu \lVert x_{0}+y_{0} \rVert -(\mu-\lambda) \lVert x_{0} \rVert\\
+&amp;=\mu \lVert x_{0} \rVert +\mu \lVert y_{0} \rVert -(\mu-\lambda)\lVert x_{0} \rVert\\
+&amp;=\lambda \lVert x_{0} \rVert +\mu \lVert y_{0} \rVert
+\end{aligned}
+\]</div>
+<p>Conversely, by the triangle inequality:</p>
+<div class="arithmatex">\[\|\lambda x_0 + \mu y_0\| \le \|\lambda x_0\| + \|\mu y_0\| = \lambda \|x_0\| + \mu \|y_0\|\]</div>
+<p>Since the quantity is bounded both above and below by <span class="arithmatex">\(\lambda \|x_0\| + \mu \|y_0\|\)</span>, equality holds.</p>
+<div class="admonition question">
+<p class="admonition-title">(6)</p>
+<p>Let <span class="arithmatex">\(T\)</span> be a continuous one-to-one linear operator from a normed space <span class="arithmatex">\(E_1\)</span> onto a normed space <span class="arithmatex">\(E_2\)</span>. Prove that <span class="arithmatex">\(T^{-1}\)</span> is a linear operator. If <span class="arithmatex">\(T^{-1}\)</span> is continuous then <span class="arithmatex">\(T\)</span> is said to be a <em>topological isomorphism</em> from <span class="arithmatex">\(E_1\)</span> onto <span class="arithmatex">\(E_2\)</span>; and <span class="arithmatex">\(E_1\)</span> is said to be <em>topologically isomorphic</em> to <span class="arithmatex">\(E_2\)</span>. In this case, there exist positive numbers <span class="arithmatex">\(\alpha, \beta &gt; 0\)</span> such that <span class="arithmatex">\(\alpha \|x\| \le \|Tx\| \le \beta \|x\|\)</span>.</p>
+<p>直接计算<span class="arithmatex">\(T^{-1}\)</span>是线性的</p>
+</div>
+<p><code>Proof.</code></p>
+<p>First, we prove <span class="arithmatex">\(T^{-1}: E_2 \to E_1\)</span> is linear. Let <span class="arithmatex">\(u, v \in E_2\)</span> and <span class="arithmatex">\(k \in \mathbb{K}\)</span>. Since <span class="arithmatex">\(T\)</span> is onto, there exist unique <span class="arithmatex">\(x, y \in E_1\)</span> such that <span class="arithmatex">\(Tx = u\)</span> and <span class="arithmatex">\(Ty = v\)</span>, implying <span class="arithmatex">\(x = T^{-1}u\)</span> and <span class="arithmatex">\(y = T^{-1}v\)</span>.
+<span class="arithmatex">\(T(x + y) = Tx + Ty = u + v\)</span>. Applying <span class="arithmatex">\(T^{-1}\)</span> to both sides: <span class="arithmatex">\(T^{-1}(u + v) = x + y = T^{-1}u + T^{-1}v\)</span>.
+Similarly, <span class="arithmatex">\(T(kx) = kTx = ku\)</span>. Applying <span class="arithmatex">\(T^{-1}\)</span>: <span class="arithmatex">\(T^{-1}(ku) = kx = kT^{-1}u\)</span>. Thus <span class="arithmatex">\(T^{-1}\)</span> is linear.</p>
+<p>Now assume <span class="arithmatex">\(T^{-1}\)</span> is continuous. Since <span class="arithmatex">\(T\)</span> is a continuous linear operator, it is bounded. Thus, there exists <span class="arithmatex">\(\beta &gt; 0\)</span> such that <span class="arithmatex">\(\|Tx\| \le \beta \|x\|\)</span> for all <span class="arithmatex">\(x \in E_1\)</span>. This provides the upper bound. Since <span class="arithmatex">\(T^{-1}\)</span> is a continuous linear operator, it is bounded. Thus there exists a constant <span class="arithmatex">\(C &gt; 0\)</span> such that <span class="arithmatex">\(\|T^{-1}y\| \le C\|y\|\)</span> for all <span class="arithmatex">\(y \in E_2\)</span>. Let <span class="arithmatex">\(y = Tx\)</span>. Then <span class="arithmatex">\(\|x\| \le C\|Tx\|\)</span>. This implies <span class="arithmatex">\(\|Tx\| \ge \frac{1}{C}\|x\|\)</span>. Let <span class="arithmatex">\(\alpha = \frac{1}{C}\)</span>. Since <span class="arithmatex">\(C &gt; 0\)</span>, <span class="arithmatex">\(\alpha &gt; 0\)</span>. Combining these inequalities, we get <span class="arithmatex">\(\alpha \|x\| \le \|Tx\| \le \beta \|x\|\)</span>.</p>
+<div class="admonition question">
+<p class="admonition-title">(7)</p>
+<p>Let <span class="arithmatex">\(\mathcal{P}\)</span> be the vector space of polynomials defined on <span class="arithmatex">\([0, 1]\)</span>. Since <span class="arithmatex">\(\mathcal{P}\)</span> is a linear subspace of <span class="arithmatex">\(C[0, 1]\)</span>, it has the sup-norm <span class="arithmatex">\(\|\cdot\|_\infty\)</span>. And since <span class="arithmatex">\(\mathcal{P}\)</span> is a linear subspace of <span class="arithmatex">\(L^1[0, 1]\)</span>, it has another norm <span class="arithmatex">\(\|\cdot\|_1\)</span>. Show that <span class="arithmatex">\(\|\cdot\|_\infty\)</span> and <span class="arithmatex">\(\|\cdot\|_1\)</span> are not equivalent on <span class="arithmatex">\(\mathcal{P}\)</span>.</p>
+<p>直接反证法即可</p>
+</div>
+<p><code>Proof.</code></p>
+<p>Suppose on the contrary that <span class="arithmatex">\(\|\cdot\|_\infty\)</span> and <span class="arithmatex">\(\|\cdot\|_1\)</span> are equivalent. Then there exist positive numbers <span class="arithmatex">\(\alpha, \beta &gt; 0\)</span> such that</p>
+<div class="arithmatex">\[ \alpha\|f\|_1 \leq \|f\|_\infty \leq \beta\|f\|_1, \quad \forall f \in \mathcal{P} \]</div>
+<p>Let <span class="arithmatex">\(f_n\)</span> be the polynomial <span class="arithmatex">\(f_n(t) = t^n\)</span> (<span class="arithmatex">\(\forall t \in [0, 1]\)</span>). Then we have</p>
+<div class="arithmatex">\[ \|f_n\|_\infty = 1, \quad \|f_n\|_1 = \frac{1}{n+1}. \]</div>
+<p>On other hand, <span class="arithmatex">\(\|f_n\|_1 \geq \frac{1}{\beta}\|f_n\|_\infty = \frac{1}{\beta}\)</span>, which is a contradiction. </p>
+<div class="admonition question">
+<p class="admonition-title">(8)</p>
+<p>Let <span class="arithmatex">\(a &gt; 0\)</span>. On <span class="arithmatex">\(C[0,1]\)</span>, we consider two norms: <span class="arithmatex">\(\left\Vert \cdot \right\Vert_\infty\)</span> and</p>
+<div class="arithmatex">\[ \left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt, \quad \forall f \in C[0,1]. \]</div>
+<p>Prove that <span class="arithmatex">\(\left\Vert f \right\Vert = \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\}\)</span> is a norm on <span class="arithmatex">\(C[0,1]\)</span> if and only if <span class="arithmatex">\(a \leq 1\)</span>.</p>
+</div>
+<p><code>Proof.</code></p>
+<p>按照范数的定义验证:</p>
+<p>(1)非负性</p>
+<p>显然由于 <span class="arithmatex">\(\left\Vert f \right\Vert_{\infty}, \left\Vert f \right\Vert_{0} \geq 0\)</span>，<span class="arithmatex">\(\left\Vert f \right\Vert \geq 0\)</span>，并且<span class="arithmatex">\(\left\| f \right\|= \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} =0\)</span>当且仅当其中至少一个范数取<span class="arithmatex">\(0\)</span>时成立，而根据范数的定义，此时<span class="arithmatex">\(f=0\)</span>取等号。</p>
+<p>(2)齐次性</p>
+<p>对任意 <span class="arithmatex">\(\lambda \in \mathbb{R}\)</span>，有</p>
+<div class="arithmatex">\[\left\Vert \lambda f \right\Vert = \min\{\left\Vert \lambda f \right\Vert_\infty, \left\Vert \lambda f \right\Vert_0\} = |\lambda| \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} = |\lambda| \left\Vert f \right\Vert.\]</div>
+<p>(3)三角不等式</p>
+<p>充分性：当<span class="arithmatex">\(a \leq 1\)</span>时，有</p>
+<p>$<span class="arithmatex">\(\left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt \leq a \cdot 1 \cdot \left\Vert f \right\Vert_\infty \leq \left\Vert f \right\Vert_\infty,\)</span>$</p>
+<p>综上，有<span class="arithmatex">\(\left\| f \right\| = \min\{\left\| f \right\|_\infty, \left\| f \right\|_0\} = \left\| f \right\|_0\)</span>.</p>
+<p>必要性：考虑举反例，当<span class="arithmatex">\(a &gt; 1\)</span>时， 取<span class="arithmatex">\(f,g \in C[0,1]\)</span>，定义如下(先列出，大小关系后续讨论)</p>
+<div class="arithmatex">\[f(x)\equiv \varepsilon,\forall x\in[0,1]\]</div>
+<p>$$</p>
+<p>g(x)=\left{ \begin{matrix}</p>
+<p>&amp;n&amp;x=0 \</p>
+<p>&amp;linear &amp; x\in(0, \frac{1}{n}) \</p>
+<p>&amp;0&amp;x\geq \frac{1}{n}</p>
+<p>\end{matrix} \right.</p>
+<p>$$</p>
+<p>那么有<span class="arithmatex">\(\lVert f \rVert=\min\left\{ \varepsilon,a\varepsilon \right\}=\varepsilon(a&gt;1),\lVert g \rVert=\min\left\{ n, \frac{a}{2} \right\}= \frac{a}{2}\)</span></p>
+<p>$$
+\lVert f+g \rVert =\min\left{ n+\varepsilon,a\varepsilon+ \frac{a}{2} \right}= a\varepsilon+ \frac{a}{2} &gt;\varepsilon+ \frac{a}{2}=\lVert f \rVert +\lVert g \rVert</p>
+<p>$$</p>
+<p>综上需要满足不等式组：</p>
+<p>$$\left{ \begin{matrix}</p>
+<p>&amp;n &gt; \frac{a}{2} \</p>
+<p>&amp;n+\varepsilon &gt; a\varepsilon + \frac{a}{2}</p>
+<p>\end{matrix} \right.</p>
+<p>$$</p>
+<p>直接取<span class="arithmatex">\(n=4a,\varepsilon =\frac{1}{n}\)</span>即可满足上述不等式组(<span class="arithmatex">\(4a+\frac{1}{4a}&gt; \frac{1}{4}+\frac{a}{2}\)</span>)，因此三角不等式不成立.</p>
+<div class="admonition question">
+<p class="admonition-title">(9)</p>
+<p>Let <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span> and <span class="arithmatex">\(G = \{(\xi_n)_{n \in \mathbb{N}} \in \ell_p : \sum_{n=1}^\infty \xi_n = 0\}\)</span>. Prove that <span class="arithmatex">\(G \subseteq \ell_p\)</span> is not closed.</p>
+</div>
+<p><code>Proof.</code></p>
+<p>要证明 <span class="arithmatex">\(G\)</span> 不闭，只需找到一个序列 <span class="arithmatex">\(\{x^{(k)}\} \subset G\)</span>，使得它在 <span class="arithmatex">\(\ell_p\)</span> 范数下收敛于某个元素 <span class="arithmatex">\(x\)</span>，但 <span class="arithmatex">\(x \notin G\)</span>。
+考虑 <span class="arithmatex">\(\ell_p\)</span> 中的元素 <span class="arithmatex">\(e_1 = (1, 0, 0, \dots)\)</span>。显然 <span class="arithmatex">\(\sum_{n=1}^\infty (e_1)_n = 1 \neq 0\)</span>，所以 <span class="arithmatex">\(e_1 \notin G\)</span>。</p>
+<p>我们构造序列 <span class="arithmatex">\(x^{(k)} \in \ell_p\)</span> 如下：</p>
+<div class="arithmatex">\[x^{(k)} = (1, \underbrace{-\frac{1}{k}, -\frac{1}{k}, \dots, -\frac{1}{k}}_{k \text{ 个}}, 0, 0, \dots)\]</div>
+<p>也就是说，第 1 项是 1，第 2 到 <span class="arithmatex">\(k+1\)</span> 项是 <span class="arithmatex">\(-1/k\)</span>，其余项为 0。验证 <span class="arithmatex">\(x^{(k)} \in G\)</span>：</p>
+<div class="arithmatex">\[\sum_{n=1}^\infty x^{(k)}_n = 1 + \sum_{j=1}^k (-\frac{1}{k}) = 1 - 1 = 0\]</div>
+<p>所以 <span class="arithmatex">\(x^{(k)} \in G\)</span>。现在计算 <span class="arithmatex">\(\|x^{(k)} - e_1\|_p\)</span>：<span class="arithmatex">\(x^{(k)} - e_1 = (0, -\frac{1}{k}, \dots, -\frac{1}{k}, 0, \dots)\)</span></p>
+<div class="arithmatex">\[\|x^{(k)} - e_1\|_p = \left( \sum_{j=1}^k \left| -\frac{1}{k} \right|^p \right)^{1/p} = \left( k \cdot \frac{1}{k^p} \right)^{1/p} = (k^{1-p})^{1/p} = k^{\frac{1}{p} - 1}\]</div>
+<p>由于 <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span>，所以 <span class="arithmatex">\(\frac{1}{p} - 1 &lt; 0\)</span>。因此，当 <span class="arithmatex">\(k \to \infty\)</span> 时，<span class="arithmatex">\(\|x^{(k)} - e_1\|_p \to 0\)</span>。这说明 <span class="arithmatex">\(e_1\)</span> 是 <span class="arithmatex">\(G\)</span> 的一个极限点，但 <span class="arithmatex">\(e_1 \notin G\)</span>。因此 <span class="arithmatex">\(G\)</span> 不是闭集。</p>
+<div class="admonition question">
+<p class="admonition-title">(10)</p>
+<p>Is the set of all polynomials open in <span class="arithmatex">\(C[-1, 1]\)</span>?</p>
+</div>
+<p><code>Sol.</code></p>
+<p>不是。设 <span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(C[-1, 1]\)</span> 中所有多项式构成的集合。<span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(C[-1, 1]\)</span> 的一个真子空间（根据魏尔斯特拉斯逼近定理，<span class="arithmatex">\(P\)</span> 在 <span class="arithmatex">\(C[-1, 1]\)</span> 中稠密，但也存在非多项式的连续函数，例如 <span class="arithmatex">\(f(x) = |x|\)</span> 或 <span class="arithmatex">\(e^{|x|}\)</span>，故 <span class="arithmatex">\(P \neq C[-1, 1]\)</span>）。如果在赋范空间中一个线性子空间是开集，那么它必须包含一个原点的邻域（开球）。根据第 (11) 题的结论，<strong>任何包含开球的线性子空间必然是整个空间</strong>。由于 <span class="arithmatex">\(P \neq C[-1, 1]\)</span>，所以 <span class="arithmatex">\(P\)</span> 不包含任何开球，因此 <span class="arithmatex">\(P\)</span> 不是开集。事实上，真子空间的内部一定是空集。</p>
+<div class="admonition question">
+<p class="admonition-title">(11)</p>
+<p>Let <span class="arithmatex">\(E\)</span> be normed space. Find all linear subspaces <span class="arithmatex">\(E_0 \subseteq E\)</span> which contain a ball.</p>
+<p>主要是说这件事：任何包含开球的线性子空间必然是整个空间</p>
+</div>
+<p><code>Sol.</code></p>
+<p>唯一的这样的子空间是 <span class="arithmatex">\(E\)</span> 本身（即 <span class="arithmatex">\(E_0 = E\)</span>）</p>
+<p>证明如下：</p>
+<p>假设 <span class="arithmatex">\(E_0\)</span> 是 <span class="arithmatex">\(E\)</span> 的线性子空间，且包含一个开球 <span class="arithmatex">\(B(x_0, r) = \{x \in E : \|x - x_0\| &lt; r\} \subseteq E_0\)</span>。由于 <span class="arithmatex">\(E_0\)</span> 是子空间，它包含 <span class="arithmatex">\(-x_0\)</span>。根据子空间的加法封闭性，对于任意 <span class="arithmatex">\(z \in B(x_0, r)\)</span>，有 <span class="arithmatex">\(z - x_0 \in E_0\)</span>。注意到 <span class="arithmatex">\(B(x_0, r) - x_0 = B(0, r)\)</span>。这意味着原点周围的开球 <span class="arithmatex">\(B(0, r) = \{y \in E : \|y\| &lt; r\}\)</span> 包含在 <span class="arithmatex">\(E_0\)</span> 中。</p>
+<p>对于 <span class="arithmatex">\(E\)</span> 中任意非零元素 <span class="arithmatex">\(x \in E\)</span>，我们可以对其进行缩放：令 <span class="arithmatex">\(y = \frac{r}{2\|x\|} x\)</span>。显然 <span class="arithmatex">\(\|y\| = \frac{r}{2\|x\|} \|x\| = \frac{r}{2} &lt; r\)</span>，所以 <span class="arithmatex">\(y \in B(0, r) \subseteq E_0\)</span>。由于 <span class="arithmatex">\(E_0\)</span> 是线性空间，它对数乘封闭，所以 <span class="arithmatex">\(x = \frac{2\|x\|}{r} y\)</span> 必定也属于 <span class="arithmatex">\(E_0\)</span>。对于 <span class="arithmatex">\(x=0\)</span>，显然 <span class="arithmatex">\(0 \in E_0\)</span>。因此，对于任意 <span class="arithmatex">\(x \in E\)</span>，都有 <span class="arithmatex">\(x \in E_0\)</span>，即 <span class="arithmatex">\(E \subseteq E_0\)</span>。综上所述，<span class="arithmatex">\(E_0 = E\)</span>。</p>
+<div class="admonition question">
+<p class="admonition-title">(12)</p>
+<p>Given any <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span>, find an element <span class="arithmatex">\(a\)</span> such that <span class="arithmatex">\(a \in \ell_p\)</span> but <span class="arithmatex">\(a \notin \ell_q\)</span> for all <span class="arithmatex">\(1 \le q \le p\)</span>.</p>
+</div>
+<p>解答：
+题目中要求 <span class="arithmatex">\(a \notin \ell_q\)</span> for all <span class="arithmatex">\(1 \le q \le p\)</span> 包含 <span class="arithmatex">\(q=p\)</span> 的情况，这是不可能的，因为若 <span class="arithmatex">\(a \in \ell_p\)</span>，则 <span class="arithmatex">\(a\)</span> 必然属于 <span class="arithmatex">\(\ell_p\)</span>。推测题目意图是寻找 <span class="arithmatex">\(a \in \ell_p\)</span> 但对于所有 <span class="arithmatex">\(1 \le q &lt; p\)</span>，<span class="arithmatex">\(a \notin \ell_q\)</span>。
+构造如下元素 <span class="arithmatex">\(a = (a_n)_{n \in \mathbb{N}}\)</span>：
+令 <span class="arithmatex">\(a_n = \frac{1}{n^{1/p} (\ln(n+1))^{2/p}}\)</span>。
+1. 验证 <span class="arithmatex">\(a \in \ell_p\)</span>：
+<span class="arithmatex">\(\sum_{n=1}^\infty |a_n|^p = \sum_{n=1}^\infty \frac{1}{n (\ln(n+1))^2}\)</span>。
+由于积分 <span class="arithmatex">\(\int_1^\infty \frac{dx}{x (\ln x)^2}\)</span> 收敛，该级数收敛。所以 <span class="arithmatex">\(a \in \ell_p\)</span>。
+2. 验证对于 <span class="arithmatex">\(1 \le q &lt; p\)</span>，有 <span class="arithmatex">\(a \notin \ell_q\)</span>：
+考虑 <span class="arithmatex">\(|a_n|^q = \frac{1}{n^{q/p} (\ln(n+1))^{2q/p}}\)</span>。
+由于 <span class="arithmatex">\(q &lt; p\)</span>，则指数 <span class="arithmatex">\(\alpha = q/p &lt; 1\)</span>。
+对于级数 <span class="arithmatex">\(\sum \frac{1}{n^\alpha (\ln n)^\beta}\)</span>，当 <span class="arithmatex">\(\alpha &lt; 1\)</span> 时，无论 <span class="arithmatex">\(\beta\)</span> 为何值，级数均发散（与 <span class="arithmatex">\(1/n\)</span> 比较，分子项趋于无穷或分母增长慢于 <span class="arithmatex">\(n\)</span>）。
+具体来说，由于 <span class="arithmatex">\(q/p &lt; 1\)</span>，当 <span class="arithmatex">\(n\)</span> 充分大时，<span class="arithmatex">\(\frac{1}{n^{q/p} (\ln(n+1))^{2q/p}} &gt; \frac{1}{n}\)</span>。
+由调和级数发散可知 <span class="arithmatex">\(\sum |a_n|^q\)</span> 发散。
+因此，该元素 <span class="arithmatex">\(a\)</span> 满足条件（在 <span class="arithmatex">\(q &lt; p\)</span> 的修正理解下）。</p>
+<div class="admonition question">
+<p class="admonition-title">(13)</p>
+<p>Show that if <span class="arithmatex">\((E, \|\cdot\|_E)\)</span> is a normed space, <span class="arithmatex">\(W\)</span> is a vector space and <span class="arithmatex">\(T: W \to E\)</span> is a linear bijection, then</p>
+<div class="arithmatex">\[ \|x\|_W := \|Tx\|_E, \quad \forall x \in W \]</div>
+<p>defines a norm on <span class="arithmatex">\(W\)</span>.</p>
+</div>
+<p>解答：
+我们需要验证 <span class="arithmatex">\(\|\cdot\|_W\)</span> 满足范数的三条公理：
+1. <strong>非负性与正定性</strong>：
+对于任意 <span class="arithmatex">\(x \in W\)</span>，<span class="arithmatex">\(\|x\|_W = \|Tx\|_E \ge 0\)</span>（因为 <span class="arithmatex">\(\|\cdot\|_E\)</span> 是范数）。
+若 <span class="arithmatex">\(\|x\|_W = 0\)</span>，则 <span class="arithmatex">\(\|Tx\|_E = 0\)</span>。由 <span class="arithmatex">\(\|\cdot\|_E\)</span> 的正定性可知 <span class="arithmatex">\(Tx = 0_E\)</span>。由于 <span class="arithmatex">\(T\)</span> 是双射（特别是单射），<span class="arithmatex">\(Tx = 0 \implies x = 0_W\)</span>。
+2. <strong>齐次性</strong>：
+对于任意 <span class="arithmatex">\(x \in W\)</span> 和标量 <span class="arithmatex">\(\lambda\)</span>，
+<span class="arithmatex">\(\|\lambda x\|_W = \|T(\lambda x)\|_E\)</span>。
+由 <span class="arithmatex">\(T\)</span> 的线性性，<span class="arithmatex">\(T(\lambda x) = \lambda Tx\)</span>。
+所以 <span class="arithmatex">\(\|\lambda x\|_W = \|\lambda Tx\|_E = |\lambda| \|Tx\|_E = |\lambda| \|x\|_W\)</span>。
+3. <strong>三角不等式</strong>：
+对于任意 <span class="arithmatex">\(x, y \in W\)</span>，
+<span class="arithmatex">\(\|x + y\|_W = \|T(x + y)\|_E\)</span>。
+由 <span class="arithmatex">\(T\)</span> 的线性性，<span class="arithmatex">\(T(x + y) = Tx + Ty\)</span>。
+利用 <span class="arithmatex">\(\|\cdot\|_E\)</span> 的三角不等式：
+<span class="arithmatex">\(\|Tx + Ty\|_E \le \|Tx\|_E + \|Ty\|_E = \|x\|_W + \|y\|_W\)</span>。
+即 <span class="arithmatex">\(\|x+y\|_W \le \|x\|_W + \|y\|_W\)</span>。
+综上，<span class="arithmatex">\(\|\cdot\|_W\)</span> 定义了 <span class="arithmatex">\(W\)</span> 上的一个范数。</p>
+<div class="admonition question">
+<p class="admonition-title">(14)</p>
+<p>Suppose that <span class="arithmatex">\(U\)</span> is an open subspace of a normed space <span class="arithmatex">\(E\)</span>, show that <span class="arithmatex">\(U = E\)</span>.</p>
+<p>(11)题的变式</p>
+</div>
+<p><code>Proof.</code></p>
+<p>因为 <span class="arithmatex">\(U\)</span> 是 <span class="arithmatex">\(E\)</span> 的子空间，所以 <span class="arithmatex">\(0 \in U\)</span>。因为 <span class="arithmatex">\(U\)</span> 是开集，所以存在一个 <span class="arithmatex">\(r &gt; 0\)</span> 使得原点的开球 <span class="arithmatex">\(B(0, r) \subset U\)</span>。这意味着 <span class="arithmatex">\(U\)</span> 是一个包含球的线性子空间。直接引用第 (11) 题的结论，任何包含球的线性子空间必定等于整个空间。所以 <span class="arithmatex">\(U = E\)</span>。</p>
+<div class="admonition question">
+<p class="admonition-title">(15)</p>
+<p>If <span class="arithmatex">\(E\)</span> is a normed space and <span class="arithmatex">\(M\)</span> is a closed linear subspace of <span class="arithmatex">\(E\)</span>, show that</p>
+<div class="arithmatex">\[ \|[x]\|_{E/M} = \inf_{u \in M} \|x + u\| \]</div>
+<p>defines a norm on the quotient space <span class="arithmatex">\(E/M\)</span>.</p>
+</div>
+<p>解答：</p>
+<p>我们需要验证商范数的三条公理：</p>
+<ol>
+<li><strong>非负性与正定性</strong>：</li>
+</ol>
+<p>显然 <span class="arithmatex">\(\|[x]\|_{E/M} = \inf_{u \in M} \|x+u\| \ge 0\)</span>。
+若 <span class="arithmatex">\([x] = [0]\)</span>（即 <span class="arithmatex">\(x \in M\)</span>），则取 <span class="arithmatex">\(u = -x \in M\)</span>，得 <span class="arithmatex">\(\|x+u\| = 0\)</span>，故范数为 0。
+反之，若 <span class="arithmatex">\(\|[x]\|_{E/M} = 0\)</span>，即 <span class="arithmatex">\(\inf_{u \in M} \|x+u\| = 0\)</span>。这意味着存在序列 <span class="arithmatex">\(\{u_n\} \subset M\)</span> 使得 <span class="arithmatex">\(\|x - (-u_n)\| \to 0\)</span>。这表明 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(M\)</span> 的一个极限点。因为 <span class="arithmatex">\(M\)</span> 是<strong>闭</strong>子空间，所以 <span class="arithmatex">\(x \in M\)</span>，即 <span class="arithmatex">\([x] = [0]\)</span>。</p>
+<ol>
+<li><strong>齐次性</strong>：</li>
+</ol>
+<p>对于 <span class="arithmatex">\(\lambda \neq 0\)</span>：
+<span class="arithmatex">\(\|[\lambda x]\| = \inf_{u \in M} \|\lambda x + u\| = \inf_{u \in M} \|\lambda (x + \frac{u}{\lambda})\|\)</span>。
+令 <span class="arithmatex">\(v = u/\lambda\)</span>。当 <span class="arithmatex">\(u\)</span> 遍历 <span class="arithmatex">\(M\)</span> 时，由于 <span class="arithmatex">\(M\)</span> 是子空间，<span class="arithmatex">\(v\)</span> 也遍历 <span class="arithmatex">\(M\)</span>。
+<span class="arithmatex">\(= \inf_{v \in M} |\lambda| \|x + v\| = |\lambda| \inf_{v \in M} \|x + v\| = |\lambda| \|[x]\|\)</span>。
+对于 <span class="arithmatex">\(\lambda = 0\)</span>，等式显然成立。</p>
+<ol>
+<li><strong>三角不等式</strong>：</li>
+</ol>
+<p>设 <span class="arithmatex">\([x], [y] \in E/M\)</span>。
+<span class="arithmatex">\(\|[x+y]\| = \inf_{w \in M} \|x + y + w\|\)</span>。
+对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，根据下确界定义，存在 <span class="arithmatex">\(u \in M\)</span> 和 <span class="arithmatex">\(v \in M\)</span> 使得：
+<span class="arithmatex">\(\|x+u\| &lt; \|[x]\| + \epsilon/2\)</span> 且 <span class="arithmatex">\(\|y+v\| &lt; \|[y]\| + \epsilon/2\)</span>。
+令 <span class="arithmatex">\(w = u + v\)</span>，则 <span class="arithmatex">\(w \in M\)</span>。
+<span class="arithmatex">\(\|[x+y]\| \le \|x + y + u + v\| \le \|x+u\| + \|y+v\| &lt; \|[x]\| + \|[y]\| + \epsilon\)</span>。
+由于 <span class="arithmatex">\(\epsilon\)</span> 是任意的，所以 <span class="arithmatex">\(\|[x+y]\| \le \|[x]\| + \|[y]\|\)</span>。
+综上，定义的是一个范数。</p>
+<h2 id="banach-spaces_1">Banach spaces<a class="headerlink" href="#banach-spaces_1" title="Permanent link">⚓︎</a></h2>
+<p>主要知道Cauchy列和Banach空间是什么就可以了</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition: 柯西列与 Banach 空间</p>
+<p><strong>柯西列 (Cauchy Sequence)</strong>
+设 <span class="arithmatex">\((x_n)\)</span> 是赋范空间 <span class="arithmatex">\(E\)</span> 中的一个序列。如果对于任意给定的 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，都存在一个正整数 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(m, n &gt; N\)</span> 时，都有 <span class="arithmatex">\(\|x_m - x_n\| &lt; \varepsilon\)</span>，则称该序列为柯西列。</p>
+<p><strong>Banach 空间 (Banach Space)</strong>
+如果赋范空间 <span class="arithmatex">\(E\)</span> 中的<strong>每一个</strong>柯西列都收敛于 <span class="arithmatex">\(E\)</span> 中的某一点（即空间是完备的），则称 <span class="arithmatex">\(E\)</span> 为 Banach 空间。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2.2.2: 柯西列不一定收敛 (反例)</p>
+<p>这是一个非常经典的例子，说明完备性不是理所当然的。</p>
+<p>考虑空间 <span class="arithmatex">\(C[0,1]\)</span>（闭区间上的连续函数），装备 <span class="arithmatex">\(1\)</span>-范数 <span class="arithmatex">\(\|f\|_1 = \int_0^1 |f(t)| dt\)</span>。</p>
+<p>我们构造一个序列 <span class="arithmatex">\((f_n)_{n \ge 2}\)</span>，图形上看，它是一个在 <span class="arithmatex">\(t=1/2\)</span> 处越来越陡峭的折线：
+$$
+f_n(t) = \begin{cases}
+0, &amp; 0 \le t \le \frac{1}{2} - \frac{1}{n} \
+1 - n(\frac{1}{2} - t), &amp; \frac{1}{2} - \frac{1}{n} \le t \le \frac{1}{2} \
+1, &amp; \frac{1}{2} &lt; t \le 1
+\end{cases}
+$$</p>
+</div>
+<ol>
+<li>它是柯西列</li>
+</ol>
+<p>对于 <span class="arithmatex">\(n &gt; m \ge 2\)</span>，函数 <span class="arithmatex">\(f_n\)</span> 和 <span class="arithmatex">\(f_m\)</span> 的差异仅存在于区间 <span class="arithmatex">\([\frac{1}{2} - \frac{1}{m}, \frac{1}{2}]\)</span> 上。直接计算积分：
+ $$ |f_n - f_m|<em _frac_1="\frac{1">1 = \int_0^1 |f_n(t) - f_m(t)| dt = \int</em> $$
+当 }{2}-\frac{1}{m}}^{\frac{1}{2}} |f_n(t) - f_m(t)| dt \le \frac{1}{m<span class="arithmatex">\(m \to \infty\)</span> 时，该值趋于 0，因此它是 <span class="arithmatex">\(1\)</span>-范数下的柯西列。</p>
+<ol>
+<li>它在空间中不收敛</li>
+</ol>
+<p>假设该序列在 <span class="arithmatex">\(C[0,1]\)</span> 中收敛于某个连续函数 <span class="arithmatex">\(f\)</span>。通过对误差 <span class="arithmatex">\(\|f_n - f\|_1\)</span> 的分析，令 <span class="arithmatex">\(n \to \infty\)</span>，我们发现极限函数必须几乎处处满足：</p>
+<div class="arithmatex">\[ f(t) = \begin{cases} 0, &amp; 0 \le t &lt; 1/2 \\ 1, &amp; 1/2 \le t \le 1 \end{cases} \]</div>
+<p>这是一个阶跃函数，显然是不连续的。因此极限 <span class="arithmatex">\(f \notin C[0,1]\)</span>。</p>
+<p>结论：<span class="arithmatex">\((C[0,1], \|\cdot\|_1)\)</span> 不是 Banach 空间。</p>
+<p>注：如果换成上确界范数 <span class="arithmatex">\(\|\cdot\|_\infty\)</span>，它就是 Banach 空间，因为一致极限保持连续性</p>
+<div class="admonition example">
+<p class="admonition-title">一个基本且重要的练习(Example 2.2.7)</p>
+<p>If <span class="arithmatex">\(1\leqslant p \leqslant \infty\)</span>, then <span class="arithmatex">\(l^{p}\)</span>, <span class="arithmatex">\(L^{p}[a,b]\)</span> are Banach spaces under the corresponding <span class="arithmatex">\(p-\)</span>norms <span class="arithmatex">\(\lVert \cdot \rVert _p\)</span> for <span class="arithmatex">\(1\leqslant p\leqslant \infty\)</span></p>
+</div>
+<p><code>Proof.</code></p>
+<p>(a)If <span class="arithmatex">\(1\leqslant p &lt;\infty\)</span>, <span class="arithmatex">\(l^{p}\)</span> is a Banach space</p>
+<p>For any Cauchy sequence, <span class="arithmatex">\(x_{n}=(\xi_{k}^{(n)})_{k=1}^{\infty}\in l^{p}\)</span></p>
+<p>By definition, we have <span class="arithmatex">\(\forall\varepsilon&gt;0,\exists N\)</span> if <span class="arithmatex">\(m,n&gt;N,\lvert x_{m}-x_{n} \rvert=\left( \sum\limits_{k=1}^{\infty}\lvert \xi_{k}^{(n)}-\xi_{k}^{(m)} \rvert^{p} \right) ^{\frac{1}{p}}&lt;\varepsilon\)</span></p>
+<p>We can use the convergence that <span class="arithmatex">\((\xi_{k}^{(n)})_{n\in \mathbb{N}}\implies \xi_{k}\)</span></p>
+<div class="arithmatex">\[
+\left( \sum\limits_{k=1}^{k_{0}} \lvert \xi_{k}^{(n)}-\xi_{k}^{(m)} \rvert ^{p} \right)^{\frac{1}{p}}&lt;\varepsilon,\forall n,m\geqslant N
+\]</div>
+<p>Just let <span class="arithmatex">\(m\to \infty\)</span>, we get</p>
+<div class="arithmatex">\[
+\left( \sum\limits_{k=1}^{k_{0}} \lvert \xi_{k}^{(n)}-\xi_{k} \rvert ^{p} \right)^{\frac{1}{p}}\leqslant\varepsilon,\forall n\geqslant N,\forall k_{0}\in \mathbb{N}
+\]</div>
+<p>Put <span class="arithmatex">\(x=(\xi_{k})_{k\in \mathbb{N}}\)</span>, we derive that</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\left( \sum\limits_{k=1}^{k_{0}} \lvert \xi_{k} \rvert ^{p} \right)^{\frac{1}{p}}&amp;\leqslant \left( \sum\limits_{k=1}^{k_{0}} \lvert \xi_{k}-\xi_{k}^{(N)} \rvert ^{p} \right)^{\frac{1}{p}}+\left( \sum\limits_{k=1}^{k_{0}} \lvert \xi_{k}^{(N)} \rvert ^{p} \right)^{\frac{1}{p}}&lt;\varepsilon+\lVert X_{N} \rVert _{p}&lt;+\infty\\
+\lVert x \rVert _{p}&amp;\leqslant \varepsilon+\lVert x_{N} \rVert _{p}
+\end{aligned}
+\]</div>
+<p>(b)Similarly, we can prove that <span class="arithmatex">\(l_{\infty}\)</span> is a Banach space</p>
+<p>Now turn to <span class="arithmatex">\(L^{p}\)</span> space</p>
+<p>(c)<span class="arithmatex">\(L^{p}[a,b]\)</span> is a Banach space when <span class="arithmatex">\(1\leqslant p &lt;\infty\)</span></p>
+<p>Let <span class="arithmatex">\((f_{n})_{n\in \mathbb{N}}\)</span> be any Cauchy sequence in <span class="arithmatex">\(L^{p}[a,b]\)</span>. For any <span class="arithmatex">\(\varepsilon&gt;0\)</span>, there exists <span class="arithmatex">\(N\in \mathbb{N}\)</span> s.t.</p>
+<div class="arithmatex">\[
+\lVert f_{n}-f_{m} \rVert _{p}&lt;\varepsilon,\forall n,m\geqslant N
+\]</div>
+<p>Obviously, we can choose a subsequence <span class="arithmatex">\((f_{n_{k}})_{k\in \mathbb{N}}\)</span> s.t.</p>
+<div class="arithmatex">\[
+\lVert f_{n_{k+1}}-f_{n_{k}} \rVert _{p}&lt; \frac{1}{2^{k}},\forall k\in \mathbb{N}
+\]</div>
+<p>So we can naturally get <span class="arithmatex">\(\sum\limits_{k=1}^{\infty}\lVert f_{n_{k+1}}-f_{n_{k}} \rVert &lt; 1\)</span>, let</p>
+<div class="arithmatex">\[
+g_{m}(t)=\lvert f_{n_{1}} (t)\rvert + \sum\limits_{k=1}^{m} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert ,\forall t\in[a,b] 
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert g_{m} \rVert _{p}&amp;\leqslant \lVert f_{n_{1}} \rVert _{p}+\sum\limits_{k=1}^{m} \lVert f_{n_{k+1}}-f_{n_{k}} \rVert _{p}\\
+&amp;&lt;\lVert f_{n_{1}} \rVert _{p}+1,\forall m= 1,2\dots
+\end{aligned}
+\]</div>
+<p>Note <span class="arithmatex">\(g_{m}(t)\)</span> is positive and increasing, let <span class="arithmatex">\(g_{0}(t)=\lim\limits_{ m \to \infty }g_{m}(t)\)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+\int_{a}^{b}\lvert g_{0} \rvert ^{p}  \, dt &amp;=\int_{a}^{b} \mathop{\lim \inf }\limits_{m\to \infty }\lvert g_{m} \rvert ^{p}\, dt\\
+&amp;\leqslant \mathop{\lim\inf}\limits_{m\to \infty}\int_{a}^{b} \lvert g_{m} \rvert ^{p} \, dt\\
+&amp;=\lim\limits_{ m \to \infty } \lVert g_{m} \rVert _{p}^{p}\\
+&amp;\leqslant (\lVert f_{n_{1}} \rVert _{p}+1)^{p}
+\end{aligned}
+\]</div>
+<p>So <span class="arithmatex">\(g_{0}\in L^{p}[a,b]\)</span> and</p>
+<div class="arithmatex">\[
+g_{0}(t)=\lvert f_{n_{1}}(t) \rvert+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert  
+\]</div>
+<p>converges to a finite positive number a.e. on <span class="arithmatex">\([a,b]\)</span>, therefore the series</p>
+<p>$$
+f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert<br />
+$$
+converges to a finite(real or complex) number a.e. on <span class="arithmatex">\([a,b]\)</span>. And <span class="arithmatex">\(\lvert f \rvert \leqslant g_{0}\)</span>, we have <span class="arithmatex">\(f\in L^{p}[a,b]\)</span>. It follows from</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert f-f_{n_{m}} \rVert _{p}&amp;=\left\lVert  f-\left( f_{n_{1}}+\sum\limits_{k=1}^{m} (f_{n_{k+1}}-f_{n_{k}}) \right)  \right\rVert _{p}\\
+&amp;=\left\lVert  \sum\limits_{k=m+1}^{\infty} (f_{n_{k+1}}-f_{n_{k}})  \right\rVert _{p}\\
+&amp;\leqslant   \sum\limits_{k=m+1}^{\infty} \left\lVert(f_{n_{k+1}}-f_{n_{k}})  \right\rVert _{p}\\
+&amp;\leqslant \frac{1}{2^{m}}
+\end{aligned}
+\]</div>
+<p>that <span class="arithmatex">\(f_{n_{m}}\to f\)</span></p>
+<p>(d)<span class="arithmatex">\(L^{\infty}[a,b]\)</span> is a Banach space</p>
+<p>Suppose that <span class="arithmatex">\((f_n)_{n\in\mathbb{N}}\)</span> is a Cauchy sequence in <span class="arithmatex">\(L^\infty[a,b]\)</span>. For any <span class="arithmatex">\(k \in \mathbb{N}\)</span>, there exists <span class="arithmatex">\(N_k &gt; 0\)</span> such that</p>
+<div class="arithmatex">\[ \|f_n - f_m\| &lt; \frac{1}{k}, \quad \forall n, m \ge N_k. \]</div>
+<p>We can find a measurable subset <span class="arithmatex">\(E_k\)</span> of zero measure such that</p>
+<div class="arithmatex">\[ \sup_{[a,b]\setminus E_k} |f_m(t) - f_n(t)| &lt; \frac{1}{k}, \quad \forall n, m \ge N_k. \quad (2.5) \]</div>
+<p>Let <span class="arithmatex">\(E = \bigcup_{k=1}^\infty E_k\)</span>, which has zero measure. We have</p>
+<div class="arithmatex">\[ |f_m(t) - f_n(t)| \to 0 \quad \text{uniformly for all } t \in [a,b] \setminus E. \]</div>
+<p>By the completeness of <span class="arithmatex">\(\mathbb{K}\)</span>, the limit <span class="arithmatex">\(f(t) = \lim_n f_n(t)\)</span> exists for all <span class="arithmatex">\(t \in [a,b] \setminus E\)</span>. Setting <span class="arithmatex">\(f = 0\)</span> on <span class="arithmatex">\(E\)</span>, we see that <span class="arithmatex">\(f_n(t) \to f(t)\)</span> a.e. on <span class="arithmatex">\([a,b]\)</span>, and thus <span class="arithmatex">\(f\)</span> is measurable. Letting <span class="arithmatex">\(m \to \infty\)</span> in (2.5), we have</p>
+<div class="arithmatex">\[ \sup_{[a,b]\setminus E_k} |f(t) - f_n(t)| \le \frac{1}{k}, \quad \forall n \ge N_k, \quad (2.6) \]</div>
+<p>which shows that <span class="arithmatex">\(f - f_n \in L^\infty[a,b]\)</span> for any <span class="arithmatex">\(n \ge N_k\)</span>. Consequently, <span class="arithmatex">\(f \in L^\infty[a,b]\)</span>. It follows from (2.6) that</p>
+<div class="arithmatex">\[ \|f(t) - f_n(t)\|_\infty \le \frac{1}{k}, \quad \forall n \ge N_k, \]</div>
+<p>which proves that <span class="arithmatex">\(f = \lim_n f_n\)</span> in <span class="arithmatex">\(L^\infty[a,b]\)</span>. </p>
+<div class="admonition abstract">
+<p class="admonition-title">Proposition 2.2.5: 维数与完备性的关系</p>
+<p><strong>定理</strong>：不存在具有<strong>可数维数</strong>（指 Hamel 基是可数的）的无限维 Banach 空间</p>
+<p><strong>证明逻辑</strong>：</p>
+<p>假设空间 <span class="arithmatex">\(E\)</span> 有可数基 <span class="arithmatex">\(\{x_1, x_2, \dots\}\)</span>，定义有限维闭子空间 <span class="arithmatex">\(E_n = \text{span}\{x_1, \dots, x_n\}\)</span></p>
+<p>显然 <span class="arithmatex">\(E = \bigcup_{n=1}^\infty E_n\)</span>。根据 <strong>Baire Category Theorem</strong>（贝尔纲定理），Banach 空间不能写成可数个无处稠密集合的并。因此，至少有一个 <span class="arithmatex">\(E_{n_0}\)</span> 包含一个开球。线性子空间如果包含开球，它必须等于整个空间。即 <span class="arithmatex">\(E = E_{n_0}\)</span>。这推导出 <span class="arithmatex">\(E\)</span> 是有限维的，产生矛盾。</p>
+<p><strong>推论 (Example 2.2.6)</strong>：
+*   <span class="arithmatex">\(c_{00}\)</span>（有限支集序列）有可数基，所以它<strong>不是</strong> Banach 空间。
+*   <span class="arithmatex">\(P[a,b]\)</span>（多项式空间）有可数基，所以它也<strong>不是</strong> Banach 空间。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Finite Dimensional Spaces (有限维相关性质)</p>
+<p><strong>Proposition 2.2.9</strong>：每一个<strong>有限维</strong>赋范空间都是完备的
+*   因为有限维空间同构于 <span class="arithmatex">\(\mathbb{K}^n\)</span>，而欧几里得空间是完备的</p>
+<p><strong>Proposition 2.2.10</strong>：赋范空间的每一个<strong>有限维子空间</strong>都是闭的
+*   有限维子空间自身是完备的，完备子空间在 Hausdorff 空间中必然是闭集</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">反例</p>
+<ul>
+<li>多项式空间 <span class="arithmatex">\(P\)</span> 在 <span class="arithmatex">\(C[0,1]\)</span> 中不是闭的（因为根据 Weierstrass 定理，多项式可以逼近非多项式的连续函数，如 <span class="arithmatex">\(e^t\)</span>）</li>
+<li><span class="arithmatex">\(c_{00}\)</span> 在 <span class="arithmatex">\(\ell_\infty\)</span> 中不是闭的（可以逼近无限项非零的序列，如 <span class="arithmatex">\(1, 1/2, 1/3 \dots\)</span>）</li>
+</ul>
+</div>
+<h2 id="exercises-22">Exercises 2.2<a class="headerlink" href="#exercises-22" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">HW2-1</p>
+<p>Let <span class="arithmatex">\(P\)</span> be the vector space of polynomials definded on <span class="arithmatex">\([0,1]\)</span>. It has two norms <span class="arithmatex">\(\lVert \cdot \rVert_{\infty}\)</span>​ and <span class="arithmatex">\(\lVert \cdot \rVert_{1}\)</span>​ . Show that the two norms are not equivalent.</p>
+</div>
+<p><code>Proof.</code></p>
+<p>只需要找到一个反例多项式函数<span class="arithmatex">\(f\)</span>使得<span class="arithmatex">\(\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}\)</span>不成立即可</p>
+<p>不妨设<span class="arithmatex">\(f(x)=x^{n}\)</span></p>
+<p>那么有<span class="arithmatex">\(\lVert f \rVert_{\infty}=\max\limits_{x\in[0,1]}\lvert f(x) \rvert=1,\lVert f \rVert_{1}=\int_{0}^{1} \lvert f(x) \rvert \, dx= \frac{1}{n+1}\)</span></p>
+<p>对于任意的固定常数<span class="arithmatex">\(C\)</span>，总有<span class="arithmatex">\(n+1&gt;C\)</span>时使得<span class="arithmatex">\(\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}\)</span>不成立，因此两个范数显然不等价</p>
+<div class="admonition question">
+<p class="admonition-title">HW2-2</p>
+<p>If <span class="arithmatex">\((E,\lVert \cdot \rVert _{E}​)\)</span> is a normed space, <span class="arithmatex">\(W\)</span> is a vector space and <span class="arithmatex">\(T:W\to E\)</span> is a linear bijection, then</p>
+<div class="arithmatex">\[\lVert x \rVert _{W}=\lVert Tx \rVert _{E}\]</div>
+<p>define a norm on <span class="arithmatex">\(W\)</span></p>
+</div>
+<p>题目应当是验证这是一个范数，我们按照定义验证三条性质：</p>
+<p>(1) 正定性</p>
+<div class="arithmatex">\[
+0=\lVert x \rVert _{W}=\lVert Tx \rVert _{E}\implies Tx=0\implies x=0
+\]</div>
+<p>后一个推论是因为 <span class="arithmatex">\(T\)</span> 是一个双射，并且 <span class="arithmatex">\(\lVert x \rVert_{W}=\lVert Tx \rVert_{E}\geqslant 0\)</span></p>
+<p>(2) 正齐次性</p>
+<div class="arithmatex">\[
+\lVert ax \rVert _{W}=\lVert T(ax) \rVert _{E}=\lvert a \rvert \lVert Tx \rVert _{E}=\lvert a \rvert \lVert x \rVert _{W}
+\]</div>
+<p>(3) 三角不等式</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert x+y \rVert _{W}&amp;=\lVert T(x+y) \rVert _{E}=\lVert Tx+Ty \rVert _{E}\\
+&amp;\leqslant\lVert Tx \rVert _{E}+\lVert Ty \rVert _{E}\\
+&amp;=\lVert x \rVert _{W}+\lVert y \rVert _{W}
+\end{aligned}
+\]</div>
+<p>前两个小节实际上只是讲述了基本的 Banach 空间的定义和一些基本内容的回顾，下面两个小节则是正式开始围绕 Banach 空间的性质进行讨论：可分性和完备性、紧性</p>
+<h2 id="seperable-banach-spaces">Seperable Banach spaces<a class="headerlink" href="#seperable-banach-spaces" title="Permanent link">⚓︎</a></h2>
+<h3 id="separability">可分性 (Separability)<a class="headerlink" href="#separability" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Definition 2.3.1 (可分性 / Separability)</p>
+<p>一个赋范空间 <span class="arithmatex">\(E\)</span> 被称为 <strong>可分的 (separable)</strong>，如果它包含一个<strong>可数的 (countable)</strong> 且在范数意义下<strong>稠密的 (dense)</strong> 子集 <span class="arithmatex">\(M\)</span>。否则，<span class="arithmatex">\(E\)</span> 被称为 <strong>不可分的</strong>。</p>
+<ul>
+<li><strong>直观理解</strong>：如果一个空间是可分的，说明空间中的任意元素都可以被一个（固定的）可数集中的元素以任意精度逼近。</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">常见 Banach 空间的可分性判定</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">空间</th>
+<th style="text-align: left;">可分性</th>
+<th style="text-align: left;">稠密子集构造思路 / 不可分理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(c_0\)</span></strong></td>
+<td style="text-align: left;">✅ 可分</td>
+<td style="text-align: left;">具有有理数坐标的有限项序列（尾部为 0）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(c\)</span></strong></td>
+<td style="text-align: left;">✅ 可分</td>
+<td style="text-align: left;">最终常数为有理数，且前有限项为有理数的序列。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(C[a,b]\)</span></strong></td>
+<td style="text-align: left;">✅ 可分</td>
+<td style="text-align: left;">有理系数多项式集合（Weierstrass 逼近定理）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(\ell^p\)</span></strong> <span class="arithmatex">\((1 \le p &lt; \infty)\)</span></td>
+<td style="text-align: left;">✅ 可分</td>
+<td style="text-align: left;">具有有理数坐标的有限项序列（尾部为0）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(L^p[a,b]\)</span></strong> <span class="arithmatex">\((1 \le p &lt; \infty)\)</span></td>
+<td style="text-align: left;">✅ 可分</td>
+<td style="text-align: left;">有理系数多项式集合（经过三步逼近）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(\ell^\infty\)</span></strong></td>
+<td style="text-align: left;">❌ <strong>不可分</strong></td>
+<td style="text-align: left;">存在不可数个彼此距离为 1 的点（0-1序列）。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(L^\infty[a,b]\)</span></strong></td>
+<td style="text-align: left;">❌ <strong>不可分</strong></td>
+<td style="text-align: left;">存在不可数个彼此距离为 1 的函数（特征函数）。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition abstract">
+<p class="admonition-title">证明思路归纳 (Proof Sketches)</p>
+<p><strong>1. 序列空间与有限逼近 (<span class="arithmatex">\(c, c_0, \ell^p\)</span>)</strong>
+*   <strong>核心思想</strong>：截断 + 有理化。
+*   <strong>逻辑</strong>：对于收敛序列或 <span class="arithmatex">\(p\)</span>-级数收敛的序列，其“尾部”趋于 0。先将无穷项截断为有限项 <span class="arithmatex">\(N\)</span>，再将这有限项坐标用有理数 <span class="arithmatex">\(r_i\)</span> 逼近。
+*   <strong>构造</strong>：<span class="arithmatex">\(M = \{(r_1, \dots, r_N, 0, \dots) : r_i \in \mathbb{Q}\}\)</span>。</p>
+<p><strong>2. 函数空间与多项式逼近 (<span class="arithmatex">\(C[a,b], L^p\)</span>)</strong>
+*   <strong><span class="arithmatex">\(C[a,b]\)</span></strong>：直接利用 <strong>Weierstrass 逼近定理</strong>，有理系数多项式在一致范数下稠密。
+*   <strong><span class="arithmatex">\(L^p[a,b]\)</span></strong>：采用<strong>三步逼近法</strong>：
+   1.  <span class="arithmatex">\(L^p\)</span> 函数 <span class="arithmatex">\(\xrightarrow{截断}\)</span> 有界且支集有限的函数。
+   2.  有界可测函数 <span class="arithmatex">\(\xrightarrow{Lusin定理}\)</span> 连续函数。
+   3.  连续函数 <span class="arithmatex">\(\xrightarrow{Weierstrass}\)</span> 有理系数多项式。</p>
+<p><strong>3. 不可分的计数反例 (<span class="arithmatex">\(\ell^\infty, L^\infty\)</span>)</strong>
+*   <strong>核心思想</strong>：构造一个<strong>不可数</strong>集，其中任意两点距离 <span class="arithmatex">\(\ge 1\)</span>。
+*   <strong><span class="arithmatex">\(\ell^\infty\)</span></strong>：取 <span class="arithmatex">\(A = \{ (\xi_n) : \xi_n \in \{0, 1\} \}\)</span>（不可数）。对于 <span class="arithmatex">\(x \neq y \in A\)</span>，<span class="arithmatex">\(\|x-y\|_\infty = 1\)</span>。
+*   <strong><span class="arithmatex">\(L^\infty[a,b]\)</span></strong>：取特征函数系 <span class="arithmatex">\(\{\mathbf{1}_{[a, t]} : t \in [a, b]\}\)</span>（不可数）。对于 <span class="arithmatex">\(t \neq s\)</span>，<span class="arithmatex">\(\|\mathbf{1}_{[a, t]} - \mathbf{1}_{[a, s]}\|_\infty = 1\)</span>。
+*   <strong>推论</strong>：若存在稠密子集，则在以这些点为心、半径为 <span class="arithmatex">\(1/3\)</span> 的互不相交的球中，每个球里至少要有一个稠密集的点。球不可数 <span class="arithmatex">\(\implies\)</span> 稠密集不可数。</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Definition 2.3.3 (Schauder 基)</p>
+<p>设 <span class="arithmatex">\((e_n)_{n \in \mathbb{N}}\)</span> 是 Banach 空间 <span class="arithmatex">\(E\)</span> 中的单位向量序列（<span class="arithmatex">\(\|e_n\|=1\)</span>）。如果对于 <span class="arithmatex">\(E\)</span> 中的任意元素 <span class="arithmatex">\(x\)</span>，都存在<strong>唯一</strong>的标量序列 <span class="arithmatex">\(\alpha_n\)</span> 使得：</p>
+<div class="arithmatex">\[ x = \sum_{n=1}^\infty \alpha_n e_n \quad (\text{即 } \lim_{n\to\infty} \left\|x - \sum_{i=1}^n \alpha_i e_i\right\| = 0) \]</div>
+<p>则称 <span class="arithmatex">\((e_n)\)</span> 为 <span class="arithmatex">\(E\)</span> 的一个 <strong>Schauder 基</strong>。显然，Schauder 基是线性无关的。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Theorem 2.3.4 (Schauder 基与可分性)</p>
+<p>如果一个 Banach 空间 <span class="arithmatex">\(E\)</span> 拥有 Schauder 基，则 <span class="arithmatex">\(E\)</span> 是<strong>可分的</strong>。</p>
+</div>
+<p><code>Proof Sketch.</code></p>
+<ol>
+<li>
+<p><strong>构造</strong>：考虑所有由基向量组成的<strong>有限</strong>线性组合，且系数限制为<strong>有理数</strong>（若 <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\)</span> 则为实部虚部均为有理数）：
+    $$ M = \left{ \sum_{i=1}^n r_i e_i : r_i \in \mathbb{Q}, n \in \mathbb{N} \right} $$</p>
+</li>
+<li>
+<p><strong>可数性</strong>：<span class="arithmatex">\(M\)</span> 是可数集的可数并，因此是可数的。</p>
+</li>
+<li><strong>稠密性</strong>：对于任意 <span class="arithmatex">\(x = \sum \alpha_i e_i\)</span>，其部分和 <span class="arithmatex">\(S_n\)</span> 收敛于 <span class="arithmatex">\(x\)</span>。我们只需用有理数 <span class="arithmatex">\(r_i\)</span> 逼近标量 <span class="arithmatex">\(\alpha_i\)</span>，即可证明 <span class="arithmatex">\(M\)</span> 中的元素可以任意逼近 <span class="arithmatex">\(x\)</span>。</li>
+</ol>
+<h2 id="exercise-23">Exercise 2.3<a class="headerlink" href="#exercise-23" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">HW3-1</p>
+<p>Show that a Banach space <span class="arithmatex">\(V\)</span> is separable if and only if</p>
+<div class="arithmatex">\[V=\overline{\bigcup\limits_{n=1}^{\infty} V_{n}}\]</div>
+<p>where <span class="arithmatex">\((V_{n})_{n\in \mathbb{N}}\)</span> are finite dimensional subspace of <span class="arithmatex">\(V\)</span></p>
+</div>
+<p><code>Proof.</code></p>
+<p><span class="arithmatex">\(\implies\)</span></p>
+<p>证明：如果<span class="arithmatex">\(V\)</span>是可分的，那么有<span class="arithmatex">\(V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span></p>
+<p>由于<span class="arithmatex">\(V\)</span>是可分的Banach空间，那么它一定包含一个可数稠密子集，我们将其记为<span class="arithmatex">\(D=\left\{ d_{1},d_{2},\dots,d_{n},\dots \right\}\)</span>，然后考虑定义<span class="arithmatex">\(V\)</span>上有限维子空间<span class="arithmatex">\(V_{n}\)</span></p>
+<div class="arithmatex">\[
+V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\} 
+\]</div>
+<p>令<span class="arithmatex">\(U=\bigcup\limits_{n=1}^{\infty} V_{n}\)</span>，那么<span class="arithmatex">\(U=span(D)\)</span>，也就是说<span class="arithmatex">\(U\)</span>是由<span class="arithmatex">\(D\)</span>张成的<span class="arithmatex">\(V\)</span>上的子空间</p>
+<p>下面证明<span class="arithmatex">\(\overline{U}=V\)</span>即可，这是显然的，因为<span class="arithmatex">\(U=span(D)\implies D\subset U\subset V\)</span>，但是<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(V\)</span>上稠密，所以根据稠密子集的定义，<span class="arithmatex">\(V\)</span>上任意一点<span class="arithmatex">\(x_{0}\)</span>均存在<span class="arithmatex">\(D\)</span>中子列收敛到该点，并且<span class="arithmatex">\(D\subset U\)</span>，所以子列也含于<span class="arithmatex">\(U\)</span>中，那么<span class="arithmatex">\(x_{0}\in  \overline{U}\)</span>，由此即得<span class="arithmatex">\(V\subset  \overline{U}\)</span>，并且因为<span class="arithmatex">\(V\)</span>是闭的，综合两个等式即得<span class="arithmatex">\(V=\overline{U}= \overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span></p>
+<p><span class="arithmatex">\(\impliedby\)</span></p>
+<p>证明：如果<span class="arithmatex">\(V= \overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span>，则<span class="arithmatex">\(V\)</span>是可分的</p>
+<p>考虑利用定义证明，只需要在其中找到一个可数稠密子集即可，由于<span class="arithmatex">\(V_{n}\)</span>是有限维赋范空间，我们知道是可分的，因此可以在每个<span class="arithmatex">\(V_{n}\)</span>内找到一个可数稠密子集记为<span class="arithmatex">\(D_{n}\)</span></p>
+<p>考虑<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}D_{n}=D\)</span>，我们想要证明它是<span class="arithmatex">\(V\)</span>中可数稠密的子集，由于<span class="arithmatex">\(D\)</span>是可数集的可数并，因此仍然可数，下面说明<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(V\)</span>内稠密即可：</p>
+<p>换句话说，就是要说明<span class="arithmatex">\(\forall x\in V,\varepsilon&gt;0,\exists d\in D,s.t.\lVert x-d \rVert&lt;\varepsilon\)</span></p>
+<p>因为<span class="arithmatex">\(V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span>，令<span class="arithmatex">\(U=\bigcup\limits_{n=1}^{\infty}V_{n}\)</span>，取<span class="arithmatex">\(x\in V= \overline{U}\)</span>，因此存在<span class="arithmatex">\(x_{1}\in U\)</span>，使得<span class="arithmatex">\(\lVert x_{1}-x \rVert&lt; \frac{\varepsilon}{2}\)</span>，那么必有<span class="arithmatex">\(x_{1}\in V_{N}\)</span>，并且<span class="arithmatex">\(D_{N}\subset V_{N}\)</span>，且稠密，那么存在<span class="arithmatex">\(x_{2}\in D_{N}\)</span>，使得<span class="arithmatex">\(\lVert x_{2}-x_{1} \rVert&lt; \frac{\varepsilon}{2}\)</span></p>
+<p>利用三角不等式即得：</p>
+<div class="arithmatex">\[
+\lVert x-x_{2} \rVert =\lVert x-x_{1}+x_{1}-x_{2} \rVert \leqslant \lVert x-x_{1} \rVert +\lVert x_{1}-x_{2} \rVert &lt;\varepsilon
+\]</div>
+<p>因此<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(V\)</span>中稠密，可知<span class="arithmatex">\(V\)</span>可分</p>
+<div class="admonition question">
+<p class="admonition-title">(1)</p>
+<p>Let <span class="arithmatex">\(\mathbf{e}_k\)</span> be the scalar sequence whose only nonzero term is '1' in the <span class="arithmatex">\(k\)</span>th coordinate. Show that <span class="arithmatex">\(\{e_k : k = 1, 2, \dots\}\)</span> is a Schauder basis of the Banach space <span class="arithmatex">\((c_0, \|\cdot\|_\infty)\)</span>.</p>
+<p>根据定义进行验证即可</p>
+</div>
+<p><code>Proof.</code></p>
+<p>对于任意 <span class="arithmatex">\(x = (\xi_1, \xi_2, \dots) \in c_0\)</span>，根据 <span class="arithmatex">\(c_0\)</span> 的定义，我们有 <span class="arithmatex">\(\lim\limits_{k\to\infty} \xi_k = 0\)</span>。考虑级数 <span class="arithmatex">\(\sum_{k=1}^\infty \xi_k e_k\)</span> 的部分和序列 <span class="arithmatex">\((s_n)\)</span>，其中 <span class="arithmatex">\(s_n = \sum_{k=1}^n \xi_k e_k = (\xi_1, \xi_2, \dots, \xi_n, 0, 0, \dots)\)</span></p>
+<p>计算 <span class="arithmatex">\(x\)</span> 与 <span class="arithmatex">\(s_n\)</span> 的距离：</p>
+<div class="arithmatex">\[
+\|x - s_n\|_\infty = \|(0, \dots, 0, \xi_{n+1}, \xi_{n+2}, \dots)\|_\infty = \sup_{k &gt; n} |\xi_k|
+\]</div>
+<p>由于 <span class="arithmatex">\(\xi_k \to 0\)</span>，即 <span class="arithmatex">\(\forall \varepsilon &gt; 0, \exists N\)</span> 使得 <span class="arithmatex">\(k &gt; N \implies |\xi_k| &lt; \varepsilon\)</span>。因此，当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(\sup\limits_{k &gt; n} |\xi_k| \to 0\)</span>。这意味着 <span class="arithmatex">\(x = \sum_{k=1}^\infty \xi_k e_k\)</span> 在范数意义下收敛</p>
+<p>根据定义还需要说明<strong>唯一性</strong>，假设 <span class="arithmatex">\(x = \sum_{k=1}^\infty \alpha_k e_k\)</span>。由坐标泛函的连续性（或直接比较坐标），第 <span class="arithmatex">\(k\)</span> 个坐标必须相等，即 <span class="arithmatex">\(\alpha_k = \xi_k\)</span></p>
+<p>综上，<span class="arithmatex">\(\{e_k\}\)</span> 是 <span class="arithmatex">\(c_0\)</span> 的 Schauder 基。</p>
+<div class="admonition question">
+<p class="admonition-title">(2)</p>
+<p>Let <span class="arithmatex">\(\mathbf{e}_k\)</span> be the scalar sequence whose only nonzero term is '1' in the <span class="arithmatex">\(k\)</span>th coordinate, and let <span class="arithmatex">\(\mathbf{e} = (1, 1, \dots)\)</span> with all coordinates '1'. Show that <span class="arithmatex">\(\{e_k : k = 1, 2, \dots\} \cup \{e\}\)</span> is a Schauder basis of the Banach space <span class="arithmatex">\((c, \|\cdot\|_\infty)\)</span>.</p>
+</div>
+<p><code>Proof.</code></p>
+<p>对于任意 <span class="arithmatex">\(x = (\xi_k) \in c\)</span>，由于序列收敛，设 <span class="arithmatex">\(\lim_{k\to\infty} \xi_k = l\)</span>。
+我们需要证明 <span class="arithmatex">\(x\)</span> 可以唯一表示为 <span class="arithmatex">\(l\mathbf{e} + \sum_{k=1}^\infty (\xi_k - l)e_k\)</span>。
+考察向量 <span class="arithmatex">\(y = x - l\mathbf{e} = (\xi_1 - l, \xi_2 - l, \dots)\)</span>。
+由于 <span class="arithmatex">\(\xi_k \to l\)</span>，所以 <span class="arithmatex">\(y\)</span> 的分量趋于 0，即 <span class="arithmatex">\(y \in c_0\)</span>。
+根据 Problem 1 的结论，<span class="arithmatex">\(y\)</span> 可以唯一表示为 <span class="arithmatex">\(c_0\)</span> 的基 <span class="arithmatex">\(\{e_k\}\)</span> 的线性组合：
+$$ y = \sum_{k=1}^\infty (\xi_k - l) e_k $$
+代回 <span class="arithmatex">\(x\)</span>，我们得到展开式：
+$$ x = l\mathbf{e} + \sum_{k=1}^\infty (\xi_k - l) e_k $$
+下面验证收敛性（其实由 <span class="arithmatex">\(c_0\)</span> 的结论已得，这里写明）：
+$$ \left| x - \left( l\mathbf{e} + \sum_{k=1}^n (\xi_k - l)e_k \right) \right|<em k="n+1">\infty = \left| \sum</em>^\infty (\xi_k - l)e_k \right|<em _="&gt;" k="k" n="n">\infty = \sup</em> |\xi_k - l| $$
+因 <span class="arithmatex">\(\xi_k \to l\)</span>，当 <span class="arithmatex">\(n \to \infty\)</span> 时上式趋于 0。</p>
+<p><strong>唯一性</strong>：设 <span class="arithmatex">\(x = \alpha \mathbf{e} + \sum_{k=1}^\infty \alpha_k e_k\)</span>。对两边取极限（<span class="arithmatex">\(k \to \infty\)</span>），由于 <span class="arithmatex">\(e_k\)</span> 的项趋于 0，可知 <span class="arithmatex">\(\lim x = \alpha \cdot 1 + 0\)</span>，故 <span class="arithmatex">\(\alpha = l\)</span>。剩下的部分即归结为 <span class="arithmatex">\(c_0\)</span> 中系数的唯一性，得 <span class="arithmatex">\(\alpha_k = \xi_k - l\)</span>。</p>
+<div class="admonition question">
+<p class="admonition-title">(3)</p>
+<p>Let <span class="arithmatex">\(\mathbf{e}_k\)</span> be the scalar sequence whose only nonzero term is '1' in the <span class="arithmatex">\(k\)</span>th coordinate. Show that <span class="arithmatex">\(\{e_k : k = 1, 2, \dots\}\)</span> is a Schauder basis of the Banach space <span class="arithmatex">\((\ell_p, \|\cdot\|_p)\)</span> when <span class="arithmatex">\(1 \le p &lt; +\infty\)</span>.</p>
+</div>
+<p><code>Proof.</code></p>
+<p>设 <span class="arithmatex">\(x = (\xi_k) \in \ell_p\)</span>，这意味着 <span class="arithmatex">\(\sum_{k=1}^\infty |\xi_k|^p &lt; \infty\)</span>。考虑部分和 <span class="arithmatex">\(s_n = \sum_{k=1}^n \xi_k e_k\)</span>。考察误差的范数：</p>
+<div class="arithmatex">\[
+\|x - s_n\|_p = \left\| \left( 0, \dots, 0, \xi_{n+1}, \xi_{n+2}, \dots \right) \right\|_p = \left( \sum_{k=n+1}^\infty |\xi_k|^p \right)^{1/p}
+\]</div>
+<p>由于级数 <span class="arithmatex">\(\sum |\xi_k|^p\)</span> 收敛，其<strong>尾部和</strong>（Tail sum）当 <span class="arithmatex">\(n \to \infty\)</span> 时必趋于 0。即 <span class="arithmatex">\(\lim\limits_{n \to \infty} \|x - s_n\|_p = 0\)</span>。因此 <span class="arithmatex">\(x = \sum_{k=1}^\infty \xi_k e_k\)</span>。唯一性同理，由坐标对应直接得到。</p>
+<div class="admonition question">
+<p class="admonition-title">(4)</p>
+<p>Does the Banach space <span class="arithmatex">\((\ell_\infty, \|\cdot\|_\infty)\)</span> have a Schauder basis?</p>
+</div>
+<p><code>Answer.</code></p>
+<p><strong>No.</strong> <span class="arithmatex">\((\ell_\infty, \|\cdot\|_\infty)\)</span> does not have a Schauder basis.</p>
+<p><code>Reasoning.</code></p>
+<p>根据 <strong>Theorem 2.3.4</strong> (Schauder 基与可分性)，如果一个 Banach 空间拥有 Schauder 基，那么它必须是<strong>可分的 (Separable)</strong>。回顾之前的笔记（Example 2.3.2 (iii)），我们已经证明了 <span class="arithmatex">\(\ell_\infty\)</span> 是<strong>不可分</strong>的（因为存在不可数个距离为 1 的元素，无法被可数稠密子集逼近）。由于 <span class="arithmatex">\(\ell_\infty\)</span> 不可分，因此它不可能拥有 Schauder 基。</p>
+<h2 id="completeness-and-compactness-in-banach-spaces">Completeness and Compactness in Banach spaces<a class="headerlink" href="#completeness-and-compactness-in-banach-spaces" title="Permanent link">⚓︎</a></h2>
+<p>先给出级数收敛的相关定义，在此不赘述(不知道的可以参考数学分析)，重新指出只是为了方便下面的叙述罢了，因为柯西列在Banach空间中收敛，仍然有柯西收敛原理成立，至于绝对收敛定义仍然同数学分析一样，下面让我们进入本节的正题——完备性</p>
+<h3 id="_1">完备性<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h3>
+<div class="admonition info">
+<p class="admonition-title">补充定义：完备性 (Completeness)</p>
+<p>一个赋范空间 <span class="arithmatex">\((E, \|\cdot\|)\)</span> 被称为<strong>完备的</strong>（即 Banach 空间），如果 <span class="arithmatex">\(E\)</span> 中的每一个<strong>柯西列 (Cauchy sequence)</strong> 都收敛于 <span class="arithmatex">\(E\)</span> 中的某一点。</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 2.4.4</p>
+<p>一个赋范空间 <span class="arithmatex">\(E\)</span> 是完备的，当且仅当 <span class="arithmatex">\(E\)</span> 中的每一个<strong>绝对收敛 (absolutely convergent)</strong> 的级数都在 <span class="arithmatex">\(E\)</span> 中收敛。</p>
+</div>
+<p><code>Proof.</code></p>
+<p>证明的难点在于从“绝对收敛级数收敛”推导出“空间完备”。我们需要证明任意一个柯西列 <span class="arithmatex">\((x_n)\)</span> 都收敛。思路是构造一个收敛极快的子列，将其转化为级数问题。</p>
+<p>首先，由于 <span class="arithmatex">\((x_n)\)</span> 是柯西列，我们可以选取一个<strong>子列</strong> <span class="arithmatex">\((x_{n_k})\)</span>，使得相邻项极其接近。具体来说，对于每一个 <span class="arithmatex">\(k\)</span>，选取足够大的下标，使得：
+$$ |x_{n_k} - x_{n_{k-1}}| &lt; \frac{1}{2^k}, \quad \forall k \ge 2 $$</p>
+<div class="admonition tip">
+<p class="admonition-title">技巧：构造裂项级数 (Telescoping Series)</p>
+<p>我们考虑由该子列相邻项之差构成的级数：
+$$ x_{n_1} + \sum_{k=2}^{\infty} (x_{n_k} - x_{n_{k-1}}) $$
+注意到，这个级数的前 <span class="arithmatex">\(m\)</span> 项部分和 <span class="arithmatex">\(S_m\)</span> 恰好就是子列的第 <span class="arithmatex">\(m\)</span> 项：
+$$ S_m = x_{n_1} + (x_{n_2} - x_{n_1}) + \dots + (x_{n_m} - x_{n_{m-1}}) = x_{n_m} $$</p>
+</div>
+<p>接下来验证该级数是否<strong>绝对收敛</strong>。根据我们在选取子列时的构造：
+$$ \sum_{k=2}^{\infty} |x_{n_k} - x_{n_{k-1}}| &lt; \sum_{k=2}^{\infty} \frac{1}{2^k} = \frac{1}{2} &lt; \infty $$
+既然级数绝对收敛，根据定理的假设，该级数在 <span class="arithmatex">\(E\)</span> 中<strong>收敛</strong>。</p>
+<p>设级数的和为 <span class="arithmatex">\(x\)</span>。根据“级数和”的定义，就是部分和序列的极限，因此我们得到了子列的收敛性：
+$$ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} $$</p>
+<div class="admonition success">
+<p class="admonition-title">结论：从子列收敛到原序列收敛</p>
+<p>我们现在有一个柯西列 <span class="arithmatex">\((x_n)\)</span>，且它有一个收敛于 <span class="arithmatex">\(x\)</span> 的子列 <span class="arithmatex">\((x_{n_k})\)</span>。利用三角不等式：
+$$ |x_n - x| \le |x_n - x_{n_k}| + |x_{n_k} - x| $$
+*   当 <span class="arithmatex">\(n, n_k\)</span> 足够大时，第一项因柯西列性质趋于 0。
+*   第二项因于列收敛趋于 0。</p>
+<p>因此 <span class="arithmatex">\(\lim\limits_{n \to \infty} x_n = x\)</span>。即任意柯西列都收敛，空间完备。</p>
+<p>我们需要知道任何赋范空间都可以扩张成一个Banach空间（完备赋范空间）</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 2.4.5 (完备化定理)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 是一个赋范空间，总是存在一个 Banach 空间 <span class="arithmatex">\(\tilde{E}\)</span> 和一个从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(\tilde{E}\)</span> 的等距映射 <span class="arithmatex">\(T\)</span>，使得 <span class="arithmatex">\(T(E)\)</span> 是 <span class="arithmatex">\(\tilde{E}\)</span> 的稠密子空间。</p>
+<p>换句话说，<span class="arithmatex">\(\tilde{E}\)</span> 是 <span class="arithmatex">\(E\)</span> 的完备化。此外，在等距同构的意义下，<span class="arithmatex">\(E\)</span> 的完备化 <span class="arithmatex">\(\tilde{E}\)</span> 是唯一的。</p>
+</div>
+<p><code>Proof Sketch.</code></p>
+<p>构造思路类似于从有理数构造实数。我们考虑 <span class="arithmatex">\(E\)</span> 中<strong>所有柯西列</strong>构成的向量空间 <span class="arithmatex">\(\mathcal{E}\)</span>，并定义等价关系：如果两个柯西列的差趋于 0，则视为等价。商空间 <span class="arithmatex">\(\tilde{E} = \mathcal{E} / \sim\)</span> 在商范数下构成 Banach 空间。最后，原空间 <span class="arithmatex">\(E\)</span> 可以通过常数序列自然地、等距地嵌入到 <span class="arithmatex">\(\tilde{E}\)</span> 中，并且构成稠密子空间。</p>
+<div class="admonition example">
+<p class="admonition-title">Example 2.4.6 (典型完备化例子)</p>
+<ul>
+<li><strong>(a)</strong> 装备 <span class="arithmatex">\(p\)</span>-范数 (<span class="arithmatex">\(1 \le p &lt; \infty\)</span>) 的 <span class="arithmatex">\(C[a, b]\)</span> 不是完备的，其完备化是 <span class="arithmatex">\(L^p[a, b]\)</span>。</li>
+<li><strong>(b)</strong> 有限支集序列空间 <span class="arithmatex">\(c_{00}\)</span> 的完备化是趋于 0 的序列空间 <span class="arithmatex">\(c_0\)</span>。</li>
+<li><strong>(c)</strong> 多项式空间 <span class="arithmatex">\(P[0, 1]\)</span> 在上确界范数下的完备化是连续函数空间 <span class="arithmatex">\(C[0, 1]\)</span>。</li>
+</ul>
+</div>
+<p>在有限维赋范空间中，有界闭集必定是紧集（Heine-Borel 性质）。但在无穷维空间中这一性质不再成立。Riesz 引理正是处理无穷维空间几何结构、描述这种差异的重要工具。</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 2.4.7 (Riesz 引理)</p>
+<p>设 <span class="arithmatex">\(Y\)</span> 是赋范空间 <span class="arithmatex">\(E\)</span> 的<strong>闭真子空间</strong>（即 <span class="arithmatex">\(Y \neq E\)</span>），且 <span class="arithmatex">\(0 &lt; \alpha &lt; 1\)</span>。则存在范数为 1 的元素 <span class="arithmatex">\(x_\alpha \in E\)</span>，使得它到子空间 <span class="arithmatex">\(Y\)</span> 的距离大于 <span class="arithmatex">\(\alpha\)</span>，即：
+$$ |x_\alpha - y| &gt; \alpha, \quad \forall y \in Y $$</p>
+</div>
+<p><code>Proof.</code></p>
+<p>因为 <span class="arithmatex">\(Y\)</span> 是真子空间，我们可以取 <span class="arithmatex">\(x \in E \setminus Y\)</span>。设 <span class="arithmatex">\(d = \inf\{\|x - y\| : y \in Y\}\)</span> 为 <span class="arithmatex">\(x\)</span> 到 <span class="arithmatex">\(Y\)</span> 的距离。由于 <span class="arithmatex">\(Y\)</span> 是闭集，故 <span class="arithmatex">\(d &gt; 0\)</span>。</p>
+<p>因为 <span class="arithmatex">\(d &lt; d\alpha^{-1}\)</span>，根据下确界定义，存在 <span class="arithmatex">\(y_0 \in Y\)</span> 使得 <span class="arithmatex">\(\|x - y_0\| &lt; d\alpha^{-1}\)</span>。我们令 <span class="arithmatex">\(x_\alpha = \frac{x - y_0}{\|x - y_0\|}\)</span>，显然 <span class="arithmatex">\(\|x_\alpha\| = 1\)</span>。
+对于任意 <span class="arithmatex">\(y \in Y\)</span>，考察距离 <span class="arithmatex">\(\|x_\alpha - y\|\)</span>：
+$$ |x_\alpha - y| = \left| \frac{x - y_0}{|x - y_0|} - y \right| = \frac{1}{|x - y_0|} | x - \underbrace{(y_0 + |x - y_0|y)}_{\in Y} | $$
+注意括号内的部分仍属于 <span class="arithmatex">\(Y\)</span>，因此其与 <span class="arithmatex">\(x\)</span> 的距离至少为 <span class="arithmatex">\(d\)</span>。从而我们得到 </p>
+<div class="arithmatex">\[\|x_\alpha - y\| \ge \frac{d}{\|x - y_0\|} &gt; \frac{d}{d\alpha^{-1}} = \alpha\]</div>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 2.4.8 (无穷维空间的单位球非紧)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 是无穷维赋范空间。则其单位球 <span class="arithmatex">\(U_E := \{x \in E : \|x\| \le 1\}\)</span> 和单位球面 <span class="arithmatex">\(S_E := \{x \in E : \|x\| = 1\}\)</span> <strong>都不是紧集</strong>。</p>
+</div>
+<p><code>Proof.</code></p>
+<p>我们要构造一个没有收敛子列的序列。任取 <span class="arithmatex">\(x_1 \in S_E\)</span>。由于 <span class="arithmatex">\(E\)</span> 是无穷维的，<span class="arithmatex">\(span\{x_1\}\)</span> 是一个有限维的真子空间（也就是闭真子空间）。应用 Riesz 引理（取 <span class="arithmatex">\(\alpha = 3/4\)</span>），存在 <span class="arithmatex">\(x_2 \in S_E\)</span> 使得 <span class="arithmatex">\(\|x_2 - x_1\| \ge 3/4\)</span>。</p>
+<p>归纳地，假设已选取 <span class="arithmatex">\(x_1, \dots, x_n\)</span>。考虑闭真子空间 <span class="arithmatex">\(Y_n = span\{x_1, \dots, x_n\}\)</span>。再次应用 Riesz 引理，存在 <span class="arithmatex">\(x_{n+1} \in S_E\)</span> 使得对于所有 <span class="arithmatex">\(y \in Y_n\)</span> 都有 <span class="arithmatex">\(\|x_{n+1} - y\| \ge 3/4\)</span>。</p>
+<p>如此得到的序列 <span class="arithmatex">\((x_n)\)</span> 满足：当 <span class="arithmatex">\(n \neq m\)</span> 时，<span class="arithmatex">\(\|x_n - x_m\| \ge 3/4\)</span>。该序列显然不是柯西列，因此没有任何收敛子列。故 <span class="arithmatex">\(S_E\)</span> 和 <span class="arithmatex">\(U_E\)</span> 不紧。</p>
+<p>Banach 不动点定理是分析学中构造解和证明唯一性的核心工具。</p>
+<div class="admonition abstract">
+<p class="admonition-title">Theorem 2.4.9 (Banach 不动点定理 / 压缩映射原理)</p>
+<p>设 <span class="arithmatex">\(K\)</span> 是 Banach 空间 <span class="arithmatex">\(E\)</span> 的非空闭子集，<span class="arithmatex">\(\varphi: K \to K\)</span> 是一个<strong>压缩映射</strong>，即存在常数 <span class="arithmatex">\(0 &lt; \rho &lt; 1\)</span> 使得：
+$$ |\varphi(x) - \varphi(y)| \le \rho|x - y|, \quad \forall x, y \in K $$
+则 <span class="arithmatex">\(\varphi\)</span> 在 <span class="arithmatex">\(K\)</span> 中有且仅有一个不动点，即存在唯一的 <span class="arithmatex">\(z_0 \in K\)</span> 使得 <span class="arithmatex">\(\varphi(z_0) = z_0\)</span>。</p>
+</div>
+<p><code>Proof.</code></p>
+<p><strong>存在性</strong>：任取 <span class="arithmatex">\(x_0 \in K\)</span>，定义迭代序列 <span class="arithmatex">\(x_{n+1} = \varphi(x_n)\)</span>。考察相邻项距离，利用压缩性质可得 <span class="arithmatex">\(\|x_{n+1} - x_n\| \le \rho^n\|x_1 - x_0\|\)</span>。对于任意 <span class="arithmatex">\(m &gt; n\)</span>，利用三角不等式和几何级数求和：</p>
+<div class="arithmatex">\[ \|x_m - x_n\| \le \sum_{i=n}^{m-1} \|x_{i+1} - x_i\| \le \left(\sum_{i=n}^{m-1} \rho^i\right) \|x_1 - x_0\| \le \frac{\rho^n}{1-\rho}\|x_1 - x_0\| \]</div>
+<p>当 <span class="arithmatex">\(n \to \infty\)</span> 时右端趋于 0，故 <span class="arithmatex">\((x_n)\)</span> 是柯西列。因 <span class="arithmatex">\(E\)</span> 完备且 <span class="arithmatex">\(K\)</span> 闭，设 <span class="arithmatex">\(x_n \to z_0 \in K\)</span>。由压缩性质知 <span class="arithmatex">\(\varphi\)</span> 连续，故 <span class="arithmatex">\(z_0 = \lim x_{n+1} = \lim \varphi(x_n) = \varphi(z_0)\)</span>。</p>
+<p><strong>唯一性</strong>：假设也有 <span class="arithmatex">\(u \in K\)</span> 使得 <span class="arithmatex">\(\varphi(u) = u\)</span>。则 <span class="arithmatex">\(\|u - z_0\| = \|\varphi(u) - \varphi(z_0)\| \le \rho\|u - z_0\|\)</span>。因为 <span class="arithmatex">\(\rho &lt; 1\)</span>，这迫使 <span class="arithmatex">\(\|u - z_0\| = 0\)</span>，即 <span class="arithmatex">\(u = z_0\)</span>。</p>
+<h2 id="exercise-24">Exercise 2.4<a class="headerlink" href="#exercise-24" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">HW3-2</p>
+<p>Show that Theorem 2.4.9 need not hold if</p>
+<div class="arithmatex">\[\left|\varphi(x)-\varphi(y)\right|&lt;\left|x-y\right|\]</div>
+<p>But the result does still hold under this weakened condition if <span class="arithmatex">\(K\)</span> is compact</p>
+</div>
+<p><code>Proof.</code></p>
+<details class="quote">
+<summary>Theorem 2.4.9(Banach Fixed Point Theorem)</summary>
+<p>Let <span class="arithmatex">\(K\)</span> be a nonempty closed subset of a Banach space <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(\varphi:K\to K\)</span> a constraction, that is, there exists a constant <span class="arithmatex">\(0&lt; \rho&lt;1\)</span> such that</p>
+<div class="arithmatex">\[\lVert \varphi(x)-\varphi(y) \rVert \leqslant \rho \lVert x-y \rVert , \forall x,y\in K\]</div>
+<p>Then <span class="arithmatex">\(\varphi\)</span> has a unique fixed point in <span class="arithmatex">\(K\)</span>, that is, there exists a unique <span class="arithmatex">\(z_{0}\in K\)</span> such that <span class="arithmatex">\(\varphi(z_{0})=z_{0}\)</span></p>
+</details>
+<p><span class="arithmatex">\(\mathbf{Counter\ Example:}\)</span></p>
+<p>考虑<span class="arithmatex">\(f(x)=x+ \frac{1}{x},E=\mathbb{R},K=[1,+\infty]\)</span></p>
+<p>那么显然对<span class="arithmatex">\(x\geqslant 1,f(x)=x + \frac{1}{x}\geqslant 1\in K,f(x):K\to K\)</span></p>
+<p>再利用拉格朗日中值定理：</p>
+<div class="arithmatex">\[
+\lvert f(x)-f(y) \rvert =\lvert f'(\xi) \rvert \lvert x-y \rvert,f'(\xi)= 1- \frac{1}{\xi^{2}}&lt;1 ,x,y\in K
+\]</div>
+<p>满足条件，但是其不存在不动点，反证：</p>
+<div class="arithmatex">\[
+x+ \frac{1}{x}=x\implies \frac{1}{x}=0
+\]</div>
+<p>不存在这样的<span class="arithmatex">\(x\)</span></p>
+<p>下面说明在紧性条件下，减弱条件也可以推出不动点存在：</p>
+<p>修改命题条件为假设<span class="arithmatex">\(K\)</span>为<span class="arithmatex">\(Banach\)</span>空间<span class="arithmatex">\(E\)</span>中的非空紧集，且<span class="arithmatex">\(\varphi:K\to K\)</span>，并且满足</p>
+<div class="arithmatex">\[
+\lVert \varphi(x)-\varphi(y) \rVert &lt;\lVert x-y \rVert ,\forall x,y\in K,x\neq y
+\]</div>
+<p>我们需要证明其有不动点</p>
+<p>构造函数<span class="arithmatex">\(f(x):K\to \mathbb{R}\)</span></p>
+<div class="arithmatex">\[
+f(x)=\lVert x-\varphi(x) \rVert 
+\]</div>
+<p>根据<span class="arithmatex">\(Lipschitz\)</span>条件可知<span class="arithmatex">\(\varphi\)</span>连续，那么<span class="arithmatex">\(f\)</span>也是连续函数，利用紧性可知，其极小值存在，不妨设在<span class="arithmatex">\(x_{0}\)</span>处取到，即<span class="arithmatex">\(f(x_{0})=\min\limits_{x\in K}f(x)\)</span></p>
+<p>下面说明<span class="arithmatex">\(x_{0}\)</span>为不动点，也就是要说明<span class="arithmatex">\(f(x_{0})=0\)</span>，反证<span class="arithmatex">\(f(x_{0})=\delta &gt;0\)</span>，再考虑<span class="arithmatex">\(\varphi(x_{0})\in K\)</span></p>
+<div class="arithmatex">\[
+f(\varphi(x_{0}))=\lVert \varphi(x_{0})-\varphi(\varphi(x_{0})) \rVert &lt;\lVert \varphi(x_{0})-x_{0} \rVert =f(x_{0})
+\]</div>
+<p>与 <span class="arithmatex">\(f(x_{0})\)</span> 的极小性矛盾，因此 <span class="arithmatex">\(f(x_{0})=0\)</span>，即证不动点存在（唯一性是显然的）</p>
+<div class="admonition tip">
+<p class="admonition-title">紧集如何弥补收缩条件弱化所带来的不足</p>
+<p>原定理成立的核心是完备性和收缩性，因此可以保证 <span class="arithmatex">\(\lVert x_{n}-x_{n-1} \rVert\)</span> 为柯西列，但是如果只是单纯的非减条件，可能会使得原本的数列收敛速度不够快，无法导出柯西列，因此结论可能不成立，那么这时候引入紧性就可以提供额外的拓扑结构，其作用体现在以下两点：
+1. 保证连续函数的最小值存在（极值定理）
+2. 利用距离严格递减性证明最小值必为零（反证法）</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+
+    <div class="md-footer-copyright">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 Eurekaimer
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+    </div>
+
+    <div class="footer-center-box">
+      <div class="runtime-info">
+        <span>本站已运行</span>
+        <span id="run_days" style="color: #8C495A; font-weight: bold;">--</span>
+        <span>天</span>
+      </div>
+      <div class="icp-info">
+        <a href="https://icp.gov.moe/?keyword=20252030" target="_blank">萌ICP备20252030号</a>
+      </div>
+    </div>
+
+    
+      
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Eurekaimer" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/QQ.png" target="_blank" rel="noopener" title="QQ" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M434.1 420.4c-11.5 1.4-44.9-52.7-44.9-52.7 0 31.3-16.1 72.2-51 101.8 16.8 5.2 54.8 19.2 45.8 34.4-7.3 12.3-125.5 7.9-159.6 4-34.1 3.8-152.3 8.3-159.6-4-9-15.2 28.9-29.2 45.8-34.4-34.9-29.5-51.1-70.4-51.1-101.8 0 0-33.3 54.1-44.9 52.7-5.4-.6-12.4-29.6 9.3-99.7 10.3-33 22-60.5 40.1-105.8C60.9 98 109.2-.1 224.3-.1 338-.1 387.5 96 384.6 214.9c18.1 45.2 29.9 72.9 40.1 105.8 21.8 70.1 14.7 99.1 9.3 99.7z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/Wechat.jpg" target="_blank" rel="noopener" title="WeChat" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.33.33 0 0 0 .167-.054l1.903-1.114a.86.86 0 0 1 .717-.098 10.2 10.2 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348M5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18m5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.72.72 0 0 1 .598.082l1.584.926a.3.3 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.6.6 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/702046230?spm_id_from=333.1007.0.0" target="_blank" rel="noopener" title="Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<2507983039@qq.com>" target="_blank" rel="noopener" title="Email 2507983039@qq.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+    
+
+  </div>
+</div>
+
+<style>
+  .footer-center-box {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+  .runtime-info {
+    color: #8C495A;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .icp-info a {
+    color: inherit;
+    opacity: 0.7;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  .icp-info a:hover {
+    opacity: 1;
+    color: var(--md-accent-fg-color);
+  }
+
+  @media (max-width: 76.1875em) {
+    .md-footer-meta__inner {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // 建站日期 2024-10-28，按本地时区构造避免字符串解析差异
+  (() => {
+    const el = document.getElementById("run_days");
+    if (!el) return;
+    const start = new Date(2024, 9, 28);
+    const days = Math.floor((Date.now() - start) / (1000 * 60 * 60 * 24));
+    el.textContent = days;
+  })();
+</script>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.action.edit","content.action.view","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","header.autohide","navigation.expand","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8ffeb9c9.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="../../../javascripts/videos.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mermaid.mjs" type="module"></script>
+      
+    
+  </body>
+</html>
