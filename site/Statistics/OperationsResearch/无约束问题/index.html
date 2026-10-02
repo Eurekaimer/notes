@@ -2590,9 +2590,12 @@ X^{(k+1)}-X^{(k)}=\overline{H}^{(k+1)}\left[ \nabla f(X^{(k+1)})-\nabla f(X^{(k)
 <p>拟牛顿法的计算步骤：</p>
 <ol>
 <li>给定初始点 <span class="arithmatex">\(X^{(0)}\)</span> 及梯度允许误差 <span class="arithmatex">\(\varepsilon&gt;0\)</span></li>
-<li>若 $$ \lVert \nabla f(X^{(0)}) \rVert ^{2}\leqslant \varepsilon $$
-则 <span class="arithmatex">\(X^{(0)}\)</span> 为近似极小点，停止，否则转入 3</li>
-<li>令 <span class="arithmatex">\(\overline{H}^{(0)}=I,P^{(0)}=-\overline{H}^{(0)}\nabla f(X^{(0)})\)</span></li>
+<li>
+<p>若</p>
+<div class="arithmatex">\[ \lVert \nabla f(X^{(0)}) \rVert ^{2}\leqslant \varepsilon \]</div>
+<p>则 <span class="arithmatex">\(X^{(0)}\)</span> 为近似极小点，停止，否则转入 3
+3. 令 <span class="arithmatex">\(\overline{H}^{(0)}=I,P^{(0)}=-\overline{H}^{(0)}\nabla f(X^{(0)})\)</span></p>
+</li>
 </ol>
 <p>注 1:上述方法首先由戴维顿 (Davidon) 提出，后经弗莱彻 (Fletcher) 和鲍威尔 (Powell) 加以改进，故称<strong>DFP 法</strong>，或<strong>DFP 拟牛顿法</strong>.</p>
 <p>注 2:拟牛顿法也称为变尺度 (variable metric) 方法。</p>

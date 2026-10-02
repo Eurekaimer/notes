@@ -8,10 +8,8 @@
 
 ## 可约性与周期性
 
-
 !!! note "Definition 5.1(可达)"
     设 $i,j\in E$ 是 Markov 链中的两个状态，如果 $\exists n\geqslant 0$ 使得从 $i$ 出发经过 $n$ 步转移可以到达 $j$($P_{ij}>0$)，则称状态 $i$ 可达 (accessible)$j$，记作 $i\to j$，如果 $i$ 不可达 $j$，即 $\forall n>0,P_{ij}^{n}=0$,记作 $i\not\to j$
-
 
 注：可达具有传递性，设 $i,j,k\in E，n,m \geqslant 0$，使得 $P_{ij}^{(n)}>0,P_{jk}^{(m)}>0$，则
 
@@ -21,14 +19,12 @@ $$
 
 即若 $i\to j,j\to k$，那么 $i\to k$
 
-
 !!! note "Definition 5.2(互通)"
     设 $i,j\in E$ 是 Markov 链中两个状态，如果 $\exists n,m \geqslant 0$ 使得
 
     $$P_{ij}^{(n)}>0,P_{ji}^{m}>0$$
 
     就称 $i$ 和 $j$ 互通 (communicate),记作 $i \leftrightarrow j$
-
 
 !!! note "命题 5.3"
     互通是状态空间 $E$ 上的一个等价关系，即
@@ -37,7 +33,6 @@ $$
     + 传递性 (Proved by CK-Equation)
 
 因此所有互通的状态构成等价类，称这样的等价类为互通类 (Communication Class)
-
 
 !!! note "Definition 5.4(不可约性 irreducible)"
     一个 Markov 链称为不可约的 (irreducible)，如果它的互通类只有一个，即所有状态都是互通的
@@ -58,15 +53,12 @@ $$
 !!! note "推论"
     一个 Markov 链不可约 $\iff$ 它的转移矩阵不可约
 
-
-
 !!! note "Definition 5.5(周期性)"
     状态 $i\in E$ 的周期 (period) 定义为
 
     $$ d_{i} \overset{\Delta}{=} gcd\left\{  {n,P_{ii}^{(n)}>0}\right\}$$
 
     若 $d_{i}=1$，则称状态 $i$ 是非周期的
-
 
 !!! note "命题 5.6"
     若 $i \leftrightarrow j$，则 $d_{i}=d_{j}$
@@ -105,7 +97,6 @@ $$
 
 那么状态集合 $E=C_{0}\bigcup C_{1}\bigcup\dots \bigcup C_{d-1}$
 
-
 !!! note "命题 5.7"
     若状态 $i\in C_{p}$，且 $P_{ij}>0$，那么 $j\in C_{p+1}$
 
@@ -123,7 +114,6 @@ $$
 
 注：当 $0\leqslant k \leqslant d-1$ 时，从 $C_{k}$ 中的状态转移到 $C_{k+1}$，然后从 $C_{d-1}$ 回到 $C_{0}$，即经过适当的行列置换，它的转移矩阵可以表示为：
 
-
 $$
 P=\begin{pmatrix}
 0 & A_{0,1} & \dots & 0 & 0 \\
@@ -133,10 +123,8 @@ A_{d-1,0} & \dots & \dots & \dots & 0
 \end{pmatrix}
 $$
 
-
 !!! question "思考"
     一步转移矩阵如上，那么 n 步转移矩阵 ($P^{2},P^{3},\dots$)？
-
 
 ## 常返性
 
@@ -146,8 +134,8 @@ George Polyo
     设 $\left\{ X_{n} \right\}$ 为一个状态空间为 $E$ 的 Markov 链，从 $n=0$ 出发首次达到状态 $j$ 的时刻，我们记为
 
 $$\tau_{j}\overset{\Delta}{=}\inf \left\{ n \geqslant 1: X_{n}=j \right\} $$
->若 $\left\{ n \geqslant 1,X_{n}=j \right\}=\emptyset$,则 $\tau_{j}\overset{\Delta}{=}\infty$
 
+>若 $\left\{ n \geqslant 1,X_{n}=j \right\}=\emptyset$,则 $\tau_{j}\overset{\Delta}{=}\infty$
 
 !!! note "Definition 5.9(首达概率)"
     设 $\left\{ X_{n} \right\}$ 为一个状态空间为 $E$ 的 Markov 链，则经过 $n$ 步从状态 $i$ 到 $j$ 的首达概率为
@@ -156,7 +144,6 @@ $$\tau_{j}\overset{\Delta}{=}\inf \left\{ n \geqslant 1: X_{n}=j \right\} $$
     f_{ij}^{(n)}&\overset{\Delta}{=}P\left( \tau_{j}=n\mid X_{0}=i \right) \\
     &=P\left(  X_{n}=j,X_{n-1}\neq j \dots ,X_{1}\neq j \mid X_{0}=i\right)
     \end{aligned}$$
-
 
 注：定义事件 $A_{n}\overset{\Delta}{=}\left\{ X_{n}=j,X_{n-1}\neq j \dots ,X_{1}\neq j \mid X_{0}=i \right\}$
 
@@ -168,27 +155,21 @@ f_{ij}^{(n)}&\overset{\Delta}{=}P\left( \tau_{j}< \infty\mid X_{0}=i \right)\\
 &=\sum\limits_{n=1}^{\infty} f_{ij}^{(n)}\leqslant 1
 \end{aligned}$$
 
-
 !!! note "Definition 5.10(常返性)"
     如果$f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，则称状态$i$是常返的(Recurrent)，否则称$i$为暂留的(Transient)，或者非常返的(Nonrecurrent)).
 
-
 虽然我们通过$f_{ij}$ 来定义常返性，但$f_{ij}^{(n)}$ 的计算并不容易，所以我们想要通过n步转移概率$P_{ij}^{(n)}$ 来计算，通过$P_{ij}^{(n)}$ 来获得状态是否是常返的判据，这即是下面的定理：
-
-
 
 !!! tip "Theorem 5.11"
     状态$i$是常返态的充分必要条件是
 
     $$\begin{aligned}\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty\end{aligned}$$
 
-
 `Proof.`
 
 注意到事件
 
 $$A_n\triangleq\{X_n=j,X_{n-1}\neq j,\cdots,X_1\neq j|X_0=i\}$$
-
 
 互不相容，考虑基于此对样本轨道进行分解
 
@@ -202,8 +183,6 @@ P_{ij}^{(n)}&=P(X_{n}=j|X_{0}=i) \\
 
 于是根据形式可以考虑卷积$\to$母函数方法(记号：$\delta_{ij}=1(i=j)$，否则为0)
 
-
-
 $$\begin{aligned}
 \sum_{n=0}^{\infty}P_{ij}^{(n)}z^{n}& =\delta_{ij}+\sum_{n=1}^{\infty}P_{ij}^{(n)}z^{n}  \\
 &=\delta_{ij}+\sum_{n=1}^{\infty}\sum_{k=1}^{n}f_{ij}^{(k)}P_{jj}^{(n-k)}z^{n} \\
@@ -212,14 +191,9 @@ $$\begin{aligned}
 &=\delta_{ij}+\sum_{k=1}^\infty(f_{ij}^{(k)}z^k)\sum_{m=0}^\infty(P_{jj}^{(m)}z^m)
 \end{aligned}$$
 
-
 那么令$j=i$
 
-
 $$\begin{aligned}\sum_{n=0}^\infty P_{ii}^{(n)}z^n=1+\sum_{k=1}^\infty(f_{ii}^{(k)}z^k)\sum_{n=0}^\infty(P_{ii}^{(n)}z^n)\end{aligned}$$
-
-
-
 
 即
 
@@ -227,9 +201,7 @@ $$\begin{aligned}\sum_{n=0}^{\infty}P_{ii}^{(n)}z^n=\frac{1}{1-\sum_{k=1}^{\inft
 
 令$z\to1^{-}$ ，由[Abel定理](https://en.wikipedia.org/wiki/Abel%27s_theorem)可得
 
-
 $$\begin{aligned}\sum_{n=1}^{\infty}P_{ii}^{(n)}&=\frac{1}{1-f_{ii}}\end{aligned}$$
-
 
 那么$f_{ii}=1$即等价于$\sum\limits_{n=0}^{\infty}P_{ii}^{(n)}=\infty$
 
@@ -257,7 +229,6 @@ $$\mathbb{E}\left[\sum_{n=1}^\infty I_n|X_0=i\right]=\sum_{n=1}^\infty\mathbb{E}
     如果状态$j$是暂留的，那么对任意状态$i$
 
     $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
-
 
 `Proof`
 
@@ -336,7 +307,6 @@ $$\sum_{j=1}^NP_{ij}^{(k)}=1$$
 
     当 $d=1,2$ 时，$S_{n}$ 是常返的，当 $d\geq3$ 时，$S_{n}$ 是非常返的。
 
-
 `Proof`
 
 不妨假设 $S_0=0$，由 $\xi_{i}$ 的定义，所有状态都是互通的，即 $S_{n}$ 不可约，所以所有状态的常返性一致，因此我们只考虑 0 状态的常返性。
@@ -376,7 +346,6 @@ $$P_{00}^{(2n)}\leqslant C_{d}\cdot n^{-d/2},$$
 （参考《应用随机过程》，陈大岳、章复熹，北京大学出版社 2023 P95-P99）
 
 所以 $\sum\limits_{n=0}^{\infty}P_{00}^{(2n)}<\infty$ ，即 $S_{n}$ 非常返。
-
 
 这表明一维或二维的简单随机游动一定能回到起点，但三维以上的简单随机游动却不一定。
 

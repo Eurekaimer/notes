@@ -10,14 +10,11 @@
     考试难度：
     修读时间：Fall 25
 
-
 + References
 	+
 	+ [CS229 Lecture Notes](https://cs229.stanford.edu/main_notes.pdf)
 + Optional documents
 	+ More about SGD([Notes](https://www.lamsade.dauphine.fr/%7Ecroyer/ensdocs/SG/LectureNotesOML-SG.pdf))
-
-
 
 ## 章节内容
 
@@ -37,7 +34,6 @@
 	+ Multiple random variables
 	+ The multivariable Gaussian distribution
 	+ Recommend the textbook(Sheldon Ross)
-
 
 [Chapter 3: 信息论基础](./Assets/DMML_Lecture3%20信息论基础.md)
 

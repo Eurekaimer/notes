@@ -1,7 +1,6 @@
 
 # Lecture 1 - Introduction & Preliminaries
 
-
 !!! tldr "Overview"
     1. 课程概括  
     2. 概率空间  

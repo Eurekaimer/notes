@@ -28,7 +28,6 @@ A:h(g(g(5)),g(g(g(f(f(5))))))?
 
 - [x] Part 4 拍合照/考勤/讨论 Part 3 的计算机实现
 
-
 ## Reading(2h)
 
 Chapter 1: Building Abstractions with Functions
@@ -36,7 +35,6 @@ Chapter 1: Building Abstractions with Functions
 + 1.1   Getting Started
 + 1.2   Elements of Programming
 + 1.3   Defining New Functions
-
 
 ### Ch. 1.1
 
@@ -57,7 +55,6 @@ Pure functions have the property that applying them has no effects beyond return
 Non-pure function:
 
 In addition to returning a value, applying a non-pure function can generate _side effects_, which make some change to the state of the interpreter or computer. A common side effect is to generate additional output beyond the return value, using the print function.
-
 
 Remark: The value that print returns is always None, a special Python value that represents nothing. The interactive Python interpreter does not automatically print the value None. In the case of print, the function itself is printing output as a side effect of being called.
 
@@ -89,10 +86,7 @@ max(f(2, g(h(1, 5), 3)), 4)
 
 Answer: 3
 
-
 ![hint](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/61a-video-q1)
-
-
 
 #### Environment Diagrams
 
@@ -125,8 +119,6 @@ None  None
 
 ![print](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/non-pure-print)
 
-
-
 ## Lab 00(10min)
 
 [UNIX tutorial](https://cs61a.org/articles/unix/)
@@ -134,8 +126,6 @@ None  None
 纪念一下第一次使用[ok](https://cs61a.org/articles/using-ok/)的Lab
 
 ![lab00](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/CS61a-lab00)
-
-
 
 ## HW01(15min)
 

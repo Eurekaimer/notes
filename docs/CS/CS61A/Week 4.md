@@ -12,12 +12,9 @@
 
 ## Videos(1h)
 
-
 ### Recursion
 
-
 #### Self-Reference
-
 
 ```Python
 def print_all(x):
@@ -27,9 +24,7 @@ def print_all(x):
 print_all(1)(2)(3)
 ```
 
-
 sum case:
-
 
 ```Python
 def print_sums(x):
@@ -41,13 +36,9 @@ def print_sums(x):
 print_sums(1)(3)(5)
 ```
 
-
-
 #### Recursive Functions
 
-
 Digit Sums
-
 
 ```Python
 def split(n):
@@ -61,7 +52,6 @@ def sum_digits(n):
 		return sum_digits(all_but_last) + last
 ```
 
-
 #### Recursion in Environment Diagrams
 
 ```Python
@@ -74,12 +64,9 @@ def fact(n):
 fact(3)
 ```
 
-
 Iteration is a special case of recursion.
 
-
 #### Verifying Recursive Functions
-
 
 #### Mutual Recursion
 
@@ -115,11 +102,9 @@ def cascade(n):
 		print(n)
 ```
 
-
 write code for people!
 
 #### Example: Inverse Cascade
-
 
 ```Python
 def inverse_cascade(n):
@@ -136,7 +121,6 @@ grow = lambda n: f_then_g(grow, print, n // 10)
 shrink = lambda n: f_then_g(print, shrink, n // 10)
 ```
 
-
 #### Tree Recursion
 
 ```Python
@@ -149,7 +133,6 @@ def Fib(n):
 		 return Fib(n-1) + Fib(n-2)
 ```
 
-
 ## Reading(1h)
 
 Chapter 1: Building Abstractions with Functions
@@ -157,23 +140,17 @@ Chapter 1: Building Abstractions with Functions
 
 ### Ch. 1.7
 
-
 >A function is called _recursive_ if the body of the function calls the function itself, either directly or indirectly.
-
 
 An example use recursion function to calculate sum of digits
 
 #### The Anatomy of Recursive Functions
 
-
 >Treating a recursive call as a functional abstraction has been called a _recursive leap of faith_.
-
 
 #### Mutual Recursion
 
-
 >When a recursive procedure is divided among two functions that call each other, the functions are said to be _mutually recursive_.
-
 
 ```Python
 def is_even(n):
@@ -191,7 +168,6 @@ def is_odd(n):
 result = is_even(4)
 ```
 
-
 No matter even or odd, the function will return iff n equals to 0.
 
 >As such, mutual recursion is **no more mysterious or powerful** than simple recursion, and it provides a mechanism for maintaining abstraction within a complicated recursive program.
@@ -200,15 +176,12 @@ No matter even or odd, the function will return iff n equals to 0.
 
 talk about the cascade function in videos, here is passed.
 
-
 One another case:
-
 
 >As another example of mutual recursion, consider a two-player game in which there are n initial pebbles on a table. The players take turns, removing either one or two pebbles from the table, and the player who removes the final pebble wins. Suppose that Alice and Bob play this game, each using a simple strategy:
 >
 > 1. Alice always removes a single pebble
 > 2. Bob removes two pebbles if an even number of pebbles is on the table, and one otherwise
-
 
 Use mutual recursion
 
@@ -228,14 +201,11 @@ def play_bob(n):
 		play_alice(n-1)
 ```
 
-
 Remark: This code pattern can be used in any two-players game, and help dinner major in Math(Stat\OR\...) save a lot of time.
-
 
 #### Tree Recursion
 
 Classical Fibonacci computation and use recursion algorithm.
-
 
 ####  Example: Partitions
 
@@ -247,8 +217,6 @@ The most important is get the recursion process, and the (n, m) can be devided t
 
 1. (n, m-1) no doubt one case
 2. we use the m so remain n-m to devide: (n-m, m)
-
-
 
 ```Python
 # The number of ways to partition n using integers up to m equals
@@ -268,9 +236,7 @@ def partitions(n, m):
 		return partitions(n-m, m) + partitions(n, m-1)
 ```
 
-
 ## Disc 03(1h30min)
-
 
 ### Recursion
 
@@ -319,10 +285,7 @@ def main():
     move()
 ```
 
-
-
 ## HW03(1h30min)
-
 
 ### Q1: Num Eights
 
@@ -331,11 +294,9 @@ def main():
 
 不难，答案写的略微复杂
 
-
 ### Q3: Interleaved Sum
 
 编写过程中会很自然意识到需要倒序递归，其实编写一个反序的就可以，有点类似第二数学归纳法的感觉
-
 
 ### Q4: Count Coins
 
@@ -399,7 +360,6 @@ lambda k: (lambda f, k: 1 if k == 1 else k * f(f, k - 1))((lambda f, k: 1 if k =
 lambda f: (lambda k: f(k))--(lambda k: 1 if k == 0 else k * f(k - 1)?)
 
 发现无法调用 f,判断必须要求两个输入 f, k 以调用希望的 f(k - 1)，那么进行修改，仍然认为 f(k) 是我们需要的递归函数，但是需要两个输入，增加假定 f(f, k) 也是我们需要的阶乘函数
-
 
 (lambda f: (lambda k: f(f, k)))--(lambda f, k: 1 if k == 0 else k * f(f, k - 1))
 

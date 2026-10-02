@@ -6,7 +6,6 @@
     目的：熟悉 Linux 系统和基本命令
     实验环境：Linux 操作系统（可以使用 Ubuntu on windows,iOS 系统中的 Term）
 
-
     对于大多数未曾使用过 Linux 操作系统的人来说，使用 WSL 是一种捷径，使用 Ubuntu 则可以更好的修改各种错误（因为大多数人都使用这一发行版，并且本教程也基于 Ubuntu）
 
     跳过 WSL 的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用 Virtual Box，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况
@@ -58,7 +57,6 @@ cp test.txt test2.txt
 
 + 删除命令 rm，输入 rm testl.txt
 
-
 + 移动命令，输入 mv test2.txt test1.txt
 
 ### 2.目录命令的使用
@@ -74,7 +72,6 @@ cd mytest
 ```Shell
 mkdir mytest
 ```
-
 
 + rmdir 命令（移除当前目录下的目录）
 
@@ -97,7 +94,6 @@ rm -rf mytest
 
 ### 3.重定向输入输出，比较>和>>的作用
 
-
 ```Shell
  cat test1.txt 
  cat test1.txt > test.txt 
@@ -106,7 +102,6 @@ rm -rf mytest
  cat test.txt test1.txt >> test2.txt 
 ```
 
-
 ### 4.管道命令
 
 ```Shell
@@ -114,10 +109,7 @@ rm -rf mytest
  cat test2.txt|awk '{print $3}'
 ```
 
-
-
 ![wsl_file_system](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/wsl_fIle_system.png)
-
 
 ## Lab 2
 
@@ -152,7 +144,6 @@ mkdir module
 + JDK8
 + Hadoop3.4.2
 
-
 !!! warning "软件版本"
     需要注意的是，软件是会随着时间迭代的，因此版本号和文件名显然也会跟着改变，所以下面的一切与这两个文件有关的命令都需要注意修改对应的版本号进行操作
 
@@ -175,7 +166,6 @@ mkdir module
 windows：D:\Users\YourName\Documents\my_file.txt
 
 wsl：/mnt/d/Users/YourName/Documents/my_file.txt
-
 
 !!! tip "窍门"
     只需要在前面加上/mnt，在哪个盘就在后面跟上盘符，例如 D 盘就加上/d，后面只需要改变反斜杠即可
@@ -238,7 +228,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 :wq
 ```
 
-
 ```Shell
 // 运行source使得配置生效
 source ~/.bashrc
@@ -272,7 +261,6 @@ export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 // 加入后保存退出
 :wq
 ```
-
 
 ```Shell
 // 运行source使得配置生效
@@ -364,7 +352,6 @@ vim hdfs-site.xml
 </property>
 ```
 
-
 + hadoop-env.sh
 
 ```Shell
@@ -403,7 +390,6 @@ mkdir input
 cd input
 ```
 
-
 使用 vim 生成测试文件 `test1.txt` 和 `test2.txt`，每个文件输入若干单词
 
 将目录上传到 hdfs 文件系统
@@ -426,9 +412,7 @@ hdfs dfs -ls /output
 hdfs dfs -cat /output/part-r-00000
 ```
 
-
 ![lab2](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/dis_sys_lab2)
-
 
 !!! note "彩蛋"
     如果统计结果正确，那么说明你的 Hadoop 伪分布式集群就搭建成功并验证完成了！
@@ -523,7 +507,6 @@ vim yarn-site.xml
 
 第一个 property 主机名 (hostname)
 
-
 配置第三个
 
 ```Shell
@@ -536,7 +519,6 @@ vim hadoop-env.sh
 export YARN_RESOURCEMANAGER_USER=hadoop
 export YARN_NODEMANAGER_USER=hadoop
 ```
-
 
 ### 2. 启动 Yarn 服务
 
@@ -636,7 +618,6 @@ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.2.j
 
 精度相当差，如果要更高的精度可以调整后面参数 (10 10)
 
-
 ![Lab3_2](Lab3_2.png)
 
 如果要使用 web 端的话，检查一下端口：
@@ -670,10 +651,8 @@ yarn rmadmin -refreshQueues
 
 有时候因为防火墙无法访问，所以采取 http 协议，或者把电脑防火墙关掉
 
-
 !!! warning "关于最后一步提交之后但是无法开始任务"
     也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况（如果使用虚拟机），你需要调整节点最大可用内存，或者降低任务需要内存，也可以虚报内存（所以说安装虚拟机的时候不要把自己的内存配置写的太小了）
-
 
 ## Lab 4
 
@@ -795,7 +774,6 @@ spark-shell
 # 应该就可以使用spark了，这个需要确认一下，确认完了ctrl C退出
 ```
 
-
 ### 2.安装 sbt 并配置环境
 
 sbt（Simple Build Tool）用于打包 Scala 编写的 Spark 应用程序
@@ -883,7 +861,6 @@ $SPARK_HOME/bin/spark-submit \
 --master spark://localhost:7077 \
 ~/sparkapp/target/scala-2.12/simple-project_2.12-1.0.jar
 ```
-
 
 你应该会在日志中找到这样一个句子
 

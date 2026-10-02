@@ -8,7 +8,6 @@
 
 ## Phase 1: Typing
 
-
 ### Problem 1 (1 pt)
 
 Implement `pick`. This function selects which paragraph the user will type.
@@ -23,13 +22,11 @@ Implement `about`, which takes a list of `subject` words. It returns a functi
 
 Implement `accuracy`, which takes a `typed` paragraph and a `source` paragraph. It returns the percentage of words in `typed` that exactly match the corresponding words in `source`. Case and punctuation must match as well. "Corresponding" here means that two words must occur at the same indices in `typed` and `source`; the first words of both must match, the second words of both must match, and so on.
 
-
 ### Problem 4 (1 pt)
 
 Implement `wpm`, which computes the _words per minute_, a measure of typing speed, given a string `typed` and the amount of `elapsed` time in **seconds.** Despite its name, _words per minute_ is not based on the number of words typed, but instead the number of groups of 5 characters, so that a typing test is not biased by the length of words. The formula for _words per minute_ is the ratio of the number of characters (including spaces) typed divided by 5 (a typical word length) to the elapsed time in **minutes.**
 
 实际上就是一个简单的算式
-
 
 ## Phase 2: Autocorrect
 
@@ -37,18 +34,13 @@ Implement `wpm`, which computes the _words per minute_, a measure of typing sp
 
 Implement `autocorrect`, which takes a `typed_word`, a `word_list`, a `diff_function`, and a `limit`. The goal of `autocorrect` is to return the word in `word_list` that is closest to the provided `typed_word`.
 
-
-
 ### Problem 6 (3 pts)
 
-
 Implement `feline_fixes`, which is a diff function that takes two strings. It returns the minimum number of characters that must be changed in the `typed` word in order to transform it into the `source` word. If the strings are not of equal length, the difference in lengths is added to the total.
-
 
 可能需要额外注意判断字符串为空的情况避免调用报错
 
 ### Problem 7 (3 pts)
-
 
 Implement `minimum_mewtations`, which is a diff function that returns the minimum number of edit operations needed to transform the `typed` word into the `source` word.
 
@@ -80,7 +72,6 @@ s  4  0  0  0  0
 
 实际上就是利用二维数组的思路，然后结合**递推公式**填充矩阵即可，动态规划类型。
 
-
 关于这个算法的正确性证明我翻了很多中文平台都没有看到写的比较像人的，如果理解不了为什么这样做就是最小的还是看一下这篇[paper](https://dl.acm.org/doi/pdf/10.1145/321796.321811)，这里也贴一个本人的理解，首先我们需要对三种操作都进行分析，三种操作分别是替换，插入，删除权重相同，并且三种操作可选取的位置都是任意的，那么就会出现一个问题，采用**逆向思维**，再进行**最后一步操作**的时候恰好两个字符串对齐，那么String1和String2的大半部分一定已经相同了(一定存在一个特别大程度相似的公共字符串)
 
 下面开始分类讨论：
@@ -92,11 +83,7 @@ s  4  0  0  0  0
 
 ### (Optional) Extension: Final Diff (0 pts)
 
-
-
-
 ## Phase 3: Multiplayer
-
 
 ### Problem 8 (2 pts)
 
@@ -154,11 +141,9 @@ def match_string(match):
 
 ### Problem 10 (2 pts)
 
-
 Implement `fastest_words`, which returns which words each player typed fastest. This function is called once all players have finished typing. It takes in a `match`.
 
 很简单的比大小选择
-
 
 ![cats](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/CS61A-Cats)
 

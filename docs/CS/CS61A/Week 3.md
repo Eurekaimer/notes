@@ -1,18 +1,14 @@
 # Week 3
 
-
 ## Summary
 
 大概需要 2.5 小时，Lab 质量相当高，可以很好的弥补理解上的一些问题
 
 ## Videos(1h)
 
-
 ### Functional Abstraction
 
-
 #### Lambda Function Environments
-
 
 This is main case:
 
@@ -27,7 +23,6 @@ f(lambda y: a + y)(a)
 ```
 
 #### Return
-
 
 ```Python
 def search(f):
@@ -51,12 +46,7 @@ def inverse(f):
 sqrt = inverse(square) 
 ```
 
-
-
-
-
 #### Abstraction
-
 
 Choose a name for valued function or parameters.
 
@@ -66,12 +56,9 @@ Some name guideline.
 
 Teach you check some errors and read tracebacks
 
-
 ### Function Examples
 
-
 #### Midterm 1 Review
-
 
 + WWPP
 
@@ -111,12 +98,7 @@ horse(mask)
 
 有一种当年玩指针的美感（只要正确的指向就可以明白，这里的环境图确实是加进理解的一种手段）
 
-
 ![env-horse-mask](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/horse-mask)
-
-
-
-
 
 #### Implementing Functions
 
@@ -163,13 +145,11 @@ def sum_squares_ up_to(n):
 	return total
 ```
 
-
 ## Lab 02(1h)
 
 前面是一些基础的 Review 部分，算是强行带你复习吗？感觉还是不错的，给出了 Short-circuiting 这个概念详细的解释
 
 这里需要注意 lambda 表达式和 def 表达式的一些细微区别
-
 
 ```Python
 # A lambda expression by itself does not alter
@@ -186,20 +166,15 @@ negate = lambda f, x: -f(x)
 negate(lambda x: x * x, 3)
 ```
 
-
-
 >_Note:_ As we saw in the `lambda` expression section above, `lambda` functions have no intrinsic name. When drawing `lambda` functions in environment diagrams, they are labeled with the name `lambda` or with the lowercase Greek letter λ. This can get confusing when there are multiple lambda functions in an environment diagram, so you can distinguish them by numbering them or by writing the line number on which they were defined.
-
 
 ### WWPD
 
 #### Q1: WWPD: The Truth Will Prevail
 
-
 >If `and` and `or` do not _short-circuit_, they just return the last value; another way to remember this is that `and` and `or` always return the last thing they evaluate, whether they short circuit or not. Keep in mind that `and` and `or` don't always return booleans when using values other than `True` and `False`.
 
 Used above info.
-
 
 ```Python
 # 有点阴的例子
@@ -209,31 +184,22 @@ print(3) or ''
 # ''
 ```
 
-
 只要做完就会对短路求值这件事彻底理解
 
 #### Q2: WWPD: Higher-Order Functions
 
 这个也有点搞，需要稍微仔细一点去想返回的是函数还是调用函数
 
-
-
 #### Q3: WWPD: Lambda
-
-
 
 ```Python
 # case 无参数 还真没想过
 (lambda: 3)()
 ```
 
-
-
 注：这个 lab 真是大开眼界了
 
-
 ### Coding Practice
-
 
 #### Q4: Composite Identity Function
 
@@ -245,14 +211,11 @@ print(3) or ''
 
 #### Q6: HOF Diagram Practice
 
-
 ### Optional Questions
-
 
 #### Q7: Multiple
 
 实际上应该是找最小公倍数的问题，有很多优化算法，偷懒打个简单的
-
 
 ```Python
 i = 1  
@@ -264,8 +227,6 @@ while True:
 ```
 
 可能答案想打个遍历吧，但是显然这样复杂度对于大数来说不划算
-
-
 
 #### Q8: I Heard You Liked Functions...
 
@@ -281,7 +242,6 @@ Define a function `cycle` that takes in three functions `f1`, `f2`, and `f3
 - And so forth.
 
 _Hint_: most of the work goes inside the most nested function.
-
 
 保险起见写了一个特别简单的版本，可以参考答案的做法
 
@@ -314,19 +274,13 @@ def g(n):
 return g
 ```
 
-
-
-
 ## Disc 02(30min)
 
 相应的测试代码在 CS61A 的仓库内
 
-
 ### Q1: Warm Up
 
 trivial
-
-
 
 ### Q2：Make Keeper
 
@@ -342,7 +296,6 @@ def cond(f):
 return cond
 ```
 
-
 ### Q3: Digit Finder
 
 ```Python
@@ -351,13 +304,11 @@ def give_digit(x):
 return give_digit
 ```
 
-
 答案使用的是 lambda 匿名封装（效果可能差不多但是有点帅，想学）
 
 ```Python
 return lambda x: (x // pow(10, k-1)) % 10
 ```
-
 
 ### Q4: Match Maker
 
@@ -372,7 +323,6 @@ def check(x):
     return True  
 return check
 ```
-
 
 总的来说 Disc 还是比较简单的
 

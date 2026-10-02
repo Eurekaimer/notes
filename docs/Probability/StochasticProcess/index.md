@@ -10,7 +10,6 @@
     考试难度：  
     修读时间：Spring 25（旁听）/Spring 26
 
-
 + 随机过程导论/应用随机过程
 + 参考书目
 	+ Lecture Notes [课程网站](https://weichenzhao1996.github.io/WeichenZhao.io/STAT0008-2026.html)
@@ -27,37 +26,15 @@
 	+ 随机过程在数据科学中的应用（MCMC 算法，模拟退火，Markov 决策过程*）
 + 后续课程：随机分析
 
-
-
 ## [Lecture 1 - Introduction & Preliminaries](./Assets/Lecture 1 - Introduction & Preliminaries.md)
-
-
-
-
 
 ## [Lecture 2 - Poisson Processes](./Assets/Lecture 2 - Poisson Processes.md)
 
-
-
-
-
 ## [Lecture 3 - Extensions of Poisson Process](./Assets/Lecture 3 - Extensions of Poisson Process.md)
-
-
-
-
 
 ## [Lecture 4 - Discrete-time Markov Chains](./Assets/Lecture 4 - Discrete-time Markov Chains.md)
 
-
-
-
-
 ## [Lecture 5 - Classification of States](./Assets/Lecture 5 - Classification of States.md)
-
-
-
-
 
 ## [Lecture 6 - Limit Behaviour & Ergodic Theory](./Assets/Lecture 6 - Limit Behaviour & Ergodic Theory.md)
 

@@ -19,7 +19,6 @@ OOP 主要有以下核心理念与概念：
 
 ## Reading(2h)
 
-
 Chapter 4: Data Processing
 + 4.2 Implicit Sequences
 
@@ -58,14 +57,12 @@ If a dictionary changes in structure because a key is added or removed, then all
 
 Just know about *map* function and *filter, zip, reversed*
 
-
 #### For Statements
 
 ```Python
 for <name> in <expression>:
 	<suite>
 ```
-
 
 ```Python
 counts = [1, 2, 3]
@@ -102,20 +99,16 @@ list(all_pairs([1, 2, 3]))
 
 #### Iterator Interface
 
-
 #### Streams
 
 To Do（至 25Fall 该处仍然为空）
 
-
 #### Python Streams
-
 
 SICP 中叙述的有点抽象，我建议阅读[官方的文档](https://docs.python.org/3/library/asyncio-stream.html)
 
 Chapter 2: Building Abstractions with Data
 + Ch.2.5 Object-Oriented Programming
-
 
 ### Ch.2.5
 
@@ -194,7 +187,6 @@ Python supports the concept of a subclass inheriting attributes from multiple ba
 [c.__name__ for c in AsSeenOnTVAccount.mro()]
 ```
 
-
 #### The Role of Objects
 
  Abstraction barriers enforce the boundaries between different aspects of a large program.
@@ -231,7 +223,6 @@ Learning to identify when to introduce a new class, as opposed to a new function
 [3, 4, 5, 9, 10, None, None]
 ```
 
-
 #### Q2: Insert Items
 
 很容易，只需要记得如果满足条件使指针向前挪动，否则 `before == after` 时会发生死循环
@@ -258,13 +249,11 @@ Q8: Partial Reverse
 
 比较容易
 
-
 ## Disc 06(30min)
 
 ### Generators
 
 >A generator is an iterator that is returned by calling a generator function, which is a function that contains yield statements instead of return statements
-
 
 Q1: Big Fib
 
@@ -282,9 +271,7 @@ def gen_fib2():
 next(filter(lambda n : n > 2024, gen_fib2()))
 ```
 
-
 Q2: Something Different
-
 
 Q3：Partitions
 
@@ -305,7 +292,6 @@ def partition_gen(n, m):
 ```
 
 ## HW05(30min)
-
 
 ### Q1: Infinite Hailstone
 

@@ -1,15 +1,12 @@
 
 # Lecture 3 - Extensions of Poisson Process
 
-
 !!! tldr "Syllabus"
     + 非时齐 Poisson 过程  
     + 复合 Poisson 过程  
     + 条件 Poisson 过程
 
-
 ## 非时齐 Poisson 过程
-
 
 本小节放松平稳增量这一条件，也就是说过程的速率会依赖于时间，下面给出非时齐 Poisson 过程的定义
 
@@ -34,10 +31,7 @@
 
     $$P(N(t+s)-N(s)=n)=\exp\{-[m(t+s)-m(s)]\}\frac{[m(t+s)-m(s)]^n}{n!}.$$
 
-
-
 `Proof.`
-
 
 与定理 2.5 的证明想法类似。对给定的 $t$,定义：
 

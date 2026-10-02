@@ -2342,10 +2342,10 @@ m_{p}\sim N\left( x_{p}, \frac{p(1-p)}{n\cdot p^{2}(x_{p})} \right),m_{0.5}\sim 
 <p>利用正态分布的性质可以得到，若是 <span class="arithmatex">\(X\sim N(0,1),\chi^{2}\sim Ga\left( \frac{1}{2}, \frac{1}{2} \right)\)</span>，根据可加性得到卡方分布的概率密度函数为 <span class="arithmatex">\(p(y)=\chi^{2}(n)=Ga\left( \frac{n}{2}, \frac{1}{2} \right)= \frac{\left( \frac{1}{2} \right)^{\frac{n}{2}}}{\Gamma\left( \frac{n}{2} \right)}y^{\frac{n}{2}-1}e^{- \frac{y}{2}}\)</span></p>
 <p>一般在各个教材中都会提到卡方分布的一个重要应用是下面的一个定理</p>
 <p>设 <span class="arithmatex">\(x_{1},x_{2},\dots,x_{n}\)</span> 是来自正态总体 <span class="arithmatex">\(N(\mu,\sigma^{2})\)</span> 的样本，其样本均值与样本方差分别为</p>
-<p>$$
+<div class="arithmatex">\[
 \overline{x}= \frac{1}{n}\sum\limits_{i=1}^{n} x_{i},s^{2}= \frac{1}{n-1}\sum\limits_{i=1}^{n} \left( x_{i}-\overline{x} \right) ^{2}
-$$
-则有</p>
+\]</div>
+<p>则有</p>
 <p>(1)<span class="arithmatex">\(\overline{x}\)</span> 与 <span class="arithmatex">\(s^{2}\)</span> 相互独立
 (2)<span class="arithmatex">\(\overline{x}\sim N\left( \mu, \frac{\sigma^{2}}{n} \right)\)</span>
 (3)<span class="arithmatex">\(\dfrac{(n-1)s^{2}}{\sigma^{2}}\sim \chi^{2}(n-1)\)</span></p>
@@ -2377,11 +2377,11 @@ $$
 <p>引入概率函数也就是将 PDF 和 PMF 结合统一起来的概念，给出 Neyman 的因子分解定理（相比定义可以更加简单的判断一个统计量是否充分）</p>
 <div class="admonition note">
 <p class="admonition-title">因子分解定理(Neyman)</p>
-<p>总体概率函数 <span class="arithmatex">\(f(x,\theta),x_{1},\dots,x_{n}\)</span> 是样本，那么 <span class="arithmatex">\(T\)</span> 是充分统计量的充分必要条件是：<span class="arithmatex">\(\exists g(t,\theta),h(x_{1},\dots,x_{n})\)</span> 使得任意的 <span class="arithmatex">\(\theta\)</span> 和任一组观测值 <span class="arithmatex">\(x_{1},\dots,x_{n}\)</span>,有：<br />
-$$<br />
-f(x_{1},\dots,x_{n};\theta)=g(T(x_{1},\dots,x_{n}),\theta)h(x_{1},\dots,x_{n})<br />
-$$<br />
-其中 <span class="arithmatex">\(g(t,\theta)\)</span> 是通过统计量 <span class="arithmatex">\(T\)</span> 的取值而依赖于样本</p>
+<p>总体概率函数 <span class="arithmatex">\(f(x,\theta),x_{1},\dots,x_{n}\)</span> 是样本，那么 <span class="arithmatex">\(T\)</span> 是充分统计量的充分必要条件是：<span class="arithmatex">\(\exists g(t,\theta),h(x_{1},\dots,x_{n})\)</span> 使得任意的 <span class="arithmatex">\(\theta\)</span> 和任一组观测值 <span class="arithmatex">\(x_{1},\dots,x_{n}\)</span>,有：</p>
+<div class="arithmatex">\[
+f(x_{1},\dots,x_{n};\theta)=g(T(x_{1},\dots,x_{n}),\theta)h(x_{1},\dots,x_{n})
+\]</div>
+<p>其中 <span class="arithmatex">\(g(t,\theta)\)</span> 是通过统计量 <span class="arithmatex">\(T\)</span> 的取值而依赖于样本</p>
 </div>
 <p>那么进行推广得到更一般的命题也就是：</p>
 <p>若统计量 <span class="arithmatex">\(T\)</span> 是充分统计量，存在某个函数 <span class="arithmatex">\(h(\cdot)\)</span> 使得 <span class="arithmatex">\(T\)</span> 可以表示为 <span class="arithmatex">\(t=h(s)\)</span>，则说明统计量 <span class="arithmatex">\(S\)</span> 也是充分统计量</p>

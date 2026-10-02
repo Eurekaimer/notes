@@ -11,7 +11,7 @@ hide: title
 </div>
 
 <div class="blog-card-container">
-    <a href="https://www.eurekaimer.icu/notes/WebSource/计算机科学(CS)资源汇总/" class="blog-card-link"></a>
+    <a href="./WebSource/计算机科学(CS)资源汇总/" class="blog-card-link"></a>
     <div class="blog-card-left">
         <img src="https://lain.bgm.tv/r/400/pic/cover/l/f6/0f/604826_2XWRN.jpg" alt="Cover">
     </div>
@@ -24,7 +24,7 @@ hide: title
 </div>
 
 <div class="blog-card-container">
-    <a href="/friends-link" class="blog-card-link"></a>
+    <a href="./friends-link/" class="blog-card-link"></a>
     <div class="blog-card-left">
         <img src="https://lain.bgm.tv/r/400/pic/cover/l/73/26/110467_Fx9tT.jpg" alt="Cover">
     </div>

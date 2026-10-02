@@ -25,7 +25,6 @@
 
 则称其为偏序，显然集合的包含关系是一个偏序，额外补充 Direct Partial Ordering（定向偏序）的定义，这是一个具有特定性质的偏序关系：对于 $I$ 中任意两个元素 $x,y$，存在 $I$ 中元素 $z$ 使得 $x\preceq z,y\preceq z$
 
-
 !!! example "字典序，lexicographical order"
     对于 $\mathbb{R}^{2}$ 上的一个偏序定义如下：
 
@@ -48,9 +47,7 @@
 !!! tip "Axiom of Choice"
      Let $I$ and $X$ be two nonempty sets and, for each element $i \in I$, let $X_i \subseteq X$ be a nonempty subset. Then there exists a map $g : I \to X$ such that $g(i) \in X_i$ for every $i \in I$.
 
-
 Note that both Theorems 1.1.8 and 1.1.9 are axioms in the ZFC set theory system. One cannot prove or disprove any one of them (by other axioms in ZFC). However, they are equivalent.
-
 
 $\mathbf{Remark:}$The Axiom of Choice is equivalent to Zorn's Lemma. In other words, we can derive either one from the other.
 
@@ -61,7 +58,6 @@ $\mathbf{Remark:}$The Axiom of Choice is equivalent to Zorn's Lemma. In other wo
 基本上是照抄了一下高代的定义，大多数正常的数学系/统计系学生都不会忘记向量空间的定义，在此不赘述（加法和数乘运算的 8 条性质）
 
 给出一些例子（很多记号后续也会使用）
-
 
 !!! example "elementary examples"
     (a) $\mathbb{K}^{n}$，$n$ 元的向量空间
@@ -120,7 +116,6 @@ Q(x + y) &= [x + y]  \\
 \end{aligned}
 $$
 
-
 对于任意 $x \in X$ 和 $\lambda \in \mathbb{K}$
 
 $$
@@ -131,7 +126,6 @@ Q(\lambda x) &= [\lambda x]  \\
 \end{aligned}
 $$
 
-
 (2) Let $Z$ be a linearly independent subset of a vector space $X$. Show that $X$ has a Hamel basis containing $Z$.
 
 `Proof.`
@@ -139,7 +133,6 @@ $$
 由于 $Z$ 是 $X$ 上线性独立子集，令 $P$ 作为 $X$ 上所有包含 $Z$ 的线性独立子集的集合，使用集合包含关系定义 $P$ 上的一个偏序关系，那么显而易见的 $P$ 内任意全序子集一定有上界，根据 Zorn 引理可知 $P$ 有最大元，记为 $M$，也就是有最大的线性独立子集包含 $Z$，并且它的基可以生成整个空间，否则可以找到 $x_{0} \not\in M$，与 $M$ 组合出额外的线性独立子集，与 $M$ 是最大元矛盾，即证一定有 $X$ 上一组 $Hamel$ 基包含 $Z$
 
 (3) In Example 1.2.2, show that if $\mathbb{K} = \mathbb{R}$ then every continuous real-valued function $f$ with $\int_0^1 f(x) \, dx = 0$ vanishes somewhere in $[0, 1]$.
-
 
 !!! example "Example 1.2.2"
     The set
@@ -160,7 +153,6 @@ $$
 
 度量空间是一种很宽泛的定义，只需要定义一个集合上的距离函数，满足非负性，对称性，三角不等式即可，然后我们就可以将配备这种距离函数的集合称为度量空间
 
-
 ## Exercises 1.3
 
 !!! question "(1)"
@@ -169,7 +161,6 @@ $$
     $$
     \widetilde{d}(x,y) = \frac{d(x,y)}{1+d(x,y)}, \quad \forall x,y \in X.
     $$
-
 
 `Proof.`
 
@@ -214,6 +205,7 @@ $$
 $$
 
 同理：
+
 $$
 \frac{d(z,y)}{1 + d(x,z) + d(z,y)} \le \frac{d(z,y)}{1 + d(z,y)} = \widetilde{d}(z,y)
 $$
@@ -221,7 +213,6 @@ $$
 综上所述，$\widetilde{d}(x,y) \le \widetilde{d}(x,z) + \widetilde{d}(z,y)$
 
 因此，$\widetilde{d}$ 是 $X$ 上的度量
-
 
 !!! question "(2)"
     If $(X, d_X)$ and $(Y, d_Y)$ are metric spaces, show that $(X \times Y, \rho_s)$ is a metric space, where $\rho_s$ is any one of the metrics defined by
@@ -250,18 +241,23 @@ $$
 **情形 1: $1 \le s < \infty$**
 $\rho_s$的形式类似于$\mathbb{R}^2$上的$l_s$范数。
 根据$d_X$和$d_Y$的三角不等式：
+
 $$
 d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3)
 $$
+
 $$
 d_Y(y_1, y_3) \le d_Y(y_1, y_2) + d_Y(y_2, y_3)
 $$
+
 我们需要证明$\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)$。
 令$A = (d_X(x_1, x_2), d_Y(y_1, y_2))$，$B = (d_X(x_2, x_3), d_Y(y_2, y_3))$。
 根据闵可夫斯基不等式（Minkowski inequality）对于$\mathbb{R}^2$上的$s$-范数$\|(a,b)\|_s = (a^s+b^s)^{1/s}$：
+
 $$
 \|A + B\|_s \le \|A\|_s + \|B\|_s
 $$
+
 这即是三角不等式成立的保证。
 
 **情形 2: $s = \infty$**
@@ -288,36 +284,33 @@ $\rho_\infty(u, w) = \max\{d_X(x_1, x_3), d_Y(y_1, y_3)\}$。
 1.  因为$A$稠密，存在$a_i \in A$使得$d_X(x, a_i) < \delta$。
 2.  因为$B$稠密，存在$b_j \in B$使得$d_Y(y, b_j) < \delta$。
 
-
 我们来选取合适的$\delta$。
 **当$1 \le s < \infty$时：**
+
 $$
 \rho_s((x,y), (a_i, b_j)) = [d_X(x, a_i)^s + d_Y(y, b_j)^s]^{1/s} < [\delta^s + \delta^s]^{1/s} = \delta \cdot 2^{1/s}
 $$
+
 取$\delta = \frac{\epsilon}{2^{1/s}}$，则$\rho_s < \epsilon$。
 
 **当$s = \infty$时：**
+
 $$
 \rho_\infty((x,y), (a_i, b_j)) = \max\{d_X(x, a_i), d_Y(y, b_j)\} < \max\{\delta, \delta\} = \delta
 $$
+
 取$\delta = \epsilon$，则$\rho_\infty < \epsilon$。
 
 由此可见，对于任意$(x, y)$和$\epsilon$，都能在$S$中找到点使其距离小于$\epsilon$。故$S$是稠密的。
 因为$S$是可数稠密子集，所以$(X \times Y, \rho_s)$是可分的。
 
-
 ## Topological spaces
-
 
 关于Box topology和Product topology的问题可以参考MSE上的一个回答：[Why are box topology and product topology different on infinite products of topological spaces?](https://math.stackexchange.com/questions/871610/why-are-box-topology-and-product-topology-different-on-infinite-products-of-topo)
 
 我们需要知道的仅仅是乘积拓扑是能够相容的最弱的拓扑，而与之相对应的是商拓扑是最强的拓扑
 
-
-
 ## Exercise 1.4
-
-
 
 !!! question "(1)"
     Suppose that $(F_\lambda)_{\lambda \in \Lambda}$ is a family of closed subsets of a compact metric space $X$ with the property that the intersection of any finite number of the sets has non-empty intersection. Show that $\bigcap_{\lambda \in \Lambda} F_\lambda$ is non-empty.
@@ -336,7 +329,6 @@ $$X = \bigcup_{j=1}^n X \setminus F_{\lambda_j} = X \setminus \bigcap_{j=1}^n F_
 
 this implies that $\bigcap_{j=1}^n F_{\lambda_j} = \emptyset$, but this contradicts the assumption that such an intersection is always non-empty. 
 
-
 !!! question "(2)"
     Give an example in which non-equivalent metrics define the same topology.
 
@@ -345,9 +337,13 @@ this implies that $\bigcap_{j=1}^n F_{\lambda_j} = \emptyset$, but this contradi
 考虑实数集 $X = \mathbb{R}$。
 
 *   **度量 $d_1$ (标准欧几里得度量):**
+
     $$d_1(x, y) = |x - y|$$
+
 *   **度量 $d_2$ (有界度量):**
+
     $$d_2(x, y) = \frac{|x - y|}{1 + |x - y|}$$
+
     （或者简单的 $d_2(x, y) = \min\{1, |x - y|\}$）
 
 为什么它们定义了相同的拓扑？因为拓扑只关心“局部”发生了什么，当 $|x - y| \to 0$ 时，分母 $1 + |x - y| \approx 1$，所以 $d_2(x, y) \approx |x - y| = d_1(x, y)$。
@@ -365,9 +361,6 @@ this implies that $\bigcap_{j=1}^n F_{\lambda_j} = \emptyset$, but this contradi
 *   **$d_2$ 是有界的**：任意两点间距离永远小于 1。
 *   你无法找到一个常数 $C$，使得 $|x - y| \le C \cdot \frac{|x - y|}{1 + |x - y|}$ 对所有 $x, y$ 成立（当 $|x-y|$ 很大时，左边趋向无穷，右边趋向 $C$）。
 
-
-
-
 ## Topological Vector Spaces
 
 这部分比较重要，我将额外开一个小文章记录（这类在大多数教科书中总是提及的基本概念都会采取这种形式，以便于在其他文章中直接援引）
@@ -375,7 +368,6 @@ this implies that $\bigcap_{j=1}^n F_{\lambda_j} = \emptyset$, but this contradi
 [[拓扑向量空间 (TVS)]]
 
 实际上就是一个向量空间赋予一个向量拓扑，构成一个二元组 $(X,\mathcal{T})$ 即可
-
 
 ## Exercises 1.5
 

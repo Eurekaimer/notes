@@ -14,11 +14,9 @@ $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 
 ## 弱遍历定理
 
-
 ### 平均返回时间和正常返
 
 假设状态 $i$ 是常返的，那么 $f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，把 $\left\{ f_{ii}^{(n)} \right\}$ 看成 $\mathbb{N}^{+}$ 上的一个分布，我们可以定义返回状态 $i$ 的平均转移次数
-
 
 !!! note "Definition 6.1(平均返回时间)"
     对于常返状态 $i$ 的平均返回时间定义为
@@ -27,10 +25,8 @@ $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 
 利用平均返回时间可以进一步对常返状态分类
 
-
 !!! note "Definition 6.2(正常返)"
     假设状态 $i$ 常返，如果它的平均返回时间是有限的，也就是$\mu_{ii}<\infty$，就称状态$i$是正常返的(Positive recurrent)，否则，$M_{ii}=\infty$，我们则称$i$为零常返(Null recurrent)
-
 
 ### 弱遍历定理
 
@@ -39,12 +35,9 @@ $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 
     $$\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} P_{ij}^{(k)}= \frac{1}{\mu_{jj}}$$
 
-
-
 `Proof.`
 
 先给出一个引理(不加证明)
-
 
 !!! note "Lemma 6.4(Hardy&Littlewood)"
     设$\forall n ,a_{n}\geqslant 0$，记幂级数$A(z)$为$\sum\limits_{n=0}^{\infty}a_{n}z^{n},0\leqslant z<1$
@@ -52,9 +45,7 @@ $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 
     $$\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} a_{k}=\lim\limits_{ z \to 1^{-} }(1-z)A(z)$$
 
-
 设$P_{ij}(z)\overset{\Delta}{=}\sum\limits_{n=0}^{\infty}P_{ij}^{(n)}z^{n}$，由引理得
-
 
 $$
 \lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}=\lim\limits_{ z \to 1^{-} }(1-z)\sum\limits_{n=0}^{\infty} P_{ij}^{(k)}z^{n}
@@ -113,7 +104,6 @@ $$\begin{aligned}
 
 ### 正常返的简单性质
 
-
 和常返性一样，正常返也具有类的性质，即下面命题：
 
 !!! note "Proposition 6.5"
@@ -160,7 +150,6 @@ $$\begin{aligned}\frac{1}{n}\sum_{j=1}^{N}\sum_{k=0}^{n-1}P_{ij}^{(k)}=1\end{ali
 
 ## 不变分布的存在唯一性
 
-
 ### 基本问题
 
 本节我们利用弱遍历定理回答关于不变分布的问题：
@@ -181,7 +170,6 @@ $$\begin{aligned}\frac{1}{n}\sum_{j=1}^{N}\sum_{k=0}^{n-1}P_{ij}^{(k)}=1\end{ali
     设$\{X_n\}$ 是不可约常返的Markov链， $\pi$是$P$的一个不变分布，即满足不变方程$\pi=\pi P$，则对任意状态$j$，都有$\pi_j>0$，且
 
     $$\pi_j=\frac{1}{\mu_{jj}}$$
-
 
 `Proof.`
 
@@ -223,7 +211,6 @@ $$\lim\sup\limits_{n\to\infty}\mathbb{E}|X_n-X|\leqslant\varepsilon $$
 回到原命题，对任意状态$i$，由于$\sum\limits_{s\in E}\pi_{s}=1$，所以存在$j\in S$，使得$\pi_j>0$。对于任意状态$i$，由于$\{X_n\}$ 不可约，所以$j\to i$，故存在$n$ ，使得$P_{ji}^{(n)}>0$，那么根据不变方程：
 
 $$\pi_i=\sum_{k\in E}\pi_kP_{ki}^{(n)}\ge\pi_jP_{ji}^{(n)}>0$$
-
 
 命题第一部分得证($\forall i,\pi_{i}>0$)。
 
@@ -299,15 +286,12 @@ $$\begin{aligned}
 
 我们已经知道了弱遍历极限和不变分布的关系，可以得到弱遍历定理的另一个形式
 
-
 !!! note "Theorem 6.10(弱遍历定理)"
     设$\{X_{n}\}$ 是不可约正常返的Markov链，$\pi$ 是不变分布，那么对任意状态$i,j$，
 
     $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}=\pi_j$$
 
-
 ### 平均遍历定理
-
 
 更一般地，可以得到下面的(平均)遍历定理(证明比较复杂课上略过)
 
@@ -315,7 +299,6 @@ $$\begin{aligned}
     设$\{X_n\}$ 是不可约常返的Markov链， $\pi$是不变分布， $f$是$E$上的函数，满足$\sum\limits_{i\in E}\pi_{i}|f(i)|<\infty$，则
 
     $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}f(X_k)=\sum\limits_{i\in E}\pi_if(i)$$
-
 
 `Proof`
 
@@ -340,14 +323,12 @@ $$
 
 常返性和弱遍历定理虽然给出了随Markov链转移状态的渐近规律，但是当$n\rightarrow\infty$时，转移概率$P_{ij}^{(n)}$的极限情况我们仍然不清楚。先看一个例子。
 
-
 !!! example "Example 6.12(两状态的Markov链III)"
     考虑Markov链，状态空间为$\{0,1\}$ ，转移矩阵为
 
     $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
 
     其中$\alpha,\beta\in(0,1)$
-
 
 $$P^n=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}\beta&\alpha\\\beta&\alpha\end{array}\right)+\frac{(1-\alpha-\beta)^n}{\alpha+\beta}\left(\begin{matrix}\alpha&-\alpha\\-\beta&\beta\end{matrix}\right)$$
 
@@ -385,7 +366,6 @@ $$\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(n)}=\pi_j\n
     那么自然有
 
     $$\lim\limits_{n\to\infty}P_{ij}^{(n)}=\pi_j$$
-
 
 `Proof`
 
@@ -471,7 +451,6 @@ $$\begin{aligned}
 P(X_{n}=j,\tau\leqslant n)& =\sum_{m=0}^{n}\sum_{i\in E}P(X_{n}=j,\tau=m,Z_{m}=(i,i))  \\
 &=\sum_{m=0}^n\sum_{i\in E}P(\tau=m,Z_m=(i,i))P(X_n=j|\tau=m,Z_m=(i,i)).
 \end{aligned}$$
-
 
 注意到
 

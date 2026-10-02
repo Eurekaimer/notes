@@ -1945,10 +1945,10 @@ P(S_{1}&lt;s|N(t)=1)&amp;= \frac{P(X_{1}&lt;s,N(t)=1)}{P(N(t)=1)}\\
 <p>忙期(busy period)就是指从顾客到达空闲的服务机构起到服务机构再次空闲的时间长度，也就是连续繁忙的时间长度</p>
 </div>
 <p>对于<span class="arithmatex">\(M /G /1\)</span>排队系统的忙期(bp)分布为：</p>
-<p>$$
-P(bp \leqslant t) = B(t)=\sum\limits_{n=1}^{\infty} \int_{0}^{t} e^{-\lambda t} \frac{(\lambda t)^{n-1}}{n!} \, dG_{n}(t)<br />
-$$
-其中<span class="arithmatex">\(G_{n}\)</span>是服务时间分布<span class="arithmatex">\(G\)</span>与其自身的<span class="arithmatex">\(n\)</span>次卷积</p>
+<div class="arithmatex">\[
+P(bp \leqslant t) = B(t)=\sum\limits_{n=1}^{\infty} \int_{0}^{t} e^{-\lambda t} \frac{(\lambda t)^{n-1}}{n!} \, dG_{n}(t)  
+\]</div>
+<p>其中<span class="arithmatex">\(G_{n}\)</span>是服务时间分布<span class="arithmatex">\(G\)</span>与其自身的<span class="arithmatex">\(n\)</span>次卷积</p>
 <p><code>Proof.</code></p>
 <p>显然如果忙期长度为<span class="arithmatex">\(t\)</span>并且需要进行<span class="arithmatex">\(n\)</span>次服务的条件是(忙期开始应该代表第一个顾客到达服务台)：</p>
 <ul>

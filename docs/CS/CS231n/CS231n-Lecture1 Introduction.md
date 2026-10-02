@@ -27,9 +27,7 @@ The breakthrough happened in 1980s FNN's Backprop!(Hinton and LeCun) And we get 
 
 And the following pictures show that the hardware plays an essential role in the AI era.(Fuck you, NVIDIA)
 
-
 ![hardware-works](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/20260205034601.png)
-
 
 Human bias(data produced by humans so have bias naturally) also exists and the issues are not all technical issues(very vital).
 

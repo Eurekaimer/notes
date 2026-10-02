@@ -46,7 +46,6 @@ source .venv/bin/activate
 
 注：实际上修改的是 sys.path 列表（将全局目录改为自己创建的环境）
 
-
 !!! question "共享依赖"
     + pip freeze（打印所有安装的包）
 

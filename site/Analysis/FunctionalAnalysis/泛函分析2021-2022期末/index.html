@@ -1797,9 +1797,9 @@
 <p>综上，两个范数等价。</p>
 <div class="admonition question">
 <p class="admonition-title">(5)</p>
-<p>设 <span class="arithmatex">\((X, \|\cdot\|)\)</span> 是赋范空间，对任意的 <span class="arithmatex">\(x, y \in X\)</span>, 令<br />
-$$ \rho(x, y) = \begin{cases} 0 &amp; \text{如果 } x = y, \ |x - y| + 1 &amp; \text{如果 } x \neq y. \end{cases} $$<br />
-证明： <span class="arithmatex">\(\rho\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个距离，但不能由范数诱导。</p>
+<p>设 <span class="arithmatex">\((X, \|\cdot\|)\)</span> 是赋范空间，对任意的 <span class="arithmatex">\(x, y \in X\)</span>, 令</p>
+<div class="arithmatex">\[ \rho(x, y) = \begin{cases} 0 &amp; \text{如果 } x = y, \\ \|x - y\| + 1 &amp; \text{如果 } x \neq y. \end{cases} \]</div>
+<p>证明： <span class="arithmatex">\(\rho\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个距离，但不能由范数诱导。</p>
 <p>构造的一个离散型度量，显然不满足范数的齐次性。也是送的。</p>
 </div>
 <p><code>Proof.</code></p>
@@ -1815,14 +1815,14 @@ $$ \rho(x, y) = \begin{cases} 0 &amp; \text{如果 } x = y, \ |x - y| + 1 &amp; 
 <li>
 <p><strong>证明不能由范数诱导：</strong>
    由范数诱导的距离 <span class="arithmatex">\(d(x, y) = \|x - y\|'\)</span> 必须满足平移不变性和绝对齐次性，特别是：</p>
+<div class="arithmatex">\[ d(\alpha x, \alpha y) = \|\alpha x - \alpha y\|' = |\alpha| \|x - y\|' = |\alpha| d(x, y) \]</div>
 </li>
 </ol>
-<p>$$ d(\alpha x, \alpha y) = |\alpha x - \alpha y|' = |\alpha| |x - y|' = |\alpha| d(x, y) $$</p>
 <p>取 <span class="arithmatex">\(\alpha = 2\)</span>，<span class="arithmatex">\(x \neq y\)</span>。按照 <span class="arithmatex">\(\rho\)</span> 的定义计算：左边 <span class="arithmatex">\(= \rho(2x, 2y) = \|2x - 2y\| + 1 = 2\|x - y\| + 1\)</span>。右边 <span class="arithmatex">\(= 2 \rho(x, y) = 2(\|x - y\| + 1) = 2\|x - y\| + 2\)</span>。显然 <span class="arithmatex">\(2\|x - y\| + 1 \neq 2\|x - y\| + 2\)</span>。故 <span class="arithmatex">\(\rho\)</span> 不满足齐次性，不能由范数诱导。</p>
 <div class="admonition question">
 <p class="admonition-title">(6)</p>
-<p>设 <span class="arithmatex">\(X\)</span> 是赋范空间, <span class="arithmatex">\(X_0\)</span> 是 <span class="arithmatex">\(X\)</span> 的稠密子空间. 证明: 对于每一个 <span class="arithmatex">\(x \in X\)</span>, 存在元列 <span class="arithmatex">\(\{x_n\}_{n=1}^\infty \subset X_0\)</span> 使得<br />
-$$ x = \sum_{n=1}^\infty x_n \quad \text{且} \quad \sum_{n=1}^\infty |x_n| &lt; \infty. $$</p>
+<p>设 <span class="arithmatex">\(X\)</span> 是赋范空间, <span class="arithmatex">\(X_0\)</span> 是 <span class="arithmatex">\(X\)</span> 的稠密子空间. 证明: 对于每一个 <span class="arithmatex">\(x \in X\)</span>, 存在元列 <span class="arithmatex">\(\{x_n\}_{n=1}^\infty \subset X_0\)</span> 使得</p>
+<div class="arithmatex">\[ x = \sum_{n=1}^\infty x_n \quad \text{且} \quad \sum_{n=1}^\infty \|x_n\| &lt; \infty. \]</div>
 <p>利用稠密性逐步逼近构造级数。基本上也是送的，按照定义写。</p>
 </div>
 <p><code>Proof.</code></p>

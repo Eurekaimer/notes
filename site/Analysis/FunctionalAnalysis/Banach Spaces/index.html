@@ -2313,27 +2313,27 @@ Similarly, <span class="arithmatex">\(T(kx) = kTx = ku\)</span>. Applying <span 
 <div class="arithmatex">\[\left\Vert \lambda f \right\Vert = \min\{\left\Vert \lambda f \right\Vert_\infty, \left\Vert \lambda f \right\Vert_0\} = |\lambda| \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} = |\lambda| \left\Vert f \right\Vert.\]</div>
 <p>(3)三角不等式</p>
 <p>充分性：当<span class="arithmatex">\(a \leq 1\)</span>时，有</p>
-<p>$<span class="arithmatex">\(\left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt \leq a \cdot 1 \cdot \left\Vert f \right\Vert_\infty \leq \left\Vert f \right\Vert_\infty,\)</span>$</p>
+<div class="arithmatex">\[\left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt \leq a \cdot 1 \cdot \left\Vert f \right\Vert_\infty \leq \left\Vert f \right\Vert_\infty,\]</div>
 <p>综上，有<span class="arithmatex">\(\left\| f \right\| = \min\{\left\| f \right\|_\infty, \left\| f \right\|_0\} = \left\| f \right\|_0\)</span>.</p>
 <p>必要性：考虑举反例，当<span class="arithmatex">\(a &gt; 1\)</span>时， 取<span class="arithmatex">\(f,g \in C[0,1]\)</span>，定义如下(先列出，大小关系后续讨论)</p>
 <div class="arithmatex">\[f(x)\equiv \varepsilon,\forall x\in[0,1]\]</div>
-<p>$$</p>
-<p>g(x)=\left{ \begin{matrix}</p>
-<p>&amp;n&amp;x=0 \</p>
-<p>&amp;linear &amp; x\in(0, \frac{1}{n}) \</p>
-<p>&amp;0&amp;x\geq \frac{1}{n}</p>
-<p>\end{matrix} \right.</p>
-<p>$$</p>
+<div class="arithmatex">\[
+g(x)=\left\{ \begin{matrix}
+&amp;n&amp;x=0 \\
+ &amp;linear &amp; x\in(0, \frac{1}{n}) \\
+&amp;0&amp;x\geq \frac{1}{n}
+\end{matrix} \right.
+\]</div>
 <p>那么有<span class="arithmatex">\(\lVert f \rVert=\min\left\{ \varepsilon,a\varepsilon \right\}=\varepsilon(a&gt;1),\lVert g \rVert=\min\left\{ n, \frac{a}{2} \right\}= \frac{a}{2}\)</span></p>
-<p>$$
-\lVert f+g \rVert =\min\left{ n+\varepsilon,a\varepsilon+ \frac{a}{2} \right}= a\varepsilon+ \frac{a}{2} &gt;\varepsilon+ \frac{a}{2}=\lVert f \rVert +\lVert g \rVert</p>
-<p>$$</p>
+<div class="arithmatex">\[
+\lVert f+g \rVert =\min\left\{ n+\varepsilon,a\varepsilon+ \frac{a}{2} \right\}= a\varepsilon+ \frac{a}{2} &gt;\varepsilon+ \frac{a}{2}=\lVert f \rVert +\lVert g \rVert
+\]</div>
 <p>综上需要满足不等式组：</p>
-<p>$$\left{ \begin{matrix}</p>
-<p>&amp;n &gt; \frac{a}{2} \</p>
-<p>&amp;n+\varepsilon &gt; a\varepsilon + \frac{a}{2}</p>
-<p>\end{matrix} \right.</p>
-<p>$$</p>
+<div class="arithmatex">\[\left\{ \begin{matrix}
+&amp;n &gt; \frac{a}{2} \\
+&amp;n+\varepsilon &gt; a\varepsilon + \frac{a}{2}
+\end{matrix} \right.
+\]</div>
 <p>直接取<span class="arithmatex">\(n=4a,\varepsilon =\frac{1}{n}\)</span>即可满足上述不等式组(<span class="arithmatex">\(4a+\frac{1}{4a}&gt; \frac{1}{4}+\frac{a}{2}\)</span>)，因此三角不等式不成立.</p>
 <div class="admonition question">
 <p class="admonition-title">(9)</p>
@@ -2460,21 +2460,21 @@ Similarly, <span class="arithmatex">\(T(kx) = kTx = ku\)</span>. Applying <span 
 <p class="admonition-title">Example 2.2.2: 柯西列不一定收敛 (反例)</p>
 <p>这是一个非常经典的例子，说明完备性不是理所当然的。</p>
 <p>考虑空间 <span class="arithmatex">\(C[0,1]\)</span>（闭区间上的连续函数），装备 <span class="arithmatex">\(1\)</span>-范数 <span class="arithmatex">\(\|f\|_1 = \int_0^1 |f(t)| dt\)</span>。</p>
-<p>我们构造一个序列 <span class="arithmatex">\((f_n)_{n \ge 2}\)</span>，图形上看，它是一个在 <span class="arithmatex">\(t=1/2\)</span> 处越来越陡峭的折线：<br />
-$$<br />
-f_n(t) = \begin{cases}<br />
-0, &amp; 0 \le t \le \frac{1}{2} - \frac{1}{n} \<br />
-1 - n(\frac{1}{2} - t), &amp; \frac{1}{2} - \frac{1}{n} \le t \le \frac{1}{2} \<br />
-1, &amp; \frac{1}{2} &lt; t \le 1<br />
-\end{cases}<br />
-$$</p>
+<p>我们构造一个序列 <span class="arithmatex">\((f_n)_{n \ge 2}\)</span>，图形上看，它是一个在 <span class="arithmatex">\(t=1/2\)</span> 处越来越陡峭的折线：</p>
+<div class="arithmatex">\[
+f_n(t) = \begin{cases}
+0, &amp; 0 \le t \le \frac{1}{2} - \frac{1}{n} \\
+1 - n(\frac{1}{2} - t), &amp; \frac{1}{2} - \frac{1}{n} \le t \le \frac{1}{2} \\
+1, &amp; \frac{1}{2} &lt; t \le 1
+\end{cases}
+\]</div>
 </div>
 <ol>
 <li>它是柯西列</li>
 </ol>
-<p>对于 <span class="arithmatex">\(n &gt; m \ge 2\)</span>，函数 <span class="arithmatex">\(f_n\)</span> 和 <span class="arithmatex">\(f_m\)</span> 的差异仅存在于区间 <span class="arithmatex">\([\frac{1}{2} - \frac{1}{m}, \frac{1}{2}]\)</span> 上。直接计算积分：
- $$ |f_n - f_m|<em _frac_1="\frac{1">1 = \int_0^1 |f_n(t) - f_m(t)| dt = \int</em> $$
-当 }{2}-\frac{1}{m}}^{\frac{1}{2}} |f_n(t) - f_m(t)| dt \le \frac{1}{m<span class="arithmatex">\(m \to \infty\)</span> 时，该值趋于 0，因此它是 <span class="arithmatex">\(1\)</span>-范数下的柯西列。</p>
+<p>对于 <span class="arithmatex">\(n &gt; m \ge 2\)</span>，函数 <span class="arithmatex">\(f_n\)</span> 和 <span class="arithmatex">\(f_m\)</span> 的差异仅存在于区间 <span class="arithmatex">\([\frac{1}{2} - \frac{1}{m}, \frac{1}{2}]\)</span> 上。直接计算积分：</p>
+<div class="arithmatex">\[ \|f_n - f_m\|_1 = \int_0^1 |f_n(t) - f_m(t)| dt = \int_{\frac{1}{2}-\frac{1}{m}}^{\frac{1}{2}} |f_n(t) - f_m(t)| dt \le \frac{1}{m} \]</div>
+<p>当 <span class="arithmatex">\(m \to \infty\)</span> 时，该值趋于 0，因此它是 <span class="arithmatex">\(1\)</span>-范数下的柯西列。</p>
 <ol>
 <li>它在空间中不收敛</li>
 </ol>
@@ -2542,10 +2542,10 @@ g_{m}(t)=\lvert f_{n_{1}} (t)\rvert + \sum\limits_{k=1}^{m} \lvert f_{n_{k+1}}(t
 g_{0}(t)=\lvert f_{n_{1}}(t) \rvert+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert  
 \]</div>
 <p>converges to a finite positive number a.e. on <span class="arithmatex">\([a,b]\)</span>, therefore the series</p>
-<p>$$
-f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert<br />
-$$
-converges to a finite(real or complex) number a.e. on <span class="arithmatex">\([a,b]\)</span>. And <span class="arithmatex">\(\lvert f \rvert \leqslant g_{0}\)</span>, we have <span class="arithmatex">\(f\in L^{p}[a,b]\)</span>. It follows from</p>
+<div class="arithmatex">\[
+f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert  
+\]</div>
+<p>converges to a finite(real or complex) number a.e. on <span class="arithmatex">\([a,b]\)</span>. And <span class="arithmatex">\(\lvert f \rvert \leqslant g_{0}\)</span>, we have <span class="arithmatex">\(f\in L^{p}[a,b]\)</span>. It follows from</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \lVert f-f_{n_{m}} \rVert _{p}&amp;=\left\lVert  f-\left( f_{n_{1}}+\sum\limits_{k=1}^{m} (f_{n_{k+1}}-f_{n_{k}}) \right)  \right\rVert _{p}\\
@@ -2715,8 +2715,8 @@ converges to a finite(real or complex) number a.e. on <span class="arithmatex">\
 <p><code>Proof Sketch.</code></p>
 <ol>
 <li>
-<p><strong>构造</strong>：考虑所有由基向量组成的<strong>有限</strong>线性组合，且系数限制为<strong>有理数</strong>（若 <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\)</span> 则为实部虚部均为有理数）：
-    $$ M = \left{ \sum_{i=1}^n r_i e_i : r_i \in \mathbb{Q}, n \in \mathbb{N} \right} $$</p>
+<p><strong>构造</strong>：考虑所有由基向量组成的<strong>有限</strong>线性组合，且系数限制为<strong>有理数</strong>（若 <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\)</span> 则为实部虚部均为有理数）：</p>
+<div class="arithmatex">\[ M = \left\{ \sum_{i=1}^n r_i e_i : r_i \in \mathbb{Q}, n \in \mathbb{N} \right\} \]</div>
 </li>
 <li>
 <p><strong>可数性</strong>：<span class="arithmatex">\(M\)</span> 是可数集的可数并，因此是可数的。</p>
@@ -2773,13 +2773,13 @@ V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\}
 我们需要证明 <span class="arithmatex">\(x\)</span> 可以唯一表示为 <span class="arithmatex">\(l\mathbf{e} + \sum_{k=1}^\infty (\xi_k - l)e_k\)</span>。
 考察向量 <span class="arithmatex">\(y = x - l\mathbf{e} = (\xi_1 - l, \xi_2 - l, \dots)\)</span>。
 由于 <span class="arithmatex">\(\xi_k \to l\)</span>，所以 <span class="arithmatex">\(y\)</span> 的分量趋于 0，即 <span class="arithmatex">\(y \in c_0\)</span>。
-根据 Problem 1 的结论，<span class="arithmatex">\(y\)</span> 可以唯一表示为 <span class="arithmatex">\(c_0\)</span> 的基 <span class="arithmatex">\(\{e_k\}\)</span> 的线性组合：
-$$ y = \sum_{k=1}^\infty (\xi_k - l) e_k $$
-代回 <span class="arithmatex">\(x\)</span>，我们得到展开式：
-$$ x = l\mathbf{e} + \sum_{k=1}^\infty (\xi_k - l) e_k $$
-下面验证收敛性（其实由 <span class="arithmatex">\(c_0\)</span> 的结论已得，这里写明）：
-$$ \left| x - \left( l\mathbf{e} + \sum_{k=1}^n (\xi_k - l)e_k \right) \right|<em k="n+1">\infty = \left| \sum</em>^\infty (\xi_k - l)e_k \right|<em _="&gt;" k="k" n="n">\infty = \sup</em> |\xi_k - l| $$
-因 <span class="arithmatex">\(\xi_k \to l\)</span>，当 <span class="arithmatex">\(n \to \infty\)</span> 时上式趋于 0。</p>
+根据 Problem 1 的结论，<span class="arithmatex">\(y\)</span> 可以唯一表示为 <span class="arithmatex">\(c_0\)</span> 的基 <span class="arithmatex">\(\{e_k\}\)</span> 的线性组合：</p>
+<div class="arithmatex">\[ y = \sum_{k=1}^\infty (\xi_k - l) e_k \]</div>
+<p>代回 <span class="arithmatex">\(x\)</span>，我们得到展开式：</p>
+<div class="arithmatex">\[ x = l\mathbf{e} + \sum_{k=1}^\infty (\xi_k - l) e_k \]</div>
+<p>下面验证收敛性（其实由 <span class="arithmatex">\(c_0\)</span> 的结论已得，这里写明）：</p>
+<div class="arithmatex">\[ \left\| x - \left( l\mathbf{e} + \sum_{k=1}^n (\xi_k - l)e_k \right) \right\|_\infty = \left\| \sum_{k=n+1}^\infty (\xi_k - l)e_k \right\|_\infty = \sup_{k &gt; n} |\xi_k - l| \]</div>
+<p>因 <span class="arithmatex">\(\xi_k \to l\)</span>，当 <span class="arithmatex">\(n \to \infty\)</span> 时上式趋于 0。</p>
 <p><strong>唯一性</strong>：设 <span class="arithmatex">\(x = \alpha \mathbf{e} + \sum_{k=1}^\infty \alpha_k e_k\)</span>。对两边取极限（<span class="arithmatex">\(k \to \infty\)</span>），由于 <span class="arithmatex">\(e_k\)</span> 的项趋于 0，可知 <span class="arithmatex">\(\lim x = \alpha \cdot 1 + 0\)</span>，故 <span class="arithmatex">\(\alpha = l\)</span>。剩下的部分即归结为 <span class="arithmatex">\(c_0\)</span> 中系数的唯一性，得 <span class="arithmatex">\(\alpha_k = \xi_k - l\)</span>。</p>
 <div class="admonition question">
 <p class="admonition-title">(3)</p>
@@ -2812,26 +2812,28 @@ $$ \left| x - \left( l\mathbf{e} + \sum_{k=1}^n (\xi_k - l)e_k \right) \right|<e
 </div>
 <p><code>Proof.</code></p>
 <p>证明的难点在于从“绝对收敛级数收敛”推导出“空间完备”。我们需要证明任意一个柯西列 <span class="arithmatex">\((x_n)\)</span> 都收敛。思路是构造一个收敛极快的子列，将其转化为级数问题。</p>
-<p>首先，由于 <span class="arithmatex">\((x_n)\)</span> 是柯西列，我们可以选取一个<strong>子列</strong> <span class="arithmatex">\((x_{n_k})\)</span>，使得相邻项极其接近。具体来说，对于每一个 <span class="arithmatex">\(k\)</span>，选取足够大的下标，使得：
-$$ |x_{n_k} - x_{n_{k-1}}| &lt; \frac{1}{2^k}, \quad \forall k \ge 2 $$</p>
+<p>首先，由于 <span class="arithmatex">\((x_n)\)</span> 是柯西列，我们可以选取一个<strong>子列</strong> <span class="arithmatex">\((x_{n_k})\)</span>，使得相邻项极其接近。具体来说，对于每一个 <span class="arithmatex">\(k\)</span>，选取足够大的下标，使得：</p>
+<div class="arithmatex">\[ \|x_{n_k} - x_{n_{k-1}}\| &lt; \frac{1}{2^k}, \quad \forall k \ge 2 \]</div>
 <div class="admonition tip">
 <p class="admonition-title">技巧：构造裂项级数 (Telescoping Series)</p>
-<p>我们考虑由该子列相邻项之差构成的级数：<br />
-$$ x_{n_1} + \sum_{k=2}^{\infty} (x_{n_k} - x_{n_{k-1}}) $$<br />
-注意到，这个级数的前 <span class="arithmatex">\(m\)</span> 项部分和 <span class="arithmatex">\(S_m\)</span> 恰好就是子列的第 <span class="arithmatex">\(m\)</span> 项：<br />
-$$ S_m = x_{n_1} + (x_{n_2} - x_{n_1}) + \dots + (x_{n_m} - x_{n_{m-1}}) = x_{n_m} $$</p>
+<p>我们考虑由该子列相邻项之差构成的级数：</p>
+<div class="arithmatex">\[ x_{n_1} + \sum_{k=2}^{\infty} (x_{n_k} - x_{n_{k-1}}) \]</div>
+<p>注意到，这个级数的前 <span class="arithmatex">\(m\)</span> 项部分和 <span class="arithmatex">\(S_m\)</span> 恰好就是子列的第 <span class="arithmatex">\(m\)</span> 项：</p>
+<div class="arithmatex">\[ S_m = x_{n_1} + (x_{n_2} - x_{n_1}) + \dots + (x_{n_m} - x_{n_{m-1}}) = x_{n_m} \]</div>
 </div>
-<p>接下来验证该级数是否<strong>绝对收敛</strong>。根据我们在选取子列时的构造：
-$$ \sum_{k=2}^{\infty} |x_{n_k} - x_{n_{k-1}}| &lt; \sum_{k=2}^{\infty} \frac{1}{2^k} = \frac{1}{2} &lt; \infty $$
-既然级数绝对收敛，根据定理的假设，该级数在 <span class="arithmatex">\(E\)</span> 中<strong>收敛</strong>。</p>
-<p>设级数的和为 <span class="arithmatex">\(x\)</span>。根据“级数和”的定义，就是部分和序列的极限，因此我们得到了子列的收敛性：
-$$ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} $$</p>
+<p>接下来验证该级数是否<strong>绝对收敛</strong>。根据我们在选取子列时的构造：</p>
+<div class="arithmatex">\[ \sum_{k=2}^{\infty} \|x_{n_k} - x_{n_{k-1}}\| &lt; \sum_{k=2}^{\infty} \frac{1}{2^k} = \frac{1}{2} &lt; \infty \]</div>
+<p>既然级数绝对收敛，根据定理的假设，该级数在 <span class="arithmatex">\(E\)</span> 中<strong>收敛</strong>。</p>
+<p>设级数的和为 <span class="arithmatex">\(x\)</span>。根据“级数和”的定义，就是部分和序列的极限，因此我们得到了子列的收敛性：</p>
+<div class="arithmatex">\[ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} \]</div>
 <div class="admonition success">
 <p class="admonition-title">结论：从子列收敛到原序列收敛</p>
-<p>我们现在有一个柯西列 <span class="arithmatex">\((x_n)\)</span>，且它有一个收敛于 <span class="arithmatex">\(x\)</span> 的子列 <span class="arithmatex">\((x_{n_k})\)</span>。利用三角不等式：<br />
-$$ |x_n - x| \le |x_n - x_{n_k}| + |x_{n_k} - x| $$<br />
-*   当 <span class="arithmatex">\(n, n_k\)</span> 足够大时，第一项因柯西列性质趋于 0。<br />
-*   第二项因于列收敛趋于 0。</p>
+<p>我们现在有一个柯西列 <span class="arithmatex">\((x_n)\)</span>，且它有一个收敛于 <span class="arithmatex">\(x\)</span> 的子列 <span class="arithmatex">\((x_{n_k})\)</span>。利用三角不等式：</p>
+<div class="arithmatex">\[ \|x_n - x\| \le \|x_n - x_{n_k}\| + \|x_{n_k} - x\| \]</div>
+<ul>
+<li>当 <span class="arithmatex">\(n, n_k\)</span> 足够大时，第一项因柯西列性质趋于 0。</li>
+<li>第二项因于列收敛趋于 0。</li>
+</ul>
 <p>因此 <span class="arithmatex">\(\lim\limits_{n \to \infty} x_n = x\)</span>。即任意柯西列都收敛，空间完备。</p>
 <p>我们需要知道任何赋范空间都可以扩张成一个Banach空间（完备赋范空间）</p>
 </div>
@@ -2853,15 +2855,15 @@ $$ |x_n - x| \le |x_n - x_{n_k}| + |x_{n_k} - x| $$<br />
 <p>在有限维赋范空间中，有界闭集必定是紧集（Heine-Borel 性质）。但在无穷维空间中这一性质不再成立。Riesz 引理正是处理无穷维空间几何结构、描述这种差异的重要工具。</p>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem 2.4.7 (Riesz 引理)</p>
-<p>设 <span class="arithmatex">\(Y\)</span> 是赋范空间 <span class="arithmatex">\(E\)</span> 的<strong>闭真子空间</strong>（即 <span class="arithmatex">\(Y \neq E\)</span>），且 <span class="arithmatex">\(0 &lt; \alpha &lt; 1\)</span>。则存在范数为 1 的元素 <span class="arithmatex">\(x_\alpha \in E\)</span>，使得它到子空间 <span class="arithmatex">\(Y\)</span> 的距离大于 <span class="arithmatex">\(\alpha\)</span>，即：<br />
-$$ |x_\alpha - y| &gt; \alpha, \quad \forall y \in Y $$</p>
+<p>设 <span class="arithmatex">\(Y\)</span> 是赋范空间 <span class="arithmatex">\(E\)</span> 的<strong>闭真子空间</strong>（即 <span class="arithmatex">\(Y \neq E\)</span>），且 <span class="arithmatex">\(0 &lt; \alpha &lt; 1\)</span>。则存在范数为 1 的元素 <span class="arithmatex">\(x_\alpha \in E\)</span>，使得它到子空间 <span class="arithmatex">\(Y\)</span> 的距离大于 <span class="arithmatex">\(\alpha\)</span>，即：</p>
+<div class="arithmatex">\[ \|x_\alpha - y\| &gt; \alpha, \quad \forall y \in Y \]</div>
 </div>
 <p><code>Proof.</code></p>
 <p>因为 <span class="arithmatex">\(Y\)</span> 是真子空间，我们可以取 <span class="arithmatex">\(x \in E \setminus Y\)</span>。设 <span class="arithmatex">\(d = \inf\{\|x - y\| : y \in Y\}\)</span> 为 <span class="arithmatex">\(x\)</span> 到 <span class="arithmatex">\(Y\)</span> 的距离。由于 <span class="arithmatex">\(Y\)</span> 是闭集，故 <span class="arithmatex">\(d &gt; 0\)</span>。</p>
 <p>因为 <span class="arithmatex">\(d &lt; d\alpha^{-1}\)</span>，根据下确界定义，存在 <span class="arithmatex">\(y_0 \in Y\)</span> 使得 <span class="arithmatex">\(\|x - y_0\| &lt; d\alpha^{-1}\)</span>。我们令 <span class="arithmatex">\(x_\alpha = \frac{x - y_0}{\|x - y_0\|}\)</span>，显然 <span class="arithmatex">\(\|x_\alpha\| = 1\)</span>。
-对于任意 <span class="arithmatex">\(y \in Y\)</span>，考察距离 <span class="arithmatex">\(\|x_\alpha - y\|\)</span>：
-$$ |x_\alpha - y| = \left| \frac{x - y_0}{|x - y_0|} - y \right| = \frac{1}{|x - y_0|} | x - \underbrace{(y_0 + |x - y_0|y)}_{\in Y} | $$
-注意括号内的部分仍属于 <span class="arithmatex">\(Y\)</span>，因此其与 <span class="arithmatex">\(x\)</span> 的距离至少为 <span class="arithmatex">\(d\)</span>。从而我们得到 </p>
+对于任意 <span class="arithmatex">\(y \in Y\)</span>，考察距离 <span class="arithmatex">\(\|x_\alpha - y\|\)</span>：</p>
+<div class="arithmatex">\[ \|x_\alpha - y\| = \left\| \frac{x - y_0}{\|x - y_0\|} - y \right\| = \frac{1}{\|x - y_0\|} \| x - \underbrace{(y_0 + \|x - y_0\|y)}_{\in Y} \| \]</div>
+<p>注意括号内的部分仍属于 <span class="arithmatex">\(Y\)</span>，因此其与 <span class="arithmatex">\(x\)</span> 的距离至少为 <span class="arithmatex">\(d\)</span>。从而我们得到 </p>
 <div class="arithmatex">\[\|x_\alpha - y\| \ge \frac{d}{\|x - y_0\|} &gt; \frac{d}{d\alpha^{-1}} = \alpha\]</div>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem 2.4.8 (无穷维空间的单位球非紧)</p>
@@ -2874,9 +2876,9 @@ $$ |x_\alpha - y| = \left| \frac{x - y_0}{|x - y_0|} - y \right| = \frac{1}{|x -
 <p>Banach 不动点定理是分析学中构造解和证明唯一性的核心工具。</p>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem 2.4.9 (Banach 不动点定理 / 压缩映射原理)</p>
-<p>设 <span class="arithmatex">\(K\)</span> 是 Banach 空间 <span class="arithmatex">\(E\)</span> 的非空闭子集，<span class="arithmatex">\(\varphi: K \to K\)</span> 是一个<strong>压缩映射</strong>，即存在常数 <span class="arithmatex">\(0 &lt; \rho &lt; 1\)</span> 使得：<br />
-$$ |\varphi(x) - \varphi(y)| \le \rho|x - y|, \quad \forall x, y \in K $$<br />
-则 <span class="arithmatex">\(\varphi\)</span> 在 <span class="arithmatex">\(K\)</span> 中有且仅有一个不动点，即存在唯一的 <span class="arithmatex">\(z_0 \in K\)</span> 使得 <span class="arithmatex">\(\varphi(z_0) = z_0\)</span>。</p>
+<p>设 <span class="arithmatex">\(K\)</span> 是 Banach 空间 <span class="arithmatex">\(E\)</span> 的非空闭子集，<span class="arithmatex">\(\varphi: K \to K\)</span> 是一个<strong>压缩映射</strong>，即存在常数 <span class="arithmatex">\(0 &lt; \rho &lt; 1\)</span> 使得：</p>
+<div class="arithmatex">\[ \|\varphi(x) - \varphi(y)\| \le \rho\|x - y\|, \quad \forall x, y \in K \]</div>
+<p>则 <span class="arithmatex">\(\varphi\)</span> 在 <span class="arithmatex">\(K\)</span> 中有且仅有一个不动点，即存在唯一的 <span class="arithmatex">\(z_0 \in K\)</span> 使得 <span class="arithmatex">\(\varphi(z_0) = z_0\)</span>。</p>
 </div>
 <p><code>Proof.</code></p>
 <p><strong>存在性</strong>：任取 <span class="arithmatex">\(x_0 \in K\)</span>，定义迭代序列 <span class="arithmatex">\(x_{n+1} = \varphi(x_n)\)</span>。考察相邻项距离，利用压缩性质可得 <span class="arithmatex">\(\|x_{n+1} - x_n\| \le \rho^n\|x_1 - x_0\|\)</span>。对于任意 <span class="arithmatex">\(m &gt; n\)</span>，利用三角不等式和几何级数求和：</p>

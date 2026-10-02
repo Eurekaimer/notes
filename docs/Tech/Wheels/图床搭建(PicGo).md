@@ -23,7 +23,6 @@ tags:
 
 配置的手法主要来自于官方的[配置手册](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)
 
-
 ```json
 {
   "repo": "", // 仓库名，格式是username/reponame

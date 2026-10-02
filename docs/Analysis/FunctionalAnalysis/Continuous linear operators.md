@@ -6,7 +6,6 @@
 
 给出赋范空间的单位闭球的概念：
 
-
 !!! note "closed unit ball of $E$"
     For a normed space $E$, let
 
@@ -30,7 +29,6 @@
     5. $T$ sends bounded sets to bounded sets
     6. $\exists k>0$, s.t. $\lVert Tx \rVert\leqslant k \lVert x \rVert,\forall x\in E$
 
-
 `Proof.`
 
 前三条 $1\to 2 \to 3$ 是显然的
@@ -43,7 +41,6 @@ $$
 
 那么有 $T(U_{E})\subset \frac{1}{\lambda}U_{F}$，因此 $TU_{E}$ 在 $F$ 中有界
 
-
 $4\to 5$，$A\subseteq kU_{E}$，那么有 $TA\subset T(kU_{E})=kT(U_{E})$ 对于一个有界集的子集，显然有界
 
 $5\to 6$，取 $E$ 中单位球 $U_{E}$ 作为有界集，那么根据条件可以得到 $T(U_{E})$ 是有界的，即存在一个常数 $k$，使得 $T(U_{E})\subset kU_{F}$，或者说 $\lVert Tx \rVert \leqslant k$，考虑 $\forall x\in E\setminus \left\{ 0 \right\}$，有 $\frac{x}{\lVert x \rVert }\in U_{E}$，显然：
@@ -51,7 +48,6 @@ $5\to 6$，取 $E$ 中单位球 $U_{E}$ 作为有界集，那么根据条件可�
 $$
 \left\lVert  T\left( \frac{x}{\lVert x \rVert } \right)  \right\rVert  \leqslant k\implies \lVert Tx \rVert \leqslant k\lVert x \rVert 
 $$
-
 
 对于 $x=0$ 是显然成立的
 
@@ -62,7 +58,6 @@ $6 \to 1$ 实际也是显然的
 综上得证结论成立！
 
 然后是一个自然的结论：
-
 
 !!! note "Lemma"
     假设 $T$ 是一个连续线性算子，若是有 $\lVert T \rVert:=\sup \left\{ \lVert Tx \rVert:x\in E,\lVert x \rVert\leqslant 1 \right\}$，我们有：
@@ -76,7 +71,6 @@ $6 \to 1$ 实际也是显然的
     \lVert T \rVert &=\inf \left\{ k>0: \lVert Tx \rVert \leqslant k\lVert x \rVert ,\forall x\in E \right\}
     \end{aligned}
     $$
-
 
 `Proof.`
 
@@ -96,12 +90,10 @@ $$
 
 下面给出有界线性算子构成的集合的记号，对于$E,F$两个赋范空间，使用$B(E,F)$来记录所有的从$E$到$F$的有界线性算子，如果是同一个空间，有$B(E)=B(E,E)$
 
-
 !!! note "Lemma(有界线性算子构成赋范空间)"
     $B(E,F)$通过给予算子范数$\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert$构成一个赋范空间
 
 证明只需要按照赋范空间的定义验证三条性质即可，然后探索这个算子范数我们可以得到一个等价的定义：
-
 
 !!! note "Lemma(算子范数等价定义)"
     $H,K$ are Hilbert spaces and $T\in B(H,K)$. Then
@@ -128,9 +120,6 @@ $$
 \lVert T \rVert =\sup\limits_{h\in U_{H}}\lVert Th \rVert \leqslant \sup \left\{ \lvert \langle Th,k\rangle \rvert : h\in U_{H},k\in U_{K}  \right\}  \leqslant \lVert T \rVert 
 $$
 
-
-
-
 ## Exercise 4.1
 
 !!! question "(1)"
@@ -149,23 +138,6 @@ $$
     Show that $T$ is a bounded linear operator on $\ell^2$.
 
 `Proof.`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 !!! question "(2)"
     Let $(\alpha_{i,j})_{i,j\in\mathbb{N}}$ be an infinite matrix such that
@@ -186,7 +158,6 @@ $$
     \langle Te_j, e_i \rangle = \alpha_{i,j} \quad \text{and} \quad \|T\|^2 \le \alpha_1 \alpha_\infty.
     $$
 
-
 ### **Proof & Explanation**
 
 **Proof.**
@@ -194,29 +165,37 @@ $$
 我们需要证明该矩阵定义的算子 $T$ 在 $\ell^2$ 上是有界的，并估计其范数。这就需要用到 Schur 测试（Schur's Test）的思想。
 设 $x = (x_j) \in \ell^2$，考虑 $(Tx)_i = \sum_{j=1}^{\infty} \alpha_{i,j} x_j$。
 利用柯西-施瓦茨不等式，我们将各项拆分为 $\sqrt{|\alpha_{i,j}|} \cdot \sqrt{|\alpha_{i,j}|} |x_j|$：
+
 $$
 |(Tx)_i|^2 = \left| \sum_{j=1}^{\infty} \alpha_{i,j} x_j \right|^2 \le \left( \sum_{j=1}^{\infty} |\alpha_{i,j}| \right) \left( \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2 \right)
 $$
+
 由题设，$\sum_{j=1}^{\infty} |\alpha_{i,j}| \le \alpha_\infty$，故：
+
 $$
 |(Tx)_i|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
 $$
+
 现在对 $i$ 求和以计算范数 $\|Tx\|^2$：
+
 $$
 \|Tx\|^2 = \sum_{i=1}^{\infty} |(Tx)_i|^2 \le \alpha_\infty \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
 $$
+
 利用非负项级数求和次序的可交换性（Tonelli定理）：
+
 $$
 \|Tx\|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \left( \sum_{i=1}^{\infty} |\alpha_{i,j}| \right)
 $$
+
 由题设，列和 $\sum_{i=1}^{\infty} |\alpha_{i,j}| \le \alpha_1$，代入得：
+
 $$
 \|Tx\|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \alpha_1 = \alpha_1 \alpha_\infty \|x\|^2
 $$
+
 即 $\|Tx\| \le \sqrt{\alpha_1 \alpha_\infty} \|x\|$。
 因为算子有界，所以 $T$ 是 $\ell^2$ 上良好定义的算子。由于 $Te_j$ 对应矩阵的第 $j$ 列，$\langle Te_j, e_i \rangle$ 即为矩阵第 $i$ 行第 $j$ 列的元素 $\alpha_{i,j}$。且我们已证明 $\|T\|^2 \le \alpha_1 \alpha_\infty$。
-
-
 
 **解析：**
 这是著名的 **Schur 测试**。
@@ -225,8 +204,6 @@ $$
 这个定理告诉我们，只要行和与列和都受控，这个无穷矩阵就定义了一个 $\ell^2$ 上的有界算子，其范数由这两个上界的几何平均值控制。
 
 ---
-
-
 
 !!! question "(3)"
     Let $(e_n)_{n\in\mathbb{N}}$ be the usual basis of $\ell^2$ and $(\alpha_n)_{n\in\mathbb{N}}$ be a sequence of scalars. Show that there is a bounded linear operator $T$ on $\ell^2$ such that $Te_n = \alpha_n e_n$ for all $n \in \mathbb{N}$ if and only if $(\alpha_n)_{n\in\mathbb{N}}$ is bounded. This operator is called a *diagonal operator*.
@@ -239,25 +216,29 @@ $$
 假设序列 $(\alpha_n)$ 有界，即存在 $M > 0$ 使得对所有 $n$ 都有 $|\alpha_n| \le M$。
 对于任意 $x = \sum x_n e_n \in \ell^2$，根据 $T$ 的线性性和定义，$Tx = \sum_{n=1}^{\infty} \alpha_n x_n e_n$。
 计算其范数：
+
 $$
 \|Tx\|^2 = \sum_{n=1}^{\infty} |\alpha_n x_n|^2 = \sum_{n=1}^{\infty} |\alpha_n|^2 |x_n|^2 \le M^2 \sum_{n=1}^{\infty} |x_n|^2 = M^2 \|x\|^2
 $$
+
 因此 $\|Tx\| \le M \|x\|$，即 $T$ 是有界算子。
 
 **必要性 ($\Rightarrow$)**：
 假设 $T$ 是有界算子，即存在常数 $C$ 使得 $\|T\| \le C$。
 对于任意 $n \in \mathbb{N}$，考察基向量 $e_n$（$\|e_n\|=1$）：
+
 $$
 Te_n = \alpha_n e_n
 $$
+
 对两边取范数：
+
 $$
 \|Te_n\| = \|\alpha_n e_n\| = |\alpha_n| \|e_n\| = |\alpha_n|
 $$
+
 根据算子有界性定义，$\|Te_n\| \le \|T\| \|e_n\| = \|T\|$。
 因此，对于所有 $n$，都有 $|\alpha_n| \le \|T\|$。这表明序列 $(\alpha_n)$ 必须是有界的。
-
-
 
 **解析：**
 这是**对角算子**最基本的性质。
@@ -293,59 +274,54 @@ $$
 **2. 连续性 (Continuity) 与范数上界**
 算子 $T$ 的范数定义为 $\|T\| = \sup_{\|f\|_\infty \le 1} \|Tf\|_\infty$。
 对于任意 $x \in [0,1]$：
+
 $$
 |Tf(x)| = \left| \int_0^1 \varphi(x,t)f(t) dt \right| \le \int_0^1 |\varphi(x,t)| |f(t)| dt
 $$
+
 题目已知 $\varphi(x,t) \ge 0$，故 $|\varphi(x,t)| = \varphi(x,t)$。且 $|f(t)| \le \|f\|_\infty$。
+
 $$
 |Tf(x)| \le \|f\|_\infty \int_0^1 \varphi(x,t) dt
 $$
+
 令 $g(x) = \int_0^1 \varphi(x,t) dt$。
 由于已知 $\frac{\partial \varphi}{\partial x} \ge 0$，我们可以推导 $g(x)$ 的单调性：
+
 $$
 g'(x) = \int_0^1 \frac{\partial \varphi}{\partial x}(x,t) dt \ge 0
 $$
+
 因此，$g(x)$ 在 $[0,1]$ 上是单调递增（或非减）的。
 于是 $\sup_{x \in [0,1]} g(x) = g(1) = \int_0^1 \varphi(1,t) dt$。
 
 回到范数估计：
+
 $$
 \|Tf\|_\infty = \sup_{x \in [0,1]} |Tf(x)| \le \|f\|_\infty \cdot g(1)
 $$
+
 这证明了 $T$ 是有界的（连续的），且 $\|T\| \le \int_0^1 \varphi(1,t) dt$。
 
 **3. 范数下界 (Lower Bound)**
 为了证明等号成立，我们取常数函数 $f_0(t) \equiv 1$。显然 $f_0 \in C[0,1]$ 且 $\|f_0\|_\infty = 1$。
 计算 $Tf_0$：
+
 $$
 (Tf_0)(x) = \int_0^1 \varphi(x,t) \cdot 1 dt = \int_0^1 \varphi(x,t) dt = g(x)
 $$
+
 计算其范数：
+
 $$
 \|Tf_0\|_\infty = \sup_{x \in [0,1]} |g(x)| = g(1) \quad (\text{因为 } g(x) \ge 0 \text{ 且单调递增})
 $$
+
 根据算子范数定义：
+
 $$
 \|T\| \ge \frac{\|Tf_0\|}{\|f_0\|} = g(1) = \int_0^1 \varphi(1,t) dt
 $$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 !!! question "(5)HW6-1"
     Let $1\leqslant p <\infty$ and $T:\ell_{\infty}\to L^{p}[0,1]$ be defined by
@@ -353,10 +329,10 @@ $$
     $$
     T(x_{1},x_{2},\dots)= \sum\limits_{n=1}^{\infty} x_{n}\chi_{\left[  \frac{1}{2^{n}}, \frac{1}{2^{n-1}} \right]}
     $$
+
     Prove that $T$ is a linear and continuous operator, and calculate $\lVert T \rVert$
 
 `Proof.`
-
 
 !!! quote "$\ell_{\infty}$的含义"
     这里的 $\ell_{\infty}$ 是序列空间，它包含所有**有界**的实数（或复数）序列。也就是说，如果 $x = (x_1, x_2, \dots) \in \ell_{\infty}$，那么存在一个常数 $M$，使得对于所有的 $n$，都有 $|x_n| \le M$。
@@ -381,7 +357,6 @@ $$
 
 代入可知：
 
-
 $$
 \begin{aligned}
 \|Tx\|_p &= \left( \int_0^1 \sum\limits_{n=1}^{\infty} |x_n|^p \chi_{\left[  \frac{1}{2^{n}}, \frac{1}{2^{n-1}} \right]}  dt \right)^{\frac{1}{p}} = \left( \sum\limits_{n=1}^{\infty} |x_n|^p \frac{1}{2^n} \right)^{\frac{1}{p}}\\
@@ -394,9 +369,7 @@ $$
 
 这证明了 $\|Tx\|_p \le \|x\|_\infty$，所以算子是有界的，且 $\|T\| \le 1$
 
-
 取 $z_n = (1, 1, \dots, 1, 0, 0, \dots)$，前 $n$ 项是 1，后面全是 0，显然，$\|z_n\|_\infty = 1$ 并且 $Tz_n = \chi_{[\frac{1}{2^n}, 1]}$。
-
 
 $$ \|Tz_n\|_p = \left( 1 - \frac{1}{2^n} \right)^{\frac{1}{p}} $$
 
@@ -405,7 +378,6 @@ $$ \|Tz_n\|_p = \left( 1 - \frac{1}{2^n} \right)^{\frac{1}{p}} $$
 $$ \left( 1 - \frac{1}{2^n} \right)^{\frac{1}{p}} \leqslant \|T\| \cdot 1 $$
 
 对上述不等式，令 $n \to \infty$，马上有 $\lVert T \rVert\geqslant 1$，结合两个不等式有 $\lVert T \rVert=1$
-
 
 !!! question "(6)HW6-2"
     Consider the linear operators $A_n$ and $B_n$ on $\ell^2$ defined by
@@ -447,12 +419,9 @@ $$
 
 因此有 $\lVert B_{n} \rVert=1$ 不收敛于 0
 
-
-
 ## Continuous linear functionals
 
 向量空间 $X$ 上的线性泛函也就是线性映射：$f:X\to \mathbb{K}(\mathbb{R} /\mathbb{C})$
-
 
 !!! tip "不连续线性泛函"
     在任意的无穷维赋范空间 $(E,\lVert \cdot \rVert)$ 都有不连续的线性泛函
@@ -461,40 +430,17 @@ $$
 
 然后我们在赋范空间上考虑对偶空间：
 
-
 !!! note "Definition(Banach dual space)"
     $E$ is a normed space, we call $E^{*}=B(X,\mathbb{K})$ the Banach dual space of $E$ when it's equipped with the dual norm
 
     $$\lVert f \rVert =\sup\limits_{\lVert x \rVert \leqslant 1}\lvert f(x) \rvert ,\forall f\in X^{*}$$
 
-
-
-
-
-
 !!! tip "Banach-Alaoglu's Theorem"
     考虑赋范空间 $E$，那么对偶单位球 $U_{E^{*}}$ 在弱拓扑下紧
 
-
-
-
-
-
-
-
 ## Examples of dual spaces
 
-
-
-
-
-
-
 ## Adjoint of Hilbert space operators
-
-
-
-
 
 ## Exercise 4.3
 
@@ -518,11 +464,6 @@ $$
 $$
 
 即有 $T^{*}z(t)= \overline{y(t)}z(t)$，因此 $T^{*}$ 是乘以复共轭函数 $\overline{y}$ 的乘法算子
-
-
-
-
-
 
 !!! question "(3)HW7-2"
     Let $\varphi:[0,1]\to \mathbb{R}$ be a continuous function and $T:L^{2}[a,b]\to L^{2}[0,1]$ defined by
@@ -587,8 +528,6 @@ $$
 $$
 
 所以 $T$ 是正算子
-
-
 
 ## Projections on Hilbert spaces
 

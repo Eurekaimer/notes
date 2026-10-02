@@ -1,18 +1,15 @@
 
 # Lecture 4 - Discrete-time Markov Chains
 
-
 !!! tldr "Syllabus"
     + Markou 链  
     + Chapman-Kolmogorou 方程  
     + 不变分布
 
-
 !!! tip "HW2"
     Sheldon Ross 2.5 2.8 2.17 2.20 2.29 2.36
 
 ## 离散时间 Markov 链
-
 
 !!! note "Defnition4.1 (离散时间Markov链)"
     设 $E$ 是一个可数集合，不妨为 $\mathbb{N}^{+}=\{1,2,\ldots\}$ 。称状态空间为 $E$ 的离散时间随机过程 $\{ X_{n}$, $n= 0, 1, 2, \ldots \}$ 为一个（离散时间）Markou 链，如果对于任意 $n\geq0$ ，任意状态 $i_0,i_1,\ldots,i_{n-1},i,j\in E$ ，有 Markou 性 (4.1)：
@@ -25,8 +22,6 @@
     $$
 
     成立。
-
-
 
 称 $P(n,i;n+1,j)$ 为时刻 $n$ 处于状态 $i$,时刻 $n+1$ 转移到状态的转移函数。若它与 $n$ 无关，则记为 $P_{ij}$ ，此时称 $\{X_n\}$ 为一个时齐 Markou 链，矩阵 $P=(P_{ij})_{i,j\in E}$ 称为一步转移矩阵。我们之后都考虑时齐 Markou 链。
 
@@ -63,14 +58,13 @@ $$\displaystyle\sum_{j\in E}P_{ij}=1,\quad\forall i\in E$$
 
 ## 例子
 
-
 !!! example "Example4.2 (一维简单随机游走)"
     考虑一个在 Z 上运动的粒子，它每一次等可能地向左或向右移动一步，即
 
 $$P_{i,i+1}=P_{i,i-1}=\frac{1}{2},\quad\forall i\in\mathbb{Z}.$$
+
 >
 粒子在 Z 上的位置为一个随机过程，称为一维简单随机游走。
-
 
 我们也可以用独立地抛一枚公平的硬币的随机试验来刻画这个模型：每次抛到正面则让粒子往右走（位置加 1），抛到反面则让粒子往左走（位置减 1）。
 
@@ -85,7 +79,6 @@ $$S_n:=S_0+\xi_1+\cdots+\xi_n=S_{n-1}+\xi_n.$$
 那么 $S_{n}$ 为从 $S_{0}$ 出发的一维简单随机游走。
 
 $\xi_{n}$ 可以服从更一般的分布，此时， $S_n$ 称为一般随机游走。
-
 
 !!! example "Example4.3 (Ehrenfest模型)"
     在统计热力学的研究中，一个经典的模型是 Ehrenfest 模型，用来模拟气体分子在两个容器中的扩散过程。考虑甲乙两个容器，其中总共的气体分子为 $N$ 。假设单位时间内，有且只有一个分子在甲乙两个容器之间扩散，扩散的分子是随机选取的。
@@ -105,7 +98,6 @@ $$P\left(X_{n+1}=j|X_n=i\right)=\left\{\begin{array}{cc}1-\frac{i}{N},&j=i+1\\\f
 
     其中 $\deg(i)$ 为节点 i 的度（degree)，表示节点 i 相邻的节点的数目。
 
-
 ## Chapman-Kolmogorov 方程
 
 记时齐 Markov 链的 n 步转移概率为
@@ -119,9 +111,7 @@ $$P_{ij}^{(n)}=P\{X_{n+m}=j|X_{m}=i\},\quad n\ge0,\quad i,j\ge0.$$
 
     注：实际是一个例子，由于重要性记为 Prop.
 
-
 `Proof.`
-
 
 $$\begin{aligned}
 P_{ij}^{(n+m)}& =P\{X_{n+m}=j|X_{0}=i\}  \\
@@ -129,7 +119,6 @@ P_{ij}^{(n+m)}& =P\{X_{n+m}=j|X_{0}=i\}  \\
 &=\sum_{k\in E}P\{X_{n+m}=j|X_{n}=k,X_{0}=i\}P\{X_{n}=k|X_{0}=i\} \\
 &\overset{Markov}{=}\sum_{k\in E}P_{kj}^{(m)}P_{ik}^{(n)}.
 \end{aligned}$$
-
 
 记 $P^{(n)}$ 为 n 步转移矩阵，则由 Chapman-Kolmogorov 方程
 
@@ -146,7 +135,6 @@ $$P^{(n)}=P\cdot P^{(n-1)}=P\cdot P\cdot P^{(n-2)}=\cdots=P^{n}.$$
     $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$
 
     其中 $\alpha,\beta\in(0,1)$ 。
-
 
 我们想要计算它的 n 步转移矩阵，由 Chapman-Kolmogorou 方程，只需要计算 $P^{n}$ 。做**特征值分解**,$P$ 的两个特征值为
 
@@ -171,10 +159,8 @@ $$\lim\limits_{n\to\infty}P_{11}^{(n)}=\lim\limits_{n\to\infty}P_{01}^{(n)}=\fra
 
 这是我们之后要学习的遍历性。
 
-
 !!! question "思考"
     如果 $|1-\alpha-\beta|=1$ ，即 $\alpha=\beta=1$ 时会发生什么？
-
 
 ## 不变分布
 
@@ -243,12 +229,9 @@ Markov 链研究中的一个基本问题是确定所有的不变分布。
     $$\begin{array}{c}\pi_0(1-\alpha)+\pi_1\beta=\pi_0\\
     \pi_0\alpha+\pi_1(1-\beta)=\pi_1\end{array}$$
 
-
-
 结合 $\pi_{0}+\pi_{1}=1$ ，可以解得
 
 $$\pi_0=\frac{\beta}{\alpha+\beta},\pi_1=\frac{\alpha}{\alpha+\beta}.$$
-
 
 !!! question "思考"
 

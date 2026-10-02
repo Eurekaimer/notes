@@ -1,6 +1,5 @@
 # Some big theorems
 
-
 !!! tldr "Outline"
     + Hahn-Banach Extension Theorem  
     + Continuous linear functionals of a TVS  
@@ -11,7 +10,6 @@
 ## Hahn-Banach Extension Theorem
 
 >泛函分析中最为重要的定理，没有之一，所以必须要很好的掌握
-
 
 !!! tip "Hahn-Banach Extension Theorem"
     $M$ is a subspace of a normed space $E$, $f$ is a continuous functional on $M$. Then $f$ can be extended to a continuous linear functional $g$ on $E$ with $\lVert g \rVert=\lVert f \rVert$
@@ -60,7 +58,6 @@ $$
 \sup\limits\left\{ -f(x)-\lVert x+x_{0} \rVert :x\in M \right\} \leqslant \inf\left\{ -f(y)+\lVert y+x_{0} \rVert  :y\in M\right\} 
 $$
 
-
 因此任何满足上面不等式条件的 $r_{0}$ 均可以，而上面的等式是显然成立的，因为：
 
 $$
@@ -93,7 +90,6 @@ $$
 
 !!! quote "张恭庆的补充"
     直接证明是一种比较粗暴且缺乏动机的做法，数学中常见的做法是从简单的情况出发，然后将定理条件放宽，得到更加 general 的形式，在此 cite 张恭庆老师的《泛函分析讲义》中有关线性泛函的延拓定理的部分内容供增进理解和参考
-
 
 !!! info "实Hahn-Banach定理"
     为了统一记号做了一些修改，$E$ 是实线性空间，$p$ 是 $E$ 上的次线性泛函，$M$ 是 $E$ 的实线性子空间，$f$ 是 $M$ 的实线性泛函且 $f\leqslant p,\forall x\in M$，那么在 $E$ 上一定存在一个实线性泛函 $g$ 使得：
@@ -141,7 +137,6 @@ f(x')-f(x'')&=f(x'-x'')\\
 \end{aligned}
 $$
 
-
 因此这种延拓是存在的，且不唯一（如果不等式不取等号的话），剩下的问题就是如何从 $M'$ 过度到 $E$，需要利用 Zorn 引理
 
 我们先构造一个半序集：
@@ -160,11 +155,6 @@ $$
 
 所以 $M_{K}$ 是 $E$ 中包含 $M$ 的子空间，且 $f_{K}$ 唯一确定 ($f_{K}=f_{\Delta}$)，$f_{K}\leqslant p$，根据 Zorn 引理 $\mathscr{F}$ 本身存在极大元，下面只需要说明那个极大元就是 $E$ 即可，使用反证法，如若不然，可以构造出另一个 $\mathscr{F}$ 中元素使得出现更大元，由此证毕
 
-
-
-
-
-
 !!! note "Riesz representation theorem"
     Every bounded linear functional $F\in C[a,b]^{*}$ if given by a unique normalized function $f\in BV[a,b]$ such that
 
@@ -176,38 +166,13 @@ $$
 
 这个定理将泛函分析中的线性泛函和实分析中的有界变差函数联系起来，我个人理解这个定理的含义就是说：任何线性泛函 $F(x)$ 都可以表示为对 $x(t)$ 的加权积分，而 $df(t)$ 需要使用到 $Riemann-Stieltijes$ 积分
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Continuous linear functionals of a TVS
-
-
-
-
-
 
 ## Exercise 5.2
 
 **(1)** Show that the convex hull of a balanced set is balanced. Give a counter example that the balanced hull of a convex set might not be convex.
 
 **(2)** Show that $0 \in A$ if $A$ is an absorbing set or a balanced set of a vector space $X$.
-
 
 (3)
 
@@ -228,7 +193,6 @@ Show that every neighborhood $V$ of zero in a TVS $X$ is an absorbing set.
 
 首先任取 $X$ 中的向量 $x$，我们希望对于这个 $x$ 能够找到一个常数 $\delta$ 使得 $\delta x$ 被 $V$ 所吸收，考虑连续性，构造一个映射 $f:\mathbb{K}\to X$，$f(\lambda)=\lambda x$，其中有 $\lambda\in \mathbb{K},x\in X$，显然在 TVS 中这是一个连续函数，那么考虑 $\lambda=0$ 时有 $f(0)=0$，根据邻域和连续函数的定义可知 $f^{-1}(V)$ 必然是 $0$ 的一个邻域，而关于 0 的任何邻域一定存在一个以 0 为中心的开球，因此我们可以知道存在 $\delta>0$，使得$\lvert \lambda \rvert<\delta$的情况下，$\lambda x\in V$，由此即证
 
-
 **(4)** Let $A = \{x = (x_1, x_2) \in \mathbb{R}^2 : |x_1| \le x_2^2, \text{ or } x_1 = 0, |x_2| \le 1\}$. Show that $A$ is absorbing. Let $\rho_A$ be the sublinear functional of $\mathbb{R}^2$ associated with $A$. Draw the sets $\{x \in \mathbb{R}^2 : \rho_A(x) < 1\}$, $\{x \in \mathbb{R}^2 : \rho_A(x) \le 1\}$ and the interior $\text{int } A$ of $A$. Is $\text{int } A$ an absorbing set in $\mathbb{R}^2$?
 
 **(5)** Let $A = \{x = (x_1, x_2) \in \mathbb{R}^2 : \|x\|_2 \le 1/2 \text{ or } \|x\|_2 = 1\}$. Show that the gauge $\rho_A$ of the non-convex set $A$ agrees with the norm $\|\cdot\|_2$ of $\mathbb{R}^2$.
@@ -245,64 +209,41 @@ $$ \rho_A(x) = \inf \{ \lambda > 0 : x \in \lambda A \} = \inf \{ \lambda > 0 : 
 
 $x=0$时显然，根据定义 $\rho_A(0) = 0$，且范数 $\|0\|_2 = 0$。$x \neq 0$，令 $r = \|x\|_2 > 0$。我们需要考察使得 $\frac{x}{\lambda} \in A$ 成立的 $\lambda > 0$ 的集合。
 
-
 $$
 \left\| \frac{x}{\lambda} \right\|_2 \le \frac{1}{2} \quad \text{or} \quad \left\| \frac{x}{\lambda} \right\|_2 = 1 \iff
 \frac{r}{\lambda} \le \frac{1}{2} \quad \text{or} \quad \frac{r}{\lambda} = 1
 $$
 
-
 因此，使得 $x \in \lambda A$ 成立的 $\lambda$ 的集合为：
 
 $$ S = \{ \lambda : \lambda = r \} \cup [2r, +\infty) $$
+
 显然：
+
 $$ \inf S = \min \{ r, 2r \} = r $$
 
-
 因为 $r = \|x\|_2$，所以我们得到：
+
 $$ \rho_A(x) = \|x\|_2 $$
-
-
 
 !!! quote "Ans."
     PROOF. For any $0 \neq x_0 \in \mathbb{R}^2$, we have that $x_0 \in \|x_0\|_2 A$, which shows that $\rho_A(x_0) \le \|x\|_2$. On the other hand, if $\lambda < \|x_0\|$, we have that $\|\lambda a\| \le \lambda < \|x_0\|$ for each $a \in A$, which implies that $x_0 \notin \lambda A$. Therefore, $\rho_A(x_0) = \|x_0\|_2$. $\square$
 
-
     尽管集合 $A$ 缺失了半径在 $(1/2, 1)$ 之间的部分，导致它不是凸集，但由于它包含了单位圆周（$\|x\|_2=1$），使得 $\lambda = \|x\|_2$ 始终是一个合法的缩放因子。这个因子比将向量压缩进内部小球（$B[0, 1/2]$）所需的缩放因子（$\lambda \ge 2\|x\|_2$）要小。因此，下确界由外部边界决定，正好等于欧几里得范数
-
-
-
-
-
-
-
-
-
-
-
 
 **(6)** Let $h$ be a sublinear functional of a real vector space $X$. Prove that $\rho(x) = \max \{h(x), h(-x)\}$ is a seminorm of $X$.
 
 **(7)** Let $c_{00}$ be the vector space of scalar sequences $(x_n)_n$ in which at most finitely many terms $x_n$'s are nonzero. Equip $c_{00}$ with the supnorm $\|(x_n)_n\|_\infty = \sup_n |x_n|$. Let $A = \{(x_n)_n \in c_{00} : |x_n| < 1/n \text{ for } n = 1, 2, \dots\}$. Show that $A$ is an absolutely convex and absorbing set in $c_{00}$, but it is not a norm neighborhood of zero.
 
 **(8)** Show that (5.7) holds for any absorbing set $V$ in a TVS $X$. Give examples such that both inclusions can be strict. Show that if $q$ is a seminorm of $X$ such that
+
 $$ \{x \in X : q(x) < 1\} \subseteq V \subseteq \{x \in X : q(x) \le 1\} $$
+
 then $q = \rho_V$.
 
 **(9)** Prove Lemma 5.2.4.
 
-
-
-
-
-
-
-
-
-
-
 ## Seperation Theorems
-
 
 ## Uniform Boundness Principle
 
@@ -316,11 +257,11 @@ then $q = \rho_V$.
 
      In other words, if for each $x$ in $E$, there is an $M(x)> 0$ such that
 
-     $$\lVert T_{\lambda}x \rVert \leqslant M(x),\forall\lambda\in\Lambda$$
+    $$\lVert T_{\lambda}x \rVert \leqslant M(x),\forall\lambda\in\Lambda$$
 
      then there is a constant $0<M <+\infty$ such that
 
-     $$\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda$$
+    $$\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda$$
 
 让我们听听`Gemini3`如何零基础讲解这个定理：
 
@@ -381,7 +322,6 @@ then $q = \rho_V$.
 
 ---
 
-
 ## Exercise 5.4
 
 (1) Let $X$ be a Banach space, $Y$ a normed space, and $T_n : X \to Y$ ($n \in \mathbb{N}$) a sequence of linear continuous operators. Prove that the following conditions are equivalent:
@@ -434,17 +374,6 @@ $$ \|T_{n_k}(x_{n_k})\| = \left\| T_{n_k}\left(\frac{1}{k^2} u_k\right) \right\|
 
 这与条件 (a) 矛盾。因此假设不成立，即证
 
-
-
-
-
-
-
-
-
-
-
-
 (2) Let $X$ be a normed space, and $(x_n)_{n\in\mathbb{N}} \subseteq X$ with the property that
 
 $$ \sum_{n=1}^\infty |x^*(x_n)| < \infty, \quad \forall x^* \in X^*. $$
@@ -469,7 +398,6 @@ $$ \sup_{\|x^*\|\le 1} \sum_{n=1}^\infty |x^*(x_n)| < \infty. $$
 
 最后，算子 $T$ 的范数定义为单位球上像的范数的上确界，即 $\sup_{\|x^*\| \le 1} \sum |x^*(x_n)|$。既然我们已经证明了 $T$ 是有界算子，那么这个上确界必然是有限的，从而得证。
 
-
 !!! quote "Ans."
      令 $T : X^* \to \ell_1$ 定义为
 
@@ -486,20 +414,18 @@ $T_n$ 是线性连续的（因为 $\|T_n\| \le \sum_{k=1}^n \|x_k\|$），且 $X
 >
 并且 $\|T\| < \infty$。 $\square$
 
-
-
 (3) Let $1 < p < \infty$, and $1 < q < \infty$ be the conjugate of $p$, that is, $\frac{1}{p} + \frac{1}{q} = 1$. Let $X = (C[0, 1], \|\cdot\|_p)$, where
+
 $$ \|f\|_p = (\int_0^1 |f(x)|^p dx)^{\frac{1}{p}}, \quad \forall f \in C[0, 1]. $$
+
 Let $(b_n)_{n\in\mathbb{N}} \subseteq [0, 1], (c_n)_{n\in\mathbb{N}} \subseteq [0, 1]$ with $b_n \le c_n$ for each $n \in \mathbb{N}$. Let $(a_n)_{n\in\mathbb{N}} \subseteq \mathbb{K}$. For any $n \in \mathbb{N}$, define $x_n^* : X \to \mathbb{K}$ by
+
 $$ x_n^*(f) = a_n \int_{b_n}^{c_n} f(x)dx, \quad \forall f \in C[0, 1]. $$
+
 (a) Prove that $x_n^* \in X^*$ for each $n \in \mathbb{N}$.
 (b) Prove that the sequence $(x_n^*)_{n\in\mathbb{N}} \subseteq X^*$ is pointwise bounded if and only if $(a_n(c_n - b_n))_{n\in\mathbb{N}}$ is bounded.
 (c) Prove that the sequence $(x_n^*)_{n\in\mathbb{N}} \subseteq X^*$ is uniformly bounded if and only if $(a_n(c_n - b_n)^{1/q})_{n\in\mathbb{N}}$ is bounded.
 (d) Prove that we can find $(z_n^*)_{n\in\mathbb{N}} \subseteq X^*$ pointwise bounded which is not uniformly bounded.
-
-
-
-
 
 ## Open Mapping Theorem and Closed Graph Theorem
 

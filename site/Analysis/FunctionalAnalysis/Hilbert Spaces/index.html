@@ -2026,9 +2026,9 @@
 </blockquote>
 <div class="admonition note">
 <p class="admonition-title">Definition (Inner Product)</p>
-<p>Let <span class="arithmatex">\(E\)</span> be a vector space over <span class="arithmatex">\(\mathbb{K}\)</span>. A function<br />
-$$ \langle \cdot, \cdot \rangle : E \times E \to \mathbb{K} $$<br />
-is said to be an <em>inner product</em> of <span class="arithmatex">\(E\)</span> if</p>
+<p>Let <span class="arithmatex">\(E\)</span> be a vector space over <span class="arithmatex">\(\mathbb{K}\)</span>. A function</p>
+<div class="arithmatex">\[ \langle \cdot, \cdot \rangle : E \times E \to \mathbb{K} \]</div>
+<p>is said to be an <em>inner product</em> of <span class="arithmatex">\(E\)</span> if</p>
 <ol>
 <li><span class="arithmatex">\(\langle x, x \rangle \ge 0\)</span> for all <span class="arithmatex">\(x \in E\)</span>; and <span class="arithmatex">\(\langle x, x \rangle = 0\)</span> if and only if <span class="arithmatex">\(x = 0\)</span>;</li>
 <li><span class="arithmatex">\(\langle x, y \rangle = \overline{\langle y, x \rangle}\)</span> for all <span class="arithmatex">\(x, y \in E\)</span>;</li>
@@ -2081,14 +2081,14 @@ is said to be an <em>inner product</em> of <span class="arithmatex">\(E\)</span>
 </div>
 <p><code>Proof.</code></p>
 <p><strong>方向一：<span class="arithmatex">\((\Rightarrow)\)</span> 若范数由内积定义</strong></p>
-<p>这是显然的。直接利用内积展开范数定义 <span class="arithmatex">\(\|x\|^2 = \langle x, x \rangle\)</span>：
-$$
+<p>这是显然的。直接利用内积展开范数定义 <span class="arithmatex">\(\|x\|^2 = \langle x, x \rangle\)</span>：</p>
+<div class="arithmatex">\[
 \begin{aligned}
-|x+y|^2 &amp;= \langle x+y, x+y \rangle = |x|^2 + \langle x, y \rangle + \langle y, x \rangle + |y|^2 \
-|x-y|^2 &amp;= \langle x-y, x-y \rangle = |x|^2 - \langle x, y \rangle - \langle y, x \rangle + |y|^2
+\|x+y\|^2 &amp;= \langle x+y, x+y \rangle = \|x\|^2 + \langle x, y \rangle + \langle y, x \rangle + \|y\|^2 \\
+\|x-y\|^2 &amp;= \langle x-y, x-y \rangle = \|x\|^2 - \langle x, y \rangle - \langle y, x \rangle + \|y\|^2
 \end{aligned}
-$$
-两式相加，交叉项抵消，立刻得到 <span class="arithmatex">\(2(\|x\|^2 + \|y\|^2)\)</span>。</p>
+\]</div>
+<p>两式相加，交叉项抵消，立刻得到 <span class="arithmatex">\(2(\|x\|^2 + \|y\|^2)\)</span>。</p>
 <p><strong>方向二：<span class="arithmatex">\((\Leftarrow)\)</span> 若范数满足平行四边形法则</strong></p>
 <p>我们需要构造一个内积 <span class="arithmatex">\(\langle \cdot, \cdot \rangle\)</span>，并验证它满足内积的四条公理。</p>
 <ol>
@@ -2100,18 +2100,18 @@ $$
 <p><strong>情形 A：若 <span class="arithmatex">\(\mathbb{K} = \mathbb{R}\)</span> （实数域）</strong><br />
 由方向一的展开式可知：<br />
 <span class="arithmatex">\(\|x+y\|^2 - \|x-y\|^2 = 2\langle x, y \rangle + 2\langle y, x \rangle = 4\langle x, y \rangle\)</span> （利用实内积对称性）。<br />
-于是我们可以定义：<br />
-$$ \langle x, y \rangle = \frac{1}{4} (|x+y|^2 - |x-y|^2) \quad (3.2) $$</p>
+于是我们可以定义：</p>
+<div class="arithmatex">\[ \langle x, y \rangle = \frac{1}{4} (\|x+y\|^2 - \|x-y\|^2) \quad (3.2) \]</div>
 <p><strong>情形 B：若 <span class="arithmatex">\(\mathbb{K} = \mathbb{C}\)</span> （复数域）</strong><br />
 复数情形稍微复杂，因为 <span class="arithmatex">\(\langle y, x \rangle = \overline{\langle x, y \rangle}\)</span>。我们利用 <span class="arithmatex">\(i^k\)</span> 的技巧。<br />
 考虑展开式：<br />
 <span class="arithmatex">\(\|x + i^k y\|^2 = \|x\|^2 + i^k \langle y, x \rangle + i^{-k} \langle x, y \rangle + \|y\|^2\)</span>。<br />
-对 <span class="arithmatex">\(k=0, 1, 2, 3\)</span> 求和，并乘以 <span class="arithmatex">\(i^k\)</span>：<br />
-$$ \sum_{k=0}^3 i^k |x + i^k y|^2 = \sum_{k=0}^3 i^k (|x|^2 + |y|^2) + \langle y, x \rangle \sum_{k=0}^3 i^{2k} + \langle x, y \rangle \sum_{k=0}^3 i^0 $$<br />
-利用 <span class="arithmatex">\(\sum_{k=0}^3 i^k = 0\)</span> 和 <span class="arithmatex">\(\sum_{k=0}^3 i^{2k} = 1-1+1-1=0\)</span>，只剩下最后一项 <span class="arithmatex">\(4\langle x, y \rangle\)</span>：</p>
-<p>于是，我们<strong>定义</strong>复空间上的内积为：<br />
-$$ \langle x, y \rangle = \frac{1}{4} \sum_{k=0}^3 i^k |x + i^k y|^2 \quad (3.3) $$<br />
-这两个公式 (3.2) 和 (3.3) 被称为 <strong>极化恒等式</strong>。</p>
+对 <span class="arithmatex">\(k=0, 1, 2, 3\)</span> 求和，并乘以 <span class="arithmatex">\(i^k\)</span>：</p>
+<div class="arithmatex">\[ \sum_{k=0}^3 i^k \|x + i^k y\|^2 = \sum_{k=0}^3 i^k (\|x\|^2 + \|y\|^2) + \langle y, x \rangle \sum_{k=0}^3 i^{2k} + \langle x, y \rangle \sum_{k=0}^3 i^0 \]</div>
+<p>利用 <span class="arithmatex">\(\sum_{k=0}^3 i^k = 0\)</span> 和 <span class="arithmatex">\(\sum_{k=0}^3 i^{2k} = 1-1+1-1=0\)</span>，只剩下最后一项 <span class="arithmatex">\(4\langle x, y \rangle\)</span>：</p>
+<p>于是，我们<strong>定义</strong>复空间上的内积为：</p>
+<div class="arithmatex">\[ \langle x, y \rangle = \frac{1}{4} \sum_{k=0}^3 i^k \|x + i^k y\|^2 \quad (3.3) \]</div>
+<p>这两个公式 (3.2) 和 (3.3) 被称为 <strong>极化恒等式</strong>。</p>
 </div>
 <ol>
 <li>验证构造出的函数是内积</li>
@@ -2139,9 +2139,9 @@ $$ \langle x, y \rangle = \frac{1}{4} \sum_{k=0}^3 i^k |x + i^k y|^2 \quad (3.3)
 \]</div>
 <p>即我们得到了：</p>
 <div class="arithmatex">\[ \text{Re}\langle x+z, y \rangle + \text{Re}\langle x-z, y \rangle = 2\text{Re}\langle x, y \rangle \]</div>
-<p>在此式中，令 <span class="arithmatex">\(z=x\)</span>，则 <span class="arithmatex">\(\text{Re}\langle 2x, y \rangle + \text{Re}\langle 0, y \rangle = 2\text{Re}\langle x, y \rangle\)</span>。由于 <span class="arithmatex">\(\text{Re}\langle 0, y \rangle = \frac{1}{4}(\|y\|^2 - \|-y\|^2) = 0\)</span>，故：
-$$ \text{Re}\langle 2x, y \rangle = 2\text{Re}\langle x, y \rangle $$
-现在，利用这个性质回到 (3.6)。令 <span class="arithmatex">\(u = x+z, v = x-z\)</span>，则 <span class="arithmatex">\(x = \frac{u+v}{2}, z = \frac{u-v}{2}\)</span>。</p>
+<p>在此式中，令 <span class="arithmatex">\(z=x\)</span>，则 <span class="arithmatex">\(\text{Re}\langle 2x, y \rangle + \text{Re}\langle 0, y \rangle = 2\text{Re}\langle x, y \rangle\)</span>。由于 <span class="arithmatex">\(\text{Re}\langle 0, y \rangle = \frac{1}{4}(\|y\|^2 - \|-y\|^2) = 0\)</span>，故：</p>
+<div class="arithmatex">\[ \text{Re}\langle 2x, y \rangle = 2\text{Re}\langle x, y \rangle \]</div>
+<p>现在，利用这个性质回到 (3.6)。令 <span class="arithmatex">\(u = x+z, v = x-z\)</span>，则 <span class="arithmatex">\(x = \frac{u+v}{2}, z = \frac{u-v}{2}\)</span>。</p>
 <p>代入 (3.6) 式（或者如书中操作，将 <span class="arithmatex">\(x\)</span> 替换为 <span class="arithmatex">\(\frac{1}{2}(x+z)\)</span>，将 <span class="arithmatex">\(z\)</span> 替换为 <span class="arithmatex">\(\frac{1}{2}(x-z)\)</span>）：</p>
 <div class="arithmatex">\[ \text{Re}\langle x, y \rangle + \text{Re}\langle z, y \rangle = 2\text{Re}\langle \frac{x+z}{2}, y \rangle = \text{Re}\langle x+z, y \rangle \quad (3.8) \]</div>
 <p>这证明了实部对第一个变量是可加的。结合 (3.5)，<strong>整体函数 <span class="arithmatex">\(\langle \cdot, \cdot \rangle\)</span> 满足可加性</strong></p>
@@ -2151,10 +2151,12 @@ $$ \text{Re}\langle 2x, y \rangle = 2\text{Re}\langle x, y \rangle $$
 <ol>
 <li><strong>整数与有理数</strong>：
     由可加性，显然 <span class="arithmatex">\(\langle nx, y \rangle = n\langle x, y \rangle\)</span> 对 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 成立，进而推广到 <span class="arithmatex">\(n \in \mathbb{Z}\)</span>，再推广到 <span class="arithmatex">\(\alpha \in \mathbb{Q}\)</span></li>
-<li><strong>实数</strong>：
+<li>
+<p><strong>实数</strong>：
     由于范数函数 <span class="arithmatex">\(\|\cdot\|\)</span> 是连续的，由 (3.3) 定义的内积函数也是连续的
-    利用连续性，从 <span class="arithmatex">\(\mathbb{Q}\)</span> 推广到 <span class="arithmatex">\(\mathbb{R}\)</span>：
-    $$ \langle \alpha x, y \rangle = \alpha \langle x, y \rangle, \quad \forall \alpha \in \mathbb{R} $$</li>
+    利用连续性，从 <span class="arithmatex">\(\mathbb{Q}\)</span> 推广到 <span class="arithmatex">\(\mathbb{R}\)</span>：</p>
+<div class="arithmatex">\[ \langle \alpha x, y \rangle = \alpha \langle x, y \rangle, \quad \forall \alpha \in \mathbb{R} \]</div>
+</li>
 <li>
 <p><strong>复数（虚数单位 <span class="arithmatex">\(i\)</span>）</strong>：
     我们还需要验证 <span class="arithmatex">\(\langle ix, y \rangle = i\langle x, y \rangle\)</span>
@@ -2166,11 +2168,11 @@ $$ \text{Re}\langle 2x, y \rangle = 2\text{Re}\langle x, y \rangle $$
 &amp;= \text{Re}\langle ix, y \rangle + i \text{Re}\langle x, y \rangle
 \end{aligned}
 \]</div>
-<p>另一方面：
-$$
+<p>另一方面：</p>
+<div class="arithmatex">\[
 i\langle x, y \rangle = i(\text{Re}\langle x, y \rangle - i \text{Re}\langle ix, y \rangle) = i \text{Re}\langle x, y \rangle + \text{Re}\langle ix, y \rangle
-$$
-两者相等！因此 <span class="arithmatex">\(\langle \alpha x, y \rangle = \alpha \langle x, y \rangle\)</span> 对所有 <span class="arithmatex">\(\alpha \in \mathbb{C}\)</span> 成立</p>
+\]</div>
+<p>两者相等！因此 <span class="arithmatex">\(\langle \alpha x, y \rangle = \alpha \langle x, y \rangle\)</span> 对所有 <span class="arithmatex">\(\alpha \in \mathbb{C}\)</span> 成立</p>
 </li>
 </ol>
 <p>第三步：验证正定性与共轭对称
@@ -2190,19 +2192,19 @@ $$
 <p>for all <span class="arithmatex">\(a,b,c,d\in H\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>(a)
-$$
+<p>(a)</p>
+<div class="arithmatex">\[
 \begin{aligned}
-\lVert a'-b' \rVert ^{2}&amp;= \left\lVert  \frac{a}{\lVert a \rVert ^{2}}- \frac{b}{\lVert b \rVert ^{2}}  \right\rVert ^{2}\
-&amp;= \left\lVert  \frac{a\lVert b \rVert ^{2}-b\lVert a \rVert ^{2}}{\lVert a \rVert ^{2}\lVert b \rVert ^{2}  }\right\rVert ^{2}\
-&amp;= \frac{1}{(\lVert a \rVert ^{2}\lVert b \rVert ^{2})^{2}}\langle a\lVert b \rVert ^{2}-b\lVert a \rVert ^{2},a\lVert b \rVert ^{2}-b\lVert a \rVert ^{2}\rangle\
-&amp;= \frac{1}{(\lVert a \rVert ^{2}\lVert b \rVert ^{2})^{2}} \lVert a \rVert ^{2} \lVert b \rVert ^{2} \left( \lVert b \rVert ^{2}+\lVert a \rVert ^{2} -\langle a,b\rangle -\langle b,a\rangle\right) \
-\lVert a-b \rVert ^{2}&amp;=\langle a-b,a-b\rangle \
-&amp;=\lVert a \rVert ^{2}+\lVert b \rVert ^{2}-\langle a,b\rangle -\langle b,a\rangle\
-\lVert a'-b' \rVert ^{2}&amp;=  \frac{\lVert a-b \rVert ^{2}}{\lVert a \rVert ^{2}\lVert b \rVert ^{2}}\
+\lVert a'-b' \rVert ^{2}&amp;= \left\lVert  \frac{a}{\lVert a \rVert ^{2}}- \frac{b}{\lVert b \rVert ^{2}}  \right\rVert ^{2}\\
+&amp;= \left\lVert  \frac{a\lVert b \rVert ^{2}-b\lVert a \rVert ^{2}}{\lVert a \rVert ^{2}\lVert b \rVert ^{2}  }\right\rVert ^{2}\\
+&amp;= \frac{1}{(\lVert a \rVert ^{2}\lVert b \rVert ^{2})^{2}}\langle a\lVert b \rVert ^{2}-b\lVert a \rVert ^{2},a\lVert b \rVert ^{2}-b\lVert a \rVert ^{2}\rangle\\
+&amp;= \frac{1}{(\lVert a \rVert ^{2}\lVert b \rVert ^{2})^{2}} \lVert a \rVert ^{2} \lVert b \rVert ^{2} \left( \lVert b \rVert ^{2}+\lVert a \rVert ^{2} -\langle a,b\rangle -\langle b,a\rangle\right) \\
+\lVert a-b \rVert ^{2}&amp;=\langle a-b,a-b\rangle \\
+&amp;=\lVert a \rVert ^{2}+\lVert b \rVert ^{2}-\langle a,b\rangle -\langle b,a\rangle\\
+\lVert a'-b' \rVert ^{2}&amp;=  \frac{\lVert a-b \rVert ^{2}}{\lVert a \rVert ^{2}\lVert b \rVert ^{2}}\\
 \lVert a'-b' \rVert &amp;= \frac{\lVert a-b \rVert }{\lVert a \rVert \lVert b \rVert }
 \end{aligned}
-$$</p>
+\]</div>
 <p>(b)</p>
 <p>不妨同时除以 <span class="arithmatex">\(\lVert a-d \rVert\lVert b-d \rVert\lVert c-d \rVert\)</span> 原本的不等式简化为：</p>
 <div class="arithmatex">\[
@@ -2225,8 +2227,8 @@ $$</p>
 <p class="admonition-title">quotient norm</p>
 <p>Let <span class="arithmatex">\(V\)</span> be a normed vector space with norm <span class="arithmatex">\(\lVert \cdot \rVert\)</span>. Let <span class="arithmatex">\(M\)</span> be a closed subspace of <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(V / M\)</span> the quotient vector space.<br />
 The norm <span class="arithmatex">\(\lVert \cdot \rVert\)</span> induces a norm <span class="arithmatex">\(\lVert \cdot \rVert_{V / M}\)</span> in <span class="arithmatex">\(V / M\)</span>, called the quotient norm, given by</p>
-<p>$$\lVert v+M \rVert <em u_in="u\in" v_M="v+M">{V / M}:= \inf\limits</em>\lVert v+m \rVert $$}\lVert u \rVert =\inf\limits_{m\in M<br />
-<span class="arithmatex">\(\mathbf{Theorem}\)</span>-<span class="arithmatex">\(\lVert \cdot \rVert_{V / M}\)</span> is a norm in <span class="arithmatex">\(V / M\)</span> iff <span class="arithmatex">\(M\)</span> is closed in <span class="arithmatex">\(V\)</span></p>
+<div class="arithmatex">\[\lVert v+M \rVert _{V / M}:= \inf\limits_{u\in v+M}\lVert u \rVert =\inf\limits_{m\in M}\lVert v+m \rVert \]</div>
+<p><span class="arithmatex">\(\mathbf{Theorem}\)</span>-<span class="arithmatex">\(\lVert \cdot \rVert_{V / M}\)</span> is a norm in <span class="arithmatex">\(V / M\)</span> iff <span class="arithmatex">\(M\)</span> is closed in <span class="arithmatex">\(V\)</span></p>
 </div>
 <p><span class="arithmatex">\(\mathbf{Method 1}\)</span></p>
 <p>只需要模仿上述定义，给出商范数</p>
@@ -2303,19 +2305,19 @@ H=M\oplus M^{\perp}
 <p>将两个不等式相加：</p>
 <div class="arithmatex">\[ \text{Re}\langle x - u, v - u \rangle + \text{Re}\langle y - v, u - v \rangle \le 0 \]</div>
 <p>调整项的符号（利用内积线性）：</p>
-<p>$$ \text{Re}\langle u - x, u - v \rangle + \text{Re}\langle y - v, u - v \rangle \le 0 $$
-$$ \text{Re}\langle (u - x) + (y - v), u - v \rangle \le 0 $$
-$$ \text{Re}\langle (u - v) - (x - y), u - v \rangle \le 0 $$
-展开内积：
-$$ |u - v|^2 - \text{Re}\langle x - y, u - v \rangle \le 0 $$
-即：
-$$ |u - v|^2 \le \text{Re}\langle x - y, u - v \rangle $$
-由 Cauchy-Schwarz 不等式，<span class="arithmatex">\(\text{Re}\langle x - y, u - v \rangle \le |\langle x - y, u - v \rangle| \le \|x - y\| \|u - v\|\)</span>。
-因此：
-$$ |u - v|^2 \le |x - y| |u - v| $$
-消去一个 <span class="arithmatex">\(\|u - v\|\)</span>（若为 0 则显然成立），得：
-$$ |u - v| \le |x - y| $$
-即 <span class="arithmatex">\(\|P_B x - P_B y\| \le \|x - y\|\)</span>。证毕。</p>
+<div class="arithmatex">\[ \text{Re}\langle u - x, u - v \rangle + \text{Re}\langle y - v, u - v \rangle \le 0 \]</div>
+<div class="arithmatex">\[ \text{Re}\langle (u - x) + (y - v), u - v \rangle \le 0 \]</div>
+<div class="arithmatex">\[ \text{Re}\langle (u - v) - (x - y), u - v \rangle \le 0 \]</div>
+<p>展开内积：</p>
+<div class="arithmatex">\[ \|u - v\|^2 - \text{Re}\langle x - y, u - v \rangle \le 0 \]</div>
+<p>即：</p>
+<div class="arithmatex">\[ \|u - v\|^2 \le \text{Re}\langle x - y, u - v \rangle \]</div>
+<p>由 Cauchy-Schwarz 不等式，<span class="arithmatex">\(\text{Re}\langle x - y, u - v \rangle \le |\langle x - y, u - v \rangle| \le \|x - y\| \|u - v\|\)</span>。
+因此：</p>
+<div class="arithmatex">\[ \|u - v\|^2 \le \|x - y\| \|u - v\| \]</div>
+<p>消去一个 <span class="arithmatex">\(\|u - v\|\)</span>（若为 0 则显然成立），得：</p>
+<div class="arithmatex">\[ \|u - v\| \le \|x - y\| \]</div>
+<p>即 <span class="arithmatex">\(\|P_B x - P_B y\| \le \|x - y\|\)</span>。证毕。</p>
 <h2 id="exercise-32">Exercise 3.2<a class="headerlink" href="#exercise-32" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">(4)HW5-1</p>

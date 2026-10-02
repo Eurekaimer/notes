@@ -1746,8 +1746,8 @@ G_2 &amp;= \{z \in X : d(z, A_2) &lt; \frac{r}{2} \} = \bigcup_{y \in A_2} U(y, 
 \end{aligned}\]</div>
 <p>其中 <span class="arithmatex">\(U(x, \delta)\)</span> 表示以 <span class="arithmatex">\(x\)</span> 为心、<span class="arithmatex">\(\delta\)</span> 为半径的开球。显然 <span class="arithmatex">\(G_1\)</span> 和 <span class="arithmatex">\(G_2\)</span> 是开集（开球的并），且 <span class="arithmatex">\(A_1 \subset G_1\)</span>, <span class="arithmatex">\(A_2 \subset G_2\)</span>。下面证明 <span class="arithmatex">\(G_1 \cap G_2 = \emptyset\)</span>。</p>
 <p>用反证法。假设存在 <span class="arithmatex">\(z \in G_1 \cap G_2\)</span>。由 <span class="arithmatex">\(z \in G_1\)</span>，存在 <span class="arithmatex">\(x \in A_1\)</span> 使得 <span class="arithmatex">\(d(z, x) &lt; \frac{r}{2}\)</span>。由 <span class="arithmatex">\(z \in G_2\)</span>，存在 <span class="arithmatex">\(y \in A_2\)</span> 使得 <span class="arithmatex">\(d(z, y) &lt; \frac{r}{2}\)</span>。</p>
-<p>根据三角不等式：
-$$ d(x, y) \le d(x, z) + d(z, y) &lt; \frac{r}{2} + \frac{r}{2} = r $$</p>
+<p>根据三角不等式：</p>
+<div class="arithmatex">\[ d(x, y) \le d(x, z) + d(z, y) &lt; \frac{r}{2} + \frac{r}{2} = r \]</div>
 <p>即 <span class="arithmatex">\(d(x, y) &lt; d(A_1, A_2)\)</span>。这与下确界 <span class="arithmatex">\(d(A_1, A_2) = \inf_{a\in A_1, b\in A_2} d(a, b)\)</span> 的定义矛盾。因此假设不成立，即 <span class="arithmatex">\(G_1 \cap G_2 = \emptyset\)</span>。</p>
 <div class="admonition question">
 <p class="admonition-title">(2)</p>
@@ -1777,29 +1777,29 @@ $$ d(x, y) \le d(x, z) + d(z, y) &lt; \frac{r}{2} + \frac{r}{2} = r $$</p>
 <ol>
 <li>
 <p><strong>证明连续性：</strong>
-    对任意 <span class="arithmatex">\(x \in C[0, 1]\)</span>，有
-    $$ |f(x)| = \left| \int_0^{\frac{1}{2}} x(t)dt - \int_{\frac{1}{2}}^1 x(t)dt \right| \le \int_0^{\frac{1}{2}} |x(t)|dt + \int_{\frac{1}{2}}^1 |x(t)|dt = \int_0^1 |x(t)|dt $$
-    由于 <span class="arithmatex">\(\int_0^1 |x(t)|dt \le \max_{t\in[0,1]} |x(t)| \cdot (1-0) = \|x\|_\infty\)</span>，
-    所以 <span class="arithmatex">\(|f(x)| \le \|x\|_\infty\)</span>。
-    由此可知 <span class="arithmatex">\(f\)</span> 是有界线性泛函，因此 <span class="arithmatex">\(f\)</span> 是连续的，且 <span class="arithmatex">\(\|f\| \le 1\)</span>。</p>
+    对任意 <span class="arithmatex">\(x \in C[0, 1]\)</span>，有</p>
+<div class="arithmatex">\[ |f(x)| = \left| \int_0^{\frac{1}{2}} x(t)dt - \int_{\frac{1}{2}}^1 x(t)dt \right| \le \int_0^{\frac{1}{2}} |x(t)|dt + \int_{\frac{1}{2}}^1 |x(t)|dt = \int_0^1 |x(t)|dt \]</div>
+<p>由于 <span class="arithmatex">\(\int_0^1 |x(t)|dt \le \max_{t\in[0,1]} |x(t)| \cdot (1-0) = \|x\|_\infty\)</span>，
+所以 <span class="arithmatex">\(|f(x)| \le \|x\|_\infty\)</span>。
+由此可知 <span class="arithmatex">\(f\)</span> 是有界线性泛函，因此 <span class="arithmatex">\(f\)</span> 是连续的，且 <span class="arithmatex">\(\|f\| \le 1\)</span>。</p>
 </li>
 <li>
 <p><strong>求 <span class="arithmatex">\(\|f\|\)</span>：</strong>
-    考虑函数 <span class="arithmatex">\(y(t)\)</span>：
-    $$ y(t) = \begin{cases} 1, &amp; t \in [0, \frac{1}{2}) \ -1, &amp; t \in (\frac{1}{2}, 1] \end{cases} $$
-    虽然 <span class="arithmatex">\(y(t) \notin C[0, 1]\)</span>，但我们可以构造连续函数序列逼近它。
-    对任意 <span class="arithmatex">\(n \ge 3\)</span>，构造连续函数 <span class="arithmatex">\(x_n(t) \in C[0, 1]\)</span> 如下：
-    $$ x_n(t) = \begin{cases} 1, &amp; 0 \le t \le \frac{1}{2} - \frac{1}{n} \ -n(t - \frac{1}{2}), &amp; \frac{1}{2} - \frac{1}{n} &lt; t &lt; \frac{1}{2} + \frac{1}{n} \ -1, &amp; \frac{1}{2} + \frac{1}{n} \le t \le 1 \end{cases} $$
-    显然 <span class="arithmatex">\(\|x_n\|_\infty = 1\)</span>。
-    计算 <span class="arithmatex">\(f(x_n)\)</span>：
-    $$ f(x_n) = \int_0^{\frac{1}{2}} x_n(t)dt - \int_{\frac{1}{2}}^1 x_n(t)dt $$
-    $$ = \left( \int_0^{\frac{1}{2}-\frac{1}{n}} 1 dt + \int_{\frac{1}{2}-\frac{1}{n}}^{\frac{1}{2}} x_n(t) dt \right) - \left( \int_{\frac{1}{2}}^{\frac{1}{2}+\frac{1}{n}} x_n(t) dt + \int_{\frac{1}{2}+\frac{1}{n}}^1 (-1) dt \right) $$
-    注意到中间两个积分区间长度为 <span class="arithmatex">\(1/n\)</span>，被积函数绝对值不超过 1，故这两项绝对值之和小于 <span class="arithmatex">\(2/n\)</span>。
-    主要部分为：
-    $$ (\frac{1}{2} - \frac{1}{n}) - (- (\frac{1}{2} - \frac{1}{n})) = 1 - \frac{2}{n} $$
-    当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(f(x_n) \to 1\)</span>。
-    因为 <span class="arithmatex">\(\|f\| = \sup_{\|x\|\le 1} |f(x)|\)</span>，且我们找到了序列使得 <span class="arithmatex">\(f(x_n) \to 1\)</span>，结合之前证明的 <span class="arithmatex">\(\|f\| \le 1\)</span>，
-    可得 <span class="arithmatex">\(\|f\| = 1\)</span>。</p>
+    考虑函数 <span class="arithmatex">\(y(t)\)</span>：</p>
+<div class="arithmatex">\[ y(t) = \begin{cases} 1, &amp; t \in [0, \frac{1}{2}) \\ -1, &amp; t \in (\frac{1}{2}, 1] \end{cases} \]</div>
+<p>虽然 <span class="arithmatex">\(y(t) \notin C[0, 1]\)</span>，但我们可以构造连续函数序列逼近它。
+对任意 <span class="arithmatex">\(n \ge 3\)</span>，构造连续函数 <span class="arithmatex">\(x_n(t) \in C[0, 1]\)</span> 如下：</p>
+<div class="arithmatex">\[ x_n(t) = \begin{cases} 1, &amp; 0 \le t \le \frac{1}{2} - \frac{1}{n} \\ -n(t - \frac{1}{2}), &amp; \frac{1}{2} - \frac{1}{n} &lt; t &lt; \frac{1}{2} + \frac{1}{n} \\ -1, &amp; \frac{1}{2} + \frac{1}{n} \le t \le 1 \end{cases} \]</div>
+<p>显然 <span class="arithmatex">\(\|x_n\|_\infty = 1\)</span>。
+计算 <span class="arithmatex">\(f(x_n)\)</span>：</p>
+<div class="arithmatex">\[ f(x_n) = \int_0^{\frac{1}{2}} x_n(t)dt - \int_{\frac{1}{2}}^1 x_n(t)dt \]</div>
+<div class="arithmatex">\[ = \left( \int_0^{\frac{1}{2}-\frac{1}{n}} 1 dt + \int_{\frac{1}{2}-\frac{1}{n}}^{\frac{1}{2}} x_n(t) dt \right) - \left( \int_{\frac{1}{2}}^{\frac{1}{2}+\frac{1}{n}} x_n(t) dt + \int_{\frac{1}{2}+\frac{1}{n}}^1 (-1) dt \right) \]</div>
+<p>注意到中间两个积分区间长度为 <span class="arithmatex">\(1/n\)</span>，被积函数绝对值不超过 1，故这两项绝对值之和小于 <span class="arithmatex">\(2/n\)</span>。
+主要部分为：</p>
+<div class="arithmatex">\[ (\frac{1}{2} - \frac{1}{n}) - (- (\frac{1}{2} - \frac{1}{n})) = 1 - \frac{2}{n} \]</div>
+<p>当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(f(x_n) \to 1\)</span>。
+因为 <span class="arithmatex">\(\|f\| = \sup_{\|x\|\le 1} |f(x)|\)</span>，且我们找到了序列使得 <span class="arithmatex">\(f(x_n) \to 1\)</span>，结合之前证明的 <span class="arithmatex">\(\|f\| \le 1\)</span>，
+可得 <span class="arithmatex">\(\|f\| = 1\)</span>。</p>
 </li>
 </ol>
 <div class="admonition question">
@@ -1814,34 +1814,36 @@ $$ d(x, y) \le d(x, z) + d(z, y) &lt; \frac{r}{2} + \frac{r}{2} = r $$</p>
 1.  由于 <span class="arithmatex">\(X\)</span> 是可分的，其单位球面 <span class="arithmatex">\(S_X = \{x \in X : \|x\| = 1\}\)</span> 也是可分的（或者取全空间的稠密子集投影到球面上）。设 <span class="arithmatex">\(\{x_n\}_{n=1}^\infty\)</span> 是 <span class="arithmatex">\(S_X\)</span> 中的可数稠密子集。</p>
 <ol>
 <li>
-<p>根据 Hahn-Banach 定理的一个推论，对于每一个 <span class="arithmatex">\(x_n\)</span>，存在 <span class="arithmatex">\(f_n \in X^\star\)</span> 满足：
-    $$ |f_n| = 1 \quad \text{且} \quad f_n(x_n) = |x_n| = 1 $$
-    令 <span class="arithmatex">\(\Phi = \{f_n\}_{n=1}^\infty\)</span>。显然 <span class="arithmatex">\(\Phi\)</span> 是 <span class="arithmatex">\(X^\star\)</span> 的可数子集。</p>
+<p>根据 Hahn-Banach 定理的一个推论，对于每一个 <span class="arithmatex">\(x_n\)</span>，存在 <span class="arithmatex">\(f_n \in X^\star\)</span> 满足：</p>
+<div class="arithmatex">\[ \|f_n\| = 1 \quad \text{且} \quad f_n(x_n) = \|x_n\| = 1 \]</div>
+<p>令 <span class="arithmatex">\(\Phi = \{f_n\}_{n=1}^\infty\)</span>。显然 <span class="arithmatex">\(\Phi\)</span> 是 <span class="arithmatex">\(X^\star\)</span> 的可数子集。</p>
 </li>
 <li>
 <p>下面证明对于任意 <span class="arithmatex">\(x \in X\)</span>，有 <span class="arithmatex">\(\|x\| = \sup_{f \in \Phi} |f(x)|\)</span>。</p>
 <ul>
 <li><strong>不等号 <span class="arithmatex">\(\ge\)</span></strong>：由于对于任意 <span class="arithmatex">\(f \in \Phi\)</span>, <span class="arithmatex">\(\|f\|=1\)</span>，所以 <span class="arithmatex">\(|f(x)| \le \|f\|\|x\| = \|x\|\)</span>。因此 <span class="arithmatex">\(\sup_{f \in \Phi} |f(x)| \le \|x\|\)</span>。</li>
-<li><strong>不等号 <span class="arithmatex">\(\le\)</span></strong>：
+<li>
+<p><strong>不等号 <span class="arithmatex">\(\le\)</span></strong>：
     若 <span class="arithmatex">\(x = 0\)</span>，显然成立。
     若 <span class="arithmatex">\(x \neq 0\)</span>，令 <span class="arithmatex">\(u = \frac{x}{\|x\|} \in S_X\)</span>。
     对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，由于 <span class="arithmatex">\(\{x_n\}\)</span> 在 <span class="arithmatex">\(S_X\)</span> 中稠密，存在 <span class="arithmatex">\(x_k\)</span> 使得 <span class="arithmatex">\(\|u - x_k\| &lt; \epsilon\)</span>。
-    考察对应于 <span class="arithmatex">\(x_k\)</span> 的泛函 <span class="arithmatex">\(f_k \in \Phi\)</span>：
-    $$ f_k(u) = f_k(x_k) + f_k(u - x_k) = 1 + f_k(u - x_k) $$
-    $$ |f_k(u)| \ge 1 - |f_k(u - x_k)| \ge 1 - |f_k| |u - x_k| &gt; 1 - \epsilon $$
-    所以 <span class="arithmatex">\(\sup_{f \in \Phi} |f(u)| \ge 1\)</span>。
-    代回 <span class="arithmatex">\(x = \|x\|u\)</span>，有：
-    $$ \sup_{f \in \Phi} |f(x)| = |x| \sup_{f \in \Phi} |f(u)| \ge |x| (1 - \epsilon) $$
-    由于 <span class="arithmatex">\(\epsilon\)</span> 的任意性，得 <span class="arithmatex">\(\sup_{f \in \Phi} |f(x)| \ge \|x\|\)</span>。</li>
+    考察对应于 <span class="arithmatex">\(x_k\)</span> 的泛函 <span class="arithmatex">\(f_k \in \Phi\)</span>：</p>
+<div class="arithmatex">\[ f_k(u) = f_k(x_k) + f_k(u - x_k) = 1 + f_k(u - x_k) \]</div>
+<div class="arithmatex">\[ |f_k(u)| \ge 1 - |f_k(u - x_k)| \ge 1 - \|f_k\| \|u - x_k\| &gt; 1 - \epsilon \]</div>
+<p>所以 <span class="arithmatex">\(\sup_{f \in \Phi} |f(u)| \ge 1\)</span>。
+代回 <span class="arithmatex">\(x = \|x\|u\)</span>，有：</p>
+<div class="arithmatex">\[ \sup_{f \in \Phi} |f(x)| = \|x\| \sup_{f \in \Phi} |f(u)| \ge \|x\| (1 - \epsilon) \]</div>
+<p>由于 <span class="arithmatex">\(\epsilon\)</span> 的任意性，得 <span class="arithmatex">\(\sup_{f \in \Phi} |f(x)| \ge \|x\|\)</span>。</p>
+</li>
 </ul>
 <p>综上所述，<span class="arithmatex">\(\|x\| = \sup_{f \in \Phi} |f(x)|\)</span>。</p>
 </li>
 </ol>
 <div class="admonition question">
 <p class="admonition-title">(5)</p>
-<p><strong>五. （15 分）</strong> 设 <span class="arithmatex">\(S\)</span> 是 <span class="arithmatex">\(l^2 \to l^2\)</span> 上的线性算子，且满足<br />
-$$ Sx(k) = x(k+2) \quad k = 1, 2, \cdots \quad {x(k)} \in l^2. $$<br />
-试求 <span class="arithmatex">\(\lim\limits_{n\to\infty} \|S^n\|\)</span>。</p>
+<p><strong>五. （15 分）</strong> 设 <span class="arithmatex">\(S\)</span> 是 <span class="arithmatex">\(l^2 \to l^2\)</span> 上的线性算子，且满足</p>
+<div class="arithmatex">\[ Sx(k) = x(k+2) \quad k = 1, 2, \cdots \quad \{x(k)\} \in l^2. \]</div>
+<p>试求 <span class="arithmatex">\(\lim\limits_{n\to\infty} \|S^n\|\)</span>。</p>
 <p>考察算子范数的计算，特别是移位算子的性质。</p>
 </div>
 <p><code>Proof.</code></p>
@@ -1871,17 +1873,19 @@ $$ Sx(k) = x(k+2) \quad k = 1, 2, \cdots \quad {x(k)} \in l^2. $$<br />
 <li><strong>构造线段</strong>：
     考虑一条穿过 <span class="arithmatex">\(x_0\)</span> 的线段：<span class="arithmatex">\(L = \{ x_0 + t z : t \in (-1, 1) \}\)</span>。
     因为 <span class="arithmatex">\(\|z\| &lt; r\)</span>，当 <span class="arithmatex">\(t\)</span> 在 <span class="arithmatex">\((-1, 1)\)</span> 之间变动时，这点 <span class="arithmatex">\(x_0 + tz\)</span> 肯定没跑出球 <span class="arithmatex">\(B(x_0, r)\)</span> 的范围，也就肯定在 <span class="arithmatex">\(U\)</span> 里面。</li>
-<li><strong>看像的形状</strong>：
-    把这条线段映射过去：
-    $$ f(x_0 + tz) = f(x_0) + t \cdot f(z) = y_0 + t \cdot C $$
-    其中 <span class="arithmatex">\(C = f(z)\)</span> 是一个非零常数。当 <span class="arithmatex">\(t\)</span> 从 <span class="arithmatex">\(-1\)</span> 扫到 <span class="arithmatex">\(1\)</span> 时，这一项 <span class="arithmatex">\(t \cdot C\)</span> 就覆盖了一个以 <span class="arithmatex">\(0\)</span> 为中心的开区间 <span class="arithmatex">\((-|C|, |C|)\)</span>。所以，像 <span class="arithmatex">\(f(L)\)</span> 就覆盖了以 <span class="arithmatex">\(y_0\)</span> 为中心的开区间 <span class="arithmatex">\((y_0 - |C|, y_0 + |C|)\)</span>。</li>
-<li><strong>结论</strong>：
-    因为线性泛函的像集要么是0要么是全集，所以<span class="arithmatex">\(f(U)=\mathbb{R}\)</span>，肯定包含这个开区间。所以 <span class="arithmatex">\(y_0\)</span> 是内点，<span class="arithmatex">\(f(U)\)</span> 是开集。</li>
+<li>
+<p><strong>看像的形状</strong>：
+    把这条线段映射过去：</p>
+<div class="arithmatex">\[ f(x_0 + tz) = f(x_0) + t \cdot f(z) = y_0 + t \cdot C \]</div>
+<p>其中 <span class="arithmatex">\(C = f(z)\)</span> 是一个非零常数。当 <span class="arithmatex">\(t\)</span> 从 <span class="arithmatex">\(-1\)</span> 扫到 <span class="arithmatex">\(1\)</span> 时，这一项 <span class="arithmatex">\(t \cdot C\)</span> 就覆盖了一个以 <span class="arithmatex">\(0\)</span> 为中心的开区间 <span class="arithmatex">\((-|C|, |C|)\)</span>。所以，像 <span class="arithmatex">\(f(L)\)</span> 就覆盖了以 <span class="arithmatex">\(y_0\)</span> 为中心的开区间 <span class="arithmatex">\((y_0 - |C|, y_0 + |C|)\)</span>。
+6.  <strong>结论</strong>：
+因为线性泛函的像集要么是0要么是全集，所以<span class="arithmatex">\(f(U)=\mathbb{R}\)</span>，肯定包含这个开区间。所以 <span class="arithmatex">\(y_0\)</span> 是内点，<span class="arithmatex">\(f(U)\)</span> 是开集。</p>
+</li>
 </ol>
 <div class="admonition question">
 <p class="admonition-title">(7)</p>
-<p><strong>七. （10 分）</strong> 设 <span class="arithmatex">\(H\)</span> 是 Hilbert 空间，<span class="arithmatex">\(H_0\)</span> 是 <span class="arithmatex">\(H\)</span> 的闭子空间，设 <span class="arithmatex">\(x_0 \in H\)</span>, 证明：<br />
-$$ \inf_{x\in H_0} |x - x_0| = \max_{y\in H_0^\perp, |y|=1} |(x_0, y)|. $$</p>
+<p><strong>七. （10 分）</strong> 设 <span class="arithmatex">\(H\)</span> 是 Hilbert 空间，<span class="arithmatex">\(H_0\)</span> 是 <span class="arithmatex">\(H\)</span> 的闭子空间，设 <span class="arithmatex">\(x_0 \in H\)</span>, 证明：</p>
+<div class="arithmatex">\[ \inf_{x\in H_0} \|x - x_0\| = \max_{y\in H_0^\perp, \|y\|=1} |(x_0, y)|. \]</div>
 <p>考察 Hilbert 空间中的最佳逼近与正交补的对偶关系。只需要使用正交分解定理即可得到，不会做的直接拉出去毙了</p>
 </div>
 <p><code>Proof.</code></p>
@@ -1892,8 +1896,8 @@ $$ \inf_{x\in H_0} |x - x_0| = \max_{y\in H_0^\perp, |y|=1} |(x_0, y)|. $$</p>
 <p><strong>左边（最佳逼近）：</strong>
     由 Hilbert 空间的正交投影定理，对于 <span class="arithmatex">\(x_0 \in H\)</span> 和闭子空间 <span class="arithmatex">\(H_0\)</span>，存在唯一的分解：</p>
 <div class="arithmatex">\[ x_0 = u + v, \quad u \in H_0, \, v \in H_0^\perp \]</div>
-<p>此时，<span class="arithmatex">\(u = P_{H_0}x_0\)</span> 是 <span class="arithmatex">\(x_0\)</span> 在 <span class="arithmatex">\(H_0\)</span> 上的正交投影。<span class="arithmatex">\(x_0\)</span> 到 <span class="arithmatex">\(H_0\)</span> 的距离为：
-$$ \inf_{x \in H_0} |x - x_0| = |x_0 - u| = |v| $$</p>
+<p>此时，<span class="arithmatex">\(u = P_{H_0}x_0\)</span> 是 <span class="arithmatex">\(x_0\)</span> 在 <span class="arithmatex">\(H_0\)</span> 上的正交投影。<span class="arithmatex">\(x_0\)</span> 到 <span class="arithmatex">\(H_0\)</span> 的距离为：</p>
+<div class="arithmatex">\[ \inf_{x \in H_0} \|x - x_0\| = \|x_0 - u\| = \|v\| \]</div>
 </li>
 <li>
 <p><strong>右边（对偶公式）：</strong>
@@ -1905,16 +1909,18 @@ $$ \inf_{x \in H_0} |x - x_0| = |x_0 - u| = |v| $$</p>
 <p>我们需要证明最大值可以取到 <span class="arithmatex">\(\|v\|\)</span>。</p>
 <ul>
 <li>若 <span class="arithmatex">\(v = 0\)</span>，则等式两边均为 0，成立。</li>
-<li>若 <span class="arithmatex">\(v \neq 0\)</span>，取 <span class="arithmatex">\(y^* = \frac{v}{\|v\|}\)</span>。
+<li>
+<p>若 <span class="arithmatex">\(v \neq 0\)</span>，取 <span class="arithmatex">\(y^* = \frac{v}{\|v\|}\)</span>。
     显然 <span class="arithmatex">\(y^* \in H_0^\perp\)</span>（因为 <span class="arithmatex">\(v \in H_0^\perp\)</span> 且 <span class="arithmatex">\(H_0^\perp\)</span> 是线性子空间），且 <span class="arithmatex">\(\|y^*\| = 1\)</span>。
-    代入计算：
-    $$ |(x_0, y^*)| = |(v, \frac{v}{|v|})| = \frac{(v, v)}{|v|} = \frac{|v|^2}{|v|} = |v| $$
-因此，最大值确实存在且等于 <span class="arithmatex">\(\|v\|\)</span>。</li>
+    代入计算：</p>
+<div class="arithmatex">\[ |(x_0, y^*)| = |(v, \frac{v}{\|v\|})| = \frac{(v, v)}{\|v\|} = \frac{\|v\|^2}{\|v\|} = \|v\| \]</div>
+</li>
 </ul>
+<p>因此，最大值确实存在且等于 <span class="arithmatex">\(\|v\|\)</span>。</p>
 </li>
 <li>
-<p><strong>结论：</strong>
-    $$ \inf_{x\in H_0} |x - x_0| = |v| = \max_{y\in H_0^\perp, |y|=1} |(x_0, y)| $$</p>
+<p><strong>结论：</strong></p>
+<div class="arithmatex">\[ \inf_{x\in H_0} \|x - x_0\| = \|v\| = \max_{y\in H_0^\perp, \|y\|=1} |(x_0, y)| \]</div>
 </li>
 </ol>
 

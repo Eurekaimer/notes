@@ -269,7 +269,6 @@
 *   **相关性低**: 特征与分类问题无关。
 *   **病态矩阵**: 特征过多且样本有限时，计算逆矩阵或参数估计时容易出现数值不稳定（病态矩阵问题）。
 
-
 ## Lecture3 - 降维与概念学习 (Dimensionality Reduction & Concept Learning)
 
 ### 1. 降维技术概述
@@ -388,12 +387,13 @@
 #### 5.2 没有免费的午餐定理 (NFL)
 
 *   **内容**: 如果对所有可能的问题（所有可能的分布）求平均，所有学习算法（包括随机猜测）的期望性能是相同的。
+
 *   $$ \sum_f E_{ote}(\mathcal{L}_a | X, f) = \sum_f E_{ote}(\mathcal{L}_b | X, f) $$
+
 *   **启示**:
     *   不存在“万能”的最佳算法。
     *   算法的优劣取决于其**归纳偏置**是否与**具体问题**的特征相匹配。
     *   研究机器学习必须关注具体的问题背景。
-
 
 ## Lecture4 - 机器学习基础与图像特征 (Machine Learning Basics & Image Features)
 
@@ -524,6 +524,7 @@
 ### 4. 偏差-方差分解 (Bias-Variance Decomposition)
 
 泛化误差可以分解为三部分：
+
 $$ E(f; D) = \text{Bias}^2 + \text{Variance} + \text{Noise} $$
 
 *   **偏差 (Bias)**: 学习算法的期望预测与真实结果的偏离程度。度量了算法的**拟合能力**。
@@ -536,7 +537,6 @@ $$ E(f; D) = \text{Bias}^2 + \text{Variance} + \text{Noise} $$
 *   **增加模型复杂度**（如增加多项式阶数）：偏差减小，方差增大（易过拟合）。
 *   **降低模型复杂度**（如正则化）：偏差增大，方差减小（易欠拟合）。
 
-
 ## Lecture6 - 线性分类器与优化准则 (Linear Classifiers and Optimization Criteria)
 
 ### 1. 线性分类器基础 (Linear Classifier Basics)
@@ -544,7 +544,9 @@ $$ E(f; D) = \text{Bias}^2 + \text{Variance} + \text{Noise} $$
 #### 1.1 基本概念
 *   **定义**: 通过一个线性判别函数（直线、平面或超平面）将特征空间一分为二的分类器。
 *   **判别函数**:
+
     $$ g(x) = w^T x + w_0 $$
+
     其中 $w$ 为权向量，$w_0$ 为阈值（或偏置）。
 *   **决策规则**:
     *   若 $g(x) > 0$，判为正类 ($\omega_1$)。
@@ -647,6 +649,7 @@ $$ a(k+1) = a(k) + \rho_k \sum_{y \in Y_{error}} y $$
 
 #### 2.1 决策规则
 目标是使分类错误的概率最小化。
+
 *   **规则**: 将样本 $x$ 分配给**后验概率最大**的类别。
 
     $$ \text{Decide } \omega_i \text{ if } P(\omega_i | x) > P(\omega_j | x), \forall j \neq i $$
@@ -670,6 +673,7 @@ $$ a(k+1) = a(k) + \rho_k \sum_{y \in Y_{error}} y $$
 
 *   **损失函数 $\lambda(\alpha_i, \omega_j)$**: 真实类别为 $\omega_j$ 但决策为 $\alpha_i$ 时的代价。
 *   **条件风险 $R(\alpha_i | x)$**: 对于特定样本 $x$，采取决策 $\alpha_i$ 的期望损失。
+
     $$ R(\alpha_i | x) = \sum_{j=1}^C \lambda(\alpha_i, \omega_j) P(\omega_j | x) $$
 
 #### 3.3 决策规则
@@ -697,7 +701,6 @@ $$ a(k+1) = a(k) + \rho_k \sum_{y \in Y_{error}} y $$
 当类条件概率密度 $p(x | \omega_i)$ 服从多维正态分布 $N(\mu_i, \Sigma_i)$ 时，判别函数可以写成二次型形式：
 
 $$ g_i(x) = -\frac{1}{2}(x - \mu_i)^T \Sigma_i^{-1} (x - \mu_i) - \frac{1}{2} \ln |\Sigma_i| + \ln P(\omega_i) $$
-
 
 #### 特殊情况下的决策面
 

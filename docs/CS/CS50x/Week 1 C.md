@@ -7,11 +7,9 @@ tags:
 
 # Week 1 C
 
-
 ## Syllabus
 
 >C. Source Code. Machine Code. Compiler. Correctness, Design, Style. Visual Studio Code. Syntax Highlighting. Escape Sequences. Header Files. Libraries. Manual Pages. Types. Conditionals. Variables. Loops. Linux. Graphical User Interface (GUI). Command-Line Interface (CLI). Constants. Comments. Pseudocode. Operators. Integer Overflow. Floating-Point Imprecision.
-
 
 ## Notes
 
@@ -26,7 +24,6 @@ int main(void) //void -no input
 }
 ```
 
-
 The computer can onlrecy ognize the binary numbers so we need a compiler（编译器）to make the higher level language to a lower level language.
 
 ![[compiler.svg]]
@@ -34,7 +31,6 @@ The computer can onlrecy ognize the binary numbers so we need a compiler（编�
 use a cloud(best) [URL](https://cs50.dev) or you can use VS code in your computer
 
 Some words you should know: GUI CLI
-
 
 ### Hello world
 
@@ -47,7 +43,6 @@ int main(void)
 	printf("hello world\n")
 }
 ```
-
 
 Some little concepts:
 
@@ -70,7 +65,6 @@ and get the
 hello world$(\n)
 ```
 
-
 ### Library(Header Files)
 
 We can use the code others write before via library and for example we can find the stdio.h
@@ -80,7 +74,6 @@ We can use the code others write before via library and for example we can find 
 printf("hello, %s\n", answer)
 // %s means a place holder
 ```
-
 
 Case 1
 
@@ -125,7 +118,6 @@ In the terminal window, some common command-line arguments we may use include:
 - `rm`, for removing (deleting) files
 - `rmdir`, for removing (deleting) directories
 
-
 ### Types of the variablews
 
 Types with which you might interact during this course include:
@@ -160,7 +152,6 @@ else
     printf("x is equal to y\n");
 }
 ```
-
 
 But not make the three ifs because it will waste the time.
 
@@ -267,7 +258,6 @@ int main(void)
 - This can have catastrophic, real-world impacts.
 - We can correct this by using a data type called `long`.
 
-
 ```c
 // long
 
@@ -292,7 +282,6 @@ int main(void)
     printf("Here's $%li.\n", dollars);
 }
 ```
-
 
 ### Truncation
 
@@ -351,9 +340,7 @@ int main(void)
 - How to integrate comments into your code.
 - How to utilize types and operators and the implications of your choices.
 
-
 ## Problem Set 1
-
 
 ### [Hello, It’s Me](https://cs50.harvard.edu/x/2025/psets/1/me/)
 
@@ -367,8 +354,6 @@ int main(void)
     printf("hello, %s\n",name);
 }
 ```
-
-
 
 ### [Mario-more](https://cs50.harvard.edu/x/2025/psets/1/mario/more/),
 
@@ -406,10 +391,7 @@ int main(void)
 }
 ```
 
-
-
 ### [Cash](https://cs50.harvard.edu/x/2025/psets/1/cash/),
-
 
 ```c
 #include <cs50.h>
@@ -442,7 +424,6 @@ int main(void)
 
 }
 ```
-
 
 ### [Credit](https://cs50.harvard.edu/x/2025/psets/1/credit/),
 

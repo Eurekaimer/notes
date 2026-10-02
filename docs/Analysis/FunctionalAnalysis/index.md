@@ -10,7 +10,6 @@
     考试难度：⭐⭐  
     修读时间：25 Fall
 
-
 !!! tip "Major and foundational results"
     four pillars of functional analysis:
     + the Hahn-Banach theorem
@@ -28,12 +27,9 @@
 	+ Peter Lax
 	+ 张恭庆 泛函分析讲义（上）
 
-
 ## Lecture Contents
 
-
 ### Part 1 Basic Theory
-
 
 [Functional_Analysis-Preliminaries(Lecture)](Functional_Analysis-Preliminaries(Lecture).md)
 

@@ -9,19 +9,15 @@ title: Week 0 Scratch
 
 >Computer Science. Computational Thinking. Problem Solving: Inputs, Outputs. Representation: Unary, Binary, Decimal, ASCII, Unicode, RGB. Abstraction. Algorithms. Running Times. Pseudocode. Scratch: Functions, Arguments, Return Values; Variables; Boolean Expressions, Conditionals; Loops; Events; Threads.
 
-
 ## Notes
 
 ### Binary
 
-
 >Computer is a base-2 system we can use 0 and 1 to represent all of it.
-
 
 Case: use the hand to count the number by control the finger up and down, how many can you count?
 
 The answer is 31 if you start with the 0(we have $2^{5}$ outcomes)
-
 
 #### bit
 
@@ -40,13 +36,10 @@ And we can use this method to understand the bulbs' light and more far from it i
 More often used than bit is byte, what is byte?
 A byte is 8 bit(or 8 bulbs) it can represent the 255.
 
-
 ### ASCII
-
 
 So how can we use them denote the number A?
 Assign every letter a number -for some reasons the A strats with 65(64+1).
-
 
 ### Unicode
 
@@ -54,7 +47,6 @@ Unicode code point U+1F602
 
 Remark:
 The U+ is a conventional mark for unicode in computer science.
-
 
 ### Color
 
@@ -79,7 +71,6 @@ Case: Find John Harvard in the book and take three algorithms.
 We can solve the problem correctly and more efficiently as well.
 
 One graph can draw the efficientcy.
-
 
 ```text
 Pick up phone book
@@ -109,7 +100,6 @@ If use simple input the binary question each an answer, it will be difficult.
 
 Large language models(LLMs)
 
-
 ```c
 #include<stdio.h>
 
@@ -119,7 +109,6 @@ int main(void)
 }
 ```
 
-
 ### Scratch
 
 Through dragging and dropping some puzzles to make a program.
@@ -127,7 +116,6 @@ Through dragging and dropping some puzzles to make a program.
 Very interesting parts.
 
 Ivy's Hardest Game --So difficult!(Can it passed?)
-
 
 ## Summing up
 
@@ -145,7 +133,6 @@ In this lesson, you learned how this course sits in the wide world of computer s
 - How to build a project in Scratch.
 
 This was CS50! Welcome aboard! See you next time!
-
 
 ## Problem Set 0
 

@@ -1,19 +1,16 @@
 #统计与大数据软件
 # Py-Lecture-1 基本操作
 
-
 !!! tldr "Goal"
     + 基本语法
     + 数据类型
     + 数据结构
-
 
 ## 基本语法
 
 ### 输出与表达式
 
 #### print function
-
 
 ```python
 # 输出字符串
@@ -26,86 +23,48 @@ print("Hello, " + name)
     Hello Python world!
     Hello, Alice
 
-
 #### 运算
-
 
 ```python
 a = 10 
 b = 5
 ```
 
-
 ```python
 a + b
 ```
 
-
-
-
     15
-
-
-
 
 ```python
 a - b
 ```
 
-
-
-
     5
-
-
-
 
 ```python
 a * b
 ```
 
-
-
-
     50
-
-
-
 
 ```python
 a / b
 ```
 
-
-
-
     2.0
-
-
-
 
 ```python
 a ** b
 ```
 
-
-
-
     100000
-
-
-
 
 ```python
 a //b
 ```
 
-
-
-
     2
-
-
 
 ### 变量与赋值
 
@@ -121,7 +80,6 @@ a //b
 
 无需声明类型，直接赋值
 
-
 ```python
 # 整数
 a = 5        
@@ -134,13 +92,11 @@ print(a)
     5
     string
 
-
 ### 字符串 (str)
 
 #### 定义方式
 
 单引号、双引号或三引号包裹，支持多行字符串：
-
 
 ```python
 str1 = '单引号字符串'
@@ -162,13 +118,10 @@ print(str3)
     多行字符串
     支持换行
 
-
-
 #### 常用操作
 
 name = "ada lovelace"
 print(name.title())
-
 
 ```python
 print(name.upper())
@@ -177,8 +130,6 @@ print(name.lower())
 
     ALICE
     alice
-
-
 
 ```python
 # 利用\n换行
@@ -190,8 +141,6 @@ print("Languages:\n\tPython\n\tC\n\tJavaScript")
     	C
     	JavaScript
 
-
-
 ```python
 # 原生字符串
 print(r"Languages:\n\tPython\n\tC\n\tJavaScript") 
@@ -199,9 +148,7 @@ print(r"Languages:\n\tPython\n\tC\n\tJavaScript")
 
     Languages:\n\tPython\n\tC\n\tJavaScript
 
-
 #### 字符串拼接
-
 
 ```python
 first_name = "ada"
@@ -212,49 +159,30 @@ print(full_name)
 
     ada lovelace
 
-
 #### 索引与切片
 
 可以将 string 类型视作是一个列表，根据 list 数据类型进行索引
-
 
 ```python
 first_name[0]
 ```
 
-
-
-
     'a'
 
-
-
 然后是切片 (Slicing) 操作
-
 
 ```python
 first_name[0:2] 
 ```
 
-
-
-
     'ad'
-
-
-
 
 ```python
 # 间隔切片
 full_name[::2] 
 ```
 
-
-
-
     'aalvlc'
-
-
 
 在 Python 中，切片（Slicing）是一种强大的序列操作，可用于提取或修改列表、元组、字符串等有序序列的部分元素。以下是切片操作的详细解析（个人总结）：
 
@@ -266,7 +194,6 @@ sequence[start:stop:step]
 + step：步长（默认为 1，可为负数，表示反向切片）
 
 正向切片（step 为正数）
-
 
 ```python
 # 截取部分元素
@@ -300,9 +227,7 @@ print(lst[1::2])  # 输出: [20, 40]（从索引1开始，每隔一个取一个�
     [10, 30, 50]
     [20, 40]
 
-
 反向切片（step 为负数）
-
 
 ```python
 # 反转序列
@@ -315,9 +240,7 @@ print(lst[::-2])
     [50, 40, 30, 20, 10]
     [50, 30, 10]
 
-
 切片赋值（仅适用于可变序列）
-
 
 ```python
 # 可通过切片修改列表的部分元素：
@@ -336,9 +259,7 @@ print(lst)  # 输出: [10, 150, 170, 200, 50]
     [10, 200, 50]
     [10, 150, 170, 200, 50]
 
-
 字符串切片（字符串也支持切片，常用于提取子串）
-
 
 ```python
 s = "HelloWorld"
@@ -350,7 +271,6 @@ print(s[1:7:2])  # 输出: "elW"（从索引1到6，步长2）
     llo
     dlroWolleH
     elW
-
 
 切片操作是 Python 中最灵活的序列处理工具之一，通过合理组合 start、stop 和 step，可以高效完成元素提取、序列反转、子串截取等常见任务。熟练掌握切片能显著提升代码的简洁性和可读性。
 
@@ -367,7 +287,6 @@ print(s[1:7:2])  # 输出: "elW"（从索引1到6，步长2）
 + 整数（int）：如 5、-10，支持无限精度。
 + 浮点数（float）：如 4.5、3.14，注意浮点运算精度问题（如 3*0.2=0.6000000000000001）。
 
-
 ```python
 pi = 3.14159
 int(pi)   # → 3（向下取整）
@@ -383,21 +302,16 @@ str(pi)   # → "3.14159"（转为字符串）
 
     '3.14159'
 
-
-
-
 ```python
 print(pi)
 ```
 
     3.14159
 
-
 ### 布尔值 (bool)
 
 1. 取值：True（真）和 False（假），首字母必须大写。
 2. 用途：条件判断、循环控制，如：
-
 
 ```python
 a = True
@@ -406,7 +320,6 @@ if a:
 ```
 
     条件为真
-
 
 ## 数据结构
 
@@ -421,11 +334,9 @@ Python 的基本数据结构包括：列表（list），元组（tuple），字�
 
 可变序列，列表由一系列按特定顺序排列的元素组成，类似于 C++中的数组，由方括号包裹，元素可重复、可修改，支持混合类型，并且支持切片操作：
 
-
 ```python
 mylist = ['a', 3, 'string', 4.5]
 ```
-
 
 ```python
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
@@ -433,7 +344,6 @@ print(bicycles[0]) #下标从0开始
 ```
 
     trek
-
 
 常用操作有：
 
@@ -447,7 +357,6 @@ print(bicycles[0]) #下标从0开始
 
 主要有两种方法 (method)：append、insert
 
-
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
 motorcycles.append('ducati')
@@ -455,8 +364,6 @@ print(motorcycles)
 ```
 
     ['honda', 'yamaha', 'suzuki', 'ducati']
-
-
 
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
@@ -466,11 +373,9 @@ print(motorcycles)
 
     ['honda', 'ducati', 'yamaha', 'suzuki']
 
-
 #### 删除元素
 
 主要有三种方法：del、pop、remove
-
 
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
@@ -480,8 +385,6 @@ print(motorcycles)
 
     ['yamaha', 'suzuki']
 
-
-
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
 motorcycles.pop(0)
@@ -490,9 +393,7 @@ print(motorcycles)
 
     ['yamaha', 'suzuki']
 
-
 注意 pop 方法默认删除的是最后一个
-
 
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
@@ -502,8 +403,6 @@ print(motorcycles)
 
     ['honda', 'yamaha']
 
-
-
 ```python
 motorcycles = ['honda', 'yamaha', 'suzuki']
 motorcycles.remove('honda') #方法remove()只删除第一个指定的值
@@ -511,8 +410,6 @@ print(motorcycles)
 ```
 
     ['yamaha', 'suzuki']
-
-
 
 ```python
 # 一个综合例子
@@ -523,11 +420,9 @@ print("The last motorcycle I owned was a " + last_owned.title() + ".")
 
     The last motorcycle I owned was a Suzuki.
 
-
 #### 排序
 
 主要是两种方法 sort、sorted 的辨别，sort 是永久排序，sorted 是返回一个修改过的列表，原列表不变
-
 
 ```python
 cars = ['bmw', 'audi', 'toyota', 'subaru']
@@ -547,8 +442,6 @@ print(cars.sort())
     ['toyota', 'subaru', 'bmw', 'audi']
     None
 
-
-
 ```python
 print(cars)
 cars.reverse() #反转列表
@@ -565,10 +458,7 @@ len(cars) #列表长度
 
     4
 
-
-
 #### 复制列表
-
 
 ```python
 a = [1, 2, 3, 4, 5]
@@ -584,8 +474,6 @@ print(b)
     [1, 2, 3, 4, 5]
     [1, 2, 3, 4, 5, 6]
 
-
-
 ```python
 # 直接赋值b = a为引用赋值，修改a会影响b；需用.copy()或切片创建独立副本。
 c = a
@@ -597,11 +485,9 @@ print(c)
     [1, 2, 3, 4, 5, 6]
     [1, 2, 3, 4, 5, 6]
 
-
 ### 元组 (tuple)
 
 不可变序列，括号包裹，元素不可修改，但内部可变元素（如列表）可修改：
-
 
 ```python
 dimensions = (200, 50)       # 不可变元组
@@ -617,9 +503,7 @@ print(test)
     (1, [2, 3], 5)
     (1, [2, 3, 4], 5)
 
-
 #### 访问与解包
-
 
 ```python
 a, b, c = (1, 2, 3)  # 解包元组
@@ -627,6 +511,5 @@ print(a, b, c)       # → 1 2 3
 ```
 
     1 2 3
-
 
 元组整体不可修改，若需更新需重新赋值整个元组（如 dimensions = (400, 100)）

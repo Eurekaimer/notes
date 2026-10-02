@@ -14,11 +14,9 @@
 
 In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll include some special rules:
 
-
 - **Boar Brawl**. A player who rolls zero dice scores three times the absolute difference between the tens digit of the opponent’s score and the ones digit of the current player’s score, or 1, whichever is higher. The ones digit refers to the rightmost digit and the tens digit refers to the second-rightmost digit. If a player's score is a single digit (less than 10), the tens digit of that player's score is 0.
 
 可以选择不掷色子获得自身个位数与对方十位数差的绝对值的三倍的分数（最小为 1）
-
 
 - **Sus Fuss**. We call a number [_sus_](https://en.wikipedia.org/wiki/Sus_%28genus%29) if it has exactly 3 or 4 factors, including 1 and the number itself. If, after rolling, the current player's score is a sus number, they gain enough points such that their score instantly increases to the next prime number.
 
@@ -27,8 +25,6 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 ## Begin
 
 >For the project, you'll only be making changes to `hog.py`.
-
-
 
 ## Phase 1: Rules of the Game
 
@@ -62,17 +58,13 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 ## Interlude: User Interfaces
 
-
 >There are no required problems in this section of the project, just some examples for you to read and understand. See Phase 2 for the remaining project problems.
 
-
 感觉是给出了项目重构的一些思路和方法，如何在原有简单代码的基础上比较好的扩展和方便改进
-
 
 ## Phase 2: Strategies
 
 >In this phase, you will experiment with ways to improve upon the basic strategy of always rolling five dice. A _strategy_ is a function that takes two arguments: the current player's score and their opponent's score. It returns the number of dice the player will roll, which can be from 0 to 10 (inclusive).
-
 
 ### Problem 6 (2 pt)
 
@@ -82,11 +74,9 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 写个循环嵌套暴力遍历得了
 
-
 ### Problem 8 (2 pt)
 
 >**Important:** To implement this function, you will need to use a new piece of Python syntax. We would like to write a function that accepts an arbitrary number of arguments, and then calls another function using exactly those arguments. Here's how it works.
-
 
 只需要使用例子中的 `*args` 即可
 
@@ -123,19 +113,15 @@ while num <= 10:
 return roll_num
 ```
 
-
 ### Running Experiments
 
-
 还有一个模拟胜率的模块，真是相当完善的评测机制
-
 
 ### Problem 10 (2 pt)
 
 简单的选择结构
 
 ### Problem 11 (2 pt)
-
 
 同理可得
 
@@ -146,8 +132,6 @@ return roll_num
 ```Python
 return 0 if sus_update(0, score, opponent_score) >= GOAL else 6
 ```
-
-
 
 在绝对的运气面前策略似乎不太有效呢（欧皇发言 doge）
 

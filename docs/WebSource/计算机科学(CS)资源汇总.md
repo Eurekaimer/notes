@@ -112,7 +112,6 @@ tags:
 + [Recod.ai/LUC - 科学图像伪造检测 | Kaggle --- Recod.ai/LUC - Scientific Image Forgery Detection](https://www.kaggle.com/competitions/recodai-luc-scientific-image-forgery-detection) 我参加的第一个 Kaggle 比赛，差一点拿牌了，早知道当时期末不复习了，不过想一想金牌的方案感觉非常巧妙
 + [2026 年机器学习指南 IBM](https://www.ibm.com/cn-zh/think/machine-learning#605511093)
 
-
 ## Agent/LLM
 
 + [Hello-Agents](https://hello-agents.datawhale.cc/#/./README)
@@ -132,7 +131,6 @@ tags:
 	+ [Diffusion 综述阅读笔记 - 瓜瓜没有瓜子](https://www.cnblogs.com/Meloniala/p/18285101)
 	+ [Diffusion LM / D3PM](https://zhuanlan.zhihu.com/p/1909197530278896656) 当时做随机过程的大作业有参考，非常适合学习马尔可夫链和扩散模型的关系
 
-
 ## 大厂技术博客
 
 + [历史文章 | 美团 · 技术团队](https://tech.meituan.com/history.html)
@@ -141,7 +139,6 @@ tags:
 	+ 字节跳动技术团队
 	+ 阿里技术
 	+ 腾讯技术工程
-
 
 ## 博客技术
 

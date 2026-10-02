@@ -1,7 +1,6 @@
 #回归分析
 # 回归分析 (Lecture)
 
-
 !!! tldr "课程简介"
     所属大学：南开大学  
     主讲教师：刘民千 (Liu Minqian)  
@@ -11,8 +10,6 @@
     给分情况：70%的期末+30%平时成绩  
     考试难度：  
     修读时间：Fall 25
-
-
 
 + References
 	+ 线性模型 王松桂
@@ -72,28 +69,21 @@
 
 [[第八章-非线性回归模型-王松桂]]
 
-
 ## 作业部分
 
 下面的题号基本是参考王松桂老师的书，然后部分参考老师讲义的部分可以在我的笔记中找到标注
 
-
 !!! question "HW1"
     1.4、2.3、2.8、2.10、2.17
-
 
 !!! question "HW2"
     3.2、3.3、3.6、3.7、3.8
 
-
 !!! question "HW3"
     3.9、3.10、3.11、3.12
 
-
 !!! question "HW4"
     HW4-1、3.13、3.14、3.18
-
-
 
 HW4-1
 
@@ -136,7 +126,6 @@ $$
 \end{pmatrix}
 $$
 
-
 再令 $x_{i}=\begin{pmatrix}1\\ \widetilde{x_{i}}\end{pmatrix}$，代入即得
 
 $$
@@ -147,21 +136,14 @@ h_{ii}&= x_{i}'(X'X)^{-1}x_{i}\\
 \end{aligned}
 $$
 
-
-
-
 !!! question "HW5"
     4.1、4.4、4.6
-
 
 !!! question "HW6"
     4.7、4.9
 
-
 !!! question "HW7"
     5.2、定理 5.1.4
-
-
 
 定理 5.1.4(Slides): 假设全模型正确，证明：当 $\operatorname{Cov}(\hat{\boldsymbol{\beta}}_{t}) \geq \beta_{t} \boldsymbol{\beta}_{t}^{\prime}$ 时，有  
 
@@ -190,7 +172,6 @@ $$
 MSEP(\hat{y}_{0})&=\operatorname{Var}(\hat{e})\\ &=\operatorname{Var}(\mathbf{x}_{0}'(\hat{\boldsymbol{\beta}}-\boldsymbol{\beta})-\varepsilon_{0})\\ &=\operatorname{Var}(\mathbf{x}_{0}'\hat{\boldsymbol{\beta}})+\operatorname{Var}(\varepsilon_{0})\\ &=\mathbf{x}_{0}'\operatorname{Cov}(\hat{\boldsymbol{\beta}})\mathbf{x}_{0}+\sigma^{2}\\ &=\sigma^{2}\mathbf{x}_{0}'(X'X)^{-1}\mathbf{x}_{0}+\sigma^{2}\\ &=\sigma^{2}\left( 1+ \begin{pmatrix} \mathbf{x}_{0q}'  & \mathbf{x}_{0t}'\\ \end{pmatrix}\begin{pmatrix} X_{q}'X_{q} & X_{q}'X_{t} \\ X_{t}'X_{q} & X_{t}'X_{t} \end{pmatrix}^{-1} \begin{pmatrix} \mathbf{x}_{0q} \\ \mathbf{x}_{0t} \end{pmatrix} \right)
 \end{aligned}
 $$
-
 
 再考虑选模型 $MSEP(\tilde{y}_{0})$：
 
@@ -238,7 +219,6 @@ x_{0t}
 \end{aligned}
 $$
 
-
 代入即可得到：
 
 $$
@@ -249,29 +229,19 @@ MSEP(\hat{y}_{0})-MSEP(\tilde{y}_{0})&=c'Cov(\hat{\beta}_{t})c-\beta'_{t}cc'\bet
 \end{aligned}
 $$
 
-
-
-
 !!! question "HW8"
     5.1
-
-
 
 !!! question "HW9"
     HW9-1、6.3
 
-
-
 !!! question "HW10"
     Contents
-
 
 !!! question "HW11"
     Contents
 
 ## 往年试卷
-
-
 
 ## 附注
 

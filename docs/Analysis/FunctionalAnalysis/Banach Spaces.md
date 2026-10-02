@@ -1,6 +1,5 @@
 # Banach Spaces
 
-
 !!! tldr "Outline"
     + Normed spaces  
     + Banach spaces  
@@ -9,10 +8,8 @@
 
 泛函分析的基础就是下面所提到的赋范空间，在一个向量空间上赋以一个范数，因此称为赋范空间 (Normed space)，这是泛函分析中最为基本的研究对象，我们将完备性引入其中得到 Banach 空间
 
-
 !!! tip "补充"
     也可以参考张恭庆的《泛函分析》一书，其中详细讲述了这一类空间是如何加强条件而产生的，由准范数的定义出发定义 $F^{*}$ 空间，进而完备化定义 $Frechet$ 空间，再添加齐次性使得准范数加强为范数，诱导出下面的赋范线性空间（$B^{*}$ 空间），完备化后就是本章要重点讲述的 $Banach$ 空间
-
 
     !!! quote "注：拓扑向量空间"
         而**拓扑向量空间 (TVS)(Topological Vector Space, TVS)**则是泛函分析的基本研究对象，是指带有拓扑的向量空间，这样的拓扑对无限维向量空间有不同选择，而有限维实或复向量空间上符合 Hausdorff 条件的拓扑向量空间结构唯一，需要注意 TVS 是对赋范空间的推广，它允许使用比范数诱导的拓扑更弱，更一般的拓扑（有些 TVS 的拓扑不能被任何度量诱导），因此有更加一般的性质！
@@ -34,7 +31,6 @@
     3. $\lVert x+y \rVert \leqslant \lVert x \rVert + \lVert y \rVert$ for all $x,y\in E$ (Triangle inequality)
 
     and we call $(E,\lVert \cdot \rVert)$ a **normed(vector) space**
-
 
 A norm will induce a metric $d$ and it's defined by
 
@@ -83,7 +79,6 @@ We should know some about *topological vector spaces(TVS)*. You can find more ab
 
 实际上在上面关于$p$范数的三角不等式性质证明中我们需要两个著名的不等式($H \ddot{o} lder$ inequality and Minkowski inequality)，在此citing with proof，后续不再赘述
 
-
 !!! tip "Theorem($H\ddot{o}lder$'s inequality)"
     Here use $\mu$ as a positive measure and a set $\Omega$, let $1<p<\infty$. For any $f\in L^{p}(\Omega,\mu)$ and $g\in L^{q}(\Omega,\mu)$, where $\frac{1}{p}+ \frac{1}{q}=1$, we have $fg\in L^{1}(\Omega,\mu)$ and
 
@@ -110,7 +105,6 @@ $$
 $$
 
 So we get it.
-
 
 !!! tip "Theorem(Minkowski inequality)"
     Let $\mu$ be a positive measure on a set $\Omega$，$1\leqslant p < \infty$ and $f,g\in L^{p}(\Omega,\mu)$. We have
@@ -150,7 +144,6 @@ $$
 
 给出$\ell_{p}$空间的定义：
 
-
 !!! note "Definiotion($l_{p}$ space)"
     Let $I$ be a set and $1\leqslant p < \infty$ and $l_{p}(I)$ to be the set of all functions $x:I\to \mathbb{K}$ s.t.
 
@@ -163,7 +156,6 @@ $$
 >The most important sequence spaces in analysis are the ⁠⁠ spaces, consisting of the ⁠⁠power summable sequences, with the ⁠⁠-norm. These are special cases of [⁠Lp spaces](https://en.wikipedia.org/wiki/Lp_space "Lp space") for the [counting measure](https://en.wikipedia.org/wiki/Counting_measure "Counting measure") on the set of natural numbers. Other important classes of sequences like [convergent sequences](https://en.wikipedia.org/wiki/Convergent_sequence "Convergent sequence") or [null sequences](https://en.wikipedia.org/wiki/Sequence_space#c,_c0_and_c00) form sequence spaces, respectively denoted ⁠⁠ and ⁠⁠, with the [sup norm](https://en.wikipedia.org/wiki/Supremum_norm "Supremum norm"). Any sequence space can also be equipped with the [topology](https://en.wikipedia.org/wiki/Topology "Topology") of [pointwise convergence](https://en.wikipedia.org/wiki/Pointwise_convergence "Pointwise convergence"), under which it becomes a special kind of [Fréchet space](https://en.wikipedia.org/wiki/Fr%C3%A9chet_space "Fréchet space")called [FK-space](https://en.wikipedia.org/wiki/FK-space "FK-space").
 
 关于 $L^{p}$ 空间的内容可以参考实分析教材或是 wikipedia，相关的博客[香蕉空间](https://www.bananaspace.org/wiki/Lp_%E7%A9%BA%E9%97%B4)的撰写也很有意思，列在下面(老师的讲义中也有这一部分，所以不重复叙述了)
-
 
 !!! tip "Generation($L^{p}$ space)"
     设 $(X,\mathcal{A},\mu)$ 为测度空间，$f:X\to \mathbb{K}$ 为可测函数，$p\in[0,+\infty]$，则 $f$ 的 $L^{p}$ 范数（$p-$ 范数），记为 $\lVert f \rVert_{p}\in[0,+\infty]$，定义如下
@@ -188,10 +180,8 @@ $$
 
 显而易见，$\lVert f \rVert_{\infty}=\max\limits_{t\in[a,b]}\lvert f(t) \rvert$，这就是原本在一般测度空间 $(X,\mathcal{A},\mu)$ 和 Lebesgue 积分下 $p$ 范数的特殊化，将测度空间定义在闭区间上，测度即为区间长度（连续性），根据连续函数积分的定理，其上 Lebesgue 积分值与 Riemann 积分相同，因此可以直接使用 R 积分
 
-
 !!! quote "一些术语"
     BV(Bounded Variation) 即有界变差
-
 
 !!! tip "Theorem"
     Let $E,F$ be two normed spaces. A linear operator $T$ from $E$ into $F$ is continuous with respect to the norm topology of $E$ and $F$ if and only if for any sequence $(x_{n})_{n\in \mathbb{N}}$ in $E$
@@ -218,12 +208,10 @@ $$
 
 实际上对于有限维向量空间 $E$ 而言，任意两个范数是等价的，也就是说只有一种范数拓扑定义在 $E$ 上
 
-
 再给出赋范线性空间等价的定义
 
 !!! note "Definition(equivalent of normed spaces)"
     Two normed spaces $E$ and $F$ are equivalent(resp. isometrically isomorphic) if there is a bijective linear map $T:E\to F$ such that both $T$ and $T^{-1}$ are continuous(resp. isometries)
-
 
 ## Exercises 2.1
 
@@ -373,7 +361,6 @@ $$ \|f_n\|_\infty = 1, \quad \|f_n\|_1 = \frac{1}{n+1}. $$
 
 On other hand, $\|f_n\|_1 \geq \frac{1}{\beta}\|f_n\|_\infty = \frac{1}{\beta}$, which is a contradiction. 
 
-
 !!! question "(8)"
     Let $a > 0$. On $C[0,1]$, we consider two norms: $\left\Vert \cdot \right\Vert_\infty$ and
 
@@ -393,59 +380,43 @@ On other hand, $\|f_n\|_1 \geq \frac{1}{\beta}\|f_n\|_\infty = \frac{1}{\beta}$,
 
 对任意 $\lambda \in \mathbb{R}$，有
 
-
 $$\left\Vert \lambda f \right\Vert = \min\{\left\Vert \lambda f \right\Vert_\infty, \left\Vert \lambda f \right\Vert_0\} = |\lambda| \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} = |\lambda| \left\Vert f \right\Vert.$$
 
 (3)三角不等式
 
 充分性：当$a \leq 1$时，有
 
- $$\left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt \leq a \cdot 1 \cdot \left\Vert f \right\Vert_\infty \leq \left\Vert f \right\Vert_\infty,$$
+$$\left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt \leq a \cdot 1 \cdot \left\Vert f \right\Vert_\infty \leq \left\Vert f \right\Vert_\infty,$$
 
 综上，有$\left\| f \right\| = \min\{\left\| f \right\|_\infty, \left\| f \right\|_0\} = \left\| f \right\|_0$.
-
-
 
 必要性：考虑举反例，当$a > 1$时， 取$f,g \in C[0,1]$，定义如下(先列出，大小关系后续讨论)
 
 $$f(x)\equiv \varepsilon,\forall x\in[0,1]$$
 
 $$
-
 g(x)=\left\{ \begin{matrix}
-
 &n&x=0 \\
-
  &linear & x\in(0, \frac{1}{n}) \\
-
 &0&x\geq \frac{1}{n}
-
 \end{matrix} \right.
-
 $$
-
 
 那么有$\lVert f \rVert=\min\left\{ \varepsilon,a\varepsilon \right\}=\varepsilon(a>1),\lVert g \rVert=\min\left\{ n, \frac{a}{2} \right\}= \frac{a}{2}$
 
 $$
 \lVert f+g \rVert =\min\left\{ n+\varepsilon,a\varepsilon+ \frac{a}{2} \right\}= a\varepsilon+ \frac{a}{2} >\varepsilon+ \frac{a}{2}=\lVert f \rVert +\lVert g \rVert
-
 $$
 
 综上需要满足不等式组：
 
 $$\left\{ \begin{matrix}
-
 &n > \frac{a}{2} \\
-
 &n+\varepsilon > a\varepsilon + \frac{a}{2}
-
 \end{matrix} \right.
-
 $$
 
 直接取$n=4a,\varepsilon =\frac{1}{n}$即可满足上述不等式组($4a+\frac{1}{4a}> \frac{1}{4}+\frac{a}{2}$)，因此三角不等式不成立.
-
 
 !!! question "(9)"
     Let $1 < p < \infty$ and $G = \{(\xi_n)_{n \in \mathbb{N}} \in \ell_p : \sum_{n=1}^\infty \xi_n = 0\}$. Prove that $G \subseteq \ell_p$ is not closed.
@@ -598,6 +569,7 @@ $\|[x+y]\| \le \|x + y + u + v\| \le \|x+u\| + \|y+v\| < \|[x]\| + \|[y]\| + \ep
     考虑空间 $C[0,1]$（闭区间上的连续函数），装备 $1$-范数 $\|f\|_1 = \int_0^1 |f(t)| dt$。
 
     我们构造一个序列 $(f_n)_{n \ge 2}$，图形上看，它是一个在 $t=1/2$ 处越来越陡峭的折线：
+
     $$
     f_n(t) = \begin{cases}
     0, & 0 \le t \le \frac{1}{2} - \frac{1}{n} \\
@@ -606,11 +578,12 @@ $\|[x+y]\| \le \|x + y + u + v\| \le \|x+u\| + \|y+v\| < \|[x]\| + \|[y]\| + \ep
     \end{cases}
     $$
 
-
 1. 它是柯西列
 
 对于 $n > m \ge 2$，函数 $f_n$ 和 $f_m$ 的差异仅存在于区间 $[\frac{1}{2} - \frac{1}{m}, \frac{1}{2}]$ 上。直接计算积分：
- $$ \|f_n - f_m\|_1 = \int_0^1 |f_n(t) - f_m(t)| dt = \int_{\frac{1}{2}-\frac{1}{m}}^{\frac{1}{2}} |f_n(t) - f_m(t)| dt \le \frac{1}{m} $$
+
+$$ \|f_n - f_m\|_1 = \int_0^1 |f_n(t) - f_m(t)| dt = \int_{\frac{1}{2}-\frac{1}{m}}^{\frac{1}{2}} |f_n(t) - f_m(t)| dt \le \frac{1}{m} $$
+
 当 $m \to \infty$ 时，该值趋于 0，因此它是 $1$-范数下的柯西列。
 
  2. 它在空间中不收敛
@@ -624,7 +597,6 @@ $$ f(t) = \begin{cases} 0, & 0 \le t < 1/2 \\ 1, & 1/2 \le t \le 1 \end{cases} $
 结论：$(C[0,1], \|\cdot\|_1)$ 不是 Banach 空间。
 
 注：如果换成上确界范数 $\|\cdot\|_\infty$，它就是 Banach 空间，因为一致极限保持连续性
-
 
 !!! example "一个基本且重要的练习(Example 2.2.7)"
     If $1\leqslant p \leqslant \infty$, then $l^{p}$, $L^{p}[a,b]$ are Banach spaces under the corresponding $p-$norms $\lVert \cdot \rVert _p$ for $1\leqslant p\leqslant \infty$
@@ -645,11 +617,9 @@ $$
 
 Just let $m\to \infty$, we get
 
-
 $$
 \left( \sum\limits_{k=1}^{k_{0}} \lvert \xi_{k}^{(n)}-\xi_{k} \rvert ^{p} \right)^{\frac{1}{p}}\leqslant\varepsilon,\forall n\geqslant N,\forall k_{0}\in \mathbb{N}
 $$
-
 
 Put $x=(\xi_{k})_{k\in \mathbb{N}}$, we derive that
 
@@ -706,7 +676,6 @@ $$
 
 So $g_{0}\in L^{p}[a,b]$ and
 
-
 $$
 g_{0}(t)=\lvert f_{n_{1}}(t) \rvert+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert  
 $$
@@ -716,6 +685,7 @@ converges to a finite positive number a.e. on $[a,b]$, therefore the series
 $$
 f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t) \rvert  
 $$
+
 converges to a finite(real or complex) number a.e. on $[a,b]$. And $\lvert f \rvert \leqslant g_{0}$, we have $f\in L^{p}[a,b]$. It follows from
 
 $$
@@ -726,7 +696,6 @@ $$
 &\leqslant \frac{1}{2^{m}}
 \end{aligned}
 $$
-
 
 that $f_{n_{m}}\to f$
 
@@ -768,7 +737,6 @@ which proves that $f = \lim_n f_n$ in $L^\infty[a,b]$.
     *   $c_{00}$（有限支集序列）有可数基，所以它**不是** Banach 空间。
     *   $P[a,b]$（多项式空间）有可数基，所以它也**不是** Banach 空间。
 
-
 !!! info "Finite Dimensional Spaces (有限维相关性质)"
 
     **Proposition 2.2.9**：每一个**有限维**赋范空间都是完备的
@@ -777,21 +745,14 @@ which proves that $f = \lim_n f_n$ in $L^\infty[a,b]$.
     **Proposition 2.2.10**：赋范空间的每一个**有限维子空间**都是闭的
     *   有限维子空间自身是完备的，完备子空间在 Hausdorff 空间中必然是闭集
 
-
 !!! example "反例"
     *   多项式空间 $P$ 在 $C[0,1]$ 中不是闭的（因为根据 Weierstrass 定理，多项式可以逼近非多项式的连续函数，如 $e^t$）
     *   $c_{00}$ 在 $\ell_\infty$ 中不是闭的（可以逼近无限项非零的序列，如 $1, 1/2, 1/3 \dots$）
 
-
 ## Exercises 2.2
-
-
-
-
 
 !!! question "HW2-1"
     Let $P$ be the vector space of polynomials definded on $[0,1]$. It has two norms $\lVert \cdot \rVert_{\infty}$​ and $\lVert \cdot \rVert_{1}$​ . Show that the two norms are not equivalent.
-
 
 `Proof.`
 
@@ -802,7 +763,6 @@ which proves that $f = \lim_n f_n$ in $L^\infty[a,b]$.
 那么有$\lVert f \rVert_{\infty}=\max\limits_{x\in[0,1]}\lvert f(x) \rvert=1,\lVert f \rVert_{1}=\int_{0}^{1} \lvert f(x) \rvert \, dx= \frac{1}{n+1}$
 
 对于任意的固定常数$C$，总有$n+1>C$时使得$\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}$不成立，因此两个范数显然不等价
-
 
 !!! question "HW2-2"
     If $(E,\lVert \cdot \rVert _{E}​)$ is a normed space, $W$ is a vector space and $T:W\to E$ is a linear bijection, then
@@ -892,6 +852,7 @@ $$
 `Proof Sketch.`
 
 1.  **构造**：考虑所有由基向量组成的**有限**线性组合，且系数限制为**有理数**（若 $\mathbb{K}=\mathbb{C}$ 则为实部虚部均为有理数）：
+
     $$ M = \left\{ \sum_{i=1}^n r_i e_i : r_i \in \mathbb{Q}, n \in \mathbb{N} \right\} $$
 
 2.  **可数性**：$M$ 是可数集的可数并，因此是可数的。
@@ -913,7 +874,6 @@ $\implies$
 证明：如果$V$是可分的，那么有$V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}$
 
 由于$V$是可分的Banach空间，那么它一定包含一个可数稠密子集，我们将其记为$D=\left\{ d_{1},d_{2},\dots,d_{n},\dots \right\}$，然后考虑定义$V$上有限维子空间$V_{n}$
-
 
 $$
 V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\} 
@@ -974,11 +934,17 @@ $$
 考察向量 $y = x - l\mathbf{e} = (\xi_1 - l, \xi_2 - l, \dots)$。
 由于 $\xi_k \to l$，所以 $y$ 的分量趋于 0，即 $y \in c_0$。
 根据 Problem 1 的结论，$y$ 可以唯一表示为 $c_0$ 的基 $\{e_k\}$ 的线性组合：
+
 $$ y = \sum_{k=1}^\infty (\xi_k - l) e_k $$
+
 代回 $x$，我们得到展开式：
+
 $$ x = l\mathbf{e} + \sum_{k=1}^\infty (\xi_k - l) e_k $$
+
 下面验证收敛性（其实由 $c_0$ 的结论已得，这里写明）：
+
 $$ \left\| x - \left( l\mathbf{e} + \sum_{k=1}^n (\xi_k - l)e_k \right) \right\|_\infty = \left\| \sum_{k=n+1}^\infty (\xi_k - l)e_k \right\|_\infty = \sup_{k > n} |\xi_k - l| $$
+
 因 $\xi_k \to l$，当 $n \to \infty$ 时上式趋于 0。
 
 **唯一性**：设 $x = \alpha \mathbf{e} + \sum_{k=1}^\infty \alpha_k e_k$。对两边取极限（$k \to \infty$），由于 $e_k$ 的项趋于 0，可知 $\lim x = \alpha \cdot 1 + 0$，故 $\alpha = l$。剩下的部分即归结为 $c_0$ 中系数的唯一性，得 $\alpha_k = \xi_k - l$。
@@ -1024,24 +990,33 @@ $$
 证明的难点在于从“绝对收敛级数收敛”推导出“空间完备”。我们需要证明任意一个柯西列 $(x_n)$ 都收敛。思路是构造一个收敛极快的子列，将其转化为级数问题。
 
 首先，由于 $(x_n)$ 是柯西列，我们可以选取一个**子列** $(x_{n_k})$，使得相邻项极其接近。具体来说，对于每一个 $k$，选取足够大的下标，使得：
+
 $$ \|x_{n_k} - x_{n_{k-1}}\| < \frac{1}{2^k}, \quad \forall k \ge 2 $$
 
 !!! tip "技巧：构造裂项级数 (Telescoping Series)"
     我们考虑由该子列相邻项之差构成的级数：
+
     $$ x_{n_1} + \sum_{k=2}^{\infty} (x_{n_k} - x_{n_{k-1}}) $$
+
     注意到，这个级数的前 $m$ 项部分和 $S_m$ 恰好就是子列的第 $m$ 项：
+
     $$ S_m = x_{n_1} + (x_{n_2} - x_{n_1}) + \dots + (x_{n_m} - x_{n_{m-1}}) = x_{n_m} $$
 
 接下来验证该级数是否**绝对收敛**。根据我们在选取子列时的构造：
+
 $$ \sum_{k=2}^{\infty} \|x_{n_k} - x_{n_{k-1}}\| < \sum_{k=2}^{\infty} \frac{1}{2^k} = \frac{1}{2} < \infty $$
+
 既然级数绝对收敛，根据定理的假设，该级数在 $E$ 中**收敛**。
 
 设级数的和为 $x$。根据“级数和”的定义，就是部分和序列的极限，因此我们得到了子列的收敛性：
+
 $$ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} $$
 
 !!! success "结论：从子列收敛到原序列收敛"
     我们现在有一个柯西列 $(x_n)$，且它有一个收敛于 $x$ 的子列 $(x_{n_k})$。利用三角不等式：
+
     $$ \|x_n - x\| \le \|x_n - x_{n_k}\| + \|x_{n_k} - x\| $$
+
     *   当 $n, n_k$ 足够大时，第一项因柯西列性质趋于 0。
     *   第二项因于列收敛趋于 0。
 
@@ -1067,6 +1042,7 @@ $$ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} $$
 
 !!! abstract "Theorem 2.4.7 (Riesz 引理)"
     设 $Y$ 是赋范空间 $E$ 的**闭真子空间**（即 $Y \neq E$），且 $0 < \alpha < 1$。则存在范数为 1 的元素 $x_\alpha \in E$，使得它到子空间 $Y$ 的距离大于 $\alpha$，即：
+
     $$ \|x_\alpha - y\| > \alpha, \quad \forall y \in Y $$
 
 `Proof.`
@@ -1075,7 +1051,9 @@ $$ x = \lim_{m \to \infty} S_m = \lim_{m \to \infty} x_{n_m} $$
 
 因为 $d < d\alpha^{-1}$，根据下确界定义，存在 $y_0 \in Y$ 使得 $\|x - y_0\| < d\alpha^{-1}$。我们令 $x_\alpha = \frac{x - y_0}{\|x - y_0\|}$，显然 $\|x_\alpha\| = 1$。
 对于任意 $y \in Y$，考察距离 $\|x_\alpha - y\|$：
+
 $$ \|x_\alpha - y\| = \left\| \frac{x - y_0}{\|x - y_0\|} - y \right\| = \frac{1}{\|x - y_0\|} \| x - \underbrace{(y_0 + \|x - y_0\|y)}_{\in Y} \| $$
+
 注意括号内的部分仍属于 $Y$，因此其与 $x$ 的距离至少为 $d$。从而我们得到 
 
 $$\|x_\alpha - y\| \ge \frac{d}{\|x - y_0\|} > \frac{d}{d\alpha^{-1}} = \alpha$$
@@ -1095,7 +1073,9 @@ Banach 不动点定理是分析学中构造解和证明唯一性的核心工具�
 
 !!! abstract "Theorem 2.4.9 (Banach 不动点定理 / 压缩映射原理)"
     设 $K$ 是 Banach 空间 $E$ 的非空闭子集，$\varphi: K \to K$ 是一个**压缩映射**，即存在常数 $0 < \rho < 1$ 使得：
+
     $$ \|\varphi(x) - \varphi(y)\| \le \rho\|x - y\|, \quad \forall x, y \in K $$
+
     则 $\varphi$ 在 $K$ 中有且仅有一个不动点，即存在唯一的 $z_0 \in K$ 使得 $\varphi(z_0) = z_0$。
 
 `Proof.`
@@ -1119,14 +1099,12 @@ $$ \|x_m - x_n\| \le \sum_{i=n}^{m-1} \|x_{i+1} - x_i\| \le \left(\sum_{i=n}^{m-
 
 `Proof.`
 
-
 ??? quote "Theorem 2.4.9(Banach Fixed Point Theorem)"
     Let $K$ be a nonempty closed subset of a Banach space $E$ and $\varphi:K\to K$ a constraction, that is, there exists a constant $0< \rho<1$ such that
 
     $$\lVert \varphi(x)-\varphi(y) \rVert \leqslant \rho \lVert x-y \rVert , \forall x,y\in K$$
 
     Then $\varphi$ has a unique fixed point in $K$, that is, there exists a unique $z_{0}\in K$ such that $\varphi(z_{0})=z_{0}$
-
 
 $\mathbf{Counter\ Example:}$
 
@@ -1158,7 +1136,6 @@ $$
 
 我们需要证明其有不动点
 
-
 构造函数$f(x):K\to \mathbb{R}$
 
 $$
@@ -1174,7 +1151,6 @@ f(\varphi(x_{0}))=\lVert \varphi(x_{0})-\varphi(\varphi(x_{0})) \rVert <\lVert \
 $$
 
 与 $f(x_{0})$ 的极小性矛盾，因此 $f(x_{0})=0$，即证不动点存在（唯一性是显然的）
-
 
 !!! tip "紧集如何弥补收缩条件弱化所带来的不足"
     原定理成立的核心是完备性和收缩性，因此可以保证 $\lVert x_{n}-x_{n-1} \rVert$ 为柯西列，但是如果只是单纯的非减条件，可能会使得原本的数列收敛速度不够快，无法导出柯西列，因此结论可能不成立，那么这时候引入紧性就可以提供额外的拓扑结构，其作用体现在以下两点：

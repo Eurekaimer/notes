@@ -2122,10 +2122,10 @@ Q(\lambda x) &amp;= [\lambda x]  \\
 <div class="arithmatex">\[
 \frac{d(x,z)}{1 + d(x,z) + d(z,y)} \le \frac{d(x,z)}{1 + d(x,z)} = \widetilde{d}(x,z)
 \]</div>
-<p>同理：
-$$
+<p>同理：</p>
+<div class="arithmatex">\[
 \frac{d(z,y)}{1 + d(x,z) + d(z,y)} \le \frac{d(z,y)}{1 + d(z,y)} = \widetilde{d}(z,y)
-$$</p>
+\]</div>
 <p>综上所述，<span class="arithmatex">\(\widetilde{d}(x,y) \le \widetilde{d}(x,z) + \widetilde{d}(z,y)\)</span></p>
 <p>因此，<span class="arithmatex">\(\widetilde{d}\)</span> 是 <span class="arithmatex">\(X\)</span> 上的度量</p>
 <div class="admonition question">
@@ -2148,20 +2148,20 @@ $$</p>
 <p>令<span class="arithmatex">\(u = (x_1, y_1)\)</span>, <span class="arithmatex">\(v = (x_2, y_2)\)</span>, <span class="arithmatex">\(w = (x_3, y_3)\)</span>为<span class="arithmatex">\(X \times Y\)</span>中的点。</p>
 <p><strong>情形 1: <span class="arithmatex">\(1 \le s &lt; \infty\)</span></strong>
 <span class="arithmatex">\(\rho_s\)</span>的形式类似于<span class="arithmatex">\(\mathbb{R}^2\)</span>上的<span class="arithmatex">\(l_s\)</span>范数。
-根据<span class="arithmatex">\(d_X\)</span>和<span class="arithmatex">\(d_Y\)</span>的三角不等式：
-$$
+根据<span class="arithmatex">\(d_X\)</span>和<span class="arithmatex">\(d_Y\)</span>的三角不等式：</p>
+<div class="arithmatex">\[
 d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3)
-$$
-$$
+\]</div>
+<div class="arithmatex">\[
 d_Y(y_1, y_3) \le d_Y(y_1, y_2) + d_Y(y_2, y_3)
-$$
-我们需要证明<span class="arithmatex">\(\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)\)</span>。
+\]</div>
+<p>我们需要证明<span class="arithmatex">\(\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)\)</span>。
 令<span class="arithmatex">\(A = (d_X(x_1, x_2), d_Y(y_1, y_2))\)</span>，<span class="arithmatex">\(B = (d_X(x_2, x_3), d_Y(y_2, y_3))\)</span>。
-根据闵可夫斯基不等式（Minkowski inequality）对于<span class="arithmatex">\(\mathbb{R}^2\)</span>上的<span class="arithmatex">\(s\)</span>-范数<span class="arithmatex">\(\|(a,b)\|_s = (a^s+b^s)^{1/s}\)</span>：
-$$
-|A + B|_s \le |A|_s + |B|_s
-$$
-这即是三角不等式成立的保证。</p>
+根据闵可夫斯基不等式（Minkowski inequality）对于<span class="arithmatex">\(\mathbb{R}^2\)</span>上的<span class="arithmatex">\(s\)</span>-范数<span class="arithmatex">\(\|(a,b)\|_s = (a^s+b^s)^{1/s}\)</span>：</p>
+<div class="arithmatex">\[
+\|A + B\|_s \le \|A\|_s + \|B\|_s
+\]</div>
+<p>这即是三角不等式成立的保证。</p>
 <p><strong>情形 2: <span class="arithmatex">\(s = \infty\)</span></strong>
 <span class="arithmatex">\(\rho_\infty(u, w) = \max\{d_X(x_1, x_3), d_Y(y_1, y_3)\}\)</span>。
 利用<span class="arithmatex">\(d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)\)</span>。
@@ -2182,16 +2182,16 @@ $$
 <li>因为<span class="arithmatex">\(B\)</span>稠密，存在<span class="arithmatex">\(b_j \in B\)</span>使得<span class="arithmatex">\(d_Y(y, b_j) &lt; \delta\)</span>。</li>
 </ol>
 <p>我们来选取合适的<span class="arithmatex">\(\delta\)</span>。
-<strong>当<span class="arithmatex">\(1 \le s &lt; \infty\)</span>时：</strong>
-$$
+<strong>当<span class="arithmatex">\(1 \le s &lt; \infty\)</span>时：</strong></p>
+<div class="arithmatex">\[
 \rho_s((x,y), (a_i, b_j)) = [d_X(x, a_i)^s + d_Y(y, b_j)^s]^{1/s} &lt; [\delta^s + \delta^s]^{1/s} = \delta \cdot 2^{1/s}
-$$
-取<span class="arithmatex">\(\delta = \frac{\epsilon}{2^{1/s}}\)</span>，则<span class="arithmatex">\(\rho_s &lt; \epsilon\)</span>。</p>
-<p><strong>当<span class="arithmatex">\(s = \infty\)</span>时：</strong>
-$$
-\rho_\infty((x,y), (a_i, b_j)) = \max{d_X(x, a_i), d_Y(y, b_j)} &lt; \max{\delta, \delta} = \delta
-$$
-取<span class="arithmatex">\(\delta = \epsilon\)</span>，则<span class="arithmatex">\(\rho_\infty &lt; \epsilon\)</span>。</p>
+\]</div>
+<p>取<span class="arithmatex">\(\delta = \frac{\epsilon}{2^{1/s}}\)</span>，则<span class="arithmatex">\(\rho_s &lt; \epsilon\)</span>。</p>
+<p><strong>当<span class="arithmatex">\(s = \infty\)</span>时：</strong></p>
+<div class="arithmatex">\[
+\rho_\infty((x,y), (a_i, b_j)) = \max\{d_X(x, a_i), d_Y(y, b_j)\} &lt; \max\{\delta, \delta\} = \delta
+\]</div>
+<p>取<span class="arithmatex">\(\delta = \epsilon\)</span>，则<span class="arithmatex">\(\rho_\infty &lt; \epsilon\)</span>。</p>
 <p>由此可见，对于任意<span class="arithmatex">\((x, y)\)</span>和<span class="arithmatex">\(\epsilon\)</span>，都能在<span class="arithmatex">\(S\)</span>中找到点使其距离小于<span class="arithmatex">\(\epsilon\)</span>。故<span class="arithmatex">\(S\)</span>是稠密的。
 因为<span class="arithmatex">\(S\)</span>是可数稠密子集，所以<span class="arithmatex">\((X \times Y, \rho_s)\)</span>是可分的。</p>
 <h2 id="topological-spaces">Topological spaces<a class="headerlink" href="#topological-spaces" title="Permanent link">⚓︎</a></h2>
@@ -2216,11 +2216,15 @@ $$
 <p><code>Sol.</code></p>
 <p>考虑实数集 <span class="arithmatex">\(X = \mathbb{R}\)</span>。</p>
 <ul>
-<li><strong>度量 <span class="arithmatex">\(d_1\)</span> (标准欧几里得度量):</strong>
-    $<span class="arithmatex">\(d_1(x, y) = |x - y|\)</span>$</li>
-<li><strong>度量 <span class="arithmatex">\(d_2\)</span> (有界度量):</strong>
-    $<span class="arithmatex">\(d_2(x, y) = \frac{|x - y|}{1 + |x - y|}\)</span>$
-    （或者简单的 <span class="arithmatex">\(d_2(x, y) = \min\{1, |x - y|\}\)</span>）</li>
+<li>
+<p><strong>度量 <span class="arithmatex">\(d_1\)</span> (标准欧几里得度量):</strong></p>
+<div class="arithmatex">\[d_1(x, y) = |x - y|\]</div>
+</li>
+<li>
+<p><strong>度量 <span class="arithmatex">\(d_2\)</span> (有界度量):</strong></p>
+<div class="arithmatex">\[d_2(x, y) = \frac{|x - y|}{1 + |x - y|}\]</div>
+<p>（或者简单的 <span class="arithmatex">\(d_2(x, y) = \min\{1, |x - y|\}\)</span>）</p>
+</li>
 </ul>
 <p>为什么它们定义了相同的拓扑？因为拓扑只关心“局部”发生了什么，当 <span class="arithmatex">\(|x - y| \to 0\)</span> 时，分母 <span class="arithmatex">\(1 + |x - y| \approx 1\)</span>，所以 <span class="arithmatex">\(d_2(x, y) \approx |x - y| = d_1(x, y)\)</span>。</p>
 <p>这意味着：</p>

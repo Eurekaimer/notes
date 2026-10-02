@@ -2,14 +2,11 @@
 
 ## Summary
 
-
 大概需要 5h，不包括完成 Project 的时间，终于进入了 Python 比较核心的部分，有了 Lists, Slicing, Container 等概念，发现软件老师使用的例子与 61A 的例子一模一样。
 
 总的来说，抽象化的教学还是有益的，虽然前期进展的很慢，但是培养了比较良好的习惯，比如 Absraction Barriers 方便后续维护的这种意识。
 
-
 ## Videos(2h)
-
 
 ### Sequences
 
@@ -19,10 +16,7 @@ Note that the begining index is 0 not 1, and elements of lists can be various
 
 #### Containers
 
-
-
 #### For Statements
-
 
 ```Python
 >>> range(-2, 2)
@@ -30,7 +24,6 @@ Note that the begining index is 0 not 1, and elements of lists can be various
 >>> range(4)
 >>> 0 1 2 3
 ```
-
 
 #### List Comprehensions
 
@@ -42,12 +35,10 @@ Note that the begining index is 0 not 1, and elements of lists can be various
 [1, 5]
 ```
 
-
 ```Python
 def divisions(n):
 	return [1] + [x for x in range(2, n) if n % x == 0]
 ```
-
 
 #### Lists, Slices, &Recursion
 
@@ -59,7 +50,6 @@ def divisions(n):
 	 else:
 		 return s[0] + sum_list(s[1:])
  ```
-
 
 A case more complex but can be done.
 
@@ -85,7 +75,6 @@ Remark: Like conditional probability trick used in probability theory, we get co
 
 ### Containers
 
-
 #### Box-and-Pointer Notation
 
 Just a way like environmental diagram to explain the list operations.
@@ -108,8 +97,6 @@ sum, max and all function, and these functions can be found in R also.
 
 >The native data type for text in Python is called a string, and corresponds to the constructor str.
 
-
-
 #### Dictionaries
 
 mentioned **unhashable**(leave for 61b)
@@ -118,7 +105,6 @@ mentioned **unhashable**(leave for 61b)
 {<key exp>: <value exp> for <name> in <iter exp> if <filter exp>}
 {x * x: x for x in [1, 2, 3, 4, 5] if x > 2} evaluates to {9: 3, 16: 4, 25: 5}
 ```
-
 
 ### Data Abstraction
 
@@ -161,20 +147,16 @@ Chapter 2: Building Abstractions with Data
 
 >This chapter focuses on data. The techniques we investigate here will allow us to represent and manipulate information about many different domains. Due to the explosive growth of the Internet, a vast amount of structured information is freely available to all of us online, and computation can be applied to a vast range of different problems. Effective use of built-in and user-defined data types are fundamental to data processing applications.
 
-
 Native data types have the following properties:
 
 1. There are expressions that evaluate to values of native types, called _literals_.
 2. There are built-in functions and operators to manipulate values of native types.
 
-
 Python includes three native numeric types: integers (int), real numbers (float), and complex numbers (complex).
-
 
 ### Ch. 2.2
 
 >We are using here a powerful strategy for designing programs: _wishful thinking_. We haven't yet said how a rational number is represented, or how the functions numer, denom, and rational should be implemented. Even so, if we did define these three functions, we could then add, multiply, print, and test equality of rational numbers:
-
 
 >These functions are called by a higher level and implemented using a lower level of abstraction.
 
@@ -184,19 +166,15 @@ The fewer functions that depend on a particular representation, the fewer change
 
 >Python includes several native data types that are sequences, the most important of which is the list.
 
-
 >For sequences, addition and multiplication do not add or multiply elements, but instead combine and replicate the sequences themselves.
 
-
 This pattern of binding multiple names to multiple values in a fixed-length sequence is called _sequence unpacking_; it is the same pattern that we see in assignment statements that bind multiple names to multiple values.
-
 
 ```Python
 for x, y in pairs:
 	if x == y:
 		same_count = same_count + 1
 ```
-
 
 ## Lab 03(30min)
 
@@ -206,26 +184,19 @@ Very Trivial
 
 #### Q1: WWPD: Lists & Ranges
 
-
 #### Q2: Print If
-
 
 #### Q3: Close
 
-
 ### List Comprehensions
-
 
 #### Q4: WWPD: List Comprehensions
 
-
 #### Q5: Close List
-
 
 #### Q6: Squares Only
 
 注意取整的问题
-
 
 ### Recursion
 
@@ -237,12 +208,9 @@ Very Trivial
 
 也很简单，真的很像概率论的构造技巧
 
-
 ## Disc 04(30min)
 
-
 >Recursion takes practice. Please don't get discouraged if you're struggling to write recursive functions. Instead, every time you do solve one (even with help or in a group), make note of what you had to realize to make progress. **Students improve through practice and reflection**.
-
 
 **Tree Recursion**
 
@@ -266,7 +234,6 @@ def paths(m, n):
 
 >The most important thing to remember about lists is that a non-empty list `s` can be split into its first element `s[0]` and the rest of the list `s[1:]`.
 
-
 ### Q2: Max Product
 
 ```Python
@@ -283,8 +250,6 @@ def max_product(s):
     else:  
         return max(s[0] * max_product(s[2:]), max_product(s[1:]))
 ```
-
-
 
 ### Q3: Sum Fun
 
@@ -307,6 +272,5 @@ def sums(n, m):
         result = result + [[k] + rest for rest in sums(n-k, m) if rest == [] or rest[0] != k ]  
     return result
 ```
-
 
 Remark: Slicing 操作简直是为 Recursion 准备的，非常好用!

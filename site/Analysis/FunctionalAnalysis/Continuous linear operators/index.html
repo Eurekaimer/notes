@@ -2150,27 +2150,27 @@ K := (\sum_{i,j=1}^{\infty} |\alpha_{i,j}|^2)^{1/2} &lt; \infty.
 <p><strong>Proof.</strong></p>
 <p>我们需要证明该矩阵定义的算子 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(\ell^2\)</span> 上是有界的，并估计其范数。这就需要用到 Schur 测试（Schur's Test）的思想。
 设 <span class="arithmatex">\(x = (x_j) \in \ell^2\)</span>，考虑 <span class="arithmatex">\((Tx)_i = \sum_{j=1}^{\infty} \alpha_{i,j} x_j\)</span>。
-利用柯西-施瓦茨不等式，我们将各项拆分为 <span class="arithmatex">\(\sqrt{|\alpha_{i,j}|} \cdot \sqrt{|\alpha_{i,j}|} |x_j|\)</span>：
-$$
-|(Tx)<em j="1">i|^2 = \left| \sum</em>| |x_j|^2 \right)
-$$
-由题设，}^{\infty} \alpha_{i,j} x_j \right|^2 \le \left( \sum_{j=1}^{\infty} |\alpha_{i,j}| \right) \left( \sum_{j=1}^{\infty} |\alpha_{i,j<span class="arithmatex">\(\sum_{j=1}^{\infty} |\alpha_{i,j}| \le \alpha_\infty\)</span>，故：
-$$
-|(Tx)<em>i|^2 \le \alpha</em>\infty \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
-$$
-现在对 <span class="arithmatex">\(i\)</span> 求和以计算范数 <span class="arithmatex">\(\|Tx\|^2\)</span>：
-$$
-|Tx|^2 = \sum_{i=1}^{\infty} |(Tx)<em>i|^2 \le \alpha</em>\infty \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
-$$
-利用非负项级数求和次序的可交换性（Tonelli定理）：
-$$
-|Tx|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \left( \sum_{i=1}^{\infty} |\alpha_{i,j}| \right)
-$$
-由题设，列和 <span class="arithmatex">\(\sum_{i=1}^{\infty} |\alpha_{i,j}| \le \alpha_1\)</span>，代入得：
-$$
-|Tx|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \alpha_1 = \alpha_1 \alpha_\infty |x|^2
-$$
-即 <span class="arithmatex">\(\|Tx\| \le \sqrt{\alpha_1 \alpha_\infty} \|x\|\)</span>。
+利用柯西-施瓦茨不等式，我们将各项拆分为 <span class="arithmatex">\(\sqrt{|\alpha_{i,j}|} \cdot \sqrt{|\alpha_{i,j}|} |x_j|\)</span>：</p>
+<div class="arithmatex">\[
+|(Tx)_i|^2 = \left| \sum_{j=1}^{\infty} \alpha_{i,j} x_j \right|^2 \le \left( \sum_{j=1}^{\infty} |\alpha_{i,j}| \right) \left( \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2 \right)
+\]</div>
+<p>由题设，<span class="arithmatex">\(\sum_{j=1}^{\infty} |\alpha_{i,j}| \le \alpha_\infty\)</span>，故：</p>
+<div class="arithmatex">\[
+|(Tx)_i|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
+\]</div>
+<p>现在对 <span class="arithmatex">\(i\)</span> 求和以计算范数 <span class="arithmatex">\(\|Tx\|^2\)</span>：</p>
+<div class="arithmatex">\[
+\|Tx\|^2 = \sum_{i=1}^{\infty} |(Tx)_i|^2 \le \alpha_\infty \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
+\]</div>
+<p>利用非负项级数求和次序的可交换性（Tonelli定理）：</p>
+<div class="arithmatex">\[
+\|Tx\|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \left( \sum_{i=1}^{\infty} |\alpha_{i,j}| \right)
+\]</div>
+<p>由题设，列和 <span class="arithmatex">\(\sum_{i=1}^{\infty} |\alpha_{i,j}| \le \alpha_1\)</span>，代入得：</p>
+<div class="arithmatex">\[
+\|Tx\|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \alpha_1 = \alpha_1 \alpha_\infty \|x\|^2
+\]</div>
+<p>即 <span class="arithmatex">\(\|Tx\| \le \sqrt{\alpha_1 \alpha_\infty} \|x\|\)</span>。
 因为算子有界，所以 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(\ell^2\)</span> 上良好定义的算子。由于 <span class="arithmatex">\(Te_j\)</span> 对应矩阵的第 <span class="arithmatex">\(j\)</span> 列，<span class="arithmatex">\(\langle Te_j, e_i \rangle\)</span> 即为矩阵第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列的元素 <span class="arithmatex">\(\alpha_{i,j}\)</span>。且我们已证明 <span class="arithmatex">\(\|T\|^2 \le \alpha_1 \alpha_\infty\)</span>。</p>
 <p><strong>解析：</strong>
 这是著名的 <strong>Schur 测试</strong>。
@@ -2187,22 +2187,22 @@ $$
 <p><strong>充分性 (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>：
 假设序列 <span class="arithmatex">\((\alpha_n)\)</span> 有界，即存在 <span class="arithmatex">\(M &gt; 0\)</span> 使得对所有 <span class="arithmatex">\(n\)</span> 都有 <span class="arithmatex">\(|\alpha_n| \le M\)</span>。
 对于任意 <span class="arithmatex">\(x = \sum x_n e_n \in \ell^2\)</span>，根据 <span class="arithmatex">\(T\)</span> 的线性性和定义，<span class="arithmatex">\(Tx = \sum_{n=1}^{\infty} \alpha_n x_n e_n\)</span>。
-计算其范数：
-$$
-|Tx|^2 = \sum_{n=1}^{\infty} |\alpha_n x_n|^2 = \sum_{n=1}^{\infty} |\alpha_n|^2 |x_n|^2 \le M^2 \sum_{n=1}^{\infty} |x_n|^2 = M^2 |x|^2
-$$
-因此 <span class="arithmatex">\(\|Tx\| \le M \|x\|\)</span>，即 <span class="arithmatex">\(T\)</span> 是有界算子。</p>
+计算其范数：</p>
+<div class="arithmatex">\[
+\|Tx\|^2 = \sum_{n=1}^{\infty} |\alpha_n x_n|^2 = \sum_{n=1}^{\infty} |\alpha_n|^2 |x_n|^2 \le M^2 \sum_{n=1}^{\infty} |x_n|^2 = M^2 \|x\|^2
+\]</div>
+<p>因此 <span class="arithmatex">\(\|Tx\| \le M \|x\|\)</span>，即 <span class="arithmatex">\(T\)</span> 是有界算子。</p>
 <p><strong>必要性 (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>：
 假设 <span class="arithmatex">\(T\)</span> 是有界算子，即存在常数 <span class="arithmatex">\(C\)</span> 使得 <span class="arithmatex">\(\|T\| \le C\)</span>。
-对于任意 <span class="arithmatex">\(n \in \mathbb{N}\)</span>，考察基向量 <span class="arithmatex">\(e_n\)</span>（<span class="arithmatex">\(\|e_n\|=1\)</span>）：
-$$
+对于任意 <span class="arithmatex">\(n \in \mathbb{N}\)</span>，考察基向量 <span class="arithmatex">\(e_n\)</span>（<span class="arithmatex">\(\|e_n\|=1\)</span>）：</p>
+<div class="arithmatex">\[
 Te_n = \alpha_n e_n
-$$
-对两边取范数：
-$$
-|Te_n| = |\alpha_n e_n| = |\alpha_n| |e_n| = |\alpha_n|
-$$
-根据算子有界性定义，<span class="arithmatex">\(\|Te_n\| \le \|T\| \|e_n\| = \|T\|\)</span>。
+\]</div>
+<p>对两边取范数：</p>
+<div class="arithmatex">\[
+\|Te_n\| = \|\alpha_n e_n\| = |\alpha_n| \|e_n\| = |\alpha_n|
+\]</div>
+<p>根据算子有界性定义，<span class="arithmatex">\(\|Te_n\| \le \|T\| \|e_n\| = \|T\|\)</span>。
 因此，对于所有 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(|\alpha_n| \le \|T\|\)</span>。这表明序列 <span class="arithmatex">\((\alpha_n)\)</span> 必须是有界的。</p>
 <p><strong>解析：</strong>
 这是<strong>对角算子</strong>最基本的性质。
@@ -2228,47 +2228,47 @@ Tf(x) = \int_0^1 \varphi(x,t)f(t)dt
 积分运算本身是线性的，因此对于 <span class="arithmatex">\(f, g \in C[0,1]\)</span> 和标量 <span class="arithmatex">\(\alpha, \beta\)</span>，显然有 <span class="arithmatex">\(T(\alpha f + \beta g) = \alpha Tf + \beta Tg\)</span>。</p>
 <p><strong>2. 连续性 (Continuity) 与范数上界</strong>
 算子 <span class="arithmatex">\(T\)</span> 的范数定义为 <span class="arithmatex">\(\|T\| = \sup_{\|f\|_\infty \le 1} \|Tf\|_\infty\)</span>。
-对于任意 <span class="arithmatex">\(x \in [0,1]\)</span>：
-$$
+对于任意 <span class="arithmatex">\(x \in [0,1]\)</span>：</p>
+<div class="arithmatex">\[
 |Tf(x)| = \left| \int_0^1 \varphi(x,t)f(t) dt \right| \le \int_0^1 |\varphi(x,t)| |f(t)| dt
-$$
-题目已知 <span class="arithmatex">\(\varphi(x,t) \ge 0\)</span>，故 <span class="arithmatex">\(|\varphi(x,t)| = \varphi(x,t)\)</span>。且 <span class="arithmatex">\(|f(t)| \le \|f\|_\infty\)</span>。
-$$
-|Tf(x)| \le |f|_\infty \int_0^1 \varphi(x,t) dt
-$$
-令 <span class="arithmatex">\(g(x) = \int_0^1 \varphi(x,t) dt\)</span>。
-由于已知 <span class="arithmatex">\(\frac{\partial \varphi}{\partial x} \ge 0\)</span>，我们可以推导 <span class="arithmatex">\(g(x)\)</span> 的单调性：
-$$
+\]</div>
+<p>题目已知 <span class="arithmatex">\(\varphi(x,t) \ge 0\)</span>，故 <span class="arithmatex">\(|\varphi(x,t)| = \varphi(x,t)\)</span>。且 <span class="arithmatex">\(|f(t)| \le \|f\|_\infty\)</span>。</p>
+<div class="arithmatex">\[
+|Tf(x)| \le \|f\|_\infty \int_0^1 \varphi(x,t) dt
+\]</div>
+<p>令 <span class="arithmatex">\(g(x) = \int_0^1 \varphi(x,t) dt\)</span>。
+由于已知 <span class="arithmatex">\(\frac{\partial \varphi}{\partial x} \ge 0\)</span>，我们可以推导 <span class="arithmatex">\(g(x)\)</span> 的单调性：</p>
+<div class="arithmatex">\[
 g'(x) = \int_0^1 \frac{\partial \varphi}{\partial x}(x,t) dt \ge 0
-$$
-因此，<span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上是单调递增（或非减）的。
+\]</div>
+<p>因此，<span class="arithmatex">\(g(x)\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 上是单调递增（或非减）的。
 于是 <span class="arithmatex">\(\sup_{x \in [0,1]} g(x) = g(1) = \int_0^1 \varphi(1,t) dt\)</span>。</p>
-<p>回到范数估计：
-$$
-|Tf|<em _0_1_="[0,1]" _in="\in" x="x">\infty = \sup</em> |Tf(x)| \le |f|_\infty \cdot g(1)
-$$
-这证明了 <span class="arithmatex">\(T\)</span> 是有界的（连续的），且 <span class="arithmatex">\(\|T\| \le \int_0^1 \varphi(1,t) dt\)</span>。</p>
+<p>回到范数估计：</p>
+<div class="arithmatex">\[
+\|Tf\|_\infty = \sup_{x \in [0,1]} |Tf(x)| \le \|f\|_\infty \cdot g(1)
+\]</div>
+<p>这证明了 <span class="arithmatex">\(T\)</span> 是有界的（连续的），且 <span class="arithmatex">\(\|T\| \le \int_0^1 \varphi(1,t) dt\)</span>。</p>
 <p><strong>3. 范数下界 (Lower Bound)</strong>
 为了证明等号成立，我们取常数函数 <span class="arithmatex">\(f_0(t) \equiv 1\)</span>。显然 <span class="arithmatex">\(f_0 \in C[0,1]\)</span> 且 <span class="arithmatex">\(\|f_0\|_\infty = 1\)</span>。
-计算 <span class="arithmatex">\(Tf_0\)</span>：
-$$
+计算 <span class="arithmatex">\(Tf_0\)</span>：</p>
+<div class="arithmatex">\[
 (Tf_0)(x) = \int_0^1 \varphi(x,t) \cdot 1 dt = \int_0^1 \varphi(x,t) dt = g(x)
-$$
-计算其范数：
-$$
-|Tf_0|<em _0_1_="[0,1]" _in="\in" x="x">\infty = \sup</em>)
-$$
-根据算子范数定义：
-$$
-|T| \ge \frac{|Tf_0|}{|f_0|} = g(1) = \int_0^1 \varphi(1,t) dt
-$$} |g(x)| = g(1) \quad (\text{因为 } g(x) \ge 0 \text{ 且单调递增</p>
+\]</div>
+<p>计算其范数：</p>
+<div class="arithmatex">\[
+\|Tf_0\|_\infty = \sup_{x \in [0,1]} |g(x)| = g(1) \quad (\text{因为 } g(x) \ge 0 \text{ 且单调递增})
+\]</div>
+<p>根据算子范数定义：</p>
+<div class="arithmatex">\[
+\|T\| \ge \frac{\|Tf_0\|}{\|f_0\|} = g(1) = \int_0^1 \varphi(1,t) dt
+\]</div>
 <div class="admonition question">
 <p class="admonition-title">(5)HW6-1</p>
 <p>Let <span class="arithmatex">\(1\leqslant p &lt;\infty\)</span> and <span class="arithmatex">\(T:\ell_{\infty}\to L^{p}[0,1]\)</span> be defined by</p>
-<p>$$<br />
-T(x_{1},x_{2},\dots)= \sum\limits_{n=1}^{\infty} x_{n}\chi_{\left[  \frac{1}{2^{n}}, \frac{1}{2^{n-1}} \right]}<br />
-$$<br />
-Prove that <span class="arithmatex">\(T\)</span> is a linear and continuous operator, and calculate <span class="arithmatex">\(\lVert T \rVert\)</span></p>
+<div class="arithmatex">\[
+T(x_{1},x_{2},\dots)= \sum\limits_{n=1}^{\infty} x_{n}\chi_{\left[  \frac{1}{2^{n}}, \frac{1}{2^{n-1}} \right]}
+\]</div>
+<p>Prove that <span class="arithmatex">\(T\)</span> is a linear and continuous operator, and calculate <span class="arithmatex">\(\lVert T \rVert\)</span></p>
 </div>
 <p><code>Proof.</code></p>
 <div class="admonition quote">

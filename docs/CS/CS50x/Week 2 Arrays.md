@@ -9,7 +9,6 @@ title: Week 2 Arrays
 
 >Preprocessing. Compiling. Assembling. Linking. Debugging. Arrays. Strings. Command-Line Arguments. Cryptography.
 
-
 ## Notes
 
 ### Preprocessing
@@ -149,7 +148,6 @@ float average(int length, int array[])
 
 Notice that this will output a string of characters.
 
-
 A string is a sequence of characters like a array of the type of characters.
 
 > NUL says string end here.
@@ -172,7 +170,6 @@ int main(void)
 }
 ```
 
-
 > strlen function include <string.h>
 
 Since this is such a common problem within programming, other programmers have created code in the `string.h` library to find the length of a string. You can find the length of a string by modifying your code as follows:
@@ -194,8 +191,6 @@ int main(void)
 ```
 
 Notice that this code uses the `string.h` library, declared at the top of the file. Further, it uses a function from that library called `strlen`, which calculates the length of the string passed to it.
-
-
 
 > ctype.h
 
@@ -271,7 +266,6 @@ Notice that this says `hello` to the user.
     }
     ```
 
-
 Notice that this program knows both `argc`, **the number of command line arguments**, and `argv`, which is an array of the characters passed as arguments at the command line.
 
 **Remark that one of CLAs is the name of the program!**
@@ -293,8 +287,6 @@ Notice that this program knows both `argc`, **the number of command line argume
         }
     }
 ```
-
-
 
 ### Exit Status
 
@@ -320,7 +312,6 @@ Notice that this program knows both `argc`, **the number of command line argume
     }
     ```
 
-
 Notice that if you fail to provide `./status David`, you will get an exit status of `1`. However, if you do provide `./status David`, you will get an exit status of `0`.
 
 - You can type `echo $?` in the terminal to see the exit status of the last run command.
@@ -332,9 +323,7 @@ Notice that if you fail to provide `./status David`, you will get an exit statu
 - Now, with the building block of arrays, chars, and strings, you can cipher and decipher a message.
 - `plaintext` and a `key` are provided to a `cipher`, resulting in ciphered text.
 
-
 Key and Plaintext -> Cipher -> Ciphertext
-
 
 ## Summing Up
 
@@ -360,7 +349,6 @@ In this lesson, you learned more details about compiling and how data is stored 
 	+ Connection with arrays
 	+ ASCII code(Alphabetical Exercise)
 + Command Line Arguments aka. CLA
-
 
 A program about CLAs:
 
@@ -405,10 +393,7 @@ int main(int argc, string argv[])
 }
 ```
 
-
 ## Problem Set 2
-
-
 
 ### Scrabble
 
@@ -470,9 +455,7 @@ int compute_score(string word)
 }
 ```
 
-
 ### Readability
-
 
 ```C
 #include <ctype.h>
@@ -613,7 +596,6 @@ int main(int argc, string argv[])
     return 0;
 }
 ```
-
 
 ### Substitution
 

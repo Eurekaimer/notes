@@ -1,19 +1,14 @@
 # Week 2
 
-
 ## Summary
 
 先看 Videos 再看 Reading，需要注意的是 Ch 1.6 内容很多，每天的 Videos 只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完 Videos 再看 Reading
 
 大致需要 6h 完成（不包括 project）
 
-
-
 ## Videos(2h)
 
-
 ### Control
-
 
 #### Multiple Environments
 
@@ -28,7 +23,6 @@ Names have no meaning without environments
 Names have different meanings in different environments
 
 #### Miscellaneous Python Features
-
 
 + truediv and floordiv
 + mod operator
@@ -86,7 +80,6 @@ while i < 3:
 
 ### Higher-Order Functions
 
-
 #### Iteration Example
 
 talk about Fibonacci sequence and quite trivial
@@ -94,7 +87,6 @@ talk about Fibonacci sequence and quite trivial
 #### Control
 
 用一个函数来表达判断的结构
-
 
 #### Control Expressions
 
@@ -107,7 +99,6 @@ def has_big_sqrt(x)
 # 聪明的设计，这时输入-1000 程序并不会崩溃，说明右侧程序不执行
 ```
 
-
 精度丢失问题：
 
 ```Python
@@ -118,9 +109,7 @@ def reasionable(n):
 False
 ```
 
-
 #### Higher-Order Functions
-
 
 1.Generalizing Patterns with Arguments
 
@@ -137,12 +126,9 @@ $$
 \sum\limits_{k=1}^{5} k,\sum\limits_{k=1}^{5} k^{3},\sum\limits_{k=1}^{5}  \frac{8}{(4k-3)(4k-1)}
 $$
 
-
 将模式抽象出来进行归纳式的解决以函数为参量，是一种很自然的想法
 
-
 #### Functions as Return Values
-
 
 ```Python
 def make_adder(n):
@@ -155,16 +141,13 @@ def make_adder(n):
 7
 ```
 
-
 The purpose of Higher-Order Functions
 
 + Express general methods of computation
 + Remove repetition from programs
 + Separate concerns among functions
 
-
 ### Environments
-
 
 #### Environments for Higher-Order Functions
 
@@ -178,16 +161,13 @@ def square(x)
 result = apply_twice(square, 2)
 ```
 
-
 #### Environments for Nested Definitions
-
 
 Mainly about how to draw environment diagram and decide the parent frame of any function.
 
 #### Local names
 
 Formal parameters of functions have a local scope means that if we call a function but the parameter of it doesn't be defined in local frame, it will cause an error.
-
 
 #### Function Composition
 
@@ -200,11 +180,9 @@ def compose1(f, g):
 	return h
 ```
 
-
 #### Lambda Expressions
 
 由于它没有 return 部分，使用 lambda 只能创建简单的函数，在 Python 中也不经常用，但是对于其他语言常用（我学 Python 和 R 的，我可以不看吗？）
-
 
 ![lambda-def](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/lambda-def)
 
@@ -245,9 +223,7 @@ Chapter 1: Building Abstractions with Functions
 + 1.5  Control
 + 1.6  Higher-Order Functions
 
-
 ### Ch. 1.4
-
 
 >Functions are an essential ingredient of all programs, large and small, and serve as our primary medium to express computational processes in a programming language.
 
@@ -257,9 +233,7 @@ Good functions should obey following guidelines:
 + Don't repeat yourself(DRY)
 + define generally
 
-
 >A function definition will often include documentation describing the function, called a **_docstring_**, which must be indented along with the function body. Docstrings are conventionally triple quoted. The first line describes the job of the function in one line. The following lines can describe arguments and clarify the behavior of the function:
-
 
 When you call help with the name of a function as an argument, you see its docstring (type q to quit Python help).
 
@@ -268,7 +242,6 @@ When you call help with the name of a function as an argument, you see its doc
 Comment will be passed by complier but can be read by person.
 
 `# comments`
-
 
 >As a guideline, most data values used in a function's body should be expressed as default values to named arguments, so that they are easy to inspect and can be changed by the function caller. Some values that never change, such as the fundamental constant k, can be bound in the function body or in the global frame.
 
@@ -302,13 +275,9 @@ Remark: not calculate all subexpressions
 
 ### Ch. 1.6
 
-
 >To express certain general patterns as named concepts, we will need to construct functions that can accept other functions as arguments or return functions as values. **Functions that manipulate functions are called higher-order functions**. This section shows how higher-order functions can serve as powerful abstraction mechanisms, vastly increasing the expressive power of our language.
 
-
-
 ![higher-order function](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/higher-order-f)
-
 
 注：就好像泛函一样，只是这里叫高阶函数
 
@@ -336,7 +305,6 @@ def approx_eq(x, y, tolerance=1e-3):
 phi = improve(golden_update, square_close_to_successor)
 ```
 
-
 #### Defining Functions III: Nested Definitions
 
 相当重要的一个东西，做一个函数嵌套
@@ -360,9 +328,7 @@ two key advantages of lexical scoping in Python
 
 >"Currying" 在英语中，尤其是在编程和数学领域，指的是“柯里化”。柯里化是一种将使用多个参数的函数转换为一系列使用单一参数的函数的技术。
 
-
 Currying allows us to do so without writing a specific function for each number whose powers we wish to compute.
-
 
 #### Lambda function
 
@@ -372,11 +338,9 @@ Standard formal:
 
 lambda x : f(g(x)) means "A function that  takes x  and returns  f(g(x))"
 
-
 Case:
 
 `compose1 = lambda f, g : lambda x: f(g(x))`
-
 
 The significance of higher-order functions is that they enable us to represent these abstractions explicitly as elements in our programming language, so that they can be handled just like other computational elements.
 
@@ -393,16 +357,12 @@ Question: 为什么不直接重构呢？
 + 所谓的“开闭原则”
 + 方便维护和扩展（装饰器的部分应该不是函数核心的功能，如果不用或是修改的话可以直接重构多个函数）
 
-
 ## Lab 01(1h)
-
 
 !!! tip
     写完一定要对答案！
 
-
 ### What Would Python Display? (WWPD)
-
 
 #### Q1: WWPD: Control
 
@@ -427,11 +387,9 @@ line2 positive
 line3 None
 ```
 
-
 #### Q2: Debugging Quiz
 
 有点搞，不知道为什么交互式做选择题比单纯做题有乐子，做题家基因觉醒了。
-
 
 ### Write Code
 
@@ -441,7 +399,6 @@ line3 None
 
 答案没有专门对 0 判断而是用了更聪明的做法（移项可知 $k>0$）
 
-
 ```Python
 total, stop = 1, n-k  
 while n > stop:  
@@ -449,13 +406,11 @@ while n > stop:
 return total
 ```
 
-
 #### Q4: Divisible By k
 
 相当于实现一个更完整的 range 函数
 
 感觉写的不是特别好
-
 
 #### Q5: Sum Digits
 
@@ -463,13 +418,11 @@ return total
 
 ### Syllabus Quiz
 
-
 #### Q6: Syllabus Quiz
 
 做不了
 
 ### Optional Questions
-
 
 #### Q7: WWPD: What If?
 
@@ -490,9 +443,7 @@ def double_eights_alt(n):
 	return False
 ```
 
-
 ## Disc 01(30min)
-
 
 ### While and If
 
@@ -518,7 +469,6 @@ def race(x, y):
         minutes += 1
     return minutes
 ```
-
 
 错误应该为乌龟超越兔子但二者行走距离不同，第二次追及
 
@@ -558,7 +508,6 @@ return True
 
 完成两个函数即可，第一个只需要在第二个函数基础上写 while 循环
 
-
 #### Q5: Bottles
 
 pass
@@ -566,8 +515,6 @@ pass
 #### Q6: Double Trouble
 
 ![env-fig](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/env-fig)
-
-
 
 ## HW02(30min)
 

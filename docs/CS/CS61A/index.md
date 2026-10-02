@@ -50,7 +50,6 @@ tags:
   <div class="progress-bar"></div> <!-- 只保留进度条，没有内部数字 -->
 </div>
 
-
 </body>
 </html>
 
@@ -58,9 +57,7 @@ tags:
 
 存放[@Eurekaimer](https://github.com/Eurekaimer)在完成CS61A过程中的HWs/Labs/Projects的实现和一些新手可能犯的错误(因为我在学习过程中应该会都踩一遍)，相关实现请参考Github的[CS61A仓库](https://github.com/Eurekaimer/CS61a)
 
-
 完成的时间轴：TBA(To be anounced)(2025.04.05-)
-
 
 - [x] 版本选用：2024spring
 
@@ -74,13 +71,9 @@ tags:
 
 - [x] 参考学习顺序：videos-reading-q&a-(lab/disc/hw)-project
 
-
-
 完成的时间轴：TBA(2025.04.05-)
 
 以下是所有内容的完成情况（按照顺序排列）:
-
-
 
 - [x] [61A-Week-1](Week%201.md) 2025.4.5
 	- [x] Disc 00
@@ -119,9 +112,6 @@ tags:
 	- [x] Disc 06
 	- [x] HW 05
 
-
-
-
 ## 资源汇总
 
 CS61a 的资源参考 (24spring) 如下：
@@ -137,22 +127,15 @@ CS61a 的资源参考 (24spring) 如下：
 1. [CS61a 学习总结](https://zhuanlan.zhihu.com/p/640290712)
 2. [CS61A 学习经验&感想](https://zhuanlan.zhihu.com/p/486323075)
 
-
 也可以使用[24fall 备份（可 fork 完成作业）](https://github.com/InsideEmpire/CS61A-Assignments?tab=readme-ov-file#%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E)
-
 
 ## Question and Feedback
 
-
 实际上，这门课的视频几乎可以说是完全包含于 textbook 中了，我认为如果有一定基础完全可以不看视频直接看书本然后完成 lab 和 hw 即可
-
-
 
 ### Lab 00
 
 + 在线评测如何 local 使用 OK（不通过 UCBedu 邮箱）的问题：在正确的目录中 (ls contains ok) type `python ok --local` in terminal
-
-
 
 ### HW 03
 

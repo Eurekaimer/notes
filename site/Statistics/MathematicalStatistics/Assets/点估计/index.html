@@ -2312,12 +2312,12 @@
 <p>大偏差通常被视为估计的不足，刀切法就是一种缩小偏差的方法</p>
 <div class="admonition info">
 <p class="admonition-title">刀切法,jackknife(Quenouile,named after Tukey)</p>
-<p>设 <span class="arithmatex">\(T(x)\)</span> 是基于样本 <span class="arithmatex">\(x=\left( x_{1},\dots,x_{n} \right)\)</span> 的关于参数 <span class="arithmatex">\(g(\theta)\)</span> 的估计量，且满足关系 <span class="arithmatex">\(E_{\theta}\left( T(x) \right)=g(\theta)+O\left( \frac{1}{n} \right)\)</span>.以 <span class="arithmatex">\(x_{(-i)}\)</span> 表示从样本中删去 <span class="arithmatex">\(x_{i}\)</span> 后的向量，定义刀切统计量为<br />
-$$<br />
-T_{j}(x)=nT(x)- \frac{n-1}{n}\sum\limits_{i=1}^{n} T(x_{(-i)})</p>
+<p>设 <span class="arithmatex">\(T(x)\)</span> 是基于样本 <span class="arithmatex">\(x=\left( x_{1},\dots,x_{n} \right)\)</span> 的关于参数 <span class="arithmatex">\(g(\theta)\)</span> 的估计量，且满足关系 <span class="arithmatex">\(E_{\theta}\left( T(x) \right)=g(\theta)+O\left( \frac{1}{n} \right)\)</span>.以 <span class="arithmatex">\(x_{(-i)}\)</span> 表示从样本中删去 <span class="arithmatex">\(x_{i}\)</span> 后的向量，定义刀切统计量为</p>
+<div class="arithmatex">\[
+T_{j}(x)=nT(x)- \frac{n-1}{n}\sum\limits_{i=1}^{n} T(x_{(-i)})
+\]</div>
 </div>
-<p>$$
-可以证明这种定义的刀切统计量 <span class="arithmatex">\(E_{\theta}\left( T_{j}(x) \right)=g(\theta)+O\left( \frac{1}{n^{2}} \right)\)</span>，并且其方差不会增大</p>
+<p>可以证明这种定义的刀切统计量 <span class="arithmatex">\(E_{\theta}\left( T_{j}(x) \right)=g(\theta)+O\left( \frac{1}{n^{2}} \right)\)</span>，并且其方差不会增大</p>
 <div class="admonition note">
 <p class="admonition-title">Remark</p>
 <p>关于刀切法的详细介绍可以参考 Efron 的专著</p>
@@ -2335,21 +2335,21 @@ T_{j}(x)=nT(x)- \frac{n-1}{n}\sum\limits_{i=1}^{n} T(x_{(-i)})</p>
 <h3 id="_8">概率函数已知时未知参数的矩估计<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h3>
 <p>做法通常是反表示然后将已知的总体矩参量改为样本矩，然后做近似估计</p>
 <h3 id="_9">相合性<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
-<p>设 <span class="arithmatex">\(\theta\in\Theta\)</span> 为未知参数，给出 <span class="arithmatex">\(\hat{\theta_{n}}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的一个估计量，<span class="arithmatex">\(n\)</span> 是样本容量，如果对于任何正数 <span class="arithmatex">\(\epsilon\)</span> 有
-$$
+<p>设 <span class="arithmatex">\(\theta\in\Theta\)</span> 为未知参数，给出 <span class="arithmatex">\(\hat{\theta_{n}}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的一个估计量，<span class="arithmatex">\(n\)</span> 是样本容量，如果对于任何正数 <span class="arithmatex">\(\epsilon\)</span> 有</p>
+<div class="arithmatex">\[
 \lim\limits_{ n \to \infty } P\left( \lvert \hat{\theta_{n}}-\theta \rvert\ge \epsilon  \right) =0
-$$
-那么称 <span class="arithmatex">\(\hat{\theta_{n}}\)</span> 为参数的相合估计</p>
+\]</div>
+<p>那么称 <span class="arithmatex">\(\hat{\theta_{n}}\)</span> 为参数的相合估计</p>
 <p>相合性是对估计的一个最基本要求，也就是随着样本量的无限增大，精度应当也无限逼近实际，能够达到任意指定的精度，不满足相合性要求的估计不予考虑。</p>
 <p>实质上也就是该估计量序列依概率收敛可应用依概率收敛的性质及各种大数定律</p>
 <p>给出两个判断相合性的定理：</p>
 <div class="admonition tip">
 <p class="admonition-title">TH6.2.1</p>
-<p>设 <span class="arithmatex">\(\hat{\theta}_{n}=\hat{\theta}_{_{n}}(x_{1},\dots,x_{n})\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的一个估计量，若<br />
-$$<br />
-\lim\limits_{ n \to \infty } E\left( \hat{\theta}<em _infty="\infty" _to="\to" n="n">{n} \right) =\theta, \lim\limits</em>)=0} Var(\hat{\theta}_{n<br />
-$$<br />
-则 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的相合估计</p>
+<p>设 <span class="arithmatex">\(\hat{\theta}_{n}=\hat{\theta}_{_{n}}(x_{1},\dots,x_{n})\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的一个估计量，若</p>
+<div class="arithmatex">\[
+\lim\limits_{ n \to \infty } E\left( \hat{\theta}_{n} \right) =\theta, \lim\limits_{ n \to \infty } Var(\hat{\theta}_{n})=0
+\]</div>
+<p>则 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的相合估计</p>
 </div>
 <p><code>Proof.</code></p>
 <p>利用 Chebyshev 不等式把期望转换成方差，将<span class="arithmatex">\(\lvert \hat{\theta}_{n}-E(\hat{\theta}_{n}) \rvert&lt; \frac{\epsilon}{2}\implies \lvert \hat{\theta}_{n}-E(\hat{\theta}_{n}) \rvert&lt; \frac{\epsilon}{2}\)</span>修改为概率不等式的形式即可</p>
@@ -2374,10 +2374,10 @@ $$<br />
 <p>极大似然估计是 Gauss 提出、由 Fisher 推广的，本节除了给出极大似然估计的基本定义外还将给出求取某些复杂情况 MLE 的有效算法，即 EM 算法</p>
 <h3 id="_12">极大似然估计<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
 <p>基本思想：概率最大的事件最有可能发生</p>
-<p>满足这个不等式：选取的估计 <span class="arithmatex">\(\hat{p(x)}\)</span>
-$$
-P\left{ X=x|\hat{p(x)} \right} \geq P\left{ X=x|p' \right},\forall p',\forall x. 
-$$</p>
+<p>满足这个不等式：选取的估计 <span class="arithmatex">\(\hat{p(x)}\)</span></p>
+<div class="arithmatex">\[
+P\left\{ X=x|\hat{p(x)} \right\} \geq P\left\{ X=x|p' \right\},\forall p',\forall x. 
+\]</div>
 <h4 id="_13">似然函数<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
 <p class="admonition-title">似然函数(likehood function)</p>
@@ -2386,8 +2386,8 @@ $$</p>
 <p>极大似然估计也就是选取 <span class="arithmatex">\(\hat{\theta}\)</span> 后似然函数取到最大值，实际求某个参数的 MLE 也就是求似然函数的极值问题，如果 <span class="arithmatex">\(L(\theta,x)\)</span> 关于 <span class="arithmatex">\(\theta\)</span> 可微，则 <span class="arithmatex">\(\theta\)</span> 的 MLE 可以通过求偏导得到。</p>
 <div class="admonition note">
 <p class="admonition-title">似然方程</p>
-<p>求解办法<br />
-$$ \frac{\partial L(\theta,x)}{\partial\theta_{j}}=0,j=1,2\dots,k $$</p>
+<p>求解办法</p>
+<div class="arithmatex">\[ \frac{\partial L(\theta,x)}{\partial\theta_{j}}=0,j=1,2\dots,k \]</div>
 </div>
 <p>一个很重要的例子就是对于正态总体，均值与方差的估计和 MLE 一样</p>
 <h4 id="mle-invariance-of-mle">MLE 的不变性 (Invariance of MLE)<a class="headerlink" href="#mle-invariance-of-mle" title="Permanent link">⚓︎</a></h4>
@@ -2407,19 +2407,19 @@ $$ \frac{\partial L(\theta,x)}{\partial\theta_{j}}=0,j=1,2\dots,k $$</p>
 <div class="admonition tip">
 <p class="admonition-title">诱导似然函数(Induced Likelihood Function)</p>
 <p>如果原本的函数是一一对应的那么这种 MLE 的不变性实际上没有什么用处，所以我们比较关心的是非一对一情形，这也就提出了更一般的定理（任何函数的条件），为了完成定理的证明首先应当做到将 MLE 的定义推广到函数上也就是我们研究的 <span class="arithmatex">\(\tau(\theta)\)</span> 上。<br />
-为了达成这个目的我们应当先定义诱导似然函数，由下式给出：<br />
-$<span class="arithmatex">\(L^{*}(\eta|x)=\prod_{i=1}^{n} f(x_{i}|\tau^{-1}(\eta))=L(\tau^{-1}(\eta)|x)\)</span>$</p>
+为了达成这个目的我们应当先定义诱导似然函数，由下式给出：</p>
+<div class="arithmatex">\[L^{*}(\eta|x)=\prod_{i=1}^{n} f(x_{i}|\tau^{-1}(\eta))=L(\tau^{-1}(\eta)|x)\]</div>
 <p>并且有 <span class="arithmatex">\(\sup\limits_{\eta}L^{*}(\eta|x)=\sup\limits_{\eta}L(\tau^{-1}(\eta)|x)=\sup\limits_{\theta}L(\theta|x)\)</span></p>
 </div>
-<p>具体的证明也比较简单只需要按照定义书写一点数学分析废话（吐槽一下 NKU 的课本没有写清楚的什么是 <span class="arithmatex">\(g(\theta)\)</span> 的 MLE,以至于笔者白白花费时间在错误的定义上百思不得其解，最终是自己查询了 Casella 和其他社区才得到答案）：
-$$
+<p>具体的证明也比较简单只需要按照定义书写一点数学分析废话（吐槽一下 NKU 的课本没有写清楚的什么是 <span class="arithmatex">\(g(\theta)\)</span> 的 MLE,以至于笔者白白花费时间在错误的定义上百思不得其解，最终是自己查询了 Casella 和其他社区才得到答案）：</p>
+<div class="arithmatex">\[
 \begin{aligned}
-G(w)=\left{ \theta:g(\theta)=w \right} ,&amp;M(w,x)=\sup\limits_{{\theta\in G(w)}}L(\theta|x)\
-M(g(\hat{\theta});x)&amp;=\sup\limits_{\theta\in G(g(\hat{\theta}))}L(\theta|x)=L(\hat{\theta}|x)=\sup\limits_{\theta\in \Theta}L(\theta|x)\
+G(w)=\left\{ \theta:g(\theta)=w \right\} ,&amp;M(w,x)=\sup\limits_{{\theta\in G(w)}}L(\theta|x)\\
+M(g(\hat{\theta});x)&amp;=\sup\limits_{\theta\in G(g(\hat{\theta}))}L(\theta|x)=L(\hat{\theta}|x)=\sup\limits_{\theta\in \Theta}L(\theta|x)\\
 &amp;\geqslant \sup\limits_{\theta\in G(w)}L(\theta|x)=M(w,x)
 \end{aligned}
-$$
-注 1：在这种定义下所谓的 <span class="arithmatex">\(M(w,x)\)</span> 就摇身一变成为了 <span class="arithmatex">\(g(\theta)\)</span> 的似然函数了，否则在原本的情况下根本无法讨论。
+\]</div>
+<p>注 1：在这种定义下所谓的 <span class="arithmatex">\(M(w,x)\)</span> 就摇身一变成为了 <span class="arithmatex">\(g(\theta)\)</span> 的似然函数了，否则在原本的情况下根本无法讨论。
 注 2：建议想更深入一点还是去看 Casella，前置门槛也不高（NKU 教材省略过多在作者眼里可能不值一提的细节，导致虽然本身内涵丰富但是阅读的难度被无端拉高）</p>
 <h3 id="mle">MLE 的相合性<a class="headerlink" href="#mle" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
@@ -2483,15 +2483,15 @@ $$
 涉及程序的内容，编程实现，并把程序和结果打印出来。程序可以字体变小后打印。</p>
 </div>
 <p>(a)</p>
-<p>已知 Gamma 分布的密度函数为 <span class="arithmatex">\(f(x,\alpha,\lambda) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\)</span>,可以计算对数似然函数的值为
-$$
+<p>已知 Gamma 分布的密度函数为 <span class="arithmatex">\(f(x,\alpha,\lambda) = \frac{\lambda^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\lambda x}\)</span>,可以计算对数似然函数的值为</p>
+<div class="arithmatex">\[
 l(\alpha,\lambda|x)=n\alpha \ln\lambda+(\alpha-1)\sum\limits_{i=1}^{n} \ln X_{i}-\lambda \sum\limits_{i=1}^{n} X_{i}-n\ln\Gamma(\alpha)
-$$
-Newton-Raphson 算法：<span class="arithmatex">\(\theta_{K+1}=\theta_{k}-H(\theta_{k})^{-1}g(\theta_{k})\)</span></p>
-<p>设参数向量 <span class="arithmatex">\((\theta = (\alpha,\lambda)^T)\)</span>，迭代公式为 <span class="arithmatex">\(\theta_{k + 1}=\theta_{k}-H(\theta_{k})^{-1}g(\theta_{k})\)</span>，其中 <span class="arithmatex">\(g(\theta)=(\frac{\partial l}{\partial\alpha},\frac{\partial l}{\partial\lambda})^T\)</span> 是梯度向量，<span class="arithmatex">\(H(\theta)\)</span> 是 Hesse 矩阵：
-$$
-g(\theta)=\begin{pmatrix}\frac{\partial l}{\partial\alpha}\\frac{\partial l}{\partial\lambda }\end{pmatrix}=\begin{pmatrix} nlnλ−n\frac{Γ(α)}{Γ′(α)}​+\sum\limits_{i=1}^{n} ​lnX_{i}​\ \frac{nα}{\lambda}​−\sum\limits_{i=1}^{n} ​X_{i}​\end{pmatrix}
-$$</p>
+\]</div>
+<p>Newton-Raphson 算法：<span class="arithmatex">\(\theta_{K+1}=\theta_{k}-H(\theta_{k})^{-1}g(\theta_{k})\)</span></p>
+<p>设参数向量 <span class="arithmatex">\((\theta = (\alpha,\lambda)^T)\)</span>，迭代公式为 <span class="arithmatex">\(\theta_{k + 1}=\theta_{k}-H(\theta_{k})^{-1}g(\theta_{k})\)</span>，其中 <span class="arithmatex">\(g(\theta)=(\frac{\partial l}{\partial\alpha},\frac{\partial l}{\partial\lambda})^T\)</span> 是梯度向量，<span class="arithmatex">\(H(\theta)\)</span> 是 Hesse 矩阵：</p>
+<div class="arithmatex">\[
+g(\theta)=\begin{pmatrix}\frac{\partial l}{\partial\alpha}\\\frac{\partial l}{\partial\lambda }\end{pmatrix}=\begin{pmatrix} nlnλ−n\frac{Γ(α)}{Γ′(α)}​+\sum\limits_{i=1}^{n} ​lnX_{i}​\\ \frac{nα}{\lambda}​−\sum\limits_{i=1}^{n} ​X_{i}​\end{pmatrix}
+\]</div>
 <div class="arithmatex">\[
 H(\theta)=\begin{pmatrix}\frac{\partial^{2}l}{\partial\alpha^{2}}&amp;\frac{\partial^{2}l}{\partial\alpha\partial\lambda}\\\frac{\partial^{2}l}{\partial\lambda\partial\alpha}&amp;\frac{\partial^{2}l}{\partial\lambda^{2}}\end{pmatrix}=\begin{pmatrix}
 -n \frac{\Gamma''(\alpha)\Gamma(\alpha)-(\Gamma'(\alpha)^{2})}{\Gamma^{2}(\alpha)}&amp;\frac{n}{\lambda}\\\frac{n}{\lambda}&amp;-\frac{n\alpha}{\lambda^{2}}
@@ -2521,9 +2521,9 @@ H(\theta)=\begin{pmatrix}\frac{\partial^{2}l}{\partial\alpha^{2}}&amp;\frac{\par
 <div class="arithmatex">\[h_2(T)=\frac{T(T-1)\cdots(T-r+1)}{n^r},\]</div>
 <p>为 <span class="arithmatex">\(g_2(\lambda)=\lambda^r\)</span> 的无偏估计，<span class="arithmatex">\(h_2(T)\)</span> 是充分完全统计量 <span class="arithmatex">\(T\)</span> 的函数，故由 L-S 定理可知 <span class="arithmatex">\(h_2(T)\)</span> 为 <span class="arithmatex">\(g_2(\lambda)\)</span> 的 UMVUE</p>
 <p>(3) 由 <span class="arithmatex">\(P_\lambda(X_1=x)=e^{-\lambda}\lambda^x/x!\)</span>,可见它是参数 <span class="arithmatex">\(\lambda\)</span> 的函数，故可用 <span class="arithmatex">\(g_3(\lambda)\)</span> 表示令 <span class="arithmatex">\(\varphi(X_1)=I_[X_1=x]\)</span>,则 <span class="arithmatex">\(E_\lambda[\varphi(X_1)]=P_\lambda(X_1=x).\)</span> 因此 <span class="arithmatex">\(\varphi(X_1)\)</span> 为 <span class="arithmatex">\(g_3(\lambda)\)</span> 的无偏估计。注意到 <span class="arithmatex">\(T=T(\boldsymbol X)=\sum_i=1^nX_i\sim P(n\lambda)\)</span> 和 <span class="arithmatex">\(\sum_i=2^nX_i\sim P((n-1)\lambda)\)</span>,故有</p>
-<div class="arithmatex">\[h_3(t)=E(\varphi(X_1)|T=t)=P_\lambda(X_1=x|T=t)=\frac{P_\lambda(X_1=x,T=t)}{P_\lambda(T=t)}$$
-$$=\frac{P_\lambda(X_1=x)P_\lambda(X_2+\cdots+X_n=t-x)}{P_\lambda(X_1+\cdots+X_n=t)}=\frac{(n-1)^{t-x}t!}{n^t(t-x)!x!}$$
-$$=\binom{t}{x}\frac{(n-1)^{t-x}}{n^t}=\binom{t}{x}\Big(\frac{1}{n}\Big)^x\Big(1-\frac{1}{n}\Big)^{t-x},\quad t\geqslant x.\]</div>
+<div class="arithmatex">\[h_3(t)=E(\varphi(X_1)|T=t)=P_\lambda(X_1=x|T=t)=\frac{P_\lambda(X_1=x,T=t)}{P_\lambda(T=t)}\]</div>
+<div class="arithmatex">\[=\frac{P_\lambda(X_1=x)P_\lambda(X_2+\cdots+X_n=t-x)}{P_\lambda(X_1+\cdots+X_n=t)}=\frac{(n-1)^{t-x}t!}{n^t(t-x)!x!}\]</div>
+<div class="arithmatex">\[=\binom{t}{x}\frac{(n-1)^{t-x}}{n^t}=\binom{t}{x}\Big(\frac{1}{n}\Big)^x\Big(1-\frac{1}{n}\Big)^{t-x},\quad t\geqslant x.\]</div>
 <p>由引理 3.4.1 可知 <span class="arithmatex">\(h_3(T)\)</span> 为 <span class="arithmatex">\(g_3(\lambda)\)</span> 的无偏估计，它又是充分完全统计量 <span class="arithmatex">\(T\)</span> 的函数</p>
 <p>所以由 L-S 定理可知</p>
 <div class="arithmatex">\[h_3(T)=\begin{pmatrix}T\\x\end{pmatrix}\left(\frac1n\right)^x\left(1-\frac1n\right)^{T-x}\]</div>

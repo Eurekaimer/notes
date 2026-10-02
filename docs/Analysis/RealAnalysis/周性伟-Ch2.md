@@ -1,8 +1,6 @@
 # 周性伟-Ch2
 
-
 ## 1-10
-
 
 !!! question "Ch2 1"
     设 $E_{1}\subset E_{2}\subset \mathbb{R}$，求证：$m^{*}(E_{1})\leqslant m^{*}(E_{2})$
@@ -50,12 +48,7 @@ $$
 
 另一侧仍然显然.
 
-
-
-
 注：这种题目的做法是比较单一的：首先确认我们的目标，因为$E\subset Q$，所以利用外测度的单调性显然有$m^{*}(E)\leqslant \lambda$，再考虑另一方向，通常会采用增减一个$\varepsilon$利用它的任意性证明，而在这里我们可以考虑下确界的性质构造出$\varepsilon$
-
-
 
 !!! question "Ch2 3"
     设$E\subset \mathbb{R},M>0.$求证：$m^{*}(E)=\inf\left\{ \sum\limits_{n=1}^{\infty}l(I_{n}):I_{n} \text{为开区间}，l(I_{n})<M,E\subset \bigcup\limits_{n=1}^{\infty}I_{n} \right\}$
@@ -71,7 +64,6 @@ $$
 $$
 
 令$\varepsilon \to 0$即可得到所需结论
-
 
 !!! question "Ch2 4"
     设$G_{1}$和$G_{2}$是不相交开集，$E_{1}\subset G_{1},E_{2}\subset G_{2}$，求证：$m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})$
@@ -96,7 +88,6 @@ $$
 
 考虑利用 2.4 结论，那么构造两个不相交的开集记为 $G_{1},G_{2}$,$G_{1}=\bigcup\limits_{x\in E_{1}}V\left( x, \frac{1}{2}d(E_{1},E_{2}) \right),G_{2}=\bigcup\limits_{x\in E_{2}}V\left( x, \frac{1}{2}d(E_{1},E_{2}) \right)$，可知 $E_{1}\subset G_{1},E_{2}\subset G_{2}$，利用 2.4 可知结论成立
 
-
 !!! question "Ch2 6"
     设$m^{*}(A)<\infty,m^{*}(B)<\infty$，求证：$\lvert m^{*}(A) -m^{*}(B)\rvert \leqslant m^{*}(A\Delta B)$
 
@@ -105,8 +96,6 @@ $$
 只需要使用两个集合关系和次可加性，$A\subset (A\Delta B)\bigcup B\implies m^{*}(A)\leqslant m^{*}(A\Delta B)+m^{*}(B)$，同理可知$m^{*}(B)\leqslant m^{*}(A\Delta B)+m^{*}(A)$，综合两个不等式即证
 
 注：仍然是集合表示的技巧
-
-
 
 !!! question "Ch2 8(i)(ii)"
     设对每一$x\in I=(a,b)$，$A_{x}$是一个实数集，而且当$x_{1}<x_{2}$时$A_{x_{1}}\subset A_{x_{2}}$，求证：
@@ -133,7 +122,6 @@ $$\begin{aligned}
 
 9.设 $E \subset \mathbf{R}, 0 < m^*(E) < \infty$, 求证: $f(x) = m^*((-\infty, x) \cap E)$ 是 $x$ 的连续函数. 由此证明 $I = \{m^*(F): F \subset E\}$ 是一个有界闭区间.
 
-
 !!! question "Ch2 10"
     设$\left\{ E_{n} \right\}_{n\geqslant 1}$是可测集列
     (i)求证$m\left( \varliminf\limits_{ n \to \infty }E_{n} \right)\leqslant \varliminf\limits_{ n \to \infty }m(E_{n});$
@@ -146,7 +134,6 @@ $$\begin{aligned}
     (iii) 若 $m\left(\bigcup_{k=1}^\infty E_k\right) < \infty$ 且 $\lim_{n \to \infty} E_n$ 存在, 求证:
 
 $$m\left(\lim_{n \to \infty} E_n\right) = \lim_{n \to \infty} m(E_n).$$
-
 
 `Proof.`
 
@@ -178,7 +165,6 @@ $$
 
 ## 11-20
 
-
 !!! question "Ch2 11"
     设 $A$ 可测并且 $m(A \triangle B) = 0$, 求证: $B$ 可测.
 
@@ -186,17 +172,10 @@ $$
 
 $m(A\Delta B)=m^{*}\left( (A-B)\bigcup(B-A) \right)=0$，所以$m^{*}(A-B)=m^{*}(B-A)=0$，为零测集，所以两集合可测，再利用$A$可测，得到$A\bigcap B=A-(A-B)$可测，$B=\left( A\bigcap B \right)\bigcup(B-A)$，所以$B$可测
 
-
-
 !!! question "Ch1 12"
     设$0 < m(E) < \infty$. 求证: 有测度皆为 $m(E)$ 的开集列$\{G_n\}_{n \geqslant 1}$, 使$m(E \triangle G_n) \to 0(n \to \infty)$.
 
 `Proof.`
-
-
-
-
-
 
 !!! question "Ch2 13"
     设 $E_1$ 和 $E_2$ 都可测, 求证: $m(E_1) + m(E_2) = m(E_1 \cup E_2) + m(E_1 \cap E_2)$.
@@ -215,7 +194,6 @@ $$
 
 注：简单的利用集合关系即可
 
-
 !!! question "Ch2 14"
     求证: $\mathbb{R}$ 中可测集全体有基数 $2^{c}$.
 
@@ -224,7 +202,6 @@ $$
 Step1. $\mathbb{R}$中子集全体的基数为$2^{c}$，那么可测集全体的基数小于等于$2^{c}$
 
 Step2. 考虑Cantor集，测度为零(可测)但具有连续统势，它的子集全体的基数为$2^{c}$，那么可测集全体的基数大于等于$2^{c}$
-
 
 !!! question "Ch2 15"
      (i) 若 $F$ 是 $[0, 1]$ 中闭集且 $m(F) = 1$. 试问是否一定 $F = [0, 1]$?
@@ -240,7 +217,6 @@ Step2. 考虑Cantor集，测度为零(可测)但具有连续统势，它的子�
 
 只需要考虑 Cantor 集在 $[0,1]$ 的补集 $G=[0,1]\setminus C$，Cantor 集是零测集所以 G 的测度为 1，但是 $G\neq (0,1)$
 
-
 !!! question "Ch2 16"
     若 $A \bigcup B$ 和 $A$ 都可测，试问 $B$ 是否一定可测？若其中 $m(A) = 0$, 结论如何？若 $A \cap B = \varnothing$, 结论又如何？
 
@@ -248,16 +224,10 @@ Step2. 考虑Cantor集，测度为零(可测)但具有连续统势，它的子�
 
 第一个命题不一定，反例为 $A=[0,1],B$ 为 $[0,1]$ 中的不可测集（在课本中给出了构造方法），那么 $A\bigcup B,A$ 可测，$B$ 不可测
 
-
-
-
-
-
 !!! question "Ch2 17"
     设 $E \subset \mathbf{R}, m(E) > 0, 0 < \alpha < 1$. 求证: 有开区间$I$使$m(I \cap E) > \alpha \cdot m(I)$.
 
 `Proof.`
-
 
 !!! question "Ch2 18"
     设可测集 $E \subset [0, 1]$. 若有 $\delta > 0$, 使对 $[0, 1]$ 中任何区间 $(a, b)$ 有 $m(E \cap (a, b)) \geqslant \delta(b - a)$
@@ -265,27 +235,13 @@ Step2. 考虑Cantor集，测度为零(可测)但具有连续统势，它的子�
 
 `Proof.`
 
-
-
-
 !!! question "Ch2 19"
     设 $E \subset \mathbf{R}, m(E) > 0, [a, b]$ 是有界区间， $\varepsilon > 0$. 求证：有有限个实数 $\{x_k\}_{1 \leq k \leq n}$, 使 $[a, b] - \bigcup_{k=1}^n E_{x_k}$ 的测度小于 $\varepsilon$, 其中 $E_{x_k} = \{x + x_k : x \in E\}$.
-
-
-
-
-
-
-
-
-
-
 
 !!! question "Ch2 20"
     设 $\{E_k\}_{k \geq 1}$ 是 $[0, 1]$ 中测度皆为 1 的可测集列，求证：
 
     $$m\left(\bigcap_{k=1}^\infty E_k\right) = 1.$$
-
 
 `Proof.`
 
@@ -324,12 +280,9 @@ $$
 
 那么可知$m\left(\bigcap\limits_{n=1}^\infty E_{k_n}\right) > \lambda$
 
-
-
 !!! question "Ch2 22"
     设 $\{E_k\}_{1 \leqslant k \leqslant n}$ 是 $[0, 1]$ 中的 $n$ 个可测集，满足 $\sum\limits_{k=1}^n m(E_k) > n - 1$.
     求证： $m\left(\bigcap\limits_{k=1}^n E_k\right) > 0$.
-
 
 `Proof.`
 
@@ -344,8 +297,6 @@ m\left(\bigcap_{k=1}^n E_k\right)& = m\left( [0,1] \right) -m\left( [0,1]-\bigca
 &=0
 \end{aligned}
 $$
-
-
 
 !!! question "Ch2 24"
     设 $m^*(E) < \infty$. 试证下列 3 件事等价:
@@ -376,7 +327,6 @@ m^{*}(E)&=m^{*}\left( E\bigcap E_{n} \right)+m^{*}\left( E\bigcap E_{n}^{c} \rig
 
 由于$E=\left( \bigcup\limits_{n=1}^{\infty}E_{n} \right)\bigcup \left( E-\bigcup\limits_{n=1}^{\infty}E_{n} \right)$，所以可测.
 
-
 !!! question "Ch2 25"
     设 $m^*(E) < \infty$. 求证: 有 $G_\delta$ 集 $H$, 使 $H \supset E, m^*(E) = m(H)$.
 
@@ -394,14 +344,11 @@ $$
 
 注：这是利用开集逼近的一个简单例子，并没有什么难度
 
-
 !!! question "Ch2 26"
     设 $A \bigcup B$ 可测且 $m(A \cup B) = m^*(A) + m^*(B) < \infty$. 求证: $A$ 和 $B$ 都可测.
 
-
 !!! tip "- Hint"
     取 $G_\delta$集$H$使$H \supset B, m(H) = m^*(B)$. 此时可证$(A \cup B) \cap H^c$ 是$A$的可测子集, 其测度为$m^*(A)$.
-
 
 `Proof.`
 
@@ -425,8 +372,6 @@ $$
 
 并且我们有$E\subset A\subset G$，且$m(G-E)=m(G)-m(E)<m^{*}(A)+\varepsilon-m^{*}(A)=\varepsilon$，可知$A$可测，同理可知$B$可测
 
-
-
 !!! question "Ch2 27"
     构造不相交的集 $A$ 和 $B$ 使 $m^*(A \cup B) < m^*(A) + m^*(B)$.
 
@@ -439,7 +384,6 @@ $$
 若是取等根据2.26可知$A,B$都可测，矛盾，所以只能取严格小于
 
 注：本题给出了一个结论就是外测度不一定满足次可加性
-
 
 !!! question "Ch2 28"
     设 $E \subset \mathbf{R}, m(E) > 0$. 令
@@ -454,14 +398,11 @@ $$
 
 $\forall x \in E-E^{*},\exists\delta_{x},s.t.m\left( E\bigcap(x-\delta_{x},x+\delta_{x}) \right)=0$，利用选取有理点的技巧在 $(x-\delta_{x},x+\delta _{x})$ 中选取 $(r_{x},R_{x})\subset(x-\delta_{x},x+\delta _{x})$，然后有 $m\left( E\bigcap(r_{x},R_{x}) \right)=0$
 
-
 并且容易知道 $E-E^{*}=\bigcup\limits_{x \in E-E^{*}}\left( E\bigcap(r_{x},R_{x}) \right)$，并且为至多可数并，那么可得 $\forall x \in E-E^{*},m\left( E\bigcap(r_{x},R_{x}) \right)=0\implies m(E-E^{*})=0$
 
 这里注意零测集一定是可测的，那么 $E^{*}=E\bigcap(E-E^{*})^{c}$ 也可测
 
-
 注：本题类似 Ch1 的 13 14 52 题，都使用到了在区间内取有理点构造至多可数并的技巧，可以看出这个技巧是相当重要的
-
 
 !!! question "Ch2 29"
     设 $E \subset \mathbb{R}$ 可测， $a$ 和 $b$ 是两个实数。
@@ -499,9 +440,7 @@ $$
 
 再利用上述外测度性质$m(aG-aE)<\varepsilon$，也就是$\forall\varepsilon>0,\exists aE+b$是开集，使得$m^{*}(aG+b-F)<\varepsilon$，那么可知$F$可测
 
-
 注：这主要是将证明可测进行了一个修改，不使用定义而是使用开集的逼近性质
-
 
 ## 31-40
 
@@ -518,7 +457,6 @@ $$
 
 >Indeed, there exists an open interval I so that $m(E \cap I) \geq (9/10)m(I)$. If we denote $E \cap I$ by $E_0$, and suppose that the difference set of $E_0$ does not contain an open interval around the origin, then for arbitrarily small a the sets $E_0$ and $E_0 + a$ are disjoint. From the fact that $(E_0 \cup (E_0 + a)) \subseteq (I \cup (I + a))$ we get a contradiction, since the left-hand side has measure $2m(E_0)$, while the right-hand side has measure only slightly larger than $m(I)$.
 
-
 有了提示这个题没什么必要做。取 $m(E \cap I) \geq (9/10)m(I)$ （课本 Ex17, 老师上课讲过）, 假设 0 不是 $E_0 - E_0$ 的内点，那么存在一列趋于 0 的数列 $y_n$ 使得 $y_n \notin E_0 - E_0$, 那么 $E_0 \cap y_n + E_0$ 是空的，根据可数可加性和平移不变性可得
 
 $$
@@ -528,31 +466,17 @@ $$
 
 令 $n$ 足够大使得$y_n < \frac{1}{5}m(I)$就能导出矛盾. 因此0是$E_0 - E_0$的内点, 后者含于 $E - E$, 证毕
 
-
-
-
 !!! question "Ch2 32"
     设 $m(A) > 0, m(B) > 0$. 求证: $\{a - b : a \in A, b \in B\}$ 及 $\{a + b : a \in A, b \in B\}$ 都有内点。
-
-
-
-
-
 
 !!! question "Ch2 33"
     设 $m(E)>0$,而且只要 $x,y\in E$,就有 $\frac x+y2\in E$,求证：$E$ 有内点。
 
-
 !!! question "Ch2 34"
     (0,1) 中的数 $x$ 用十进制表示 $,x_n$ 是其第 $n$ 位小数。令 $A_9=\{x\in(0,1):\max\{x_n\}=9\}.$ 求证：$m(A_9)=1.$
 
-
 !!! question "Ch2 35"
     在题 34 中，若 $A=\{x\in(0,1):\{x_n\}$ 中只有有限个 9$\}$,求证：$m(A)=0.$
-
-
-
-
 
 !!! question "Ch2 36"
     设 $m(E)>0.$ 求证：$E$ 有不可测子集。
@@ -577,7 +501,6 @@ $m(E)>0,\exists n,s.t.m\left( E\bigcap[-n,n] \right)>0$，$\bigcup\limits_{n=1}^
 
 记 $A=E\bigcap[-n,n],\forall x \in A,A(x)=\left\{ y \in A,y-x  \in \mathbb{Q}\right\}$，那么也存在一个集合 $F$ 使得 $A=\bigcup\limits_{x\in F}A(x)$
 
-
 Step 2 仿照构造方式
 
 就是选取等价类然后像上面那样构造集合就好了，我们知道这个 $A(x_{i})$ 两两不交，那么可以构造下面的 $F_{i}$，利用测度的平移不变性
@@ -590,12 +513,9 @@ Step 3 利用不等式约束
 
 假设 $F$ 可测，$m(F_{i})=m(F)$，由可测集的可数并也可测我们知道 $\bigcup_{i}F_{i}$ 也可测，并且可以用两两不交得到 $m\left( \bigcup\limits_{i=1}^{\infty}F_{i} \right)=\sum\limits_{i=1}^{\infty}m(F_{i})$
 
-
 $$
 0<m(A)\leqslant m\left( \bigcup\limits_{n=1}^{\infty} \mathcal{N}+r_{n} \right)=\sum\limits_{n=1}^{\infty} m(\mathcal{N}+r_{n})\leqslant 6n
 $$
-
-
 
 注：我们可以凭借这个命题给出一个很有用的推论，如果$A\subset \mathbb{R}$且它的任意子集都可测那么它一定是零测集.这个命题本身也是一个相当重要的结论，它的适用性很广便于我们从它出发构造反例，导出矛盾等
 
@@ -610,15 +530,12 @@ $$
 
 根据$\bigcup\limits_{n=1}^{\infty} \left( F\bigcap E_{n} \right)=F\bigcap E$，可知$F\bigcap E$可测，而$F\bigcap([0,1]-E)\subset[0,1]-E$，而$m([0,1]-E)=0$，零测集显然可测，那么根据集合关系$F=\left( F\bigcap E \right)\bigcup\left( F\left( \bigcap[0,1]-E \right) \right)$，那么$F$可测与题设矛盾
 
-
-
 !!! question "Ch2 38"
     设$f(x)$定义在$\mathbb{R}$上，并且对任何可测集$E,f(E)$可测.求证：对任何零测集$Z,f(Z)$也是零测集.(提示：利用题 36.)
 
 `Proof.`
 
 反证，若是$m(f(Z))>0$，必可找到一个不可测子集$X\subset f(Z)$，那么$Z\bigcap f^{-1}(X)$也是零测集，那么$f\left( Z\bigcap f^{-1}(X) \right)=X$也是可测的，与题设矛盾
-
 
 !!! question "Ch2 39"
     设$f(x)$在$\mathbb{R}$上连续.求证：为使$f$把任何可测集变为可测集，充要条件是$f$把任何零测集变为零测集
@@ -634,6 +551,7 @@ $$
 $$
 f(E)=f(F)\bigcup f(G)=\left( \bigcup\limits_{n=1}^{\infty}  f(F_{n}) \right)\bigcup f(G)
 $$
+
 根据条件$f(G)$也是零测集，是可测的，现在只需要证明$f(F_{n})$也是可测的，考虑利用$f$的连续性，证明$F_{n}$是紧的，构造$F_{n_{i}}=F_{n}\bigcap[i,i+1],F_{n}=\bigcup\limits_{i=-\infty}^{\infty}F_{n_{i}}$
 
 可知$\bigcup\limits_{n=1}^{\infty}\bigcup\limits_{i=-\infty}^{\infty}F_{n_{i}}$可测(可数个闭集的并)，综上可知$f(E)$也是可测的
@@ -659,11 +577,6 @@ $$
 
 对于$\mathbb{R}$上的任意一个开集也就是一个开区间，由于构造过程中每个子区间长度为$\frac{1-\varepsilon}{3^{n}}\to 0$，无法容纳任何开区间(开集)，由外测度的单调性即可得到矛盾，所以等价的一定有某个非空开子集不于与$C$相交，即证稀疏.
 
-
-
-
-
-
 10.设 $\{E_n\}_{n \geqslant 1}$ 是可测集列,
 
 (i) 求证 $m\left(\underline{\lim}_{n \to \infty} E_n\right) \leqslant \overline{\lim}_{n \to \infty} m(E_n)$;
@@ -675,8 +588,6 @@ $$m\left(\overline{\lim}_{n \to \infty} E_n\right) \geqslant \overline{\lim}_{n 
 (iii) 若 $m\left(\bigcup_{k=1}^\infty E_k\right) < \infty$ 且 $\lim_{n \to \infty} E_n$ 存在, 求证:
 
 $$m\left(\lim_{n \to \infty} E_n\right) = \lim_{n \to \infty} m(E_n).$$
-
-
 
 21. 设 $\{E_k\}_{k \geq 1}$ 是 $[0, 1]$ 中的可测集列, 使得 $m(E_k) \to 1 (k \to \infty)$. 求证: 对任何 $0 < \lambda < 1$, 有子列 $\{E_{k_n}\}_{n \geq 1}$ 使 $m\left(\bigcap_{n=1}^\infty E_{k_n}\right) > \lambda$.
 
@@ -714,16 +625,9 @@ $$E^* = \{x \in E : \text{对任何 } \delta > 0 \text{ 有 } m(E \cap (x - \del
 
 32. 设 $m(A) > 0, m(B) > 0$. 求证: $\{a - b : a \in A, b \in B\}$ 及 $\{a + b : a \in A, b \in B\}$ 都有内点.
 
-
-
-
-
-
 33.设$m(E)>0$,而且只要$x,y\in E$,就有$\frac x+y2\in E$,求证：$E$有内点.
 
-
 34.(0,1)中的数$x$用十进制表示$,x_n$是其第$n$位小数.令$A_9=\{x\in(0,1):\max\{x_n\}=9\}.$求证：$m(A_9)=1.$
-
 
 35.在题 34 中，若$A=\{x\in(0,1):\{x_n\}$中只有有限个 9$\}$,求证：$m(A)=0.$
 
@@ -749,11 +653,17 @@ $I_1=(I_1-I_2)\bigcup(I_1\bigcap I_2)\triangleq A_1\bigcup A_2$,
 $I_2=(I_1\bigcap I_2)\bigcup(I_2-I_1-I_3)\bigcup(I_2\bigcap I_3)\triangleq A_2\bigcup A_3\bigcup A_4$,
 $I_3=(I_2\bigcap I_3)\bigcup(I_3-I_2)\triangleq A_4\bigcup A_5.$
 其中$\{A_k\}_{1\leqslant k\leqslant5}$两两不相交且$\bigcup_k=1^5A_k=\bigcup_{k=1}^3I_k.$令
+
 $$a_k=m(A_k),\quad a_k^*=m(A_k\bigcap E),\quad1\leqslant k\leqslant5.$$
+
 由于$m(I_{k}\bigcap E)\geqslant\frac{2}{3}m(I_{k})$,从而由上面 3 个恒等式得
+
 $$a_1^*+a_2^*=m(I_1\bigcap E)\geqslant\frac{2}{3}m(I_1)=\frac{2}{3}(a_1+a_2),$$
+
 $$a_2^*+a_3^*+a_4^*=m(I_2\bigcap E)\geqslant\frac{2}{3}m(I_2)=\frac{2}{3}(a_2+a_3+a_4),$$
+
 $$a_4^*+a_5^*=m(I_3\bigcap E)\geqslant\frac{2}{3}m(I_3)=\frac{2}{3}(a_4+a_5).$$
+
 由此易知 $2\sum _{k= 1}^{5}a_{k}^{* }\geqslant \frac 23\sum _{k= 1}^{5}a_{k}$,即 $m\left(E\bigcap\bigcup_{k=1}^{3}I_{k}\right)\geqslant\frac{1}{3}m\left(\bigcup_{k=1}^{3}I_{k}\right).$
 
 

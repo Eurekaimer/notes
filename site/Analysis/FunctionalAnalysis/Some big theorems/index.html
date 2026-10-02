@@ -2083,11 +2083,11 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 \frac{r}{\lambda} \le \frac{1}{2} \quad \text{or} \quad \frac{r}{\lambda} = 1
 \]</div>
 <p>因此，使得 <span class="arithmatex">\(x \in \lambda A\)</span> 成立的 <span class="arithmatex">\(\lambda\)</span> 的集合为：</p>
-<div class="arithmatex">\[ S = \{ \lambda : \lambda = r \} \cup [2r, +\infty) $$
-显然：
-$$ \inf S = \min \{ r, 2r \} = r \]</div>
-<p>因为 <span class="arithmatex">\(r = \|x\|_2\)</span>，所以我们得到：
-$$ \rho_A(x) = |x|_2 $$</p>
+<div class="arithmatex">\[ S = \{ \lambda : \lambda = r \} \cup [2r, +\infty) \]</div>
+<p>显然：</p>
+<div class="arithmatex">\[ \inf S = \min \{ r, 2r \} = r \]</div>
+<p>因为 <span class="arithmatex">\(r = \|x\|_2\)</span>，所以我们得到：</p>
+<div class="arithmatex">\[ \rho_A(x) = \|x\|_2 \]</div>
 <div class="admonition quote">
 <p class="admonition-title">Ans.</p>
 <p>PROOF. For any <span class="arithmatex">\(0 \neq x_0 \in \mathbb{R}^2\)</span>, we have that <span class="arithmatex">\(x_0 \in \|x_0\|_2 A\)</span>, which shows that <span class="arithmatex">\(\rho_A(x_0) \le \|x\|_2\)</span>. On the other hand, if <span class="arithmatex">\(\lambda &lt; \|x_0\|\)</span>, we have that <span class="arithmatex">\(\|\lambda a\| \le \lambda &lt; \|x_0\|\)</span> for each <span class="arithmatex">\(a \in A\)</span>, which implies that <span class="arithmatex">\(x_0 \notin \lambda A\)</span>. Therefore, <span class="arithmatex">\(\rho_A(x_0) = \|x_0\|_2\)</span>. <span class="arithmatex">\(\square\)</span></p>
@@ -2095,9 +2095,9 @@ $$ \rho_A(x) = |x|_2 $$</p>
 </div>
 <p><strong>(6)</strong> Let <span class="arithmatex">\(h\)</span> be a sublinear functional of a real vector space <span class="arithmatex">\(X\)</span>. Prove that <span class="arithmatex">\(\rho(x) = \max \{h(x), h(-x)\}\)</span> is a seminorm of <span class="arithmatex">\(X\)</span>.</p>
 <p><strong>(7)</strong> Let <span class="arithmatex">\(c_{00}\)</span> be the vector space of scalar sequences <span class="arithmatex">\((x_n)_n\)</span> in which at most finitely many terms <span class="arithmatex">\(x_n\)</span>'s are nonzero. Equip <span class="arithmatex">\(c_{00}\)</span> with the supnorm <span class="arithmatex">\(\|(x_n)_n\|_\infty = \sup_n |x_n|\)</span>. Let <span class="arithmatex">\(A = \{(x_n)_n \in c_{00} : |x_n| &lt; 1/n \text{ for } n = 1, 2, \dots\}\)</span>. Show that <span class="arithmatex">\(A\)</span> is an absolutely convex and absorbing set in <span class="arithmatex">\(c_{00}\)</span>, but it is not a norm neighborhood of zero.</p>
-<p><strong>(8)</strong> Show that (5.7) holds for any absorbing set <span class="arithmatex">\(V\)</span> in a TVS <span class="arithmatex">\(X\)</span>. Give examples such that both inclusions can be strict. Show that if <span class="arithmatex">\(q\)</span> is a seminorm of <span class="arithmatex">\(X\)</span> such that
-$$ {x \in X : q(x) &lt; 1} \subseteq V \subseteq {x \in X : q(x) \le 1} $$
-then <span class="arithmatex">\(q = \rho_V\)</span>.</p>
+<p><strong>(8)</strong> Show that (5.7) holds for any absorbing set <span class="arithmatex">\(V\)</span> in a TVS <span class="arithmatex">\(X\)</span>. Give examples such that both inclusions can be strict. Show that if <span class="arithmatex">\(q\)</span> is a seminorm of <span class="arithmatex">\(X\)</span> such that</p>
+<div class="arithmatex">\[ \{x \in X : q(x) &lt; 1\} \subseteq V \subseteq \{x \in X : q(x) \le 1\} \]</div>
+<p>then <span class="arithmatex">\(q = \rho_V\)</span>.</p>
 <p><strong>(9)</strong> Prove Lemma 5.2.4.</p>
 <h2 id="seperation-theorems">Seperation Theorems<a class="headerlink" href="#seperation-theorems" title="Permanent link">⚓︎</a></h2>
 <h2 id="uniform-boundness-principle">Uniform Boundness Principle<a class="headerlink" href="#uniform-boundness-principle" title="Permanent link">⚓︎</a></h2>
@@ -2108,9 +2108,9 @@ then <span class="arithmatex">\(q = \rho_V\)</span>.</p>
 <p>(1) <span class="arithmatex">\(\left\{ T_{\lambda}:\lambda\in\Lambda \right\}\)</span> is uniformly bounded;<br />
 (2) <span class="arithmatex">\(\left\{ T_{\lambda}:\lambda\in\Lambda \right\}\)</span> is pointwise bounded</p>
 <p>In other words, if for each <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(E\)</span>, there is an <span class="arithmatex">\(M(x)&gt; 0\)</span> such that</p>
-<p>$<span class="arithmatex">\(\lVert T_{\lambda}x \rVert \leqslant M(x),\forall\lambda\in\Lambda\)</span>$</p>
+<div class="arithmatex">\[\lVert T_{\lambda}x \rVert \leqslant M(x),\forall\lambda\in\Lambda\]</div>
 <p>then there is a constant <span class="arithmatex">\(0&lt;M &lt;+\infty\)</span> such that</p>
-<p>$<span class="arithmatex">\(\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda\)</span>$</p>
+<div class="arithmatex">\[\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda\]</div>
 </div>
 <p>让我们听听<code>Gemini3</code>如何零基础讲解这个定理：</p>
 <hr />
@@ -2212,11 +2212,11 @@ then <span class="arithmatex">\(q = \rho_V\)</span>.</p>
 <div class="arithmatex">\[ \|T\| = \sup_{\|x^*\|\le 1} \|T(x^*)\|_{\ell_1} = \sup_{\|x^*\|\le 1} \sum_{n=1}^\infty |x^*(x_n)| \]</div>
 <p>并且 <span class="arithmatex">\(\|T\| &lt; \infty\)</span>。 <span class="arithmatex">\(\square\)</span></p>
 </blockquote>
-<p>(3) Let <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span>, and <span class="arithmatex">\(1 &lt; q &lt; \infty\)</span> be the conjugate of <span class="arithmatex">\(p\)</span>, that is, <span class="arithmatex">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>. Let <span class="arithmatex">\(X = (C[0, 1], \|\cdot\|_p)\)</span>, where
-$$ |f|<em b_n="b_n">p = (\int_0^1 |f(x)|^p dx)^{\frac{1}{p}}, \quad \forall f \in C[0, 1]. $$
-Let <span class="arithmatex">\((b_n)_{n\in\mathbb{N}} \subseteq [0, 1], (c_n)_{n\in\mathbb{N}} \subseteq [0, 1]\)</span> with <span class="arithmatex">\(b_n \le c_n\)</span> for each <span class="arithmatex">\(n \in \mathbb{N}\)</span>. Let <span class="arithmatex">\((a_n)_{n\in\mathbb{N}} \subseteq \mathbb{K}\)</span>. For any <span class="arithmatex">\(n \in \mathbb{N}\)</span>, define <span class="arithmatex">\(x_n^* : X \to \mathbb{K}\)</span> by
-$$ x_n^*(f) = a_n \int</em> f(x)dx, \quad \forall f \in C[0, 1]. $$
-(a) Prove that }^{c_n<span class="arithmatex">\(x_n^* \in X^*\)</span> for each <span class="arithmatex">\(n \in \mathbb{N}\)</span>.
+<p>(3) Let <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span>, and <span class="arithmatex">\(1 &lt; q &lt; \infty\)</span> be the conjugate of <span class="arithmatex">\(p\)</span>, that is, <span class="arithmatex">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>. Let <span class="arithmatex">\(X = (C[0, 1], \|\cdot\|_p)\)</span>, where</p>
+<div class="arithmatex">\[ \|f\|_p = (\int_0^1 |f(x)|^p dx)^{\frac{1}{p}}, \quad \forall f \in C[0, 1]. \]</div>
+<p>Let <span class="arithmatex">\((b_n)_{n\in\mathbb{N}} \subseteq [0, 1], (c_n)_{n\in\mathbb{N}} \subseteq [0, 1]\)</span> with <span class="arithmatex">\(b_n \le c_n\)</span> for each <span class="arithmatex">\(n \in \mathbb{N}\)</span>. Let <span class="arithmatex">\((a_n)_{n\in\mathbb{N}} \subseteq \mathbb{K}\)</span>. For any <span class="arithmatex">\(n \in \mathbb{N}\)</span>, define <span class="arithmatex">\(x_n^* : X \to \mathbb{K}\)</span> by</p>
+<div class="arithmatex">\[ x_n^*(f) = a_n \int_{b_n}^{c_n} f(x)dx, \quad \forall f \in C[0, 1]. \]</div>
+<p>(a) Prove that <span class="arithmatex">\(x_n^* \in X^*\)</span> for each <span class="arithmatex">\(n \in \mathbb{N}\)</span>.
 (b) Prove that the sequence <span class="arithmatex">\((x_n^*)_{n\in\mathbb{N}} \subseteq X^*\)</span> is pointwise bounded if and only if <span class="arithmatex">\((a_n(c_n - b_n))_{n\in\mathbb{N}}\)</span> is bounded.
 (c) Prove that the sequence <span class="arithmatex">\((x_n^*)_{n\in\mathbb{N}} \subseteq X^*\)</span> is uniformly bounded if and only if <span class="arithmatex">\((a_n(c_n - b_n)^{1/q})_{n\in\mathbb{N}}\)</span> is bounded.
 (d) Prove that we can find <span class="arithmatex">\((z_n^*)_{n\in\mathbb{N}} \subseteq X^*\)</span> pointwise bounded which is not uniformly bounded.</p>

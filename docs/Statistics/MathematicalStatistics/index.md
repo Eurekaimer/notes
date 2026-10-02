@@ -3,8 +3,6 @@ tags:
   - 统计学
 ---
 
-
-
 # 数理统计 (Lecture)
 
 !!! tldr "课程简介"
@@ -30,21 +28,13 @@ tags:
  + 推荐资源
 	 + [USTC 的 B 站网课](https://www.bilibili.com/video/BV1Zq4y1C7Bs?spm_id_from=333.788.videopod.episodes&vd_source=483c12ed150608294868953a0c6e7078)
 
-
 准备做一个整合笔记和 tex 讲义（with 茆）
 
 ## [基本概念](./Assets/基本概念.md)
 
-
-
 ## [点估计](./Assets/点估计.md)
 
-
-
 ## [点估计](./Assets/点估计.md)
-
-
-
 
 ## 作业部分
 
@@ -52,21 +42,11 @@ tags:
 
 总的来说留下的作业质量还是稍微高一些的，其中有一些比较经典的问题也会专门摘录出来整理成 markdown 文档和 LaTeX 笔记的形式发布。
 
-
-
 ## 往期试卷
-
-
 
 + [25 数理统计期中](./Assets/25数理统计期中.md)
 
-
-
-
-
 ## 祖师爷归位
-
-
 
 ![Fisher](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/R.A.Fisher.jpg)
 

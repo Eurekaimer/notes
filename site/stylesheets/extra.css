@@ -192,8 +192,8 @@ button.md-top {
   font-weight: 400;
 }
 
-/* ---------------------------------------------------------------- 首页卡片 */
-.blog-card-container {
+/* 卡片选择器高于主题的 .md-typeset img，避免样式加载顺序改变封面高度。 */
+.md-typeset .blog-card-container {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -209,15 +209,17 @@ button.md-top {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.blog-card-container:hover {
+.md-typeset .blog-card-container:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   border-color: var(--md-accent-fg-color);
 }
 
-.blog-card-left {
+.md-typeset .blog-card-left {
   width: 220px;
-  min-width: 220px;
+  min-width: 0;
+  flex: 0 0 220px;
+  box-sizing: border-box;
   height: 100%;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -225,7 +227,7 @@ button.md-top {
   margin-right: 20px;
 }
 
-.blog-card-left img {
+.md-typeset .blog-card-left > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -233,7 +235,8 @@ button.md-top {
   margin: 0;
 }
 
-.blog-card-right {
+.md-typeset .blog-card-right {
+  min-width: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -241,7 +244,7 @@ button.md-top {
   padding-right: 10px;
 }
 
-.blog-card-title {
+.md-typeset .blog-card-title {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
@@ -251,7 +254,7 @@ button.md-top {
   color: var(--md-typeset-color);
 }
 
-.blog-card-desc {
+.md-typeset .blog-card-desc {
   font-size: 0.95rem;
   opacity: 0.8;
   line-height: 1.6;
@@ -261,7 +264,7 @@ button.md-top {
   overflow: hidden;
 }
 
-.blog-card-link {
+.md-typeset .blog-card-link {
   position: absolute;
   top: 0;
   left: 0;
@@ -277,12 +280,13 @@ body:has(.blog-card-container) .md-grid {
 }
 
 @media (max-width: 768px) {
-  .blog-card-container {
+  .md-typeset .blog-card-container {
     height: auto;
     flex-direction: column;
   }
 
-  .blog-card-left {
+  .md-typeset .blog-card-left {
+    flex-basis: auto;
     width: 100%;
     height: 180px;
     margin-right: 0;

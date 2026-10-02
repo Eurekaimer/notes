@@ -15,10 +15,6 @@ tags:
 +《Real Analysis》Folland
 +《Real Analysis》Stein
 
-
-
 ## 课程笔记
-
-
 
 ### [第 1 章 集合与实数集](./第1章 集合与实数集.md)

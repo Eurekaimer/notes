@@ -1,6 +1,5 @@
 # Hilbert Spaces
 
-
 !!! tldr "Outline"
     + Basic properties  
     + Best approximation  
@@ -19,7 +18,9 @@
 
 !!! note "Definition (Inner Product)"
     Let $E$ be a vector space over $\mathbb{K}$. A function
+
     $$ \langle \cdot, \cdot \rangle : E \times E \to \mathbb{K} $$
+
     is said to be an *inner product* of $E$ if
 
     1.  $\langle x, x \rangle \ge 0$ for all $x \in E$; and $\langle x, x \rangle = 0$ if and only if $x = 0$;
@@ -34,7 +35,6 @@
 + 正定性
 + 共轭对称性
 + 对第一变元的线性，实际上对于第二变元是共轭线性的也就是 $\langle x,\lambda y\rangle= \overline{\lambda}\langle x,y\rangle$
-
 
 !!! note "Definition(Hilbert空间)"
     通过内积诱导的范数 $\lVert x \rVert=\sqrt{ \langle x,x\rangle }$，如果内积空间在该范数下完备则称其为 Hilbert 空间
@@ -53,7 +53,6 @@
 证明手法可以采用非常经典的引入参数构造二次型和判别式方法，主要是利用内积的正定性质然后移项即可，在此不赘述了
 
 再给出内积的连续性概念
-
 
 !!! note "Continuity of inner product"
     Let $x_{n},y_{n},x,y$ be elements of an inner product space $E$, $n=1,2,\dots$ and
@@ -76,7 +75,6 @@ $$
 
 因此可以很容易得到 $n\to \infty,\lvert \langle x,y\rangle-\langle x_{n},y_{n}\rangle \rvert\to 0$
 
-
 下面给出能够判断一个空间是否由内积定义的重要定理——平行四边形定理
 
 !!! tip "Paralletlogram Law"
@@ -89,12 +87,14 @@ $$
 **方向一：$(\Rightarrow)$ 若范数由内积定义**
 
 这是显然的。直接利用内积展开范数定义 $\|x\|^2 = \langle x, x \rangle$：
+
 $$
 \begin{aligned}
 \|x+y\|^2 &= \langle x+y, x+y \rangle = \|x\|^2 + \langle x, y \rangle + \langle y, x \rangle + \|y\|^2 \\
 \|x-y\|^2 &= \langle x-y, x-y \rangle = \|x\|^2 - \langle x, y \rangle - \langle y, x \rangle + \|y\|^2
 \end{aligned}
 $$
+
 两式相加，交叉项抵消，立刻得到 $2(\|x\|^2 + \|y\|^2)$。
 
 **方向二：$(\Leftarrow)$ 若范数满足平行四边形法则**
@@ -110,6 +110,7 @@ $$
     由方向一的展开式可知：
     $\|x+y\|^2 - \|x-y\|^2 = 2\langle x, y \rangle + 2\langle y, x \rangle = 4\langle x, y \rangle$ （利用实内积对称性）。
     于是我们可以定义：
+
     $$ \langle x, y \rangle = \frac{1}{4} (\|x+y\|^2 - \|x-y\|^2) \quad (3.2) $$
 
     **情形 B：若 $\mathbb{K} = \mathbb{C}$ （复数域）**
@@ -117,11 +118,15 @@ $$
     考虑展开式：
     $\|x + i^k y\|^2 = \|x\|^2 + i^k \langle y, x \rangle + i^{-k} \langle x, y \rangle + \|y\|^2$。
     对 $k=0, 1, 2, 3$ 求和，并乘以 $i^k$：
+
     $$ \sum_{k=0}^3 i^k \|x + i^k y\|^2 = \sum_{k=0}^3 i^k (\|x\|^2 + \|y\|^2) + \langle y, x \rangle \sum_{k=0}^3 i^{2k} + \langle x, y \rangle \sum_{k=0}^3 i^0 $$
+
     利用 $\sum_{k=0}^3 i^k = 0$ 和 $\sum_{k=0}^3 i^{2k} = 1-1+1-1=0$，只剩下最后一项 $4\langle x, y \rangle$：
 
     于是，我们**定义**复空间上的内积为：
+
     $$ \langle x, y \rangle = \frac{1}{4} \sum_{k=0}^3 i^k \|x + i^k y\|^2 \quad (3.3) $$
+
     这两个公式 (3.2) 和 (3.3) 被称为 **极化恒等式**。
 
 2. 验证构造出的函数是内积
@@ -161,7 +166,9 @@ $$
 $$ \text{Re}\langle x+z, y \rangle + \text{Re}\langle x-z, y \rangle = 2\text{Re}\langle x, y \rangle $$
 
 在此式中，令 $z=x$，则 $\text{Re}\langle 2x, y \rangle + \text{Re}\langle 0, y \rangle = 2\text{Re}\langle x, y \rangle$。由于 $\text{Re}\langle 0, y \rangle = \frac{1}{4}(\|y\|^2 - \|-y\|^2) = 0$，故：
+
 $$ \text{Re}\langle 2x, y \rangle = 2\text{Re}\langle x, y \rangle $$
+
 现在，利用这个性质回到 (3.6)。令 $u = x+z, v = x-z$，则 $x = \frac{u+v}{2}, z = \frac{u-v}{2}$。
 
 代入 (3.6) 式（或者如书中操作，将 $x$ 替换为 $\frac{1}{2}(x+z)$，将 $z$ 替换为 $\frac{1}{2}(x-z)$）：
@@ -181,7 +188,9 @@ $$ \langle x+z, y \rangle = \langle x, y \rangle + \langle z, y \rangle $$
 2.  **实数**：
     由于范数函数 $\|\cdot\|$ 是连续的，由 (3.3) 定义的内积函数也是连续的
     利用连续性，从 $\mathbb{Q}$ 推广到 $\mathbb{R}$：
+
     $$ \langle \alpha x, y \rangle = \alpha \langle x, y \rangle, \quad \forall \alpha \in \mathbb{R} $$
+
 3.  **复数（虚数单位 $i$）**：
     我们还需要验证 $\langle ix, y \rangle = i\langle x, y \rangle$
     利用定义 (3.5)：
@@ -195,9 +204,11 @@ $$ \langle x+z, y \rangle = \langle x, y \rangle + \langle z, y \rangle $$
     $$
 
     另一方面：
+
     $$
     i\langle x, y \rangle = i(\text{Re}\langle x, y \rangle - i \text{Re}\langle ix, y \rangle) = i \text{Re}\langle x, y \rangle + \text{Re}\langle ix, y \rangle
     $$
+
     两者相等！因此 $\langle \alpha x, y \rangle = \alpha \langle x, y \rangle$ 对所有 $\alpha \in \mathbb{C}$ 成立
 
 第三步：验证正定性与共轭对称
@@ -208,9 +219,6 @@ $$ \langle x+z, y \rangle = \langle x, y \rangle + \langle z, y \rangle $$
     $\langle x, y \rangle = \overline{\langle y, x \rangle}$ 是由范数对称性 $\|x+y\|=\|y+x\|$ 直接得到的平凡结果
 
 ## Exercise 3.1
-
-
-
 
 !!! question "(6)HW4-1"
     Let $H$ be an inner product space.
@@ -227,6 +235,7 @@ $$ \langle x+z, y \rangle = \langle x, y \rangle + \langle z, y \rangle $$
 `Proof.`
 
 (a)
+
 $$
 \begin{aligned}
 \lVert a'-b' \rVert ^{2}&= \left\lVert  \frac{a}{\lVert a \rVert ^{2}}- \frac{b}{\lVert b \rVert ^{2}}  \right\rVert ^{2}\\
@@ -259,20 +268,17 @@ $$
 
 第二个不等式根据三角不等式是显然的，因此可以逆推回去，得证
 
-
-
 !!! question "(8)HW4-2"
     If $H$ is a Hilbert space and $M$ is a closed subspace of $H$, show that $H \texttt{/} M$ is also a Hilbert space.
 
-
 我们应当先知道赋范空间的商范数如何定义，可以参考[planetmath](https://planetmath.org/quotientnorm)
-
 
 !!! quote "quotient norm"
     Let $V$ be a normed vector space with norm $\lVert \cdot \rVert$. Let $M$ be a closed subspace of $V$ and $V / M$ the quotient vector space.
     The norm $\lVert \cdot \rVert$ induces a norm $\lVert \cdot \rVert_{V / M}$ in $V / M$, called the quotient norm, given by
 
     $$\lVert v+M \rVert _{V / M}:= \inf\limits_{u\in v+M}\lVert u \rVert =\inf\limits_{m\in M}\lVert v+m \rVert $$
+
     $\mathbf{Theorem}$-$\lVert \cdot \rVert_{V / M}$ is a norm in $V / M$ iff $M$ is closed in $V$
 
 $\mathbf{Method 1}$
@@ -284,7 +290,6 @@ $$
 $$
 
 再说明这个范数符合平行四边形定则即可说明可定义内积在 $H/ M$ 上
-
 
 $\mathbf{Method2}$
 
@@ -324,17 +329,14 @@ $$
 
 由于 $M^{\perp}$ 是 $H$ 的闭合子空间，因此它也是完备的内积空间（继承内积），所以仍然是 Hilbert 空间，再利用等距同构，$H /M$ 继承了 $M^{\perp}$ 的完备性和内积（可以利用 $T^{-1}$ 定义 $H /M$ 上的内积），因此 $H /M$ 是完备的内积空间，是 Hilbert 空间
 
-
 ## Best approximation
 
 我们还想要研究关于最小距离的概念，利用几何的观点先给出最优逼近的定义：
-
 
 !!! note "Definition(Best approximation)"
     The distance from $x$ to $B$ is defined as $d(x,B)=\inf\limits_{y\in B}d(x,y)$，if there is an $\tilde{x}\in B$ such that $d(x, \tilde{x})=d(x,B)$, we call $\tilde{x}$ is a best approximation of $x$ in $X$ from $B$, or a best approximate element.
 
 下面给出最优逼近定理，在 Hilbert 空间中选取一个闭凸子集，在补集中选取任意一点，我们一定能够在闭凸子集中选取到其的最优逼近元
-
 
 !!! tip "Theorem"
     Let $B$ be a nonempty closed convex subset of a Hilbert space $H$. Let $x\in H\setminus B$. Then there exists a unique $\tilde{x}$ in $B$ such that
@@ -381,21 +383,31 @@ $$ \text{Re}\langle x - u, v - u \rangle + \text{Re}\langle y - v, u - v \rangle
 调整项的符号（利用内积线性）：
 
 $$ \text{Re}\langle u - x, u - v \rangle + \text{Re}\langle y - v, u - v \rangle \le 0 $$
+
 $$ \text{Re}\langle (u - x) + (y - v), u - v \rangle \le 0 $$
+
 $$ \text{Re}\langle (u - v) - (x - y), u - v \rangle \le 0 $$
+
 展开内积：
+
 $$ \|u - v\|^2 - \text{Re}\langle x - y, u - v \rangle \le 0 $$
+
 即：
+
 $$ \|u - v\|^2 \le \text{Re}\langle x - y, u - v \rangle $$
+
 由 Cauchy-Schwarz 不等式，$\text{Re}\langle x - y, u - v \rangle \le |\langle x - y, u - v \rangle| \le \|x - y\| \|u - v\|$。
 因此：
+
 $$ \|u - v\|^2 \le \|x - y\| \|u - v\| $$
+
 消去一个 $\|u - v\|$（若为 0 则显然成立），得：
+
 $$ \|u - v\| \le \|x - y\| $$
+
 即 $\|P_B x - P_B y\| \le \|x - y\|$。证毕。
 
 ## Exercise 3.2
-
 
 !!! question "(4)HW5-1"
     Show that the projection map $P_{B}$ of a nonempty closed convex subset of a Hilbert space $H$ is linear if and only if $B$ is a vector subspace of $H$.
@@ -421,11 +433,6 @@ $\forall x_{1},x_{2}\in H,\alpha\in \mathbb{K},x_{1}=b_{1}+z_{1},x_{2}=b_{2}+z_{
 同理有 $P_{B}(\alpha x_{1})=\alpha b_{1}=\alpha P_{B}(x_{1})$，综上可知线性
 
 结合两边得知：$P_{B}$ 是线性的当且仅当 $B$ 是 $H$ 的一个向量子空间
-
-
-
-
-
 
 ## Orthogonal Decomposition
 
@@ -490,10 +497,6 @@ $\forall x_{1},x_{2}\in H,\alpha\in \mathbb{K},x_{1}=b_{1}+z_{1},x_{2}=b_{2}+z_{
 
 ## Exercise 3.3
 
-
-
-
-
 !!! question "(4)HW5-2"
     For the Hilbert space $L^{2}[0,1]$, let
 
@@ -511,9 +514,6 @@ $$
 d(f_{0},M)=d(f_{0},\left\{ 1 \right\} ^{\perp})=\lvert \langle f_{0},1 \rangle \rvert =\int_{0}^{1} e^{x} \, dx =e-1
 $$
 
-
-
-
 !!! question "(5)HW5-3"
     Show that if $\langle x,y\rangle=0$ if and only if
     (i) $\lVert x+\alpha y \rVert \geqslant \lVert x \rVert$ for every $\alpha\in \mathbb{K}$ or
@@ -529,8 +529,6 @@ $$
 
 必要性，当 $\langle x,y\rangle=0$ 时是显然的，可以得到 $\lVert x+\alpha y \rVert^{2}=\lVert x \rVert^{2}+\lvert a \rvert^{2}\lVert y \rVert^{2}\geqslant\lVert x \rVert^{2}$
 
-
-
 充分性，如果 $\lVert x+\alpha y \rVert\geqslant \lVert x \rVert$ 对于任意的 $\alpha\in \mathbb{K}$ 均成立，若是 $\langle x,y\rangle\neq0$，那么显然可以通过取 $\alpha= \frac{-2\mathrm{Re[\langle x,y\rangle]}}{\lVert y \rVert^{2}}\in \mathbb{R}$ 使得 $2\alpha \mathrm{Re}[\langle x,y\rangle]+\lvert a \rvert^{2}\lVert y \rVert^{2}< 0$，与条件矛盾，由此得出必须有 $\mathrm{Re}[\langle x,y\rangle]=0$，再取 $\alpha=i\beta$，可以类似的得到矛盾，由此可知 $\mathrm{Im}[\langle x,y\rangle]=0$，由此 $\langle x,y\rangle=0$
 
 (ii)
@@ -538,7 +536,6 @@ $$
 $$
 \lVert x-\alpha y \rVert ^{2}=\langle x-\alpha y,x-\alpha y\rangle=\lVert x \rVert ^{2}-2\mathrm{Re}[\alpha\langle x,y\rangle]+\lvert a \rvert ^{2}\lVert y \rVert ^{2}
 $$
-
 
 必要性，同 (i) 可知，当 $\langle x,y\rangle=0$ 时是显然的
 
@@ -551,15 +548,6 @@ $$
 如果 $\mathbb{K}=\mathbb{R}$，那么已经可以得到 $\langle x,y\rangle=0$，如果 $\mathbb{K}=\mathbb{C}$，需要额外使用 $\alpha=1,\alpha=i$ 得到实部和虚部均为 $0$，即 $\langle x,y\rangle=0$
 
 ## Orthonormal basis
-
-
-
-
-
-
-
-
-
 
 ## Exercise 3.4
 

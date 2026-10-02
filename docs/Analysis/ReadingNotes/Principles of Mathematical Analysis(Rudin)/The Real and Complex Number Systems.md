@@ -17,16 +17,13 @@ The rational number system is **inadequate** for many purposes,both as a field a
 
 We can use a sequence that is made of infinite decimal expansions to approximate the **irrational numbers** "actually $\sqrt{ 2 }$"
 
-
 $$
 1,1.4,1.41,1.414,1.4142,\dots
 $$
 
-
 it "tends to $\sqrt{ 2 }$" if we know the irrational number.
 
 But without the definition of irrational number, we can't answer the question : What is it that this sequence "tends to"?
-
 
 **Statement:** There is no rational $p$ satisfied the equation $p^{2}=2$
 
@@ -41,7 +38,6 @@ More explicity,for every $p$ in A we can find a rational $q$ in A such that $p<q
 
 A structure quite elegant:
 
-
 $$
 \begin{align}
 q=p- \frac{p^{2}-2}{p+2}= \frac{2p+2}{p+2} \\
@@ -49,9 +45,7 @@ q^{2}-2= \frac{2(p^{2}-2)}{(p+2)^{2}}
 \end{align}
 $$
 
-
 If $p$ is in A then $p^{2}-2<0$ ,shows that $q>p$,and shows that $q^{2}<2$.
-
 
 **Thinking:** How to construct this $q$ looks difficult?
 
@@ -62,7 +56,6 @@ To make an appropriate approximation, we should clearify our goal first(what con
 1. it must bigger than p(only think about the situation $p^{2}<2$).
 2. $q^{2}<2$,too.
 
-
 $$
 \begin{align}
 q & <p+\sqrt{ 2 }-p=\sqrt{ 2 } \\
@@ -70,9 +63,7 @@ q & <p+ \frac{2-p^{2}}{\sqrt{ 2 }+p}
 \end{align}
 $$
 
-
 that's a draft and the other situation is the same. $q>p-(p-\sqrt{ 2 })=p+ \frac{2-p^{2}}{\sqrt{ 2 }+p}$ ,you will find the numerator be control by (2-$p^{2}$) ,and we actually can use any number bigger than $\sqrt{ 2 }$ to displace the 2 in the Rudin's book.
-
 
 **Remark:**
 The rational number system has certain gaps,if $r<s$ then $r< \frac{r+s}{2}<s$,the real number system fills these gaps.
@@ -90,11 +81,9 @@ Throughout Chap.1,the set of all rational numbers will be denoted by $\mathbb{Q}
 Let $S$ be a set.An *order* on $S$ is a relation,denoted by <,with the following two properties:
 (1) If $x\in S$ and $y \in S$ then only one of the statements is true.
 
-
 $$
 x<y,x=y,y<x
 $$
-
 
 (2) If $x,y,z\in S$ , if $x<y$ and $y<z$ ,then $x<z$.
 "$x<y$" may be read as "x is less than y" or "x is smaller than y" or "x precedes y".
@@ -116,7 +105,6 @@ If there exists a $\beta \in S$ such that $x\le \beta$ for every $x\in E$,we say
 and we write $\alpha=sup\ E$
 Like it,we can define the *greatest lower bound*,or *infimum*.We write (in convenient we use a letter different from the $\alpha$) $\beta=inf\ E$
 
-
 **Examples**
 **(a)** The set A is bounded above and has no least upper bound in $\mathbb{Q}$
 Back to the example 1.1 and consider A and B as subsets of the ordered set $\mathbb{Q}$,we may get (a) in the following three conclusions.
@@ -136,7 +124,6 @@ The example in (a) shows that $\mathbb{Q}$ does not have the least-upper-bound p
 every ordered set with the least-upper-bound property also has the greatest-lower-bound property.
 We can summary it as a theorem.(**We should discuss the set with least-upper-bound property**)
 
-
 **Theorem**
 Suppose $S$ is an ordered set with the least-upper-bound property,$B\subset S$,B is not empty,and B is bounded below.Let L be the set of all lower bounds of B.Then $\alpha=sup\ L$ exists in $S$ ,and $\alpha=inf\ B$.In particular,$inf\ B$ exists in $S$.
 
@@ -155,7 +142,6 @@ Due to the definition of supremum,think about two situations(left and right):
 Some words:I think I should not write the definitions in my note or write very simplely, they waste the time!
 Another some words: the author skip one or two logical explaination sentence in one conclusion.
 
-
 # Fields
 
 Q&A
@@ -173,39 +159,7 @@ Use the filed axioms to prove some familiar properties of $\mathbb{Q}$ , such th
 
 Give one example for each axioms.(Others can found in the book)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # The Real Field
-
-
-
-
-
 
 **Remark:**
 This chapter's notes is too long and like copy the rudin's book. I will change the way in next chapters (but on the other word,is it a proof for the book is good?)

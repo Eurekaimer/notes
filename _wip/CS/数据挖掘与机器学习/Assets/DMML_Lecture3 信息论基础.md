@@ -1,12 +1,10 @@
  # Chapter 3 信息论基础
 
-
 !!! tldr "Outline"
     + 引言
     + 信息熵
     + KL 散度：分布差异的度量
     + 互信息：变量相关性的度量
-
 
     !!! quote "References"
         + [Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf)
@@ -26,10 +24,8 @@
 + 信道编码
 + 有损压缩
 
-
 !!! tip "扩展"
     关于上述的这三个例子在 Stanford 的 Notes 的后续章节中都有一个 Chapter 进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入的了解的话，建议仔细阅读后续的章节
-
 
 ### Lossless compression
 
@@ -49,7 +45,6 @@ $$
 $$
 
 Can we do it better? Yes! We can encode two values at a time instead of encoding each value individually.
-
 
 | source symbols | probability | encoding |
 | -------------- | ----------- | -------- |
@@ -75,7 +70,6 @@ $$
 
 >Note that the statements of the theorems here will be informal; they will be made rigorous in later lectures.
 
-
 !!! tip "Theorem"
     $\forall$ families of encoding schemes, the average codeword length, $\overline{L}\geqslant H(U)$
 
@@ -96,18 +90,17 @@ $\forall \varepsilon >0$, $\exists$ family of schemes, such that the average cod
 $$
 Y_{i}=X_{i} \oplus W_{i},W_{i}\sim Ber(q)
 $$
+
 where $\oplus$ is the $XOR$ operator
 
 令$p_{e}=q< \frac{1}{2}$作为每个信源比特发生错误的概率，自然会想到我们希望能够降低$p_{e}$的值，我们可以采用重复编码的方法，例如对某个接收到的比特发送$k$次，将其中接收到的出现次数最多的比特作为真实值接受，由此可以降低错误发生率
 
 但是我们还需要考虑重复编码使用的信道空间扩大的问题，因此引入比特率(bit rate)的概念，记为$R$，在重复发送3次的例子中我们认为比特率为$\frac{1}{3}$，而不重复编码时比特率为$1$
 
-
 !!! tip "Theorem(Bit rate limitation)"
     $\exists C>0$ and $\exists$ family of schemes with $R<C$ satisfying $p_{e}\to 0$
 
 In fact, the largest such C is known as the **channel capacity** of a channel, which represents the largest bit rate ( the largest C ) that still allows for reliable communication.
-
 
 !!! example "Two examples"
     + Binary Symmtric Channel
@@ -116,7 +109,6 @@ In fact, the largest such C is known as the **channel capacity** of a channel, w
     Assumptions are like before, and we think $Y_{i}=X_{i}+N_{i},N_{i}\sim N(0,\sigma^{2})$. We want to develop a scheme so that we can reliably reconstruct $U_i$ from the given $Y_i$. One idea is make $X_{i}$ a large positive value if $U_{i}=1$ and $X_i$ is a large negative value if $U_{i}=0$. Usually, we suppose there is an additional constraint on the average power of the tansmitted signal, s.t. we require $\frac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{2}\leq p$
 
 For a given value $p$, in fact, we will see that
-
 
 !!! tip "Theorem"
     If the rate of transmission is $< \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then $\exists$ family of schemes that communicate reliably. And if the rate of transmission is $> \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then there is no family of schemes which communicates reliably.
@@ -163,7 +155,6 @@ $$
 
 ### What is information theory
 
-
 !!! quote "Background"
     信息论由Claude Shannon(1916 - 2001)于1948年创立，核心任务是研究信息如何量化、存储与运输，探索其基本极限
 
@@ -176,7 +167,6 @@ $$
     所以我们可以认为信息论=研究如何度量与利用信息的不确定性
 
     几个典型应用：特征选择、模型评估、正则化、生成模型
-
 
 !!! tip "信息量的三大规律"
      1. 函数性： $I(x_{i})=f[p(x_{i})]$
@@ -191,7 +181,6 @@ $$
 
 在详细的介绍熵之前，我们有必要先引入惊奇函数(surprise function)
 
-
 !!! note "Definition(surprise function)"
     这个函数用于衡量对于结果的“惊奇程度”，故名思义，该事件发生的概率越小，惊奇函数的值越大
 
@@ -202,7 +191,6 @@ $$
 >The fundamental concept behind Shannon entropy is the so-called self-information of an event, sometimes called surprisal.
 
 ### 自信息(Self-Information)
-
 
 !!! note "Definition(Self-information)"
     对于离散随机变量$X$取值$x$，其自信息为：
@@ -218,11 +206,9 @@ $$
 + 确定事件
 + 不可能事件
 
-
 ### 香农熵
 
 我们从上面可以知道自信息是衡量单个事件发生的惊讶度，而香农熵$H(X)$则用于衡量整个随机变量的平均不确定性，也叫做微分熵，信息熵
-
 
 !!! note "Definition(香农熵)"
     离散随机变量的香农熵:
@@ -252,6 +238,7 @@ H(U)&=\mathbb{E}\left[ \log \frac{1}{p(u)} \right]\\
 &=\log m(WLOG,\mathcal{U}=\left\{ 1,2\dots m \right\} )
 \end{aligned}
 $$
+
 根据Jensen不等式的取等条件当且仅当$P(u)= \frac{1}{m}\forall u$
 
 对于一个概率质量函数$q$，被当作$p$定义在相同的字母表，定义
@@ -259,11 +246,13 @@ $$
 $$
 H_{q}(U)\overset{\Delta}{=}\sum\limits_{u\in \mathcal{U}}p(u) \log \frac{1}{q(u)}
 $$
+
 这个时候我们会更加“惊奇”，数学形式上就是：
 
 $$
 H(U)\leqslant H_{q}(U)
 $$
+
 当且仅当$q=p$时取等
 
 `Proof.`
@@ -280,19 +269,14 @@ $$
 
 所以不妨先写下定义(剧透)：
 
-
 !!! note "Definition(Relative Entropy/KL divergence)"
     An important measure of distance between probability measures is relative entropy, or the $Kullback-Leibler$ divergence
 
     $$D(p||q)\overset{\Delta}{=}\sum\limits_{u\in \mathcal{U}}p(u)\log \frac{p(u)}{q(u)}=\mathbb{E}\left[ \log \frac{p(u)}{q(u)} \right]$$
 
-
-
-
 更加深入的内容在后续补充
 
 ### 联合熵(Joint Entropy)
-
 
 !!! note "Definition(Joint Entropy)"
     设$(X,Y)$是联合离散随机变量，其联合分布为$p(x,y)$
@@ -301,9 +285,7 @@ $$
 
 联合熵是用于衡量同时观测$X,Y$的不确定性，若是两个随机变量相互独立，显然可以得到$H(X,Y)=H(X)+H(Y)$，推广到任意多个随机变量的联合熵(Obviously)
 
-
 ### 条件熵(Conditional Entropy)
-
 
 !!! note "Definition(Conditional Entropy)"
     条件熵$H(Y|X)$定义为(一般使用第二个表达式)：
@@ -314,7 +296,6 @@ $$
     \end{aligned}$$
 
 也相当显然，表示已知$X$的条件下，$Y$仍然存在的不确定性，若$X,Y$独立，则$H(Y|X)=H(Y)$，若是$Y$由$X$决定则$H(Y|X)=0$
-
 
 !!! tip "联合熵与条件熵的关系"
     可以将这些信息熵当作概率处理，而条件熵就对应条件概率，因此我们可以提出一套链式法则(Chain Rule for Entropy)：
@@ -330,7 +311,6 @@ $$
 相当于它们所共有的一部分信息，而互信息就是为了衡量通过已知一个变量来减少另一个变量不确定性的量
 
 ## $KL$散度
-
 
 !!! tip "$KL\ Divergence$(Kullback and Leibler, 1951)"
     用于衡量真实分布$P$与近似分布$Q$之间的差异：
