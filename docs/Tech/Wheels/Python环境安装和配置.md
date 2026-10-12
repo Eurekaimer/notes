@@ -7,7 +7,7 @@ tags:
 
 + Python 本体安装
 + pip 配置
-+ 安装 Pycharm
++ 安装 PyCharm
 + VSC 的 Python 环境配置
 + Anaconda 安装与配置
 
@@ -37,13 +37,13 @@ pip config list
 global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
 ```
 
-## Vscode
+## VSCode
 
-我比较倾向于在 Vscode 中使用 Python，只需要在扩展栏中输入 Python 然后选择安装数量最大的那个（起码现在是）扩展，即可使用
+我比较倾向于在 VSCode 中使用 Python，只需要在扩展栏中输入 Python 然后选择安装数量最大的那个（起码现在是）扩展，即可使用
 
-## 安装 Pycharm
+## 安装 PyCharm
 
->我高中比较喜欢的 IDE，但是后面因为 VSCODE 的强大而弃用，但是时常有人问我怎么装干脆也写一下
+>我高中比较喜欢的 IDE，但是后面因为 VSCode 的强大而弃用，但是时常有人问我怎么装，干脆也写一下
 
 直接去官网下载[免费的](https://www.jetbrains.com/pycharm/download/?section=windows)，后续的步骤只是阅读英文
 

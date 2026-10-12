@@ -2164,7 +2164,7 @@
 <h1 id="week-2">Week 2<a class="headerlink" href="#week-2" title="Permanent link">⚓︎</a></h1>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">⚓︎</a></h2>
 <p>先看 Videos 再看 Reading，需要注意的是 Ch 1.6 内容很多，每天的 Videos 只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完 Videos 再看 Reading</p>
-<p>大致需要 6h 完成（不包括 project）</p>
+<p>大致需要 6 h 完成（不包括 project）</p>
 <h2 id="videos2h">Videos(2h)<a class="headerlink" href="#videos2h" title="Permanent link">⚓︎</a></h2>
 <h3 id="control">Control<a class="headerlink" href="#control" title="Permanent link">⚓︎</a></h3>
 <h4 id="multiple-environments">Multiple Environments<a class="headerlink" href="#multiple-environments" title="Permanent link">⚓︎</a></h4>
@@ -2277,9 +2277,9 @@
 <span class="n">result</span> <span class="o">=</span> <span class="n">apply_twice</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="environments-for-nested-definitions">Environments for Nested Definitions<a class="headerlink" href="#environments-for-nested-definitions" title="Permanent link">⚓︎</a></h4>
-<p>Mainly about how to draw environment diagram and decide the parent frame of any function.</p>
+<p>Mainly about how to draw an environment diagram and determine the parent frame of any function.</p>
 <h4 id="local-names">Local names<a class="headerlink" href="#local-names" title="Permanent link">⚓︎</a></h4>
-<p>Formal parameters of functions have a local scope means that if we call a function but the parameter of it doesn't be defined in local frame, it will cause an error.</p>
+<p>Formal parameters of functions have a local scope, which means that if we call a function but its parameter is not defined in the local frame, it will cause an error.</p>
 <h4 id="function-composition">Function Composition<a class="headerlink" href="#function-composition" title="Permanent link">⚓︎</a></h4>
 <p>Use some simple functions to compose a big function.</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">compose1</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
@@ -2301,8 +2301,8 @@
 
 <span class="n">curry2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span> <span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="k">lambda</span> <span class="n">y</span> <span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
-<p>Here should be an environment diagram but none.</p>
-<p>more clear case:</p>
+<p>There should be an environment diagram here, but there is none.</p>
+<p>A clearer case:</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">curried_pow</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -2322,10 +2322,10 @@
 <blockquote>
 <p>Functions are an essential ingredient of all programs, large and small, and serve as our primary medium to express computational processes in a programming language.</p>
 </blockquote>
-<p>Good functions should obey following guidelines:</p>
+<p>Good functions should obey the following guidelines:</p>
 <ul>
-<li>only excute one job</li>
-<li>Don't repeat yourself(DRY)</li>
+<li>only execute one job</li>
+<li>Don't repeat yourself (DRY)</li>
 <li>define generally</li>
 </ul>
 <blockquote>
@@ -2333,7 +2333,7 @@
 </blockquote>
 <p>When you call help with the name of a function as an argument, you see its docstring (type q to quit Python help).</p>
 <p>例如：<code>help(function name)</code> 就会给出文档说明</p>
-<p>Comment will be passed by complier but can be read by person.</p>
+<p>Comments will be skipped by the compiler but can be read by a person.</p>
 <p><code># comments</code></p>
 <blockquote>
 <p>As a guideline, most data values used in a function's body should be expressed as default values to named arguments, so that they are easy to inspect and can be changed by the function caller. Some values that never change, such as the fundamental constant k, can be bound in the function body or in the global frame.</p>
@@ -2347,7 +2347,7 @@
 2. suite
 3. clause</p>
 <p><strong>Practical Guidance.</strong> When indenting a suite, all lines must be indented the same amount and in the same way (use spaces, not tabs). Any variation in indentation will cause an error.</p>
-<p>Some defines:
+<p>Some definitions:
 1. Local assignment
 2. Conditional statements
 3. Boolean contexts
@@ -2396,14 +2396,14 @@
 <p>还需要注意环境和函数的关系</p>
 <h4 id="newtons-method">Newton's Method<a class="headerlink" href="#newtons-method" title="Permanent link">⚓︎</a></h4>
 <p>已经学了不知道多少遍了</p>
-<p>既然讲了 Newton-Raphson Algorithm 也应该讲一下 Fisher-scoring Algorithm 吧 (From Mathematical Statistic)</p>
+<p>既然讲了 Newton-Raphson Algorithm 也应该讲一下 Fisher-scoring Algorithm 吧 (From Mathematical Statistics)</p>
 <h4 id="currying">Currying（柯里化）<a class="headerlink" href="#currying" title="Permanent link">⚓︎</a></h4>
 <blockquote>
 <p>"Currying" 在英语中，尤其是在编程和数学领域，指的是“柯里化”。柯里化是一种将使用多个参数的函数转换为一系列使用单一参数的函数的技术。</p>
 </blockquote>
 <p>Currying allows us to do so without writing a specific function for each number whose powers we wish to compute.</p>
 <h4 id="lambda-function">Lambda function<a class="headerlink" href="#lambda-function" title="Permanent link">⚓︎</a></h4>
-<p>是一种简洁的函数表示方法但是由于理解的不容易不怎么使用，在 Python 中更倾向于使用 def 而不是 lambda 函数（为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了）</p>
+<p>是一种简洁的函数表示方法，但是由于不容易理解，不怎么使用，在 Python 中更倾向于使用 def 而不是 lambda 函数（为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了）</p>
 <p>Standard formal:</p>
 <p>lambda x : f(g(x)) means "A function that  takes x  and returns  f(g(x))"</p>
 <p>Case:</p>
@@ -2498,8 +2498,8 @@
     <span class="k">return</span> <span class="n">minutes</span>
 </code></pre></div>
 <p>错误应该为乌龟超越兔子但二者行走距离不同，第二次追及</p>
-<p>Wrong value：(2，3),(6, 11)</p>
-<p>注 1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，<span class="arithmatex">\((10+t)x=(5+t)y\)</span>，此时只需要取整数解即可 <span class="arithmatex">\((1\leqslant t \leqslant 5)\)</span>，随便取一个好算的分数通分即可(注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对 (x, y) 且 gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离)</p>
+<p>Wrong value: (2, 3), (6, 11)</p>
+<p>注 1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，<span class="arithmatex">\((10+t)x=(5+t)y\)</span>，此时只需要取整数解即可 <span class="arithmatex">\((1\leqslant t \leqslant 5)\)</span>，随便取一个好算的分数通分即可（注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对 (x, y) 且 gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离）</p>
 <p>注 2：好像应该用试的但是没忍住分析了一下</p>
 <p>无限运行应该是乌龟超过兔子后兔子追不上</p>
 <p>Runs forever：(4, 5)</p>

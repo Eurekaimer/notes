@@ -4,7 +4,7 @@
 
 这主要是一个二人的零和博弈游戏，深究应该会涉及到博弈论相关的知识
 
-大约需要 4h
+大约需要 4 h
 
 ## Rule
 
@@ -30,7 +30,7 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 >In the first phase, you will develop a simulator for the game of Hog.
 
-值得注意的是每个 Problem 在正式进行代码书写前，都有一个增进理解的 What printed？的项目，主要是有一个对问题的划分意识
+值得注意的是每个 Problem 在正式进行代码书写前，都有一个增进理解的 What is printed? 的项目，主要是有一个对问题的划分意识
 
 ### Problem 0 (0 pt)
 
@@ -60,7 +60,7 @@ In a normal game of Hog, Sow Sad is all the rules. To spice up the game, we'll i
 
 >There are no required problems in this section of the project, just some examples for you to read and understand. See Phase 2 for the remaining project problems.
 
-感觉是给出了项目重构的一些思路和方法，如何在原有简单代码的基础上比较好的扩展和方便改进
+感觉是给出了项目重构的一些思路和方法，如何在原有简单代码的基础上比较好地扩展和方便改进
 
 ## Phase 2: Strategies
 

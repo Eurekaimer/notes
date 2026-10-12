@@ -6,7 +6,7 @@ title: Week 1
 
 ## Summary
 
-大致需要 3.5h 完成
+大致需要 3.5 h 完成
 
 1. 建议先看 Videos 再看 Reading，这样对 Reading 的内容有一个粗略的把握看书会更快
 2. 一定要写 Lab 和 HW
@@ -44,7 +44,7 @@ Chapter 1: Building Abstractions with Functions
 
 ### Ch. 1.2
 
-As videos and some addition
+As in the videos, with some additions
 
 >The possibility of binding names to values and later retrieving those values by name means that the interpreter must maintain some sort of memory that keeps track of the names, values, and bindings. This memory is called an _environment_.
 
@@ -70,11 +70,11 @@ Defining New Functions
 
 #### Call expression
 
-+ expresstion tree
++ expression tree
 + recursion
 #### Names, Assignment, and User-Defined Functions
 
-Discussion Qustion 1
+Discussion Question 1
 
 ```python
 f = min
@@ -94,7 +94,7 @@ Answer: 3
 
 #### Defining Functions
 
-assignment is binding name to values and function can be more powerful to bind names to expressions.
+Assignment binds names to values, and functions can be more powerful by binding names to expressions.
 
 Execution procedure for def statements:
 
@@ -123,7 +123,7 @@ None  None
 
 [UNIX tutorial](https://cs61a.org/articles/unix/)
 
-纪念一下第一次使用[ok](https://cs61a.org/articles/using-ok/)的Lab
+纪念一下第一次使用 [ok](https://cs61a.org/articles/using-ok/) 的 Lab
 
 ![lab00](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/CS61a-lab00)
 

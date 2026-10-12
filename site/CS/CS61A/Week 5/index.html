@@ -2163,12 +2163,12 @@
 
 <h1 id="week-5">Week 5<a class="headerlink" href="#week-5" title="Permanent link">⚓︎</a></h1>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">⚓︎</a></h2>
-<p>大概需要 5h，不包括完成 Project 的时间，终于进入了 Python 比较核心的部分，有了 Lists, Slicing, Container 等概念，发现软件老师使用的例子与 61A 的例子一模一样。</p>
-<p>总的来说，抽象化的教学还是有益的，虽然前期进展的很慢，但是培养了比较良好的习惯，比如 Absraction Barriers 方便后续维护的这种意识。</p>
+<p>大概需要 5 h，不包括完成 Project 的时间，终于进入了 Python 比较核心的部分，有了 Lists、Slicing、Container 等概念，发现软件老师使用的例子与 61A 的例子一模一样。</p>
+<p>总的来说，抽象化的教学还是有益的，虽然前期进展得很慢，但是培养了比较良好的习惯，比如 Abstraction Barriers 方便后续维护的这种意识。</p>
 <h2 id="videos2h">Videos(2h)<a class="headerlink" href="#videos2h" title="Permanent link">⚓︎</a></h2>
 <h3 id="sequences">Sequences<a class="headerlink" href="#sequences" title="Permanent link">⚓︎</a></h3>
 <h4 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">⚓︎</a></h4>
-<p>Note that the begining index is 0 not 1, and elements of lists can be various</p>
+<p>Note that the beginning index is 0, not 1, and elements of lists can vary.</p>
 <h4 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">⚓︎</a></h4>
 <h4 id="for-statements">For Statements<a class="headerlink" href="#for-statements" title="Permanent link">⚓︎</a></h4>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -2194,7 +2194,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">sum_list</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </code></pre></div>
-<p>A case more complex but can be done.</p>
+<p>A more complex case, but it can be done.</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">large</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""return the sublist of positive numbers s with the </span>
 <span class="sd">    largest sum that is less than or equal to n"""</span>
@@ -2211,24 +2211,24 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">without_s0</span>
 </code></pre></div>
-<p>Remark: Like conditional probability trick used in probability theory, we get complex situation easier by make proper condition or division events.</p>
+<p>Remark: Like the conditional probability trick used in probability theory, we handle complex situations more easily by choosing proper conditions or dividing events.</p>
 <h3 id="containers_1">Containers<a class="headerlink" href="#containers_1" title="Permanent link">⚓︎</a></h3>
 <h4 id="box-and-pointer-notation">Box-and-Pointer Notation<a class="headerlink" href="#box-and-pointer-notation" title="Permanent link">⚓︎</a></h4>
-<p>Just a way like environmental diagram to explain the list operations.</p>
+<p>Just a way like an environment diagram to explain list operations.</p>
 <h4 id="slicing">Slicing<a class="headerlink" href="#slicing" title="Permanent link">⚓︎</a></h4>
-<p>Very important skill used in python and we can see some cases:</p>
+<p>A very important skill used in Python, and we can see some cases:</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">odds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">odds</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 </code></pre></div>
 <h4 id="processing-container-values">Processing Container Values<a class="headerlink" href="#processing-container-values" title="Permanent link">⚓︎</a></h4>
-<p>sum, max and all function, and these functions can be found in R also.</p>
+<p>The sum, max, and all functions can also be found in R.</p>
 <h4 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">⚓︎</a></h4>
 <blockquote>
 <p>The native data type for text in Python is called a string, and corresponds to the constructor str.</p>
 </blockquote>
 <h4 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">⚓︎</a></h4>
-<p>mentioned <strong>unhashable</strong>(leave for 61b)</p>
+<p>Mentioned <strong>unhashable</strong> (leave for 61b)</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="p">{</span><span class="o">&lt;</span><span class="n">key</span> <span class="n">exp</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">value</span> <span class="n">exp</span><span class="o">&gt;</span> <span class="k">for</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="nb">iter</span> <span class="n">exp</span><span class="o">&gt;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="nb">filter</span> <span class="n">exp</span><span class="o">&gt;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">}</span> <span class="n">evaluates</span> <span class="n">to</span> <span class="p">{</span><span class="mi">9</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">25</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
 </code></pre></div>
@@ -2249,7 +2249,7 @@
 <span class="o">&gt;&gt;</span> <span class="o">&gt;</span><span class="n">get</span> <span class="n">item</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="mi">1</span>
 </code></pre></div>
-<p>We have two ways to access the elements of list.</p>
+<p>We have two ways to access the elements of a list.</p>
 <h4 id="abstraction-barriers">Abstraction Barriers<a class="headerlink" href="#abstraction-barriers" title="Permanent link">⚓︎</a></h4>
 <h4 id="data-representations">Data Representations<a class="headerlink" href="#data-representations" title="Permanent link">⚓︎</a></h4>
 <p>You can read Ch. 2.2 for more info about abstraction barriers.</p>
@@ -2355,7 +2355,7 @@
         <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="p">[[</span><span class="n">k</span><span class="p">]</span> <span class="o">+</span> <span class="n">rest</span> <span class="k">for</span> <span class="n">rest</span> <span class="ow">in</span> <span class="n">sums</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="k">if</span> <span class="n">rest</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">rest</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">k</span> <span class="p">]</span>  
     <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
-<p>Remark: Slicing 操作简直是为 Recursion 准备的，非常好用!</p>
+<p>Remark: Slicing 操作简直是为 Recursion 准备的，非常好用！</p>
 
 
 

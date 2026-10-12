@@ -4,7 +4,7 @@
 
 先看 Videos 再看 Reading，需要注意的是 Ch 1.6 内容很多，每天的 Videos 只是讲解了其中的一部分内容并且有时不按顺序，可以先全部看完 Videos 再看 Reading
 
-大致需要 6h 完成（不包括 project）
+大致需要 6 h 完成（不包括 project）
 
 ## Videos(2h)
 
@@ -163,11 +163,11 @@ result = apply_twice(square, 2)
 
 #### Environments for Nested Definitions
 
-Mainly about how to draw environment diagram and decide the parent frame of any function.
+Mainly about how to draw an environment diagram and determine the parent frame of any function.
 
 #### Local names
 
-Formal parameters of functions have a local scope means that if we call a function but the parameter of it doesn't be defined in local frame, it will cause an error.
+Formal parameters of functions have a local scope, which means that if we call a function but its parameter is not defined in the local frame, it will cause an error.
 
 #### Function Composition
 
@@ -201,9 +201,9 @@ def curry2(f):
 curry2 = lambda f : lambda x : lambda y : f(x, y)
 ```
 
-Here should be an environment diagram but none.
+There should be an environment diagram here, but there is none.
 
-more clear case:
+A clearer case:
 
 ```Python
 def curried_pow(x):
@@ -227,10 +227,10 @@ Chapter 1: Building Abstractions with Functions
 
 >Functions are an essential ingredient of all programs, large and small, and serve as our primary medium to express computational processes in a programming language.
 
-Good functions should obey following guidelines:
+Good functions should obey the following guidelines:
 
-+ only excute one job
-+ Don't repeat yourself(DRY)
++ only execute one job
++ Don't repeat yourself (DRY)
 + define generally
 
 >A function definition will often include documentation describing the function, called a **_docstring_**, which must be indented along with the function body. Docstrings are conventionally triple quoted. The first line describes the job of the function in one line. The following lines can describe arguments and clarify the behavior of the function:
@@ -239,7 +239,7 @@ When you call help with the name of a function as an argument, you see its doc
 
 例如：`help(function name)` 就会给出文档说明
 
-Comment will be passed by complier but can be read by person.
+Comments will be skipped by the compiler but can be read by a person.
 
 `# comments`
 
@@ -256,7 +256,7 @@ Compound statements:
 
 **Practical Guidance.** When indenting a suite, all lines must be indented the same amount and in the same way (use spaces, not tabs). Any variation in indentation will cause an error.
 
-Some defines:
+Some definitions:
 1. Local assignment
 2. Conditional statements
 3. Boolean contexts
@@ -322,7 +322,7 @@ two key advantages of lexical scoping in Python
 
 已经学了不知道多少遍了
 
-既然讲了 Newton-Raphson Algorithm 也应该讲一下 Fisher-scoring Algorithm 吧 (From Mathematical Statistic)
+既然讲了 Newton-Raphson Algorithm 也应该讲一下 Fisher-scoring Algorithm 吧 (From Mathematical Statistics)
 
 #### Currying（柯里化）
 
@@ -332,7 +332,7 @@ Currying allows us to do so without writing a specific function for each number 
 
 #### Lambda function
 
-是一种简洁的函数表示方法但是由于理解的不容易不怎么使用，在 Python 中更倾向于使用 def 而不是 lambda 函数（为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了）
+是一种简洁的函数表示方法，但是由于不容易理解，不怎么使用，在 Python 中更倾向于使用 def 而不是 lambda 函数（为了方便别人也为了方便自己，知道这个用法应当足够，自己的程序最好还是不要用了）
 
 Standard formal:
 
@@ -472,9 +472,9 @@ def race(x, y):
 
 错误应该为乌龟超越兔子但二者行走距离不同，第二次追及
 
-Wrong value：(2，3),(6, 11)
+Wrong value: (2, 3), (6, 11)
 
-注 1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，$(10+t)x=(5+t)y$，此时只需要取整数解即可 $(1\leqslant t \leqslant 5)$，随便取一个好算的分数通分即可(注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对 (x, y) 且 gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离)
+注 1：直接考虑构建一个二元方程组，考虑特殊情况下运动相同距离就应该是在兔子运动时相遇，$(10+t)x=(5+t)y$，此时只需要取整数解即可 $(1\leqslant t \leqslant 5)$，随便取一个好算的分数通分即可（注意不要循环起来也不要是整数比，两倍肯定相同，小技巧是选取互素的整数对 (x, y) 且 gcd(x,5)=1，注意这样在第一轮就始终无法走相同距离）
 
 注 2：好像应该用试的但是没忍住分析了一下
 
@@ -519,20 +519,4 @@ pass
 ## HW02(30min)
 
 大都比较简单，不再赘述，代码可参考仓库
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

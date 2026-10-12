@@ -1,6 +1,6 @@
 # Continuous linear operators
 
-注：笔者原本打算的是直接扔下这份讲义去阅读 Brezis 的 FA and PDEs，但是阅读了第一章发现他的写法似乎有些 clear，但是问题在于我读起来又不是很 clear 于是回归这份讲义想先了解一个 overview 然后再回去读 Brezis，然后惊奇的发现这一章的内容正是我阅读 Brezis 时欠缺的部分，于是速通之
+注：笔者原本打算的是直接扔下这份讲义去阅读 Brezis 的 FA and PDEs，但是阅读了第一章发现他的写法似乎有些 clear，但是问题在于我读起来又不是很 clear 于是回归这份讲义想先了解一个 overview 然后再回去读 Brezis，然后惊奇地发现这一章的内容正是我阅读 Brezis 时欠缺的部分，于是速通之
 
 ## Basic definitions and properties
 
@@ -13,18 +13,18 @@
 
     be the closed unit ball of $E$
 
-那么很自然的我们会使用缩放的闭球定义集合 $A$ 在 $E$ 中（赋范）有界，也就是说 $A\subseteq kU_{E}$，换句话说$\lVert a \rVert\leqslant k<+\infty,\forall a\in A$
+那么很自然的我们会使用缩放的闭球定义集合 $A$ 在 $E$ 中（赋范）有界，也就是说 $A\subseteq kU_{E}$，换句话说 $\lVert a \rVert\leqslant k<+\infty,\forall a\in A$
 
-我们考虑线性算子$T:E\to F$：$T(\alpha x+\beta y)=\alpha Tx+\beta Ty$，其中$E,F$均为赋范空间
+我们考虑线性算子 $T:E\to F$：$T(\alpha x+\beta y)=\alpha Tx+\beta Ty$，其中 $E,F$ 均为赋范空间
 
 显然我们可以得到以下等价结论：
 
 !!! quote "Theorem(有界性和连续性)"
-    假设$T$是一个线性算子，$T:E\to F$
+    假设 $T$ 是一个线性算子，$T:E\to F$
 
     1. $T$ is Lipschitz continuous
-    2. $T$ is countinuous
-    3. $T$ is coutinuous at $0$
+    2. $T$ is continuous
+    3. $T$ is continuous at $0$
     4. $T(U_{E})$ is bounded in $F$
     5. $T$ sends bounded sets to bounded sets
     6. $\exists k>0$, s.t. $\lVert Tx \rVert\leqslant k \lVert x \rVert,\forall x\in E$
@@ -74,11 +74,11 @@ $6 \to 1$ 实际也是显然的
 
 `Proof.`
 
-显然我们可以得到$\lVert T \rVert<+\infty$，前三条的证明手法就是证明大于等于和小于等于两个方向，从而取等，都比较容易，留作习题
+显然我们可以得到 $\lVert T \rVert<+\infty$，前三条的证明手法就是证明大于等于和小于等于两个方向，从而取等，都比较容易，留作习题
 
-最后一行会稍微麻烦一点，我们先定义等式右边的集合为$K$，那么我们的目标就变成了证明$\lVert T \rVert=\inf K$只需要利用倒二的等式，马上得到$\lVert T \rVert\in K$那么$\inf K\leqslant \lVert T \rVert$
+最后一行会稍微麻烦一点，我们先定义等式右边的集合为 $K$，那么我们的目标就变成了证明 $\lVert T \rVert=\inf K$ 只需要利用倒二的等式，马上得到 $\lVert T \rVert\in K$ 那么 $\inf K\leqslant \lVert T \rVert$
 
-利用定义可以知道$\lVert Tx \rVert \leqslant k\lVert x \rVert,\forall x\in E$，结合第一行的等式：
+利用定义可以知道 $\lVert Tx \rVert \leqslant k\lVert x \rVert,\forall x\in E$，结合第一行的等式：
 
 $$
 \lVert T \rVert =\sup \left\{ \frac{\lVert Tx \rVert }{\lVert x \rVert },x\neq 0 \right\} \implies \lVert T \rVert \leqslant k,\forall k\in K\implies \lVert T \rVert \leqslant \inf K
@@ -86,12 +86,12 @@ $$
 
 结合两个不等式即得结论
 
-关于两个赋范空间之间的线性算子$T$，如果有$T$将norm balls(或者说有界集)映射为norm balls(或者有界集)，我们就称其为有界算子(或者局部有界算子)，由前面的定理可以得到，有界集$A$的像集$TA$的直径要小于$A$的$\lVert T \rVert$倍
+关于两个赋范空间之间的线性算子 $T$，如果有 $T$ 将 norm balls(或者说有界集)映射为 norm balls(或者有界集)，我们就称其为有界算子(或者局部有界算子)，由前面的定理可以得到，有界集 $A$ 的像集 $TA$ 的直径要小于 $A$ 的 $\lVert T \rVert$ 倍
 
-下面给出有界线性算子构成的集合的记号，对于$E,F$两个赋范空间，使用$B(E,F)$来记录所有的从$E$到$F$的有界线性算子，如果是同一个空间，有$B(E)=B(E,E)$
+下面给出有界线性算子构成的集合的记号，对于 $E,F$ 两个赋范空间，使用 $B(E,F)$ 来记录所有的从 $E$ 到 $F$ 的有界线性算子，如果是同一个空间，有 $B(E)=B(E,E)$
 
 !!! note "Lemma(有界线性算子构成赋范空间)"
-    $B(E,F)$通过给予算子范数$\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert$构成一个赋范空间
+    $B(E,F)$ 通过给予算子范数 $\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert$ 构成一个赋范空间
 
 证明只需要按照赋范空间的定义验证三条性质即可，然后探索这个算子范数我们可以得到一个等价的定义：
 
@@ -102,19 +102,19 @@ $$
 
 `Proof.`
 
-只需要使用Cauchy-Schwarz不等式，即可得到：
+只需要使用 Cauchy-Schwarz 不等式，即可得到：
 
 $$
 \lvert \langle Th,k\rangle \rvert \leqslant \lVert Th \rVert \lVert k \rVert \leqslant \lVert T \rVert \lVert h \rVert \lVert k \rVert \leqslant \lVert T \rVert  
 $$
 
-因为$h\in U_{H},k\in U_{K}$，反方向等式的求取我们利用归一化的方法，若是$h\in U_{H},Th\neq 0$，我们有$\frac{Th}{\lVert Th \rVert}\in U_{K}$
+因为 $h\in U_{H},k\in U_{K}$，反方向等式的求取我们利用归一化的方法，若是 $h\in U_{H},Th\neq 0$，我们有 $\frac{Th}{\lVert Th \rVert}\in U_{K}$
 
 $$
 \lVert Th \rVert= \frac{\langle Th,Th\rangle}{\lVert Th \rVert }= \left\lvert  \langle Th, \frac{Th}{\lVert Th \rVert }\rangle  \right\rvert 
 $$
 
-所以我们有$\lVert Th \rVert\in \left\{ \lvert \langle Th,k \rangle \rvert \right\}$，即：
+所以我们有 $\lVert Th \rVert\in \left\{ \lvert \langle Th,k \rangle \rvert \right\}$，即：
 
 $$
 \lVert T \rVert =\sup\limits_{h\in U_{H}}\lVert Th \rVert \leqslant \sup \left\{ \lvert \langle Th,k\rangle \rvert : h\in U_{H},k\in U_{K}  \right\}  \leqslant \lVert T \rVert 
@@ -182,7 +182,7 @@ $$
 \|Tx\|^2 = \sum_{i=1}^{\infty} |(Tx)_i|^2 \le \alpha_\infty \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
 $$
 
-利用非负项级数求和次序的可交换性（Tonelli定理）：
+利用非负项级数求和次序的可交换性（Tonelli 定理）：
 
 $$
 \|Tx\|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \left( \sum_{i=1}^{\infty} |\alpha_{i,j}| \right)
@@ -334,7 +334,7 @@ $$
 
 `Proof.`
 
-!!! quote "$\ell_{\infty}$的含义"
+!!! quote "$\ell_{\infty}$ 的含义"
     这里的 $\ell_{\infty}$ 是序列空间，它包含所有**有界**的实数（或复数）序列。也就是说，如果 $x = (x_1, x_2, \dots) \in \ell_{\infty}$，那么存在一个常数 $M$，使得对于所有的 $n$，都有 $|x_n| \le M$。
 
 先假定 $x=(x_{n})_{n=1}^{\infty},y=(y_{n})_{n=1}^{\infty}\in \ell_{\infty},\alpha,\beta\in \mathbb{K}$，并且有 $t\in[0,1]$，线性性证明如下：

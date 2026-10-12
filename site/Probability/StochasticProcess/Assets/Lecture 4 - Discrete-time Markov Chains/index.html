@@ -793,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    初等概率论(Elementary Probability Theory)
+    初等概率论 (Elementary Probability Theory)
   
 
     
@@ -1711,8 +1711,8 @@
 <div class="admonition tldr">
 <p class="admonition-title">Syllabus</p>
 <ul>
-<li>Markou 链  </li>
-<li>Chapman-Kolmogorou 方程  </li>
+<li>Markov 链  </li>
+<li>Chapman-Kolmogorov 方程  </li>
 <li>不变分布</li>
 </ul>
 </div>
@@ -1722,8 +1722,8 @@
 </div>
 <h2 id="markov">离散时间 Markov 链<a class="headerlink" href="#markov" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
-<p class="admonition-title">Defnition4.1 (离散时间Markov链)</p>
-<p>设 <span class="arithmatex">\(E\)</span> 是一个可数集合，不妨为 <span class="arithmatex">\(\mathbb{N}^{+}=\{1,2,\ldots\}\)</span> 。称状态空间为 <span class="arithmatex">\(E\)</span> 的离散时间随机过程 <span class="arithmatex">\(\{ X_{n}\)</span>, <span class="arithmatex">\(n= 0, 1, 2, \ldots \}\)</span> 为一个（离散时间）Markou 链，如果对于任意 <span class="arithmatex">\(n\geq0\)</span> ，任意状态 <span class="arithmatex">\(i_0,i_1,\ldots,i_{n-1},i,j\in E\)</span> ，有 Markou 性 (4.1)：</p>
+<p class="admonition-title">Definition4.1 (离散时间 Markov 链)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 是一个可数集合，不妨为 <span class="arithmatex">\(\mathbb{N}^{+}=\{1,2,\ldots\}\)</span> 。称状态空间为 <span class="arithmatex">\(E\)</span> 的离散时间随机过程 <span class="arithmatex">\(\{ X_{n}\)</span>, <span class="arithmatex">\(n= 0, 1, 2, \ldots \}\)</span> 为一个（离散时间）Markov 链，如果对于任意 <span class="arithmatex">\(n\geq0\)</span> ，任意状态 <span class="arithmatex">\(i_0,i_1,\ldots,i_{n-1},i,j\in E\)</span> ，有 Markov 性 (4.1)：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 &amp;P\{X_{n+1}=j|X_n=i,X_{n-1}=i_{n-1},\dots,X_1=i_1,X_0=i_0\}\\
@@ -1732,7 +1732,7 @@
 \]</div>
 <p>成立。</p>
 </div>
-<p>称 <span class="arithmatex">\(P(n,i;n+1,j)\)</span> 为时刻 <span class="arithmatex">\(n\)</span> 处于状态 <span class="arithmatex">\(i\)</span>,时刻 <span class="arithmatex">\(n+1\)</span> 转移到状态的转移函数。若它与 <span class="arithmatex">\(n\)</span> 无关，则记为 <span class="arithmatex">\(P_{ij}\)</span> ，此时称 <span class="arithmatex">\(\{X_n\}\)</span> 为一个时齐 Markou 链，矩阵 <span class="arithmatex">\(P=(P_{ij})_{i,j\in E}\)</span> 称为一步转移矩阵。我们之后都考虑时齐 Markou 链。</p>
+<p>称 <span class="arithmatex">\(P(n,i;n+1,j)\)</span> 为时刻 <span class="arithmatex">\(n\)</span> 处于状态 <span class="arithmatex">\(i\)</span>,时刻 <span class="arithmatex">\(n+1\)</span> 转移到状态的转移函数。若它与 <span class="arithmatex">\(n\)</span> 无关，则记为 <span class="arithmatex">\(P_{ij}\)</span> ，此时称 <span class="arithmatex">\(\{X_n\}\)</span> 为一个时齐 Markov 链，矩阵 <span class="arithmatex">\(P=(P_{ij})_{i,j\in E}\)</span> 称为一步转移矩阵。我们之后都考虑时齐 Markov 链。</p>
 <p>注 1.Markov 性 (4.1) 等价于 (4.2)</p>
 <div class="arithmatex">\[\begin{aligned}
 &amp;P\{X_{n+1}=j,X_{n-1}=i_{n-1},\dots,X_{0}=i_{0}|X_{n}=i\}\\
@@ -1744,12 +1744,12 @@
 <p>(4.2) 说明 Markov 性等价于在已知“现在”的条件下，“过去”和“未来”是独立的。</p>
 <p>注 2.Markov 性 (4.1) 还等价于 (4.3)</p>
 <div class="arithmatex">\[P(X_0=i_0,X_1=i_1,\cdots,X_n=i_n)=P(X_0=i_0)\prod_{k=1}^nP(k-1,i_{k-1};k,i_k).\]</div>
-<p>(4.3) 有的地方称为链式法则 (chainrule)。可以看出，Markov 链的有限维联合分布由初始分布和转移函数决定，在时齐情形，</p>
+<p>(4.3) 有的地方称为链式法则 (chain rule)。可以看出，Markov 链的有限维联合分布由初始分布和转移函数决定，在时齐情形，</p>
 <div class="arithmatex">\[P(X_0=i_0,X_1=i_1,\cdots,X_n=i_n)=P(X_0=i_0)\prod_{k=1}^nP_{i_{k-1}i_k}.\]</div>
 <p>注 3.若矩阵 <span class="arithmatex">\(P=(P_{ij})_{i,j\in E}\)</span> 满足：</p>
 <div class="arithmatex">\[P_{ij}\geq0,\quad i,j\in E\]</div>
 <div class="arithmatex">\[\displaystyle\sum_{j\in E}P_{ij}=1,\quad\forall i\in E\]</div>
-<p>则称 <span class="arithmatex">\(P\)</span> 为 <span class="arithmatex">\(E\)</span> 上的转移矩阵（transitionmatrix)/随机矩阵（stochasticmatrix，注意和 randon matrix 的区分）.称 <span class="arithmatex">\(P_{ij}\)</span> 为从状态到的转移概率。</p>
+<p>则称 <span class="arithmatex">\(P\)</span> 为 <span class="arithmatex">\(E\)</span> 上的转移矩阵（transition matrix)/随机矩阵（stochastic matrix，注意和 random matrix 的区分）.称 <span class="arithmatex">\(P_{ij}\)</span> 为从状态到的转移概率。</p>
 <h2 id="_1">例子<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Example4.2 (一维简单随机游走)</p>
@@ -1767,10 +1767,10 @@
 <p>那么 <span class="arithmatex">\(S_{n}\)</span> 为从 <span class="arithmatex">\(S_{0}\)</span> 出发的一维简单随机游走。</p>
 <p><span class="arithmatex">\(\xi_{n}\)</span> 可以服从更一般的分布，此时， <span class="arithmatex">\(S_n\)</span> 称为一般随机游走。</p>
 <div class="admonition example">
-<p class="admonition-title">Example4.3 (Ehrenfest模型)</p>
+<p class="admonition-title">Example4.3 (Ehrenfest 模型)</p>
 <p>在统计热力学的研究中，一个经典的模型是 Ehrenfest 模型，用来模拟气体分子在两个容器中的扩散过程。考虑甲乙两个容器，其中总共的气体分子为 <span class="arithmatex">\(N\)</span> 。假设单位时间内，有且只有一个分子在甲乙两个容器之间扩散，扩散的分子是随机选取的。</p>
 </div>
-<p>记 n 时间后甲容器内的气体分子数为 <span class="arithmatex">\(X_{n}\)</span> ，则 <span class="arithmatex">\(X_{n}\)</span> 是一个状态空间为 <span class="arithmatex">\(E=\{0,1,\ldots,N\}\)</span> 的离散时间 Markou 链，转移概率为</p>
+<p>记 n 时间后甲容器内的气体分子数为 <span class="arithmatex">\(X_{n}\)</span> ，则 <span class="arithmatex">\(X_{n}\)</span> 是一个状态空间为 <span class="arithmatex">\(E=\{0,1,\ldots,N\}\)</span> 的离散时间 Markov 链，转移概率为</p>
 <div class="arithmatex">\[P\left(X_{n+1}=j|X_n=i\right)=\left\{\begin{array}{cc}1-\frac{i}{N},&amp;j=i+1\\\frac{i}{N},&amp;j=i-1\\0,&amp;|j-i|\ne1\end{array}\right.\]</div>
 <p>直观上，如果一开始甲容器里没有气体分子，经过自由扩散，两个容器中的气体分子数量应该会趋于一致。这本质上是热力学第二定律描述的熵增现象，说明在封闭系统中，微观随机行为会导致宏观熵的增加。</p>
 <div class="admonition example">
@@ -1784,7 +1784,7 @@
 <p>记时齐 Markov 链的 n 步转移概率为</p>
 <div class="arithmatex">\[P_{ij}^{(n)}=P\{X_{n+m}=j|X_{m}=i\},\quad n\ge0,\quad i,j\ge0.\]</div>
 <div class="admonition note">
-<p class="admonition-title">Proposition 4.5 (Chapman-Kolmogorov方程 CK-Equation)</p>
+<p class="admonition-title">Proposition 4.5 (Chapman-Kolmogorov 方程 CK-Equation)</p>
 <p>对任意 <span class="arithmatex">\(i,j\in E,m,n\geqslant0\)</span></p>
 <div class="arithmatex">\[P_{ij}^{(n+m)}=\sum_{k\in E}P_{ik}^{(n)}P_{kj}^{(m)}\]</div>
 <p>注：实际是一个例子，由于重要性记为 Prop.</p>
@@ -1801,12 +1801,12 @@ P_{ij}^{(n+m)}&amp; =P\{X_{n+m}=j|X_{0}=i\}  \\
 <p>其中 <span class="arithmatex">\(\cdot\)</span> 为矩阵乘法，那么</p>
 <div class="arithmatex">\[P^{(n)}=P\cdot P^{(n-1)}=P\cdot P\cdot P^{(n-2)}=\cdots=P^{n}.\]</div>
 <div class="admonition example">
-<p class="admonition-title">Example4.6 (两状态的Markov链 <span class="arithmatex">\(I\)</span>)</p>
+<p class="admonition-title">Example4.6 (两状态的 Markov 链 <span class="arithmatex">\(I\)</span>)</p>
 <p>设离散时间 Markov 链的样本空间只有两个状态。一步转移概率矩阵为</p>
 <div class="arithmatex">\[P=\left(\begin{array}{cc}1-\alpha&amp;\alpha\\\beta&amp;1-\beta\end{array}\right)\]</div>
 <p>其中 <span class="arithmatex">\(\alpha,\beta\in(0,1)\)</span> 。</p>
 </div>
-<p>我们想要计算它的 n 步转移矩阵，由 Chapman-Kolmogorou 方程，只需要计算 <span class="arithmatex">\(P^{n}\)</span> 。做<strong>特征值分解</strong>,<span class="arithmatex">\(P\)</span> 的两个特征值为</p>
+<p>我们想要计算它的 n 步转移矩阵，由 Chapman-Kolmogorov 方程，只需要计算 <span class="arithmatex">\(P^{n}\)</span> 。做<strong>特征值分解</strong>,<span class="arithmatex">\(P\)</span> 的两个特征值为</p>
 <div class="arithmatex">\[\lambda_0=1,\quad\lambda_1=1-\alpha-\beta \]</div>
 <p>可得</p>
 <div class="arithmatex">\[P=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}1&amp;\alpha\\1&amp;-\beta\end{array}\right)\begin{pmatrix}1&amp;0\\0&amp;1-\alpha-\beta\end{pmatrix}\begin{pmatrix}\beta&amp;\alpha\\1&amp;-1\end{pmatrix}\]</div>
@@ -1834,7 +1834,7 @@ P(X_{1}=j) &amp;=\sum_{k\in E}P(X_{0}=k)P(X_{1}=j|X_{0}=k) \\
 <p class="admonition-title">Definition4.7 (不变测度)</p>
 <p>设 <span class="arithmatex">\(\pi=\{\pi_{i},i\in E\}\)</span> 为 <span class="arithmatex">\(E\)</span> 上的测度，若π满足不变方程</p>
 <div class="arithmatex">\[\pi_j=\sum_{k\in E}\pi_kP_{kj},\quad\forall j\in E\]</div>
-<p>则称 <span class="arithmatex">\(\pi\)</span> 为 <span class="arithmatex">\(P\)</span> 的不变测度 (inwariant measure)。进一步，若 <span class="arithmatex">\(\sum\limits _{i\in E}\pi _{i}=1\)</span>，则称 <span class="arithmatex">\(\pi\)</span> 为不变分布。也称 <span class="arithmatex">\(\pi\)</span> 为以 <span class="arithmatex">\(P\)</span> 为转移矩阵的 Markov 链的不变测度。</p>
+<p>则称 <span class="arithmatex">\(\pi\)</span> 为 <span class="arithmatex">\(P\)</span> 的不变测度 (invariant measure)。进一步，若 <span class="arithmatex">\(\sum\limits _{i\in E}\pi _{i}=1\)</span>，则称 <span class="arithmatex">\(\pi\)</span> 为不变分布。也称 <span class="arithmatex">\(\pi\)</span> 为以 <span class="arithmatex">\(P\)</span> 为转移矩阵的 Markov 链的不变测度。</p>
 </div>
 <p>这也可以理解为是收敛性的一种体现</p>
 <p>注 1．显然 <span class="arithmatex">\(\pi_{i}=0,\forall i\in E\)</span> 是一个平凡的不变测度。若π是非平凡的，且 <span class="arithmatex">\(\sum\limits_{i\in E}\pi_{i}&lt;\infty\)</span> 的不变测度，那么我们总可以将其归一化得到不变分布。</p>
@@ -1842,7 +1842,7 @@ P(X_{1}=j) &amp;=\sum_{k\in E}P(X_{0}=k)P(X_{1}=j|X_{0}=k) \\
 <p>注 2.设 <span class="arithmatex">\(\pi\)</span> 为不变分布，如果 <span class="arithmatex">\(X_0\sim\pi\)</span>,那么 (4.4)</p>
 <div class="arithmatex">\[(X_0,X_1,\cdots,X_n)\overset{d}{=}(X_m,X_{m+1},\cdots,X_{m+n})\:,\quad\forall n,m\geqslant1.\]</div>
 <p>满足 (4.4) 的随机过程称为平稳过程 (Stationary Process)，即任何时刻 <span class="arithmatex">\(m\)</span> 作为起点，相同时间间隔 <span class="arithmatex">\(n\)</span> 随机过程的有限维分布都是相同的。因此不变分布π也被称为平稳分布 (Stationary Distribution).</p>
-<p>注意与平稳增量过程做对比 (Stationary Crements)</p>
+<p>注意与平稳增量过程做对比 (Stationary Increments)</p>
 <p>注 3．若 E 是有限的，把π视为行向量，不变分布π就是矩阵 P 的特征值为 1 的左特征向量，于是我们可以通过解线性方程组</p>
 <div class="arithmatex">\[\pi=\pi P\]</div>
 <p>来求不变分布。</p>
@@ -1858,7 +1858,7 @@ P(X_{1}=j) &amp;=\sum_{k\in E}P(X_{0}=k)P(X_{1}=j|X_{0}=k) \\
 3.如果 <span class="arithmatex">\(\mu\mathbf{P}^{n}\)</span> 收敛到不变分布，那么<strong>收敛速度</strong>有多快 (Design of algorithm)？</p>
 <p>我们在后面的学习中会回答这些问题。</p>
 <div class="admonition example">
-<p class="admonition-title">Example4.8(两状态的Markov链 <span class="arithmatex">\(II\)</span>)</p>
+<p class="admonition-title">Example4.8(两状态的 Markov 链 <span class="arithmatex">\(II\)</span>)</p>
 <p>考虑状态空间为 <span class="arithmatex">\(\{0,1\}\)</span> ，转移矩阵为</p>
 <div class="arithmatex">\[P=\left(\begin{array}{cc}1-\alpha&amp;\alpha\\\beta&amp;1-\beta\end{array}\right)\]</div>
 <p>的 Markov 链，它的不变分布 <span class="arithmatex">\(\pi\)</span> 满足：</p>

@@ -59,7 +59,7 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-缺点是无法识别直接依赖和间接依赖，卸载包之后间接依赖在 `requirement.txt` 无法被删除
+缺点是无法识别直接依赖和间接依赖，卸载包之后间接依赖在 `requirements.txt` 中无法被删除
 
 解决方法是 `pyproject.toml`
 

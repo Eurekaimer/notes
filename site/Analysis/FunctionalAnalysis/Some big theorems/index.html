@@ -1057,10 +1057,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seperation-theorems" class="md-nav__link">
+  <a href="#separation-theorems" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seperation Theorems
+        Separation Theorems
       
     </span>
   </a>
@@ -1068,10 +1068,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uniform-boundness-principle" class="md-nav__link">
+  <a href="#uniform-boundedness-principle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uniform Boundness Principle
+        Uniform Boundedness Principle
       
     </span>
   </a>
@@ -1789,10 +1789,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seperation-theorems" class="md-nav__link">
+  <a href="#separation-theorems" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seperation Theorems
+        Separation Theorems
       
     </span>
   </a>
@@ -1800,10 +1800,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uniform-boundness-principle" class="md-nav__link">
+  <a href="#uniform-boundedness-principle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uniform Boundness Principle
+        Uniform Boundedness Principle
       
     </span>
   </a>
@@ -1935,8 +1935,8 @@
 <ul>
 <li>Hahn-Banach Extension Theorem  </li>
 <li>Continuous linear functionals of a TVS  </li>
-<li>Seperation Theorems  </li>
-<li>Uniform Boundness Principle  </li>
+<li>Separation Theorems  </li>
+<li>Uniform Boundedness Principle  </li>
 <li>Open Mapping Theorem and Closed Graph Theorem</li>
 </ul>
 </div>
@@ -1999,7 +1999,7 @@ f(y)-f(x)&amp;=f(y-x)\\
 <p>直接证明是一种比较粗暴且缺乏动机的做法，数学中常见的做法是从简单的情况出发，然后将定理条件放宽，得到更加 general 的形式，在此 cite 张恭庆老师的《泛函分析讲义》中有关线性泛函的延拓定理的部分内容供增进理解和参考</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">实Hahn-Banach定理</p>
+<p class="admonition-title">实 Hahn-Banach 定理</p>
 <p>为了统一记号做了一些修改，<span class="arithmatex">\(E\)</span> 是实线性空间，<span class="arithmatex">\(p\)</span> 是 <span class="arithmatex">\(E\)</span> 上的次线性泛函，<span class="arithmatex">\(M\)</span> 是 <span class="arithmatex">\(E\)</span> 的实线性子空间，<span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(M\)</span> 的实线性泛函且 <span class="arithmatex">\(f\leqslant p,\forall x\in M\)</span>，那么在 <span class="arithmatex">\(E\)</span> 上一定存在一个实线性泛函 <span class="arithmatex">\(g\)</span> 使得：<br />
 (1)<span class="arithmatex">\(g\leqslant p,\forall x\in E\)</span><br />
 (2)<span class="arithmatex">\(g(x)=f(x),\forall x\in M\)</span></p>
@@ -2033,7 +2033,7 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 &amp; \leqslant p(x'-y)+p(-x''+y)
 \end{aligned}
 \]</div>
-<p>因此这种延拓是存在的，且不唯一（如果不等式不取等号的话），剩下的问题就是如何从 <span class="arithmatex">\(M'\)</span> 过度到 <span class="arithmatex">\(E\)</span>，需要利用 Zorn 引理</p>
+<p>因此这种延拓是存在的，且不唯一（如果不等式不取等号的话），剩下的问题就是如何从 <span class="arithmatex">\(M'\)</span> 过渡到 <span class="arithmatex">\(E\)</span>，需要利用 Zorn 引理</p>
 <p>我们先构造一个半序集：</p>
 <div class="arithmatex">\[
 \mathscr{F}=\left\{ (M_{\Delta},f_{\Delta})|M\subset M_{\Delta}\subset E;f_{\Delta}=f,x\in M;f_{\Delta}\leqslant p,x\in M_{\Delta} \right\} 
@@ -2046,7 +2046,7 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 <p>所以 <span class="arithmatex">\(M_{K}\)</span> 是 <span class="arithmatex">\(E\)</span> 中包含 <span class="arithmatex">\(M\)</span> 的子空间，且 <span class="arithmatex">\(f_{K}\)</span> 唯一确定 (<span class="arithmatex">\(f_{K}=f_{\Delta}\)</span>)，<span class="arithmatex">\(f_{K}\leqslant p\)</span>，根据 Zorn 引理 <span class="arithmatex">\(\mathscr{F}\)</span> 本身存在极大元，下面只需要说明那个极大元就是 <span class="arithmatex">\(E\)</span> 即可，使用反证法，如若不然，可以构造出另一个 <span class="arithmatex">\(\mathscr{F}\)</span> 中元素使得出现更大元，由此证毕</p>
 <div class="admonition note">
 <p class="admonition-title">Riesz representation theorem</p>
-<p>Every bounded linear functional <span class="arithmatex">\(F\in C[a,b]^{*}\)</span> if given by a unique normalized function <span class="arithmatex">\(f\in BV[a,b]\)</span> such that</p>
+<p>Every bounded linear functional <span class="arithmatex">\(F\in C[a,b]^{*}\)</span> is given by a unique normalized function <span class="arithmatex">\(f\in BV[a,b]\)</span> such that</p>
 <div class="arithmatex">\[F(x)=\int_{a}^{b} x(t)df(t),\forall x\in C[a,b] \]</div>
 <p>Moreover, <span class="arithmatex">\(\lVert F \rVert=V(f)\)</span></p>
 </div>
@@ -2069,15 +2069,15 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 </ul>
 <p><strong>2. 详细证明</strong></p>
 <p>只需要根据定义验证即可：</p>
-<p>首先任取 <span class="arithmatex">\(X\)</span> 中的向量 <span class="arithmatex">\(x\)</span>，我们希望对于这个 <span class="arithmatex">\(x\)</span> 能够找到一个常数 <span class="arithmatex">\(\delta\)</span> 使得 <span class="arithmatex">\(\delta x\)</span> 被 <span class="arithmatex">\(V\)</span> 所吸收，考虑连续性，构造一个映射 <span class="arithmatex">\(f:\mathbb{K}\to X\)</span>，<span class="arithmatex">\(f(\lambda)=\lambda x\)</span>，其中有 <span class="arithmatex">\(\lambda\in \mathbb{K},x\in X\)</span>，显然在 TVS 中这是一个连续函数，那么考虑 <span class="arithmatex">\(\lambda=0\)</span> 时有 <span class="arithmatex">\(f(0)=0\)</span>，根据邻域和连续函数的定义可知 <span class="arithmatex">\(f^{-1}(V)\)</span> 必然是 <span class="arithmatex">\(0\)</span> 的一个邻域，而关于 0 的任何邻域一定存在一个以 0 为中心的开球，因此我们可以知道存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得<span class="arithmatex">\(\lvert \lambda \rvert&lt;\delta\)</span>的情况下，<span class="arithmatex">\(\lambda x\in V\)</span>，由此即证</p>
+<p>首先任取 <span class="arithmatex">\(X\)</span> 中的向量 <span class="arithmatex">\(x\)</span>，我们希望对于这个 <span class="arithmatex">\(x\)</span> 能够找到一个常数 <span class="arithmatex">\(\delta\)</span> 使得 <span class="arithmatex">\(\delta x\)</span> 被 <span class="arithmatex">\(V\)</span> 所吸收，考虑连续性，构造一个映射 <span class="arithmatex">\(f:\mathbb{K}\to X\)</span>，<span class="arithmatex">\(f(\lambda)=\lambda x\)</span>，其中有 <span class="arithmatex">\(\lambda\in \mathbb{K},x\in X\)</span>，显然在 TVS 中这是一个连续函数，那么考虑 <span class="arithmatex">\(\lambda=0\)</span> 时有 <span class="arithmatex">\(f(0)=0\)</span>，根据邻域和连续函数的定义可知 <span class="arithmatex">\(f^{-1}(V)\)</span> 必然是 <span class="arithmatex">\(0\)</span> 的一个邻域，而关于 0 的任何邻域一定存在一个以 0 为中心的开球，因此我们可以知道存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得 <span class="arithmatex">\(\lvert \lambda \rvert&lt;\delta\)</span> 的情况下，<span class="arithmatex">\(\lambda x\in V\)</span>，由此即证</p>
 <p><strong>(4)</strong> Let <span class="arithmatex">\(A = \{x = (x_1, x_2) \in \mathbb{R}^2 : |x_1| \le x_2^2, \text{ or } x_1 = 0, |x_2| \le 1\}\)</span>. Show that <span class="arithmatex">\(A\)</span> is absorbing. Let <span class="arithmatex">\(\rho_A\)</span> be the sublinear functional of <span class="arithmatex">\(\mathbb{R}^2\)</span> associated with <span class="arithmatex">\(A\)</span>. Draw the sets <span class="arithmatex">\(\{x \in \mathbb{R}^2 : \rho_A(x) &lt; 1\}\)</span>, <span class="arithmatex">\(\{x \in \mathbb{R}^2 : \rho_A(x) \le 1\}\)</span> and the interior <span class="arithmatex">\(\text{int } A\)</span> of <span class="arithmatex">\(A\)</span>. Is <span class="arithmatex">\(\text{int } A\)</span> an absorbing set in <span class="arithmatex">\(\mathbb{R}^2\)</span>?</p>
 <p><strong>(5)</strong> Let <span class="arithmatex">\(A = \{x = (x_1, x_2) \in \mathbb{R}^2 : \|x\|_2 \le 1/2 \text{ or } \|x\|_2 = 1\}\)</span>. Show that the gauge <span class="arithmatex">\(\rho_A\)</span> of the non-convex set <span class="arithmatex">\(A\)</span> agrees with the norm <span class="arithmatex">\(\|\cdot\|_2\)</span> of <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
 <p><code>Proof.</code></p>
-<p>首先考虑集合 <span class="arithmatex">\(A\)</span> 的几何形状：它是以原点为中心半径小于等于<span class="arithmatex">\(\frac{1}{2}\)</span>的闭球与以原点为中心半径等于<span class="arithmatex">\(1\)</span>的单位圆周的并集</p>
+<p>首先考虑集合 <span class="arithmatex">\(A\)</span> 的几何形状：它是以原点为中心半径小于等于 <span class="arithmatex">\(\frac{1}{2}\)</span> 的闭球与以原点为中心半径等于 <span class="arithmatex">\(1\)</span> 的单位圆周的并集</p>
 <p>仍然是根据定义证明，闵可夫斯基泛函（Gauge）的定义为：</p>
 <div class="arithmatex">\[ \rho_A(x) = \inf \{ \lambda &gt; 0 : x \in \lambda A \} = \inf \{ \lambda &gt; 0 : \frac{x}{\lambda} \in A \} \]</div>
 <p>我们需要证明对于任意 <span class="arithmatex">\(x \in \mathbb{R}^2\)</span>，有 <span class="arithmatex">\(\rho_A(x) = \|x\|_2\)</span>。</p>
-<p><span class="arithmatex">\(x=0\)</span>时显然，根据定义 <span class="arithmatex">\(\rho_A(0) = 0\)</span>，且范数 <span class="arithmatex">\(\|0\|_2 = 0\)</span>。<span class="arithmatex">\(x \neq 0\)</span>，令 <span class="arithmatex">\(r = \|x\|_2 &gt; 0\)</span>。我们需要考察使得 <span class="arithmatex">\(\frac{x}{\lambda} \in A\)</span> 成立的 <span class="arithmatex">\(\lambda &gt; 0\)</span> 的集合。</p>
+<p><span class="arithmatex">\(x=0\)</span> 时显然，根据定义 <span class="arithmatex">\(\rho_A(0) = 0\)</span>，且范数 <span class="arithmatex">\(\|0\|_2 = 0\)</span>。<span class="arithmatex">\(x \neq 0\)</span>，令 <span class="arithmatex">\(r = \|x\|_2 &gt; 0\)</span>。我们需要考察使得 <span class="arithmatex">\(\frac{x}{\lambda} \in A\)</span> 成立的 <span class="arithmatex">\(\lambda &gt; 0\)</span> 的集合。</p>
 <div class="arithmatex">\[
 \left\| \frac{x}{\lambda} \right\|_2 \le \frac{1}{2} \quad \text{or} \quad \left\| \frac{x}{\lambda} \right\|_2 = 1 \iff
 \frac{r}{\lambda} \le \frac{1}{2} \quad \text{or} \quad \frac{r}{\lambda} = 1
@@ -2099,11 +2099,11 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 <div class="arithmatex">\[ \{x \in X : q(x) &lt; 1\} \subseteq V \subseteq \{x \in X : q(x) \le 1\} \]</div>
 <p>then <span class="arithmatex">\(q = \rho_V\)</span>.</p>
 <p><strong>(9)</strong> Prove Lemma 5.2.4.</p>
-<h2 id="seperation-theorems">Seperation Theorems<a class="headerlink" href="#seperation-theorems" title="Permanent link">⚓︎</a></h2>
-<h2 id="uniform-boundness-principle">Uniform Boundness Principle<a class="headerlink" href="#uniform-boundness-principle" title="Permanent link">⚓︎</a></h2>
-<p>先给出一致有界定理(有时也被称作是<span class="arithmatex">\(Banach-Steinhaus\)</span>定理)的内容：</p>
+<h2 id="separation-theorems">Separation Theorems<a class="headerlink" href="#separation-theorems" title="Permanent link">⚓︎</a></h2>
+<h2 id="uniform-boundedness-principle">Uniform Boundedness Principle<a class="headerlink" href="#uniform-boundedness-principle" title="Permanent link">⚓︎</a></h2>
+<p>先给出一致有界定理(有时也被称作是 <span class="arithmatex">\(Banach-Steinhaus\)</span> 定理)的内容：</p>
 <div class="admonition tip">
-<p class="admonition-title">Uniform Boundness Principle</p>
+<p class="admonition-title">Uniform Boundedness Principle</p>
 <p>Let <span class="arithmatex">\(E\)</span> be a Banach space and <span class="arithmatex">\(F\)</span> a normed space. Let <span class="arithmatex">\(\left\{ T_{\lambda} \right\}_{\lambda\in\Lambda}\subseteq B(E,F)\)</span> be a family of bounded continuous linear operators. Then the following are equivalent:</p>
 <p>(1) <span class="arithmatex">\(\left\{ T_{\lambda}:\lambda\in\Lambda \right\}\)</span> is uniformly bounded;<br />
 (2) <span class="arithmatex">\(\left\{ T_{\lambda}:\lambda\in\Lambda \right\}\)</span> is pointwise bounded</p>
@@ -2112,9 +2112,9 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 <p>then there is a constant <span class="arithmatex">\(0&lt;M &lt;+\infty\)</span> such that</p>
 <div class="arithmatex">\[\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda\]</div>
 </div>
-<p>让我们听听<code>Gemini3</code>如何零基础讲解这个定理：</p>
+<p>让我们听听 <code>Gemini3</code> 如何零基础讲解这个定理：</p>
 <hr />
-<p>这个定理叫<strong>一致有界性原理 (Uniform Boundedness Principle, UBP)</strong>，也被称为 <strong>Banach-Steinhaus 定理</strong>。它是泛函分析中“三大定理”之一（另外两个是开映射定理和Hahn-Banach定理），非常核心。</p>
+<p>这个定理叫<strong>一致有界性原理 (Uniform Boundedness Principle, UBP)</strong>，也被称为 <strong>Banach-Steinhaus 定理</strong>。它是泛函分析中“三大定理”之一（另外两个是开映射定理和 Hahn-Banach 定理），非常核心。</p>
 <p>通俗地说，这个定理告诉我们：<strong>“如果你能对每一个单独的点都保持有界，那么在某种条件下，你整体上就是有界的。”</strong></p>
 <p>下面我为你拆解里面的重要名词，然后再解释定理在说什么。</p>
 <p>(1) Normed Space (赋范空间) <span class="arithmatex">\(F\)</span>
@@ -2124,7 +2124,7 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 *   <strong>通俗理解</strong>：一个没有“漏洞”的赋范空间。
 *   <strong>定义</strong>：它首先是一个赋范空间，其次它是<strong>完备的 (Complete)</strong>。
     *   <strong>什么是完备？</strong> 意思是如果你有一个柯西序列（一串越来越靠近彼此的向量），那么它们的极限点<strong>一定还在这个空间里</strong>，不会跑出去。
-    *   <em>例子</em>：实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 是完备的（Banach空间），但有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 就不是（因为有理数序列可以收敛到 <span class="arithmatex">\(\sqrt{2}\)</span>，而 <span class="arithmatex">\(\sqrt{2}\)</span> 不在 <span class="arithmatex">\(\mathbb{Q}\)</span> 里）。
+    *   <em>例子</em>：实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 是完备的（Banach 空间），但有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 就不是（因为有理数序列可以收敛到 <span class="arithmatex">\(\sqrt{2}\)</span>，而 <span class="arithmatex">\(\sqrt{2}\)</span> 不在 <span class="arithmatex">\(\mathbb{Q}\)</span> 里）。
     *   <strong>为什么重要？</strong> 这个定理成立的关键就在于 <span class="arithmatex">\(E\)</span> 必须是 Banach 空间。如果是普通赋范空间，定理不一定成立。</p>
 <p>(3) <strong>Linear Operator (线性算子)</strong> <span class="arithmatex">\(T_\lambda\)</span>
 *   <strong>通俗理解</strong>：一个保持结构的函数。
@@ -2179,7 +2179,7 @@ f(x')-f(x'')&amp;=f(x'-x'')\\
 </ul>
 <p>首先检查 <span class="arithmatex">\(\sum x_n\)</span> 是否收敛。考察其范数和：</p>
 <div class="arithmatex">\[ \sum_{n=1}^\infty \|x_n\| = \sum_{k=1}^\infty \|x_{n_k}\| = \sum_{k=1}^\infty \left\| \frac{1}{k^2} u_k \right\| = \sum_{k=1}^\infty \frac{1}{k^2} \]</div>
-<p>由于级数 <span class="arithmatex">\(\sum \frac{1}{k^2}\)</span> 收敛，且 <span class="arithmatex">\(X\)</span> 是Banach 空间，因此级数 <span class="arithmatex">\(\sum_{n=1}^\infty x_n\)</span> 在 <span class="arithmatex">\(X\)</span> 中收敛。这满足了条件(a)。</p>
+<p>由于级数 <span class="arithmatex">\(\sum \frac{1}{k^2}\)</span> 收敛，且 <span class="arithmatex">\(X\)</span> 是 Banach 空间，因此级数 <span class="arithmatex">\(\sum_{n=1}^\infty x_n\)</span> 在 <span class="arithmatex">\(X\)</span> 中收敛。这满足了条件(a)。</p>
 <p>然而，考察像序列 <span class="arithmatex">\(T_n(x_n)\)</span> 在 <span class="arithmatex">\(n=n_k\)</span> 时的行为：</p>
 <div class="arithmatex">\[ \|T_{n_k}(x_{n_k})\| = \left\| T_{n_k}\left(\frac{1}{k^2} u_k\right) \right\| = \frac{1}{k^2} \|T_{n_k}(u_k)\| &gt; \frac{1}{k^2} \cdot \frac{k^3}{2} = \frac{k}{2} \]</div>
 <p>当 <span class="arithmatex">\(k \to \infty\)</span> 时，<span class="arithmatex">\(\frac{k}{2} \to \infty\)</span>，因此 <span class="arithmatex">\(\|T_{n_k}(x_{n_k})\| \to \infty\)</span>。</p>

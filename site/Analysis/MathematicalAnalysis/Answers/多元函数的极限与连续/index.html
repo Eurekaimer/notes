@@ -1764,16 +1764,16 @@
 </div>
 <p><code>Sol.</code></p>
 <p>(1) 考虑构造一个收敛的点列，<span class="arithmatex">\(X_{k}=\left\{ \left( x_{1},x_{2},\dots,x_{n}\right)|\lvert x_{i} \rvert&lt; \frac{1}{k}  \right\}\)</span></p>
-<p>那么可以得到<span class="arithmatex">\(\bigcap\limits_{k=1}^{\infty}X_{k}=\left\{ 0 \right\}\)</span>，单点集不为开集</p>
+<p>那么可以得到 <span class="arithmatex">\(\bigcap\limits_{k=1}^{\infty}X_{k}=\left\{ 0 \right\}\)</span>，单点集不为开集</p>
 <p>(2)考虑构造收敛于区间端点的点列，<span class="arithmatex">\(X_{k}=\left\{ (x_{1},x_{2},\dots,x_{n})|d=\sqrt{ \sum\limits_{i=1}^{n}x_{i}^{2} }\leqslant 1- \frac{1}{k}\right\}\)</span></p>
-<p>那么可以得到<span class="arithmatex">\(\bigcup\limits_{k=1}^{\infty}X_{k}=\left\{ (x_{1},x_{2},\dots,x_{n})|d&lt;1 \right\}\)</span>，是一个开球(开集)</p>
+<p>那么可以得到 <span class="arithmatex">\(\bigcup\limits_{k=1}^{\infty}X_{k}=\left\{ (x_{1},x_{2},\dots,x_{n})|d&lt;1 \right\}\)</span>，是一个开球(开集)</p>
 <div class="admonition question">
 <p class="admonition-title">10.1 2</p>
-<p>设<span class="arithmatex">\(A\)</span>是<span class="arithmatex">\(\mathbb{R}^n\)</span>的子集，<span class="arithmatex">\(X_0\)</span>是<span class="arithmatex">\(A\)</span>的聚点，求证：存在点列<span class="arithmatex">\(\{X_m\}\subseteq A\)</span>, 使得<span class="arithmatex">\(X_m\neq X_0\)</span>,且</p>
+<p>设 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(\mathbb{R}^n\)</span> 的子集，<span class="arithmatex">\(X_0\)</span> 是 <span class="arithmatex">\(A\)</span> 的聚点，求证：存在点列 <span class="arithmatex">\(\{X_m\}\subseteq A\)</span>, 使得 <span class="arithmatex">\(X_m\neq X_0\)</span>,且</p>
 <div class="arithmatex">\[\lim_{m\to\infty}X_m=X_0\]</div>
 </div>
 <p><code>Proof.</code></p>
-<p>根据聚点的定义知道<span class="arithmatex">\(\forall\delta&gt;0,\exists x'\in V(X_{0},\delta)\bigcap A\)</span>，那么构造如下点列：</p>
+<p>根据聚点的定义知道 <span class="arithmatex">\(\forall\delta&gt;0,\exists x'\in V(X_{0},\delta)\bigcap A\)</span>，那么构造如下点列：</p>
 <p>固定 <span class="arithmatex">\(r_{1}=1,\exists X_{1}\in V(X_{0},r_{1}=1)\bigcap A,X_{1}\neq X_{0}\)</span>，再固定 <span class="arithmatex">\(r_{2}=\min\left\{ \frac{1}{2},\lvert X_{1}-X_{0} \rvert \right\},\exists X_{2}\in V(X_{0},r_{2})\bigcap A,X_{2}\neq X_{0}\)</span></p>
 <p>以此类推，<span class="arithmatex">\(r_{n}=\min\left\{ \frac{1}{n},\lvert X_{n-1}-X_{0} \rvert \right\},\exists X_{n}\in V(X_{0},r_{n})\bigcap A,X_{n}\neq X_{0}\)</span></p>
 <p>这样就得到了 <span class="arithmatex">\(\left\{ X_{m} \right\},\lim\limits_{ m \to \infty }\lvert X_{m}-X_{0} \rvert =0,X_{m}\neq X_{0},\lim\limits_{ m \to \infty }X_{m}=X_{0}\)</span></p>

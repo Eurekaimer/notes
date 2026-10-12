@@ -2,8 +2,8 @@
 # Lecture 4 - Discrete-time Markov Chains
 
 !!! tldr "Syllabus"
-    + Markou 链  
-    + Chapman-Kolmogorou 方程  
+    + Markov 链  
+    + Chapman-Kolmogorov 方程  
     + 不变分布
 
 !!! tip "HW2"
@@ -11,8 +11,8 @@
 
 ## 离散时间 Markov 链
 
-!!! note "Defnition4.1 (离散时间Markov链)"
-    设 $E$ 是一个可数集合，不妨为 $\mathbb{N}^{+}=\{1,2,\ldots\}$ 。称状态空间为 $E$ 的离散时间随机过程 $\{ X_{n}$, $n= 0, 1, 2, \ldots \}$ 为一个（离散时间）Markou 链，如果对于任意 $n\geq0$ ，任意状态 $i_0,i_1,\ldots,i_{n-1},i,j\in E$ ，有 Markou 性 (4.1)：
+!!! note "Definition4.1 (离散时间 Markov 链)"
+    设 $E$ 是一个可数集合，不妨为 $\mathbb{N}^{+}=\{1,2,\ldots\}$ 。称状态空间为 $E$ 的离散时间随机过程 $\{ X_{n}$, $n= 0, 1, 2, \ldots \}$ 为一个（离散时间）Markov 链，如果对于任意 $n\geq0$ ，任意状态 $i_0,i_1,\ldots,i_{n-1},i,j\in E$ ，有 Markov 性 (4.1)：
 
     $$
     \begin{aligned}
@@ -23,7 +23,7 @@
 
     成立。
 
-称 $P(n,i;n+1,j)$ 为时刻 $n$ 处于状态 $i$,时刻 $n+1$ 转移到状态的转移函数。若它与 $n$ 无关，则记为 $P_{ij}$ ，此时称 $\{X_n\}$ 为一个时齐 Markou 链，矩阵 $P=(P_{ij})_{i,j\in E}$ 称为一步转移矩阵。我们之后都考虑时齐 Markou 链。
+称 $P(n,i;n+1,j)$ 为时刻 $n$ 处于状态 $i$,时刻 $n+1$ 转移到状态的转移函数。若它与 $n$ 无关，则记为 $P_{ij}$ ，此时称 $\{X_n\}$ 为一个时齐 Markov 链，矩阵 $P=(P_{ij})_{i,j\in E}$ 称为一步转移矩阵。我们之后都考虑时齐 Markov 链。
 
 注 1.Markov 性 (4.1) 等价于 (4.2)
 
@@ -44,7 +44,7 @@ $$P(C\mid BA)=P(C\mid B)\Leftrightarrow P(CA\mid B)=P(C\mid B)P(A\mid B)$$
 
 $$P(X_0=i_0,X_1=i_1,\cdots,X_n=i_n)=P(X_0=i_0)\prod_{k=1}^nP(k-1,i_{k-1};k,i_k).$$
 
-(4.3) 有的地方称为链式法则 (chainrule)。可以看出，Markov 链的有限维联合分布由初始分布和转移函数决定，在时齐情形，
+(4.3) 有的地方称为链式法则 (chain rule)。可以看出，Markov 链的有限维联合分布由初始分布和转移函数决定，在时齐情形，
 
 $$P(X_0=i_0,X_1=i_1,\cdots,X_n=i_n)=P(X_0=i_0)\prod_{k=1}^nP_{i_{k-1}i_k}.$$
 
@@ -54,7 +54,7 @@ $$P_{ij}\geq0,\quad i,j\in E$$
 
 $$\displaystyle\sum_{j\in E}P_{ij}=1,\quad\forall i\in E$$
 
-则称 $P$ 为 $E$ 上的转移矩阵（transitionmatrix)/随机矩阵（stochasticmatrix，注意和 randon matrix 的区分）.称 $P_{ij}$ 为从状态到的转移概率。
+则称 $P$ 为 $E$ 上的转移矩阵（transition matrix)/随机矩阵（stochastic matrix，注意和 random matrix 的区分）.称 $P_{ij}$ 为从状态到的转移概率。
 
 ## 例子
 
@@ -80,10 +80,10 @@ $$S_n:=S_0+\xi_1+\cdots+\xi_n=S_{n-1}+\xi_n.$$
 
 $\xi_{n}$ 可以服从更一般的分布，此时， $S_n$ 称为一般随机游走。
 
-!!! example "Example4.3 (Ehrenfest模型)"
+!!! example "Example4.3 (Ehrenfest 模型)"
     在统计热力学的研究中，一个经典的模型是 Ehrenfest 模型，用来模拟气体分子在两个容器中的扩散过程。考虑甲乙两个容器，其中总共的气体分子为 $N$ 。假设单位时间内，有且只有一个分子在甲乙两个容器之间扩散，扩散的分子是随机选取的。
 
-记 n 时间后甲容器内的气体分子数为 $X_{n}$ ，则 $X_{n}$ 是一个状态空间为 $E=\{0,1,\ldots,N\}$ 的离散时间 Markou 链，转移概率为
+记 n 时间后甲容器内的气体分子数为 $X_{n}$ ，则 $X_{n}$ 是一个状态空间为 $E=\{0,1,\ldots,N\}$ 的离散时间 Markov 链，转移概率为
 
 $$P\left(X_{n+1}=j|X_n=i\right)=\left\{\begin{array}{cc}1-\frac{i}{N},&j=i+1\\\frac{i}{N},&j=i-1\\0,&|j-i|\ne1\end{array}\right.$$
 
@@ -104,7 +104,7 @@ $$P\left(X_{n+1}=j|X_n=i\right)=\left\{\begin{array}{cc}1-\frac{i}{N},&j=i+1\\\f
 
 $$P_{ij}^{(n)}=P\{X_{n+m}=j|X_{m}=i\},\quad n\ge0,\quad i,j\ge0.$$
 
-!!! note "Proposition 4.5 (Chapman-Kolmogorov方程 CK-Equation)"
+!!! note "Proposition 4.5 (Chapman-Kolmogorov 方程 CK-Equation)"
     对任意 $i,j\in E,m,n\geqslant0$
 
     $$P_{ij}^{(n+m)}=\sum_{k\in E}P_{ik}^{(n)}P_{kj}^{(m)}$$
@@ -128,7 +128,7 @@ $$P^{(n+m)}=P^{(n)}\cdot P^{(m)},$$
 
 $$P^{(n)}=P\cdot P^{(n-1)}=P\cdot P\cdot P^{(n-2)}=\cdots=P^{n}.$$
 
-!!! example "Example4.6 (两状态的Markov链 $I$)"
+!!! example "Example4.6 (两状态的 Markov 链 $I$)"
 
     设离散时间 Markov 链的样本空间只有两个状态。一步转移概率矩阵为
 
@@ -136,7 +136,7 @@ $$P^{(n)}=P\cdot P^{(n-1)}=P\cdot P\cdot P^{(n-2)}=\cdots=P^{n}.$$
 
     其中 $\alpha,\beta\in(0,1)$ 。
 
-我们想要计算它的 n 步转移矩阵，由 Chapman-Kolmogorou 方程，只需要计算 $P^{n}$ 。做**特征值分解**,$P$ 的两个特征值为
+我们想要计算它的 n 步转移矩阵，由 Chapman-Kolmogorov 方程，只需要计算 $P^{n}$ 。做**特征值分解**,$P$ 的两个特征值为
 
 $$\lambda_0=1,\quad\lambda_1=1-\alpha-\beta $$
 
@@ -178,7 +178,7 @@ P(X_{1}=j) &=\sum_{k\in E}P(X_{0}=k)P(X_{1}=j|X_{0}=k) \\
 
     $$\pi_j=\sum_{k\in E}\pi_kP_{kj},\quad\forall j\in E$$
 
-    则称 $\pi$ 为 $P$ 的不变测度 (inwariant measure)。进一步，若 $\sum\limits _{i\in E}\pi _{i}=1$，则称 $\pi$ 为不变分布。也称 $\pi$ 为以 $P$ 为转移矩阵的 Markov 链的不变测度。
+    则称 $\pi$ 为 $P$ 的不变测度 (invariant measure)。进一步，若 $\sum\limits _{i\in E}\pi _{i}=1$，则称 $\pi$ 为不变分布。也称 $\pi$ 为以 $P$ 为转移矩阵的 Markov 链的不变测度。
 
 这也可以理解为是收敛性的一种体现
 
@@ -192,7 +192,7 @@ $$(X_0,X_1,\cdots,X_n)\overset{d}{=}(X_m,X_{m+1},\cdots,X_{m+n})\:,\quad\forall 
 
 满足 (4.4) 的随机过程称为平稳过程 (Stationary Process)，即任何时刻 $m$ 作为起点，相同时间间隔 $n$ 随机过程的有限维分布都是相同的。因此不变分布π也被称为平稳分布 (Stationary Distribution).
 
-注意与平稳增量过程做对比 (Stationary Crements)
+注意与平稳增量过程做对比 (Stationary Increments)
 
 注 3．若 E 是有限的，把π视为行向量，不变分布π就是矩阵 P 的特征值为 1 的左特征向量，于是我们可以通过解线性方程组
 
@@ -219,7 +219,7 @@ Markov 链研究中的一个基本问题是确定所有的不变分布。
 
 我们在后面的学习中会回答这些问题。
 
-!!! example "Example4.8(两状态的Markov链 $II$)"
+!!! example "Example4.8(两状态的 Markov 链 $II$)"
     考虑状态空间为 $\{0,1\}$ ，转移矩阵为
 
     $$P=\left(\begin{array}{cc}1-\alpha&\alpha\\\beta&1-\beta\end{array}\right)$$

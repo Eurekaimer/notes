@@ -36,12 +36,12 @@
 + 共轭对称性
 + 对第一变元的线性，实际上对于第二变元是共轭线性的也就是 $\langle x,\lambda y\rangle= \overline{\lambda}\langle x,y\rangle$
 
-!!! note "Definition(Hilbert空间)"
+!!! note "Definition(Hilbert 空间)"
     通过内积诱导的范数 $\lVert x \rVert=\sqrt{ \langle x,x\rangle }$，如果内积空间在该范数下完备则称其为 Hilbert 空间
 
 注：容易知道 $\lVert \cdot \rVert$ 满足范数的三条性质，并且将 $E$ 的范数拓扑也称为内积拓扑
 
-我们接下来会讨论 Cauchy-Schwartz 不等式，实际上在数学分析和高等代数中就经常使用，这同样是内积空间中最著名的不等式，它建立了内积与范数（长度）之间的联系
+我们接下来会讨论 Cauchy-Schwarz 不等式，实际上在数学分析和高等代数中就经常使用，这同样是内积空间中最著名的不等式，它建立了内积与范数（长度）之间的联系
 
 !!! abstract "Theorem Cauchy-Schwarz inequality"
     Let $(E, \langle \cdot, \cdot \rangle)$ be an inner product space. It holds that
@@ -77,8 +77,8 @@ $$
 
 下面给出能够判断一个空间是否由内积定义的重要定理——平行四边形定理
 
-!!! tip "Paralletlogram Law"
-    A norm $\lVert \cdot \rVert$ of a vector space $E$ is defined through an inner product on $E$, if and only if ,
+!!! tip "Parallelogram Law"
+    A norm $\lVert \cdot \rVert$ of a vector space $E$ is defined through an inner product on $E$, if and only if
 
     $$\lVert x+y \rVert ^{2}+\lVert x-y \rVert ^{2}=2(\lVert x \rVert ^{2}+\lVert y \rVert ^{2}),\forall x,y\in E$$
 
@@ -334,7 +334,7 @@ $$
 我们还想要研究关于最小距离的概念，利用几何的观点先给出最优逼近的定义：
 
 !!! note "Definition(Best approximation)"
-    The distance from $x$ to $B$ is defined as $d(x,B)=\inf\limits_{y\in B}d(x,y)$，if there is an $\tilde{x}\in B$ such that $d(x, \tilde{x})=d(x,B)$, we call $\tilde{x}$ is a best approximation of $x$ in $X$ from $B$, or a best approximate element.
+    The distance from $x$ to $B$ is defined as $d(x,B)=\inf\limits_{y\in B}d(x,y)$，if there is a $\tilde{x}\in B$ such that $d(x, \tilde{x})=d(x,B)$, we call $\tilde{x}$ a best approximation of $x$ in $X$ from $B$, or a best approximate element.
 
 下面给出最优逼近定理，在 Hilbert 空间中选取一个闭凸子集，在补集中选取任意一点，我们一定能够在闭凸子集中选取到其的最优逼近元
 

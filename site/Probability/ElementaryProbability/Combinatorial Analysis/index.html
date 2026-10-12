@@ -29,7 +29,7 @@
     
     
       
-        <title>Chapter 1 :Combinatorial Analysis - Notes</title>
+        <title>Chapter 1: Combinatorial Analysis - Notes</title>
       
     
     
@@ -195,7 +195,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 1 :Combinatorial Analysis
+              Chapter 1: Combinatorial Analysis
             
           </span>
         </div>
@@ -932,10 +932,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permutationswith-indistinguishable-items" class="md-nav__link">
+  <a href="#permutations-with-indistinguishable-items" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Permutations(with indistinguishable items)
+        Permutations (with indistinguishable items)
       
     </span>
   </a>
@@ -1535,10 +1535,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#permutationswith-indistinguishable-items" class="md-nav__link">
+  <a href="#permutations-with-indistinguishable-items" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Permutations(with indistinguishable items)
+        Permutations (with indistinguishable items)
       
     </span>
   </a>
@@ -1703,16 +1703,16 @@
   
 
 
-<h1 id="chapter-1-combinatorial-analysis">Chapter 1 :Combinatorial Analysis<a class="headerlink" href="#chapter-1-combinatorial-analysis" title="Permanent link">⚓︎</a></h1>
-<p>OK,this is the first chapter in the probability theory, we will review some definition and theorems we have learned in our high school. To make a good preparition for the future, I suggest you can find some not so easy problems to solve and test yourself(like the question in the Ross or any others).</p>
+<h1 id="chapter-1-combinatorial-analysis">Chapter 1: Combinatorial Analysis<a class="headerlink" href="#chapter-1-combinatorial-analysis" title="Permanent link">⚓︎</a></h1>
+<p>OK, this is the first chapter in probability theory. We will review some definitions and theorems we learned in high school. To prepare well for the future, I suggest you find some not-so-easy problems to solve and test yourself (like the questions in Ross or other books).</p>
 <p>The first part is about counting. We only give a quick look.</p>
 <h2 id="counting">Counting<a class="headerlink" href="#counting" title="Permanent link">⚓︎</a></h2>
 <h3 id="basic-counting-principles">Basic Counting Principles<a class="headerlink" href="#basic-counting-principles" title="Permanent link">⚓︎</a></h3>
-<p><strong>Theorem 1.1 (Pigeonhole principle  Dirichllet, 1834)</strong>
+<p><strong>Theorem 1.1 (Pigeonhole principle, Dirichlet, 1834)</strong>
 If <span class="arithmatex">\(n\)</span> items are to be put into <span class="arithmatex">\(m\)</span> containers, with <span class="arithmatex">\(n &gt; m\)</span>, then at least one container must contain more than one item.</p>
 <p><strong>Remark 1.1.1</strong>
-More general Pigeonhole principle is <span class="arithmatex">\(\left\{ 1,2,\dots n \right\}\)</span> can't equiponent with <span class="arithmatex">\(\left\{ 1,2\dots n+m \right\}\)</span>
-More explainations you can find in <em>Real Analysis</em> by <em>Royden</em>.</p>
+The more general pigeonhole principle states that <span class="arithmatex">\(\left\{ 1,2,\dots n \right\}\)</span> can't be equipotent with <span class="arithmatex">\(\left\{ 1,2\dots n+m \right\}\)</span>.
+You can find more explanations in <em>Real Analysis</em> by <em>Royden</em>.</p>
 <p><strong>Corollary 1.2</strong>
 If <span class="arithmatex">\(n\)</span> items are to be put into <span class="arithmatex">\(m\)</span> containers with <span class="arithmatex">\(n &gt; m\)</span>, then at least one container must contain at least <span class="arithmatex">\(⌈n/m⌉\)</span> items.</p>
 <p><strong>Remark 1.2.1</strong>
@@ -1720,12 +1720,12 @@ Recall that ⌈·⌉ is a ceiling function, meaning that for any <span class="ar
 ⌈x⌉ = inf{<span class="arithmatex">\(n ∈ \mathbb{Z}|n ≥ x\)</span>}.
 ⌊x⌋ = sup{<span class="arithmatex">\(n ∈ \mathbb{Z}|n ≤ x\)</span>} is a floor function.</p>
 <p><code>Proof</code></p>
-<p>use the contradiction, and we also use this function in mathematical analysis.</p>
+<p>Use proof by contradiction; we also use this function in mathematical analysis.</p>
 <p>We first argue that for any <span class="arithmatex">\(x ∈ \mathbb{R}\)</span>, <span class="arithmatex">\(⌈x⌉ &lt; x + 1\)</span>. If not, there exists <span class="arithmatex">\(x_0 ∈ \mathbb{R}\)</span> with <span class="arithmatex">\(⌈x_0⌉ ≥ x_0 + 1\)</span>, then <span class="arithmatex">\(⌈x_0⌉ − 1\)</span> is a smaller integer satisfying the definition of ceiling function, which is a contradiction.</p>
-<p>We prove the corollary by contradiction. Assume that all containers contain at most <span class="arithmatex">\(⌈n/m⌉ − 1\)</span> items. Then the total number of items is at most <span class="arithmatex">\(m(⌈n/m⌉ − 1) &lt; m(n/m) = n\)</span>, which contradicts with the fact that there are n items.</p>
+<p>We prove the corollary by contradiction. Assume that all containers contain at most <span class="arithmatex">\(⌈n/m⌉ − 1\)</span> items. Then the total number of items is at most <span class="arithmatex">\(m(⌈n/m⌉ − 1) &lt; m(n/m) = n\)</span>, which contradicts the fact that there are n items.</p>
 <p><strong>Proposition 1.3</strong>
 If r experiments are to be performed sequentially and the first experiment can be performed in <span class="arithmatex">\(n_1\)</span> ways,...    the <span class="arithmatex">\(r^{th}\)</span> experiment in <span class="arithmatex">\(n_r\)</span> ways, then there are <span class="arithmatex">\(\prod\limits_{i=1}^r  n_i\)</span> ways to perform the <em><span class="arithmatex">\(r\)</span></em> experiments.</p>
-<p>The second part is Permutions.</p>
+<p>The second part is permutations.</p>
 <h2 id="permutations">Permutations<a class="headerlink" href="#permutations" title="Permanent link">⚓︎</a></h2>
 <p><strong>Definition 1.4 (Permutation)</strong>
 An ordered ranking of <span class="arithmatex">\(n \in \mathbb{N}\)</span> distinct elements is called a <strong>permutation</strong>.</p>
@@ -1734,9 +1734,9 @@ There are <span class="arithmatex">\(n(n − 1)· · · 1\)</span> permutations 
 <p><code>Proof</code></p>
 <p>Just by <strong>Basic Counting Principles</strong></p>
 <p><strong>Remark 1.6</strong>
-We use the notation <span class="arithmatex">\(n!\)</span> (read as “<strong>n factorial</strong>") to represent <span class="arithmatex">\(n(n−1)···1\)</span>.
+We use the notation <span class="arithmatex">\(n!\)</span> (read as "<strong>n factorial</strong>") to represent <span class="arithmatex">\(n(n−1)···1\)</span>.
 By convention, <strong>0! = 1</strong>.</p>
-<h3 id="permutationswith-indistinguishable-items">Permutations(with indistinguishable items)<a class="headerlink" href="#permutationswith-indistinguishable-items" title="Permanent link">⚓︎</a></h3>
+<h3 id="permutations-with-indistinguishable-items">Permutations (with indistinguishable items)<a class="headerlink" href="#permutations-with-indistinguishable-items" title="Permanent link">⚓︎</a></h3>
 <p><strong>Motivation example</strong>
 <em>How many different letter arrangements can be formed from the letters PEPPER?</em></p>
 <p><code>Solution</code></p>
@@ -1744,7 +1744,7 @@ By convention, <strong>0! = 1</strong>.</p>
 <p><strong>Generalization:</strong>
 In general, for n objects, out of which <span class="arithmatex">\(n_1\)</span> are alike, <span class="arithmatex">\(n_2\)</span> are alike,. . . , n~r~ are
 alike. Then there are <span class="arithmatex">\(\dfrac{n!}{n_1!n_2!···n_r!}\)</span> different permutations.</p>
-<p>After permutation, we can talk combinations more easily.</p>
+<p>After permutations, we can talk about combinations more easily.</p>
 <h2 id="combinations">Combinations<a class="headerlink" href="#combinations" title="Permanent link">⚓︎</a></h2>
 <p><strong>Definition 1.7 (Combination)</strong>
 A <strong>combination</strong> is an unordered collection of <em>k</em> items among  <span class="arithmatex">\(n\in \mathbb{N}\)</span> elements (<span class="arithmatex">\(k ≤ n\)</span>).</p>
@@ -1754,19 +1754,19 @@ The number of combinations of k items among  <span class="arithmatex">\(n\in \ma
 Consider a set of <span class="arithmatex">\(n\)</span> antennas of which m are defective, and <span class="arithmatex">\(n − m\)</span> are functional. Assume that all of the defectives and all of the functionals are considered indistinguishable. How many linear orderings are there in which no two defectives are consecutive?</p>
 <p><code>Solution</code></p>
 <p><em>We can line up n-m functional antennas.</em></p>
-<p><em>(use 1 stands fo the functional and 0 stands for the space between the next to)</em></p>
+<p><em>(Use 1 to stand for a functional antenna and 0 to stand for a space between adjacent antennas or at either end.)</em></p>
 <p><em>like this 0 1 0 1 0 1 0 1 0 1 0 1 0</em></p>
 <p><em>So obviously, there are <span class="arithmatex">\(\binom{n-m+1}{m}\)</span> possible orderings.</em></p>
 <h3 id="combinatorial-identities">Combinatorial identities<a class="headerlink" href="#combinatorial-identities" title="Permanent link">⚓︎</a></h3>
 <p><strong>Identity I</strong>
-<span class="arithmatex">\(\binom{n}{k}=\binom{n}{n-k}\)</span> ,for any <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(k\)</span> <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span> and <span class="arithmatex">\(k\le n\)</span>.</p>
+<span class="arithmatex">\(\binom{n}{k}=\binom{n}{n-k}\)</span>, for any <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(k\)</span> <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span> and <span class="arithmatex">\(k\le n\)</span>.</p>
 <p><strong>Identity II</strong>
-<span class="arithmatex">\(\binom{n+1}{k+1}=\binom{n}{k}+\binom{n}{k+1}\)</span> ,for any <span class="arithmatex">\(n, k\)</span> <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span> and <span class="arithmatex">\(k\le n\)</span>.</p>
+<span class="arithmatex">\(\binom{n+1}{k+1}=\binom{n}{k}+\binom{n}{k+1}\)</span>, for any <span class="arithmatex">\(n, k\)</span> <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{N}\)</span> and <span class="arithmatex">\(k\le n\)</span>.</p>
 <p><code>Proof</code></p>
 <p><strong><em>Algebraic verification is OK.</em></strong></p>
 <p>We will use a combinatorial argument.</p>
 <p>Consider a set <strong>S = {s~1~, . . . , s~n+1~ }</strong> , combinations of <strong>k+1</strong> elements among <strong>n+1</strong> can be divided as follows:</p>
-<p><strong>(1)</strong> combinations containg <span class="arithmatex">\(s_1\)</span>, there are <span class="arithmatex">\(\binom{n}{k}\)</span> such combinations;</p>
+<p><strong>(1)</strong> combinations containing <span class="arithmatex">\(s_1\)</span>: there are <span class="arithmatex">\(\binom{n}{k}\)</span> such combinations;</p>
 <p><strong>(2)</strong> there are <span class="arithmatex">\(\binom{n}{k+1}\)</span> combinations without <span class="arithmatex">\(s_1\)</span>.</p>
 <h2 id="multinomials">Multinomials<a class="headerlink" href="#multinomials" title="Permanent link">⚓︎</a></h2>
 <h3 id="binomials">Binomials<a class="headerlink" href="#binomials" title="Permanent link">⚓︎</a></h3>
@@ -1774,30 +1774,30 @@ Consider a set of <span class="arithmatex">\(n\)</span> antennas of which m are 
 For all <span class="arithmatex">\(x, y\)</span> <span class="arithmatex">\(\in\)</span> <span class="arithmatex">\(\mathbb{R}\)</span> and  <span class="arithmatex">\(n\in \mathbb{N}\)</span>,
 <span class="arithmatex">\((x+y)^n=\sum\limits_{k=0}^{n}\binom{n}{k}x^ky^{n-k}\)</span></p>
 <p><code>Proof is easy</code></p>
-<p>May be we can use a selection from {<span class="arithmatex">\(x_1,y_1\)</span>}  {<span class="arithmatex">\(x_2,y_2\)</span>} ...{<span class="arithmatex">\(x_n,y_n\)</span>}</p>
+<p>Maybe we can use a selection from {<span class="arithmatex">\(x_1,y_1\)</span>}  {<span class="arithmatex">\(x_2,y_2\)</span>} ...{<span class="arithmatex">\(x_n,y_n\)</span>}.</p>
 <p>The term <span class="arithmatex">\(x^ky^{n-k}\)</span> corresponds to a choice of a group of <span class="arithmatex">\(k\)</span> from n values <span class="arithmatex">\(x_1, x_2,...,x_n\)</span>, there are <span class="arithmatex">\(\binom{n}{k}\)</span> such terms.</p>
-<p><strong>The generalization of binomia.</strong>
+<p><strong>The generalization of the binomial theorem.</strong>
 Consider the expansion of <span class="arithmatex">\((x_1+x_2+···+x_r)^n\)</span>
 From the basic counting rule, the coefficient for <span class="arithmatex">\(x_1^{n_1}···x_r^{n_r}\)</span> is <span class="arithmatex">\(\binom{n}{n-n_1}\binom{n-n_1}{n_2}···\binom{n-n_1-···n_{r-1}}{n_r}=\dfrac{n!}{n_!!n_2!···n_r!}\)</span></p>
 <p><strong>Remark 1.10</strong>
-One hidden fact is that <span class="arithmatex">\(n_1,...,n_r\)</span>  satisfies <span class="arithmatex">\(n_1+···+n_r=n\)</span></p>
+One hidden fact is that <span class="arithmatex">\(n_1,...,n_r\)</span> satisfy <span class="arithmatex">\(n_1+···+n_r=n\)</span>.</p>
 <p><strong>Theorem 1.11 (The multinomial theorem)</strong>
-We define <span class="arithmatex">\(\binom{n}{n_1,n_2,···,n_r}:=\frac{n!}{n_1!n_2!···n_r!}\)</span>,then we have the multinomial expansion</p>
+We define <span class="arithmatex">\(\binom{n}{n_1,n_2,···,n_r}:=\frac{n!}{n_1!n_2!···n_r!}\)</span>, then we have the multinomial expansion</p>
 <div class="arithmatex">\[
 (x_1+x_2+···+x_r)^n=\sum_{(n_1,...,n_r):n_1+···n_r=n}^{}\binom{n}{n_1,n_2,...,n_r} x_1^{n_1}x_2^{n_2}···x_r^{n_r}
 \]</div>
 <p><strong>Proposition 1.12</strong>
 There are <span class="arithmatex">\(\binom{n+r-1}{r-1}\)</span> distinct nonnegative integer-valued vectors <span class="arithmatex">\((n_1, n_2, . . . , n_r)\)</span> satisfying <span class="arithmatex">\(n_1 + · · · + n_r= n\)</span></p>
 <p><code>Proof</code></p>
-<p>Instead,we discuss the number of positive solutions of <span class="arithmatex">\(y_1+···+y_r=n+r\)</span></p>
+<p>Instead, we discuss the number of positive solutions of <span class="arithmatex">\(y_1+···+y_r=n+r\)</span>.</p>
 <p><strong>(by letting <span class="arithmatex">\(y_i=n_i+1\)</span>)</strong></p>
 <p>Choose <span class="arithmatex">\(r-1\)</span> out of <span class="arithmatex">\(n+r-1\)</span> spaces.</p>
 <p><strong>Remark 1.12.1</strong>
-If we exchage the word "nonnegative" to the "positive"
+If we change the word "nonnegative" to "positive",
 What's the answer?
 Obviously, the answer is <span class="arithmatex">\(\binom{n-1}{r-1}\)</span></p>
 <p><strong>Remark 1.13</strong>
-In the Chapter 1, I don't write the motivations wholely , because this chapter we have learn quite a lot in the senior high school , but in the chapters after that ,I will write some useful motivations and cases which I think is helpful.</p>
+In Chapter 1, I don't write out all the motivations, because we have learned quite a lot about this chapter in senior high school, but in the chapters after that, I will write some useful motivations and cases which I think are helpful.</p>
 
 
   <nav class="md-tags" >

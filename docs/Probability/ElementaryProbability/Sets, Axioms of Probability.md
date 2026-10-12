@@ -3,10 +3,10 @@ comments: true
 tags:
   - Probability Theory
 ---
-# Chapter 2 :Sets, Axioms of Probability
+# Chapter 2: Sets, Axioms of Probability
 
-Now, let's begin the formal elementary probability theory's study.
-Normally, we will establish the fundamental framework by showing the axioms of probability. Before doing this, We must ensure that you have a certain understanding of basic sets and set operations.
+Now, let's begin the formal study of elementary probability theory.
+Normally, we will establish the fundamental framework by showing the axioms of probability. Before doing this, we must ensure that you have a certain understanding of basic sets and set operations.
 
 ##  Sets
 
@@ -21,13 +21,13 @@ Normally, we will establish the fundamental framework by showing the axioms of p
 + etc
 
 We can't answer the above questions but know **all the possibilities**——
-In other word , it called **Sample Space**
+In other words, it is called the **sample space**.
 
 **Definition 2.1 (Sample Space)**
-A **random experiment** is a phenomenon whose outcome is not predictable with certainty, but the set of all possible coutcomes is known. The set of all possible outcomes is known as the **sample space** of the experiment and is denoted by $\mathcal{S}$. Any item $ω ∈ \mathcal{S}$ is called a **sample point**.
+A **random experiment** is a phenomenon whose outcome is not predictable with certainty, but the set of all possible outcomes is known. The set of all possible outcomes is known as the **sample space** of the experiment and is denoted by $\mathcal{S}$. Any item $ω ∈ \mathcal{S}$ is called a **sample point**.
 
  **Remark 2.2**
-$\mathcal{S}$ can be finite,countably infinite,uncountably infinite`
+$\mathcal{S}$ can be finite, countably infinite, or uncountably infinite.
 
 We may think deeper after  learning more **Real Analysis**.
 
@@ -37,7 +37,7 @@ We may think deeper after  learning more **Real Analysis**.
 + S={(head, head), (head, tail), (tail, head), (tail,tail)} finite
 + S={(i, j) : i, j = 1, 2, 3, 4, 5, 6} finite
 
-Every course seems to give an introduce to **naive set theory** as an begining? This course isn't a expectation.
+Every course seems to give an introduction to **naive set theory** at the beginning? This course isn't an exception.
 
 ### Subset/Superset
 
@@ -100,7 +100,7 @@ Symbolically,$E \bigtriangleup F =\{  \omega| \omega \in E\setminus F \ or \ \om
 #### **Venn diagram**
 $\mathcal{S}$:a large rectangle
 events $E,F$... :represented by circles
-events of interests: shading the appropriate regions of the diagram`
+events of interest: shading the appropriate regions of the diagram
 
 ### Laws on sets
 
@@ -116,7 +116,7 @@ $E \cup(F\cap G)=(E\cup F)\cap (E\cup G) \ and \ E\cap(F \cup G)=(E\cap F) \cup 
 #### **Transitivity**
 If $E \subset F \ and\ F \subset G$ ,then $E \subset G$
 
-After them, there is also a very important law in the theory operations.
+After these, there is also a very important law in the theory of set operations.
 
 **Proposition 2.5 (De Morgan’s laws)**
 $(1)(\bigcup\limits_{i=1}^{n}E_i)^c=\bigcap\limits_{i=1}^{n}E_i^c$ 
@@ -145,14 +145,14 @@ $\omega \in \bigcap_{i=1}^{n}E_i^c$ , For any i , $\omega \notin E_i \to \omega 
 ## Axioms of Probability
 
 **Remark 2.6**
-This part is not the content in this class, just to know,you can read more about this in **Real Analysis(Royden)** if you want.
+This part is not covered in this class; it is just for your information. You can read more about this in **Real Analysis (Royden)** if you want.
 
 ### σ-algebra and Measurable space
 
 **Definition 2.7 (σ-algebra)**
 A σ-algebra A ⊂ P(S) is a family of sets over S satisfying the following properties:
 +  $\emptyset \in \mathcal{A}$
-+ $\mathcal{A}$ is closed under complementation: If $E \in \mathcal{A}$ , then $E^c \in \mathcal{A}$ , $\mathcal{A}$ is closed under countable union:if $(E_i)_{i\ge1}$is a countable sequence of sets in $\mathcal{A}$ ( $E_i\in \mathcal{A}\ for \ i\in N^*)$,
++ $\mathcal{A}$ is closed under complementation: If $E \in \mathcal{A}$ , then $E^c \in \mathcal{A}$ , $\mathcal{A}$ is closed under countable union: if $(E_i)_{i\ge1}$is a countable sequence of sets in $\mathcal{A}$ ( $E_i\in \mathcal{A}\ for \ i\in N^*)$,
 then $\bigcup_{i=1}^{\infty}E_i\in \mathcal{A}$
 
 **Definition 2.8 (Measurable space)**
@@ -173,7 +173,7 @@ $$
 \mathcal{P}(\bigcup_{i=1}^{\infty}E_i)=\sum_{i=1}^{\infty}\mathcal{P}(E_i)\notag 
 $$
 
-($\sigma$-additivity or countable addtivity)
+($\sigma$-additivity or countable additivity)
 Then $(S,\mathcal{A},\mathcal{P})$ is called a **probability space**.
 
 ## Properties of probability
@@ -191,7 +191,7 @@ $$
 
 `Proof`
 
-Let$\ E_1=S$ ,$E_i=\emptyset \ for\ all \ i\ge2$, $\{ E_i\}_{i=1}^{\infty} \ is \ a \ mutually \ exclusive \ sequence$
+Let $\ E_1=S$ ,$E_i=\emptyset \ for\ all \ i\ge2$, $\{ E_i\}_{i=1}^{\infty} \ is \ a \ mutually \ exclusive \ sequence$
 
 $$
 \begin{aligned} 
@@ -308,7 +308,7 @@ P(F)&=P(F\cap E)+{\color{Red}P(F\cap E^c)}\notag
 \end{align}
 $$
 
-The identity below is a very famous trick(when I'm in high school, I am amazed by it).
+The identity below is a very famous trick (when I was in high school, I was amazed by it).
 
 **Property 8  (Inclusion-Exclusion Identity/Poincaré’s formula)**
 For any two events $E,F\in \mathcal{A}$,
@@ -321,7 +321,7 @@ where $\sum\limits_{1\le i_1<...<i_k\le n}$ means the sum for all subsets of $(1
 
 `Proof`
 
-By induction is easy.
+The proof by induction is easy.
 
 **Property 9**
 For events $E,F$
@@ -357,7 +357,7 @@ P(\bigcup_{i=1}^{\infty}E_i)&=P(E_1\cup(\bigcup_{i=2}^{\infty}E_i))\notag
 $$
 
 **Property 11  (Boole’s Inequality)**
-For a countable infinite sequence of events $\{E_i\}_{i\ge1}$
+For a countably infinite sequence of events $\{E_i\}_{i\ge1}$
 
 $$
 P(\bigcup_{i=1}^{\infty}E_i)\le\sum_{i=1}^{\infty}P(E_i)\notag
@@ -392,7 +392,7 @@ $$ \color{Blue}Motivation \  example:Infinitely \ large \ urn \ and\ infinite\ b
    ball number 3 withdrawn;
 + ...
 
-and so on.How many balls are there in the urn at 12pm ?
+and so on. How many balls are there in the urn at 12pm ?
 (the answer is 0 and why?)
  If we place the 1 to 10 balls and withdraw 10,place the 11 to 20 balls and withdraw 20,there are infinite balls(contrast two situations).
 
@@ -423,9 +423,9 @@ $$
 
 `Proof`
 
-It suffices to discuss the increasing case since if ,
+It suffices to discuss the increasing case since,
 
-$\{E_n \ n\ge1\}$is decreasing the $\{E_n^c \ n\ge1 \}$ is increasing.
+if $\{E_n \ n\ge1\}$ is decreasing, then $\{E_n^c \ n\ge1 \}$ is increasing.
 
 $$
 \begin{align}
@@ -435,7 +435,7 @@ $$
 \end{align}
 $$
 
-Now we prove the result for increasing $E_n$ ,we do the same construction before.
+Now we prove the result for increasing $E_n$; we use the same construction as before.
 
 $$
 \begin{align}
@@ -446,9 +446,9 @@ RHS&=P(\lim_{n\to\infty}E_n)=P(\bigcup_{i=1}^{\infty}E_i)=P(\bigcup_{i=1}^\infty
 \end{align}
 $$
 
-Now let's focus on original example. We change the ball withdrawn to randomly.
+Now let's focus on the original example. We change the procedure to withdraw a ball randomly.
 
-We consider the ball number 1. Let $E_n$ be the event that ball 1 is still in the urn after the $n^{th}$ withdraw.
+We consider ball number 1. Let $E_n$ be the event that ball 1 is still in the urn after the $n^{th}$ withdrawal.
 
 $$
 \begin{align} 
@@ -462,7 +462,7 @@ P(ball \ 1 \ is\ in \ the \ urn\ at\ 12pm)&=P(\bigcap_{n=1}^{\infty}E_n)\notag
 \end{align}
 $$
 
-The discussion for other balls is the same . So we can get the conclusion.
+The discussion for other balls is the same. So we can get the conclusion.
 
 $$
 \begin{align}
@@ -479,7 +479,7 @@ $$
 `We first study finite sample space `
 
 **Definition 2.9 (uniform probability measure)** 
-Let $S$ be a finite sample space $S = \{\omega_1,...,\omega_n\}$ with $|S|=n\in N,n\ge1$ and $(S,P(S),P)$ be a probability space. Probability measure $P$ is said to be uniform if all outcomes $\omega_i$ in the sample space are equally likely to occur,that is,$P(\{\omega_i\})=\alpha$ for $i=1,...,n,$ with $\alpha\ge 0$ .
+Let $S$ be a finite sample space $S = \{\omega_1,...,\omega_n\}$ with $|S|=n\in N,n\ge1$ and $(S,P(S),P)$ be a probability space. Probability measure $P$ is said to be uniform if all outcomes $\omega_i$ in the sample space are equally likely to occur, that is,$P(\{\omega_i\})=\alpha$ for $i=1,...,n,$ with $\alpha\ge 0$ .
 
 **Properties**
 
@@ -531,7 +531,7 @@ $$
 ### **Birthday Problem**
 
 Recall that Pigeonhole principle tells us that among 366 people, there are at least 2 people celebrating their birthday on the same day (we ignore the Feb. 29 case).
-Now we want to study for n people, what is the probability that no two of them celebrate their birthday on the same day? How large need n be so that this probability is less than $\frac{1}{2}$ ?
+Now we want to study, for n people, what is the probability that no two of them celebrate their birthday on the same day? How large does n need to be so that this probability is less than $\frac{1}{2}$?
 
 `Solution`
 
@@ -549,11 +549,11 @@ $$
 
 ### **Matching Problem**
 
-Suppose that each of N men at a party throw his hat into the center of the room. The hats are first mixed up, and then each man randomly selects a hat. What is the probability that none of the men selects his own hat?
+Suppose that each of N men at a party throws his hat into the center of the room. The hats are first mixed up, and then each man randomly selects a hat. What is the probability that none of the men selects his own hat?
 
 `Solution`
 
-We analysis the complement event at least one man selects his own hats
+We analyze the complement event: at least one man selects his own hat.
 
 Let $E_i=the \ i^{th}\ man\ selects\ his\ own\ hats$
 
@@ -583,7 +583,7 @@ $$
 \end{align}
 $$
 
-Recall the **Talor expansion** of  $e^x=\sum_{k=0}^{\infty}\frac{x^k}{k!}$
+Recall the **Taylor expansion** of $e^x=\sum_{k=0}^{\infty}\frac{x^k}{k!}$.
 When N is large the probability is close to $e^{-1}\approx0.3679$
 
 

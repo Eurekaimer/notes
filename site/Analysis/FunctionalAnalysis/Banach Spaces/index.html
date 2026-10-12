@@ -984,15 +984,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seperable-banach-spaces" class="md-nav__link">
+  <a href="#separable-banach-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seperable Banach spaces
+        Separable Banach spaces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Seperable Banach spaces">
+    <nav class="md-nav" aria-label="Separable Banach spaces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1845,15 +1845,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seperable-banach-spaces" class="md-nav__link">
+  <a href="#separable-banach-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seperable Banach spaces
+        Separable Banach spaces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Seperable Banach spaces">
+    <nav class="md-nav" aria-label="Separable Banach spaces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2025,7 +2025,7 @@
 <ul>
 <li>Normed spaces  </li>
 <li>Banach spaces  </li>
-<li>Seperable Banach spaces  </li>
+<li>Separable Banach spaces  </li>
 <li>Completeness and Compactness in Banach spaces</li>
 </ul>
 </div>
@@ -2045,7 +2045,7 @@
 <p>所谓的“赋范”就是指给空间赋以一个范数，那么就应当先给出范数的定义：</p>
 <div class="admonition note">
 <p class="admonition-title">Definition(norm)</p>
-<p>Let <span class="arithmatex">\(E\)</span> be a vector space over the field <span class="arithmatex">\(\mathbb{K}=\mathbb{R}\ or\ \mathbb{C}\)</span>, and let a function <span class="arithmatex">\(\lVert \cdot \rVert: E\to \mathbb{R}_{+}:=[0,\infty)\)</span> is a <em>norm</em> if the following 3 conditions are satisfied:<br />
+<p>Let <span class="arithmatex">\(E\)</span> be a vector space over the field <span class="arithmatex">\(\mathbb{K}=\mathbb{R}\ or\ \mathbb{C}\)</span>. A function <span class="arithmatex">\(\lVert \cdot \rVert: E\to \mathbb{R}_{+}:=[0,\infty)\)</span> is called a <em>norm</em> if the following 3 conditions are satisfied:<br />
 1. <span class="arithmatex">\(\lVert x \rVert \geqslant 0\)</span> for all <span class="arithmatex">\(x\in E\)</span> and <span class="arithmatex">\(\lVert x \rVert = 0\iff x=0\)</span><br />
 2. <span class="arithmatex">\(\lVert \lambda x \rVert =\lvert \lambda \rvert\lVert x \rVert\)</span> for all <span class="arithmatex">\(\lambda\in \mathbb{K}\)</span> and <span class="arithmatex">\(x\in E\)</span><br />
 3. <span class="arithmatex">\(\lVert x+y \rVert \leqslant \lVert x \rVert + \lVert y \rVert\)</span> for all <span class="arithmatex">\(x,y\in E\)</span> (Triangle inequality)</p>
@@ -2061,37 +2061,37 @@ d(x,y)=\lVert x-y \rVert ,\forall x,y,z\in E
 <p>Some terms may be used later: locally convex space(LCS for short), topological vector spaces(TVS)<br />
 We note that <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\ or\ \mathbb{R}\)</span>, so we should consider <span class="arithmatex">\(\overline{x}y\not\neq x \overline{y}\)</span></p>
 </div>
-<p>We should know some about <em>topological vector spaces(TVS)</em>. You can find more about TVS in 拓扑向量空间 (TVS)(赋予了范数拓扑的赋范空间是一个局部凸拓扑向量空间 (LCS))</p>
+<p>We should know something about <em>topological vector spaces(TVS)</em>. You can find more about TVS in 拓扑向量空间 (TVS)(赋予了范数拓扑的赋范空间是一个局部凸拓扑向量空间 (LCS))</p>
 <p>给出一些简单范数的例子（证明只需要根据定义 check）</p>
 <div class="admonition example">
 <p class="admonition-title">范数例子</p>
 <ol>
-<li>欧式范数<br />
+<li>欧氏范数<br />
 在有限维的向量空间上定义一组基，定义范数 (<span class="arithmatex">\(\lVert \cdot \rVert : E\to[0,+\infty)\)</span>) 为：</li>
 </ol>
 <div class="arithmatex">\[\lVert x \rVert _{2}:= \left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{2} \right) ^{ \frac{1}{2}},\forall x=\sum\limits_{i=1}^{n} x_{i}e_{i}\in E\]</div>
 <ol>
 <li><span class="arithmatex">\(p\)</span> 范数<br />
-对于<span class="arithmatex">\(1\leqslant p &lt; \infty\)</span>，定义在<span class="arithmatex">\(\mathbb{K}^{n}\)</span>上的范数为</li>
+对于 <span class="arithmatex">\(1\leqslant p &lt; \infty\)</span>，定义在 <span class="arithmatex">\(\mathbb{K}^{n}\)</span> 上的范数为</li>
 </ol>
 <div class="arithmatex">\[\lVert x \rVert _{p}=\left( \sum\limits_{i=1}^{n} \lvert x_{i} \rvert ^{p} \right)^{\frac{1}{p}}\]</div>
-<p>比较特别的是无穷范数<span class="arithmatex">\(\lVert x \rVert_{\infty}=\max\limits_{1\leqslant i \leqslant n}\lvert x_{i} \rvert\)</span>，事实上这只是针对于序列的，关于函数空间也有相应的<span class="arithmatex">\(p\)</span>范数会在后续定义</p>
+<p>比较特别的是无穷范数 <span class="arithmatex">\(\lVert x \rVert_{\infty}=\max\limits_{1\leqslant i \leqslant n}\lvert x_{i} \rvert\)</span>，事实上这只是针对于序列的，关于函数空间也有相应的 <span class="arithmatex">\(p\)</span> 范数会在后续定义</p>
 <ol>
 <li><em>Frobenius norm</em> or <em>Hilbert-Schmidt norm</em><br />
-定义矩阵函数：<span class="arithmatex">\(M_{mn}\to[0,+\infty)\)</span>如下：</li>
+定义矩阵函数：<span class="arithmatex">\(M_{mn}\to[0,+\infty)\)</span> 如下：</li>
 </ol>
 <div class="arithmatex">\[\lVert A \rVert =\left( \sum\limits_{i=1}^{m} \sum\limits_{j=1}^{n} \lvert a_{ij} \rvert ^{2} \right)^{\frac{1}{2}},\forall A=(a_{ij}){1\leqslant i \leqslant m, 1\leqslant j \leqslant n}\in M_{mn}\]</div>
 </div>
-<p>下面给出一些关于<span class="arithmatex">\(l_{\infty}\)</span>的子空间的例子</p>
+<p>下面给出一些关于 <span class="arithmatex">\(l_{\infty}\)</span> 的子空间的例子</p>
 <div class="admonition example">
 <p class="admonition-title">important normed subspaces of <span class="arithmatex">\(l_{\infty}\)</span></p>
 <p>(1) <span class="arithmatex">\(c=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}\ exists \right\}\)</span><br />
 (2) <span class="arithmatex">\(c_{0}=\left\{ (x_{n})_{n=1}^{\infty}:\lim\limits_{ n \to \infty }x_{n}=0 \right\}\)</span><br />
 (3) <span class="arithmatex">\(c_{00}=\left\{ (x_{n})_{n=1}^{\infty}:x_{n}=0 \right\}\)</span> <span class="arithmatex">\(x_{n}=0\)</span> for all but at most finitely many <span class="arithmatex">\(n\)</span></p>
 </div>
-<p>其中第一个就是一个极限存在的数列，第二个就是一个极限是0的数列，第三个则是一个至多有有限多个项能够取到0的极限为0的数列</p>
+<p>其中第一个就是一个极限存在的数列，第二个就是一个极限是 0 的数列，第三个则是一个至多有有限多个项能够取到 0 的极限为 0 的数列</p>
 <p>有一个不那么显然的范数判断留作习题，请参考<em>Exercises 2.1 8</em></p>
-<p>实际上在上面关于<span class="arithmatex">\(p\)</span>范数的三角不等式性质证明中我们需要两个著名的不等式(<span class="arithmatex">\(H \ddot{o} lder\)</span> inequality and Minkowski inequality)，在此citing with proof，后续不再赘述</p>
+<p>实际上在上面关于 <span class="arithmatex">\(p\)</span> 范数的三角不等式性质证明中我们需要两个著名的不等式(<span class="arithmatex">\(H \ddot{o} lder\)</span> inequality and Minkowski inequality)，在此 citing with proof，后续不再赘述</p>
 <div class="admonition tip">
 <p class="admonition-title">Theorem(<span class="arithmatex">\(H\ddot{o}lder\)</span>'s inequality)</p>
 <p>Here use <span class="arithmatex">\(\mu\)</span> as a positive measure and a set <span class="arithmatex">\(\Omega\)</span>, let <span class="arithmatex">\(1&lt;p&lt;\infty\)</span>. For any <span class="arithmatex">\(f\in L^{p}(\Omega,\mu)\)</span> and <span class="arithmatex">\(g\in L^{q}(\Omega,\mu)\)</span>, where <span class="arithmatex">\(\frac{1}{p}+ \frac{1}{q}=1\)</span>, we have <span class="arithmatex">\(fg\in L^{1}(\Omega,\mu)\)</span> and</p>
@@ -2118,7 +2118,7 @@ We note that <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\ or\ \mathbb{R}\)<
 <div class="arithmatex">\[\left( \int_{\Omega}\lvert f+g \rvert ^{p}d\mu \right)^{\frac{1}{p}}\leqslant\left( \int_{\Omega}\lvert f \rvert ^{p}d\mu \right)^{ \frac{1}{p}}+\left( \int_{\Omega}\lvert g \rvert ^{p} d\mu\right)^{\frac{1}{p}}\]</div>
 </div>
 <p><code>Proof.</code></p>
-<p>稍微陈述一下证明脉络：做一个拆分然后使用<span class="arithmatex">\(H \ddot{o} lder\)</span>不等式进行放缩</p>
+<p>稍微陈述一下证明脉络：做一个拆分然后使用 <span class="arithmatex">\(H \ddot{o} lder\)</span> 不等式进行放缩</p>
 <p>Very easy.</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -2131,18 +2131,18 @@ We note that <span class="arithmatex">\(\mathbb{K}=\mathbb{C}\ or\ \mathbb{R}\)<
 \end{aligned}
 \]</div>
 <p>定义了范数（Norm）的向量空间称为<strong>赋范空间</strong>(Normed Space，或赋范线性空间)</p>
-<p>在泛函分析中，我们主要研究这类空间。其中，最基本且最早被深入研究的一类是实数域或复数域上的<strong>完备赋范空间</strong>，这类空间被称为<strong>Banach空间</strong>。另一个重要的例子是<strong>Hilbert空间</strong>，它是一种特殊的 Banach 空间(准确的说是完备的内积空间)，其范数由一个内积所诱导</p>
-<p>由于我们上面所介绍的范数和对应的空间都是针对于序列的，因此我们不免想要专门抽象出一个空间来进行表示，我们希望它能够将已有的范数概念推广到无穷维的序列上(推广至无穷也正是泛函分析这一学科研究的核心内容)，序列空间正是作为<strong>有限维向量空间<span class="arithmatex">\(\mathbb{K}^{n}\)</span>在无限维情况下的自然抽象和推广</strong>，为无限维背景下研究收敛性、完备性、连续性提供了基础的模型</p>
-<p>下面介绍一下Sequence spaces(序列空间)的内容，在泛函分析及其他领域中，序列空间就是一个向量空间，元素为实数或复数，等价地是一个函数空间(<span class="arithmatex">\(\mathbb{N}(\mathbb{Z})\to \mathbb{K}\)</span>)，所有的函数集自然与可能的元素在<span class="arithmatex">\(\mathbb{K}\)</span>中的无限序列集相对应，并且在逐点加法与数乘运算中构成一个向量空间</p>
-<p>那么关于上面的序列空间，我们仍然需要为它配备一个范数，这就引出了<span class="arithmatex">\(\ell_{p}\)</span>空间，它很好继承了有限维情况下结构良好的<span class="arithmatex">\(p\)</span>范数的性质，又兼具无穷求和有限的性质，便于进行分析，保证了范数的有界性，并且它也是完备的(Banach空间)</p>
-<p>给出<span class="arithmatex">\(\ell_{p}\)</span>空间的定义：</p>
+<p>在泛函分析中，我们主要研究这类空间。其中，最基本且最早被深入研究的一类是实数域或复数域上的<strong>完备赋范空间</strong>，这类空间被称为<strong>Banach 空间</strong>。另一个重要的例子是<strong>Hilbert 空间</strong>，它是一种特殊的 Banach 空间(准确地说是完备的内积空间)，其范数由一个内积所诱导</p>
+<p>由于我们上面所介绍的范数和对应的空间都是针对于序列的，因此我们不免想要专门抽象出一个空间来进行表示，我们希望它能够将已有的范数概念推广到无穷维的序列上(推广至无穷也正是泛函分析这一学科研究的核心内容)，序列空间正是作为<strong>有限维向量空间 <span class="arithmatex">\(\mathbb{K}^{n}\)</span> 在无限维情况下的自然抽象和推广</strong>，为无限维背景下研究收敛性、完备性、连续性提供了基础的模型</p>
+<p>下面介绍一下 Sequence spaces(序列空间)的内容，在泛函分析及其他领域中，序列空间就是一个向量空间，元素为实数或复数，等价地是一个函数空间(<span class="arithmatex">\(\mathbb{N}(\mathbb{Z})\to \mathbb{K}\)</span>)，所有的函数集自然与可能的元素在 <span class="arithmatex">\(\mathbb{K}\)</span> 中的无限序列集相对应，并且在逐点加法与数乘运算中构成一个向量空间</p>
+<p>那么关于上面的序列空间，我们仍然需要为它配备一个范数，这就引出了 <span class="arithmatex">\(\ell_{p}\)</span> 空间，它很好继承了有限维情况下结构良好的 <span class="arithmatex">\(p\)</span> 范数的性质，又兼具无穷求和有限的性质，便于进行分析，保证了范数的有界性，并且它也是完备的(Banach 空间)</p>
+<p>给出 <span class="arithmatex">\(\ell_{p}\)</span> 空间的定义：</p>
 <div class="admonition note">
-<p class="admonition-title">Definiotion(<span class="arithmatex">\(l_{p}\)</span> space)</p>
-<p>Let <span class="arithmatex">\(I\)</span> be a set and <span class="arithmatex">\(1\leqslant p &lt; \infty\)</span> and <span class="arithmatex">\(l_{p}(I)\)</span> to be the set of all functions <span class="arithmatex">\(x:I\to \mathbb{K}\)</span> s.t.</p>
+<p class="admonition-title">Definition(<span class="arithmatex">\(l_{p}\)</span> space)</p>
+<p>Let <span class="arithmatex">\(I\)</span> be a set and <span class="arithmatex">\(1\leqslant p &lt; \infty\)</span> and let <span class="arithmatex">\(l_{p}(I)\)</span> be the set of all functions <span class="arithmatex">\(x:I\to \mathbb{K}\)</span> s.t.</p>
 <div class="arithmatex">\[\sum\limits_{i\in I}\lvert x(i) \rvert^{p}:=\lim\limits_{ F\in \mathcal{F} }\lvert x(i) \rvert ^{p}&lt;\infty   \]</div>
 <p>where <span class="arithmatex">\(\mathcal{F}\)</span> is the direct family of finite subsets of <span class="arithmatex">\(I\)</span> ordered by set inclusion</p>
 </div>
-<p>实际上<span class="arithmatex">\(\ell^{p}\)</span>空间是<span class="arithmatex">\(L^{p}\)</span>空间在计数测度的一种特殊情况</p>
+<p>实际上 <span class="arithmatex">\(\ell^{p}\)</span> 空间是 <span class="arithmatex">\(L^{p}\)</span> 空间在计数测度的一种特殊情况</p>
 <blockquote>
 <p>The most important sequence spaces in analysis are the ⁠⁠ spaces, consisting of the ⁠⁠power summable sequences, with the ⁠⁠-norm. These are special cases of <a href="https://en.wikipedia.org/wiki/Lp_space" title="Lp space">⁠Lp spaces</a> for the <a href="https://en.wikipedia.org/wiki/Counting_measure" title="Counting measure">counting measure</a> on the set of natural numbers. Other important classes of sequences like <a href="https://en.wikipedia.org/wiki/Convergent_sequence" title="Convergent sequence">convergent sequences</a> or <a href="https://en.wikipedia.org/wiki/Sequence_space#c,_c0_and_c00">null sequences</a> form sequence spaces, respectively denoted ⁠⁠ and ⁠⁠, with the <a href="https://en.wikipedia.org/wiki/Supremum_norm" title="Supremum norm">sup norm</a>. Any sequence space can also be equipped with the <a href="https://en.wikipedia.org/wiki/Topology" title="Topology">topology</a> of <a href="https://en.wikipedia.org/wiki/Pointwise_convergence" title="Pointwise convergence">pointwise convergence</a>, under which it becomes a special kind of <a href="https://en.wikipedia.org/wiki/Fr%C3%A9chet_space" title="Fréchet space">Fréchet space</a>called <a href="https://en.wikipedia.org/wiki/FK-space" title="FK-space">FK-space</a>.</p>
 </blockquote>
@@ -2205,7 +2205,7 @@ Prove that <span class="arithmatex">\(p\)</span> is a norm if and only if <span 
 <div class="arithmatex">\[p(tx + (1-t)y) \le p(tx) + p((1-t)y) = |t|p(x) + |1-t|p(y)\]</div>
 <p>Since <span class="arithmatex">\(t \in [0, 1]\)</span>, this equals <span class="arithmatex">\(t p(x) + (1-t)p(y) \le t(1) + (1-t)(1) = 1\)</span>. Thus <span class="arithmatex">\(tx + (1-t)y \in U_E\)</span>, so <span class="arithmatex">\(U_E\)</span> is convex.</p>
 <p>Conversely, assume <span class="arithmatex">\(U_E\)</span> is convex. We must show the triangle inequality <span class="arithmatex">\(p(x+y) \le p(x) + p(y)\)</span> to prove <span class="arithmatex">\(p\)</span> is a norm.</p>
-<p>Let <span class="arithmatex">\(x, y \in E\)</span> be non-zero vectors (the zero case is trivial). As following:</p>
+<p>Let <span class="arithmatex">\(x, y \in E\)</span> be non-zero vectors (the zero case is trivial). As follows:</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \frac{p(x)}{p(x)+p(y)} \frac{x}{p(x)}+\frac{p(y)}{p(x)+p(y)} \frac{y}{p(y)}&amp; = \frac{x+y}{p(x)+p(y)}\\
@@ -2280,7 +2280,7 @@ Using the triangle inequality:</p>
 <div class="admonition question">
 <p class="admonition-title">(6)</p>
 <p>Let <span class="arithmatex">\(T\)</span> be a continuous one-to-one linear operator from a normed space <span class="arithmatex">\(E_1\)</span> onto a normed space <span class="arithmatex">\(E_2\)</span>. Prove that <span class="arithmatex">\(T^{-1}\)</span> is a linear operator. If <span class="arithmatex">\(T^{-1}\)</span> is continuous then <span class="arithmatex">\(T\)</span> is said to be a <em>topological isomorphism</em> from <span class="arithmatex">\(E_1\)</span> onto <span class="arithmatex">\(E_2\)</span>; and <span class="arithmatex">\(E_1\)</span> is said to be <em>topologically isomorphic</em> to <span class="arithmatex">\(E_2\)</span>. In this case, there exist positive numbers <span class="arithmatex">\(\alpha, \beta &gt; 0\)</span> such that <span class="arithmatex">\(\alpha \|x\| \le \|Tx\| \le \beta \|x\|\)</span>.</p>
-<p>直接计算<span class="arithmatex">\(T^{-1}\)</span>是线性的</p>
+<p>直接计算 <span class="arithmatex">\(T^{-1}\)</span> 是线性的</p>
 </div>
 <p><code>Proof.</code></p>
 <p>First, we prove <span class="arithmatex">\(T^{-1}: E_2 \to E_1\)</span> is linear. Let <span class="arithmatex">\(u, v \in E_2\)</span> and <span class="arithmatex">\(k \in \mathbb{K}\)</span>. Since <span class="arithmatex">\(T\)</span> is onto, there exist unique <span class="arithmatex">\(x, y \in E_1\)</span> such that <span class="arithmatex">\(Tx = u\)</span> and <span class="arithmatex">\(Ty = v\)</span>, implying <span class="arithmatex">\(x = T^{-1}u\)</span> and <span class="arithmatex">\(y = T^{-1}v\)</span>.
@@ -2297,7 +2297,7 @@ Similarly, <span class="arithmatex">\(T(kx) = kTx = ku\)</span>. Applying <span 
 <div class="arithmatex">\[ \alpha\|f\|_1 \leq \|f\|_\infty \leq \beta\|f\|_1, \quad \forall f \in \mathcal{P} \]</div>
 <p>Let <span class="arithmatex">\(f_n\)</span> be the polynomial <span class="arithmatex">\(f_n(t) = t^n\)</span> (<span class="arithmatex">\(\forall t \in [0, 1]\)</span>). Then we have</p>
 <div class="arithmatex">\[ \|f_n\|_\infty = 1, \quad \|f_n\|_1 = \frac{1}{n+1}. \]</div>
-<p>On other hand, <span class="arithmatex">\(\|f_n\|_1 \geq \frac{1}{\beta}\|f_n\|_\infty = \frac{1}{\beta}\)</span>, which is a contradiction. </p>
+<p>On the other hand, <span class="arithmatex">\(\|f_n\|_1 \geq \frac{1}{\beta}\|f_n\|_\infty = \frac{1}{\beta}\)</span>, which is a contradiction. </p>
 <div class="admonition question">
 <p class="admonition-title">(8)</p>
 <p>Let <span class="arithmatex">\(a &gt; 0\)</span>. On <span class="arithmatex">\(C[0,1]\)</span>, we consider two norms: <span class="arithmatex">\(\left\Vert \cdot \right\Vert_\infty\)</span> and</p>
@@ -2307,15 +2307,15 @@ Similarly, <span class="arithmatex">\(T(kx) = kTx = ku\)</span>. Applying <span 
 <p><code>Proof.</code></p>
 <p>按照范数的定义验证:</p>
 <p>(1)非负性</p>
-<p>显然由于 <span class="arithmatex">\(\left\Vert f \right\Vert_{\infty}, \left\Vert f \right\Vert_{0} \geq 0\)</span>，<span class="arithmatex">\(\left\Vert f \right\Vert \geq 0\)</span>，并且<span class="arithmatex">\(\left\| f \right\|= \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} =0\)</span>当且仅当其中至少一个范数取<span class="arithmatex">\(0\)</span>时成立，而根据范数的定义，此时<span class="arithmatex">\(f=0\)</span>取等号。</p>
+<p>显然由于 <span class="arithmatex">\(\left\Vert f \right\Vert_{\infty}, \left\Vert f \right\Vert_{0} \geq 0\)</span>，<span class="arithmatex">\(\left\Vert f \right\Vert \geq 0\)</span>，并且 <span class="arithmatex">\(\left\| f \right\|= \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} =0\)</span> 当且仅当其中至少一个范数取 <span class="arithmatex">\(0\)</span> 时成立，而根据范数的定义，此时 <span class="arithmatex">\(f=0\)</span> 取等号。</p>
 <p>(2)齐次性</p>
 <p>对任意 <span class="arithmatex">\(\lambda \in \mathbb{R}\)</span>，有</p>
 <div class="arithmatex">\[\left\Vert \lambda f \right\Vert = \min\{\left\Vert \lambda f \right\Vert_\infty, \left\Vert \lambda f \right\Vert_0\} = |\lambda| \min\{\left\Vert f \right\Vert_\infty, \left\Vert f \right\Vert_0\} = |\lambda| \left\Vert f \right\Vert.\]</div>
 <p>(3)三角不等式</p>
-<p>充分性：当<span class="arithmatex">\(a \leq 1\)</span>时，有</p>
+<p>充分性：当 <span class="arithmatex">\(a \leq 1\)</span> 时，有</p>
 <div class="arithmatex">\[\left\Vert f \right\Vert_0 = a \int_0^1 |f(t)| dt \leq a \cdot 1 \cdot \left\Vert f \right\Vert_\infty \leq \left\Vert f \right\Vert_\infty,\]</div>
-<p>综上，有<span class="arithmatex">\(\left\| f \right\| = \min\{\left\| f \right\|_\infty, \left\| f \right\|_0\} = \left\| f \right\|_0\)</span>.</p>
-<p>必要性：考虑举反例，当<span class="arithmatex">\(a &gt; 1\)</span>时， 取<span class="arithmatex">\(f,g \in C[0,1]\)</span>，定义如下(先列出，大小关系后续讨论)</p>
+<p>综上，有 <span class="arithmatex">\(\left\| f \right\| = \min\{\left\| f \right\|_\infty, \left\| f \right\|_0\} = \left\| f \right\|_0\)</span>.</p>
+<p>必要性：考虑举反例，当 <span class="arithmatex">\(a &gt; 1\)</span> 时， 取 <span class="arithmatex">\(f,g \in C[0,1]\)</span>，定义如下(先列出，大小关系后续讨论)</p>
 <div class="arithmatex">\[f(x)\equiv \varepsilon,\forall x\in[0,1]\]</div>
 <div class="arithmatex">\[
 g(x)=\left\{ \begin{matrix}
@@ -2324,7 +2324,7 @@ g(x)=\left\{ \begin{matrix}
 &amp;0&amp;x\geq \frac{1}{n}
 \end{matrix} \right.
 \]</div>
-<p>那么有<span class="arithmatex">\(\lVert f \rVert=\min\left\{ \varepsilon,a\varepsilon \right\}=\varepsilon(a&gt;1),\lVert g \rVert=\min\left\{ n, \frac{a}{2} \right\}= \frac{a}{2}\)</span></p>
+<p>那么有 <span class="arithmatex">\(\lVert f \rVert=\min\left\{ \varepsilon,a\varepsilon \right\}=\varepsilon(a&gt;1),\lVert g \rVert=\min\left\{ n, \frac{a}{2} \right\}= \frac{a}{2}\)</span></p>
 <div class="arithmatex">\[
 \lVert f+g \rVert =\min\left\{ n+\varepsilon,a\varepsilon+ \frac{a}{2} \right\}= a\varepsilon+ \frac{a}{2} &gt;\varepsilon+ \frac{a}{2}=\lVert f \rVert +\lVert g \rVert
 \]</div>
@@ -2334,7 +2334,7 @@ g(x)=\left\{ \begin{matrix}
 &amp;n+\varepsilon &gt; a\varepsilon + \frac{a}{2}
 \end{matrix} \right.
 \]</div>
-<p>直接取<span class="arithmatex">\(n=4a,\varepsilon =\frac{1}{n}\)</span>即可满足上述不等式组(<span class="arithmatex">\(4a+\frac{1}{4a}&gt; \frac{1}{4}+\frac{a}{2}\)</span>)，因此三角不等式不成立.</p>
+<p>直接取 <span class="arithmatex">\(n=4a,\varepsilon =\frac{1}{n}\)</span> 即可满足上述不等式组(<span class="arithmatex">\(4a+\frac{1}{4a}&gt; \frac{1}{4}+\frac{a}{2}\)</span>)，因此三角不等式不成立.</p>
 <div class="admonition question">
 <p class="admonition-title">(9)</p>
 <p>Let <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span> and <span class="arithmatex">\(G = \{(\xi_n)_{n \in \mathbb{N}} \in \ell_p : \sum_{n=1}^\infty \xi_n = 0\}\)</span>. Prove that <span class="arithmatex">\(G \subseteq \ell_p\)</span> is not closed.</p>
@@ -2357,7 +2357,7 @@ g(x)=\left\{ \begin{matrix}
 <p>不是。设 <span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(C[-1, 1]\)</span> 中所有多项式构成的集合。<span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(C[-1, 1]\)</span> 的一个真子空间（根据魏尔斯特拉斯逼近定理，<span class="arithmatex">\(P\)</span> 在 <span class="arithmatex">\(C[-1, 1]\)</span> 中稠密，但也存在非多项式的连续函数，例如 <span class="arithmatex">\(f(x) = |x|\)</span> 或 <span class="arithmatex">\(e^{|x|}\)</span>，故 <span class="arithmatex">\(P \neq C[-1, 1]\)</span>）。如果在赋范空间中一个线性子空间是开集，那么它必须包含一个原点的邻域（开球）。根据第 (11) 题的结论，<strong>任何包含开球的线性子空间必然是整个空间</strong>。由于 <span class="arithmatex">\(P \neq C[-1, 1]\)</span>，所以 <span class="arithmatex">\(P\)</span> 不包含任何开球，因此 <span class="arithmatex">\(P\)</span> 不是开集。事实上，真子空间的内部一定是空集。</p>
 <div class="admonition question">
 <p class="admonition-title">(11)</p>
-<p>Let <span class="arithmatex">\(E\)</span> be normed space. Find all linear subspaces <span class="arithmatex">\(E_0 \subseteq E\)</span> which contain a ball.</p>
+<p>Let <span class="arithmatex">\(E\)</span> be a normed space. Find all linear subspaces <span class="arithmatex">\(E_0 \subseteq E\)</span> which contain a ball.</p>
 <p>主要是说这件事：任何包含开球的线性子空间必然是整个空间</p>
 </div>
 <p><code>Sol.</code></p>
@@ -2448,7 +2448,7 @@ g(x)=\left\{ \begin{matrix}
 由于 <span class="arithmatex">\(\epsilon\)</span> 是任意的，所以 <span class="arithmatex">\(\|[x+y]\| \le \|[x]\| + \|[y]\|\)</span>。
 综上，定义的是一个范数。</p>
 <h2 id="banach-spaces_1">Banach spaces<a class="headerlink" href="#banach-spaces_1" title="Permanent link">⚓︎</a></h2>
-<p>主要知道Cauchy列和Banach空间是什么就可以了</p>
+<p>主要知道 Cauchy 列和 Banach 空间是什么就可以了</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition: 柯西列与 Banach 空间</p>
 <p><strong>柯西列 (Cauchy Sequence)</strong><br />
@@ -2594,18 +2594,18 @@ f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t
 <h2 id="exercises-22">Exercises 2.2<a class="headerlink" href="#exercises-22" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">HW2-1</p>
-<p>Let <span class="arithmatex">\(P\)</span> be the vector space of polynomials definded on <span class="arithmatex">\([0,1]\)</span>. It has two norms <span class="arithmatex">\(\lVert \cdot \rVert_{\infty}\)</span>​ and <span class="arithmatex">\(\lVert \cdot \rVert_{1}\)</span>​ . Show that the two norms are not equivalent.</p>
+<p>Let <span class="arithmatex">\(P\)</span> be the vector space of polynomials defined on <span class="arithmatex">\([0,1]\)</span>. It has two norms <span class="arithmatex">\(\lVert \cdot \rVert_{\infty}\)</span>​ and <span class="arithmatex">\(\lVert \cdot \rVert_{1}\)</span>​ . Show that the two norms are not equivalent.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>只需要找到一个反例多项式函数<span class="arithmatex">\(f\)</span>使得<span class="arithmatex">\(\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}\)</span>不成立即可</p>
-<p>不妨设<span class="arithmatex">\(f(x)=x^{n}\)</span></p>
-<p>那么有<span class="arithmatex">\(\lVert f \rVert_{\infty}=\max\limits_{x\in[0,1]}\lvert f(x) \rvert=1,\lVert f \rVert_{1}=\int_{0}^{1} \lvert f(x) \rvert \, dx= \frac{1}{n+1}\)</span></p>
-<p>对于任意的固定常数<span class="arithmatex">\(C\)</span>，总有<span class="arithmatex">\(n+1&gt;C\)</span>时使得<span class="arithmatex">\(\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}\)</span>不成立，因此两个范数显然不等价</p>
+<p>只需要找到一个反例多项式函数 <span class="arithmatex">\(f\)</span> 使得 <span class="arithmatex">\(\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}\)</span> 不成立即可</p>
+<p>不妨设 <span class="arithmatex">\(f(x)=x^{n}\)</span></p>
+<p>那么有 <span class="arithmatex">\(\lVert f \rVert_{\infty}=\max\limits_{x\in[0,1]}\lvert f(x) \rvert=1,\lVert f \rVert_{1}=\int_{0}^{1} \lvert f(x) \rvert \, dx= \frac{1}{n+1}\)</span></p>
+<p>对于任意的固定常数 <span class="arithmatex">\(C\)</span>，总有 <span class="arithmatex">\(n+1&gt;C\)</span> 时使得 <span class="arithmatex">\(\lVert f \rVert_{\infty}\leqslant C\lVert f \rVert_{1}\)</span> 不成立，因此两个范数显然不等价</p>
 <div class="admonition question">
 <p class="admonition-title">HW2-2</p>
 <p>If <span class="arithmatex">\((E,\lVert \cdot \rVert _{E}​)\)</span> is a normed space, <span class="arithmatex">\(W\)</span> is a vector space and <span class="arithmatex">\(T:W\to E\)</span> is a linear bijection, then</p>
 <div class="arithmatex">\[\lVert x \rVert _{W}=\lVert Tx \rVert _{E}\]</div>
-<p>define a norm on <span class="arithmatex">\(W\)</span></p>
+<p>defines a norm on <span class="arithmatex">\(W\)</span></p>
 </div>
 <p>题目应当是验证这是一个范数，我们按照定义验证三条性质：</p>
 <p>(1) 正定性</p>
@@ -2626,7 +2626,7 @@ f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t
 \end{aligned}
 \]</div>
 <p>前两个小节实际上只是讲述了基本的 Banach 空间的定义和一些基本内容的回顾，下面两个小节则是正式开始围绕 Banach 空间的性质进行讨论：可分性和完备性、紧性</p>
-<h2 id="seperable-banach-spaces">Seperable Banach spaces<a class="headerlink" href="#seperable-banach-spaces" title="Permanent link">⚓︎</a></h2>
+<h2 id="separable-banach-spaces">Separable Banach spaces<a class="headerlink" href="#separable-banach-spaces" title="Permanent link">⚓︎</a></h2>
 <h3 id="separability">可分性 (Separability)<a class="headerlink" href="#separability" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Definition 2.3.1 (可分性 / Separability)</p>
@@ -2664,7 +2664,7 @@ f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t
 <tr>
 <td style="text-align: left;"><strong><span class="arithmatex">\(\ell^p\)</span></strong> <span class="arithmatex">\((1 \le p &lt; \infty)\)</span></td>
 <td style="text-align: left;">✅ 可分</td>
-<td style="text-align: left;">具有有理数坐标的有限项序列（尾部为0）。</td>
+<td style="text-align: left;">具有有理数坐标的有限项序列（尾部为 0）。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><span class="arithmatex">\(L^p[a,b]\)</span></strong> <span class="arithmatex">\((1 \le p &lt; \infty)\)</span></td>
@@ -2674,7 +2674,7 @@ f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t
 <tr>
 <td style="text-align: left;"><strong><span class="arithmatex">\(\ell^\infty\)</span></strong></td>
 <td style="text-align: left;">❌ <strong>不可分</strong></td>
-<td style="text-align: left;">存在不可数个彼此距离为 1 的点（0-1序列）。</td>
+<td style="text-align: left;">存在不可数个彼此距离为 1 的点（0-1 序列）。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><span class="arithmatex">\(L^\infty[a,b]\)</span></strong></td>
@@ -2728,28 +2728,28 @@ f(t):= f_{n_{1}}(t)+\sum\limits_{k=1}^{\infty} \lvert f_{n_{k+1}}(t)-f_{n_{k}}(t
 <p class="admonition-title">HW3-1</p>
 <p>Show that a Banach space <span class="arithmatex">\(V\)</span> is separable if and only if</p>
 <div class="arithmatex">\[V=\overline{\bigcup\limits_{n=1}^{\infty} V_{n}}\]</div>
-<p>where <span class="arithmatex">\((V_{n})_{n\in \mathbb{N}}\)</span> are finite dimensional subspace of <span class="arithmatex">\(V\)</span></p>
+<p>where <span class="arithmatex">\((V_{n})_{n\in \mathbb{N}}\)</span> are finite-dimensional subspaces of <span class="arithmatex">\(V\)</span></p>
 </div>
 <p><code>Proof.</code></p>
 <p><span class="arithmatex">\(\implies\)</span></p>
-<p>证明：如果<span class="arithmatex">\(V\)</span>是可分的，那么有<span class="arithmatex">\(V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span></p>
-<p>由于<span class="arithmatex">\(V\)</span>是可分的Banach空间，那么它一定包含一个可数稠密子集，我们将其记为<span class="arithmatex">\(D=\left\{ d_{1},d_{2},\dots,d_{n},\dots \right\}\)</span>，然后考虑定义<span class="arithmatex">\(V\)</span>上有限维子空间<span class="arithmatex">\(V_{n}\)</span></p>
+<p>证明：如果 <span class="arithmatex">\(V\)</span> 是可分的，那么有 <span class="arithmatex">\(V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span></p>
+<p>由于 <span class="arithmatex">\(V\)</span> 是可分的 Banach 空间，那么它一定包含一个可数稠密子集，我们将其记为 <span class="arithmatex">\(D=\left\{ d_{1},d_{2},\dots,d_{n},\dots \right\}\)</span>，然后考虑定义 <span class="arithmatex">\(V\)</span> 上有限维子空间 <span class="arithmatex">\(V_{n}\)</span></p>
 <div class="arithmatex">\[
 V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\} 
 \]</div>
-<p>令<span class="arithmatex">\(U=\bigcup\limits_{n=1}^{\infty} V_{n}\)</span>，那么<span class="arithmatex">\(U=span(D)\)</span>，也就是说<span class="arithmatex">\(U\)</span>是由<span class="arithmatex">\(D\)</span>张成的<span class="arithmatex">\(V\)</span>上的子空间</p>
-<p>下面证明<span class="arithmatex">\(\overline{U}=V\)</span>即可，这是显然的，因为<span class="arithmatex">\(U=span(D)\implies D\subset U\subset V\)</span>，但是<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(V\)</span>上稠密，所以根据稠密子集的定义，<span class="arithmatex">\(V\)</span>上任意一点<span class="arithmatex">\(x_{0}\)</span>均存在<span class="arithmatex">\(D\)</span>中子列收敛到该点，并且<span class="arithmatex">\(D\subset U\)</span>，所以子列也含于<span class="arithmatex">\(U\)</span>中，那么<span class="arithmatex">\(x_{0}\in  \overline{U}\)</span>，由此即得<span class="arithmatex">\(V\subset  \overline{U}\)</span>，并且因为<span class="arithmatex">\(V\)</span>是闭的，综合两个等式即得<span class="arithmatex">\(V=\overline{U}= \overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span></p>
+<p>令 <span class="arithmatex">\(U=\bigcup\limits_{n=1}^{\infty} V_{n}\)</span>，那么 <span class="arithmatex">\(U=span(D)\)</span>，也就是说 <span class="arithmatex">\(U\)</span> 是由 <span class="arithmatex">\(D\)</span> 张成的 <span class="arithmatex">\(V\)</span> 上的子空间</p>
+<p>下面证明 <span class="arithmatex">\(\overline{U}=V\)</span> 即可，这是显然的，因为 <span class="arithmatex">\(U=span(D)\implies D\subset U\subset V\)</span>，但是 <span class="arithmatex">\(D\)</span> 在 <span class="arithmatex">\(V\)</span> 上稠密，所以根据稠密子集的定义，<span class="arithmatex">\(V\)</span> 上任意一点 <span class="arithmatex">\(x_{0}\)</span> 均存在 <span class="arithmatex">\(D\)</span> 中子列收敛到该点，并且 <span class="arithmatex">\(D\subset U\)</span>，所以子列也含于 <span class="arithmatex">\(U\)</span> 中，那么 <span class="arithmatex">\(x_{0}\in  \overline{U}\)</span>，由此即得 <span class="arithmatex">\(V\subset  \overline{U}\)</span>，并且因为 <span class="arithmatex">\(V\)</span> 是闭的，综合两个等式即得 <span class="arithmatex">\(V=\overline{U}= \overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span></p>
 <p><span class="arithmatex">\(\impliedby\)</span></p>
-<p>证明：如果<span class="arithmatex">\(V= \overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span>，则<span class="arithmatex">\(V\)</span>是可分的</p>
-<p>考虑利用定义证明，只需要在其中找到一个可数稠密子集即可，由于<span class="arithmatex">\(V_{n}\)</span>是有限维赋范空间，我们知道是可分的，因此可以在每个<span class="arithmatex">\(V_{n}\)</span>内找到一个可数稠密子集记为<span class="arithmatex">\(D_{n}\)</span></p>
-<p>考虑<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}D_{n}=D\)</span>，我们想要证明它是<span class="arithmatex">\(V\)</span>中可数稠密的子集，由于<span class="arithmatex">\(D\)</span>是可数集的可数并，因此仍然可数，下面说明<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(V\)</span>内稠密即可：</p>
-<p>换句话说，就是要说明<span class="arithmatex">\(\forall x\in V,\varepsilon&gt;0,\exists d\in D,s.t.\lVert x-d \rVert&lt;\varepsilon\)</span></p>
-<p>因为<span class="arithmatex">\(V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span>，令<span class="arithmatex">\(U=\bigcup\limits_{n=1}^{\infty}V_{n}\)</span>，取<span class="arithmatex">\(x\in V= \overline{U}\)</span>，因此存在<span class="arithmatex">\(x_{1}\in U\)</span>，使得<span class="arithmatex">\(\lVert x_{1}-x \rVert&lt; \frac{\varepsilon}{2}\)</span>，那么必有<span class="arithmatex">\(x_{1}\in V_{N}\)</span>，并且<span class="arithmatex">\(D_{N}\subset V_{N}\)</span>，且稠密，那么存在<span class="arithmatex">\(x_{2}\in D_{N}\)</span>，使得<span class="arithmatex">\(\lVert x_{2}-x_{1} \rVert&lt; \frac{\varepsilon}{2}\)</span></p>
+<p>证明：如果 <span class="arithmatex">\(V= \overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span>，则 <span class="arithmatex">\(V\)</span> 是可分的</p>
+<p>考虑利用定义证明，只需要在其中找到一个可数稠密子集即可，由于 <span class="arithmatex">\(V_{n}\)</span> 是有限维赋范空间，我们知道是可分的，因此可以在每个 <span class="arithmatex">\(V_{n}\)</span> 内找到一个可数稠密子集记为 <span class="arithmatex">\(D_{n}\)</span></p>
+<p>考虑 <span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}D_{n}=D\)</span>，我们想要证明它是 <span class="arithmatex">\(V\)</span> 中可数稠密的子集，由于 <span class="arithmatex">\(D\)</span> 是可数集的可数并，因此仍然可数，下面说明 <span class="arithmatex">\(D\)</span> 在 <span class="arithmatex">\(V\)</span> 内稠密即可：</p>
+<p>换句话说，就是要说明 <span class="arithmatex">\(\forall x\in V,\varepsilon&gt;0,\exists d\in D,s.t.\lVert x-d \rVert&lt;\varepsilon\)</span></p>
+<p>因为 <span class="arithmatex">\(V=\overline{\bigcup\limits_{n=1}^{\infty}V_{n}}\)</span>，令 <span class="arithmatex">\(U=\bigcup\limits_{n=1}^{\infty}V_{n}\)</span>，取 <span class="arithmatex">\(x\in V= \overline{U}\)</span>，因此存在 <span class="arithmatex">\(x_{1}\in U\)</span>，使得 <span class="arithmatex">\(\lVert x_{1}-x \rVert&lt; \frac{\varepsilon}{2}\)</span>，那么必有 <span class="arithmatex">\(x_{1}\in V_{N}\)</span>，并且 <span class="arithmatex">\(D_{N}\subset V_{N}\)</span>，且稠密，那么存在 <span class="arithmatex">\(x_{2}\in D_{N}\)</span>，使得 <span class="arithmatex">\(\lVert x_{2}-x_{1} \rVert&lt; \frac{\varepsilon}{2}\)</span></p>
 <p>利用三角不等式即得：</p>
 <div class="arithmatex">\[
 \lVert x-x_{2} \rVert =\lVert x-x_{1}+x_{1}-x_{2} \rVert \leqslant \lVert x-x_{1} \rVert +\lVert x_{1}-x_{2} \rVert &lt;\varepsilon
 \]</div>
-<p>因此<span class="arithmatex">\(D\)</span>在<span class="arithmatex">\(V\)</span>中稠密，可知<span class="arithmatex">\(V\)</span>可分</p>
+<p>因此 <span class="arithmatex">\(D\)</span> 在 <span class="arithmatex">\(V\)</span> 中稠密，可知 <span class="arithmatex">\(V\)</span> 可分</p>
 <div class="admonition question">
 <p class="admonition-title">(1)</p>
 <p>Let <span class="arithmatex">\(\mathbf{e}_k\)</span> be the scalar sequence whose only nonzero term is '1' in the <span class="arithmatex">\(k\)</span>th coordinate. Show that <span class="arithmatex">\(\{e_k : k = 1, 2, \dots\}\)</span> is a Schauder basis of the Banach space <span class="arithmatex">\((c_0, \|\cdot\|_\infty)\)</span>.</p>
@@ -2800,7 +2800,7 @@ V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\}
 <p><code>Reasoning.</code></p>
 <p>根据 <strong>Theorem 2.3.4</strong> (Schauder 基与可分性)，如果一个 Banach 空间拥有 Schauder 基，那么它必须是<strong>可分的 (Separable)</strong>。回顾之前的笔记（Example 2.3.2 (iii)），我们已经证明了 <span class="arithmatex">\(\ell_\infty\)</span> 是<strong>不可分</strong>的（因为存在不可数个距离为 1 的元素，无法被可数稠密子集逼近）。由于 <span class="arithmatex">\(\ell_\infty\)</span> 不可分，因此它不可能拥有 Schauder 基。</p>
 <h2 id="completeness-and-compactness-in-banach-spaces">Completeness and Compactness in Banach spaces<a class="headerlink" href="#completeness-and-compactness-in-banach-spaces" title="Permanent link">⚓︎</a></h2>
-<p>先给出级数收敛的相关定义，在此不赘述(不知道的可以参考数学分析)，重新指出只是为了方便下面的叙述罢了，因为柯西列在Banach空间中收敛，仍然有柯西收敛原理成立，至于绝对收敛定义仍然同数学分析一样，下面让我们进入本节的正题——完备性</p>
+<p>先给出级数收敛的相关定义，在此不赘述(不知道的可以参考数学分析)，重新指出只是为了方便下面的叙述罢了，因为柯西列在 Banach 空间中收敛，仍然有柯西收敛原理成立，至于绝对收敛定义仍然同数学分析一样，下面让我们进入本节的正题——完备性</p>
 <h3 id="_1">完备性<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h3>
 <div class="admonition info">
 <p class="admonition-title">补充定义：完备性 (Completeness)</p>
@@ -2832,10 +2832,10 @@ V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\}
 <div class="arithmatex">\[ \|x_n - x\| \le \|x_n - x_{n_k}\| + \|x_{n_k} - x\| \]</div>
 <ul>
 <li>当 <span class="arithmatex">\(n, n_k\)</span> 足够大时，第一项因柯西列性质趋于 0。</li>
-<li>第二项因于列收敛趋于 0。</li>
+<li>第二项因子列收敛趋于 0。</li>
 </ul>
 <p>因此 <span class="arithmatex">\(\lim\limits_{n \to \infty} x_n = x\)</span>。即任意柯西列都收敛，空间完备。</p>
-<p>我们需要知道任何赋范空间都可以扩张成一个Banach空间（完备赋范空间）</p>
+<p>我们需要知道任何赋范空间都可以扩张成一个 Banach 空间（完备赋范空间）</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem 2.4.5 (完备化定理)</p>
@@ -2900,8 +2900,8 @@ V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\}
 <p>Then <span class="arithmatex">\(\varphi\)</span> has a unique fixed point in <span class="arithmatex">\(K\)</span>, that is, there exists a unique <span class="arithmatex">\(z_{0}\in K\)</span> such that <span class="arithmatex">\(\varphi(z_{0})=z_{0}\)</span></p>
 </details>
 <p><span class="arithmatex">\(\mathbf{Counter\ Example:}\)</span></p>
-<p>考虑<span class="arithmatex">\(f(x)=x+ \frac{1}{x},E=\mathbb{R},K=[1,+\infty]\)</span></p>
-<p>那么显然对<span class="arithmatex">\(x\geqslant 1,f(x)=x + \frac{1}{x}\geqslant 1\in K,f(x):K\to K\)</span></p>
+<p>考虑 <span class="arithmatex">\(f(x)=x+ \frac{1}{x},E=\mathbb{R},K=[1,+\infty]\)</span></p>
+<p>那么显然对 <span class="arithmatex">\(x\geqslant 1,f(x)=x + \frac{1}{x}\geqslant 1\in K,f(x):K\to K\)</span></p>
 <p>再利用拉格朗日中值定理：</p>
 <div class="arithmatex">\[
 \lvert f(x)-f(y) \rvert =\lvert f'(\xi) \rvert \lvert x-y \rvert,f'(\xi)= 1- \frac{1}{\xi^{2}}&lt;1 ,x,y\in K
@@ -2910,19 +2910,19 @@ V_{n}=span\left\{ d_{1},d_{2},\dots,d_{n} \right\}
 <div class="arithmatex">\[
 x+ \frac{1}{x}=x\implies \frac{1}{x}=0
 \]</div>
-<p>不存在这样的<span class="arithmatex">\(x\)</span></p>
+<p>不存在这样的 <span class="arithmatex">\(x\)</span></p>
 <p>下面说明在紧性条件下，减弱条件也可以推出不动点存在：</p>
-<p>修改命题条件为假设<span class="arithmatex">\(K\)</span>为<span class="arithmatex">\(Banach\)</span>空间<span class="arithmatex">\(E\)</span>中的非空紧集，且<span class="arithmatex">\(\varphi:K\to K\)</span>，并且满足</p>
+<p>修改命题条件为假设 <span class="arithmatex">\(K\)</span> 为 <span class="arithmatex">\(Banach\)</span> 空间 <span class="arithmatex">\(E\)</span> 中的非空紧集，且 <span class="arithmatex">\(\varphi:K\to K\)</span>，并且满足</p>
 <div class="arithmatex">\[
 \lVert \varphi(x)-\varphi(y) \rVert &lt;\lVert x-y \rVert ,\forall x,y\in K,x\neq y
 \]</div>
 <p>我们需要证明其有不动点</p>
-<p>构造函数<span class="arithmatex">\(f(x):K\to \mathbb{R}\)</span></p>
+<p>构造函数 <span class="arithmatex">\(f(x):K\to \mathbb{R}\)</span></p>
 <div class="arithmatex">\[
 f(x)=\lVert x-\varphi(x) \rVert 
 \]</div>
-<p>根据<span class="arithmatex">\(Lipschitz\)</span>条件可知<span class="arithmatex">\(\varphi\)</span>连续，那么<span class="arithmatex">\(f\)</span>也是连续函数，利用紧性可知，其极小值存在，不妨设在<span class="arithmatex">\(x_{0}\)</span>处取到，即<span class="arithmatex">\(f(x_{0})=\min\limits_{x\in K}f(x)\)</span></p>
-<p>下面说明<span class="arithmatex">\(x_{0}\)</span>为不动点，也就是要说明<span class="arithmatex">\(f(x_{0})=0\)</span>，反证<span class="arithmatex">\(f(x_{0})=\delta &gt;0\)</span>，再考虑<span class="arithmatex">\(\varphi(x_{0})\in K\)</span></p>
+<p>根据 <span class="arithmatex">\(Lipschitz\)</span> 条件可知 <span class="arithmatex">\(\varphi\)</span> 连续，那么 <span class="arithmatex">\(f\)</span> 也是连续函数，利用紧性可知，其极小值存在，不妨设在 <span class="arithmatex">\(x_{0}\)</span> 处取到，即 <span class="arithmatex">\(f(x_{0})=\min\limits_{x\in K}f(x)\)</span></p>
+<p>下面说明 <span class="arithmatex">\(x_{0}\)</span> 为不动点，也就是要说明 <span class="arithmatex">\(f(x_{0})=0\)</span>，反证 <span class="arithmatex">\(f(x_{0})=\delta &gt;0\)</span>，再考虑 <span class="arithmatex">\(\varphi(x_{0})\in K\)</span></p>
 <div class="arithmatex">\[
 f(\varphi(x_{0}))=\lVert \varphi(x_{0})-\varphi(\varphi(x_{0})) \rVert &lt;\lVert \varphi(x_{0})-x_{0} \rVert =f(x_{0})
 \]</div>

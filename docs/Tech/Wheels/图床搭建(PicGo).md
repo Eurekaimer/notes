@@ -37,12 +37,12 @@ tags:
     建议使用 GitHub 因为不需要为内存和安全付费，而且操作也比较简单
 
 !!! warning "token"
-    关于如何获取 token 在官方的配置手册中已经说的比较详细了，在此不再赘述，但是需要注意一定要对 token 文件进行备份，因为后续如果需要进行多设备配置仍然需要使用这一 token（本人在台式机上配置图床上传工具时就遇到了这一问题），但是没有备份也没有关系，只需要重新生成然后修改之前配置的 token 即可。
+    关于如何获取 token，官方的配置手册中已经说得比较详细了，在此不再赘述，但是需要注意一定要对 token 文件进行备份，因为后续如果需要进行多设备配置仍然需要使用这一 token（本人在台式机上配置图床上传工具时就遇到了这一问题），但是没有备份也没有关系，只需要重新生成然后修改之前配置的 token 即可。
 
 ![PicGo1](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/PicGo_tutorial1)
 
 !!! info "注意"
-    由于版本更新的比较快，只需要对于 PicGo 软件自身的一些设置进行选择就可以达到比较好的使用体验，所以在此删除其他复杂的配置
+    由于版本更新得比较快，只需要对于 PicGo 软件自身的一些设置进行选择就可以达到比较好的使用体验，所以在此删除其他复杂的配置
 
     给出一些建议勾选的部分：
 
@@ -55,11 +55,11 @@ tags:
 
 >我确信这是我最后一次忘记 tokens 了
 
-因为今年将自己的笔记本改为了 NixOS，并且没有人对于 PicGo 进行 Nix 打包 [Issue](https://github.com/Molunerfinn/PicGo/issues/1224)，因此很尴尬的事情就是我没有办法使用Nix安装PicGo，于是就动了些小聪明选择了在VSC内置的插件vs-picgo(这样就可以避开系统的限制了)
+因为今年将自己的笔记本改为了 NixOS，并且没有人对于 PicGo 进行 Nix 打包 [Issue](https://github.com/Molunerfinn/PicGo/issues/1224)，因此很尴尬的事情就是我没有办法使用 Nix 安装 PicGo，于是就动了些小聪明选择了在 VSC 内置的插件 vs-picgo（这样就可以避开系统的限制了）
 
 下面给出简要的安装和使用说明：
 
-首先在 VSC 的扩展栏中安装[PicGo](https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo)插件，然后需要对于json文件进行一个简单的配置：
+首先在 VSC 的扩展栏中安装 [PicGo](https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo) 插件，然后需要对于 json 文件进行一个简单的配置：
 
 ```Json
 // 激活 GitHub 模式
@@ -80,5 +80,5 @@ tags:
 
 不会写 json 建议去问 AI
 
-然后就可以使用了，使用方法也非常简单，只需要复制你需要插入进 md 文档的图片，然后 `Ctrl+Alt+U` 即可插入，需要注意的是还需要安装 `xclip` ，对于 NixOS 来说是非常简单的（直接安装 xclip 包即可）
+然后就可以使用了，使用方法也非常简单，只需要复制你需要插入进 md 文档的图片，然后 `Ctrl+Alt+U` 即可插入，需要注意的是还需要安装 `xclip`，对于 NixOS 来说是非常简单的（直接安装 xclip 包即可）
 

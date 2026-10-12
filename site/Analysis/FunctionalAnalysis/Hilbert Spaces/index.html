@@ -2044,11 +2044,11 @@
 <li>对第一变元的线性，实际上对于第二变元是共轭线性的也就是 <span class="arithmatex">\(\langle x,\lambda y\rangle= \overline{\lambda}\langle x,y\rangle\)</span></li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Definition(Hilbert空间)</p>
+<p class="admonition-title">Definition(Hilbert 空间)</p>
 <p>通过内积诱导的范数 <span class="arithmatex">\(\lVert x \rVert=\sqrt{ \langle x,x\rangle }\)</span>，如果内积空间在该范数下完备则称其为 Hilbert 空间</p>
 </div>
 <p>注：容易知道 <span class="arithmatex">\(\lVert \cdot \rVert\)</span> 满足范数的三条性质，并且将 <span class="arithmatex">\(E\)</span> 的范数拓扑也称为内积拓扑</p>
-<p>我们接下来会讨论 Cauchy-Schwartz 不等式，实际上在数学分析和高等代数中就经常使用，这同样是内积空间中最著名的不等式，它建立了内积与范数（长度）之间的联系</p>
+<p>我们接下来会讨论 Cauchy-Schwarz 不等式，实际上在数学分析和高等代数中就经常使用，这同样是内积空间中最著名的不等式，它建立了内积与范数（长度）之间的联系</p>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem Cauchy-Schwarz inequality</p>
 <p>Let <span class="arithmatex">\((E, \langle \cdot, \cdot \rangle)\)</span> be an inner product space. It holds that</p>
@@ -2075,8 +2075,8 @@
 <p>因此可以很容易得到 <span class="arithmatex">\(n\to \infty,\lvert \langle x,y\rangle-\langle x_{n},y_{n}\rangle \rvert\to 0\)</span></p>
 <p>下面给出能够判断一个空间是否由内积定义的重要定理——平行四边形定理</p>
 <div class="admonition tip">
-<p class="admonition-title">Paralletlogram Law</p>
-<p>A norm <span class="arithmatex">\(\lVert \cdot \rVert\)</span> of a vector space <span class="arithmatex">\(E\)</span> is defined through an inner product on <span class="arithmatex">\(E\)</span>, if and only if ,</p>
+<p class="admonition-title">Parallelogram Law</p>
+<p>A norm <span class="arithmatex">\(\lVert \cdot \rVert\)</span> of a vector space <span class="arithmatex">\(E\)</span> is defined through an inner product on <span class="arithmatex">\(E\)</span>, if and only if</p>
 <div class="arithmatex">\[\lVert x+y \rVert ^{2}+\lVert x-y \rVert ^{2}=2(\lVert x \rVert ^{2}+\lVert y \rVert ^{2}),\forall x,y\in E\]</div>
 </div>
 <p><code>Proof.</code></p>
@@ -2267,7 +2267,7 @@ H=M\oplus M^{\perp}
 <p>我们还想要研究关于最小距离的概念，利用几何的观点先给出最优逼近的定义：</p>
 <div class="admonition note">
 <p class="admonition-title">Definition(Best approximation)</p>
-<p>The distance from <span class="arithmatex">\(x\)</span> to <span class="arithmatex">\(B\)</span> is defined as <span class="arithmatex">\(d(x,B)=\inf\limits_{y\in B}d(x,y)\)</span>，if there is an <span class="arithmatex">\(\tilde{x}\in B\)</span> such that <span class="arithmatex">\(d(x, \tilde{x})=d(x,B)\)</span>, we call <span class="arithmatex">\(\tilde{x}\)</span> is a best approximation of <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(X\)</span> from <span class="arithmatex">\(B\)</span>, or a best approximate element.</p>
+<p>The distance from <span class="arithmatex">\(x\)</span> to <span class="arithmatex">\(B\)</span> is defined as <span class="arithmatex">\(d(x,B)=\inf\limits_{y\in B}d(x,y)\)</span>，if there is a <span class="arithmatex">\(\tilde{x}\in B\)</span> such that <span class="arithmatex">\(d(x, \tilde{x})=d(x,B)\)</span>, we call <span class="arithmatex">\(\tilde{x}\)</span> a best approximation of <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(X\)</span> from <span class="arithmatex">\(B\)</span>, or a best approximate element.</p>
 </div>
 <p>下面给出最优逼近定理，在 Hilbert 空间中选取一个闭凸子集，在补集中选取任意一点，我们一定能够在闭凸子集中选取到其的最优逼近元</p>
 <div class="admonition tip">

@@ -2085,11 +2085,11 @@
 
 <h1 id="week-3">Week 3<a class="headerlink" href="#week-3" title="Permanent link">⚓︎</a></h1>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">⚓︎</a></h2>
-<p>大概需要 2.5 小时，Lab 质量相当高，可以很好的弥补理解上的一些问题</p>
+<p>大概需要 2.5 小时，Lab 质量相当高，可以很好地弥补理解上的一些问题</p>
 <h2 id="videos1h">Videos(1h)<a class="headerlink" href="#videos1h" title="Permanent link">⚓︎</a></h2>
 <h3 id="functional-abstraction">Functional Abstraction<a class="headerlink" href="#functional-abstraction" title="Permanent link">⚓︎</a></h3>
 <h4 id="lambda-function-environments">Lambda Function Environments<a class="headerlink" href="#lambda-function-environments" title="Permanent link">⚓︎</a></h4>
-<p>This is main case:</p>
+<p>This is the main case:</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -2120,10 +2120,10 @@
 <span class="n">sqrt</span> <span class="o">=</span> <span class="n">inverse</span><span class="p">(</span><span class="n">square</span><span class="p">)</span> 
 </code></pre></div>
 <h4 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">⚓︎</a></h4>
-<p>Choose a name for valued function or parameters.</p>
-<p>Some name guideline.</p>
+<p>Choose a name for a valued function or parameter.</p>
+<p>Some naming guidelines.</p>
 <h4 id="errors-tracebacks">Errors &amp; Tracebacks<a class="headerlink" href="#errors-tracebacks" title="Permanent link">⚓︎</a></h4>
-<p>Teach you check some errors and read tracebacks</p>
+<p>Teaches you to check some errors and read tracebacks</p>
 <h3 id="function-examples">Function Examples<a class="headerlink" href="#function-examples" title="Permanent link">⚓︎</a></h3>
 <h4 id="midterm-1-review">Midterm 1 Review<a class="headerlink" href="#midterm-1-review" title="Permanent link">⚓︎</a></h4>
 <ul>
@@ -2147,7 +2147,7 @@
 
 <span class="c1"># 同理分析即可</span>
 </code></pre></div>
-<p>Last example but a litttle difficult</p>
+<p>The last example is a little difficult</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">horse</span><span class="p">(</span><span class="n">mask</span><span class="p">):</span>
     <span class="n">horse</span> <span class="o">=</span> <span class="n">mask</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">mask</span><span class="p">(</span><span class="n">horse</span><span class="p">):</span>
@@ -2158,7 +2158,7 @@
 
 <span class="n">horse</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
 </code></pre></div>
-<p>有一种当年玩指针的美感（只要正确的指向就可以明白，这里的环境图确实是加进理解的一种手段）</p>
+<p>有一种当年玩指针的美感（只要正确地指向就可以明白，这里的环境图确实是加深理解的一种手段）</p>
 <p><img alt="env-horse-mask" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/horse-mask" /></p>
 <h4 id="implementing-functions">Implementing Functions<a class="headerlink" href="#implementing-functions" title="Permanent link">⚓︎</a></h4>
 <p>Strategy:</p>
@@ -2166,7 +2166,7 @@
 <li>Read the description</li>
 <li>Verify the example &amp; pick a simple one</li>
 <li>If the template is helpful, use it</li>
-<li>Write cide to compute the result</li>
+<li>Write code to compute the result</li>
 </ul>
 <p>A case</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">digit</span><span class="p">):</span>
@@ -2178,7 +2178,7 @@
             <span class="n">digits</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">kept</span>
 </code></pre></div>
-<h4 id="decoraters">Decoraters<a class="headerlink" href="#decoraters" title="Permanent link">⚓︎</a></h4>
+<h4 id="decorators">Decorators<a class="headerlink" href="#decorators" title="Permanent link">⚓︎</a></h4>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">trace1</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
 <span class="sd">"""Return a version of fn"""</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">traced</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -2222,7 +2222,7 @@
 <blockquote>
 <p>If <code>and</code> and <code>or</code> do not <em>short-circuit</em>, they just return the last value; another way to remember this is that <code>and</code> and <code>or</code> always return the last thing they evaluate, whether they short circuit or not. Keep in mind that <code>and</code> and <code>or</code> don't always return booleans when using values other than <code>True</code> and <code>False</code>.</p>
 </blockquote>
-<p>Used above info.</p>
+<p>Use the above information.</p>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="c1"># 有点阴的例子</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">''</span>
 <span class="c1"># print会执行但是返回的None是假值，而空字符串也是假值，于是最终返回最后计算的空字符串</span>

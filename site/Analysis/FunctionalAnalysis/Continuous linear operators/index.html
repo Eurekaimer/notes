@@ -2030,7 +2030,7 @@
 
 
 <h1 id="continuous-linear-operators">Continuous linear operators<a class="headerlink" href="#continuous-linear-operators" title="Permanent link">⚓︎</a></h1>
-<p>注：笔者原本打算的是直接扔下这份讲义去阅读 Brezis 的 FA and PDEs，但是阅读了第一章发现他的写法似乎有些 clear，但是问题在于我读起来又不是很 clear 于是回归这份讲义想先了解一个 overview 然后再回去读 Brezis，然后惊奇的发现这一章的内容正是我阅读 Brezis 时欠缺的部分，于是速通之</p>
+<p>注：笔者原本打算的是直接扔下这份讲义去阅读 Brezis 的 FA and PDEs，但是阅读了第一章发现他的写法似乎有些 clear，但是问题在于我读起来又不是很 clear 于是回归这份讲义想先了解一个 overview 然后再回去读 Brezis，然后惊奇地发现这一章的内容正是我阅读 Brezis 时欠缺的部分，于是速通之</p>
 <h2 id="basic-definitions-and-properties">Basic definitions and properties<a class="headerlink" href="#basic-definitions-and-properties" title="Permanent link">⚓︎</a></h2>
 <p>给出赋范空间的单位闭球的概念：</p>
 <div class="admonition note">
@@ -2039,16 +2039,16 @@
 <div class="arithmatex">\[U_{E}:= \left\{ x\in E:\lVert x \rVert \leqslant 1 \right\} \]</div>
 <p>be the closed unit ball of <span class="arithmatex">\(E\)</span></p>
 </div>
-<p>那么很自然的我们会使用缩放的闭球定义集合 <span class="arithmatex">\(A\)</span> 在 <span class="arithmatex">\(E\)</span> 中（赋范）有界，也就是说 <span class="arithmatex">\(A\subseteq kU_{E}\)</span>，换句话说<span class="arithmatex">\(\lVert a \rVert\leqslant k&lt;+\infty,\forall a\in A\)</span></p>
-<p>我们考虑线性算子<span class="arithmatex">\(T:E\to F\)</span>：<span class="arithmatex">\(T(\alpha x+\beta y)=\alpha Tx+\beta Ty\)</span>，其中<span class="arithmatex">\(E,F\)</span>均为赋范空间</p>
+<p>那么很自然的我们会使用缩放的闭球定义集合 <span class="arithmatex">\(A\)</span> 在 <span class="arithmatex">\(E\)</span> 中（赋范）有界，也就是说 <span class="arithmatex">\(A\subseteq kU_{E}\)</span>，换句话说 <span class="arithmatex">\(\lVert a \rVert\leqslant k&lt;+\infty,\forall a\in A\)</span></p>
+<p>我们考虑线性算子 <span class="arithmatex">\(T:E\to F\)</span>：<span class="arithmatex">\(T(\alpha x+\beta y)=\alpha Tx+\beta Ty\)</span>，其中 <span class="arithmatex">\(E,F\)</span> 均为赋范空间</p>
 <p>显然我们可以得到以下等价结论：</p>
 <div class="admonition quote">
 <p class="admonition-title">Theorem(有界性和连续性)</p>
-<p>假设<span class="arithmatex">\(T\)</span>是一个线性算子，<span class="arithmatex">\(T:E\to F\)</span></p>
+<p>假设 <span class="arithmatex">\(T\)</span> 是一个线性算子，<span class="arithmatex">\(T:E\to F\)</span></p>
 <ol>
 <li><span class="arithmatex">\(T\)</span> is Lipschitz continuous</li>
-<li><span class="arithmatex">\(T\)</span> is countinuous</li>
-<li><span class="arithmatex">\(T\)</span> is coutinuous at <span class="arithmatex">\(0\)</span></li>
+<li><span class="arithmatex">\(T\)</span> is continuous</li>
+<li><span class="arithmatex">\(T\)</span> is continuous at <span class="arithmatex">\(0\)</span></li>
 <li><span class="arithmatex">\(T(U_{E})\)</span> is bounded in <span class="arithmatex">\(F\)</span></li>
 <li><span class="arithmatex">\(T\)</span> sends bounded sets to bounded sets</li>
 <li><span class="arithmatex">\(\exists k&gt;0\)</span>, s.t. <span class="arithmatex">\(\lVert Tx \rVert\leqslant k \lVert x \rVert,\forall x\in E\)</span></li>
@@ -2085,18 +2085,18 @@
 \]</div>
 </div>
 <p><code>Proof.</code></p>
-<p>显然我们可以得到<span class="arithmatex">\(\lVert T \rVert&lt;+\infty\)</span>，前三条的证明手法就是证明大于等于和小于等于两个方向，从而取等，都比较容易，留作习题</p>
-<p>最后一行会稍微麻烦一点，我们先定义等式右边的集合为<span class="arithmatex">\(K\)</span>，那么我们的目标就变成了证明<span class="arithmatex">\(\lVert T \rVert=\inf K\)</span>只需要利用倒二的等式，马上得到<span class="arithmatex">\(\lVert T \rVert\in K\)</span>那么<span class="arithmatex">\(\inf K\leqslant \lVert T \rVert\)</span></p>
-<p>利用定义可以知道<span class="arithmatex">\(\lVert Tx \rVert \leqslant k\lVert x \rVert,\forall x\in E\)</span>，结合第一行的等式：</p>
+<p>显然我们可以得到 <span class="arithmatex">\(\lVert T \rVert&lt;+\infty\)</span>，前三条的证明手法就是证明大于等于和小于等于两个方向，从而取等，都比较容易，留作习题</p>
+<p>最后一行会稍微麻烦一点，我们先定义等式右边的集合为 <span class="arithmatex">\(K\)</span>，那么我们的目标就变成了证明 <span class="arithmatex">\(\lVert T \rVert=\inf K\)</span> 只需要利用倒二的等式，马上得到 <span class="arithmatex">\(\lVert T \rVert\in K\)</span> 那么 <span class="arithmatex">\(\inf K\leqslant \lVert T \rVert\)</span></p>
+<p>利用定义可以知道 <span class="arithmatex">\(\lVert Tx \rVert \leqslant k\lVert x \rVert,\forall x\in E\)</span>，结合第一行的等式：</p>
 <div class="arithmatex">\[
 \lVert T \rVert =\sup \left\{ \frac{\lVert Tx \rVert }{\lVert x \rVert },x\neq 0 \right\} \implies \lVert T \rVert \leqslant k,\forall k\in K\implies \lVert T \rVert \leqslant \inf K
 \]</div>
 <p>结合两个不等式即得结论</p>
-<p>关于两个赋范空间之间的线性算子<span class="arithmatex">\(T\)</span>，如果有<span class="arithmatex">\(T\)</span>将norm balls(或者说有界集)映射为norm balls(或者有界集)，我们就称其为有界算子(或者局部有界算子)，由前面的定理可以得到，有界集<span class="arithmatex">\(A\)</span>的像集<span class="arithmatex">\(TA\)</span>的直径要小于<span class="arithmatex">\(A\)</span>的<span class="arithmatex">\(\lVert T \rVert\)</span>倍</p>
-<p>下面给出有界线性算子构成的集合的记号，对于<span class="arithmatex">\(E,F\)</span>两个赋范空间，使用<span class="arithmatex">\(B(E,F)\)</span>来记录所有的从<span class="arithmatex">\(E\)</span>到<span class="arithmatex">\(F\)</span>的有界线性算子，如果是同一个空间，有<span class="arithmatex">\(B(E)=B(E,E)\)</span></p>
+<p>关于两个赋范空间之间的线性算子 <span class="arithmatex">\(T\)</span>，如果有 <span class="arithmatex">\(T\)</span> 将 norm balls(或者说有界集)映射为 norm balls(或者有界集)，我们就称其为有界算子(或者局部有界算子)，由前面的定理可以得到，有界集 <span class="arithmatex">\(A\)</span> 的像集 <span class="arithmatex">\(TA\)</span> 的直径要小于 <span class="arithmatex">\(A\)</span> 的 <span class="arithmatex">\(\lVert T \rVert\)</span> 倍</p>
+<p>下面给出有界线性算子构成的集合的记号，对于 <span class="arithmatex">\(E,F\)</span> 两个赋范空间，使用 <span class="arithmatex">\(B(E,F)\)</span> 来记录所有的从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(F\)</span> 的有界线性算子，如果是同一个空间，有 <span class="arithmatex">\(B(E)=B(E,E)\)</span></p>
 <div class="admonition note">
 <p class="admonition-title">Lemma(有界线性算子构成赋范空间)</p>
-<p><span class="arithmatex">\(B(E,F)\)</span>通过给予算子范数<span class="arithmatex">\(\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert\)</span>构成一个赋范空间</p>
+<p><span class="arithmatex">\(B(E,F)\)</span> 通过给予算子范数 <span class="arithmatex">\(\lVert T \rVert=\sup\limits_{\lVert x \rVert\leqslant 1}\lVert Tx \rVert\)</span> 构成一个赋范空间</p>
 </div>
 <p>证明只需要按照赋范空间的定义验证三条性质即可，然后探索这个算子范数我们可以得到一个等价的定义：</p>
 <div class="admonition note">
@@ -2105,15 +2105,15 @@
 <div class="arithmatex">\[\lVert T \rVert =\sup \left\{ \lvert \langle Th,k\rangle \rvert : h\in U_{H},k\in U_{K}  \right\} \]</div>
 </div>
 <p><code>Proof.</code></p>
-<p>只需要使用Cauchy-Schwarz不等式，即可得到：</p>
+<p>只需要使用 Cauchy-Schwarz 不等式，即可得到：</p>
 <div class="arithmatex">\[
 \lvert \langle Th,k\rangle \rvert \leqslant \lVert Th \rVert \lVert k \rVert \leqslant \lVert T \rVert \lVert h \rVert \lVert k \rVert \leqslant \lVert T \rVert  
 \]</div>
-<p>因为<span class="arithmatex">\(h\in U_{H},k\in U_{K}\)</span>，反方向等式的求取我们利用归一化的方法，若是<span class="arithmatex">\(h\in U_{H},Th\neq 0\)</span>，我们有<span class="arithmatex">\(\frac{Th}{\lVert Th \rVert}\in U_{K}\)</span></p>
+<p>因为 <span class="arithmatex">\(h\in U_{H},k\in U_{K}\)</span>，反方向等式的求取我们利用归一化的方法，若是 <span class="arithmatex">\(h\in U_{H},Th\neq 0\)</span>，我们有 <span class="arithmatex">\(\frac{Th}{\lVert Th \rVert}\in U_{K}\)</span></p>
 <div class="arithmatex">\[
 \lVert Th \rVert= \frac{\langle Th,Th\rangle}{\lVert Th \rVert }= \left\lvert  \langle Th, \frac{Th}{\lVert Th \rVert }\rangle  \right\rvert 
 \]</div>
-<p>所以我们有<span class="arithmatex">\(\lVert Th \rVert\in \left\{ \lvert \langle Th,k \rangle \rvert \right\}\)</span>，即：</p>
+<p>所以我们有 <span class="arithmatex">\(\lVert Th \rVert\in \left\{ \lvert \langle Th,k \rangle \rvert \right\}\)</span>，即：</p>
 <div class="arithmatex">\[
 \lVert T \rVert =\sup\limits_{h\in U_{H}}\lVert Th \rVert \leqslant \sup \left\{ \lvert \langle Th,k\rangle \rvert : h\in U_{H},k\in U_{K}  \right\}  \leqslant \lVert T \rVert 
 \]</div>
@@ -2162,7 +2162,7 @@ K := (\sum_{i,j=1}^{\infty} |\alpha_{i,j}|^2)^{1/2} &lt; \infty.
 <div class="arithmatex">\[
 \|Tx\|^2 = \sum_{i=1}^{\infty} |(Tx)_i|^2 \le \alpha_\infty \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |\alpha_{i,j}| |x_j|^2
 \]</div>
-<p>利用非负项级数求和次序的可交换性（Tonelli定理）：</p>
+<p>利用非负项级数求和次序的可交换性（Tonelli 定理）：</p>
 <div class="arithmatex">\[
 \|Tx\|^2 \le \alpha_\infty \sum_{j=1}^{\infty} |x_j|^2 \left( \sum_{i=1}^{\infty} |\alpha_{i,j}| \right)
 \]</div>
@@ -2272,7 +2272,7 @@ T(x_{1},x_{2},\dots)= \sum\limits_{n=1}^{\infty} x_{n}\chi_{\left[  \frac{1}{2^{
 </div>
 <p><code>Proof.</code></p>
 <div class="admonition quote">
-<p class="admonition-title"><span class="arithmatex">\(\ell_{\infty}\)</span>的含义</p>
+<p class="admonition-title"><span class="arithmatex">\(\ell_{\infty}\)</span> 的含义</p>
 <p>这里的 <span class="arithmatex">\(\ell_{\infty}\)</span> 是序列空间，它包含所有<strong>有界</strong>的实数（或复数）序列。也就是说，如果 <span class="arithmatex">\(x = (x_1, x_2, \dots) \in \ell_{\infty}\)</span>，那么存在一个常数 <span class="arithmatex">\(M\)</span>，使得对于所有的 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(|x_n| \le M\)</span>。</p>
 </div>
 <p>先假定 <span class="arithmatex">\(x=(x_{n})_{n=1}^{\infty},y=(y_{n})_{n=1}^{\infty}\in \ell_{\infty},\alpha,\beta\in \mathbb{K}\)</span>，并且有 <span class="arithmatex">\(t\in[0,1]\)</span>，线性性证明如下：</p>

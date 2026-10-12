@@ -1990,7 +1990,7 @@ a_{m1}&amp;a_{m2}\dots&amp;a_{mm}
 <p class="admonition-title">基解</p>
 <p><span class="arithmatex">\(m\)</span> 个方程，<span class="arithmatex">\(n\)</span> 个变量 (n&gt;m)，选择其中 <span class="arithmatex">\(\binom{n}{n-m}\)</span> 个为 0，求出基解:max=<span class="arithmatex">\(\binom{n}{m}\)</span></p>
 </div>
-<p>由于选取的矩阵是非异阵所以满秩，也就是线性无关</p>
+<p>由于选取的矩阵是非奇异阵所以满秩，也就是线性无关</p>
 <div class="admonition note">
 <p class="admonition-title">基可行解，可行基</p>
 <p>满足非负条件的基解也称为基可行解，对应基可行解的基，称为可行基</p>
@@ -2022,37 +2022,37 @@ a_{m1}&amp;a_{m2}\dots&amp;a_{mm}
 <p><code>Proof  is easy</code></p>
 <div class="admonition info">
 <p class="admonition-title">Lemma 1</p>
-<p>线性规划问题的可行解为基可行解<span class="arithmatex">\(\iff\)</span><span class="arithmatex">\(X\)</span>的正分量对应的系数列向量是线性无关的</p>
+<p>线性规划问题的可行解为基可行解 <span class="arithmatex">\(\iff\)</span><span class="arithmatex">\(X\)</span> 的正分量对应的系数列向量是线性无关的</p>
 </div>
 <p><code>Proof.</code></p>
 <p><span class="arithmatex">\(\implies\)</span>
 由定义可以知道，基可行解的基变量对应系数列向量组成一个基(线性无关的向量组的子集仍然线性无关)，基是系数矩阵的满秩子矩阵，所以各系数列向量必线性独立</p>
 <p><span class="arithmatex">\(\impliedby\)</span>
-不妨设出k个正分量且线性独立，必有<span class="arithmatex">\(k\leqslant m\)</span>，相等时构成基，显然成立，否则可以使用基扩张定理构造出新的基，使其为X</p>
+不妨设出 k 个正分量且线性独立，必有 <span class="arithmatex">\(k\leqslant m\)</span>，相等时构成基，显然成立，否则可以使用基扩张定理构造出新的基，使其为 X</p>
 <div class="admonition note">
 <p class="admonition-title">Theorem 2</p>
-<p>线性规划问题的基可行解<span class="arithmatex">\(X\)</span>对应于可行域<span class="arithmatex">\(D\)</span>的顶点</p>
+<p>线性规划问题的基可行解 <span class="arithmatex">\(X\)</span> 对应于可行域 <span class="arithmatex">\(D\)</span> 的顶点</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证法，转而证明非可行域顶点<span class="arithmatex">\(\iff\)</span>非基可行解</p>
+<p>反证法，转而证明非可行域顶点 <span class="arithmatex">\(\iff\)</span> 非基可行解</p>
 <p><span class="arithmatex">\(\impliedby\)</span>
-构造<span class="arithmatex">\(X=\left( X_{1},X_{2},\dots,X_{k},0,\dots,0 \right)\)</span>，前k个系数列向量线性相关(利用引理)，得到一个零元，利用零元构造两个可行解，对其进行线性表出，证明X不是顶点</p>
+构造 <span class="arithmatex">\(X=\left( X_{1},X_{2},\dots,X_{k},0,\dots,0 \right)\)</span>，前 k 个系数列向量线性相关(利用引理)，得到一个零元，利用零元构造两个可行解，对其进行线性表出，证明 X 不是顶点</p>
 <p><span class="arithmatex">\(\implies\)</span>
 利用不是顶点，就可以用顶点线性表出，构造出线性相关即可</p>
 <div class="admonition note">
 <p class="admonition-title">Lemma 2</p>
-<p>若<span class="arithmatex">\(K\)</span>是有界闭凸集，则任何一点<span class="arithmatex">\(X\in K\)</span>可表示为<span class="arithmatex">\(K\)</span>的顶点的凸组合</p>
+<p>若 <span class="arithmatex">\(K\)</span> 是有界闭凸集，则任何一点 <span class="arithmatex">\(X\in K\)</span> 可表示为 <span class="arithmatex">\(K\)</span> 的顶点的凸组合</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Theorem 3</p>
 <p>若是可行域有界，线性规划问题的目标函数一定可以在可行域顶点上达到最优</p>
 </div>
 <p>换言之，若线性规划问题有最优解，一定存在一个基可行解为最优解</p>
-<p>假设最优解，利用定理2，反证不是顶点，构造<span class="arithmatex">\(X_{0}+\mu\delta,X_{0}-\mu\delta\)</span>，得到无穷多个最优解(那么可以移动至顶点，有界性保证了一定可以取到) </p>
+<p>假设最优解，利用定理 2，反证不是顶点，构造 <span class="arithmatex">\(X_{0}+\mu\delta,X_{0}-\mu\delta\)</span>，得到无穷多个最优解(那么可以移动至顶点，有界性保证了一定可以取到) </p>
 <div class="admonition tldr">
 <p class="admonition-title">基本结论</p>
 <p>线性规划问题所有的可行解构成一个凸集，或者无界域，有限多个顶点，每个基可行解对应可行域的一个顶点<br />
-若是有最优解，一定可以在顶点上得到，而顶点数目有限那么全部遍历后一定就可以得到最优解，但是如果<span class="arithmatex">\(m,n\)</span>较大，全部遍历是不太现实的，所以提出了单纯形法<br />
+若是有最优解，一定可以在顶点上得到，而顶点数目有限那么全部遍历后一定就可以得到最优解，但是如果 <span class="arithmatex">\(m,n\)</span> 较大，全部遍历是不太现实的，所以提出了单纯形法<br />
 如果在一个顶点上的值优于周围顶点，一定是最优解</p>
 </div>
 <h3 id="_11">单纯形法<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>
@@ -2068,21 +2068,21 @@ a_{m1}&amp;a_{m2}\dots&amp;a_{mm}
 </div>
 <h4 id="_12">粗糙过程<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h4>
 <p><strong>基本思路</strong>：从线性方程组中找出一个个单纯形，每个单纯形可以求得一组解，然后判断该解使目标函数变大或变小，决定下一步的单纯形，也就是迭代的过程，直到实现了最大值或最小值为止.</p>
-<p>要想更好的掌握这种方法最好是选取两三个例子自己进行迭代，这里只是给出普通的<strong>理论方法</strong></p>
+<p>要想更好地掌握这种方法最好是选取两三个例子自己进行迭代，这里只是给出普通的<strong>理论方法</strong></p>
 <ol>
 <li>先化为标准形式</li>
 <li>找出一组基(base，通常为单位阵)，用非基变量表示基变量</li>
 <li>将目标函数化为非基变量的组合</li>
-<li>取非基变量为0，得到一个基可行解</li>
+<li>取非基变量为 0，得到一个基可行解</li>
 <li>判定：如果目标函数中还有正系数的非基变量就可以更换(如果是求最大值)</li>
-<li>迭代4,5</li>
+<li>迭代 4,5</li>
 </ol>
 <p>这里就涉及到换入换出变量的确定问题</p>
 <ul>
 <li>选择正系数最大的非基变量为换入变量(直观上这使得增速最大)，然后找出换出变量</li>
-<li>让非基变量中的不换入变量为0，就可以得出一个用换入变量表示原基变量的线性方程组，为了满足非负的要求，选取先接触到极限也就是0的那个变量</li>
+<li>让非基变量中的不换入变量为 0，就可以得出一个用换入变量表示原基变量的线性方程组，为了满足非负的要求，选取先接触到极限也就是 0 的那个变量</li>
 </ul>
-<p>确定换入换出变量后就可以重新构建方程组和基变量了，再使所谓的非基变量为0(重复4)，得到另一个基可行解，如果非基变量的系数还是正的，说明可以继续迭代，重复上述过程，确认换入换出变量，然后取0，得到新的基可行解，当所有的非基变量系数为负数时，说明达到了最大值.</p>
+<p>确定换入换出变量后就可以重新构建方程组和基变量了，再使所谓的非基变量为 0(重复 4)，得到另一个基可行解，如果非基变量的系数还是正的，说明可以继续迭代，重复上述过程，确认换入换出变量，然后取 0，得到新的基可行解，当所有的非基变量系数为负数时，说明达到了最大值.</p>
 <h4 id="_13">初始基可行解的确定<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h4>
 <p>对于上面给出的做法，我们发现首先要确定初始的基可行解，方法如下
 1. 直接观察
@@ -2090,7 +2090,7 @@ a_{m1}&amp;a_{m2}\dots&amp;a_{mm}
 3. 加入非负人工变量</p>
 <div class="admonition info">
 <p class="admonition-title">加入人工变量的方法</p>
-<p>实际上是为了构造出类似松弛变量那样的单位矩阵，采用人造基的方法，可以使用大<span class="arithmatex">\(M\)</span>法，<span class="arithmatex">\(M\)</span>是相当大的正数(可以理解为正无穷),对人工变量起到惩罚的作用,逼迫辅助线性规划的最优解中人工变量均为0</p>
+<p>实际上是为了构造出类似松弛变量那样的单位矩阵，采用人造基的方法，可以使用大 <span class="arithmatex">\(M\)</span> 法，<span class="arithmatex">\(M\)</span> 是相当大的正数(可以理解为正无穷),对人工变量起到惩罚的作用,逼迫辅助线性规划的最优解中人工变量均为 0</p>
 </div>
 <p>这里给出一个矩阵方法的简单推导：</p>
 <div class="arithmatex">\[
@@ -2104,7 +2104,7 @@ x_{B} &amp; =B^{-1}b-B^{-1}Nx_{N}   \\
 f &amp; =cx=f_{0}-\sum\limits_{j\in R}\left( z_{j}-c_{j} \right) x_{j}
 \end{aligned}
 \]</div>
-<p>还需要一个单纯形乘子的定义<span class="arithmatex">\(w=c_{B}B^{-1},z_{i}=wp_{i}\)</span></p>
+<p>还需要一个单纯形乘子的定义 <span class="arithmatex">\(w=c_{B}B^{-1},z_{i}=wp_{i}\)</span></p>
 <h4 id="_14">最优性检验与解的判别<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h4>
 <p>由于线性规划问题求解过程中解的多样性，我们需要建立解的判别准则</p>
 <div class="arithmatex">\[
@@ -2120,24 +2120,24 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 <ol>
 <li>最优解的判别定理</li>
 </ol>
-<p>由此可得<strong>最优解判定定理</strong>，若<span class="arithmatex">\(X_{0}\)</span>代表一个基可行解，而且对于一切的<span class="arithmatex">\(j=m+1,\dots,n，\sigma_{j}\leqslant 0\)</span>，则称为最优解，其中<span class="arithmatex">\(\sigma_{j}\)</span>为检验数.</p>
+<p>由此可得<strong>最优解判定定理</strong>，若 <span class="arithmatex">\(X_{0}\)</span> 代表一个基可行解，而且对于一切的 <span class="arithmatex">\(j=m+1,\dots,n，\sigma_{j}\leqslant 0\)</span>，则称为最优解，其中 <span class="arithmatex">\(\sigma_{j}\)</span> 为检验数.</p>
 <ol>
 <li>无穷多最优解判别定理</li>
 </ol>
-<p>同样符合1中的条件，检验数均非正，如果存在某个非基变量的检验数为0，那么线性规划问题有无穷多最优解</p>
+<p>同样符合 1 中的条件，检验数均非正，如果存在某个非基变量的检验数为 0，那么线性规划问题有无穷多最优解</p>
 <ol>
 <li>无界解判别定理</li>
 </ol>
 <h4 id="_15">基变换<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h4>
 <p>针对初始基可行解不是最优解也不能判别无界时，需要找新的基可行解</p>
 <p>方法是从原本的可行解基中更换一个列向量，并且保证线性独立，得到新的可行基，称为基变换.</p>
-<p>涉及到前面的一些规则再次阐述，尤其是<span class="arithmatex">\(\theta\)</span>规则的部分，选择最小的换出</p>
+<p>涉及到前面的一些规则再次阐述，尤其是 <span class="arithmatex">\(\theta\)</span> 规则的部分，选择最小的换出</p>
 <h4 id="_16">迭代(旋转)<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h4>
 <p>由于原本是单位阵，那么逆阵应该也是单位阵，进行主元消去恰好是进行逆变换也就是乘上逆矩阵的做法，得到的下一个矩阵也是单位阵，于是可以一直使用主元消去的方法.</p>
 <h3 id="_17">单纯形法的计算步骤<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h3>
 <p>综合上方的矩阵做法和理论推导，将运算简化为表格计算，得到下方的单纯形表</p>
 <h4 id="_18">单纯形表<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h4>
-<p>为了便于理解计算关系，设计一种表用于计算，称为单纯形表，功能与增广矩阵相似，可以将线性约束关系与目标函数组成<span class="arithmatex">\(m+1 \times n+1\)</span>的方程组</p>
+<p>为了便于理解计算关系，设计一种表用于计算，称为单纯形表，功能与增广矩阵相似，可以将线性约束关系与目标函数组成 <span class="arithmatex">\(m+1 \times n+1\)</span> 的方程组</p>
 <p>给出一个矩阵的表示：</p>
 <table>
 <thead>
@@ -2191,9 +2191,9 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 <li>先建立初始单纯形表</li>
 <li>检查检验数，如果没有得到最优解，转入下一步</li>
 <li>在检验数为正的列向量中确认最大的为换入向量</li>
-<li>找到出基变量，方法是<span class="arithmatex">\(\theta\)</span>检验法</li>
+<li>找到出基变量，方法是 <span class="arithmatex">\(\theta\)</span> 检验法</li>
 <li>高斯消去法得到新的单纯形表</li>
-<li>重复2-5</li>
+<li>重复 2-5</li>
 </ol>
 <p>只需要一个例子就可以明白了.</p>
 <table>
@@ -2268,8 +2268,8 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 </tr>
 </tbody>
 </table>
-<p>可知x2为换入变量，再计算<span class="arithmatex">\(\theta\)</span>，得到最小值是3，它所在行对应的x5是换出变量，所在行和所在列交叉处的[4]称为主元素或枢元素(pivot element)</p>
-<p>利用主元素将所在列变为<span class="arithmatex">\((0,0,1)^{T}\)</span>，然后将<span class="arithmatex">\(x_{2}\to x_{5}\)</span></p>
+<p>可知 x2 为换入变量，再计算 <span class="arithmatex">\(\theta\)</span>，得到最小值是 3，它所在行对应的 x5 是换出变量，所在行和所在列交叉处的[4]称为主元素或枢元素(pivot element)</p>
+<p>利用主元素将所在列变为 <span class="arithmatex">\((0,0,1)^{T}\)</span>，然后将 <span class="arithmatex">\(x_{2}\to x_{5}\)</span></p>
 <table>
 <thead>
 <tr>
@@ -2342,7 +2342,7 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 </tr>
 </tbody>
 </table>
-<p>发现有<span class="arithmatex">\(c_{1}-z_{1}=2&gt;0\)</span>，说明x1为换入变量，换出变量是x3</p>
+<p>发现有 <span class="arithmatex">\(c_{1}-z_{1}=2&gt;0\)</span>，说明 x1 为换入变量，换出变量是 x3</p>
 <table>
 <thead>
 <tr>
@@ -2415,7 +2415,7 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 </tr>
 </tbody>
 </table>
-<p>x5为换入变量，换出变量是x4</p>
+<p>x5 为换入变量，换出变量是 x4</p>
 <table>
 <thead>
 <tr>
@@ -2492,24 +2492,24 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 <h4 id="_21">人工变量法<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h4>
 <div class="admonition tldr">
 <p class="admonition-title">基本思想</p>
-<p>原本的做法需要依靠加入松弛变量构造出初始的单位阵作为基向量，但是如果不是符合<span class="arithmatex">\(\leqslant\)</span>的方程就无法按照原本的方法进行，这时候可以考虑人工变量法直接加入基变量构造出单位矩阵，仍然得到初始基可行解，但是如果不加以约束，这显然会出现不符合题设的解<br />
+<p>原本的做法需要依靠加入松弛变量构造出初始的单位阵作为基向量，但是如果不是符合 <span class="arithmatex">\(\leqslant\)</span> 的方程就无法按照原本的方法进行，这时候可以考虑人工变量法直接加入基变量构造出单位矩阵，仍然得到初始基可行解，但是如果不加以约束，这显然会出现不符合题设的解<br />
 + 由于人工变量是加入原本约束条件的虚拟变量，所以必须要将它们从基变量中逐个替换出来<br />
 + 基变量不再含有非零的人工变量表示有解，反之无可行解</p>
 </div>
 <ol>
-<li>大M法</li>
+<li>大 M 法</li>
 </ol>
 <p>思路：如果是求最小值，目标函数中给人工变量赋以很大的系数(惩罚函数)，那么如果要求最小值，就不可能仍然含有人工变量</p>
 <ol>
 <li>两阶段法<ol>
-<li>第一阶段：不考虑原问题是否存在基可行解，加入人工变量，构造仅含人工变量的目标函数和要求实现最小化，如果最小值为0，则说明原问题存在基可行解，可以进行二阶段计算</li>
+<li>第一阶段：不考虑原问题是否存在基可行解，加入人工变量，构造仅含人工变量的目标函数和要求实现最小化，如果最小值为 0，则说明原问题存在基可行解，可以进行二阶段计算</li>
 <li>第二阶段：第一阶段计算得到的最终表除去人工变量，将目标函数换回原问题的目标函数系数，然后以此作为初始表，启动单纯形法</li>
 </ol>
 </li>
 </ol>
 <h4 id="_22">退化<a class="headerlink" href="#_22" title="Permanent link">⚓︎</a></h4>
 <p>使用最小比值规则确定换出变量时发现存在两个以上相同的最小比值，下一次迭代中将出现一个或者几个基变量等于零，这就出现退化解，这时可以采用一些方法规避循环：“摄动法”，“字典序法”.</p>
-<p>Remark：Bland规则
+<p>Remark：Bland 规则
 1. 选取检验数大于零中下标最小的非基变量为换入变量
 2. 按照最小比值规则计算出现两个以上最小比值选取下标最小(或最大)的基变量为换出变量
 3. 一定要统一规则</p>
@@ -2519,7 +2519,7 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 <p>在上文已提前给出，在此不再赘述(矩阵描述更加简洁但是可能会更依赖代数功底一些)</p>
 <h3 id="_25">改进单纯形法<a class="headerlink" href="#_25" title="Permanent link">⚓︎</a></h3>
 <p>传统单纯形法的局限性，换基后新的基变量对应的原始矩阵求逆会造成无谓的计算浪费</p>
-<p>求解线性规划问题的关键就是找到<span class="arithmatex">\(B^{-1}\)</span>，如果能简化逆阵计算就可以大大缩短时间，做法也是比较固定的：找到主元素，计算新的向量，左乘得到逆阵后即可化为单位阵.</p>
+<p>求解线性规划问题的关键就是找到 <span class="arithmatex">\(B^{-1}\)</span>，如果能简化逆阵计算就可以大大缩短时间，做法也是比较固定的：找到主元素，计算新的向量，左乘得到逆阵后即可化为单位阵.</p>
 <p>也就是将入基的向量化为出基向量的列向量的样子</p>
 <ul>
 <li>锁定主元</li>
@@ -2527,20 +2527,20 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 </ul>
 <div class="admonition note">
 <p class="admonition-title">小结</p>
-<p>实际上就是用简单的高斯消去法代替求逆阵的过程，如果是提取阅读了课本或是网上的一些资料可能会发现一开始用的就是改进后的方法.<br />
-笔者前面也是直接按照改进后方法计算和书写，老师的讲义中在3.5提到了这一点，也使用的是这一简单方法</p>
+<p>实际上就是用简单的高斯消去法代替求逆阵的过程，如果是提前阅读了课本或是网上的一些资料可能会发现一开始用的就是改进后的方法.<br />
+笔者前面也是直接按照改进后方法计算和书写，老师的讲义中在 3.5 提到了这一点，也使用的是这一简单方法</p>
 </div>
 <h4 id="_26">单纯形法的小结<a class="headerlink" href="#_26" title="Permanent link">⚓︎</a></h4>
 <ul>
 <li>变量处理</li>
 <li>约束条件处理</li>
 <li>目标函数</li>
-<li>大M法</li>
+<li>大 M 法</li>
 <li>两阶段法</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">大M法</p>
-<p>如果需要使用计算机的机器语言进行求解，大M法中的M不够明确就有可能出现无法正确求解的问题，所以进一步讨论两阶段法，保证过程的明确且唯一。</p>
+<p class="admonition-title">大 M 法</p>
+<p>如果需要使用计算机的机器语言进行求解，大 M 法中的 M 不够明确就有可能出现无法正确求解的问题，所以进一步讨论两阶段法，保证过程的明确且唯一。</p>
 </div>
 <h2 id="_27">对偶理论和灵敏度分析<a class="headerlink" href="#_27" title="Permanent link">⚓︎</a></h2>
 <div class="admonition quote">
@@ -2562,7 +2562,7 @@ z &amp; =z_{0}+\sum\limits_{j=m+1}^{n} \sigma_{j}x_{j}
 <h3 id="_28">对偶问题的提出<a class="headerlink" href="#_28" title="Permanent link">⚓︎</a></h3>
 <p>网课中有一个例子笔者觉得不错，就是以两个公司相互交易的角度，原本是卖方而转换为买方，那么如何获利最大化就是将收购对方公司的资本降到最低，这也就是目标，然后就是对方凭什么让出资源，那么就需要约束，让出所得不低于原有盈利。这也就是经典的生产问题和资源收购问题。</p>
 <p>注意：但是有些问题的对偶问题不一定有比较明确的现实意义，但是只要是线性规划问题一定有它对应的对偶问题。</p>
-<p>简单来说就是最大和最小对偶，大于号和小于号调换，将<span class="arithmatex">\(C\iff b\)</span>，系数矩阵转置(对调一下自变量)，这样就得到了原线性规划问题(LP)的对偶问题(DP)</p>
+<p>简单来说就是最大和最小对偶，大于号和小于号调换，将 <span class="arithmatex">\(C\iff b\)</span>，系数矩阵转置(对调一下自变量)，这样就得到了原线性规划问题(LP)的对偶问题(DP)</p>
 <div class="arithmatex">\[
 \begin{aligned}
 max z  &amp; =CX \\
@@ -2590,12 +2590,12 @@ Y &amp; \geqslant   0
 <p>对称的就按照之前的方法进行，如果是不对称的可以将等式分解为两个不等式，再通过加负号的方法转换为单边的不等式约束，然后按对称形式变换关系可写出它的对偶问题(不用那么麻烦直接转置了按照法则对应也可以)</p>
 <ul>
 <li>目标函数符号相反：最大对偶最小，最小对偶最大(非常容易)</li>
-<li>将原本的<span class="arithmatex">\(b\)</span>系数对调目标函数的系数(也非常容易)</li>
+<li>将原本的 <span class="arithmatex">\(b\)</span> 系数对调目标函数的系数(也非常容易)</li>
 <li>新的对偶问题系数矩阵是原矩阵的转置(同样非常容易)</li>
 <li>下面是唯一具有难度的约束条件和变量的符号转换问题，笔者自己总结了一套规律<ul>
-<li>给出一组对应关系极小化问题对应<span class="arithmatex">\(\geqslant\)</span>，极大化问题对应<span class="arithmatex">\(\leqslant\)</span>，然后再看下面的问题</li>
-<li>先看原问题的约束条件，如果符合上面的对应关系，变量约束为<span class="arithmatex">\(\geqslant 0\)</span>，如果不符合则改为<span class="arithmatex">\(\leqslant 0\)</span>，如果取等就是无约束情况反而简单了</li>
-<li>再看原问题的变量约束，仍然是那条对应关系只不过以0为分界(极小化问题就是非负限制<span class="arithmatex">\(\geqslant 0\)</span>，极大化问题就是非正的限制<span class="arithmatex">\(\leqslant 0\)</span>)，符合的话约束就是<span class="arithmatex">\(\leqslant\)</span>，不符合就是<span class="arithmatex">\(\geqslant\)</span>，无约束实际是最简单的直接取等</li>
+<li>给出一组对应关系极小化问题对应 <span class="arithmatex">\(\geqslant\)</span>，极大化问题对应 <span class="arithmatex">\(\leqslant\)</span>，然后再看下面的问题</li>
+<li>先看原问题的约束条件，如果符合上面的对应关系，变量约束为 <span class="arithmatex">\(\geqslant 0\)</span>，如果不符合则改为 <span class="arithmatex">\(\leqslant 0\)</span>，如果取等就是无约束情况反而简单了</li>
+<li>再看原问题的变量约束，仍然是那条对应关系只不过以 0 为分界(极小化问题就是非负限制 <span class="arithmatex">\(\geqslant 0\)</span>，极大化问题就是非正的限制 <span class="arithmatex">\(\leqslant 0\)</span>)，符合的话约束就是 <span class="arithmatex">\(\leqslant\)</span>，不符合就是 <span class="arithmatex">\(\geqslant\)</span>，无约束实际是最简单的直接取等</li>
 <li>注意：这种对应关系是符合最初的优化生产问题的</li>
 </ul>
 </li>
@@ -2625,36 +2625,36 @@ y_{1}\geqslant 0,y_{2}&amp;\leqslant 0
 <li>对称性：</li>
 <li>对偶问题的对偶是原问题</li>
 <li>弱对偶性：<strong>每一个问题的可行解的目标函数值都给出对偶问题的目标函数的界</strong></li>
-<li><span class="arithmatex">\(\overline{X}\)</span>为原问题可行解，<span class="arithmatex">\(\overline{Y}\)</span>是对偶问题可行解，<span class="arithmatex">\(C \overline{X}\leqslant \overline{Y}b\)</span></li>
+<li><span class="arithmatex">\(\overline{X}\)</span> 为原问题可行解，<span class="arithmatex">\(\overline{Y}\)</span> 是对偶问题可行解，<span class="arithmatex">\(C \overline{X}\leqslant \overline{Y}b\)</span></li>
 <li>无界性：</li>
 <li>若是原问题为无界解，则对偶问题无可行解</li>
 <li>最优性：  </li>
-<li><span class="arithmatex">\(C \overline{X}=\overline{Y}b\)</span>，<span class="arithmatex">\(\overline{X},\overline{Y}\)</span>是最优解</li>
+<li><span class="arithmatex">\(C \overline{X}=\overline{Y}b\)</span>，<span class="arithmatex">\(\overline{X},\overline{Y}\)</span> 是最优解</li>
 <li>对偶定理：</li>
 <li>两个问题均有可行解</li>
 <li>若原问题有最优解，那么对偶问题也有最优解，且最优解目标函数值相等</li>
-<li><strong>互补松弛性</strong>：很重要，可以很好的简化得到对偶问题最优解的过程</li>
-<li><span class="arithmatex">\(\overline{X},\overline{Y}\)</span>为原问题和对偶问题可行解，<span class="arithmatex">\(\overline{Y}X_{S}=0,Y_{S}\overline{X}=0 \iff  \overline{X},\overline{Y}\)</span>最优解</li>
-<li>以下是从课本(最优化理论与算法-陈宝林)中的摘取(感觉比Slides详细)<ul>
-<li>如果<span class="arithmatex">\(x^{(0)},w^{(0)}\)</span>是原问题和对偶问题的可行解，那么两者均为最优解的充要条件是对于任意的<span class="arithmatex">\(i,j\)</span>，满足</li>
+<li><strong>互补松弛性</strong>：很重要，可以很好地简化得到对偶问题最优解的过程</li>
+<li><span class="arithmatex">\(\overline{X},\overline{Y}\)</span> 为原问题和对偶问题可行解，<span class="arithmatex">\(\overline{Y}X_{S}=0,Y_{S}\overline{X}=0 \iff  \overline{X},\overline{Y}\)</span> 最优解</li>
+<li>以下是从课本(最优化理论与算法-陈宝林)中的摘取(感觉比 Slides 详细)<ul>
+<li>如果 <span class="arithmatex">\(x^{(0)},w^{(0)}\)</span> 是原问题和对偶问题的可行解，那么两者均为最优解的充要条件是对于任意的 <span class="arithmatex">\(i,j\)</span>，满足</li>
 <li>
 <ol>
-<li>如果<span class="arithmatex">\(x_{j}^{(0)}&gt;0\)</span>，就有<span class="arithmatex">\(w^{(0)}p_{j}=c_{j}\)</span></li>
+<li>如果 <span class="arithmatex">\(x_{j}^{(0)}&gt;0\)</span>，就有 <span class="arithmatex">\(w^{(0)}p_{j}=c_{j}\)</span></li>
 </ol>
 </li>
 <li>
 <ol>
-<li>如果<span class="arithmatex">\(w^{(0)}p_{j}&lt;c_{j}\)</span>，<span class="arithmatex">\(x_{j}^{(0)}=0\)</span></li>
+<li>如果 <span class="arithmatex">\(w^{(0)}p_{j}&lt;c_{j}\)</span>，<span class="arithmatex">\(x_{j}^{(0)}=0\)</span></li>
 </ol>
 </li>
 <li>
 <ol>
-<li>如果<span class="arithmatex">\(w_{j}^{(0)}&gt;0\)</span>，就有<span class="arithmatex">\(A_{i}x^{(0)}=b_{i}\)</span></li>
+<li>如果 <span class="arithmatex">\(w_{j}^{(0)}&gt;0\)</span>，就有 <span class="arithmatex">\(A_{i}x^{(0)}=b_{i}\)</span></li>
 </ol>
 </li>
 <li>
 <ol>
-<li>如果<span class="arithmatex">\(A_{i}x^{(0)}&gt;b_{i}\)</span>，<span class="arithmatex">\(w_{j}^{(0)}=0\)</span></li>
+<li>如果 <span class="arithmatex">\(A_{i}x^{(0)}&gt;b_{i}\)</span>，<span class="arithmatex">\(w_{j}^{(0)}=0\)</span></li>
 </ol>
 </li>
 </ul>
@@ -2686,17 +2686,17 @@ y_{1}\geqslant 0,y_{2}&amp;\leqslant 0
 <h4 id="_34">计算步骤<a class="headerlink" href="#_34" title="Permanent link">⚓︎</a></h4>
 <ol>
 <li>检验数均小于零-对偶问题可行解</li>
-<li>判断<span class="arithmatex">\(b\)</span>列向量是否全部非负，若是，达到最优，停止迭代，否则进入3</li>
+<li>判断 <span class="arithmatex">\(b\)</span> 列向量是否全部非负，若是，达到最优，停止迭代，否则进入 3</li>
 <li>决定出基变量，选取最小的一个(负值中绝对值最大的一个)</li>
 <li>
 <p>确定换入变量，找到主元素</p>
 </li>
 <li>
 <p>确定出基变量
-找到<span class="arithmatex">\(b\)</span>列中小于零的一行(如果不止一个就选择最小的为出基变量)</p>
+找到 <span class="arithmatex">\(b\)</span> 列中小于零的一行(如果不止一个就选择最小的为出基变量)</p>
 </li>
 <li>确定入基变量
-确定行之后还需要寻找对应行中<span class="arithmatex">\(a_{rj}&lt;0\)</span>的非基变量考虑作为入基变量</li>
+确定行之后还需要寻找对应行中 <span class="arithmatex">\(a_{rj}&lt;0\)</span> 的非基变量考虑作为入基变量</li>
 </ol>
 <div class="arithmatex">\[
 \theta=min\left\{ \frac{c_{j}-z_{j}}{a_{rj}}\big|a_{rj}&lt;0 \right\} = \frac{c_{s}-z_{s}}{a_{rs}}

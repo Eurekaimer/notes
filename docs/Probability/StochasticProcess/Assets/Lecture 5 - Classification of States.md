@@ -128,7 +128,7 @@ $$
 
 ## 常返性
 
-George Polyo
+George Pólya
 
 !!! note "Definition 5.8(首达时)"
     设 $\left\{ X_{n} \right\}$ 为一个状态空间为 $E$ 的 Markov 链，从 $n=0$ 出发首次达到状态 $j$ 的时刻，我们记为
@@ -156,12 +156,12 @@ f_{ij}^{(n)}&\overset{\Delta}{=}P\left( \tau_{j}< \infty\mid X_{0}=i \right)\\
 \end{aligned}$$
 
 !!! note "Definition 5.10(常返性)"
-    如果$f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，则称状态$i$是常返的(Recurrent)，否则称$i$为暂留的(Transient)，或者非常返的(Nonrecurrent)).
+    如果 $f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1$，则称状态 $i$ 是常返的(Recurrent)，否则称 $i$ 为暂留的(Transient)，或者非常返的(Nonrecurrent)).
 
-虽然我们通过$f_{ij}$ 来定义常返性，但$f_{ij}^{(n)}$ 的计算并不容易，所以我们想要通过n步转移概率$P_{ij}^{(n)}$ 来计算，通过$P_{ij}^{(n)}$ 来获得状态是否是常返的判据，这即是下面的定理：
+虽然我们通过 $f_{ij}$ 来定义常返性，但 $f_{ij}^{(n)}$ 的计算并不容易，所以我们想要通过 n 步转移概率 $P_{ij}^{(n)}$ 来计算，通过 $P_{ij}^{(n)}$ 来获得状态是否是常返的判据，这即是下面的定理：
 
 !!! tip "Theorem 5.11"
-    状态$i$是常返态的充分必要条件是
+    状态 $i$ 是常返态的充分必要条件是
 
     $$\begin{aligned}\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty\end{aligned}$$
 
@@ -181,7 +181,7 @@ P_{ij}^{(n)}&=P(X_{n}=j|X_{0}=i) \\
 &=\sum_{k=1}^{n}f_{ij}^{(k)}P_{jj}^{(n-k)}
 \end{aligned}$$
 
-于是根据形式可以考虑卷积$\to$母函数方法(记号：$\delta_{ij}=1(i=j)$，否则为0)
+于是根据形式可以考虑卷积 $\to$ 母函数方法(记号：$\delta_{ij}=1(i=j)$，否则为 0)
 
 $$\begin{aligned}
 \sum_{n=0}^{\infty}P_{ij}^{(n)}z^{n}& =\delta_{ij}+\sum_{n=1}^{\infty}P_{ij}^{(n)}z^{n}  \\
@@ -191,7 +191,7 @@ $$\begin{aligned}
 &=\delta_{ij}+\sum_{k=1}^\infty(f_{ij}^{(k)}z^k)\sum_{m=0}^\infty(P_{jj}^{(m)}z^m)
 \end{aligned}$$
 
-那么令$j=i$
+那么令 $j=i$
 
 $$\begin{aligned}\sum_{n=0}^\infty P_{ii}^{(n)}z^n=1+\sum_{k=1}^\infty(f_{ii}^{(k)}z^k)\sum_{n=0}^\infty(P_{ii}^{(n)}z^n)\end{aligned}$$
 
@@ -199,59 +199,59 @@ $$\begin{aligned}\sum_{n=0}^\infty P_{ii}^{(n)}z^n=1+\sum_{k=1}^\infty(f_{ii}^{(
 
 $$\begin{aligned}\sum_{n=0}^{\infty}P_{ii}^{(n)}z^n=\frac{1}{1-\sum_{k=1}^{\infty}f_{ii}^{(k)}z^k}\end{aligned}$$
 
-令$z\to1^{-}$ ，由[Abel定理](https://en.wikipedia.org/wiki/Abel%27s_theorem)可得
+令 $z\to1^{-}$ ，由[Abel 定理](https://en.wikipedia.org/wiki/Abel%27s_theorem)可得
 
 $$\begin{aligned}\sum_{n=1}^{\infty}P_{ii}^{(n)}&=\frac{1}{1-f_{ii}}\end{aligned}$$
 
-那么$f_{ii}=1$即等价于$\sum\limits_{n=0}^{\infty}P_{ii}^{(n)}=\infty$
+那么 $f_{ii}=1$ 即等价于 $\sum\limits_{n=0}^{\infty}P_{ii}^{(n)}=\infty$
 
-注1．另一种概率方法的证明：
+注 1．另一种概率方法的证明：
 
-由$f_{ii}$的定义，Markov链$\{X_n\}$从状态出发，最终能回到的概率为$f_{ii}$，那么一直回不到的概率为$1-f_{ii}$
+由 $f_{ii}$ 的定义，Markov 链 $\{X_n\}$ 从状态出发，最终能回到的概率为 $f_{ii}$，那么一直回不到的概率为 $1-f_{ii}$
 
-由于Markov性，所以在回到$i$之后，过程在概率意义下又重新开始，那么$X_{0}=i$ 开始，Markov链$\{X_n\}$ 恰有$n$ 次处于状态$i$服从几何分布，$P\{X_n$处于状态i的次数$=n\mid X_{0}=i\}=f_{ii}^{n-1}(1-f_{ii})$
+由于 Markov 性，所以在回到 $i$ 之后，过程在概率意义下又重新开始，那么 $X_{0}=i$ 开始，Markov 链 $\{X_n\}$ 恰有 $n$ 次处于状态 $i$ 服从几何分布，$P\{X_n$ 处于状态 i 的次数 $=n\mid X_{0}=i\}=f_{ii}^{n-1}(1-f_{ii})$
 
-所以，从$i$出发以后，处于$i$状态的期望为
+所以，从 $i$ 出发以后，处于 $i$ 状态的期望为
 
 $$\begin{aligned}\sum_{n=1}^{\infty}nf_{ii}^{n-1}(1-f_{ii})=\frac{1}{1-f_{ii}}\end{aligned}$$
 
-那么$i$是常返态，当且仅当$E[X_{n}$处于状态i的次数$\left|\begin{array}{c}X_{0}=i\end{array}\right]=\infty$，下面证明期望与所求概率和相等：
+那么 $i$ 是常返态，当且仅当 $E[X_{n}$ 处于状态 i 的次数 $\left|\begin{array}{c}X_{0}=i\end{array}\right]=\infty$，下面证明期望与所求概率和相等：
 
-记随机序列$I_{n}$为：当$X_{n}=i$时$I_{n}=1$，否则为0，那么$\sum_{n=0}^{\infty}I_{n}$表示$I_{n}$处于状态$i$的次数，则有
+记随机序列 $I_{n}$ 为：当 $X_{n}=i$ 时 $I_{n}=1$，否则为 0，那么 $\sum_{n=0}^{\infty}I_{n}$ 表示 $I_{n}$ 处于状态 $i$ 的次数，则有
 
 $$\mathbb{E}\left[\sum_{n=1}^\infty I_n|X_0=i\right]=\sum_{n=1}^\infty\mathbb{E}[I_n|X_0=i]=\sum_{n=1}^\infty P(X_n=i|X_0=i)=\sum_{n=1}^\infty P_{ii}^{(n)}$$
 
-故状态是常返态的充分必要条件是$\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty$($n=0$时概率有界量不影响证明-无穷大)
+故状态是常返态的充分必要条件是 $\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty$($n=0$ 时概率有界量不影响证明-无穷大)
 
-注2．从注1的证明过程中，我们可以看出若状态$i$是暂留的，则Markov链只会有限次处于状态$i$ ，可以具体表述为下面推论。
+注 2．从注 1 的证明过程中，我们可以看出若状态 $i$ 是暂留的，则 Markov 链只会有限次处于状态 $i$ ，可以具体表述为下面推论。
 
 !!! note "Corollary 5.12"
-    如果状态$j$是暂留的，那么对任意状态$i$
+    如果状态 $j$ 是暂留的，那么对任意状态 $i$
 
     $$P_{ij}^{(n)}\to0,\quad n\to\infty $$
 
 `Proof`
 
-若$j=i$ 是暂留的，我们已经证明：
+若 $j=i$ 是暂留的，我们已经证明：
 
 $$\begin{aligned}\sum_{n=1}^{\infty}P_{ii}^{(n)}=\frac{1}{1-f_{ii}}<\infty\end{aligned}$$
 
-所以级数的通项$\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0$(收敛的必要条件)
+所以级数的通项 $\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0$(收敛的必要条件)
 
-另一方面，若$j\neq i$ 是暂留的，我们已经证明：
+另一方面，若 $j\neq i$ 是暂留的，我们已经证明：
 
 $$\begin{aligned}\sum_{n=0}^\infty P_{ij}^{(n)}=\delta_{ij}+\sum_{k=1}^\infty f_{ij}^{(k)}\sum_{n=0}^\infty P_{jj}^{(n)}=\sum_{n=1}^\infty f_{ij}^{(n)}\sum_{n=0}^\infty P_{jj}^{(n)}<\infty\end{aligned}$$
 
-所以级数的通项$\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0$
+所以级数的通项 $\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0$
 
-注3．常返与非常返具有类的性质
+注 3．常返与非常返具有类的性质
 
 !!! note "Corollary 5.13"
-    若状态$i$是常返的，且$i\leftrightarrow j$ ，则$j$ 是常返的
+    若状态 $i$ 是常返的，且 $i\leftrightarrow j$ ，则 $j$ 是常返的
 
 `Proof`
 
-由于$i\leftrightarrow j$ ，则存在$m$ 和$n$ 使得
+由于 $i\leftrightarrow j$ ，则存在 $m$ 和 $n$ 使得
 
 $$P_{ij}^{(n)}>0,\quad P_{ji}^{(m)}>0$$
 
@@ -290,7 +290,7 @@ $$\sum_{j=1}^NP_{ij}^{(k)}=1$$
 
 矛盾！故命题成立。
 
-注。结合推论 5.13，我们知道：对于状态有限**不可约**Markov 链，所有状态**都是常返态**。
+注。结合推论 5.13，我们知道：对于状态有限**不可约 **Markov 链，所有状态**都是常返态**。
 
 !!! example "Example 5.15 ( $d$ 维简单随机游走的常返性）"
     设 $\xi_{1},\xi_{2},\ldots$ .是取值于 $E=\mathbb{Z}^{d}$ 独立同分布随机向量，满足

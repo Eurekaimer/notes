@@ -2191,10 +2191,10 @@
 <h4 id="verifying-recursive-functions">Verifying Recursive Functions<a class="headerlink" href="#verifying-recursive-functions" title="Permanent link">⚓︎</a></h4>
 <h4 id="mutual-recursion">Mutual Recursion<a class="headerlink" href="#mutual-recursion" title="Permanent link">⚓︎</a></h4>
 <p>The Luhn Algorithm</p>
-<p>Actually, I have seen this algorithm in CS50x before and it was the optional case in problem set.</p>
+<p>Actually, I have seen this algorithm in CS50x before, and it was the optional case in a problem set.</p>
 <p>Very Interesting!</p>
 <h4 id="recursion-and-iteration">Recursion and Iteration<a class="headerlink" href="#recursion-and-iteration" title="Permanent link">⚓︎</a></h4>
-<p>some examples and we can change any iteration case to recursion type.</p>
+<p>Some examples, and we can change any iteration case into a recursive one.</p>
 <h3 id="tree-recursion">Tree Recursion<a class="headerlink" href="#tree-recursion" title="Permanent link">⚓︎</a></h3>
 <h4 id="order-of-recursive-calls">Order of Recursive Calls<a class="headerlink" href="#order-of-recursive-calls" title="Permanent link">⚓︎</a></h4>
 <p>cascade case:</p>
@@ -2243,7 +2243,7 @@
 <blockquote>
 <p>A function is called <em>recursive</em> if the body of the function calls the function itself, either directly or indirectly.</p>
 </blockquote>
-<p>An example use recursion function to calculate sum of digits</p>
+<p>An example using a recursive function to calculate the sum of digits</p>
 <h4 id="the-anatomy-of-recursive-functions">The Anatomy of Recursive Functions<a class="headerlink" href="#the-anatomy-of-recursive-functions" title="Permanent link">⚓︎</a></h4>
 <blockquote>
 <p>Treating a recursive call as a functional abstraction has been called a <em>recursive leap of faith</em>.</p>
@@ -2266,13 +2266,13 @@
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">is_even</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
-<p>No matter even or odd, the function will return iff n equals to 0.</p>
+<p>Whether even or odd, the function will return iff n equals 0.</p>
 <blockquote>
 <p>As such, mutual recursion is <strong>no more mysterious or powerful</strong> than simple recursion, and it provides a mechanism for maintaining abstraction within a complicated recursive program.</p>
 </blockquote>
 <h4 id="printing-in-recursive-functions">Printing in Recursive Functions<a class="headerlink" href="#printing-in-recursive-functions" title="Permanent link">⚓︎</a></h4>
-<p>talk about the cascade function in videos, here is passed.</p>
-<p>One another case:</p>
+<p>The cascade function was discussed in the videos, so it is skipped here.</p>
+<p>Another case:</p>
 <blockquote>
 <p>As another example of mutual recursion, consider a two-player game in which there are n initial pebbles on a table. The players take turns, removing either one or two pebbles from the table, and the player who removes the final pebble wins. Suppose that Alice and Bob play this game, each using a simple strategy:</p>
 <ol>
@@ -2297,16 +2297,16 @@
 </code></pre></div>
 <p>Remark: This code pattern can be used in any two-players game, and help dinner major in Math(Stat\OR...) save a lot of time.</p>
 <h4 id="tree-recursion_2">Tree Recursion<a class="headerlink" href="#tree-recursion_2" title="Permanent link">⚓︎</a></h4>
-<p>Classical Fibonacci computation and use recursion algorithm.</p>
+<p>Classical Fibonacci computation using a recursive algorithm.</p>
 <h4 id="example-partitions">Example: Partitions<a class="headerlink" href="#example-partitions" title="Permanent link">⚓︎</a></h4>
 <blockquote>
 <p>The number of partitions of a positive integer n, using parts up to size m, is the number of ways in which n can be expressed as the sum of positive integer parts up to m in increasing order. For example, the number of partitions of 6 using parts up to 4 is 9.</p>
 </blockquote>
-<p>Obviously, we can use recursion to solve the problem and code below.</p>
-<p>The most important is get the recursion process, and the (n, m) can be devided two parts:</p>
+<p>Obviously, we can use recursion to solve the problem, as in the code below.</p>
+<p>The most important thing is to understand the recursion process, and (n, m) can be divided into two cases:</p>
 <ol>
-<li>(n, m-1) no doubt one case</li>
-<li>we use the m so remain n-m to devide: (n-m, m)</li>
+<li>(n, m-1) is undoubtedly one case</li>
+<li>We use m, so n-m remains to be divided: (n-m, m)</li>
 </ol>
 <div class="language-Python highlight"><span class="filename">Python</span><pre><span></span><code><span class="c1"># The number of ways to partition n using integers up to m equals</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">partitions</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
@@ -2366,7 +2366,7 @@
 <blockquote>
 <p>此事在 CS50x 中亦有记载</p>
 </blockquote>
-<p>类似之前例子中的 Partitions 吧（或者 Catlant 数?），经典 OJ 题了</p>
+<p>类似之前例子中的 Partitions 吧（或者 Catalan 数？），经典 OJ 题了</p>
 <p>不知道为什么官方写辅助函数不多写一个判断返回 0，自己编写完成后查看报错发现返回了错误类型（增加判断 None），如果发现和测试对不上可以自己找案例测试一下（比如 total 为 0 应该返回 1）</p>
 <p>编写时可以思考各个判断之间的依赖关系（可能有冗余判断），笔者选择对特殊情况添加判断以在大数部分节约机时（但其实没有这个判断也可以跑通）</p>
 <p>注：本次 HW 的选做题比较难也比较有意思，尤其是最后一道题确实有一定难度</p>
@@ -2389,7 +2389,7 @@
 <p>This question demonstrates that it's possible to write recursive functions without assigning them a name in the global frame.</p>
 </blockquote>
 <p>实际编写：</p>
-<p>Step 1: 确认输入输出，输入一个数记为 k，返回一个高阶函数 F'以函数 F 为参数</p>
+<p>Step 1: 确认输入输出，输入一个数记为 k，返回一个高阶函数 F' 以函数 F 为参数</p>
 <p>T(F): lambda F: lambda k: F(F, k)</p>
 <p>Step 2: 思考输入的 F 的构造，应当接受两个参量，k 为 1 返回 1，否则就进行一个类似递归的计算</p>
 <p>F = lambda f, k: 1 if k == 1 else k * f(f, k - 1)</p>
@@ -2400,7 +2400,7 @@
 <p>下面是可能有用的推演过程</p>
 <p>尝试：输入一个 f 直接代表递归函数，并且 f 只接受一个 k</p>
 <p>lambda f: (lambda k: f(k))--(lambda k: 1 if k == 0 else k * f(k - 1)?)</p>
-<p>发现无法调用 f,判断必须要求两个输入 f, k 以调用希望的 f(k - 1)，那么进行修改，仍然认为 f(k) 是我们需要的递归函数，但是需要两个输入，增加假定 f(f, k) 也是我们需要的阶乘函数</p>
+<p>发现无法调用 f，判断必须要求两个输入 f, k 以调用希望的 f(k - 1)，那么进行修改，仍然认为 f(k) 是我们需要的递归函数，但是需要两个输入，增加假定 f(f, k) 也是我们需要的阶乘函数</p>
 <p>(lambda f: (lambda k: f(f, k)))--(lambda f, k: 1 if k == 0 else k * f(f, k - 1))</p>
 <hr />
 <p>仍然是信仰之跃！</p>

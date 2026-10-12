@@ -1760,14 +1760,14 @@
 <p><code>Proof.</code></p>
 <p><code>一维情形</code></p>
 <p>不妨将右侧记为 <span class="arithmatex">\(\lambda\)</span> 方便后续书写</p>
-<p>根据定义和外测度的单调性显然有 <span class="arithmatex">\(m^{*}(E)\leqslant \lambda\)</span>，下面对 <span class="arithmatex">\(m^{*}(E)\)</span> 进行讨论，显然当 <span class="arithmatex">\(m^{*}(E)=\infty\)</span> 时结论成立，那么下面考虑<span class="arithmatex">\(m^{*}(E)&lt;\infty\)</span>时</p>
-<p>对于任意的正数<span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在开区间列<span class="arithmatex">\(\left\{ I_{k} \right\}_{k \geqslant 1}s.t.E\subset \bigcup\limits_{k=1}^{\infty}I_{k},\sum\limits_{n=1}^{\infty}l(I_{n})&lt;m^{*}(E)+\varepsilon\)</span>,而<span class="arithmatex">\(Q=\bigcup\limits_{k=1}^{\infty}I_{k}\)</span>也是开集那么有</p>
+<p>根据定义和外测度的单调性显然有 <span class="arithmatex">\(m^{*}(E)\leqslant \lambda\)</span>，下面对 <span class="arithmatex">\(m^{*}(E)\)</span> 进行讨论，显然当 <span class="arithmatex">\(m^{*}(E)=\infty\)</span> 时结论成立，那么下面考虑 <span class="arithmatex">\(m^{*}(E)&lt;\infty\)</span> 时</p>
+<p>对于任意的正数 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，存在开区间列 <span class="arithmatex">\(\left\{ I_{k} \right\}_{k \geqslant 1}s.t.E\subset \bigcup\limits_{k=1}^{\infty}I_{k},\sum\limits_{n=1}^{\infty}l(I_{n})&lt;m^{*}(E)+\varepsilon\)</span>,而 <span class="arithmatex">\(Q=\bigcup\limits_{k=1}^{\infty}I_{k}\)</span> 也是开集那么有</p>
 <div class="arithmatex">\[
 \lambda \leqslant m(Q)&lt;m^{*}(E)+\varepsilon
 \]</div>
-<p>再根据<span class="arithmatex">\(\varepsilon\)</span>的任意性即可得到结论成立.</p>
+<p>再根据 <span class="arithmatex">\(\varepsilon\)</span> 的任意性即可得到结论成立.</p>
 <p><code>n维情形</code></p>
-<p>根据<span class="arithmatex">\(\mathbb{R}^{n}\)</span>中Lebesgue外测度的定义，开长方体的并集均为开集，所以</p>
+<p>根据 <span class="arithmatex">\(\mathbb{R}^{n}\)</span> 中 Lebesgue 外测度的定义，开长方体的并集均为开集，所以</p>
 <div class="arithmatex">\[
 \left\{ Q|E\subset Q,Q\text{是开集} \right\} \supseteq \left\{ \bigcup\limits_{i=1}^{\infty} Q|E\subseteq \bigcup\limits_{i=1}^{\infty} Q,Q\text{是开长方体} \right\} 
 \]</div>
@@ -1780,52 +1780,52 @@ m^{*}(E)&amp;=\inf \left\{ \sum\limits_{i=1}^{\infty} m(Q_{i})|E\subseteq \bigcu
 \end{aligned}
 \]</div>
 <p>另一侧仍然显然.</p>
-<p>注：这种题目的做法是比较单一的：首先确认我们的目标，因为<span class="arithmatex">\(E\subset Q\)</span>，所以利用外测度的单调性显然有<span class="arithmatex">\(m^{*}(E)\leqslant \lambda\)</span>，再考虑另一方向，通常会采用增减一个<span class="arithmatex">\(\varepsilon\)</span>利用它的任意性证明，而在这里我们可以考虑下确界的性质构造出<span class="arithmatex">\(\varepsilon\)</span></p>
+<p>注：这种题目的做法是比较单一的：首先确认我们的目标，因为 <span class="arithmatex">\(E\subset Q\)</span>，所以利用外测度的单调性显然有 <span class="arithmatex">\(m^{*}(E)\leqslant \lambda\)</span>，再考虑另一方向，通常会采用增减一个 <span class="arithmatex">\(\varepsilon\)</span> 利用它的任意性证明，而在这里我们可以考虑下确界的性质构造出 <span class="arithmatex">\(\varepsilon\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 3</p>
-<p>设<span class="arithmatex">\(E\subset \mathbb{R},M&gt;0.\)</span>求证：<span class="arithmatex">\(m^{*}(E)=\inf\left\{ \sum\limits_{n=1}^{\infty}l(I_{n}):I_{n} \text{为开区间}，l(I_{n})&lt;M,E\subset \bigcup\limits_{n=1}^{\infty}I_{n} \right\}\)</span></p>
+<p>设 <span class="arithmatex">\(E\subset \mathbb{R},M&gt;0.\)</span> 求证：<span class="arithmatex">\(m^{*}(E)=\inf\left\{ \sum\limits_{n=1}^{\infty}l(I_{n}):I_{n} \text{为开区间}，l(I_{n})&lt;M,E\subset \bigcup\limits_{n=1}^{\infty}I_{n} \right\}\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>同2记号，有<span class="arithmatex">\(m^{*}(E)\leqslant \lambda\)</span>，显然，另一边若是有<span class="arithmatex">\(m^{*}(E)=\infty\)</span>结论成立</p>
-<p>若是<span class="arithmatex">\(m^{*}(E)&lt;\infty\)</span>，则有<span class="arithmatex">\(\forall\varepsilon&gt;0,\exists \left\{ I_{n} \right\}_{n\geqslant 1}s.t. E\subset \bigcup\limits_{n=1}^{\infty}I_{n},\sum\limits_{n=1}^{\infty}l(I_{n})\leqslant m^{*}(E)+\varepsilon\)</span>，根据<span class="arithmatex">\(m^{*}(E)\)</span>的有界性我们可以得到<span class="arithmatex">\(l(I_{n})&lt; \infty\)</span>，那么一定可以找到有限多个区间<span class="arithmatex">\(I_{n}^{(k)}\)</span>使得<span class="arithmatex">\(I_{n}\subset \bigcup\limits_{k=1}^{m_{n}}I_{n}^{(k)},l(I_{n}^{(k)})&lt;M\)</span>并且为了后续的证明有<span class="arithmatex">\(\sum\limits_{k=1}^{m_{n}}l(I_{n}^{(k)})&lt;l(I_{n})+ \frac{\varepsilon}{2^{n}}\)</span></p>
+<p>同 2 记号，有 <span class="arithmatex">\(m^{*}(E)\leqslant \lambda\)</span>，显然，另一边若是有 <span class="arithmatex">\(m^{*}(E)=\infty\)</span> 结论成立</p>
+<p>若是 <span class="arithmatex">\(m^{*}(E)&lt;\infty\)</span>，则有 <span class="arithmatex">\(\forall\varepsilon&gt;0,\exists \left\{ I_{n} \right\}_{n\geqslant 1}s.t. E\subset \bigcup\limits_{n=1}^{\infty}I_{n},\sum\limits_{n=1}^{\infty}l(I_{n})\leqslant m^{*}(E)+\varepsilon\)</span>，根据 <span class="arithmatex">\(m^{*}(E)\)</span> 的有界性我们可以得到 <span class="arithmatex">\(l(I_{n})&lt; \infty\)</span>，那么一定可以找到有限多个区间 <span class="arithmatex">\(I_{n}^{(k)}\)</span> 使得 <span class="arithmatex">\(I_{n}\subset \bigcup\limits_{k=1}^{m_{n}}I_{n}^{(k)},l(I_{n}^{(k)})&lt;M\)</span> 并且为了后续的证明有 <span class="arithmatex">\(\sum\limits_{k=1}^{m_{n}}l(I_{n}^{(k)})&lt;l(I_{n})+ \frac{\varepsilon}{2^{n}}\)</span></p>
 <div class="arithmatex">\[
 \lambda \leqslant \sum\limits_{n=1}^{\infty} \sum\limits_{k=1}^{m_{n}} l(I_{n}^{(k)})\leqslant\sum\limits_{n=1}^{\infty} \left( l(I_{n})+ \frac{\varepsilon}{2^{n}} \right)\leqslant m^{*}(E)+2\varepsilon
 \]</div>
-<p>令<span class="arithmatex">\(\varepsilon \to 0\)</span>即可得到所需结论</p>
+<p>令 <span class="arithmatex">\(\varepsilon \to 0\)</span> 即可得到所需结论</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 4</p>
-<p>设<span class="arithmatex">\(G_{1}\)</span>和<span class="arithmatex">\(G_{2}\)</span>是不相交开集，<span class="arithmatex">\(E_{1}\subset G_{1},E_{2}\subset G_{2}\)</span>，求证：<span class="arithmatex">\(m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})\)</span></p>
+<p>设 <span class="arithmatex">\(G_{1}\)</span> 和 <span class="arithmatex">\(G_{2}\)</span> 是不相交开集，<span class="arithmatex">\(E_{1}\subset G_{1},E_{2}\subset G_{2}\)</span>，求证：<span class="arithmatex">\(m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})\)</span></p>
 </div>
 <p><code>Proof</code></p>
-<p>由已知得两集合不交,那么<span class="arithmatex">\(E_{1}\subset G_{1},E_{2}\subset G_{1}^{c}\)</span>，因为<span class="arithmatex">\(G_{1}\)</span>可测，所以根据Caratheodory条件得</p>
+<p>由已知得两集合不交,那么 <span class="arithmatex">\(E_{1}\subset G_{1},E_{2}\subset G_{1}^{c}\)</span>，因为 <span class="arithmatex">\(G_{1}\)</span> 可测，所以根据 Caratheodory 条件得</p>
 <div class="arithmatex">\[
 \begin{aligned}
 m^{*}\left( E_{1}\bigcup E_{2} \right)&amp;\geqslant m^{*}\left( \left( E_{1}\bigcup E_{2} \right)\bigcap G_{1} \right)+m^{*}\left( \left( E_{1}\bigcup E_{2} \right)\bigcap G_{1}^{c} \right) \\
 &amp;=m^{*}(E_{1})+m^{*}(E_{2})
 \end{aligned}
 \]</div>
-<p>反向由次可加性显然，从而得到<span class="arithmatex">\(m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})\)</span></p>
+<p>反向由次可加性显然，从而得到 <span class="arithmatex">\(m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 5</p>
-<p>若<span class="arithmatex">\(d(E_{1},E_{2})=\inf\left\{ d(x_{1},x_{2}):x_{1}\in E_{1},x_{2}\in E_{2} \right\}&gt;0\)</span>，求证：<span class="arithmatex">\(m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})\)</span></p>
+<p>若 <span class="arithmatex">\(d(E_{1},E_{2})=\inf\left\{ d(x_{1},x_{2}):x_{1}\in E_{1},x_{2}\in E_{2} \right\}&gt;0\)</span>，求证：<span class="arithmatex">\(m^{*}\left( E_{1}\bigcup E_{2} \right)=m^{*}(E_{1})+m^{*}(E_{2})\)</span></p>
 </div>
 <p><code>Proof.</code></p>
 <p>考虑利用 2.4 结论，那么构造两个不相交的开集记为 <span class="arithmatex">\(G_{1},G_{2}\)</span>,<span class="arithmatex">\(G_{1}=\bigcup\limits_{x\in E_{1}}V\left( x, \frac{1}{2}d(E_{1},E_{2}) \right),G_{2}=\bigcup\limits_{x\in E_{2}}V\left( x, \frac{1}{2}d(E_{1},E_{2}) \right)\)</span>，可知 <span class="arithmatex">\(E_{1}\subset G_{1},E_{2}\subset G_{2}\)</span>，利用 2.4 可知结论成立</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 6</p>
-<p>设<span class="arithmatex">\(m^{*}(A)&lt;\infty,m^{*}(B)&lt;\infty\)</span>，求证：<span class="arithmatex">\(\lvert m^{*}(A) -m^{*}(B)\rvert \leqslant m^{*}(A\Delta B)\)</span></p>
+<p>设 <span class="arithmatex">\(m^{*}(A)&lt;\infty,m^{*}(B)&lt;\infty\)</span>，求证：<span class="arithmatex">\(\lvert m^{*}(A) -m^{*}(B)\rvert \leqslant m^{*}(A\Delta B)\)</span></p>
 </div>
 <p><code>Proof</code></p>
-<p>只需要使用两个集合关系和次可加性，<span class="arithmatex">\(A\subset (A\Delta B)\bigcup B\implies m^{*}(A)\leqslant m^{*}(A\Delta B)+m^{*}(B)\)</span>，同理可知<span class="arithmatex">\(m^{*}(B)\leqslant m^{*}(A\Delta B)+m^{*}(A)\)</span>，综合两个不等式即证</p>
+<p>只需要使用两个集合关系和次可加性，<span class="arithmatex">\(A\subset (A\Delta B)\bigcup B\implies m^{*}(A)\leqslant m^{*}(A\Delta B)+m^{*}(B)\)</span>，同理可知 <span class="arithmatex">\(m^{*}(B)\leqslant m^{*}(A\Delta B)+m^{*}(A)\)</span>，综合两个不等式即证</p>
 <p>注：仍然是集合表示的技巧</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 8(i)(ii)</p>
-<p>设对每一<span class="arithmatex">\(x\in I=(a,b)\)</span>，<span class="arithmatex">\(A_{x}\)</span>是一个实数集，而且当<span class="arithmatex">\(x_{1}&lt;x_{2}\)</span>时<span class="arithmatex">\(A_{x_{1}}\subset A_{x_{2}}\)</span>，求证：</p>
+<p>设对每一 <span class="arithmatex">\(x\in I=(a,b)\)</span>，<span class="arithmatex">\(A_{x}\)</span> 是一个实数集，而且当 <span class="arithmatex">\(x_{1}&lt;x_{2}\)</span> 时 <span class="arithmatex">\(A_{x_{1}}\subset A_{x_{2}}\)</span>，求证：</p>
 <p>(i)<span class="arithmatex">\(m^{*}\left( \bigcup\limits_{x\in I}A_{x} \right)=\lim\limits_{ x \to b^{-} }m^{*}(A_{x})\)</span><br />
 (ii)<span class="arithmatex">\(m^{*}\left( \bigcap\limits_{x\in I}A_{x} \right)=\lim\limits_{ x \to a^{+} }m^{*}(A_{x})\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>(i)利用2.7的结论，构造一个单调递增的点列<span class="arithmatex">\(\left\{ x_{n} \right\}\to b\)</span>，由题设单调性可知<span class="arithmatex">\(\bigcup\limits_{x\in I}A_{x}=\bigcup\limits_{n=1}^{\infty}A_{x_{n}}\)</span></p>
+<p>(i)利用 2.7 的结论，构造一个单调递增的点列 <span class="arithmatex">\(\left\{ x_{n} \right\}\to b\)</span>，由题设单调性可知 <span class="arithmatex">\(\bigcup\limits_{x\in I}A_{x}=\bigcup\limits_{n=1}^{\infty}A_{x_{n}}\)</span></p>
 <div class="arithmatex">\[
 \begin{aligned}
 m^{*}\left( \bigcup\limits_{x\in I}A_{x} \right)&amp;=\lim\limits_{ n \to \infty } m^{*}(A_{x_{n}})=\lim\limits_{ x \to b^{-} }m^{*}(A_{x}) 
@@ -1839,9 +1839,9 @@ m^{*}\left( \bigcup\limits_{x\in I}A_{x} \right)&amp;=\lim\limits_{ n \to \infty
 <p>9.设 <span class="arithmatex">\(E \subset \mathbf{R}, 0 &lt; m^*(E) &lt; \infty\)</span>, 求证: <span class="arithmatex">\(f(x) = m^*((-\infty, x) \cap E)\)</span> 是 <span class="arithmatex">\(x\)</span> 的连续函数. 由此证明 <span class="arithmatex">\(I = \{m^*(F): F \subset E\}\)</span> 是一个有界闭区间.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 10</p>
-<p>设<span class="arithmatex">\(\left\{ E_{n} \right\}_{n\geqslant 1}\)</span>是可测集列<br />
-(i)求证<span class="arithmatex">\(m\left( \varliminf\limits_{ n \to \infty }E_{n} \right)\leqslant \varliminf\limits_{ n \to \infty }m(E_{n});\)</span><br />
-(ii)若有<span class="arithmatex">\(k_{0}\)</span>使<span class="arithmatex">\(m\left( \bigcup\limits_{k=k_{0}}^{\infty}E_{k} \right)&lt;\infty\)</span>，求证：</p>
+<p>设 <span class="arithmatex">\(\left\{ E_{n} \right\}_{n\geqslant 1}\)</span> 是可测集列<br />
+(i)求证 <span class="arithmatex">\(m\left( \varliminf\limits_{ n \to \infty }E_{n} \right)\leqslant \varliminf\limits_{ n \to \infty }m(E_{n});\)</span><br />
+(ii)若有 <span class="arithmatex">\(k_{0}\)</span> 使 <span class="arithmatex">\(m\left( \bigcup\limits_{k=k_{0}}^{\infty}E_{k} \right)&lt;\infty\)</span>，求证：</p>
 <div class="arithmatex">\[
 m\left( \varlimsup\limits_{ n \to \infty }E_{n} \right)\geqslant \varlimsup\limits_{ n \to \infty }m(E_{n});
 \]</div>
@@ -1850,7 +1850,7 @@ m\left( \varlimsup\limits_{ n \to \infty }E_{n} \right)\geqslant \varlimsup\limi
 <div class="arithmatex">\[m\left(\lim_{n \to \infty} E_n\right) = \lim_{n \to \infty} m(E_n).\]</div>
 <p><code>Proof.</code></p>
 <p>(i)</p>
-<p><span class="arithmatex">\(\bigcap\limits_{m=n}^{\infty}E_{m}\subset E_{n}\)</span>且关于n单增可得</p>
+<p><span class="arithmatex">\(\bigcap\limits_{m=n}^{\infty}E_{m}\subset E_{n}\)</span> 且关于 n 单增可得</p>
 <div class="arithmatex">\[
 \begin{aligned}
 m\left( \varliminf\limits_{ n \to \infty }E_{n} \right)&amp;=m\left( \bigcup\limits_{n=1}^{\infty} \bigcap\limits_{m=n}^{\infty} E_{m} \right) =m\left( \lim\limits_{ n \to \infty } \bigcap\limits_{m=n}^{\infty} E_{m} \right) \\
@@ -1874,10 +1874,10 @@ m\left( \varlimsup\limits_{ n \to \infty }E_{n} \right)&amp;=m\left( \bigcap\lim
 <p>设 <span class="arithmatex">\(A\)</span> 可测并且 <span class="arithmatex">\(m(A \triangle B) = 0\)</span>, 求证: <span class="arithmatex">\(B\)</span> 可测.</p>
 </div>
 <p><code>Proof.</code></p>
-<p><span class="arithmatex">\(m(A\Delta B)=m^{*}\left( (A-B)\bigcup(B-A) \right)=0\)</span>，所以<span class="arithmatex">\(m^{*}(A-B)=m^{*}(B-A)=0\)</span>，为零测集，所以两集合可测，再利用<span class="arithmatex">\(A\)</span>可测，得到<span class="arithmatex">\(A\bigcap B=A-(A-B)\)</span>可测，<span class="arithmatex">\(B=\left( A\bigcap B \right)\bigcup(B-A)\)</span>，所以<span class="arithmatex">\(B\)</span>可测</p>
+<p><span class="arithmatex">\(m(A\Delta B)=m^{*}\left( (A-B)\bigcup(B-A) \right)=0\)</span>，所以 <span class="arithmatex">\(m^{*}(A-B)=m^{*}(B-A)=0\)</span>，为零测集，所以两集合可测，再利用 <span class="arithmatex">\(A\)</span> 可测，得到 <span class="arithmatex">\(A\bigcap B=A-(A-B)\)</span> 可测，<span class="arithmatex">\(B=\left( A\bigcap B \right)\bigcup(B-A)\)</span>，所以 <span class="arithmatex">\(B\)</span> 可测</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 12</p>
-<p>设<span class="arithmatex">\(0 &lt; m(E) &lt; \infty\)</span>. 求证: 有测度皆为 <span class="arithmatex">\(m(E)\)</span> 的开集列<span class="arithmatex">\(\{G_n\}_{n \geqslant 1}\)</span>, 使<span class="arithmatex">\(m(E \triangle G_n) \to 0(n \to \infty)\)</span>.</p>
+<p>设 <span class="arithmatex">\(0 &lt; m(E) &lt; \infty\)</span>. 求证: 有测度皆为 <span class="arithmatex">\(m(E)\)</span> 的开集列 <span class="arithmatex">\(\{G_n\}_{n \geqslant 1}\)</span>, 使 <span class="arithmatex">\(m(E \triangle G_n) \to 0(n \to \infty)\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
 <div class="admonition question">
@@ -1899,8 +1899,8 @@ m\left( E_{1}\bigcup E_{2} \right)&amp;=m\left(  E_{1} \right)+m\left( E_{2}\big
 <p>求证: <span class="arithmatex">\(\mathbb{R}\)</span> 中可测集全体有基数 <span class="arithmatex">\(2^{c}\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>Step1. <span class="arithmatex">\(\mathbb{R}\)</span>中子集全体的基数为<span class="arithmatex">\(2^{c}\)</span>，那么可测集全体的基数小于等于<span class="arithmatex">\(2^{c}\)</span></p>
-<p>Step2. 考虑Cantor集，测度为零(可测)但具有连续统势，它的子集全体的基数为<span class="arithmatex">\(2^{c}\)</span>，那么可测集全体的基数大于等于<span class="arithmatex">\(2^{c}\)</span></p>
+<p>Step1. <span class="arithmatex">\(\mathbb{R}\)</span> 中子集全体的基数为 <span class="arithmatex">\(2^{c}\)</span>，那么可测集全体的基数小于等于 <span class="arithmatex">\(2^{c}\)</span></p>
+<p>Step2. 考虑 Cantor 集，测度为零(可测)但具有连续统势，它的子集全体的基数为 <span class="arithmatex">\(2^{c}\)</span>，那么可测集全体的基数大于等于 <span class="arithmatex">\(2^{c}\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 15</p>
 <p>(i) 若 <span class="arithmatex">\(F\)</span> 是 <span class="arithmatex">\([0, 1]\)</span> 中闭集且 <span class="arithmatex">\(m(F) = 1\)</span>. 试问是否一定 <span class="arithmatex">\(F = [0, 1]\)</span>?<br />
@@ -1908,7 +1908,7 @@ m\left( E_{1}\bigcup E_{2} \right)&amp;=m\left(  E_{1} \right)+m\left( E_{2}\big
 </div>
 <p><code>Sol</code></p>
 <p>(i)一定</p>
-<p>若是不然，必存在一点<span class="arithmatex">\(x_{0}\in \left( [0,1]-F \right)\)</span>，再利用闭集的性质一定存在一个<span class="arithmatex">\(\varepsilon &gt; 0\)</span>，使得<span class="arithmatex">\(V(x_{0},\varepsilon)\subset F^{c}\bigcap[0,1],m\left( [0,1]-F\right)&gt;0\)</span>，由此导出矛盾：<span class="arithmatex">\(m\left( [0,1] \right)=m\left( F \right)+m([0,1]-F)&gt;1\)</span></p>
+<p>若是不然，必存在一点 <span class="arithmatex">\(x_{0}\in \left( [0,1]-F \right)\)</span>，再利用闭集的性质一定存在一个 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，使得 <span class="arithmatex">\(V(x_{0},\varepsilon)\subset F^{c}\bigcap[0,1],m\left( [0,1]-F\right)&gt;0\)</span>，由此导出矛盾：<span class="arithmatex">\(m\left( [0,1] \right)=m\left( F \right)+m([0,1]-F)&gt;1\)</span></p>
 <p>(ii) 不一定</p>
 <p>只需要考虑 Cantor 集在 <span class="arithmatex">\([0,1]\)</span> 的补集 <span class="arithmatex">\(G=[0,1]\setminus C\)</span>，Cantor 集是零测集所以 G 的测度为 1，但是 <span class="arithmatex">\(G\neq (0,1)\)</span></p>
 <div class="admonition question">
@@ -1919,7 +1919,7 @@ m\left( E_{1}\bigcup E_{2} \right)&amp;=m\left(  E_{1} \right)+m\left( E_{2}\big
 <p>第一个命题不一定，反例为 <span class="arithmatex">\(A=[0,1],B\)</span> 为 <span class="arithmatex">\([0,1]\)</span> 中的不可测集（在课本中给出了构造方法），那么 <span class="arithmatex">\(A\bigcup B,A\)</span> 可测，<span class="arithmatex">\(B\)</span> 不可测</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 17</p>
-<p>设 <span class="arithmatex">\(E \subset \mathbf{R}, m(E) &gt; 0, 0 &lt; \alpha &lt; 1\)</span>. 求证: 有开区间<span class="arithmatex">\(I\)</span>使<span class="arithmatex">\(m(I \cap E) &gt; \alpha \cdot m(I)\)</span>.</p>
+<p>设 <span class="arithmatex">\(E \subset \mathbf{R}, m(E) &gt; 0, 0 &lt; \alpha &lt; 1\)</span>. 求证: 有开区间 <span class="arithmatex">\(I\)</span> 使 <span class="arithmatex">\(m(I \cap E) &gt; \alpha \cdot m(I)\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
 <div class="admonition question">
@@ -1956,7 +1956,7 @@ m\left(\bigcap_{k=1}^\infty E_k\right)&amp; = m\left( [0,1] \right) -m\left( [0,
 求证：对任何 <span class="arithmatex">\(0 &lt; \lambda &lt; 1\)</span>, 有子列 <span class="arithmatex">\(\{E_{k_n}\}_{n \geq 1}\)</span> 使 <span class="arithmatex">\(m\left(\bigcap\limits_{n=1}^\infty E_{k_n}\right) &gt; \lambda\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>同 20 题考虑证明并集：<span class="arithmatex">\(m\left( (E_{k}^{c})\bigcap[0,1] \right)\to 0(k\to \infty)\)</span>，那么<span class="arithmatex">\(\forall\varepsilon=\frac{1-\lambda}{2^{i}}&gt;0.\exists N,n&gt;N,m(E_{k_{n}})&lt; \frac{1-\lambda}{2^{i}}(i\in Z^{+})\)</span>，</p>
+<p>同 20 题考虑证明并集：<span class="arithmatex">\(m\left( (E_{k}^{c})\bigcap[0,1] \right)\to 0(k\to \infty)\)</span>，那么 <span class="arithmatex">\(\forall\varepsilon=\frac{1-\lambda}{2^{i}}&gt;0.\exists N,n&gt;N,m(E_{k_{n}})&lt; \frac{1-\lambda}{2^{i}}(i\in Z^{+})\)</span>，</p>
 <div class="arithmatex">\[
 \begin{aligned}
 m\left(\left( \bigcap_{n=1}^\infty E_{k_{n}} \right)^{c}\bigcap[0,1]\right)&amp; = m\left( \bigcup\limits_{n=1}^{\infty} \left( E_{k_{n}}^{c}\bigcap[0,1] \right)\right) \\
@@ -1964,7 +1964,7 @@ m\left(\left( \bigcap_{n=1}^\infty E_{k_{n}} \right)^{c}\bigcap[0,1]\right)&amp;
 &amp;&lt;\sum\limits_{n=1}^{\infty} \frac{1-\lambda}{2^{n}}=1-\lambda
 \end{aligned}
 \]</div>
-<p>那么可知<span class="arithmatex">\(m\left(\bigcap\limits_{n=1}^\infty E_{k_n}\right) &gt; \lambda\)</span></p>
+<p>那么可知 <span class="arithmatex">\(m\left(\bigcap\limits_{n=1}^\infty E_{k_n}\right) &gt; \lambda\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 22</p>
 <p>设 <span class="arithmatex">\(\{E_k\}_{1 \leqslant k \leqslant n}\)</span> 是 <span class="arithmatex">\([0, 1]\)</span> 中的 <span class="arithmatex">\(n\)</span> 个可测集，满足 <span class="arithmatex">\(\sum\limits_{k=1}^n m(E_k) &gt; n - 1\)</span>.<br />
@@ -1990,28 +1990,28 @@ m\left(\bigcap_{k=1}^n E_k\right)&amp; = m\left( [0,1] \right) -m\left( [0,1]-\b
 </div>
 <p><code>Proof.</code></p>
 <p><span class="arithmatex">\((i)\to(ii)\)</span></p>
-<p>利用Th2.5.1，由<span class="arithmatex">\(E\)</span>可测可知对于任意给定的<span class="arithmatex">\(\varepsilon&gt;0，\)</span>存在一个含于<span class="arithmatex">\(E\)</span>闭集<span class="arithmatex">\(F\)</span>使得<span class="arithmatex">\(m^{*}(E-F)&lt;\varepsilon\)</span>，那么取<span class="arithmatex">\(\varepsilon_{n}=\frac{1}{n}\)</span>，有<span class="arithmatex">\(m^{*}(E-F_{n})&lt; \frac{1}{n}\)</span>，又<span class="arithmatex">\(E-F_{n}\)</span>可测，可得<span class="arithmatex">\(0&lt;m(E-F_{n})&lt; \frac{1}{n}\)</span>，两边取极限<span class="arithmatex">\(n\to \infty\)</span>，可证.</p>
+<p>利用 Th2.5.1，由 <span class="arithmatex">\(E\)</span> 可测可知对于任意给定的 <span class="arithmatex">\(\varepsilon&gt;0，\)</span> 存在一个含于 <span class="arithmatex">\(E\)</span> 闭集 <span class="arithmatex">\(F\)</span> 使得 <span class="arithmatex">\(m^{*}(E-F)&lt;\varepsilon\)</span>，那么取 <span class="arithmatex">\(\varepsilon_{n}=\frac{1}{n}\)</span>，有 <span class="arithmatex">\(m^{*}(E-F_{n})&lt; \frac{1}{n}\)</span>，又 <span class="arithmatex">\(E-F_{n}\)</span> 可测，可得 <span class="arithmatex">\(0&lt;m(E-F_{n})&lt; \frac{1}{n}\)</span>，两边取极限 <span class="arithmatex">\(n\to \infty\)</span>，可证.</p>
 <p><span class="arithmatex">\((ii)\to(iii)\)</span></p>
 <p>闭集是可测的，所以取闭子集列即可.</p>
 <p><span class="arithmatex">\((iii)\to(i)\)</span></p>
-<p>由于<span class="arithmatex">\(E_{n}\subset E,m(E_{n})\to m^{*}(E)\)</span>，那么有可测的定义有</p>
+<p>由于 <span class="arithmatex">\(E_{n}\subset E,m(E_{n})\to m^{*}(E)\)</span>，那么由可测的定义有</p>
 <div class="arithmatex">\[\begin{aligned}
 m^{*}(E)&amp;=m^{*}\left( E\bigcap E_{n} \right)+m^{*}\left( E\bigcap E_{n}^{c} \right)\\
 &amp;=m^{*}(E_{n})+m^{*}(E-E_{n})
 \end{aligned}\]</div>
-<p>可知<span class="arithmatex">\(m^{*}(E-E_{n})\to0,m^{*}\left( E-\bigcup\limits_{n=1}^{\infty}E_{n} \right)\leqslant m^{*}(E-E_{n})\to 0\)</span>，因为外测度为0所以可测，考虑原集合可以表示为两个可测集的并.</p>
-<p>由于<span class="arithmatex">\(E=\left( \bigcup\limits_{n=1}^{\infty}E_{n} \right)\bigcup \left( E-\bigcup\limits_{n=1}^{\infty}E_{n} \right)\)</span>，所以可测.</p>
+<p>可知 <span class="arithmatex">\(m^{*}(E-E_{n})\to0,m^{*}\left( E-\bigcup\limits_{n=1}^{\infty}E_{n} \right)\leqslant m^{*}(E-E_{n})\to 0\)</span>，因为外测度为 0 所以可测，考虑原集合可以表示为两个可测集的并.</p>
+<p>由于 <span class="arithmatex">\(E=\left( \bigcup\limits_{n=1}^{\infty}E_{n} \right)\bigcup \left( E-\bigcup\limits_{n=1}^{\infty}E_{n} \right)\)</span>，所以可测.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 25</p>
 <p>设 <span class="arithmatex">\(m^*(E) &lt; \infty\)</span>. 求证: 有 <span class="arithmatex">\(G_\delta\)</span> 集 <span class="arithmatex">\(H\)</span>, 使 <span class="arithmatex">\(H \supset E, m^*(E) = m(H)\)</span>.</p>
 </div>
 <p><code>Proof</code></p>
-<p>根据外测度性质，对于任意<span class="arithmatex">\(\frac{1}{n}\)</span>存在开集<span class="arithmatex">\(G_{n}\supset E,m^{*}(G_{n}-E)&lt; \frac{1}{n}\)</span></p>
-<p>构造<span class="arithmatex">\(H=\bigcap\limits_{n=1}^{\infty}G_{n},E\subset H\)</span>，由外测度的单调性可知：</p>
+<p>根据外测度性质，对于任意 <span class="arithmatex">\(\frac{1}{n}\)</span> 存在开集 <span class="arithmatex">\(G_{n}\supset E,m^{*}(G_{n}-E)&lt; \frac{1}{n}\)</span></p>
+<p>构造 <span class="arithmatex">\(H=\bigcap\limits_{n=1}^{\infty}G_{n},E\subset H\)</span>，由外测度的单调性可知：</p>
 <div class="arithmatex">\[
 m^{*}(E)\leqslant m^{*}(H)=m(H)\leqslant m^{*}(G_{n})&lt;m^{*}(E)+ \frac{1}{n}
 \]</div>
-<p>两边取极限可得<span class="arithmatex">\(m(H)=m^{*}(E)\)</span></p>
+<p>两边取极限可得 <span class="arithmatex">\(m(H)=m^{*}(E)\)</span></p>
 <p>注：这是利用开集逼近的一个简单例子，并没有什么难度</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 26</p>
@@ -2019,11 +2019,11 @@ m^{*}(E)\leqslant m^{*}(H)=m(H)\leqslant m^{*}(G_{n})&lt;m^{*}(E)+ \frac{1}{n}
 </div>
 <div class="admonition tip">
 <p class="admonition-title">- Hint</p>
-<p>取 <span class="arithmatex">\(G_\delta\)</span>集<span class="arithmatex">\(H\)</span>使<span class="arithmatex">\(H \supset B, m(H) = m^*(B)\)</span>. 此时可证<span class="arithmatex">\((A \cup B) \cap H^c\)</span> 是<span class="arithmatex">\(A\)</span>的可测子集, 其测度为<span class="arithmatex">\(m^*(A)\)</span>.</p>
+<p>取 <span class="arithmatex">\(G_\delta\)</span> 集 <span class="arithmatex">\(H\)</span> 使 <span class="arithmatex">\(H \supset B, m(H) = m^*(B)\)</span>. 此时可证 <span class="arithmatex">\((A \cup B) \cap H^c\)</span> 是 <span class="arithmatex">\(A\)</span> 的可测子集, 其测度为 <span class="arithmatex">\(m^*(A)\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>直接利用2.25题的结论我们可以取一个<span class="arithmatex">\(G_{\delta}\)</span>集<span class="arithmatex">\(H\)</span>使得<span class="arithmatex">\(H\supset B,m(H)=m^{*}(B)\)</span>，容易知道<span class="arithmatex">\(\left( A\bigcup B \right)\bigcap H^{c}\)</span>也是可测的，而且它应当是<span class="arithmatex">\(A\)</span>的子集，令<span class="arithmatex">\(E=A\bigcap H^{c}\)</span>，下证<span class="arithmatex">\(m(E)=m^{*}(A)\)</span></p>
-<p>我们知道<span class="arithmatex">\(B\subset \left( A\bigcup B \right)\bigcap H,m^{*}(B)\leqslant m^{*}\left( \left( A\bigcup B \right)\bigcap H \right)\leqslant m(H)=m^{*}(B)\)</span>，那么有<span class="arithmatex">\(m^{*}(B)=m^{*}\left( \left( A\bigcup B \right)\bigcap H \right)\)</span></p>
+<p>直接利用 2.25 题的结论我们可以取一个 <span class="arithmatex">\(G_{\delta}\)</span> 集 <span class="arithmatex">\(H\)</span> 使得 <span class="arithmatex">\(H\supset B,m(H)=m^{*}(B)\)</span>，容易知道 <span class="arithmatex">\(\left( A\bigcup B \right)\bigcap H^{c}\)</span> 也是可测的，而且它应当是 <span class="arithmatex">\(A\)</span> 的子集，令 <span class="arithmatex">\(E=A\bigcap H^{c}\)</span>，下证 <span class="arithmatex">\(m(E)=m^{*}(A)\)</span></p>
+<p>我们知道 <span class="arithmatex">\(B\subset \left( A\bigcup B \right)\bigcap H,m^{*}(B)\leqslant m^{*}\left( \left( A\bigcup B \right)\bigcap H \right)\leqslant m(H)=m^{*}(B)\)</span>，那么有 <span class="arithmatex">\(m^{*}(B)=m^{*}\left( \left( A\bigcup B \right)\bigcap H \right)\)</span></p>
 <div class="arithmatex">\[
 \begin{aligned}
 m^{*}(A)+m^{*}(B)&amp;=m\left( A\bigcup B \right)\\
@@ -2031,18 +2031,18 @@ m^{*}(A)+m^{*}(B)&amp;=m\left( A\bigcup B \right)\\
 &amp;=m^{*}(B)+m(E)
 \end{aligned}
 \]</div>
-<p>即证<span class="arithmatex">\(m^{*}(A)=m(E)\)</span></p>
+<p>即证 <span class="arithmatex">\(m^{*}(A)=m(E)\)</span></p>
 <p>然后再考虑利用可测的等价条件：</p>
-<p>根据2.2我们可以找到一个开集<span class="arithmatex">\(G\)</span>，使得<span class="arithmatex">\(m(G)&lt;m^{*}(A)+\varepsilon\)</span></p>
-<p>并且我们有<span class="arithmatex">\(E\subset A\subset G\)</span>，且<span class="arithmatex">\(m(G-E)=m(G)-m(E)&lt;m^{*}(A)+\varepsilon-m^{*}(A)=\varepsilon\)</span>，可知<span class="arithmatex">\(A\)</span>可测，同理可知<span class="arithmatex">\(B\)</span>可测</p>
+<p>根据 2.2 我们可以找到一个开集 <span class="arithmatex">\(G\)</span>，使得 <span class="arithmatex">\(m(G)&lt;m^{*}(A)+\varepsilon\)</span></p>
+<p>并且我们有 <span class="arithmatex">\(E\subset A\subset G\)</span>，且 <span class="arithmatex">\(m(G-E)=m(G)-m(E)&lt;m^{*}(A)+\varepsilon-m^{*}(A)=\varepsilon\)</span>，可知 <span class="arithmatex">\(A\)</span> 可测，同理可知 <span class="arithmatex">\(B\)</span> 可测</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 27</p>
 <p>构造不相交的集 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 使 <span class="arithmatex">\(m^*(A \cup B) &lt; m^*(A) + m^*(B)\)</span>.</p>
 </div>
 <p><code>Sol.</code></p>
 <p>当集合可测且两两不交时这个不等式取等那么我们直接考虑不可测集合：</p>
-<p>取<span class="arithmatex">\(A\)</span>为<span class="arithmatex">\([0,1]\)</span>中的不可测集合，<span class="arithmatex">\(B\)</span>为其在<span class="arithmatex">\([0,1]\)</span>中的补集，我们知道<span class="arithmatex">\(A\bigcup B\)</span>可测，那么根据次可加性有<span class="arithmatex">\(m^{*}\left( A\bigcup B \right)\leqslant m^{*}(A)+m^{*}(B)\)</span></p>
-<p>若是取等根据2.26可知<span class="arithmatex">\(A,B\)</span>都可测，矛盾，所以只能取严格小于</p>
+<p>取 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\([0,1]\)</span> 中的不可测集合，<span class="arithmatex">\(B\)</span> 为其在 <span class="arithmatex">\([0,1]\)</span> 中的补集，我们知道 <span class="arithmatex">\(A\bigcup B\)</span> 可测，那么根据次可加性有 <span class="arithmatex">\(m^{*}\left( A\bigcup B \right)\leqslant m^{*}(A)+m^{*}(B)\)</span></p>
+<p>若是取等根据 2.26 可知 <span class="arithmatex">\(A,B\)</span> 都可测，矛盾，所以只能取严格小于</p>
 <p>注：本题给出了一个结论就是外测度不一定满足次可加性</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 28</p>
@@ -2064,11 +2064,11 @@ m^{*}(A)+m^{*}(B)&amp;=m\left( A\bigcup B \right)\\
 <p><code>Proof.</code></p>
 <p><code>法1</code></p>
 <p>若是 <span class="arithmatex">\(a=0\)</span>，单点集结论显然，利用平移不变性也可以忽略 <span class="arithmatex">\(b\)</span>，即令 <span class="arithmatex">\(b=0\)</span></p>
-<p>不妨设 <span class="arithmatex">\(a&gt;0\)</span>，若是 <span class="arithmatex">\(m(E)=\infty\)</span>,那么 <span class="arithmatex">\(m(F)=\infty\)</span>，可知成立，那么取一开覆盖，不妨令<span class="arithmatex">\(m(E)&lt;\infty,\exists \left\{ I_{k} \right\}_{k\geqslant 1}\supset E，s.t.\sum\limits_{i=1}^{\infty}\lvert I_{i} \rvert&lt;m^{*}(E)+\varepsilon\)</span></p>
-<p>此时<span class="arithmatex">\(\bigcup\limits_{i=1}^{\infty}aI_{i}\supset F,m^{*}(F)&lt;\sum\limits_{i=1}^{\infty}\lvert a \rvert\lvert I_{i} \rvert=\lvert a \rvert m^{*}(E)+\lvert a \rvert\varepsilon\)</span></p>
-<p>可知<span class="arithmatex">\(m^{*}(F)\leqslant \lvert a \rvert m^{*}(E)\)</span></p>
-<p>同理可知<span class="arithmatex">\(m^{*}(E)\leqslant \frac{1}{\lvert a \rvert}m^{*}(F)\)</span>，综上可知：<span class="arithmatex">\(m^{*}(F)=\lvert a \rvert m^{*}(E)\)</span></p>
-<p>还需要说明<span class="arithmatex">\(F\)</span>可测：</p>
+<p>不妨设 <span class="arithmatex">\(a&gt;0\)</span>，若是 <span class="arithmatex">\(m(E)=\infty\)</span>,那么 <span class="arithmatex">\(m(F)=\infty\)</span>，可知成立，那么取一开覆盖，不妨令 <span class="arithmatex">\(m(E)&lt;\infty,\exists \left\{ I_{k} \right\}_{k\geqslant 1}\supset E，s.t.\sum\limits_{i=1}^{\infty}\lvert I_{i} \rvert&lt;m^{*}(E)+\varepsilon\)</span></p>
+<p>此时 <span class="arithmatex">\(\bigcup\limits_{i=1}^{\infty}aI_{i}\supset F,m^{*}(F)&lt;\sum\limits_{i=1}^{\infty}\lvert a \rvert\lvert I_{i} \rvert=\lvert a \rvert m^{*}(E)+\lvert a \rvert\varepsilon\)</span></p>
+<p>可知 <span class="arithmatex">\(m^{*}(F)\leqslant \lvert a \rvert m^{*}(E)\)</span></p>
+<p>同理可知 <span class="arithmatex">\(m^{*}(E)\leqslant \frac{1}{\lvert a \rvert}m^{*}(F)\)</span>，综上可知：<span class="arithmatex">\(m^{*}(F)=\lvert a \rvert m^{*}(E)\)</span></p>
+<p>还需要说明 <span class="arithmatex">\(F\)</span> 可测：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 m^{*}\left( F\bigcap A \right)&amp;=m^{*}\left( aE\bigcap A \right)=\lvert a \rvert m^{*}\left( E\bigcap \frac{A}{a} \right)\\
@@ -2078,8 +2078,8 @@ m^{*}\left( F\bigcap A \right)+m^{*}\left( F^{c}\bigcap A \right)&amp;=\lvert a 
 \]</div>
 <p>由此可知可测，证毕</p>
 <p><code>法2</code></p>
-<p>由于<span class="arithmatex">\(E\)</span>可测，取一个开集<span class="arithmatex">\(G\supset E,m(G-E)&lt; \frac{\varepsilon}{a}\)</span></p>
-<p>再利用上述外测度性质<span class="arithmatex">\(m(aG-aE)&lt;\varepsilon\)</span>，也就是<span class="arithmatex">\(\forall\varepsilon&gt;0,\exists aE+b\)</span>是开集，使得<span class="arithmatex">\(m^{*}(aG+b-F)&lt;\varepsilon\)</span>，那么可知<span class="arithmatex">\(F\)</span>可测</p>
+<p>由于 <span class="arithmatex">\(E\)</span> 可测，取一个开集 <span class="arithmatex">\(G\supset E,m(G-E)&lt; \frac{\varepsilon}{a}\)</span></p>
+<p>再利用上述外测度性质 <span class="arithmatex">\(m(aG-aE)&lt;\varepsilon\)</span>，也就是 <span class="arithmatex">\(\forall\varepsilon&gt;0,\exists aE+b\)</span> 是开集，使得 <span class="arithmatex">\(m^{*}(aG+b-F)&lt;\varepsilon\)</span>，那么可知 <span class="arithmatex">\(F\)</span> 可测</p>
 <p>注：这主要是将证明可测进行了一个修改，不使用定义而是使用开集的逼近性质</p>
 <h2 id="31-40">31-40<a class="headerlink" href="#31-40" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
@@ -2098,7 +2098,7 @@ m^{*}\left( F\bigcap A \right)+m^{*}\left( F^{c}\bigcap A \right)&amp;=\lvert a 
 \begin{aligned}
 \frac{9}{5}m(I) \leqslant 2m(E_n) &amp;= m(E_n) + m(y_n + E_0) \\&amp;= m(E_0 \cup y_n + E_0)\\ &amp;\leqslant m(I \cup y_n + I) \\&amp;= m(I) + |y_n|
 \end{aligned}\]</div>
-<p>令 <span class="arithmatex">\(n\)</span> 足够大使得<span class="arithmatex">\(y_n &lt; \frac{1}{5}m(I)\)</span>就能导出矛盾. 因此0是<span class="arithmatex">\(E_0 - E_0\)</span>的内点, 后者含于 <span class="arithmatex">\(E - E\)</span>, 证毕</p>
+<p>令 <span class="arithmatex">\(n\)</span> 足够大使得 <span class="arithmatex">\(y_n &lt; \frac{1}{5}m(I)\)</span> 就能导出矛盾. 因此 0 是 <span class="arithmatex">\(E_0 - E_0\)</span> 的内点, 后者含于 <span class="arithmatex">\(E - E\)</span>, 证毕</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 32</p>
 <p>设 <span class="arithmatex">\(m(A) &gt; 0, m(B) &gt; 0\)</span>. 求证: <span class="arithmatex">\(\{a - b : a \in A, b \in B\}\)</span> 及 <span class="arithmatex">\(\{a + b : a \in A, b \in B\}\)</span> 都有内点。</p>
@@ -2138,47 +2138,47 @@ m^{*}\left( F\bigcap A \right)+m^{*}\left( F^{c}\bigcap A \right)&amp;=\lvert a 
 <div class="arithmatex">\[
 0&lt;m(A)\leqslant m\left( \bigcup\limits_{n=1}^{\infty} \mathcal{N}+r_{n} \right)=\sum\limits_{n=1}^{\infty} m(\mathcal{N}+r_{n})\leqslant 6n
 \]</div>
-<p>注：我们可以凭借这个命题给出一个很有用的推论，如果<span class="arithmatex">\(A\subset \mathbb{R}\)</span>且它的任意子集都可测那么它一定是零测集.这个命题本身也是一个相当重要的结论，它的适用性很广便于我们从它出发构造反例，导出矛盾等</p>
+<p>注：我们可以凭借这个命题给出一个很有用的推论，如果 <span class="arithmatex">\(A\subset \mathbb{R}\)</span> 且它的任意子集都可测那么它一定是零测集.这个命题本身也是一个相当重要的结论，它的适用性很广便于我们从它出发构造反例，导出矛盾等</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 37</p>
-<p>设<span class="arithmatex">\(F\)</span>是[0,1]中不可测集.求证：有<span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>,使对[0,1]中任何满足<span class="arithmatex">\(m(E)\geqslant\varepsilon\)</span>的可测集 <span class="arithmatex">\(E,F\bigcap E\)</span> 也是不可测集.</p>
+<p>设 <span class="arithmatex">\(F\)</span> 是[0,1]中不可测集.求证：有 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>,使对[0,1]中任何满足 <span class="arithmatex">\(m(E)\geqslant\varepsilon\)</span> 的可测集 <span class="arithmatex">\(E,F\bigcap E\)</span> 也是不可测集.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证，对于任何的<span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，总存在<span class="arithmatex">\([0,1]\)</span>中的可测集<span class="arithmatex">\(A,m(A)\geqslant \varepsilon\)</span>，但是<span class="arithmatex">\(F\bigcap A\)</span>是可测的，欲证<span class="arithmatex">\(F\)</span>可测</p>
-<p>利用这个条件，分别取<span class="arithmatex">\(\varepsilon=1-\frac{1}{n}\)</span>即可构造<span class="arithmatex">\(E_{n},m(E_{n})\geqslant 1- \frac{1}{n}\)</span>，对于零测集显然交集也可测，<span class="arithmatex">\(F\bigcap E_{n}\)</span>可测，构造可测的并集<span class="arithmatex">\(E=\bigcup\limits_{i=1}^{\infty}E_{i},m(E)\geqslant m(E_{n})=1-\frac{1}{n}\)</span>，那么可知<span class="arithmatex">\(m(E)=1\)</span></p>
-<p>根据<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty} \left( F\bigcap E_{n} \right)=F\bigcap E\)</span>，可知<span class="arithmatex">\(F\bigcap E\)</span>可测，而<span class="arithmatex">\(F\bigcap([0,1]-E)\subset[0,1]-E\)</span>，而<span class="arithmatex">\(m([0,1]-E)=0\)</span>，零测集显然可测，那么根据集合关系<span class="arithmatex">\(F=\left( F\bigcap E \right)\bigcup\left( F\left( \bigcap[0,1]-E \right) \right)\)</span>，那么<span class="arithmatex">\(F\)</span>可测与题设矛盾</p>
+<p>反证，对于任何的 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，总存在 <span class="arithmatex">\([0,1]\)</span> 中的可测集 <span class="arithmatex">\(A,m(A)\geqslant \varepsilon\)</span>，但是 <span class="arithmatex">\(F\bigcap A\)</span> 是可测的，欲证 <span class="arithmatex">\(F\)</span> 可测</p>
+<p>利用这个条件，分别取 <span class="arithmatex">\(\varepsilon=1-\frac{1}{n}\)</span> 即可构造 <span class="arithmatex">\(E_{n},m(E_{n})\geqslant 1- \frac{1}{n}\)</span>，对于零测集显然交集也可测，<span class="arithmatex">\(F\bigcap E_{n}\)</span> 可测，构造可测的并集 <span class="arithmatex">\(E=\bigcup\limits_{i=1}^{\infty}E_{i},m(E)\geqslant m(E_{n})=1-\frac{1}{n}\)</span>，那么可知 <span class="arithmatex">\(m(E)=1\)</span></p>
+<p>根据 <span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty} \left( F\bigcap E_{n} \right)=F\bigcap E\)</span>，可知 <span class="arithmatex">\(F\bigcap E\)</span> 可测，而 <span class="arithmatex">\(F\bigcap([0,1]-E)\subset[0,1]-E\)</span>，而 <span class="arithmatex">\(m([0,1]-E)=0\)</span>，零测集显然可测，那么根据集合关系 <span class="arithmatex">\(F=\left( F\bigcap E \right)\bigcup\left( F\left( \bigcap[0,1]-E \right) \right)\)</span>，那么 <span class="arithmatex">\(F\)</span> 可测与题设矛盾</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 38</p>
-<p>设<span class="arithmatex">\(f(x)\)</span>定义在<span class="arithmatex">\(\mathbb{R}\)</span>上，并且对任何可测集<span class="arithmatex">\(E,f(E)\)</span>可测.求证：对任何零测集<span class="arithmatex">\(Z,f(Z)\)</span>也是零测集.(提示：利用题 36.)</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 定义在 <span class="arithmatex">\(\mathbb{R}\)</span> 上，并且对任何可测集 <span class="arithmatex">\(E,f(E)\)</span> 可测.求证：对任何零测集 <span class="arithmatex">\(Z,f(Z)\)</span> 也是零测集.(提示：利用题 36.)</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证，若是<span class="arithmatex">\(m(f(Z))&gt;0\)</span>，必可找到一个不可测子集<span class="arithmatex">\(X\subset f(Z)\)</span>，那么<span class="arithmatex">\(Z\bigcap f^{-1}(X)\)</span>也是零测集，那么<span class="arithmatex">\(f\left( Z\bigcap f^{-1}(X) \right)=X\)</span>也是可测的，与题设矛盾</p>
+<p>反证，若是 <span class="arithmatex">\(m(f(Z))&gt;0\)</span>，必可找到一个不可测子集 <span class="arithmatex">\(X\subset f(Z)\)</span>，那么 <span class="arithmatex">\(Z\bigcap f^{-1}(X)\)</span> 也是零测集，那么 <span class="arithmatex">\(f\left( Z\bigcap f^{-1}(X) \right)=X\)</span> 也是可测的，与题设矛盾</p>
 <div class="admonition question">
 <p class="admonition-title">Ch2 39</p>
-<p>设<span class="arithmatex">\(f(x)\)</span>在<span class="arithmatex">\(\mathbb{R}\)</span>上连续.求证：为使<span class="arithmatex">\(f\)</span>把任何可测集变为可测集，充要条件是<span class="arithmatex">\(f\)</span>把任何零测集变为零测集</p>
+<p>设 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上连续.求证：为使 <span class="arithmatex">\(f\)</span> 把任何可测集变为可测集，充要条件是 <span class="arithmatex">\(f\)</span> 把任何零测集变为零测集</p>
 </div>
 <p><code>Proof.</code></p>
-<p>根据38，必要性成立</p>
+<p>根据 38，必要性成立</p>
 <p>充分性：</p>
-<p>设<span class="arithmatex">\(f\)</span>可将零测集变为零测集，对于任何的可测集<span class="arithmatex">\(E\)</span>，可分解为<span class="arithmatex">\(F_{\sigma}\)</span>集和零测集(记为<span class="arithmatex">\(G\)</span>)的并，<span class="arithmatex">\(F_{\sigma}=\bigcup\limits_{n=1}^{\infty}F_{n}\)</span>，其中<span class="arithmatex">\(F_{n}\)</span>是闭集</p>
+<p>设 <span class="arithmatex">\(f\)</span> 可将零测集变为零测集，对于任何的可测集 <span class="arithmatex">\(E\)</span>，可分解为 <span class="arithmatex">\(F_{\sigma}\)</span> 集和零测集(记为 <span class="arithmatex">\(G\)</span>)的并，<span class="arithmatex">\(F_{\sigma}=\bigcup\limits_{n=1}^{\infty}F_{n}\)</span>，其中 <span class="arithmatex">\(F_{n}\)</span> 是闭集</p>
 <div class="arithmatex">\[
 f(E)=f(F)\bigcup f(G)=\left( \bigcup\limits_{n=1}^{\infty}  f(F_{n}) \right)\bigcup f(G)
 \]</div>
-<p>根据条件<span class="arithmatex">\(f(G)\)</span>也是零测集，是可测的，现在只需要证明<span class="arithmatex">\(f(F_{n})\)</span>也是可测的，考虑利用<span class="arithmatex">\(f\)</span>的连续性，证明<span class="arithmatex">\(F_{n}\)</span>是紧的，构造<span class="arithmatex">\(F_{n_{i}}=F_{n}\bigcap[i,i+1],F_{n}=\bigcup\limits_{i=-\infty}^{\infty}F_{n_{i}}\)</span></p>
-<p>可知<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}\bigcup\limits_{i=-\infty}^{\infty}F_{n_{i}}\)</span>可测(可数个闭集的并)，综上可知<span class="arithmatex">\(f(E)\)</span>也是可测的</p>
+<p>根据条件 <span class="arithmatex">\(f(G)\)</span> 也是零测集，是可测的，现在只需要证明 <span class="arithmatex">\(f(F_{n})\)</span> 也是可测的，考虑利用 <span class="arithmatex">\(f\)</span> 的连续性，证明 <span class="arithmatex">\(F_{n}\)</span> 是紧的，构造 <span class="arithmatex">\(F_{n_{i}}=F_{n}\bigcap[i,i+1],F_{n}=\bigcup\limits_{i=-\infty}^{\infty}F_{n_{i}}\)</span></p>
+<p>可知 <span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}\bigcup\limits_{i=-\infty}^{\infty}F_{n_{i}}\)</span> 可测(可数个闭集的并)，综上可知 <span class="arithmatex">\(f(E)\)</span> 也是可测的</p>
 <h2 id="41-43">41-43<a class="headerlink" href="#41-43" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Ch2 42</p>
-<p>设<span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，试构造<span class="arithmatex">\([0,1]\)</span>中测度为<span class="arithmatex">\(\varepsilon\)</span>的完备疏集(提示：参考Cantor完备集的构造)</p>
+<p>设 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>，试构造 <span class="arithmatex">\([0,1]\)</span> 中测度为 <span class="arithmatex">\(\varepsilon\)</span> 的完备疏集(提示：参考 Cantor 完备集的构造)</p>
 </div>
 <p><code>Sol.</code></p>
-<p>仿照Cantor集的构造，在<span class="arithmatex">\([0,1]\)</span>区间的中间取走长度为<span class="arithmatex">\(\frac{1-\varepsilon}{3}\)</span>的开区间，再在剩下的2个区间中间取走长度<span class="arithmatex">\(\frac{1-\varepsilon}{3^{2}}\)</span>的开区间...在<span class="arithmatex">\(2^{n-1}\)</span>个区间中间取走长度为<span class="arithmatex">\(\frac{1-\varepsilon}{3^{n}}\)</span>的开区间</p>
-<p>它的测度为<span class="arithmatex">\(1-\sum\limits_{i=1}^{\infty}(1-\varepsilon)\left( \frac{1}{3} \right)^{i}2^{i-1}=\varepsilon\)</span></p>
+<p>仿照 Cantor 集的构造，在 <span class="arithmatex">\([0,1]\)</span> 区间的中间取走长度为 <span class="arithmatex">\(\frac{1-\varepsilon}{3}\)</span> 的开区间，再在剩下的 2 个区间中间取走长度 <span class="arithmatex">\(\frac{1-\varepsilon}{3^{2}}\)</span> 的开区间...在 <span class="arithmatex">\(2^{n-1}\)</span> 个区间中间取走长度为 <span class="arithmatex">\(\frac{1-\varepsilon}{3^{n}}\)</span> 的开区间</p>
+<p>它的测度为 <span class="arithmatex">\(1-\sum\limits_{i=1}^{\infty}(1-\varepsilon)\left( \frac{1}{3} \right)^{i}2^{i-1}=\varepsilon\)</span></p>
 <p>下面证明它是完备疏集</p>
-<p>由于可数多个闭集并仍然是闭集，只需要说明构造的集合(记为<span class="arithmatex">\(C\)</span>)是稀疏的且没有孤立点(完备)</p>
+<p>由于可数多个闭集并仍然是闭集，只需要说明构造的集合(记为 <span class="arithmatex">\(C\)</span>)是稀疏的且没有孤立点(完备)</p>
 <p>对于孤立点，考虑构造的集合中的每个区间端点都不会在构造过程中被取走，所以内部一定不含孤立点，对于端点则是必定有一侧稠密，显然不含有孤立点</p>
 <p>证明稀疏性：</p>
-<p>对于<span class="arithmatex">\(\mathbb{R}\)</span>上的任意一个开集也就是一个开区间，由于构造过程中每个子区间长度为<span class="arithmatex">\(\frac{1-\varepsilon}{3^{n}}\to 0\)</span>，无法容纳任何开区间(开集)，由外测度的单调性即可得到矛盾，所以等价的一定有某个非空开子集不于与<span class="arithmatex">\(C\)</span>相交，即证稀疏.</p>
+<p>对于 <span class="arithmatex">\(\mathbb{R}\)</span> 上的任意一个开集也就是一个开区间，由于构造过程中每个子区间长度为 <span class="arithmatex">\(\frac{1-\varepsilon}{3^{n}}\to 0\)</span>，无法容纳任何开区间(开集)，由外测度的单调性即可得到矛盾，所以等价的一定有某个非空开子集不与 <span class="arithmatex">\(C\)</span> 相交，即证稀疏.</p>
 <p>10.设 <span class="arithmatex">\(\{E_n\}_{n \geqslant 1}\)</span> 是可测集列,</p>
 <p>(i) 求证 <span class="arithmatex">\(m\left(\underline{\lim}_{n \to \infty} E_n\right) \leqslant \overline{\lim}_{n \to \infty} m(E_n)\)</span>;</p>
 <p>(ii) 若有 <span class="arithmatex">\(k_0\)</span> 使 <span class="arithmatex">\(m\left(\bigcup_{k=k_0}^\infty E_k\right) &lt; \infty\)</span>, 求证:</p>
@@ -2233,26 +2233,26 @@ f(E)=f(F)\bigcup f(G)=\left( \bigcup\limits_{n=1}^{\infty}  f(F_{n}) \right)\big
 <ol>
 <li>设 <span class="arithmatex">\(m(A) &gt; 0, m(B) &gt; 0\)</span>. 求证: <span class="arithmatex">\(\{a - b : a \in A, b \in B\}\)</span> 及 <span class="arithmatex">\(\{a + b : a \in A, b \in B\}\)</span> 都有内点.</li>
 </ol>
-<p>33.设<span class="arithmatex">\(m(E)&gt;0\)</span>,而且只要<span class="arithmatex">\(x,y\in E\)</span>,就有<span class="arithmatex">\(\frac x+y2\in E\)</span>,求证：<span class="arithmatex">\(E\)</span>有内点.</p>
-<p>34.(0,1)中的数<span class="arithmatex">\(x\)</span>用十进制表示<span class="arithmatex">\(,x_n\)</span>是其第<span class="arithmatex">\(n\)</span>位小数.令<span class="arithmatex">\(A_9=\{x\in(0,1):\max\{x_n\}=9\}.\)</span>求证：<span class="arithmatex">\(m(A_9)=1.\)</span></p>
-<p>35.在题 34 中，若<span class="arithmatex">\(A=\{x\in(0,1):\{x_n\}\)</span>中只有有限个 9<span class="arithmatex">\(\}\)</span>,求证：<span class="arithmatex">\(m(A)=0.\)</span></p>
-<p>36.设<span class="arithmatex">\(m(E)&gt;0.\)</span>求证：<span class="arithmatex">\(E\)</span>有不可测子集.</p>
-<p>37.设<span class="arithmatex">\(F\)</span>是[0,1]中不可测集.求证：有<span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>,使对[0,1]中任何满足<span class="arithmatex">\(m(E)\geqslant\varepsilon\)</span>的可测集 <span class="arithmatex">\(E,F\bigcap E\)</span> 也是不可测集.</p>
-<p>38 设<span class="arithmatex">\(f(x)\)</span>定义在 R 上，并且对任何可测集<span class="arithmatex">\(E,f(E)\)</span>可测.求证：对任何零测集<span class="arithmatex">\(Z,f(Z)\)</span>也是零测集.(提示：利用题 36.)</p>
-<p>39.设<span class="arithmatex">\(f(x)\)</span>在 R 上连续.求证：为使<span class="arithmatex">\(f\)</span>把任何可测集变为可测集，充要条件是<span class="arithmatex">\(f\)</span>把任何零测集变为零测集</p>
-<p>40.设<span class="arithmatex">\(f(x)\)</span>在 R 上连续可微且<span class="arithmatex">\(f^\prime(x)&gt;0.\)</span>求证：当<span class="arithmatex">\(E\)</span>可测时<span class="arithmatex">\(,f^-1(E)\)</span>也可测.
-41. 例 设<span class="arithmatex">\(E\subset[a,b]\)</span>可测<span class="arithmatex">\(,\{I_k\}_1\leqslant k\leqslant n\)</span> 是<span class="arithmatex">\([a,b]\)</span> 中 <span class="arithmatex">\(n\)</span> 个开区间，并且 <span class="arithmatex">\(m(I_k\bigcap E)\geqslant\frac23m(I_k),1\leqslant\)</span></p>
+<p>33.设 <span class="arithmatex">\(m(E)&gt;0\)</span>,而且只要 <span class="arithmatex">\(x,y\in E\)</span>,就有 <span class="arithmatex">\(\frac x+y2\in E\)</span>,求证：<span class="arithmatex">\(E\)</span> 有内点.</p>
+<p>34.(0,1)中的数 <span class="arithmatex">\(x\)</span> 用十进制表示 <span class="arithmatex">\(,x_n\)</span> 是其第 <span class="arithmatex">\(n\)</span> 位小数.令 <span class="arithmatex">\(A_9=\{x\in(0,1):\max\{x_n\}=9\}.\)</span> 求证：<span class="arithmatex">\(m(A_9)=1.\)</span></p>
+<p>35.在题 34 中，若 <span class="arithmatex">\(A=\{x\in(0,1):\{x_n\}\)</span> 中只有有限个 9<span class="arithmatex">\(\}\)</span>,求证：<span class="arithmatex">\(m(A)=0.\)</span></p>
+<p>36.设 <span class="arithmatex">\(m(E)&gt;0.\)</span> 求证：<span class="arithmatex">\(E\)</span> 有不可测子集.</p>
+<p>37.设 <span class="arithmatex">\(F\)</span> 是[0,1]中不可测集.求证：有 <span class="arithmatex">\(0&lt;\varepsilon&lt;1\)</span>,使对[0,1]中任何满足 <span class="arithmatex">\(m(E)\geqslant\varepsilon\)</span> 的可测集 <span class="arithmatex">\(E,F\bigcap E\)</span> 也是不可测集.</p>
+<p>38 设 <span class="arithmatex">\(f(x)\)</span> 定义在 R 上，并且对任何可测集 <span class="arithmatex">\(E,f(E)\)</span> 可测.求证：对任何零测集 <span class="arithmatex">\(Z,f(Z)\)</span> 也是零测集.(提示：利用题 36.)</p>
+<p>39.设 <span class="arithmatex">\(f(x)\)</span> 在 R 上连续.求证：为使 <span class="arithmatex">\(f\)</span> 把任何可测集变为可测集，充要条件是 <span class="arithmatex">\(f\)</span> 把任何零测集变为零测集</p>
+<p>40.设 <span class="arithmatex">\(f(x)\)</span> 在 R 上连续可微且 <span class="arithmatex">\(f^\prime(x)&gt;0.\)</span> 求证：当 <span class="arithmatex">\(E\)</span> 可测时 <span class="arithmatex">\(,f^-1(E)\)</span> 也可测.
+41. 例 设 <span class="arithmatex">\(E\subset[a,b]\)</span> 可测 <span class="arithmatex">\(,\{I_k\}_1\leqslant k\leqslant n\)</span> 是 <span class="arithmatex">\([a,b]\)</span> 中 <span class="arithmatex">\(n\)</span> 个开区间，并且 <span class="arithmatex">\(m(I_k\bigcap E)\geqslant\frac23m(I_k),1\leqslant\)</span></p>
 <p><span class="arithmatex">\(k\leqslant n.\)</span> 求证：<span class="arithmatex">\(m\left(E\bigcap\left(\bigcup_{k=1}^{n}I_{k}\right)\right)\geqslant\frac13m\left(\bigcup_{k=1}^{n}I_{k}\right).\)</span></p>
-<p>证明 不失一般性，设<span class="arithmatex">\(I_k=(a_k,b_k)\)</span>满足下列三条件：(i) <span class="arithmatex">\(a_1&lt;a_2&lt;\cdots&lt;a_n;\)</span>
-(ii)<span class="arithmatex">\(\bigcup_k=1^nI_k=(a_1,b_n);(\)</span>iii)对任何<span class="arithmatex">\(1&lt;k&lt;n,\bigcup_s\neq kI_s\)</span>不是开区间.
-此时<span class="arithmatex">\(I_1\)</span>仅与<span class="arithmatex">\(I_2\)</span>有非空交，<span class="arithmatex">\(I_n\)</span>仅与<span class="arithmatex">\(I_n-1\)</span>有非空交，而对任何<span class="arithmatex">\(1&lt;k&lt;n,I_k\)</span>仅与
-<span class="arithmatex">\(I_{k-1}\)</span>及<span class="arithmatex">\(I_{k+1}\)</span>有非空交.下面对<span class="arithmatex">\(n=3\)</span>来证，但其证法有一般性.此时</p>
+<p>证明 不失一般性，设 <span class="arithmatex">\(I_k=(a_k,b_k)\)</span> 满足下列三条件：(i) <span class="arithmatex">\(a_1&lt;a_2&lt;\cdots&lt;a_n;\)</span>
+(ii)<span class="arithmatex">\(\bigcup_k=1^nI_k=(a_1,b_n);(\)</span>iii)对任何 <span class="arithmatex">\(1&lt;k&lt;n,\bigcup_s\neq kI_s\)</span> 不是开区间.
+此时 <span class="arithmatex">\(I_1\)</span> 仅与 <span class="arithmatex">\(I_2\)</span> 有非空交，<span class="arithmatex">\(I_n\)</span> 仅与 <span class="arithmatex">\(I_n-1\)</span> 有非空交，而对任何 <span class="arithmatex">\(1&lt;k&lt;n,I_k\)</span> 仅与
+<span class="arithmatex">\(I_{k-1}\)</span> 及 <span class="arithmatex">\(I_{k+1}\)</span> 有非空交.下面对 <span class="arithmatex">\(n=3\)</span> 来证，但其证法有一般性.此时</p>
 <p><span class="arithmatex">\(I_1=(I_1-I_2)\bigcup(I_1\bigcap I_2)\triangleq A_1\bigcup A_2\)</span>,
 <span class="arithmatex">\(I_2=(I_1\bigcap I_2)\bigcup(I_2-I_1-I_3)\bigcup(I_2\bigcap I_3)\triangleq A_2\bigcup A_3\bigcup A_4\)</span>,
 <span class="arithmatex">\(I_3=(I_2\bigcap I_3)\bigcup(I_3-I_2)\triangleq A_4\bigcup A_5.\)</span>
-其中<span class="arithmatex">\(\{A_k\}_{1\leqslant k\leqslant5}\)</span>两两不相交且<span class="arithmatex">\(\bigcup_k=1^5A_k=\bigcup_{k=1}^3I_k.\)</span>令</p>
+其中 <span class="arithmatex">\(\{A_k\}_{1\leqslant k\leqslant5}\)</span> 两两不相交且 <span class="arithmatex">\(\bigcup_k=1^5A_k=\bigcup_{k=1}^3I_k.\)</span> 令</p>
 <div class="arithmatex">\[a_k=m(A_k),\quad a_k^*=m(A_k\bigcap E),\quad1\leqslant k\leqslant5.\]</div>
-<p>由于<span class="arithmatex">\(m(I_{k}\bigcap E)\geqslant\frac{2}{3}m(I_{k})\)</span>,从而由上面 3 个恒等式得</p>
+<p>由于 <span class="arithmatex">\(m(I_{k}\bigcap E)\geqslant\frac{2}{3}m(I_{k})\)</span>,从而由上面 3 个恒等式得</p>
 <div class="arithmatex">\[a_1^*+a_2^*=m(I_1\bigcap E)\geqslant\frac{2}{3}m(I_1)=\frac{2}{3}(a_1+a_2),\]</div>
 <div class="arithmatex">\[a_2^*+a_3^*+a_4^*=m(I_2\bigcap E)\geqslant\frac{2}{3}m(I_2)=\frac{2}{3}(a_2+a_3+a_4),\]</div>
 <div class="arithmatex">\[a_4^*+a_5^*=m(I_3\bigcap E)\geqslant\frac{2}{3}m(I_3)=\frac{2}{3}(a_4+a_5).\]</div>

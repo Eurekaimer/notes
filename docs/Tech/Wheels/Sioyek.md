@@ -7,11 +7,11 @@ tags:
 
 >Sioyek is a PDF viewer with a focus on textbooks and research papers
 
-You can get more infos about Sioyek in [GitHub](https://github.com/ahrm/sioyek)
+You can get more information about Sioyek on [GitHub](https://github.com/ahrm/sioyek).
 
 ## Basic Tutorial
 
-Video was deployed in [Youtube](https://www.youtube.com/watch?v=RaHRvnb0dY8), this tutorial is also refer to it. 但是我的建议是不如去看那个下载之后会自己出现的教程，只需要按下 <kbd>Shift</kbd> + <kbd>O</kbd> 即可得到先前的PDF文件(tutorial.pdf)，下面只大概写一下我常用的功能键：
+The video was published on [YouTube](https://www.youtube.com/watch?v=RaHRvnb0dY8), and this tutorial also refers to it. 但是我的建议是不如去看那个下载之后会自己出现的教程，只需要按下 <kbd>Shift</kbd> + <kbd>O</kbd> 即可得到先前的 PDF 文件（tutorial.pdf），下面只大概写一下我常用的功能键：
 
 ### 基础导航
 

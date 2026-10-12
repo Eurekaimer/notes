@@ -72,13 +72,13 @@ Iteration is a special case of recursion.
 
 The Luhn Algorithm
 
-Actually, I have seen this algorithm in CS50x before and it was the optional case in problem set.
+Actually, I have seen this algorithm in CS50x before, and it was the optional case in a problem set.
 
 Very Interesting!
 
 #### Recursion and Iteration
 
-some examples and we can change any iteration case to recursion type.
+Some examples, and we can change any iteration case into a recursive one.
 
 ### Tree Recursion
 
@@ -142,7 +142,7 @@ Chapter 1: Building Abstractions with Functions
 
 >A function is called _recursive_ if the body of the function calls the function itself, either directly or indirectly.
 
-An example use recursion function to calculate sum of digits
+An example using a recursive function to calculate the sum of digits
 
 #### The Anatomy of Recursive Functions
 
@@ -168,15 +168,15 @@ def is_odd(n):
 result = is_even(4)
 ```
 
-No matter even or odd, the function will return iff n equals to 0.
+Whether even or odd, the function will return iff n equals 0.
 
 >As such, mutual recursion is **no more mysterious or powerful** than simple recursion, and it provides a mechanism for maintaining abstraction within a complicated recursive program.
 
 #### Printing in Recursive Functions
 
-talk about the cascade function in videos, here is passed.
+The cascade function was discussed in the videos, so it is skipped here.
 
-One another case:
+Another case:
 
 >As another example of mutual recursion, consider a two-player game in which there are n initial pebbles on a table. The players take turns, removing either one or two pebbles from the table, and the player who removes the final pebble wins. Suppose that Alice and Bob play this game, each using a simple strategy:
 >
@@ -205,18 +205,18 @@ Remark: This code pattern can be used in any two-players game, and help dinner m
 
 #### Tree Recursion
 
-Classical Fibonacci computation and use recursion algorithm.
+Classical Fibonacci computation using a recursive algorithm.
 
 ####  Example: Partitions
 
 >The number of partitions of a positive integer n, using parts up to size m, is the number of ways in which n can be expressed as the sum of positive integer parts up to m in increasing order. For example, the number of partitions of 6 using parts up to 4 is 9.
 
-Obviously, we can use recursion to solve the problem and code below.
+Obviously, we can use recursion to solve the problem, as in the code below.
 
-The most important is get the recursion process, and the (n, m) can be devided two parts:
+The most important thing is to understand the recursion process, and (n, m) can be divided into two cases:
 
-1. (n, m-1) no doubt one case
-2. we use the m so remain n-m to devide: (n-m, m)
+1. (n, m-1) is undoubtedly one case
+2. We use m, so n-m remains to be divided: (n-m, m)
 
 ```Python
 # The number of ways to partition n using integers up to m equals
@@ -302,7 +302,7 @@ def main():
 
 >此事在 CS50x 中亦有记载
 
-类似之前例子中的 Partitions 吧（或者 Catlant 数?），经典 OJ 题了
+类似之前例子中的 Partitions 吧（或者 Catalan 数？），经典 OJ 题了
 
 不知道为什么官方写辅助函数不多写一个判断返回 0，自己编写完成后查看报错发现返回了错误类型（增加判断 None），如果发现和测试对不上可以自己找案例测试一下（比如 total 为 0 应该返回 1）
 
@@ -338,7 +338,7 @@ else:
 
 实际编写：
 
-Step 1: 确认输入输出，输入一个数记为 k，返回一个高阶函数 F'以函数 F 为参数
+Step 1: 确认输入输出，输入一个数记为 k，返回一个高阶函数 F' 以函数 F 为参数
 
 T(F): lambda F: lambda k: F(F, k)
 
@@ -359,7 +359,7 @@ lambda k: (lambda f, k: 1 if k == 1 else k * f(f, k - 1))((lambda f, k: 1 if k =
 
 lambda f: (lambda k: f(k))--(lambda k: 1 if k == 0 else k * f(k - 1)?)
 
-发现无法调用 f,判断必须要求两个输入 f, k 以调用希望的 f(k - 1)，那么进行修改，仍然认为 f(k) 是我们需要的递归函数，但是需要两个输入，增加假定 f(f, k) 也是我们需要的阶乘函数
+发现无法调用 f，判断必须要求两个输入 f, k 以调用希望的 f(k - 1)，那么进行修改，仍然认为 f(k) 是我们需要的递归函数，但是需要两个输入，增加假定 f(f, k) 也是我们需要的阶乘函数
 
 (lambda f: (lambda k: f(f, k)))--(lambda f, k: 1 if k == 0 else k * f(f, k - 1))
 

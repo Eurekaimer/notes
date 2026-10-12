@@ -22,14 +22,14 @@ tags:
 
 ## 编程语言
 
-+ [TIOBE Index](https://www.tiobe.com/tiobe-index/) 这是一个语言流行度的一个排行榜
++ [TIOBE Index](https://www.tiobe.com/tiobe-index/) 这是一个语言流行度排行榜
 + **Python** 我最擅长的一门语言，深度学习的唯一选择，AI 时代的红利持有者，但是由于在 3.11 版本之后的更新实在是不堪入目，而且包过多（一方面扩大了可解决问题的闭包，另一方面意味着选择成本也变相增大，你需要思考库的实现效率，可维护性，是否流行），运行效率过低，从个人喜好上不是非常喜欢这门语言了
-	+ [NumPy - Learn](https://numpy.org/learn/) Numpy的文档当然不容错过了
-	+ [PyPy](https://pypy.org/) 这是一个类似补丁的项目，主要目标就是优化和取代那个该死的 CPython ，应该说是勇敢的尝试但是如果覆盖的包面积不够的话应该还是没人会用的（**更别说原本使用 Python 的就是一帮不思进取的懒狗，包括我自己**）
+	+ [NumPy - Learn](https://numpy.org/learn/) NumPy 的文档当然不容错过了
+	+ [PyPy](https://pypy.org/) 这是一个类似补丁的项目，主要目标就是优化和取代那个该死的 CPython，应该说是勇敢的尝试但是如果覆盖的包面积不够的话应该还是没人会用的（**更别说原本使用 Python 的就是一帮不思进取的懒狗，包括我自己**）
 	+ [Examples — Matplotlib](https://matplotlib.org/stable/gallery/index.html) 一个 Matplotlib 的图表效果展示，你可以从中得到作图的灵感
-	+ [scikit-learn docs](https://scikit-learn.org/stable/index.html) SKlearn 的文档内容，我在学习 CS224N 和做深度学习复现实验的时候经常翻阅（翻阅文档仍然是得到真相最直接绝对的方法，再结合大模型基本就可以 double check 了）
+	+ [scikit-learn docs](https://scikit-learn.org/stable/index.html) scikit-learn 的文档内容，我在学习 CS224N 和做深度学习复现实验的时候经常翻阅（翻阅文档仍然是得到真相最直接绝对的方法，再结合大模型基本就可以 double check 了）
 	+ [nbviewer](https://nbviewer.org/) 可以用于预览 GitHub 中的 Jupyter Notebook
-+ **Scheme** 这是一门 Lisp 的方言，通过撰写 Scheme 能够帮助你更好的理解编译器/解释器，通过写 Scheme 也可以很好的锻炼抽象能力
++ **Scheme** 这是一门 Lisp 的方言，通过撰写 Scheme 能够帮助你更好地理解编译器/解释器，通过写 Scheme 也可以很好地锻炼抽象能力
 	+ [Scheme 语言简明教程](https://wizardforcel.gitbooks.io/teach-yourself-scheme/content/010-enter-scheme.html)
 	+ [Scheme 在线编写](https://try.scheme.org/)
 + **Java** 这是我选择的后端语言之一，并且抽象程度刚好也能够用于锻炼撰写数据结构和算法的相关内容（没有 Python 的那么多包，也没有 C 语言的那种还需要兼顾硬件因素）
@@ -40,7 +40,7 @@ tags:
 	+ [Java 学习路线 - 南开飞书云文档](https://my.feishu.cn/wiki/VVv1w0kCzirT04kmHwKc5PDWnBg) Java 后端的学习路径，我认为是非常简洁和直接的一份教程
 	+ [Java 实习速成学习路线](https://www.wolai.com/ustcse/3VVBxRwpafQYtB5fH8M7TH) USTC 的 Java 路线
 	+ [The Java® Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se8/html/index.html) JVMS 文档
-+ **Go** 这是我当前最喜欢的一门语言了，有点古板的语法，谨慎的语言特性选择，甚至还有对于代码格式的一些偏执的严格，写起来又简单效果又好，**极大的减轻了码风不同带来的对于 review 别人代码的心智负担**
++ **Go** 这是我当前最喜欢的一门语言了，有点古板的语法，谨慎的语言特性选择，甚至还有对于代码格式的一些偏执的严格，写起来又简单效果又好，**极大地减轻了码风不同带来的对于 review 别人代码的心智负担**
 	+ [The Go Blog](https://go.dev/blog/) 官方的 Blog 发布，可以得到一些最新的特性消息
 	+ [Go Playground](https://go.dev/play/) 在线运行
 	+ [Effective Go](https://go.dev/doc/effective_go) 简单的官方教程
@@ -64,26 +64,26 @@ tags:
 + [AtCoder](https://atcoder.jp/home) 可以和下面的 CF 进行互补，难度会更加适中
 + [Codeforces](https://codeforces.com/) 应该是世界级的 TOP OJ 了
 + [洛谷](https://www.luogu.com.cn/) 国内 XCPC 和 OI 的著名训练场，我过去的主 OJ
-+ [OI Wiki](https://oi-wiki.org/) 极度良莠不齐，部分算法讲解可以参考，但是有些算法写的就一般了
++ [OI Wiki](https://oi-wiki.org/) 极度良莠不齐，部分算法讲解可以参考，但是有些算法写得就一般了
 + [代码随想录](http://programmercarl.com/) 质量比较高的一个算法讲解
 + [CS 61B](https://datastructur.es/) UC Berkeley 数据结构（数据结构的经典课程）
 
 ## 操作系统
 
-下面结合我的一些看法对于 Linux 社区的常见问题做一个批判（主要的观点来源是 [FreeBSD 从入门到跑路](https://docs.bsdcn.org/README#%E8%B4%A1%E7%8C%AE%E8%80%85) ）：
+下面结合我的一些看法对于 Linux 社区的常见问题做一个批判（主要的观点来源是 [FreeBSD 从入门到跑路](https://docs.bsdcn.org/README#%E8%B4%A1%E7%8C%AE%E8%80%85)）：
 
 + **技术本应服务于人，而不是反过来规训人**。一个人如果只是想用 Linux 拯救一台老电脑，那么能简单、舒服地满足这个需求就已经足够了，没有必要因为社区的某种审美而强迫自己使用命令行、Vim 或高门槛的 WM。每次在各种寻求解决问题方法的帖子底下，看到回答者完全无理地要求提问者直接把问题原因破坏的（Just change your distro to Arch/Debian/Ubuntu/Fedora/Gentoo/OpenSUSE），我都觉得那个答者是来捣乱的
 + **工具只是手段，人的需求和快乐才是目的**。说到底，就像 Linus 那句 **Just For Fun**：喜欢怎么用、怎么折腾就怎么折腾，不必把自己的玩法变成别人的义务，也是出于这种原则现在的软件设计越来越臃肿和复杂（实际上这有点反 UNIX 哲学了，越想要让一个程序能够尽量满足人的需求，那个程序的功能也就会越复杂，和 UNIX Principles 中的单一性是矛盾的）
 + 一方面，**社区没有义务为完全拒绝阅读和思考的人承担成本**。如果提示已经足够明确，一个问题通过最基本的阅读、搜索或尝试就能够解决，那么要求提问者先完成这些工作并不是所谓精英主义（主要反对的是那些在技术社区中一直低效提问而不去查询文档或者询问大模型的人）。《提问的智慧》中要求提问者展示自己的思考过程，本质上也是对其他社区成员时间的尊重（换句话说**没有必要无偿回答一些极其显然的问题而不是鼓励搜索和思考**，对于学习数理的同学这更加明显，因为大部分的问题是没有答案的，**你必须通过自己的思考找到线索并且基本上无法得到权威的帮助**，很大的概率是那个权威跟你距离一个太平洋或者大西洋）。
-+ 另一方面，复杂也并不天然意味着糟糕（主要反对的是那些认为使用 Vim/NeoVim/Emacs 等键盘流工具的都是嘉豪的言论）。很多技术工具之所以复杂，之所以前置难度高，是因为它们试图解决更加复杂的问题，而这种学习成本往往能够换来更高的效率、更强的自动化能力和更大的表达空间。GUI 可以让第一次操作更简单，而 CLI 和脚本可能让第一千次操作更简单。**真正应该反对的不是复杂度，而是没有收益的复杂度**。
++ 另一方面，复杂也并不天然意味着糟糕（主要反对的是那些认为使用 Vim/Neovim/Emacs 等键盘流工具的都是嘉豪的言论）。很多技术工具之所以复杂，之所以前置难度高，是因为它们试图解决更加复杂的问题，而这种学习成本往往能够换来更高的效率、更强的自动化能力和更大的表达空间。GUI 可以让第一次操作更简单，而 CLI 和脚本可能让第一千次操作更简单。**真正应该反对的不是复杂度，而是没有收益的复杂度**。
 + 最后，如果一个人只是想用 Linux 完成自己的日常工作，那么当然**没有必要也不需要听从任何人的建议**，你只是在过自己的生活，越简单越好，按照别人的标准把自己训练成所谓的 Stronger User 是一种讨好型人格或者对自己没有清楚认知定位的表现；但如果一个人的目标就是深入理解 Linux、操作系统或者任何一个专业领域，那么投入大量时间和精力本身就是不可避免的。**知识存在客观的复杂性，一些弯路本身也是加深理解和了解先进想法动机的一部分，而这种必要的学习成本并不属于“苦难哲学”**。
 
 + [DMS in NixOS](https://danklinux.com/docs/dankmaterialshell/nixos) DMS 的文档，可惜我选了 Noctalia （
 + [Linux 101](https://101.lug.ustc.edu.cn/) 一个挺入门的书籍，中科大开源的
 + [NixCN](https://nix.org.cn/zh-CN/) NixOS 在中国的社区，定期会有一些会议
 + [FreeBSD 从入门到跑路](https://docs.bsdcn.org/README#%E8%B4%A1%E7%8C%AE%E8%80%85) 前言写得很好。它表面上是在批判 Linux/Unix 社区中对命令行、复杂工具和高学习成本的过度推崇，本质上反对的却是一种“苦难哲学”：**把工具的难用合理化，把忍受不必要的学习成本当成能力甚至优越感的证明**。不过这个观点还是值得商榷的，因为这是苦难的前提是那个多余的复杂度无法带来收益（这基本不可能啊，那说明这个软件或者工具的设计是纯粹的脱离时代或者设计的非常糟糕，而且真的会有人蠢到会了豪去学习无价值的工具吗）
-+ [Ventoy](https://www.ventoy.net/cn/doc_livecd.html) 起码是**目前**（2025年）最流行的重装系统的软件工具
-+ [archlinux 简明指南](https://arch.icekylin.online/) 我基本上跟着这个装过 archlinux ，非常顺畅和直白，小白也能装清楚
++ [Ventoy](https://www.ventoy.net/cn/doc_livecd.html) 起码是**目前**（2025 年）最流行的重装系统的软件工具
++ [Arch Linux 简明指南](https://arch.icekylin.online/) 我基本上跟着这个装过 Arch Linux，非常顺畅和直白，小白也能装清楚
 + [Arch Linux](https://www.archlinuxcn.org/) 官网，看看 Wiki 可以增加了解（Arch 的很大一个优点就是 Wiki 了）
 + [CachyOS](https://cachyos.org/) 官网，相比 Arch 我更加推荐的新手发行版，图形化安装、自动匹配镜像、强大的性能优化都很适合新手入门
 + [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/zh/) 属于是刚入门看不太懂（无动机），会了一点之后感觉也没什么用
@@ -115,7 +115,7 @@ tags:
 ## Agent/LLM
 
 + [Hello-Agents](https://hello-agents.datawhale.cc/#/./README)
-+ [Anthropic Research Website](https://www.anthropic.com/research) A\ 的各个研究团队，会发布很多高质量的技术前沿博客，虽然这个公司依然很cs
++ [Anthropic Research Website](https://www.anthropic.com/research) A\ 的各个研究团队，会发布很多高质量的技术前沿博客，虽然这个公司依然很 cs
 + 可解释性研究
 	+ [Neel Nanda](https://www.neelnanda.io/) 一个非常出名的领域研究者（ A\ 的可解释性团队的）的博客
 	+ [anthropic interpretability](https://www.anthropic.com/research/team/interpretability) A\ 的团队主页

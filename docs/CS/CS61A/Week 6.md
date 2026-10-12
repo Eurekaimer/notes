@@ -4,7 +4,7 @@
 
 大概需要六小时
 
-本节总的来说出现了两个基本且重要的数据结构就是链表和树，从递归算法上说是自然的，还有 Mutable Data 这一在 Python 中非常重要的事情的讲述，很感动的是老师通过讲述 A History Stroy 去说明了这件事情，感觉正常学习过 Python 的人都会对这个部分有很深的共鸣，因为期末考老是喜欢考啊 (doge)。
+本节总的来说出现了两个基本且重要的数据结构，就是链表和树，从递归算法上说是自然的，还有 Mutable Data 这一在 Python 中非常重要的事情的讲述，很感动的是老师通过讲述 A History Story 去说明了这件事情，感觉正常学习过 Python 的人都会对这个部分有很深的共鸣，因为期末考老是喜欢考啊 (doge)。
 
 ## Lab 04(30min)
 
@@ -28,7 +28,7 @@
 
 #### Q6: Don't violate the abstraction barrier!
 
-所谓数据抽象，抽象屏障 (Abstraction Barrier) 就好像递归中的信仰之跃，我们初始时不关心函数的实现细节只是使用构造的函数进行操作，只要写的代码有合适的屏障，只需要更改上游部分下游自然会发生变化。实际上就是**通过函数来承载抽象**的功能，所操作和修改的对象也只是函数而不是具体的 values.
+所谓数据抽象，抽象屏障 (Abstraction Barrier) 就好像递归中的信仰之跃，我们初始时不关心函数的实现细节，只是使用构造的函数进行操作，只要写的代码有合适的屏障，只需要更改上游部分，下游自然会发生变化。实际上就是**通过函数来承载抽象**的功能，所操作和修改的对象也只是函数而不是具体的 values。
 
 ## Reading(2h30min)
 
@@ -44,7 +44,7 @@ Chapter 2: Building Abstractions with Data
 
 >树这种东西在图论里面经常用，所以如果有 OI 训练的话确实有利于组合题能力提高……
 
-为了方便起见，再这里将所有的数据抽象列出
+为了方便起见，在这里将所有的数据抽象列出
 
 ```Python
 # 基本的树抽象，要求root的值和分支也是树
@@ -106,7 +106,7 @@ terminologies:
 + root label
 + branch(each branch is a tree)
 
-tree is a abstraction not a representation
+A tree is an abstraction, not a representation.
 
 ```Python
 def tree(label, branches= []):
@@ -161,7 +161,7 @@ Talked about basic concepts and OOP in Python.
 
 #### Example: Strings
 
-Show what is the Mutable Data and its usage.
+Show what Mutable Data is and its usage.
 
 #### Mutation Operations
 
@@ -169,7 +169,7 @@ some examples and questions.
 
 #### Tuples
 
-Give a tuple type to show the not mutable data in python.
+Give a tuple type to show immutable data in Python.
 
 #### Mutation
 
@@ -177,7 +177,7 @@ Core concepts.
 
 #### Mutable Functions
 
-A good application in functions used mutation.
+A good application of mutation in functions.
 
 ## Disc 05(30min)
 

@@ -5,7 +5,7 @@ tags:
 ---
 # Mermaid Note
 
->使用 mermaid 的目的是为了给 markdown 笔记中的一些简单关系提供可视化方案，但是由于过度丰富的图形和 markdown 速记的理念是违背的，因此不对于高级的使用进行过多的阐述，只是简单的记录一些基本用法
+>使用 Mermaid 的目的是为了给 Markdown 笔记中的一些简单关系提供可视化方案，但是由于过度丰富的图形和 Markdown 速记的理念是违背的，因此不对于高级的使用进行过多的阐述，只是简单地记录一些基本用法
 
 + References
 	+ [Mermaid 从入门到精通 Zhihu](https://zhuanlan.zhihu.com/p/627356428)
@@ -67,6 +67,7 @@ gantt
    task 2: 2019-02-01, 14d
    task 3: 2019-03-01, 7d
 ```
+
 ### Pie Chart
 
 ```text
@@ -214,6 +215,4 @@ else
    [路径 3]
 end
 ```
-
-
 

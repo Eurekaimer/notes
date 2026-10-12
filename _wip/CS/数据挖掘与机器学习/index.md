@@ -5,8 +5,8 @@
     主讲教师：付盛 (Fu Sheng)
     先修要求：数学分析+高等代数+初等概率论+初等数理统计
     课程难度：⭐⭐⭐
-    预计学时：100h
-    给分情况：60%闭卷+20%大作业+20%实验
+    预计学时：100 h
+    给分情况：60% 闭卷+20% 大作业+20% 实验
     考试难度：
     修读时间：Fall 25
 
@@ -20,7 +20,7 @@
 
 去除 Lecture0(Introduction and Preface)
 
-对于数学基础的回顾（线性代数和概率论数理统计），关于线性代数的内容可以参考[cs229-linear-algebra-review](https://cs229.stanford.edu/lectures-spring2022/cs229-linear_algebra_review.pdf)(写的非常详尽)，概率论请参考[cs229-probability](https://cs229.stanford.edu/lectures-spring2022/cs229-probability_review.pdf)
+对于数学基础的回顾（线性代数和概率论数理统计），关于线性代数的内容可以参考 [cs229-linear-algebra-review](https://cs229.stanford.edu/lectures-spring2022/cs229-linear_algebra_review.pdf)（写得非常详尽），概率论请参考 [cs229-probability](https://cs229.stanford.edu/lectures-spring2022/cs229-probability_review.pdf)
 
 + Linear-Algebra
 	+ Basic concepts and notation
@@ -45,7 +45,7 @@
 
 ## 24Fall
 
-这里还从一个 Github 仓库中摘取了另一位老师的 24 年在 DMML 课程上的 Slides，并且交给 Gemini3 进行处理后做成了简单的笔记用于对比学习和复习
+这里还从一个 GitHub 仓库中摘取了另一位老师的 24 年在 DMML 课程上的 Slides，并且交给 Gemini3 进行处理后做成了简单的笔记用于对比学习和复习
 
 [DMML_24Fall_Re](./DMML_24Fall_Re.md)
 

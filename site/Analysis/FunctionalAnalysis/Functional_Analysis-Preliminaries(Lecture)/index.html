@@ -1988,7 +1988,7 @@
 <h2 id="zorns-lemma">Zorn's lemma<a class="headerlink" href="#zorns-lemma" title="Permanent link">⚓︎</a></h2>
 <p>我们先给出二元关系的定义：</p>
 <p>假设我们有一个非空集合 <span class="arithmatex">\(I\)</span>，那么将 <span class="arithmatex">\(I\)</span> 上的二元关系 <span class="arithmatex">\(\preceq\)</span> 定义为 <span class="arithmatex">\(I\times I\)</span> 的一个子集，如果 <span class="arithmatex">\((x,y)\in\preceq\)</span>，那么记作 <span class="arithmatex">\(x\preceq y\)</span></p>
-<p>在二元关系的基础上满足额外的三条性质则称其偏序，给出偏序的定义：</p>
+<p>在二元关系的基础上满足额外的三条性质则称其为偏序，给出偏序的定义：</p>
 <p>二元关系满足：</p>
 <ul>
 <li>Reflexive <span class="arithmatex">\(\forall x.x\preceq x\)</span></li>
@@ -1999,14 +1999,14 @@
 <div class="admonition example">
 <p class="admonition-title">字典序，lexicographical order</p>
 <p>对于 <span class="arithmatex">\(\mathbb{R}^{2}\)</span> 上的一个偏序定义如下：</p>
-<p>如果<span class="arithmatex">\(x_{1}&lt;x_{2}\)</span>或者在<span class="arithmatex">\(x_{1}=x_{2},y_{1}\leqslant y_{2}\)</span>，那么称为<span class="arithmatex">\((x_{1},y_{1})\preceq (x_{2},y_{2})\)</span></p>
+<p>如果 <span class="arithmatex">\(x_{1}&lt;x_{2}\)</span> 或者 <span class="arithmatex">\(x_{1}=x_{2},y_{1}\leqslant y_{2}\)</span>，那么称为 <span class="arithmatex">\((x_{1},y_{1})\preceq (x_{2},y_{2})\)</span></p>
 </div>
-<p>为了下面阐述Zorn引理，我们还需要一些特殊概念：</p>
+<p>为了下面阐述 Zorn 引理，我们还需要一些特殊概念：</p>
 <ul>
-<li>上界(Upper bound) <span class="arithmatex">\(\forall y\in Y,y\preceq b(b\in X)\)</span>记作<span class="arithmatex">\(Y\preceq b\)</span>，<span class="arithmatex">\(b\)</span>称为<span class="arithmatex">\(Y\)</span>的上界</li>
+<li>上界(Upper bound) <span class="arithmatex">\(\forall y\in Y,y\preceq b(b\in X)\)</span> 记作 <span class="arithmatex">\(Y\preceq b\)</span>，<span class="arithmatex">\(b\)</span> 称为 <span class="arithmatex">\(Y\)</span> 的上界</li>
 <li>上确界(Supremum) 参考数学分析</li>
-<li>极大元(Maximal element) 如果<span class="arithmatex">\(z\preceq a\implies z=a\)</span>，即<span class="arithmatex">\(X\)</span>中不存在严格大于<span class="arithmatex">\(z\)</span>的元素</li>
-<li>链(Chain) <span class="arithmatex">\(X\)</span>的子集<span class="arithmatex">\(C\)</span>如果满足其中任何两个元素均可比较(<span class="arithmatex">\(a\preceq b,b\preceq a\)</span>)，称为链(或者全序子集)</li>
+<li>极大元(Maximal element) 如果 <span class="arithmatex">\(z\preceq a\implies z=a\)</span>，即 <span class="arithmatex">\(X\)</span> 中不存在严格大于 <span class="arithmatex">\(z\)</span> 的元素</li>
+<li>链(Chain) <span class="arithmatex">\(X\)</span> 的子集 <span class="arithmatex">\(C\)</span> 如果满足其中任何两个元素均可比较(<span class="arithmatex">\(a\preceq b,b\preceq a\)</span>)，称为链(或者全序子集)</li>
 </ul>
 <p>下面就是本节最重要的内容：</p>
 <div class="admonition tip">
@@ -2142,60 +2142,60 @@ Q(\lambda x) &amp;= [\lambda x]  \\
 <p>Furthermore, if <span class="arithmatex">\(X, Y\)</span> are separable, show that <span class="arithmatex">\((X \times Y, \rho_s)\)</span> is separable.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>根据题意我们的目标是证明<span class="arithmatex">\((X \times Y, \rho_s)\)</span>是度量空间及可分性</p>
+<p>根据题意我们的目标是证明 <span class="arithmatex">\((X \times Y, \rho_s)\)</span> 是度量空间及可分性</p>
 <p><strong>第一部分：证明它是度量空间</strong></p>
-<p>需要证明<span class="arithmatex">\(\rho_s\)</span>满足三角不等式（非负性和对称性由<span class="arithmatex">\(d_X, d_Y\)</span>的性质及范数定义显然成立）：</p>
-<p>令<span class="arithmatex">\(u = (x_1, y_1)\)</span>, <span class="arithmatex">\(v = (x_2, y_2)\)</span>, <span class="arithmatex">\(w = (x_3, y_3)\)</span>为<span class="arithmatex">\(X \times Y\)</span>中的点。</p>
+<p>需要证明 <span class="arithmatex">\(\rho_s\)</span> 满足三角不等式（非负性和对称性由 <span class="arithmatex">\(d_X, d_Y\)</span> 的性质及范数定义显然成立）：</p>
+<p>令 <span class="arithmatex">\(u = (x_1, y_1)\)</span>, <span class="arithmatex">\(v = (x_2, y_2)\)</span>, <span class="arithmatex">\(w = (x_3, y_3)\)</span> 为 <span class="arithmatex">\(X \times Y\)</span> 中的点。</p>
 <p><strong>情形 1: <span class="arithmatex">\(1 \le s &lt; \infty\)</span></strong>
-<span class="arithmatex">\(\rho_s\)</span>的形式类似于<span class="arithmatex">\(\mathbb{R}^2\)</span>上的<span class="arithmatex">\(l_s\)</span>范数。
-根据<span class="arithmatex">\(d_X\)</span>和<span class="arithmatex">\(d_Y\)</span>的三角不等式：</p>
+<span class="arithmatex">\(\rho_s\)</span> 的形式类似于 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的 <span class="arithmatex">\(l_s\)</span> 范数。
+根据 <span class="arithmatex">\(d_X\)</span> 和 <span class="arithmatex">\(d_Y\)</span> 的三角不等式：</p>
 <div class="arithmatex">\[
 d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3)
 \]</div>
 <div class="arithmatex">\[
 d_Y(y_1, y_3) \le d_Y(y_1, y_2) + d_Y(y_2, y_3)
 \]</div>
-<p>我们需要证明<span class="arithmatex">\(\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)\)</span>。
-令<span class="arithmatex">\(A = (d_X(x_1, x_2), d_Y(y_1, y_2))\)</span>，<span class="arithmatex">\(B = (d_X(x_2, x_3), d_Y(y_2, y_3))\)</span>。
-根据闵可夫斯基不等式（Minkowski inequality）对于<span class="arithmatex">\(\mathbb{R}^2\)</span>上的<span class="arithmatex">\(s\)</span>-范数<span class="arithmatex">\(\|(a,b)\|_s = (a^s+b^s)^{1/s}\)</span>：</p>
+<p>我们需要证明 <span class="arithmatex">\(\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)\)</span>。
+令 <span class="arithmatex">\(A = (d_X(x_1, x_2), d_Y(y_1, y_2))\)</span>，<span class="arithmatex">\(B = (d_X(x_2, x_3), d_Y(y_2, y_3))\)</span>。
+根据闵可夫斯基不等式（Minkowski inequality）对于 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的 <span class="arithmatex">\(s\)</span>-范数 <span class="arithmatex">\(\|(a,b)\|_s = (a^s+b^s)^{1/s}\)</span>：</p>
 <div class="arithmatex">\[
 \|A + B\|_s \le \|A\|_s + \|B\|_s
 \]</div>
 <p>这即是三角不等式成立的保证。</p>
 <p><strong>情形 2: <span class="arithmatex">\(s = \infty\)</span></strong>
 <span class="arithmatex">\(\rho_\infty(u, w) = \max\{d_X(x_1, x_3), d_Y(y_1, y_3)\}\)</span>。
-利用<span class="arithmatex">\(d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)\)</span>。
-同理<span class="arithmatex">\(d_Y(y_1, y_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)\)</span>。
+利用 <span class="arithmatex">\(d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)\)</span>。
+同理 <span class="arithmatex">\(d_Y(y_1, y_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)\)</span>。
 两者的最大值自然也满足该不等式。</p>
 <p><strong>第二部分：证明可分性</strong></p>
 <p><strong>定义：</strong> 一个度量空间是可分的，如果它包含一个可数的稠密子集。</p>
 <p><strong>证明：</strong>
-设<span class="arithmatex">\(X\)</span>和<span class="arithmatex">\(Y\)</span>是可分的。
-令<span class="arithmatex">\(A = \{a_1, a_2, \dots\}\)</span>是<span class="arithmatex">\(X\)</span>中的可数稠密子集。
-令<span class="arithmatex">\(B = \{b_1, b_2, \dots\}\)</span>是<span class="arithmatex">\(Y\)</span>中的可数稠密子集。
-考虑乘积集合<span class="arithmatex">\(S = A \times B = \{(a_i, b_j) : a_i \in A, b_j \in B\}\)</span>。
-由于<span class="arithmatex">\(A, B\)</span>可数，它们的笛卡尔积<span class="arithmatex">\(S\)</span>也是可数的。</p>
-<p>我们需要证明<span class="arithmatex">\(S\)</span>在<span class="arithmatex">\((X \times Y, \rho_s)\)</span>中稠密。</p>
-<p>对于任意<span class="arithmatex">\((x, y) \in X \times Y\)</span>和任意<span class="arithmatex">\(\epsilon &gt; 0\)</span>：</p>
+设 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 是可分的。
+令 <span class="arithmatex">\(A = \{a_1, a_2, \dots\}\)</span> 是 <span class="arithmatex">\(X\)</span> 中的可数稠密子集。
+令 <span class="arithmatex">\(B = \{b_1, b_2, \dots\}\)</span> 是 <span class="arithmatex">\(Y\)</span> 中的可数稠密子集。
+考虑乘积集合 <span class="arithmatex">\(S = A \times B = \{(a_i, b_j) : a_i \in A, b_j \in B\}\)</span>。
+由于 <span class="arithmatex">\(A, B\)</span> 可数，它们的笛卡尔积 <span class="arithmatex">\(S\)</span> 也是可数的。</p>
+<p>我们需要证明 <span class="arithmatex">\(S\)</span> 在 <span class="arithmatex">\((X \times Y, \rho_s)\)</span> 中稠密。</p>
+<p>对于任意 <span class="arithmatex">\((x, y) \in X \times Y\)</span> 和任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：</p>
 <ol>
-<li>因为<span class="arithmatex">\(A\)</span>稠密，存在<span class="arithmatex">\(a_i \in A\)</span>使得<span class="arithmatex">\(d_X(x, a_i) &lt; \delta\)</span>。</li>
-<li>因为<span class="arithmatex">\(B\)</span>稠密，存在<span class="arithmatex">\(b_j \in B\)</span>使得<span class="arithmatex">\(d_Y(y, b_j) &lt; \delta\)</span>。</li>
+<li>因为 <span class="arithmatex">\(A\)</span> 稠密，存在 <span class="arithmatex">\(a_i \in A\)</span> 使得 <span class="arithmatex">\(d_X(x, a_i) &lt; \delta\)</span>。</li>
+<li>因为 <span class="arithmatex">\(B\)</span> 稠密，存在 <span class="arithmatex">\(b_j \in B\)</span> 使得 <span class="arithmatex">\(d_Y(y, b_j) &lt; \delta\)</span>。</li>
 </ol>
-<p>我们来选取合适的<span class="arithmatex">\(\delta\)</span>。
-<strong>当<span class="arithmatex">\(1 \le s &lt; \infty\)</span>时：</strong></p>
+<p>我们来选取合适的 <span class="arithmatex">\(\delta\)</span>。
+<strong>当 <span class="arithmatex">\(1 \le s &lt; \infty\)</span> 时：</strong></p>
 <div class="arithmatex">\[
 \rho_s((x,y), (a_i, b_j)) = [d_X(x, a_i)^s + d_Y(y, b_j)^s]^{1/s} &lt; [\delta^s + \delta^s]^{1/s} = \delta \cdot 2^{1/s}
 \]</div>
-<p>取<span class="arithmatex">\(\delta = \frac{\epsilon}{2^{1/s}}\)</span>，则<span class="arithmatex">\(\rho_s &lt; \epsilon\)</span>。</p>
-<p><strong>当<span class="arithmatex">\(s = \infty\)</span>时：</strong></p>
+<p>取 <span class="arithmatex">\(\delta = \frac{\epsilon}{2^{1/s}}\)</span>，则 <span class="arithmatex">\(\rho_s &lt; \epsilon\)</span>。</p>
+<p><strong>当 <span class="arithmatex">\(s = \infty\)</span> 时：</strong></p>
 <div class="arithmatex">\[
 \rho_\infty((x,y), (a_i, b_j)) = \max\{d_X(x, a_i), d_Y(y, b_j)\} &lt; \max\{\delta, \delta\} = \delta
 \]</div>
-<p>取<span class="arithmatex">\(\delta = \epsilon\)</span>，则<span class="arithmatex">\(\rho_\infty &lt; \epsilon\)</span>。</p>
-<p>由此可见，对于任意<span class="arithmatex">\((x, y)\)</span>和<span class="arithmatex">\(\epsilon\)</span>，都能在<span class="arithmatex">\(S\)</span>中找到点使其距离小于<span class="arithmatex">\(\epsilon\)</span>。故<span class="arithmatex">\(S\)</span>是稠密的。
-因为<span class="arithmatex">\(S\)</span>是可数稠密子集，所以<span class="arithmatex">\((X \times Y, \rho_s)\)</span>是可分的。</p>
+<p>取 <span class="arithmatex">\(\delta = \epsilon\)</span>，则 <span class="arithmatex">\(\rho_\infty &lt; \epsilon\)</span>。</p>
+<p>由此可见，对于任意 <span class="arithmatex">\((x, y)\)</span> 和 <span class="arithmatex">\(\epsilon\)</span>，都能在 <span class="arithmatex">\(S\)</span> 中找到点使其距离小于 <span class="arithmatex">\(\epsilon\)</span>。故 <span class="arithmatex">\(S\)</span> 是稠密的。
+因为 <span class="arithmatex">\(S\)</span> 是可数稠密子集，所以 <span class="arithmatex">\((X \times Y, \rho_s)\)</span> 是可分的。</p>
 <h2 id="topological-spaces">Topological spaces<a class="headerlink" href="#topological-spaces" title="Permanent link">⚓︎</a></h2>
-<p>关于Box topology和Product topology的问题可以参考MSE上的一个回答：<a href="https://math.stackexchange.com/questions/871610/why-are-box-topology-and-product-topology-different-on-infinite-products-of-topo">Why are box topology and product topology different on infinite products of topological spaces?</a></p>
+<p>关于 Box topology 和 Product topology 的问题可以参考 MSE 上的一个回答：<a href="https://math.stackexchange.com/questions/871610/why-are-box-topology-and-product-topology-different-on-infinite-products-of-topo">Why are box topology and product topology different on infinite products of topological spaces?</a></p>
 <p>我们需要知道的仅仅是乘积拓扑是能够相容的最弱的拓扑，而与之相对应的是商拓扑是最强的拓扑</p>
 <h2 id="exercise-14">Exercise 1.4<a class="headerlink" href="#exercise-14" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
@@ -2206,7 +2206,7 @@ d_Y(y_1, y_3) \le d_Y(y_1, y_2) + d_Y(y_2, y_3)
 <p><code>Proof.</code></p>
 <p>Suppose on the contrary that <span class="arithmatex">\(\bigcap_{\lambda \in \Lambda} F_\lambda\)</span> is empty. Then</p>
 <div class="arithmatex">\[X = X \setminus \bigcap_{\lambda \in \Lambda} F_\lambda = \bigcup_{\lambda \in \Lambda} X \setminus F_\lambda.\]</div>
-<p>So <span class="arithmatex">\(\{X \setminus F_\alpha\}_{\alpha \in \Lambda}\)</span> is an open cover of <span class="arithmatex">\(X\)</span>. Since <span class="arithmatex">\(X\)</span> is compact, there is finite subcover,</p>
+<p>So <span class="arithmatex">\(\{X \setminus F_\alpha\}_{\alpha \in \Lambda}\)</span> is an open cover of <span class="arithmatex">\(X\)</span>. Since <span class="arithmatex">\(X\)</span> is compact, there is a finite subcover,</p>
 <div class="arithmatex">\[X = \bigcup_{j=1}^n X \setminus F_{\lambda_j} = X \setminus \bigcap_{j=1}^n F_{\lambda_j};\]</div>
 <p>this implies that <span class="arithmatex">\(\bigcap_{j=1}^n F_{\lambda_j} = \emptyset\)</span>, but this contradicts the assumption that such an intersection is always non-empty. </p>
 <div class="admonition question">

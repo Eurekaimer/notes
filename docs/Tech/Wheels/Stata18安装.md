@@ -3,7 +3,7 @@ tags:
   - Stata
   - Wheel
 ---
-# Stata18 安装
+# Stata 18 安装
 
 ```text
 Stata 18 MP永久版序列号： 

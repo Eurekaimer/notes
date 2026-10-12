@@ -3,8 +3,8 @@
 !!! tldr "Outline"
     + Hahn-Banach Extension Theorem  
     + Continuous linear functionals of a TVS  
-    + Seperation Theorems  
-    + Uniform Boundness Principle  
+    + Separation Theorems  
+    + Uniform Boundedness Principle  
     + Open Mapping Theorem and Closed Graph Theorem
 
 ## Hahn-Banach Extension Theorem
@@ -91,7 +91,7 @@ $$
 !!! quote "张恭庆的补充"
     直接证明是一种比较粗暴且缺乏动机的做法，数学中常见的做法是从简单的情况出发，然后将定理条件放宽，得到更加 general 的形式，在此 cite 张恭庆老师的《泛函分析讲义》中有关线性泛函的延拓定理的部分内容供增进理解和参考
 
-!!! info "实Hahn-Banach定理"
+!!! info "实 Hahn-Banach 定理"
     为了统一记号做了一些修改，$E$ 是实线性空间，$p$ 是 $E$ 上的次线性泛函，$M$ 是 $E$ 的实线性子空间，$f$ 是 $M$ 的实线性泛函且 $f\leqslant p,\forall x\in M$，那么在 $E$ 上一定存在一个实线性泛函 $g$ 使得：
     (1)$g\leqslant p,\forall x\in E$
     (2)$g(x)=f(x),\forall x\in M$
@@ -137,7 +137,7 @@ f(x')-f(x'')&=f(x'-x'')\\
 \end{aligned}
 $$
 
-因此这种延拓是存在的，且不唯一（如果不等式不取等号的话），剩下的问题就是如何从 $M'$ 过度到 $E$，需要利用 Zorn 引理
+因此这种延拓是存在的，且不唯一（如果不等式不取等号的话），剩下的问题就是如何从 $M'$ 过渡到 $E$，需要利用 Zorn 引理
 
 我们先构造一个半序集：
 
@@ -156,7 +156,7 @@ $$
 所以 $M_{K}$ 是 $E$ 中包含 $M$ 的子空间，且 $f_{K}$ 唯一确定 ($f_{K}=f_{\Delta}$)，$f_{K}\leqslant p$，根据 Zorn 引理 $\mathscr{F}$ 本身存在极大元，下面只需要说明那个极大元就是 $E$ 即可，使用反证法，如若不然，可以构造出另一个 $\mathscr{F}$ 中元素使得出现更大元，由此证毕
 
 !!! note "Riesz representation theorem"
-    Every bounded linear functional $F\in C[a,b]^{*}$ if given by a unique normalized function $f\in BV[a,b]$ such that
+    Every bounded linear functional $F\in C[a,b]^{*}$ is given by a unique normalized function $f\in BV[a,b]$ such that
 
     $$F(x)=\int_{a}^{b} x(t)df(t),\forall x\in C[a,b] $$
 
@@ -191,7 +191,7 @@ Show that every neighborhood $V$ of zero in a TVS $X$ is an absorbing set.
 
 只需要根据定义验证即可：
 
-首先任取 $X$ 中的向量 $x$，我们希望对于这个 $x$ 能够找到一个常数 $\delta$ 使得 $\delta x$ 被 $V$ 所吸收，考虑连续性，构造一个映射 $f:\mathbb{K}\to X$，$f(\lambda)=\lambda x$，其中有 $\lambda\in \mathbb{K},x\in X$，显然在 TVS 中这是一个连续函数，那么考虑 $\lambda=0$ 时有 $f(0)=0$，根据邻域和连续函数的定义可知 $f^{-1}(V)$ 必然是 $0$ 的一个邻域，而关于 0 的任何邻域一定存在一个以 0 为中心的开球，因此我们可以知道存在 $\delta>0$，使得$\lvert \lambda \rvert<\delta$的情况下，$\lambda x\in V$，由此即证
+首先任取 $X$ 中的向量 $x$，我们希望对于这个 $x$ 能够找到一个常数 $\delta$ 使得 $\delta x$ 被 $V$ 所吸收，考虑连续性，构造一个映射 $f:\mathbb{K}\to X$，$f(\lambda)=\lambda x$，其中有 $\lambda\in \mathbb{K},x\in X$，显然在 TVS 中这是一个连续函数，那么考虑 $\lambda=0$ 时有 $f(0)=0$，根据邻域和连续函数的定义可知 $f^{-1}(V)$ 必然是 $0$ 的一个邻域，而关于 0 的任何邻域一定存在一个以 0 为中心的开球，因此我们可以知道存在 $\delta>0$，使得 $\lvert \lambda \rvert<\delta$ 的情况下，$\lambda x\in V$，由此即证
 
 **(4)** Let $A = \{x = (x_1, x_2) \in \mathbb{R}^2 : |x_1| \le x_2^2, \text{ or } x_1 = 0, |x_2| \le 1\}$. Show that $A$ is absorbing. Let $\rho_A$ be the sublinear functional of $\mathbb{R}^2$ associated with $A$. Draw the sets $\{x \in \mathbb{R}^2 : \rho_A(x) < 1\}$, $\{x \in \mathbb{R}^2 : \rho_A(x) \le 1\}$ and the interior $\text{int } A$ of $A$. Is $\text{int } A$ an absorbing set in $\mathbb{R}^2$?
 
@@ -199,7 +199,7 @@ Show that every neighborhood $V$ of zero in a TVS $X$ is an absorbing set.
 
 `Proof.`
 
-首先考虑集合 $A$ 的几何形状：它是以原点为中心半径小于等于$\frac{1}{2}$的闭球与以原点为中心半径等于$1$的单位圆周的并集
+首先考虑集合 $A$ 的几何形状：它是以原点为中心半径小于等于 $\frac{1}{2}$ 的闭球与以原点为中心半径等于 $1$ 的单位圆周的并集
 
 仍然是根据定义证明，闵可夫斯基泛函（Gauge）的定义为：
 
@@ -207,7 +207,7 @@ $$ \rho_A(x) = \inf \{ \lambda > 0 : x \in \lambda A \} = \inf \{ \lambda > 0 : 
 
 我们需要证明对于任意 $x \in \mathbb{R}^2$，有 $\rho_A(x) = \|x\|_2$。
 
-$x=0$时显然，根据定义 $\rho_A(0) = 0$，且范数 $\|0\|_2 = 0$。$x \neq 0$，令 $r = \|x\|_2 > 0$。我们需要考察使得 $\frac{x}{\lambda} \in A$ 成立的 $\lambda > 0$ 的集合。
+$x=0$ 时显然，根据定义 $\rho_A(0) = 0$，且范数 $\|0\|_2 = 0$。$x \neq 0$，令 $r = \|x\|_2 > 0$。我们需要考察使得 $\frac{x}{\lambda} \in A$ 成立的 $\lambda > 0$ 的集合。
 
 $$
 \left\| \frac{x}{\lambda} \right\|_2 \le \frac{1}{2} \quad \text{or} \quad \left\| \frac{x}{\lambda} \right\|_2 = 1 \iff
@@ -243,13 +243,13 @@ then $q = \rho_V$.
 
 **(9)** Prove Lemma 5.2.4.
 
-## Seperation Theorems
+## Separation Theorems
 
-## Uniform Boundness Principle
+## Uniform Boundedness Principle
 
-先给出一致有界定理(有时也被称作是$Banach-Steinhaus$定理)的内容：
+先给出一致有界定理(有时也被称作是 $Banach-Steinhaus$ 定理)的内容：
 
-!!! tip "Uniform Boundness Principle"
+!!! tip "Uniform Boundedness Principle"
     Let $E$ be a Banach space and $F$ a normed space. Let $\left\{ T_{\lambda} \right\}_{\lambda\in\Lambda}\subseteq B(E,F)$ be a family of bounded continuous linear operators. Then the following are equivalent:
 
     (1) $\left\{ T_{\lambda}:\lambda\in\Lambda \right\}$ is uniformly bounded;
@@ -263,11 +263,11 @@ then $q = \rho_V$.
 
     $$\lVert T_{\lambda} \rVert \leqslant M,\forall\lambda\in\Lambda$$
 
-让我们听听`Gemini3`如何零基础讲解这个定理：
+让我们听听 `Gemini3` 如何零基础讲解这个定理：
 
 ---
 
-这个定理叫**一致有界性原理 (Uniform Boundedness Principle, UBP)**，也被称为 **Banach-Steinhaus 定理**。它是泛函分析中“三大定理”之一（另外两个是开映射定理和Hahn-Banach定理），非常核心。
+这个定理叫**一致有界性原理 (Uniform Boundedness Principle, UBP)**，也被称为 **Banach-Steinhaus 定理**。它是泛函分析中“三大定理”之一（另外两个是开映射定理和 Hahn-Banach 定理），非常核心。
 
 通俗地说，这个定理告诉我们：**“如果你能对每一个单独的点都保持有界，那么在某种条件下，你整体上就是有界的。”**
 
@@ -281,7 +281,7 @@ then $q = \rho_V$.
 *   **通俗理解**：一个没有“漏洞”的赋范空间。
 *   **定义**：它首先是一个赋范空间，其次它是**完备的 (Complete)**。
     *   **什么是完备？** 意思是如果你有一个柯西序列（一串越来越靠近彼此的向量），那么它们的极限点**一定还在这个空间里**，不会跑出去。
-    *   *例子*：实数集 $\mathbb{R}$ 是完备的（Banach空间），但有理数集 $\mathbb{Q}$ 就不是（因为有理数序列可以收敛到 $\sqrt{2}$，而 $\sqrt{2}$ 不在 $\mathbb{Q}$ 里）。
+    *   *例子*：实数集 $\mathbb{R}$ 是完备的（Banach 空间），但有理数集 $\mathbb{Q}$ 就不是（因为有理数序列可以收敛到 $\sqrt{2}$，而 $\sqrt{2}$ 不在 $\mathbb{Q}$ 里）。
     *   **为什么重要？** 这个定理成立的关键就在于 $E$ 必须是 Banach 空间。如果是普通赋范空间，定理不一定成立。
 
 (3) **Linear Operator (线性算子)** $T_\lambda$
@@ -362,7 +362,7 @@ $$ \|T_{n_k}(u_k)\| \ge \frac{1}{2} \|T_{n_k}\| > \frac{k^3}{2} $$
 
 $$ \sum_{n=1}^\infty \|x_n\| = \sum_{k=1}^\infty \|x_{n_k}\| = \sum_{k=1}^\infty \left\| \frac{1}{k^2} u_k \right\| = \sum_{k=1}^\infty \frac{1}{k^2} $$
 
-由于级数 $\sum \frac{1}{k^2}$ 收敛，且 $X$ 是Banach 空间，因此级数 $\sum_{n=1}^\infty x_n$ 在 $X$ 中收敛。这满足了条件(a)。
+由于级数 $\sum \frac{1}{k^2}$ 收敛，且 $X$ 是 Banach 空间，因此级数 $\sum_{n=1}^\infty x_n$ 在 $X$ 中收敛。这满足了条件(a)。
 
 然而，考察像序列 $T_n(x_n)$ 在 $n=n_k$ 时的行为：
 

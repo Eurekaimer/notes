@@ -1635,7 +1635,7 @@
 <p>设 <span class="arithmatex">\(P\)</span> 为一个数域，关于 <span class="arithmatex">\(x_{1},x_{2},\dots,x_{n}\)</span> 的二次齐次多项式<br />
 <span class="arithmatex">\(f(x_{1},x_{2},\dots,x_{n})=a_{11}x_{1}^{2}+2a_{12}x_{1}x_{2}+\dots+a_{nn}x_{n}^{2}\)</span>，其中 <span class="arithmatex">\(a_{ij}\in P\)</span>，那么多项式称为 <span class="arithmatex">\(P\)</span> 上的一个 <span class="arithmatex">\(n\)</span> 元二次型</p>
 </div>
-<p>很自然的会有想对称书写的想法使结果更加的美观</p>
+<p>很自然地会有想对称书写的想法使结果更加的美观</p>
 <div class="arithmatex">\[
 X= \begin{pmatrix}
 x_{1} \\
@@ -1673,7 +1673,7 @@ x_{n}=c_{n1}y_{1}  +c_{n2}y_{2}+\dots c_{nn}y_{n},
 <p>那么我们的目标也明确了，我们将用非退化的线性变换把二次型简化，同时用合同变换把对称矩阵化为简单的矩阵</p>
 <h2 id="_5">二次型的标准形<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <div class="admonition tip">
-<p class="admonition-title">定理4.1</p>
+<p class="admonition-title">定理 4.1</p>
 <p>任意二次型一定可以经过适当的非退化线性变换化为标准形（也就是新变量平方和的形式的二次型）</p>
 <div class="arithmatex">\[ d_{1}y_{1}^{2}+d_{2}y_{2}^{2}+\dots+d_{r}y_{r}^{2},r\leq n \]</div>
 </div>
@@ -1689,14 +1689,14 @@ x_{3} &amp;=&amp;y_{3}
 \]</div>
 <p>再根据标准形是一个对角阵得到一个小定理</p>
 <div class="admonition note">
-<p class="admonition-title">定理4.2</p>
+<p class="admonition-title">定理 4.2</p>
 <p>任意一个对称矩阵都合同于一个对角矩阵，这个对角矩阵称为对称矩阵的标准形</p>
 </div>
-<p>并且一个二次型的标准型不唯一，也就是系数不是唯一确定的，但是标准形中不为 <span class="arithmatex">\(0\)</span> 的平方项的个数是唯一确定的称为二次型的秩</p>
+<p>并且一个二次型的标准形不唯一，也就是系数不是唯一确定的，但是标准形中不为 <span class="arithmatex">\(0\)</span> 的平方项的个数是唯一确定的，称为二次型的秩</p>
 <h2 id="_6">二次型的规范形<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
 <h3 id="_7">复数域<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">定理5.1</p>
+<p class="admonition-title">定理 5.1</p>
 <p>任意一个复二次型都可以经过非退化线性变换化为</p>
 <div class="arithmatex">\[ z_{1}^{2}+z_{2}^{2}+\dots+z_{r}^{2} \]</div>
 <p>称为复二次型的规范形，规范形是唯一的</p>
@@ -1738,21 +1738,21 @@ x_{3} &amp;=&amp;y_{3}
 <p><strong>Answer</strong>=<span class="arithmatex">\(\sum\limits_{r=0}^{n}(r+1)= \frac{(n+2)(n+1)}{2}\)</span> 也就是按照秩先分类然后累加即可</p>
 <h2 id="_9">正定二次型<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h2>
 <p>如果在 <span class="arithmatex">\(f(x_{1},x_{2},\dots,x_{n})=a_{11}x_{1}^{2}+2a_{12}x_{1}x_{2}+\dots+a_{nn}x_{n}^{2}\)</span> 中任意取自变量值，得到的函数值始终为正，那么称为正定二次型，同时它的矩阵称为正定矩阵。</p>
-<p>因为标准形是否正定很好判断那么就可以考虑是否能用一个二次型的标准形是否正定来判断原本的二次型是否正定？也就是非退化线性变换是否保持二次型的正定性？</p>
+<p>因为标准形是否正定很好判断，那么就可以考虑能否通过判断一个二次型的标准形是否正定来判断原本的二次型是否正定？也就是非退化线性变换是否保持二次型的正定性？</p>
 <p>可以证明如果是正定的，那么经过非退化的线性变换仍然保持正定性不变</p>
 <p>可以很快得到下面的定理</p>
 <h3 id="_10">判定定理<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">定理6.1</p>
+<p class="admonition-title">定理 6.1</p>
 <p>实二次型 <span class="arithmatex">\(f(x_{1},x_{2},\dots,x_{n})\)</span> 是正定二次型 <span class="arithmatex">\(\iff\)</span> 正惯性指数为 <span class="arithmatex">\(n\)</span></p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">定理6.2</p>
+<p class="admonition-title">定理 6.2</p>
 <p>实对称矩阵是正定矩阵 <span class="arithmatex">\(\iff\)</span> 它与单位矩阵合同</p>
 </div>
 <p>合同变换保持实对称矩阵的正定性不变</p>
 <div class="admonition note">
-<p class="admonition-title">定理6.3</p>
+<p class="admonition-title">定理 6.3</p>
 <p>实对称矩阵 <span class="arithmatex">\(A\)</span> 是正定矩阵<span class="arithmatex">\(\iff\)</span><span class="arithmatex">\(\exists D,A=D'D\)</span></p>
 </div>
 <p>那么可以得到正定矩阵的行列式一定大于零，但是行列式大于零的实对称矩阵不一定是正定矩阵</p>
@@ -1762,7 +1762,7 @@ x_{3} &amp;=&amp;y_{3}
 </div>
 <p>很自然的推论有：</p>
 <div class="admonition note">
-<p class="admonition-title">定理6.4</p>
+<p class="admonition-title">定理 6.4</p>
 <p><span class="arithmatex">\(A\)</span> 是正定矩阵<span class="arithmatex">\(\iff\)</span><span class="arithmatex">\(A\)</span>的所有主子式全部大于零</p>
 </div>
 <h3 id="_11">性质<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h3>

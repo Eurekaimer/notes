@@ -15,7 +15,7 @@
 
 假设我们有一个非空集合 $I$，那么将 $I$ 上的二元关系 $\preceq$ 定义为 $I\times I$ 的一个子集，如果 $(x,y)\in\preceq$，那么记作 $x\preceq y$
 
-在二元关系的基础上满足额外的三条性质则称其偏序，给出偏序的定义：
+在二元关系的基础上满足额外的三条性质则称其为偏序，给出偏序的定义：
 
 二元关系满足：
 
@@ -28,14 +28,14 @@
 !!! example "字典序，lexicographical order"
     对于 $\mathbb{R}^{2}$ 上的一个偏序定义如下：
 
-    如果$x_{1}<x_{2}$或者在$x_{1}=x_{2},y_{1}\leqslant y_{2}$，那么称为$(x_{1},y_{1})\preceq (x_{2},y_{2})$
+    如果 $x_{1}<x_{2}$ 或者 $x_{1}=x_{2},y_{1}\leqslant y_{2}$，那么称为 $(x_{1},y_{1})\preceq (x_{2},y_{2})$
 
-为了下面阐述Zorn引理，我们还需要一些特殊概念：
+为了下面阐述 Zorn 引理，我们还需要一些特殊概念：
 
-+ 上界(Upper bound) $\forall y\in Y,y\preceq b(b\in X)$记作$Y\preceq b$，$b$称为$Y$的上界
++ 上界(Upper bound) $\forall y\in Y,y\preceq b(b\in X)$ 记作 $Y\preceq b$，$b$ 称为 $Y$ 的上界
 + 上确界(Supremum) 参考数学分析
-+ 极大元(Maximal element) 如果$z\preceq a\implies z=a$，即$X$中不存在严格大于$z$的元素
-+ 链(Chain) $X$的子集$C$如果满足其中任何两个元素均可比较($a\preceq b,b\preceq a$)，称为链(或者全序子集)
++ 极大元(Maximal element) 如果 $z\preceq a\implies z=a$，即 $X$ 中不存在严格大于 $z$ 的元素
++ 链(Chain) $X$ 的子集 $C$ 如果满足其中任何两个元素均可比较($a\preceq b,b\preceq a$)，称为链(或者全序子集)
 
 下面就是本节最重要的内容：
 
@@ -230,17 +230,17 @@ $$
 
 `Proof.`
 
-根据题意我们的目标是证明$(X \times Y, \rho_s)$是度量空间及可分性
+根据题意我们的目标是证明 $(X \times Y, \rho_s)$ 是度量空间及可分性
 
 **第一部分：证明它是度量空间**
 
-需要证明$\rho_s$满足三角不等式（非负性和对称性由$d_X, d_Y$的性质及范数定义显然成立）：
+需要证明 $\rho_s$ 满足三角不等式（非负性和对称性由 $d_X, d_Y$ 的性质及范数定义显然成立）：
 
-令$u = (x_1, y_1)$, $v = (x_2, y_2)$, $w = (x_3, y_3)$为$X \times Y$中的点。
+令 $u = (x_1, y_1)$, $v = (x_2, y_2)$, $w = (x_3, y_3)$ 为 $X \times Y$ 中的点。
 
 **情形 1: $1 \le s < \infty$**
-$\rho_s$的形式类似于$\mathbb{R}^2$上的$l_s$范数。
-根据$d_X$和$d_Y$的三角不等式：
+$\rho_s$ 的形式类似于 $\mathbb{R}^2$ 上的 $l_s$ 范数。
+根据 $d_X$ 和 $d_Y$ 的三角不等式：
 
 $$
 d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3)
@@ -250,9 +250,9 @@ $$
 d_Y(y_1, y_3) \le d_Y(y_1, y_2) + d_Y(y_2, y_3)
 $$
 
-我们需要证明$\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)$。
-令$A = (d_X(x_1, x_2), d_Y(y_1, y_2))$，$B = (d_X(x_2, x_3), d_Y(y_2, y_3))$。
-根据闵可夫斯基不等式（Minkowski inequality）对于$\mathbb{R}^2$上的$s$-范数$\|(a,b)\|_s = (a^s+b^s)^{1/s}$：
+我们需要证明 $\rho_s(u, w) \le \rho_s(u, v) + \rho_s(v, w)$。
+令 $A = (d_X(x_1, x_2), d_Y(y_1, y_2))$，$B = (d_X(x_2, x_3), d_Y(y_2, y_3))$。
+根据闵可夫斯基不等式（Minkowski inequality）对于 $\mathbb{R}^2$ 上的 $s$-范数 $\|(a,b)\|_s = (a^s+b^s)^{1/s}$：
 
 $$
 \|A + B\|_s \le \|A\|_s + \|B\|_s
@@ -262,8 +262,8 @@ $$
 
 **情形 2: $s = \infty$**
 $\rho_\infty(u, w) = \max\{d_X(x_1, x_3), d_Y(y_1, y_3)\}$。
-利用$d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)$。
-同理$d_Y(y_1, y_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)$。
+利用 $d_X(x_1, x_3) \le d_X(x_1, x_2) + d_X(x_2, x_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)$。
+同理 $d_Y(y_1, y_3) \le \rho_\infty(u, v) + \rho_\infty(v, w)$。
 两者的最大值自然也满足该不等式。
 
 **第二部分：证明可分性**
@@ -271,42 +271,42 @@ $\rho_\infty(u, w) = \max\{d_X(x_1, x_3), d_Y(y_1, y_3)\}$。
 **定义：** 一个度量空间是可分的，如果它包含一个可数的稠密子集。
 
 **证明：**
-设$X$和$Y$是可分的。
-令$A = \{a_1, a_2, \dots\}$是$X$中的可数稠密子集。
-令$B = \{b_1, b_2, \dots\}$是$Y$中的可数稠密子集。
-考虑乘积集合$S = A \times B = \{(a_i, b_j) : a_i \in A, b_j \in B\}$。
-由于$A, B$可数，它们的笛卡尔积$S$也是可数的。
+设 $X$ 和 $Y$ 是可分的。
+令 $A = \{a_1, a_2, \dots\}$ 是 $X$ 中的可数稠密子集。
+令 $B = \{b_1, b_2, \dots\}$ 是 $Y$ 中的可数稠密子集。
+考虑乘积集合 $S = A \times B = \{(a_i, b_j) : a_i \in A, b_j \in B\}$。
+由于 $A, B$ 可数，它们的笛卡尔积 $S$ 也是可数的。
 
-我们需要证明$S$在$(X \times Y, \rho_s)$中稠密。
+我们需要证明 $S$ 在 $(X \times Y, \rho_s)$ 中稠密。
 
-对于任意$(x, y) \in X \times Y$和任意$\epsilon > 0$：
+对于任意 $(x, y) \in X \times Y$ 和任意 $\epsilon > 0$：
 
-1.  因为$A$稠密，存在$a_i \in A$使得$d_X(x, a_i) < \delta$。
-2.  因为$B$稠密，存在$b_j \in B$使得$d_Y(y, b_j) < \delta$。
+1.  因为 $A$ 稠密，存在 $a_i \in A$ 使得 $d_X(x, a_i) < \delta$。
+2.  因为 $B$ 稠密，存在 $b_j \in B$ 使得 $d_Y(y, b_j) < \delta$。
 
-我们来选取合适的$\delta$。
-**当$1 \le s < \infty$时：**
+我们来选取合适的 $\delta$。
+**当 $1 \le s < \infty$ 时：**
 
 $$
 \rho_s((x,y), (a_i, b_j)) = [d_X(x, a_i)^s + d_Y(y, b_j)^s]^{1/s} < [\delta^s + \delta^s]^{1/s} = \delta \cdot 2^{1/s}
 $$
 
-取$\delta = \frac{\epsilon}{2^{1/s}}$，则$\rho_s < \epsilon$。
+取 $\delta = \frac{\epsilon}{2^{1/s}}$，则 $\rho_s < \epsilon$。
 
-**当$s = \infty$时：**
+**当 $s = \infty$ 时：**
 
 $$
 \rho_\infty((x,y), (a_i, b_j)) = \max\{d_X(x, a_i), d_Y(y, b_j)\} < \max\{\delta, \delta\} = \delta
 $$
 
-取$\delta = \epsilon$，则$\rho_\infty < \epsilon$。
+取 $\delta = \epsilon$，则 $\rho_\infty < \epsilon$。
 
-由此可见，对于任意$(x, y)$和$\epsilon$，都能在$S$中找到点使其距离小于$\epsilon$。故$S$是稠密的。
-因为$S$是可数稠密子集，所以$(X \times Y, \rho_s)$是可分的。
+由此可见，对于任意 $(x, y)$ 和 $\epsilon$，都能在 $S$ 中找到点使其距离小于 $\epsilon$。故 $S$ 是稠密的。
+因为 $S$ 是可数稠密子集，所以 $(X \times Y, \rho_s)$ 是可分的。
 
 ## Topological spaces
 
-关于Box topology和Product topology的问题可以参考MSE上的一个回答：[Why are box topology and product topology different on infinite products of topological spaces?](https://math.stackexchange.com/questions/871610/why-are-box-topology-and-product-topology-different-on-infinite-products-of-topo)
+关于 Box topology 和 Product topology 的问题可以参考 MSE 上的一个回答：[Why are box topology and product topology different on infinite products of topological spaces?](https://math.stackexchange.com/questions/871610/why-are-box-topology-and-product-topology-different-on-infinite-products-of-topo)
 
 我们需要知道的仅仅是乘积拓扑是能够相容的最弱的拓扑，而与之相对应的是商拓扑是最强的拓扑
 
@@ -323,7 +323,7 @@ Suppose on the contrary that $\bigcap_{\lambda \in \Lambda} F_\lambda$ is empty.
 
 $$X = X \setminus \bigcap_{\lambda \in \Lambda} F_\lambda = \bigcup_{\lambda \in \Lambda} X \setminus F_\lambda.$$
 
-So $\{X \setminus F_\alpha\}_{\alpha \in \Lambda}$ is an open cover of $X$. Since $X$ is compact, there is finite subcover,
+So $\{X \setminus F_\alpha\}_{\alpha \in \Lambda}$ is an open cover of $X$. Since $X$ is compact, there is a finite subcover,
 
 $$X = \bigcup_{j=1}^n X \setminus F_{\lambda_j} = X \setminus \bigcap_{j=1}^n F_{\lambda_j};$$
 

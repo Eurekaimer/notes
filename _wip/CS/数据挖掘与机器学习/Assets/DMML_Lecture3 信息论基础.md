@@ -11,7 +11,7 @@
         + [Shannon entropy in the context of machine learning and AI](https://medium.com/swlh/shannon-entropy-in-the-context-of-machine-learning-and-ai-24aee2709e32)
         + Lecture Slides(NKU_DMML, Lecturer: Fu)
 
-关于[Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf) 本人很推荐，写的很有趣，开篇是三个信息论在工程学中的应用，然后对于信息论的一些基本概念也都有所提及，且讲述的很详细
+关于 [Stanford EE376A](https://web.stanford.edu/class/ee376a/files/scribes/lecture_notes.pdf)，本人很推荐，写得很有趣，开篇是三个信息论在工程学中的应用，然后对于信息论的一些基本概念也都有所提及，且讲述得很详细
 
 !!! quote "Birth"
     It is among the few disciplines fortunate to have a precise date of birth: 1948, with the publication of Claude E. Shannon’s paper entitled A Mathematical Theory of Communication. Shannon’s Information theory had a profound impact on our understanding of the concepts in communication.
@@ -25,7 +25,7 @@
 + 有损压缩
 
 !!! tip "扩展"
-    关于上述的这三个例子在 Stanford 的 Notes 的后续章节中都有一个 Chapter 进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入的了解的话，建议仔细阅读后续的章节
+    关于上述的这三个例子，在 Stanford 的 Notes 的后续章节中都有一个 Chapter 进行了比较详细的介绍，如果对于上述例子比较感兴趣且想更加深入地了解的话，建议仔细阅读后续的章节
 
 ### Lossless compression
 
@@ -38,7 +38,7 @@ P(U=b)&=P(U=c)=0.15
 \end{aligned}
 $$
 
-Compare with traditional encoding way, a = 00 b = 01 c = 10, however, we can use a = 0 due to the lettter appears more often, b = 10 c = 11. Such that, we can find that this code satisfies the prefix condition, meaning no codeword is the prefix of another codeword, which allows us to decode a message consisting of stream of bits without any ambiguity.
+Compared with the traditional encoding scheme, a = 00, b = 01, c = 10, we can use a = 0 because the letter appears more often, with b = 10 and c = 11. We can find that this code satisfies the prefix condition, meaning no codeword is the prefix of another codeword, which allows us to decode a message consisting of a stream of bits without any ambiguity.
 
 $$
 \overline{L}=1 \times P(U=a)+2\times P(U=b)+2\times P(U=c)=1.3
@@ -58,7 +58,7 @@ Can we do it better? Yes! We can encode two values at a time instead of encoding
 | cb             | 0.0225      | 110110   |
 | cc             | 0.0225      | 110111   |
 
-If we use the above encoding scheme the the expected number of bits used per source symbol is **1.1975**
+If we use the above encoding scheme, the expected number of bits used per source symbol is **1.1975**
 
 推广上述思想，我们可以考虑一族以整数 $k$ 为索引的编码方案。给定一个整数 $k$，我们可以用一个满足前缀条件的方案一次编码 $k$ 个值，并将较短的码字分配给更多的普通符号。在某种最优编码方案下，每个值的期望比特数会随着 $k$ 的增加而减少，这似乎是合理且 work 的
 
@@ -85,7 +85,7 @@ $\forall \varepsilon >0$, $\exists$ family of schemes, such that the average cod
 
 ### Channel coding
 
-仍然考虑一个源向外发射信号，但是这次只有两个可能 $U_{i}\in \left\{ 0,1 \right\}$，服从伯努利分布，此外增加噪声，有$q< \frac{1}{2}$的概率使得原本的编码反转，因此令最终的输出为$Y_{i}$
+仍然考虑一个源向外发射信号，但是这次只有两个可能 $U_{i}\in \left\{ 0,1 \right\}$，服从伯努利分布，此外增加噪声，有 $q< \frac{1}{2}$ 的概率使得原本的编码反转，因此令最终的输出为 $Y_{i}$
 
 $$
 Y_{i}=X_{i} \oplus W_{i},W_{i}\sim Ber(q)
@@ -93,9 +93,9 @@ $$
 
 where $\oplus$ is the $XOR$ operator
 
-令$p_{e}=q< \frac{1}{2}$作为每个信源比特发生错误的概率，自然会想到我们希望能够降低$p_{e}$的值，我们可以采用重复编码的方法，例如对某个接收到的比特发送$k$次，将其中接收到的出现次数最多的比特作为真实值接受，由此可以降低错误发生率
+令 $p_{e}=q< \frac{1}{2}$ 作为每个信源比特发生错误的概率，自然会想到我们希望能够降低 $p_{e}$ 的值，我们可以采用重复编码的方法，例如对某个接收到的比特发送 $k$ 次，将其中接收到的出现次数最多的比特作为真实值接受，由此可以降低错误发生率
 
-但是我们还需要考虑重复编码使用的信道空间扩大的问题，因此引入比特率(bit rate)的概念，记为$R$，在重复发送3次的例子中我们认为比特率为$\frac{1}{3}$，而不重复编码时比特率为$1$
+但是我们还需要考虑重复编码使用的信道空间扩大的问题，因此引入比特率 (bit rate) 的概念，记为 $R$，在重复发送 3 次的例子中我们认为比特率为 $\frac{1}{3}$，而不重复编码时比特率为 $1$
 
 !!! tip "Theorem(Bit rate limitation)"
     $\exists C>0$ and $\exists$ family of schemes with $R<C$ satisfying $p_{e}\to 0$
@@ -103,17 +103,17 @@ where $\oplus$ is the $XOR$ operator
 In fact, the largest such C is known as the **channel capacity** of a channel, which represents the largest bit rate ( the largest C ) that still allows for reliable communication.
 
 !!! example "Two examples"
-    + Binary Symmtric Channel
+    + Binary Symmetric Channel
     The channel capacity of a binary symmetric channel with bit-flipping probability $q$ is $1-H(X),X\sim Ber(q)$. Moreover if we let $X\sim Ber(q)$ and $Y\sim Ber(p_{e})$, we will see that a bit rate $R$ such that $R< \frac{1-H(X)}{1-H(Y)}$ is achievable
     + Additive White Gaussian Noise (AWGN) Channel
-    Assumptions are like before, and we think $Y_{i}=X_{i}+N_{i},N_{i}\sim N(0,\sigma^{2})$. We want to develop a scheme so that we can reliably reconstruct $U_i$ from the given $Y_i$. One idea is make $X_{i}$ a large positive value if $U_{i}=1$ and $X_i$ is a large negative value if $U_{i}=0$. Usually, we suppose there is an additional constraint on the average power of the tansmitted signal, s.t. we require $\frac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{2}\leq p$
+    Assumptions are like before, and we think $Y_{i}=X_{i}+N_{i},N_{i}\sim N(0,\sigma^{2})$. We want to develop a scheme so that we can reliably reconstruct $U_i$ from the given $Y_i$. One idea is to make $X_{i}$ a large positive value if $U_{i}=1$ and to make $X_i$ a large negative value if $U_{i}=0$. Usually, we suppose there is an additional constraint on the average power of the transmitted signal, s.t. we require $\frac{1}{n}\sum\limits_{i=1}^{n}X_{i}^{2}\leq p$
 
 For a given value $p$, in fact, we will see that
 
 !!! tip "Theorem"
     If the rate of transmission is $< \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then $\exists$ family of schemes that communicate reliably. And if the rate of transmission is $> \frac{1}{2}\log_{2}\left( 1+ \frac{p}{\sigma^{2}} \right)$, then there is no family of schemes which communicates reliably.
 
-The RATIO $\frac{p}{\sigma^{2}}$ is reffered to as SNR(signal-to-noise ratio)/信噪比
+The RATIO $\frac{p}{\sigma^{2}}$ is referred to as SNR (signal-to-noise ratio)/信噪比
 
 ### Lossy compression
 
@@ -132,7 +132,7 @@ $$
 D\overset{\Delta}{=}\mathbb{E}[(U_{i}-V_{i})^{2}]
 $$
 
-而根据一个常见的结论可以知道使得均方误差(MSE)最小的一个解就是取条件期望(The optimal estimation rule for minimum mean squared error is **the conditional expectation**)
+而根据一个常见的结论可以知道，使得均方误差 (MSE) 最小的一个解就是取条件期望 (The optimal estimation rule for minimum mean squared error is **the conditional expectation**)
 
 $$
 \begin{aligned}
@@ -151,12 +151,12 @@ $$
 
 ### What is information
 
-信息是需要有上下文(context)，有使用价值，经过处理后能够变得有意义，所谓价值就是能够影响决策和行为，具有消除不确定性的好处；它还需要建立在数据(data)基础上，因此我们可以给出信息的粗略定义：原始数据在被接收、解释和赋予上下文后，才能变成有用的信息；而信息的价值又体现在消除不确定性，因此我们可以认为信息的多少也取决于不确定性的大小
+信息需要有上下文 (context)，有使用价值，经过处理后能够变得有意义，所谓价值就是能够影响决策和行为，具有消除不确定性的好处；它还需要建立在数据 (data) 基础上，因此我们可以给出信息的粗略定义：原始数据在被接收、解释和赋予上下文后，才能变成有用的信息；而信息的价值又体现在消除不确定性，因此我们可以认为信息的多少也取决于不确定性的大小
 
 ### What is information theory
 
 !!! quote "Background"
-    信息论由Claude Shannon(1916 - 2001)于1948年创立，核心任务是研究信息如何量化、存储与运输，探索其基本极限
+    信息论由 Claude Shannon(1916 - 2001) 于 1948 年创立，核心任务是研究信息如何量化、存储与运输，探索其基本极限
 
     几个关键概念：
 
@@ -177,12 +177,12 @@ $$
 
 ## 熵以及相关概念
 
-本章节将给出一些有关于信息度量(measures of information)的关键概念，如熵、交叉熵、互信息、KL散度(在通信系统中也叫做相对熵)
+本章节将给出一些有关于信息度量 (measures of information) 的关键概念，如熵、交叉熵、互信息、KL 散度（在通信系统中也叫做相对熵）
 
-在详细的介绍熵之前，我们有必要先引入惊奇函数(surprise function)
+在详细介绍熵之前，我们有必要先引入惊奇函数 (surprise function)
 
 !!! note "Definition(surprise function)"
-    这个函数用于衡量对于结果的“惊奇程度”，故名思义，该事件发生的概率越小，惊奇函数的值越大
+    这个函数用于衡量对于结果的“惊奇程度”，顾名思义，该事件发生的概率越小，惊奇函数的值越大
 
     $$s(u) \overset{\Delta}{=}\log \frac{1}{p(u)}$$
 
@@ -190,45 +190,45 @@ $$
 
 >The fundamental concept behind Shannon entropy is the so-called self-information of an event, sometimes called surprisal.
 
-### 自信息(Self-Information)
+### 自信息 (Self-Information)
 
 !!! note "Definition(Self-information)"
-    对于离散随机变量$X$取值$x$，其自信息为：
+    对于离散随机变量 $X$ 取值 $x$，其自信息为：
 
     $$I(x)=f(P(x))=-\log_{b}P(x)$$
 
-    其中$P(x)$为事件$X=x$的概率，$b$为对数底
+    其中 $P(x)$ 为事件 $X=x$ 的概率，$b$ 为对数底
 
 根据定义式即可得到一些有关于自信息的性质：
 
-+ 非负性：根据定义即可得到(概率总是小于等于1)
-+ 单调性：越可能发生的事件所拥有的自信息越小(事件越可能发生，信息量越少)
++ 非负性：根据定义即可得到（概率总是小于等于 1）
++ 单调性：越可能发生的事件所拥有的自信息越小（事件越可能发生，信息量越少）
 + 确定事件
 + 不可能事件
 
 ### 香农熵
 
-我们从上面可以知道自信息是衡量单个事件发生的惊讶度，而香农熵$H(X)$则用于衡量整个随机变量的平均不确定性，也叫做微分熵，信息熵
+我们从上面可以知道自信息是衡量单个事件发生的惊讶度，而香农熵 $H(X)$ 则用于衡量整个随机变量的平均不确定性，也叫做微分熵，信息熵
 
 !!! note "Definition(香农熵)"
     离散随机变量的香农熵:
-    设离散随机变量$X\sim \mathcal{X}=\left\{ x_{1},x_{2},\dots,x_{n} \right\}$，概率分布为$P(X)=\left\{ p(x_{1}),p(x_{2}),\dots,p(x_{n}) \right\}$，香农熵的定义为：
+    设离散随机变量 $X\sim \mathcal{X}=\left\{ x_{1},x_{2},\dots,x_{n} \right\}$，概率分布为 $P(X)=\left\{ p(x_{1}),p(x_{2}),\dots,p(x_{n}) \right\}$，香农熵的定义为：
 
     $$H(X)=\mathbb{E}[I(X)]=\sum\limits_{i=1}^{n} p(x_{i})I(x_{i})=-\sum\limits_{i=1}^{n} p(x_{i})\log p(x_{i})$$
 
     连续随机变量的微分熵:
-    对于连续随机变量$X$的概率密度函数$p(x)$，微分熵的定义为
+    对于连续随机变量 $X$ 的概率密度函数 $p(x)$，微分熵的定义为
 
     $$H(X)=-\int_{-\infty}^{\infty} p(x)\log p(x) \, dx $$
 
-物理意义来讲$H(X)$代表编码随机变量$X$所需最小的平均比特数
+从物理意义来讲，$H(X)$ 代表编码随机变量 $X$ 所需的最小平均比特数
 
 离散香农熵的性质：
 
-+ 非负性 根据定义可以很显然的得到
++ 非负性：根据定义可以很显然地得到
 + 最大值性质：系数均匀分布均为 $\frac{1}{n}$ 的情况
 
-可以使用Jensen不等式来得到有关熵的一个上界：
+可以使用 Jensen 不等式来得到有关熵的一个上界：
 
 $$
 \begin{aligned}
@@ -239,9 +239,9 @@ H(U)&=\mathbb{E}\left[ \log \frac{1}{p(u)} \right]\\
 \end{aligned}
 $$
 
-根据Jensen不等式的取等条件当且仅当$P(u)= \frac{1}{m}\forall u$
+根据 Jensen 不等式的取等条件，当且仅当 $P(u)= \frac{1}{m}\forall u$ 时取等
 
-对于一个概率质量函数$q$，被当作$p$定义在相同的字母表，定义
+对于一个概率质量函数 $q$，它与 $p$ 定义在相同的字母表上，定义
 
 $$
 H_{q}(U)\overset{\Delta}{=}\sum\limits_{u\in \mathcal{U}}p(u) \log \frac{1}{q(u)}
@@ -253,7 +253,7 @@ $$
 H(U)\leqslant H_{q}(U)
 $$
 
-当且仅当$q=p$时取等
+当且仅当 $q=p$ 时取等
 
 `Proof.`
 
@@ -265,9 +265,9 @@ H(U)-H_{q}(U)&\leqslant \log \mathbb{E}\left[  \frac{q(u)}{p(u)} \right]\\
 \end{aligned}
 $$
 
-按照课程讲义中这里直接引入联合熵，但是EE376A选择直接进入Relative Entropy，个人认为后者有其合理性，因为这里引用的有关错误识别的性质在Relative Entropy中有更加生动的解释——KL散度始终大于等于0，当且仅当$p=q$时取到零
+按照课程讲义，这里直接引入联合熵，但是 EE376A 选择直接进入 Relative Entropy，个人认为后者有其合理性，因为这里引用的有关错误识别的性质在 Relative Entropy 中有更加生动的解释——KL 散度始终大于等于 0，当且仅当 $p=q$ 时取到零
 
-所以不妨先写下定义(剧透)：
+所以不妨先写下定义（剧透）：
 
 !!! note "Definition(Relative Entropy/KL divergence)"
     An important measure of distance between probability measures is relative entropy, or the $Kullback-Leibler$ divergence
@@ -276,33 +276,33 @@ $$
 
 更加深入的内容在后续补充
 
-### 联合熵(Joint Entropy)
+### 联合熵 (Joint Entropy)
 
 !!! note "Definition(Joint Entropy)"
-    设$(X,Y)$是联合离散随机变量，其联合分布为$p(x,y)$
+    设 $(X,Y)$ 是联合离散随机变量，其联合分布为 $p(x,y)$
 
     $$H(X,Y)=-\sum\limits_{x,y}p(x,y)\log p(x,y)$$
 
-联合熵是用于衡量同时观测$X,Y$的不确定性，若是两个随机变量相互独立，显然可以得到$H(X,Y)=H(X)+H(Y)$，推广到任意多个随机变量的联合熵(Obviously)
+联合熵用于衡量同时观测 $X,Y$ 的不确定性，若是两个随机变量相互独立，显然可以得到 $H(X,Y)=H(X)+H(Y)$，推广到任意多个随机变量的联合熵 (Obviously)
 
-### 条件熵(Conditional Entropy)
+### 条件熵 (Conditional Entropy)
 
 !!! note "Definition(Conditional Entropy)"
-    条件熵$H(Y|X)$定义为(一般使用第二个表达式)：
+    条件熵 $H(Y|X)$ 定义为（一般使用第二个表达式）：
 
     $$\begin{aligned}
     H(Y|X)&=-\sum\limits_{x,y}p(x,y)\log p(y|x)\\
     &=\sum\limits_{x}p(x)H(Y|X=x)
     \end{aligned}$$
 
-也相当显然，表示已知$X$的条件下，$Y$仍然存在的不确定性，若$X,Y$独立，则$H(Y|X)=H(Y)$，若是$Y$由$X$决定则$H(Y|X)=0$
+也相当显然，表示已知 $X$ 的条件下，$Y$ 仍然存在的不确定性，若 $X,Y$ 独立，则 $H(Y|X)=H(Y)$，若是 $Y$ 由 $X$ 决定则 $H(Y|X)=0$
 
 !!! tip "联合熵与条件熵的关系"
-    可以将这些信息熵当作概率处理，而条件熵就对应条件概率，因此我们可以提出一套链式法则(Chain Rule for Entropy)：
+    可以将这些信息熵当作概率处理，而条件熵就对应条件概率，因此我们可以提出一套链式法则 (Chain Rule for Entropy)：
 
     $$H(X,Y)=H(X)+H(Y|X)=H(Y)+H(X|Y)$$
 
-也就是说联合不确定性可以分解为一个变量的不确定性+另一个变量在其条件下的不确定性，然后我们可以得出 **互信息(Mutual Information)** 的概念
+也就是说联合不确定性可以分解为一个变量的不确定性+另一个变量在其条件下的不确定性，然后我们可以得出 **互信息 (Mutual Information)** 的概念
 
 $$
 I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)
@@ -310,10 +310,10 @@ $$
 
 相当于它们所共有的一部分信息，而互信息就是为了衡量通过已知一个变量来减少另一个变量不确定性的量
 
-## $KL$散度
+## $KL$ 散度
 
 !!! tip "$KL\ Divergence$(Kullback and Leibler, 1951)"
-    用于衡量真实分布$P$与近似分布$Q$之间的差异：
+    用于衡量真实分布 $P$ 与近似分布 $Q$ 之间的差异：
 
     $$ \begin{aligned}
     D_{KL}(P||Q)&=\sum\limits_{x\in \mathcal{X}}P(x)\log \frac{P(x)}{Q(x)}\\

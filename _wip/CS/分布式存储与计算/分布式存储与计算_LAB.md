@@ -4,11 +4,11 @@
 
 !!! note "第一次上机实验"
     目的：熟悉 Linux 系统和基本命令
-    实验环境：Linux 操作系统（可以使用 Ubuntu on windows,iOS 系统中的 Term）
+    实验环境：Linux 操作系统（可以使用 Ubuntu on Windows、iOS 系统中的 Term）
 
-    对于大多数未曾使用过 Linux 操作系统的人来说，使用 WSL 是一种捷径，使用 Ubuntu 则可以更好的修改各种错误（因为大多数人都使用这一发行版，并且本教程也基于 Ubuntu）
+    对于大多数未曾使用过 Linux 操作系统的人来说，使用 WSL 是一种捷径，使用 Ubuntu 则可以更好地修改各种错误（因为大多数人都使用这一发行版，并且本教程也基于 Ubuntu）
 
-    跳过 WSL 的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用 Virtual Box，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况
+    跳过 WSL 的安装，因为实在是没有难度，你当然也可以使用虚拟机，我推荐你使用 VirtualBox，只需要修改教程相关的路径部分即可，但是我需要提醒你不要吝啬虚拟机的内存，否则会出现节点资源不足而停摆的情况
 
 ### 0.帮助命令
 
@@ -20,7 +20,7 @@ man ls & ls --help
 
 ### 1.文件操作命令的使用
 
-+ 查看文件与目录 ls 进入 Linux 系统，输入 ls 回车(回车后命令运行，此后的说明中省略回车 尝试 ls 的其它参数
++ 查看文件与目录 ls：进入 Linux 系统，输入 ls 回车（回车后命令运行，此后的说明中省略回车），尝试 ls 的其它参数
 
 ```Shell
 ls -a
@@ -85,7 +85,7 @@ rmdir mytest1
 pwd
 ```
 
-+ 移动 test.txt 文件（假设该文件在~/目录下)到当前目录下
++ 移动 test.txt 文件（假设该文件在 ~/ 目录下）到当前目录下
 
 ```Shell
 mv test.txt ./ cd ~ rmdir mytest\
@@ -149,11 +149,11 @@ mkdir module
 
 + JDK 的安装
 
-首先进入网址：[JDK_downloads](https://www.oracle.com/java/technologies/downloads/)，你可以在Java achieve中找到对应的版本，例如我使用JDK8就使用了[jdk-8u451-linux-x64.tar.gz](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)，安装在windows下即可
+首先进入网址：[JDK_downloads](https://www.oracle.com/java/technologies/downloads/)，你可以在 Java archive 中找到对应的版本，例如我使用 JDK8 就使用了 [jdk-8u451-linux-x64.tar.gz](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)，安装在 Windows 下即可
 
 + Hadoop 的安装
 
-直接进入[官网](https://hadoop.apache.org/releases.html)安装即可，选择Binary版本，同样安装在windows下
+直接进入[官网](https://hadoop.apache.org/releases.html)安装即可，选择 Binary 版本，同样安装在 Windows 下
 
 安装之后需要记住位置，后续需要在 wsl 中通过 mnt 来进行传输
 
@@ -176,7 +176,7 @@ wsl：/mnt/d/Users/YourName/Documents/my_file.txt
 mv /mnt/d/Users/YourName/Documents/my_file.txt ~/target_directory/
 ```
 
-将那两个安装包从 windows 下移动到 `~/software` 下（注意文件名需要根据你下载到的实际文件修改，路径也需要根据实际所处的位置修改）
+将那两个安装包从 Windows 下移动到 `~/software` 下（注意文件名需要根据你下载到的实际文件修改，路径也需要根据实际所处的位置修改）
 
 以 `hadoop-3.4.2.tar.gz` 为例
 
@@ -423,8 +423,8 @@ hdfs dfs -cat /output/part-r-00000
 第四次上机实验的内容为 YARN 的配置，具体内容如下：
 
 + 配置并启动 YARN
-+ Yarn 中添加队列 small,并将任务提交至 small 队列运行
-	+ 修改 capacity-scheduler.xml 文件（最好提前备份该文件 cp capacity-scheduler.xml capacity-scheduler.xml.bak).修改内容包括增加所有和 small 队列相关的属性，并且分配 default 队列和 small 队列之间的资源占有比例。
++ YARN 中添加队列 small，并将任务提交至 small 队列运行
+	+ 修改 capacity-scheduler.xml 文件（最好提前备份该文件 cp capacity-scheduler.xml capacity-scheduler.xml.bak）。修改内容包括增加所有和 small 队列相关的属性，并且分配 default 队列和 small 队列之间的资源占有比例。
 	+ 向指定队列提交任务
 		$hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-example-3.4.2.jar pi -Dmapreduce.job.queuename=small 10 10
 	+ 在 yarn 的 web 服务页面查看提交的任务情况和队列情况
@@ -448,7 +448,7 @@ cp mapred-site.xml.template mapred-site.xml
 vim mapred-site.xml
 ```
 
-在两个< configuratkion >插入< property > 最后如下：
+在两个 configuration 标签之间插入 property 标签，最后如下：
 
 ```Shell
 <configuration>
@@ -533,7 +533,7 @@ $HADOOP_HOME/sbin/mr-jobhistory-daemon.sh start historyserver
 
 ![Lab3_1](lab3_1.png)
 
-第三条命令报错是因为给出的这个命令是 Hadoop2.x 版本的，但是它会自动转换为 3.x
+第三条命令报错是因为给出的这个命令是 Hadoop 2.x 版本的，但是它会自动转换为 3.x
 
 如果在 `$HADOOP_HOME` 目录下：
 
@@ -574,7 +574,7 @@ cp capacity-scheduler.xml capacity-scheduler.xml.bak
 vim capacity-scheduler.xml
 ```
 
-这个是比较麻烦的，你需要在文件的 `<configuration>` 和 `</configuration>` 标签之间，加入以下内容。这些配置定义了 `root` 队列下的子队列 `default` 和 `small`，并分配了资源比例（70% 给 `default`，30% 给 `small`）（比例可以调，只需要加和 100%即可）
+这个是比较麻烦的，你需要在文件的 `<configuration>` 和 `</configuration>` 标签之间，加入以下内容。这些配置定义了 `root` 队列下的子队列 `default` 和 `small`，并分配了资源比例（70% 给 `default`，30% 给 `small`）（比例可以调，只需要加和为 100% 即可）
 
 ```Shell
 <property>
@@ -647,12 +647,12 @@ start-yarn.sh
 yarn rmadmin -refreshQueues
 ```
 
-然后尝试访问http://localhost:8088
+然后尝试访问 http://localhost:8088
 
 有时候因为防火墙无法访问，所以采取 http 协议，或者把电脑防火墙关掉
 
 !!! warning "关于最后一步提交之后但是无法开始任务"
-    也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况（如果使用虚拟机），你需要调整节点最大可用内存，或者降低任务需要内存，也可以虚报内存（所以说安装虚拟机的时候不要把自己的内存配置写的太小了）
+    也就是一直卡在提交结束，但是任务迟迟没有开始，有可能是因为你的任务需求内存大于你的节点能够提供的内存，对于这种情况（如果使用虚拟机），你需要调整节点最大可用内存，或者降低任务需要的内存，也可以虚报内存（所以说安装虚拟机的时候不要把自己的内存配置写得太小了）
 
 ## Lab 4
 
@@ -679,7 +679,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 # Spark 版本（假设下载）: spark-3.4.2-bin-without-hadoop.tgz
 ```
 
-由于老师的安装文档比较老因此使用的是比较古老的 Spark 版本，只能去[Apache Archive](https://archive.apache.org/dist/spark/spark-3.4.2/)下载(这是本次实验耗时最久的地方)，然后就是正常移动文件(WSL)，如果是虚拟机或是本地Linux正常移动即可
+由于老师的安装文档比较老，因此使用的是比较古老的 Spark 版本，只能去 [Apache Archive](https://archive.apache.org/dist/spark/spark-3.4.2/) 下载（这是本次实验耗时最久的地方），然后就是正常移动文件 (WSL)，如果是虚拟机或是本地 Linux，正常移动即可
 
 ```shell
 mv /mnt/e/spark-3.4.2-bin-without-hadoop.tgz ~/software/
@@ -778,7 +778,7 @@ spark-shell
 
 sbt（Simple Build Tool）用于打包 Scala 编写的 Spark 应用程序
 
-安装的话：[Github](https://github.com/sbt/sbt/releases/download/v1.9.9/sbt-1.9.9.tgz)，[官网](https://www.scala-sbt.org/download/)
+安装的话：[GitHub](https://github.com/sbt/sbt/releases/download/v1.9.9/sbt-1.9.9.tgz)，[官网](https://www.scala-sbt.org/download/)
 
 安装好了仍然解压安装包
 

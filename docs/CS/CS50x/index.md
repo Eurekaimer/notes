@@ -18,7 +18,7 @@ tags:
 
 采用如下工作流：
 
-1. 课程提供了相当丰富的 Notes 几乎可以自学 (bushi)
+1. 课程提供了相当丰富的 Notes，几乎可以自学 (bushi)
 2. 完全可以不做笔记认真听，因为确实难度不太大
 3. 语言 debuff 在经过长时间听力后可以有好转
 
@@ -26,14 +26,14 @@ tags:
 
 ### Before learning
 
-1. You can search the [csdiy.wiki](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/C/CS50/?h=cs50) to get first rough information.
-2. Reading the syllabus in the [CS50x](https://cs50.harvard.edu/x/2025/syllabus/) and get a concept of the workflow.
+1. You can search [csdiy.wiki](https://csdiy.wiki/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/C/CS50/?h=cs50) to get some initial information.
+2. Read the syllabus of [CS50x](https://cs50.harvard.edu/x/2025/syllabus/) and get an idea of the workflow.
 
 !!! info "[Week 0 Scratch](./Week%200%20Scratch.md)"
     - [x] Finish Time: 2024.12.06
     	- [x] Video(2h)
     - [x] Problem Set 0
-    	Have a try in problem set (not make a project but know basic operations)
+    	Try the problem set (not to make a project, but to learn the basic operations).
     - [x] Scratch [website](https://scratch.mit.edu/)
 
 !!! info "[Week 1 C](./Week%201%20C.md)"
@@ -76,7 +76,4 @@ tags:
     	- [x] Section
     	- [x] Shorts
     - [x] Problem Set 5
-
-
-
 

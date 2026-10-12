@@ -1143,7 +1143,7 @@
   <a href="#bernoulli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bernoulli分布的假设检验
+        Bernoulli 分布的假设检验
       
     </span>
   </a>
@@ -1170,7 +1170,7 @@
   <a href="#p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        \(p\)值
+        \(p\) 值
       
     </span>
   </a>
@@ -1808,7 +1808,7 @@
   <a href="#bernoulli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bernoulli分布的假设检验
+        Bernoulli 分布的假设检验
       
     </span>
   </a>
@@ -1835,7 +1835,7 @@
   <a href="#p" class="md-nav__link">
     <span class="md-ellipsis">
       
-        \(p\)值
+        \(p\) 值
       
     </span>
   </a>
@@ -1940,7 +1940,7 @@
 
 
 <h1 id="_1">假设检验——显著性检验<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
-<p>首先先对假设检验进行一个简单的阐述，假设检验 (hypothesis testing) 最早由 K.Pearson 于 1900 年提出，之后由 Fisher 进行细化发展，最终由 Neyman，E.Pearson 发展成熟，后又由 A.Wald 发展为统计决策理论。</p>
+<p>首先对假设检验进行一个简单的阐述，假设检验 (hypothesis testing) 最早由 K.Pearson 于 1900 年提出，之后由 Fisher 进行细化发展，最终由 Neyman，E.Pearson 发展成熟，后又由 A.Wald 发展为统计决策理论。</p>
 <p>参数假设检验主要包含：显著性检验 (significance test) 和最大功效检验 (most powerful test) 两部分，本章介绍的就是显著性检验，下一章介绍最大功效检验</p>
 <h2 id="_2">基本概念<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
 <p>主要是对下面的概念有一个认识：</p>
@@ -1987,19 +1987,19 @@ H_{0}:\mu \leqslant\mu_{0}\longleftrightarrow H_{1}:\mu&gt;\mu_{0}\\
 H_{0}:\mu \geqslant\mu_{0}\longleftrightarrow H_{1}:\mu&lt; \mu_{0}
 \end{aligned}
 \]</div>
-<p>注意<span class="arithmatex">\(\mu_{0}\)</span>是已知的常数，上述假设有单侧、双侧的，简单、复杂的，<span class="arithmatex">\(\sigma^{2}\)</span>的已知与否也会对问题有影响，主要体现在统计量零分布的确定上，因此分类讨论<span class="arithmatex">\(\sigma^{2}\)</span>是否已知</p>
-<h4 id="sigma2sigma_02"><span class="arithmatex">\(\sigma^{2}=\sigma_{0}^{2}\)</span>已知<a class="headerlink" href="#sigma2sigma_02" title="Permanent link">⚓︎</a></h4>
-<p>由于感兴趣的是总体均值<span class="arithmatex">\(\mu\)</span>，挑选样本均值<span class="arithmatex">\(\overline{X}\)</span>构造相关的统计量(良好的点估计)，并且当上述第一个命题的原假设成立时有<span class="arithmatex">\(\mu=\mu_{0}\)</span>，考虑利用<span class="arithmatex">\(\lvert \overline{X}-\mu_{0} \rvert\)</span>的值做一个检验，符合直觉的是，只有当偏离一定程度时才认为原假设不成立，也就是<span class="arithmatex">\(\lvert \overline{X}-\mu_{0} \rvert&gt;c\)</span>时，有理由拒绝原假设<span class="arithmatex">\(H_{0}\)</span>认为<span class="arithmatex">\(H_{1}\)</span>成立</p>
-<p>下面这个统计量也称为<span class="arithmatex">\(U\)</span>统计量，检验也叫做<span class="arithmatex">\(U\)</span>检验：</p>
+<p>注意 <span class="arithmatex">\(\mu_{0}\)</span> 是已知的常数，上述假设有单侧、双侧的，简单、复杂的，<span class="arithmatex">\(\sigma^{2}\)</span> 的已知与否也会对问题有影响，主要体现在统计量零分布的确定上，因此分类讨论 <span class="arithmatex">\(\sigma^{2}\)</span> 是否已知</p>
+<h4 id="sigma2sigma_02"><span class="arithmatex">\(\sigma^{2}=\sigma_{0}^{2}\)</span> 已知<a class="headerlink" href="#sigma2sigma_02" title="Permanent link">⚓︎</a></h4>
+<p>由于感兴趣的是总体均值 <span class="arithmatex">\(\mu\)</span>，挑选样本均值 <span class="arithmatex">\(\overline{X}\)</span> 构造相关的统计量(良好的点估计)，并且当上述第一个命题的原假设成立时有 <span class="arithmatex">\(\mu=\mu_{0}\)</span>，考虑利用 <span class="arithmatex">\(\lvert \overline{X}-\mu_{0} \rvert\)</span> 的值做一个检验，符合直觉的是，只有当偏离一定程度时才认为原假设不成立，也就是 <span class="arithmatex">\(\lvert \overline{X}-\mu_{0} \rvert&gt;c\)</span> 时，有理由拒绝原假设 <span class="arithmatex">\(H_{0}\)</span> 认为 <span class="arithmatex">\(H_{1}\)</span> 成立</p>
+<p>下面这个统计量也称为 <span class="arithmatex">\(U\)</span> 统计量，检验也叫做 <span class="arithmatex">\(U\)</span> 检验：</p>
 <div class="arithmatex">\[
 U(X)= \frac{\sqrt{ n }(\overline{X}-\mu_{0})}{\sigma_{0}}
 \]</div>
-<p>根据上面的分析认为拒绝域为<span class="arithmatex">\(W=\left\{ x:\lvert U(x) \rvert&gt;c \right\}\)</span>，由于是双侧检验加上绝对值，常数<span class="arithmatex">\(c\)</span>需要根据显著性水平确认，当<span class="arithmatex">\(H_{0}\)</span>成立的时候有<span class="arithmatex">\(U(X)\sim N(0,1)\)</span>，那么可以取<span class="arithmatex">\(c=u_{\frac{\alpha}{2}}\)</span></p>
+<p>根据上面的分析认为拒绝域为 <span class="arithmatex">\(W=\left\{ x:\lvert U(x) \rvert&gt;c \right\}\)</span>，由于是双侧检验加上绝对值，常数 <span class="arithmatex">\(c\)</span> 需要根据显著性水平确认，当 <span class="arithmatex">\(H_{0}\)</span> 成立的时候有 <span class="arithmatex">\(U(X)\sim N(0,1)\)</span>，那么可以取 <span class="arithmatex">\(c=u_{\frac{\alpha}{2}}\)</span></p>
 <p>对于单侧的情况类比可知：<span class="arithmatex">\(c=u_{\alpha}\)</span></p>
-<h4 id="sigma2"><span class="arithmatex">\(\sigma^{2}\)</span>未知<a class="headerlink" href="#sigma2" title="Permanent link">⚓︎</a></h4>
-<p>由于<span class="arithmatex">\(\sigma^{2}\)</span>未知考虑利用<span class="arithmatex">\(S^{2}\)</span>替代，这就想到了使用<span class="arithmatex">\(t\)</span>分布</p>
-<p>构造<span class="arithmatex">\(T\)</span>统计量<span class="arithmatex">\(T(X)= \frac{\sqrt{ n }(\overline{X}-\mu_{0})}{S_{n}}\sim t(n-1)\)</span>，采用它作为检验统计量，检验称为<span class="arithmatex">\(t\)</span>检验</p>
-<p>对于双侧情况容易得到拒绝域应该是<span class="arithmatex">\(\left\{ x:\lvert T(x) \rvert&gt;t_{\frac{\alpha}{2}}(n-1) \right\}\)</span>，单侧情况也是同理的</p>
+<h4 id="sigma2"><span class="arithmatex">\(\sigma^{2}\)</span> 未知<a class="headerlink" href="#sigma2" title="Permanent link">⚓︎</a></h4>
+<p>由于 <span class="arithmatex">\(\sigma^{2}\)</span> 未知考虑利用 <span class="arithmatex">\(S^{2}\)</span> 替代，这就想到了使用 <span class="arithmatex">\(t\)</span> 分布</p>
+<p>构造 <span class="arithmatex">\(T\)</span> 统计量 <span class="arithmatex">\(T(X)= \frac{\sqrt{ n }(\overline{X}-\mu_{0})}{S_{n}}\sim t(n-1)\)</span>，采用它作为检验统计量，检验称为 <span class="arithmatex">\(t\)</span> 检验</p>
+<p>对于双侧情况容易得到拒绝域应该是 <span class="arithmatex">\(\left\{ x:\lvert T(x) \rvert&gt;t_{\frac{\alpha}{2}}(n-1) \right\}\)</span>，单侧情况也是同理的</p>
 <h4 id="_5">总结<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h4>
 <p>对于这种分类明显的问题，一表足矣</p>
 <p><img alt="t-p test" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/u-t%E6%A3%80%E9%AA%8C" /></p>
@@ -2014,8 +2014,8 @@ H_{0}:\sigma^{2}\leqslant\sigma^{2}_{0}\longleftrightarrow H_{1}:\sigma^{2}&gt;\
 H_{0}:\sigma^{2}\geqslant\sigma^{2}_{0}\longleftrightarrow H_{1}:\sigma^{2}&lt; \sigma^{2}_{0}
 \end{aligned}
 \]</div>
-<h4 id="mumu_0"><span class="arithmatex">\(\mu=\mu_{0}\)</span>已知<a class="headerlink" href="#mumu_0" title="Permanent link">⚓︎</a></h4>
-<p>利用<span class="arithmatex">\(\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu_{0})^{2}}{n}\)</span>作为一个<span class="arithmatex">\(\sigma_{0}^{2}\)</span>的点估计，当<span class="arithmatex">\(H_{0}\)</span>成立时，<span class="arithmatex">\(\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu_{0})^{2}}{\sigma^{2}}\sim \chi^{2}(n)\)</span>，选取检验统计量为<span class="arithmatex">\(\chi^{2}=\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu_{0})^{2}}{\sigma_{0}^{2}}\)</span>，在这种情况下拒绝域为<span class="arithmatex">\(W=\left\{ \chi^{2}&lt;c_{1} \right\}\bigcup \left\{ \chi^{2}&gt;c_{2} \right\}\)</span>，其中有<span class="arithmatex">\(c_{1}&lt;c_{2}\)</span>，并且根据显著性水平应有<span class="arithmatex">\(P_{H_{0}}\left\{ \chi^{2}&lt;c_{1} \right\}+P_{H_{0}}\left\{ \chi^{2}&gt;c_{2} \right\}\leqslant \alpha\)</span></p>
+<h4 id="mumu_0"><span class="arithmatex">\(\mu=\mu_{0}\)</span> 已知<a class="headerlink" href="#mumu_0" title="Permanent link">⚓︎</a></h4>
+<p>利用 <span class="arithmatex">\(\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu_{0})^{2}}{n}\)</span> 作为一个 <span class="arithmatex">\(\sigma_{0}^{2}\)</span> 的点估计，当 <span class="arithmatex">\(H_{0}\)</span> 成立时，<span class="arithmatex">\(\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu_{0})^{2}}{\sigma^{2}}\sim \chi^{2}(n)\)</span>，选取检验统计量为 <span class="arithmatex">\(\chi^{2}=\dfrac{\sum\limits_{i=1}^{n}(X_{i}-\mu_{0})^{2}}{\sigma_{0}^{2}}\)</span>，在这种情况下拒绝域为 <span class="arithmatex">\(W=\left\{ \chi^{2}&lt;c_{1} \right\}\bigcup \left\{ \chi^{2}&gt;c_{2} \right\}\)</span>，其中有 <span class="arithmatex">\(c_{1}&lt;c_{2}\)</span>，并且根据显著性水平应有 <span class="arithmatex">\(P_{H_{0}}\left\{ \chi^{2}&lt;c_{1} \right\}+P_{H_{0}}\left\{ \chi^{2}&gt;c_{2} \right\}\leqslant \alpha\)</span></p>
 <p>常用的取法是左右拒绝概率各一半显著性水平，也就是 <span class="arithmatex">\(c_{1}=\chi^{2}_{1-\frac{\alpha}{2}}(n),c_{2}=\chi^{2}_{\frac{\alpha}{2}}(n)\)</span></p>
 <p>当零假设为 <span class="arithmatex">\(\sigma^{2}\leqslant\sigma_{0}^{2}\)</span>，根据备择假设的特点，构造拒绝域的形式为 <span class="arithmatex">\(\left\{ \chi^{2}&gt;c \right\}\)</span> 那么还应有 <span class="arithmatex">\(P_{H_{0}}\left\{ \chi^{2}&gt;c \right\}\leqslant \alpha\)</span></p>
 <div class="arithmatex">\[
@@ -2042,11 +2042,11 @@ H_{0}:\mu_{1}\leqslant\mu_{2}\longleftrightarrow H_{1}:\mu_{1}&gt; \mu_{2}\\
 H_{0}:\mu_{1}\geqslant\mu_{2}\longleftrightarrow H_{1}:\mu_{1}&lt;\mu_{2}\\
 \end{aligned}
 \]</div>
-<p>如果<span class="arithmatex">\(\sigma_{1}^{2},\sigma^{2}_{2}\)</span>未知，就将均值差的估计称为Behrens-Fisher问题</p>
-<h4 id="sigma_12sigma_22"><span class="arithmatex">\(\sigma_{1}^{2},\sigma_{2}^{2}\)</span>均已知<a class="headerlink" href="#sigma_12sigma_22" title="Permanent link">⚓︎</a></h4>
-<p>由于<span class="arithmatex">\(\overline{X},\overline{Y}\)</span>是<span class="arithmatex">\(\mu_{1},\mu_{2}\)</span>的良好的点估计，有理由用两样本均值差<span class="arithmatex">\(\overline{X}-\overline{Y}\)</span>来反映<span class="arithmatex">\(\mu_{1},\mu_{2}\)</span>的差，构造<span class="arithmatex">\(U\)</span>统计量为<span class="arithmatex">\(U=\frac{\overline{X}-\overline{Y}}{\sqrt{ \frac{\sigma_{1}^{2}}{m}+ \frac{\sigma^{2}_{2}}{n} }}\sim N(0,1)\)</span></p>
-<p>拒绝域形如<span class="arithmatex">\(W=\left\{ \lvert U \rvert&gt;c \right\}\)</span>，选取<span class="arithmatex">\(c=u_{\frac{\alpha}{2}}\)</span>即可，单侧情况<span class="arithmatex">\(\mu_{1}\leqslant\mu_{2}\)</span>如下</p>
-<p>由于<span class="arithmatex">\(H_{0}\)</span>成立时有<span class="arithmatex">\(\mu_{1}\leqslant\mu_{2}\)</span>：</p>
+<p>如果 <span class="arithmatex">\(\sigma_{1}^{2},\sigma^{2}_{2}\)</span> 未知，就将均值差的估计称为 Behrens-Fisher 问题</p>
+<h4 id="sigma_12sigma_22"><span class="arithmatex">\(\sigma_{1}^{2},\sigma_{2}^{2}\)</span> 均已知<a class="headerlink" href="#sigma_12sigma_22" title="Permanent link">⚓︎</a></h4>
+<p>由于 <span class="arithmatex">\(\overline{X},\overline{Y}\)</span> 是 <span class="arithmatex">\(\mu_{1},\mu_{2}\)</span> 的良好的点估计，有理由用两样本均值差 <span class="arithmatex">\(\overline{X}-\overline{Y}\)</span> 来反映 <span class="arithmatex">\(\mu_{1},\mu_{2}\)</span> 的差，构造 <span class="arithmatex">\(U\)</span> 统计量为 <span class="arithmatex">\(U=\frac{\overline{X}-\overline{Y}}{\sqrt{ \frac{\sigma_{1}^{2}}{m}+ \frac{\sigma^{2}_{2}}{n} }}\sim N(0,1)\)</span></p>
+<p>拒绝域形如 <span class="arithmatex">\(W=\left\{ \lvert U \rvert&gt;c \right\}\)</span>，选取 <span class="arithmatex">\(c=u_{\frac{\alpha}{2}}\)</span> 即可，单侧情况 <span class="arithmatex">\(\mu_{1}\leqslant\mu_{2}\)</span> 如下</p>
+<p>由于 <span class="arithmatex">\(H_{0}\)</span> 成立时有 <span class="arithmatex">\(\mu_{1}\leqslant\mu_{2}\)</span>：</p>
 <div class="arithmatex">\[
 \begin{aligned}
 P_{H_{0}}(U&gt;u_{\alpha})&amp;=P_{H_{0}}\left( \frac{\overline{X}-\overline{Y}}{\sqrt{ \frac{\sigma_{1}^{2}}{m}+ \frac{\sigma_{2}^{2}}{n} }}&gt;u_{\alpha} \right)\\
@@ -2054,8 +2054,8 @@ P_{H_{0}}(U&gt;u_{\alpha})&amp;=P_{H_{0}}\left( \frac{\overline{X}-\overline{Y}}
 &amp;\leqslant P_{H_{0}}\left( \frac{\overline{X}-\overline{Y}-(\mu_{1}-\mu_{2})}{\sqrt{ \frac{\sigma_{1}^{2}}{m}+ \frac{\sigma_{2}^{2}}{n} }}&gt;u_{\alpha} \right)=\alpha
 \end{aligned}
 \]</div>
-<h4 id="sigma_12sigma_22sigma2"><span class="arithmatex">\(\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma^{2}\)</span>未知<a class="headerlink" href="#sigma_12sigma_22sigma2" title="Permanent link">⚓︎</a></h4>
-<p>对于相等的原假设，构造<span class="arithmatex">\(T\)</span>统计量如下</p>
+<h4 id="sigma_12sigma_22sigma2"><span class="arithmatex">\(\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma^{2}\)</span> 未知<a class="headerlink" href="#sigma_12sigma_22sigma2" title="Permanent link">⚓︎</a></h4>
+<p>对于相等的原假设，构造 <span class="arithmatex">\(T\)</span> 统计量如下</p>
 <div class="arithmatex">\[
 T= \frac{(\overline{X}-\overline{Y})\left[ \sigma \sqrt{ \frac{m+n}{mn} } \right] }{\sqrt{ \frac{(m+n-2)S^{*}_{mn}}{\sigma^{2}(m+n-2)} }}=\sqrt{ \frac{mn}{m+n} } \frac{\overline{X}-\overline{Y}}{S^{*}_{mn}}
 \]</div>
@@ -2068,9 +2068,9 @@ T= \frac{(\overline{X}-\overline{Y})\left[ \sigma \sqrt{ \frac{m+n}{mn} } \right
 <p>采用的统计量均为：<span class="arithmatex">\(U= \frac{\overline{X}-\overline{Y}}{\sqrt{ \frac{S_{1m}^{2}}{m}+ \frac{S_{2n}^{2}}{n} }}\)</span></p>
 <p>三大假设的拒绝域为：<span class="arithmatex">\(\left\{ \lvert U \rvert&gt; u_{\frac{\alpha}{2}} \right\},\left\{ U&gt;u_{\alpha} \right\},\left\{ U&lt;-u_{\alpha} \right\}\)</span></p>
 <ol>
-<li><span class="arithmatex">\(m,n\)</span>都不是很大</li>
+<li><span class="arithmatex">\(m,n\)</span> 都不是很大</li>
 </ol>
-<p>无法使用大样本近似，<span class="arithmatex">\(U\)</span>统计量近似服从自由度为<span class="arithmatex">\(r\)</span>的<span class="arithmatex">\(t\)</span>分布，对于<span class="arithmatex">\(r\)</span>有如下计算公式：</p>
+<p>无法使用大样本近似，<span class="arithmatex">\(U\)</span> 统计量近似服从自由度为 <span class="arithmatex">\(r\)</span> 的 <span class="arithmatex">\(t\)</span> 分布，对于 <span class="arithmatex">\(r\)</span> 有如下计算公式：</p>
 <div class="arithmatex">\[
 r= \frac{S_{mn}^{2}}{\frac{S_{1m}^{4}}{m^{2}(m-1)}+ \frac{S_{2n}^{4}}{n^{2}(n-1)}}
 \]</div>
@@ -2084,41 +2084,41 @@ H_{0}:\sigma^{2}_{1}\leqslant\sigma^{2}_{2}\longleftrightarrow H_{1}:\sigma^{2}_
 H_{0}:\sigma^{2}_{1}\geqslant\sigma^{2}_{2}\longleftrightarrow H_{1}:\sigma^{2}_{1}&lt;\sigma^{2}_{2}\\
 \end{aligned}
 \]</div>
-<h4 id="mu_1mu_2"><span class="arithmatex">\(\mu_{1},\mu_{2}\)</span>均已知<a class="headerlink" href="#mu_1mu_2" title="Permanent link">⚓︎</a></h4>
-<p>构造<span class="arithmatex">\(F\)</span>统计量：<span class="arithmatex">\(F=\frac{S_{1m}^{'2}}{S_{2n}^{'2}}= \frac{\sum\limits_{i=1}^{m}(X_{i}-\mu_{1})^{2}/m}{\sum\limits_{i=1}^{n}(Y_{i}-\mu_{2})^{2}/n}\)</span></p>
-<h4 id="mu_1mu_3"><span class="arithmatex">\(\mu_{1},\mu_{2}\)</span>均未知<a class="headerlink" href="#mu_1mu_3" title="Permanent link">⚓︎</a></h4>
-<p>仍然是<span class="arithmatex">\(F\)</span>统计量，只不过需要修改自由度为<span class="arithmatex">\((m-1,n-1)\)</span></p>
+<h4 id="mu_1mu_2"><span class="arithmatex">\(\mu_{1},\mu_{2}\)</span> 均已知<a class="headerlink" href="#mu_1mu_2" title="Permanent link">⚓︎</a></h4>
+<p>构造 <span class="arithmatex">\(F\)</span> 统计量：<span class="arithmatex">\(F=\frac{S_{1m}^{'2}}{S_{2n}^{'2}}= \frac{\sum\limits_{i=1}^{m}(X_{i}-\mu_{1})^{2}/m}{\sum\limits_{i=1}^{n}(Y_{i}-\mu_{2})^{2}/n}\)</span></p>
+<h4 id="mu_1mu_3"><span class="arithmatex">\(\mu_{1},\mu_{2}\)</span> 均未知<a class="headerlink" href="#mu_1mu_3" title="Permanent link">⚓︎</a></h4>
+<p>仍然是 <span class="arithmatex">\(F\)</span> 统计量，只不过需要修改自由度为 <span class="arithmatex">\((m-1,n-1)\)</span></p>
 <h2 id="_11">单参数指数型分布族的显著性检验<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h2>
 <h3 id="_12">单参数指数型分布族的性质<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">定理</p>
-<p>对于单参数指数分布族<span class="arithmatex">\(f(x,\theta)=c(\theta)\exp(Q(\theta)T(x))h(x)\)</span>，<span class="arithmatex">\(II D\)</span>样本<span class="arithmatex">\(X_{1},X_{2},\dots,X_{n}\)</span>，如果<span class="arithmatex">\(Q(\theta)\)</span>是严格增的，<span class="arithmatex">\(\psi(T(X))\)</span>是<span class="arithmatex">\(T(X)\)</span>的非降函数，那么有<span class="arithmatex">\(E_{\theta}\left[ \psi(T) \right]\)</span>也是<span class="arithmatex">\(\theta\)</span>的非降函数</p>
+<p>对于单参数指数分布族 <span class="arithmatex">\(f(x,\theta)=c(\theta)\exp(Q(\theta)T(x))h(x)\)</span>，<span class="arithmatex">\(II D\)</span> 样本 <span class="arithmatex">\(X_{1},X_{2},\dots,X_{n}\)</span>，如果 <span class="arithmatex">\(Q(\theta)\)</span> 是严格增的，<span class="arithmatex">\(\psi(T(X))\)</span> 是 <span class="arithmatex">\(T(X)\)</span> 的非降函数，那么有 <span class="arithmatex">\(E_{\theta}\left[ \psi(T) \right]\)</span> 也是 <span class="arithmatex">\(\theta\)</span> 的非降函数</p>
 </div>
 <h3 id="_13">单参数指数型分布族的假设检验<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h3>
-<h3 id="bernoulli">Bernoulli分布的假设检验<a class="headerlink" href="#bernoulli" title="Permanent link">⚓︎</a></h3>
+<h3 id="bernoulli">Bernoulli 分布的假设检验<a class="headerlink" href="#bernoulli" title="Permanent link">⚓︎</a></h3>
 <p>这一部分实际就是应用的问题</p>
 <h2 id="_14">似然比检验<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h2>
-<p>相当重要的一个部分，相当于<span class="arithmatex">\(MLE\)</span>在点估计中的地位</p>
+<p>相当重要的一个部分，相当于 <span class="arithmatex">\(MLE\)</span> 在点估计中的地位</p>
 <p>先给出似然比统计量的定义，记号不赘述：</p>
-<p>我们考虑的是最一般的假设，也就是<span class="arithmatex">\(H_{0}:\theta\in\Theta_{0}\longleftrightarrow H_{1}:\theta\in\Theta_{1}=\Theta-\Theta_{0}\)</span></p>
+<p>我们考虑的是最一般的假设，也就是 <span class="arithmatex">\(H_{0}:\theta\in\Theta_{0}\longleftrightarrow H_{1}:\theta\in\Theta_{1}=\Theta-\Theta_{0}\)</span></p>
 <div class="arithmatex">\[
 \lambda(X)= \frac{\sup\limits_{\theta\in\Theta_{0}}f(X,\theta)}{\sup\limits_{\theta\in\Theta}f(X,\theta)}
 \]</div>
-<p>从定义中不难看出，如果该统计量的值很小，就说明在<span class="arithmatex">\(\Theta_{0}\)</span>中的概率小，有理由认为<span class="arithmatex">\(H_{0}\)</span>不成立</p>
+<p>从定义中不难看出，如果该统计量的值很小，就说明在 <span class="arithmatex">\(\Theta_{0}\)</span> 中的概率小，有理由认为 <span class="arithmatex">\(H_{0}\)</span> 不成立</p>
 <p>那么似然比检验的定义就很自然了：</p>
 <div class="admonition note">
 <p class="admonition-title">定义 似然比检验</p>
-<p>利用<span class="arithmatex">\(\lambda(X)\)</span>作为检验统计量，取拒绝域为<span class="arithmatex">\(\left\{ \lambda(x)\leqslant c \right\}\)</span>，其中临界值<span class="arithmatex">\(c\)</span>满足<span class="arithmatex">\(P_{\theta}(\lambda(X)\leqslant c)\leqslant \alpha,\forall\theta\in\Theta_{0}\)</span>，称其为显著性水平<span class="arithmatex">\(\alpha\)</span>的似然比检验(LRT)</p>
+<p>利用 <span class="arithmatex">\(\lambda(X)\)</span> 作为检验统计量，取拒绝域为 <span class="arithmatex">\(\left\{ \lambda(x)\leqslant c \right\}\)</span>，其中临界值 <span class="arithmatex">\(c\)</span> 满足 <span class="arithmatex">\(P_{\theta}(\lambda(X)\leqslant c)\leqslant \alpha,\forall\theta\in\Theta_{0}\)</span>，称其为显著性水平 <span class="arithmatex">\(\alpha\)</span> 的似然比检验(LRT)</p>
 </div>
 <p>掌握这个思想！</p>
 <p>这里面有很多很复杂也很有趣的问题，由于是知识性的笔记在此先不扩展太多.</p>
-<h2 id="p"><span class="arithmatex">\(p\)</span>值<a class="headerlink" href="#p" title="Permanent link">⚓︎</a></h2>
-<p>实际上就是先前显著性检验的一个等价形式(USTC版本的课本将<span class="arithmatex">\(p\)</span>值放在显著性检验的后面，将假设检验全部使用两种方法进行求解，对于<span class="arithmatex">\(p\)</span>值如果陌生可以参考USTC课本)，根据它的定义就可以看出</p>
+<h2 id="p"><span class="arithmatex">\(p\)</span> 值<a class="headerlink" href="#p" title="Permanent link">⚓︎</a></h2>
+<p>实际上就是先前显著性检验的一个等价形式(USTC 版本的课本将 <span class="arithmatex">\(p\)</span> 值放在显著性检验的后面，将假设检验全部使用两种方法进行求解，对于 <span class="arithmatex">\(p\)</span> 值如果陌生可以参考 USTC 课本)，根据它的定义就可以看出</p>
 <div class="admonition note">
-<p class="admonition-title">定义 <span class="arithmatex">\(p\)</span>值</p>
-<p>对于拒绝域形如<span class="arithmatex">\(W=\left\{ X:T(X)&gt;c \right\},W=\left\{ X:T(X)&lt;c \right\}\)</span>的单侧检验，给定样本的观测值<span class="arithmatex">\(x^{0}\)</span>后即可代入原本检验的检验统计量得出相应的值(在下面的定理中会给出更好的解释)，称<span class="arithmatex">\(p(x^{0})=\sup\limits_{\theta\in\Theta_{0}}P_{\theta}(T(X)\geqslant T(x^{0}))\)</span>或是<span class="arithmatex">\(p(x^{0})=\sup\limits_{\theta\in\Theta_{0}}P_{\theta}(T(X)\leqslant T(x^{0}))\)</span>为此检验的<span class="arithmatex">\(p\)</span>值</p>
+<p class="admonition-title">定义 <span class="arithmatex">\(p\)</span> 值</p>
+<p>对于拒绝域形如 <span class="arithmatex">\(W=\left\{ X:T(X)&gt;c \right\},W=\left\{ X:T(X)&lt;c \right\}\)</span> 的单侧检验，给定样本的观测值 <span class="arithmatex">\(x^{0}\)</span> 后即可代入原本检验的检验统计量得出相应的值(在下面的定理中会给出更好的解释)，称 <span class="arithmatex">\(p(x^{0})=\sup\limits_{\theta\in\Theta_{0}}P_{\theta}(T(X)\geqslant T(x^{0}))\)</span> 或是 <span class="arithmatex">\(p(x^{0})=\sup\limits_{\theta\in\Theta_{0}}P_{\theta}(T(X)\leqslant T(x^{0}))\)</span> 为此检验的 <span class="arithmatex">\(p\)</span> 值</p>
 </div>
-<p>定理：样本值<span class="arithmatex">\(x^{0}\)</span>落入显著性水平为<span class="arithmatex">\(\alpha\)</span>的拒绝域<span class="arithmatex">\(W=\left\{ X:T(X)&gt;c \right\}\)</span>的充要条件为此样本的<span class="arithmatex">\(p\)</span>值小于<span class="arithmatex">\(\alpha\)</span></p>
+<p>定理：样本值 <span class="arithmatex">\(x^{0}\)</span> 落入显著性水平为 <span class="arithmatex">\(\alpha\)</span> 的拒绝域 <span class="arithmatex">\(W=\left\{ X:T(X)&gt;c \right\}\)</span> 的充要条件为此样本的 <span class="arithmatex">\(p\)</span> 值小于 <span class="arithmatex">\(\alpha\)</span></p>
 <p><span class="arithmatex">\(p\)</span> 值的好处在于不需要知道显著性水平，只要大于 <span class="arithmatex">\(p\)</span> 值的显著性水平 <span class="arithmatex">\(\alpha\)</span>，犯一类错误的概率都不超过 <span class="arithmatex">\(\alpha\)</span></p>
 <p>而双侧 <span class="arithmatex">\(p\)</span> 值的形式可以为：</p>
 <p><span class="arithmatex">\(p(x^{0})=2\min\left\{ \sup\limits_{\theta\in\Theta_{0}}P_{\theta}(T(X)\leqslant T(x^{0})) ,\sup\limits_{\theta\in\Theta_{0}}P_{\theta}(T(X)\geqslant T(x^{0}))\right\}\)</span></p>

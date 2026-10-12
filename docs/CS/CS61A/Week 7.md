@@ -2,7 +2,7 @@
 
 ## Summary
 
-大致需要 4h 的时间完成，该 Week 任务量不大，题目也比较简单，主要是刚入门 OOP，掌握 OOP 的设计思想和理念即可
+大致需要 4 h 的时间完成，该 Week 任务量不大，题目也比较简单，主要是刚入门 OOP，掌握 OOP 的设计思想和理念即可
 
 >OOP 的设计理念核心是==通过将现实世界的实体抽象为具有数据（属性）和操作（方法）的对象来构建软件系统，并利用类、封装、继承、多态等概念来模拟现实世界的逻辑，从而达到代码的模块化、可重用性、灵活性和可维护性==。它强调将数据和行为绑定在一起，并允许对象通过消息传递来相互通信，以构建复杂且易于扩展的系统。
 
@@ -26,7 +26,7 @@ Chapter 4: Data Processing
 
 A sequence can be represented without each element being stored explicitly in the memory of the computer. That is, we can construct an object that provides access to all of the elements of some sequential dataset without computing the value of each element in advance. Instead, we compute elements on demand.
 
-We want to achive the *lazy computation* in cs.
+We want to achieve *lazy computation* in CS.
 
 #### Iterators
 
@@ -55,7 +55,7 @@ If a dictionary changes in structure because a key is added or removed, then all
 
 #### Built-in Iterators
 
-Just know about *map* function and *filter, zip, reversed*
+Just learn about the *map* function and *filter, zip, reversed*.
 
 #### For Statements
 
@@ -101,11 +101,11 @@ list(all_pairs([1, 2, 3]))
 
 #### Streams
 
-To Do（至 25Fall 该处仍然为空）
+To Do（至 25Fall，该处仍然为空）
 
 #### Python Streams
 
-SICP 中叙述的有点抽象，我建议阅读[官方的文档](https://docs.python.org/3/library/asyncio-stream.html)
+SICP 中叙述得有点抽象，我建议阅读[官方的文档](https://docs.python.org/3/library/asyncio-stream.html)
 
 Chapter 2: Building Abstractions with Data
 + Ch.2.5 Object-Oriented Programming
@@ -120,7 +120,7 @@ The attributes specific to a particular object, as opposed to all objects of a c
 
 #### Defining Classes
 
-You should know the example about bank and how to define your own classes in different situations.
+You should know the example about a bank and how to define your own classes in different situations.
 
 The function value that is created by a def statement within a class statement is bound to the declared name, but bound locally within the class as an attribute. That value is invoked as a method using dot notation from an instance of the class.
 
@@ -207,7 +207,7 @@ Learning to identify when to introduce a new class, as opposed to a new function
 
 ### Objects
 
-简单介绍了 OOP 编程的基本概念和结构，建议去看 textbook 写的比较详细
+简单介绍了 OOP 编程的基本概念和结构，建议去看 textbook，写得比较详细
 
 ## Lab 05(30min)
 

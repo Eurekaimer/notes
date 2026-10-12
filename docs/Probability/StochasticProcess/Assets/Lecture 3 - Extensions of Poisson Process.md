@@ -10,7 +10,7 @@
 
 本小节放松平稳增量这一条件，也就是说过程的速率会依赖于时间，下面给出非时齐 Poisson 过程的定义
 
-!!! note "Defnition 3.1 (非时齐 Poisson 过程)"
+!!! note "Definition 3.1 (非时齐 Poisson 过程)"
     若计数过程 $\{N(t),t\geq0\}$ 满足：
 
     (1) $N( 0) = 0;$

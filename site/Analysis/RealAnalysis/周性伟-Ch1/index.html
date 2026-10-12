@@ -1831,18 +1831,18 @@ x \in \bigcup\limits_{n=1}^{\infty} A_{n}-\bigcup\limits_{n=1}^{\infty} B_{n}&am
 <p><code>Proof.</code></p>
 <p>根据连续的定义书写即可：将交翻译为任意，将并翻译为存在</p>
 <p><span class="arithmatex">\(\forall r,\exists n\geqslant 1,\forall k \geqslant n, \lvert f_{k}(x)-f(x) \rvert&lt; \frac{1}{r}\)</span></p>
-<p>而对于连续的定义<span class="arithmatex">\(\varepsilon&gt;0,\exists r,s.t. \frac{1}{r}&lt;\varepsilon\)</span></p>
+<p>而对于连续的定义 <span class="arithmatex">\(\varepsilon&gt;0,\exists r,s.t. \frac{1}{r}&lt;\varepsilon\)</span></p>
 <p>注：这个题目实际是相当重要的，蕴含了集合分解和集合表示的思想，还给出了并和交隐含的存在与任意的技巧.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 4</p>
 <p>证明：<br />
-(i)对任何集<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>，必有集<span class="arithmatex">\(C\)</span>，使<span class="arithmatex">\(A\Delta C=B\)</span><br />
+(i)对任何集 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>，必有集 <span class="arithmatex">\(C\)</span>，使 <span class="arithmatex">\(A\Delta C=B\)</span><br />
 (ii)<span class="arithmatex">\(A\Delta(B\Delta C)=(A\Delta B)\Delta C\)</span><br />
 (iii)<span class="arithmatex">\(A_{1}\Delta A_{2}\Delta\dots\Delta A_{n}=\left\{ x:x\text{属于且仅属于}\left\{ A_{k} \right\}_{1\leqslant k \leqslant n}\text{中奇数个}A_{k} \right\}\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>(i)这个构造实际上可以通过Venn图分析得到</p>
-<p>注意到<span class="arithmatex">\(A\Delta A=\emptyset,\emptyset\Delta A=A\implies C=A\Delta B\)</span></p>
+<p>(i)这个构造实际上可以通过 Venn 图分析得到</p>
+<p>注意到 <span class="arithmatex">\(A\Delta A=\emptyset,\emptyset\Delta A=A\implies C=A\Delta B\)</span></p>
 <p>(ii)这个只需要集合表示一下就行</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1853,24 +1853,24 @@ x\in(A\Delta B)\Delta C&amp;\iff x\in A\Delta B-C,x\in C-A\Delta B\\
 \end{aligned}
 \]</div>
 <p>(iii)可以使用归纳法</p>
-<p><span class="arithmatex">\(n=1,n=2\)</span>，可以将目标转变为<span class="arithmatex">\(x\in(A_{1}\Delta\dots\Delta A_{n-1})\Delta A_{n}\)</span>，这样我们就可以运用归纳的结果了，若<span class="arithmatex">\(x\in(A_{1}\Delta\dots\Delta A_{n-1}),x\not\in A_{n}\)</span>，由归纳假设只属于前面的奇数个项，而另一种情况只属于<span class="arithmatex">\(A_{n}\)</span>和前面的偶数个项相加知道也是奇数情况，由此可得结论成立.</p>
+<p><span class="arithmatex">\(n=1,n=2\)</span>，可以将目标转变为 <span class="arithmatex">\(x\in(A_{1}\Delta\dots\Delta A_{n-1})\Delta A_{n}\)</span>，这样我们就可以运用归纳的结果了，若 <span class="arithmatex">\(x\in(A_{1}\Delta\dots\Delta A_{n-1}),x\not\in A_{n}\)</span>，由归纳假设只属于前面的奇数个项，而另一种情况只属于 <span class="arithmatex">\(A_{n}\)</span> 和前面的偶数个项相加知道也是奇数情况，由此可得结论成立.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 5</p>
-<p>设<span class="arithmatex">\(\left\{ A_{n} \right\}_{n\geq_{1}}\)</span>是一个集列，令<span class="arithmatex">\(B_{1}=A_{1},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},n\geq 2\)</span><br />
-求证：<span class="arithmatex">\(\left\{ B_{n} \right\}_{n\geq{1}}\)</span>两两不相交且<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
+<p>设 <span class="arithmatex">\(\left\{ A_{n} \right\}_{n\geq_{1}}\)</span> 是一个集列，令 <span class="arithmatex">\(B_{1}=A_{1},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},n\geq 2\)</span><br />
+求证：<span class="arithmatex">\(\left\{ B_{n} \right\}_{n\geq{1}}\)</span> 两两不相交且 <span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>先证明两两不相交，假设<span class="arithmatex">\(B_{m},B_{n},m&lt;n\)</span>，若其中<span class="arithmatex">\(m=1\)</span>，显然有<span class="arithmatex">\(x\in B_{n}(n \geq 2),x \not\in A_{1}=B_{1}\)</span></p>
-<p>若<span class="arithmatex">\(m \neq 1\)</span>，对于<span class="arithmatex">\(B_{m}=A_{m}-\bigcup\limits_{k=1}^{m-1}A_{k},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},\bigcup\limits_{k=1}^{m-1}A_{k}\subset \bigcup\limits_{k=1}^{n-1}A_{k}\)</span>，假设存在<span class="arithmatex">\(y\in B_{m}\bigcap B_{n},y\in B_{n},y \not\in \bigcup\limits_{k=1}^{n-1}A_{k},y \not\in A_{m}(m&lt;n)\implies y \not\in B_{m}\)</span>，矛盾，所以两两不相交，这是极其显然的.</p>
-<p>再证明<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
-<p>首先根据<span class="arithmatex">\(B_{n}\subset A_{n}\implies \bigcup\limits_{n=1}^{\infty}B_{n}\subset \bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
+<p>先证明两两不相交，假设 <span class="arithmatex">\(B_{m},B_{n},m&lt;n\)</span>，若其中 <span class="arithmatex">\(m=1\)</span>，显然有 <span class="arithmatex">\(x\in B_{n}(n \geq 2),x \not\in A_{1}=B_{1}\)</span></p>
+<p>若 <span class="arithmatex">\(m \neq 1\)</span>，对于 <span class="arithmatex">\(B_{m}=A_{m}-\bigcup\limits_{k=1}^{m-1}A_{k},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},\bigcup\limits_{k=1}^{m-1}A_{k}\subset \bigcup\limits_{k=1}^{n-1}A_{k}\)</span>，假设存在 <span class="arithmatex">\(y\in B_{m}\bigcap B_{n},y\in B_{n},y \not\in \bigcup\limits_{k=1}^{n-1}A_{k},y \not\in A_{m}(m&lt;n)\implies y \not\in B_{m}\)</span>，矛盾，所以两两不相交，这是极其显然的.</p>
+<p>再证明 <span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
+<p>首先根据 <span class="arithmatex">\(B_{n}\subset A_{n}\implies \bigcup\limits_{n=1}^{\infty}B_{n}\subset \bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
 <div class="arithmatex">\[\begin{aligned}
 x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&amp;=A_{k}-\bigcup\limits_{n=1}^{k-1}A_{n} \\
 &amp;\implies x\in A_{k}\subset \bigcup\limits_{n=1}^{\infty}A_{n}\\
 &amp;\implies\bigcup\limits_{n=1}^{\infty}B_{n}\subset\bigcup\limits_{n=1}^{\infty}A_{n}
 \end{aligned}\]</div>
-<p>同理若是<span class="arithmatex">\(x\in \bigcup\limits_{n=1}^{\infty}A_{n},\exists k,x\in A_{k}\)</span>，构造一个集合<span class="arithmatex">\(S=\left\{ n:x\in A_{n} \right\}\)</span>，已知该集合非空，那么根据非空集合必有最小元素的性质，将最小元素记为<span class="arithmatex">\(m\)</span>，</p>
-<p>那么<span class="arithmatex">\(x\in B_{m}=A_{m}-\bigcup\limits_{n=1}^{m-1}A_{n}\implies x\in \bigcup\limits_{n=1}^{\infty}B_{n}\implies\bigcup\limits_{n=1}^{\infty}B_{n}\supset\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
+<p>同理若是 <span class="arithmatex">\(x\in \bigcup\limits_{n=1}^{\infty}A_{n},\exists k,x\in A_{k}\)</span>，构造一个集合 <span class="arithmatex">\(S=\left\{ n:x\in A_{n} \right\}\)</span>，已知该集合非空，那么根据非空集合必有最小元素的性质，将最小元素记为 <span class="arithmatex">\(m\)</span>，</p>
+<p>那么 <span class="arithmatex">\(x\in B_{m}=A_{m}-\bigcup\limits_{n=1}^{m-1}A_{n}\implies x\in \bigcup\limits_{n=1}^{\infty}B_{n}\implies\bigcup\limits_{n=1}^{\infty}B_{n}\supset\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
 <p>或者也可以用下面这种写法</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1879,136 +1879,136 @@ x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&amp;=A_{k}-\bigcup\
 &amp;=\bigcup\limits_{k=1}^{n} B_{k}
 \end{aligned}
 \]</div>
-<p>两边<span class="arithmatex">\(n\)</span>同时取无穷也可以得到</p>
+<p>两边 <span class="arithmatex">\(n\)</span> 同时取无穷也可以得到</p>
 <p>综上所述：<span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 6</p>
-<p>设<span class="arithmatex">\(\left\{ A_{n} \right\}\)</span>是一列集合.求证：<br />
+<p>设 <span class="arithmatex">\(\left\{ A_{n} \right\}\)</span> 是一列集合.求证：<br />
 (i)<span class="arithmatex">\(\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)\)</span><br />
 (ii)<span class="arithmatex">\(\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)\)</span></p>
 </div>
 <p><code>Proof.</code></p>
 <p>(i):</p>
 <p>根据上极限的定义可知，<span class="arithmatex">\(\varlimsup\limits_{ n \to \infty }A_{n}=\bigcap\limits_{i=1}^{\infty}\bigcup\limits_{n=i}^{\infty}A_{n}\)</span>，无穷多个集合含有其中元素.
-若<span class="arithmatex">\(x\in \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=1),\forall N,\exists n,n&gt;N\implies \chi_{A_{n}}(x)=1，\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)\)</span>
-若<span class="arithmatex">\(x\notin \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=0)\)</span>，只有有限多个集合含有<span class="arithmatex">\(x\)</span>,那么<span class="arithmatex">\(\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)\)</span>
-综上所述：证得<span class="arithmatex">\(\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)\)</span></p>
+若 <span class="arithmatex">\(x\in \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=1),\forall N,\exists n,n&gt;N\implies \chi_{A_{n}}(x)=1，\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)\)</span>
+若 <span class="arithmatex">\(x\notin \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=0)\)</span>，只有有限多个集合含有 <span class="arithmatex">\(x\)</span>,那么 <span class="arithmatex">\(\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)\)</span>
+综上所述：证得 <span class="arithmatex">\(\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)\)</span></p>
 <p>(ii):</p>
 <p>根据下极限的定义可知，<span class="arithmatex">\(\varliminf\limits_{ n \to \infty }A_{n}=\bigcup\limits_{i=1}^{\infty}\bigcap\limits_{n=i}^{\infty}A_{n}\)</span>，只有有限个集合不含有其中元素.
-若<span class="arithmatex">\(x\in \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=1),\exists N,n&gt;N\implies \chi_{A_{n}}(x)=1，\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)\)</span>
-若<span class="arithmatex">\(x\notin \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=0)\)</span>，有无穷多个集合不含有<span class="arithmatex">\(x\)</span>，那么<span class="arithmatex">\(\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)\)</span>
-综上所述：证得<span class="arithmatex">\(\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)\)</span></p>
+若 <span class="arithmatex">\(x\in \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=1),\exists N,n&gt;N\implies \chi_{A_{n}}(x)=1，\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)\)</span>
+若 <span class="arithmatex">\(x\notin \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=0)\)</span>，有无穷多个集合不含有 <span class="arithmatex">\(x\)</span>，那么 <span class="arithmatex">\(\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)\)</span>
+综上所述：证得 <span class="arithmatex">\(\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 7</p>
-<p>设映射<span class="arithmatex">\(f:X\to Y\)</span>，求证：<br />
-(i)若<span class="arithmatex">\(A \subset X\)</span>, 则<span class="arithmatex">\(A \subset f^{-1}[f(A)]\)</span>, 并且当<span class="arithmatex">\(f\)</span>为一一映射时<span class="arithmatex">\(A=f^{-1}[f(A)]\)</span>;<br />
-(ii)若<span class="arithmatex">\(B\subset Y\)</span>，则<span class="arithmatex">\(f\left[ f^{-1}(B) \right]=B\bigcap f(X)\)</span>且<span class="arithmatex">\(f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}\)</span><br />
-(iii)当且仅当<span class="arithmatex">\(f\)</span>为一一映射时，对任何<span class="arithmatex">\(A,B\subset X\)</span>有<span class="arithmatex">\(f\left( A\bigcap B \right)=f(A)\bigcap f(B)\)</span><br />
-(iv)当且仅当<span class="arithmatex">\(f\)</span>为完全一一映射时, 对任何<span class="arithmatex">\(A \subset X\)</span>有<span class="arithmatex">\(f\left(A^{c}\right)=\left[f(A)\right]^{c}\)</span>.</p>
+<p>设映射 <span class="arithmatex">\(f:X\to Y\)</span>，求证：<br />
+(i)若 <span class="arithmatex">\(A \subset X\)</span>, 则 <span class="arithmatex">\(A \subset f^{-1}[f(A)]\)</span>, 并且当 <span class="arithmatex">\(f\)</span> 为一一映射时 <span class="arithmatex">\(A=f^{-1}[f(A)]\)</span>;<br />
+(ii)若 <span class="arithmatex">\(B\subset Y\)</span>，则 <span class="arithmatex">\(f\left[ f^{-1}(B) \right]=B\bigcap f(X)\)</span> 且 <span class="arithmatex">\(f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}\)</span><br />
+(iii)当且仅当 <span class="arithmatex">\(f\)</span> 为一一映射时，对任何 <span class="arithmatex">\(A,B\subset X\)</span> 有 <span class="arithmatex">\(f\left( A\bigcap B \right)=f(A)\bigcap f(B)\)</span><br />
+(iv)当且仅当 <span class="arithmatex">\(f\)</span> 为完全一一映射时, 对任何 <span class="arithmatex">\(A \subset X\)</span> 有 <span class="arithmatex">\(f\left(A^{c}\right)=\left[f(A)\right]^{c}\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
 <p>(i):</p>
 <p><span class="arithmatex">\(x\in A,f(x)\in f(A)\implies x\in f^{-1}\left( f(A) \right)\implies A\subset f^{-1}[f(A)]\)</span></p>
-<p>反证若是<span class="arithmatex">\(A\subset f^{-1}[f(A)],A\neq f^{-1}[f(A)],\exists y\in f^{-1}[f(A)]-A\)</span></p>
-<p>从而有<span class="arithmatex">\(f(y) \in f(A)\implies \exists x\in A,f(x)\in f(A)\implies y=x\)</span>即得矛盾</p>
+<p>反证若是 <span class="arithmatex">\(A\subset f^{-1}[f(A)],A\neq f^{-1}[f(A)],\exists y\in f^{-1}[f(A)]-A\)</span></p>
+<p>从而有 <span class="arithmatex">\(f(y) \in f(A)\implies \exists x\in A,f(x)\in f(A)\implies y=x\)</span> 即得矛盾</p>
 <p>(ii):</p>
-<p>先证明<span class="arithmatex">\(f\left[ f^{-1}(B) \right]=B\bigcap f(X)\)</span>:</p>
-<p>取任意<span class="arithmatex">\(y\in f\left[ f^{-1}(B) \right]\)</span>，存在<span class="arithmatex">\(x\in f^{-1}(B),f(x)=y\implies f(x)\in B ,y\in B\)</span></p>
-<p>同时有<span class="arithmatex">\(x\in X,y\in f(X)\)</span>,那么得到<span class="arithmatex">\(f\left[ f^{-1}(B) \right]\subset B\bigcap f(X)\)</span></p>
-<p>相应的，<span class="arithmatex">\(y\in B \bigcap f(X) \implies \exists x\in X,f(x)=y\in B,x=f^{-1}(B)\)</span>，因此<span class="arithmatex">\(y=f(x)\in\left[ f^{-1}(B) \right]\)</span></p>
-<p>那么得到<span class="arithmatex">\(f\left[ f^{-1}(B) \right]\supset B\bigcap f(X)\)</span></p>
+<p>先证明 <span class="arithmatex">\(f\left[ f^{-1}(B) \right]=B\bigcap f(X)\)</span>:</p>
+<p>取任意 <span class="arithmatex">\(y\in f\left[ f^{-1}(B) \right]\)</span>，存在 <span class="arithmatex">\(x\in f^{-1}(B),f(x)=y\implies f(x)\in B ,y\in B\)</span></p>
+<p>同时有 <span class="arithmatex">\(x\in X,y\in f(X)\)</span>,那么得到 <span class="arithmatex">\(f\left[ f^{-1}(B) \right]\subset B\bigcap f(X)\)</span></p>
+<p>相应的，<span class="arithmatex">\(y\in B \bigcap f(X) \implies \exists x\in X,f(x)=y\in B,x=f^{-1}(B)\)</span>，因此 <span class="arithmatex">\(y=f(x)\in\left[ f^{-1}(B) \right]\)</span></p>
+<p>那么得到 <span class="arithmatex">\(f\left[ f^{-1}(B) \right]\supset B\bigcap f(X)\)</span></p>
 <p>综上所述：<span class="arithmatex">\(f\left[ f^{-1}(B) \right]=B\bigcap f(X)\)</span></p>
-<p>再证明<span class="arithmatex">\(f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}\)</span>:</p>
-<p>取任意<span class="arithmatex">\(x\in f^{-1}(B^{c}),f(x)\in B^{c}(f(x)\not\in B)\implies x\not\in f^{-1}(B),x\in \left[ f^{-1}(B) \right]^{c}\)</span>，即<span class="arithmatex">\(f^{-1}(B^{c})\subset\left[ f^{-1}(B) \right]^{c}\)</span>，相应的取<span class="arithmatex">\(x\in \left[ f^{-1}(B) \right]^{c},x \not\in f^{-1}(B),f(x)\not\in B\implies f(x)\in B^{c},x\in f^{-1}(B^{c})\)</span>，即<span class="arithmatex">\(f^{-1}(B^{c})\supset\left[ f^{-1}(B) \right]^{c}\)</span></p>
+<p>再证明 <span class="arithmatex">\(f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}\)</span>:</p>
+<p>取任意 <span class="arithmatex">\(x\in f^{-1}(B^{c}),f(x)\in B^{c}(f(x)\not\in B)\implies x\not\in f^{-1}(B),x\in \left[ f^{-1}(B) \right]^{c}\)</span>，即 <span class="arithmatex">\(f^{-1}(B^{c})\subset\left[ f^{-1}(B) \right]^{c}\)</span>，相应的取 <span class="arithmatex">\(x\in \left[ f^{-1}(B) \right]^{c},x \not\in f^{-1}(B),f(x)\not\in B\implies f(x)\in B^{c},x\in f^{-1}(B^{c})\)</span>，即 <span class="arithmatex">\(f^{-1}(B^{c})\supset\left[ f^{-1}(B) \right]^{c}\)</span></p>
 <p>综上所述：<span class="arithmatex">\(f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}\)</span></p>
 <p>(iii):</p>
 <p>必要性证明：</p>
-<p>已知<span class="arithmatex">\(f\)</span>为一一映射,当<span class="arithmatex">\(x\in A\bigcap B,f(x)\in f(A),f(x)\in f(B),f\left( A\bigcap B \right)\subset f(A)\bigcap f(B)\)</span>.</p>
-<p>任取<span class="arithmatex">\(y\in f(A)\bigcap f(B),\exists a\in A,b\in B,s.t.f(a)=y,f(b)=y\)</span>，又根据单射的定义，得<span class="arithmatex">\(a=b\in A\bigcap B\)</span></p>
+<p>已知 <span class="arithmatex">\(f\)</span> 为一一映射,当 <span class="arithmatex">\(x\in A\bigcap B,f(x)\in f(A),f(x)\in f(B),f\left( A\bigcap B \right)\subset f(A)\bigcap f(B)\)</span>.</p>
+<p>任取 <span class="arithmatex">\(y\in f(A)\bigcap f(B),\exists a\in A,b\in B,s.t.f(a)=y,f(b)=y\)</span>，又根据单射的定义，得 <span class="arithmatex">\(a=b\in A\bigcap B\)</span></p>
 <p>综上所述：<span class="arithmatex">\(f\left( A\bigcap B \right)=f(A)\bigcap f(B)\)</span></p>
 <p>充分性证明：</p>
-<p>反证法，若不是一一映射假设存在<span class="arithmatex">\(x_{1}\neq x_{2}\)</span>,使得<span class="arithmatex">\(f(x_{1})=f(x_{2})=C\)</span>，
-构造<span class="arithmatex">\(A=\left\{ x_{1} \right\},B=\left\{ x_{2} \right\}\)</span>，根据题设<span class="arithmatex">\(f\left( A\bigcap B \right)=f(\emptyset)=\emptyset\neq f(A)\bigcap f(B)=C\)</span>，矛盾，<span class="arithmatex">\(f\)</span>为单射</p>
-<p>综上所述:当且仅当<span class="arithmatex">\(f\)</span>为一一映射时，对任何<span class="arithmatex">\(A,B\subset X\)</span>有<span class="arithmatex">\(f\left( A\bigcap B \right)=f(A)\bigcap f(B)\)</span></p>
+<p>反证法，若不是一一映射假设存在 <span class="arithmatex">\(x_{1}\neq x_{2}\)</span>,使得 <span class="arithmatex">\(f(x_{1})=f(x_{2})=C\)</span>，
+构造 <span class="arithmatex">\(A=\left\{ x_{1} \right\},B=\left\{ x_{2} \right\}\)</span>，根据题设 <span class="arithmatex">\(f\left( A\bigcap B \right)=f(\emptyset)=\emptyset\neq f(A)\bigcap f(B)=C\)</span>，矛盾，<span class="arithmatex">\(f\)</span> 为单射</p>
+<p>综上所述:当且仅当 <span class="arithmatex">\(f\)</span> 为一一映射时，对任何 <span class="arithmatex">\(A,B\subset X\)</span> 有 <span class="arithmatex">\(f\left( A\bigcap B \right)=f(A)\bigcap f(B)\)</span></p>
 <p>(iv):</p>
-<p><span class="arithmatex">\(x\in A^{c},f(x)\not\in f(A)\)</span>，否则有<span class="arithmatex">\(y\in A,f(x)=f(y)\implies x=y\)</span>矛盾，也就是<span class="arithmatex">\(f(A^{c})\subset[f(A)]^{c}\)</span>，由于是双射可以考虑<span class="arithmatex">\(f^{-1}\)</span>，<span class="arithmatex">\(f(x)\not\in f(A),x\not\in A^{c}\)</span>即得<span class="arithmatex">\(f(A^{c})\supset[f(A)]^{c}\)</span></p>
-<p>再证明另一侧，取<span class="arithmatex">\(A=X,f(A)^{c}=\emptyset,f(A)=Y\)</span>，这步证明了满性，取<span class="arithmatex">\(y\neq x,A=\left\{ x \right\},y\in A^{c}\)</span>，因此由<span class="arithmatex">\(f(A^{c})=f(A)^{c}\implies f(y)\in f(A)^{c}\implies f(y)\neq f(x)\)</span>，这就证明了单性，综上所述可知双射.</p>
+<p><span class="arithmatex">\(x\in A^{c},f(x)\not\in f(A)\)</span>，否则有 <span class="arithmatex">\(y\in A,f(x)=f(y)\implies x=y\)</span> 矛盾，也就是 <span class="arithmatex">\(f(A^{c})\subset[f(A)]^{c}\)</span>，由于是双射可以考虑 <span class="arithmatex">\(f^{-1}\)</span>，<span class="arithmatex">\(f(x)\not\in f(A),x\not\in A^{c}\)</span> 即得 <span class="arithmatex">\(f(A^{c})\supset[f(A)]^{c}\)</span></p>
+<p>再证明另一侧，取 <span class="arithmatex">\(A=X,f(A)^{c}=\emptyset,f(A)=Y\)</span>，这步证明了满性，取 <span class="arithmatex">\(y\neq x,A=\left\{ x \right\},y\in A^{c}\)</span>，因此由 <span class="arithmatex">\(f(A^{c})=f(A)^{c}\implies f(y)\in f(A)^{c}\implies f(y)\neq f(x)\)</span>，这就证明了单性，综上所述可知双射.</p>
 <p>注：很容易把自己绕晕，可以多看看，尤其是对于任意的条件通过取不同集合证明不同的条件可以积累取特殊集合的技巧.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 8</p>
-<p>设<span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span>上的实函数.若有 <span class="arithmatex">\(M &gt;0\)</span>，使对任何有限个两两不等的实数 <span class="arithmatex">\(x_1,\dots,x_{n}\)</span>有<span class="arithmatex">\(\left\lvert  \sum\limits_{k=1}^{n}f(x_{k})  \right\rvert\le M\)</span>.<br />
-求证:<span class="arithmatex">\(\left\{ x:f(x) \neq 0 \right\}\)</span>是至多可数集.</p>
+<p>设 <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的实函数.若有 <span class="arithmatex">\(M &gt;0\)</span>，使对任何有限个两两不等的实数 <span class="arithmatex">\(x_1,\dots,x_{n}\)</span> 有 <span class="arithmatex">\(\left\lvert  \sum\limits_{k=1}^{n}f(x_{k})  \right\rvert\le M\)</span>.<br />
+求证:<span class="arithmatex">\(\left\{ x:f(x) \neq 0 \right\}\)</span> 是至多可数集.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证法，假设<span class="arithmatex">\(\left\{ x:f(x) \neq 0 \right\}\)</span>并非至多可数，那么根据<span class="arithmatex">\(\left\{ x:f(x) \neq 0 \right\}=\bigcup\limits_{n=1}^{\infty}\left\{ x:\lvert f(x) \rvert &gt; \frac{1}{n} \right\}\)</span></p>
+<p>反证法，假设 <span class="arithmatex">\(\left\{ x:f(x) \neq 0 \right\}\)</span> 并非至多可数，那么根据 <span class="arithmatex">\(\left\{ x:f(x) \neq 0 \right\}=\bigcup\limits_{n=1}^{\infty}\left\{ x:\lvert f(x) \rvert &gt; \frac{1}{n} \right\}\)</span></p>
 <p>其中必有一个不可数集，否则可数个至多可数集的并仍是至多可数集，与假设矛盾</p>
-<p>不妨设<span class="arithmatex">\(\left\{ x:\lvert f(x) \rvert&gt; \frac{1}{k} \right\}\)</span>是不可数集，那么再将集合分解为<span class="arithmatex">\(\left\{ x: f(x)&gt; \frac{1}{k} \right\}\bigcup\left\{ x: f(x) &lt; -\frac{1}{k} \right\}\)</span>，其中一定有一个不可数集，否则两个至多可数集的并仍是至多可数集，矛盾.</p>
-<p>不妨设<span class="arithmatex">\(\left\{ x: f(x) &gt; \frac{1}{k} \right\}\)</span>是不可数集，从中选取出一个可数子集记为<span class="arithmatex">\(A\)</span>，再从<span class="arithmatex">\(A\)</span>中选择<span class="arithmatex">\([kM]+1\)</span>个元素，<span class="arithmatex">\(\left\lvert  \sum\limits_{i=1}^{[kM]+1}f(x_{i})  \right\rvert&gt;kM \cdot \frac{1}{k}=M\)</span></p>
-<p>得到矛盾，那么得证<span class="arithmatex">\(\left\{ x:f(x)\neq 0 \right\}\)</span>是至多可数集</p>
-<p>注：这里也运用了集合分解的技术，导出矛盾的思路是，固定一个<span class="arithmatex">\(\frac{1}{k}\)</span>然后才能通过题目给出的有限个条件制造出一个大于<span class="arithmatex">\(M\)</span>的数</p>
+<p>不妨设 <span class="arithmatex">\(\left\{ x:\lvert f(x) \rvert&gt; \frac{1}{k} \right\}\)</span> 是不可数集，那么再将集合分解为 <span class="arithmatex">\(\left\{ x: f(x)&gt; \frac{1}{k} \right\}\bigcup\left\{ x: f(x) &lt; -\frac{1}{k} \right\}\)</span>，其中一定有一个不可数集，否则两个至多可数集的并仍是至多可数集，矛盾.</p>
+<p>不妨设 <span class="arithmatex">\(\left\{ x: f(x) &gt; \frac{1}{k} \right\}\)</span> 是不可数集，从中选取出一个可数子集记为 <span class="arithmatex">\(A\)</span>，再从 <span class="arithmatex">\(A\)</span> 中选择 <span class="arithmatex">\([kM]+1\)</span> 个元素，<span class="arithmatex">\(\left\lvert  \sum\limits_{i=1}^{[kM]+1}f(x_{i})  \right\rvert&gt;kM \cdot \frac{1}{k}=M\)</span></p>
+<p>得到矛盾，那么得证 <span class="arithmatex">\(\left\{ x:f(x)\neq 0 \right\}\)</span> 是至多可数集</p>
+<p>注：这里也运用了集合分解的技术，导出矛盾的思路是，固定一个 <span class="arithmatex">\(\frac{1}{k}\)</span> 然后才能通过题目给出的有限个条件制造出一个大于 <span class="arithmatex">\(M\)</span> 的数</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 9</p>
-<p>求证:<span class="arithmatex">\(\mathbb{R}\)</span>上单调函数的间断点是至多可数的.</p>
+<p>求证:<span class="arithmatex">\(\mathbb{R}\)</span> 上单调函数的间断点是至多可数的.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>由于是<span class="arithmatex">\(\mathbb{R}\)</span>上单调函数<span class="arithmatex">\(f\)</span>应当是单射，那么不妨先设单调递增，由此可知两边极限存在，任意选择<span class="arithmatex">\(\mathbb{R}\)</span>上的一个间断点记为<span class="arithmatex">\(x_{0}\)</span>，那么根据函数的单调性知道<span class="arithmatex">\(f(x_{0}^{-})\le f(x_{0}^{+})\)</span>，如果不等那么取<span class="arithmatex">\((f(x_{0}^{-}),f(x_{0}^{+}))\)</span>中的一个有理点<span class="arithmatex">\(q_{x_{0}}\)</span>，如果相等也就是可去间断点取<span class="arithmatex">\(f(x_{0}^{-})\)</span>的小邻域内的有理数，这样就构成了间断点和有理数的一个单射，而全体有理数是至多可数的，那么间断点也一定是至多可数的.</p>
+<p>由于是 <span class="arithmatex">\(\mathbb{R}\)</span> 上单调函数 <span class="arithmatex">\(f\)</span> 应当是单射，那么不妨先设单调递增，由此可知两边极限存在，任意选择 <span class="arithmatex">\(\mathbb{R}\)</span> 上的一个间断点记为 <span class="arithmatex">\(x_{0}\)</span>，那么根据函数的单调性知道 <span class="arithmatex">\(f(x_{0}^{-})\le f(x_{0}^{+})\)</span>，如果不等那么取 <span class="arithmatex">\((f(x_{0}^{-}),f(x_{0}^{+}))\)</span> 中的一个有理点 <span class="arithmatex">\(q_{x_{0}}\)</span>，如果相等也就是可去间断点取 <span class="arithmatex">\(f(x_{0}^{-})\)</span> 的小邻域内的有理数，这样就构成了间断点和有理数的一个单射，而全体有理数是至多可数的，那么间断点也一定是至多可数的.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 10</p>
-<p>设<span class="arithmatex">\(f\)</span>是<span class="arithmatex">\([a,b]\)</span>上单增实值函数，<span class="arithmatex">\(f([a,b])\)</span>是区间<span class="arithmatex">\([f(a),f(b)]\)</span>的稠子集，求证：<span class="arithmatex">\(f\)</span>连续.</p>
+<p>设 <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\([a,b]\)</span> 上单增实值函数，<span class="arithmatex">\(f([a,b])\)</span> 是区间 <span class="arithmatex">\([f(a),f(b)]\)</span> 的稠子集，求证：<span class="arithmatex">\(f\)</span> 连续.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证法，假设<span class="arithmatex">\(f\)</span>有不连续点，那么设存在不连续点<span class="arithmatex">\(x_{0}(x_{0}\in [a,b])\)</span>，使得<span class="arithmatex">\(f(x_{0}^{-})&lt;f(x_{0}^{+})\)</span>,若是端点则选取单侧极限。
-由于<span class="arithmatex">\(f([a,b])\)</span>是区间<span class="arithmatex">\([f(a),f(b)]\)</span>的稠子集，<span class="arithmatex">\(\forall I\subset f([a,b]),I\bigcap [f(a),f(b)]\neq \emptyset\)</span>，然而取<span class="arithmatex">\(\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)\)</span>，有<span class="arithmatex">\(\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)\subset \left[ f(a),f(b) \right]\)</span>，因为单调递增有<span class="arithmatex">\(f(a)\leqslant f(x_{0}^{-})\leqslant f(x_{0}^{+})\leqslant f(b)\)</span>.但是<span class="arithmatex">\(f([a,b])\bigcap(f(x_{0}^{-}),f(x_{0}^{+}))=\emptyset\)</span>，所以矛盾，得知假设不成立，<span class="arithmatex">\(f\)</span>连续</p>
+<p>反证法，假设 <span class="arithmatex">\(f\)</span> 有不连续点，那么设存在不连续点 <span class="arithmatex">\(x_{0}(x_{0}\in [a,b])\)</span>，使得 <span class="arithmatex">\(f(x_{0}^{-})&lt;f(x_{0}^{+})\)</span>,若是端点则选取单侧极限。
+由于 <span class="arithmatex">\(f([a,b])\)</span> 是区间 <span class="arithmatex">\([f(a),f(b)]\)</span> 的稠子集，<span class="arithmatex">\(\forall I\subset f([a,b]),I\bigcap [f(a),f(b)]\neq \emptyset\)</span>，然而取 <span class="arithmatex">\(\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)\)</span>，有 <span class="arithmatex">\(\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)\subset \left[ f(a),f(b) \right]\)</span>，因为单调递增有 <span class="arithmatex">\(f(a)\leqslant f(x_{0}^{-})\leqslant f(x_{0}^{+})\leqslant f(b)\)</span>.但是 <span class="arithmatex">\(f([a,b])\bigcap(f(x_{0}^{-}),f(x_{0}^{+}))=\emptyset\)</span>，所以矛盾，得知假设不成立，<span class="arithmatex">\(f\)</span> 连续</p>
 <h2 id="11-20">11-20<a class="headerlink" href="#11-20" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Ch1 11</p>
-<p>若<span class="arithmatex">\(A_{2} \subset A_{1}, B_{2} \subset B_{1}, A_{2} \sim B_{2}, A_{1} \sim B_{1}\)</span>, 试问是否必有 <span class="arithmatex">\(A_{1}-A_{2} \sim B_{1}-B_{2}\)</span> ?</p>
+<p>若 <span class="arithmatex">\(A_{2} \subset A_{1}, B_{2} \subset B_{1}, A_{2} \sim B_{2}, A_{1} \sim B_{1}\)</span>, 试问是否必有 <span class="arithmatex">\(A_{1}-A_{2} \sim B_{1}-B_{2}\)</span> ?</p>
 </div>
 <p><code>Sol.</code></p>
-<p>构造思路：可以考虑<span class="arithmatex">\(A_{1}=A_{2}\)</span>这样就可以使<span class="arithmatex">\(A_{1}-A_{2}=\emptyset\)</span>，然后使得<span class="arithmatex">\(B_{1}-B_{2}\neq \emptyset\)</span>即可</p>
-<p>令<span class="arithmatex">\(A_{1}=A_{2}=\mathbb{Q},B_{2}=\mathbb{Z},B_{1}=\mathbb{Q}\)</span></p>
+<p>构造思路：可以考虑 <span class="arithmatex">\(A_{1}=A_{2}\)</span> 这样就可以使 <span class="arithmatex">\(A_{1}-A_{2}=\emptyset\)</span>，然后使得 <span class="arithmatex">\(B_{1}-B_{2}\neq \emptyset\)</span> 即可</p>
+<p>令 <span class="arithmatex">\(A_{1}=A_{2}=\mathbb{Q},B_{2}=\mathbb{Z},B_{1}=\mathbb{Q}\)</span></p>
 <p>注：经典的反例题，可以适当积累一下</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 12</p>
 <p>求证: 有限个可数集的直积是可数集. (无限个可数集呢?)</p>
 </div>
 <p><code>Proof.</code></p>
-<p>不妨设可数集为<span class="arithmatex">\(\mathbb{Q}\)</span>，只需要证明<span class="arithmatex">\(\mathbb{Q}^{2}\)</span>后续使用归纳法，<span class="arithmatex">\(\mathbb{Q}^{n}=\mathbb{Q}^{n-1}\times \mathbb{Q}\)</span></p>
-<p>我们知道<span class="arithmatex">\(\mathbb{Q}\times \mathbb{Q}=\bigcup\limits_{k=1}^{\infty}\mathbb{Q}\times \left\{ r_{k} \right\},\mathbb{Q}=\left\{ r_{1},r_{2},\dots,r_{n}\dots \right\}\)</span></p>
+<p>不妨设可数集为 <span class="arithmatex">\(\mathbb{Q}\)</span>，只需要证明 <span class="arithmatex">\(\mathbb{Q}^{2}\)</span> 后续使用归纳法，<span class="arithmatex">\(\mathbb{Q}^{n}=\mathbb{Q}^{n-1}\times \mathbb{Q}\)</span></p>
+<p>我们知道 <span class="arithmatex">\(\mathbb{Q}\times \mathbb{Q}=\bigcup\limits_{k=1}^{\infty}\mathbb{Q}\times \left\{ r_{k} \right\},\mathbb{Q}=\left\{ r_{1},r_{2},\dots,r_{n}\dots \right\}\)</span></p>
 <p>这样可以得到一个至多可数集，而可数集的可数并是可数的</p>
-<p>至于无限个可数集，反例是容易举的，例如可数个整数集就相当于是<span class="arithmatex">\(n\)</span>元数列全体的一个超集，而<span class="arithmatex">\(n\)</span>元数列全体是具有连续统势的，所以应当不可数(即便是可数无穷也无法可数)</p>
+<p>至于无限个可数集，反例是容易举的，例如可数个整数集就相当于是 <span class="arithmatex">\(n\)</span> 元数列全体的一个超集，而 <span class="arithmatex">\(n\)</span> 元数列全体是具有连续统势的，所以应当不可数(即便是可数无穷也无法可数)</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 13</p>
-<p>例 设实数集<span class="arithmatex">\(E\)</span>不可数. 求证: 有<span class="arithmatex">\(x\)</span>, 使对任何<span class="arithmatex">\(\delta&gt;0, E \cap(x-\delta, x+\delta)\)</span>不可数.</p>
+<p>例 设实数集 <span class="arithmatex">\(E\)</span> 不可数. 求证: 有 <span class="arithmatex">\(x\)</span>, 使对任何 <span class="arithmatex">\(\delta&gt;0, E \cap(x-\delta, x+\delta)\)</span> 不可数.</p>
 </div>
 <p><code>Proof.</code></p>
 <p>用反证法. 不然对任何 <span class="arithmatex">\(x \in E\)</span>, 必有 <span class="arithmatex">\(\delta_{x}&gt;0\)</span> 使 <span class="arithmatex">\(E \cap\left(x-\delta_{x}, x+\delta_{x}\right)\)</span> 至多可数. 从而对每一 <span class="arithmatex">\(x \in E\)</span>, 必有满足 <span class="arithmatex">\(r_{x}&lt;x&lt;r_{x}\)</span> 的有理数 <span class="arithmatex">\(r_{x}\)</span> 和 <span class="arithmatex">\(R_{x}\)</span>, 使 <span class="arithmatex">\(E \cap\left(r_{x}, R_{x}\right)\)</span> 至多可数. 由题 12, <span class="arithmatex">\(\left\{\left(r_{x}, R_{x}\right)\right\}_{x \in E}\)</span> 中至多只有可数个开区间. 从而 <span class="arithmatex">\(E=\bigcup_{x \in E}\left[E \cap\left(r_{x}, R_{x}\right)\right]\)</span> 是一个至多可数集, 此与题设矛盾.</p>
-<p>注：很重要的题目，需要掌握取有理数这种证明手法，与之相关的题可以结合起来看如14，</p>
+<p>注：很重要的题目，需要掌握取有理数这种证明手法，与之相关的题可以结合起来看如 14，</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 14</p>
-<p>求证：<span class="arithmatex">\(E\)</span>中满足题13中条件的点<span class="arithmatex">\(x\)</span>的全体是不可数集</p>
+<p>求证：<span class="arithmatex">\(E\)</span> 中满足题 13 中条件的点 <span class="arithmatex">\(x\)</span> 的全体是不可数集</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证法，假设满足条件的全体为至多可数集，记为<span class="arithmatex">\(A\)</span></p>
-<p>那么对于<span class="arithmatex">\(x\in E-A\)</span>，利用条件，存在<span class="arithmatex">\(\delta_{x}&gt;0,s.t.E\bigcap \left( x-\delta_{x},x+\delta_{x} \right)\)</span>至多可数，可以找到有理数<span class="arithmatex">\(r_{x}\)</span>和<span class="arithmatex">\(R_{x}\)</span>使得<span class="arithmatex">\(r_{x}&lt;x&lt;R_{x}\)</span>，并且<span class="arithmatex">\(E\bigcap \left( r_{x},R_{x} \right)\)</span>至多可数，并且区间端点为有理数的区间只有至多可数个</p>
-<p>那么利用<span class="arithmatex">\(E=A\bigcup \left( E-A \right)\)</span>，并且<span class="arithmatex">\(E-A=\bigcup\limits_{x\in E-A}E\bigcap \left( r_{x},R_{x} \right)\)</span>是至多可数集(至多可数个至多可数集的并还是至多可数集)，由假设得<span class="arithmatex">\(A\)</span>是可数集，因此<span class="arithmatex">\(E\)</span>也是至多可数集，与原题设矛盾</p>
-<p>综上：<span class="arithmatex">\(A\)</span>是不可数集</p>
+<p>反证法，假设满足条件的全体为至多可数集，记为 <span class="arithmatex">\(A\)</span></p>
+<p>那么对于 <span class="arithmatex">\(x\in E-A\)</span>，利用条件，存在 <span class="arithmatex">\(\delta_{x}&gt;0,s.t.E\bigcap \left( x-\delta_{x},x+\delta_{x} \right)\)</span> 至多可数，可以找到有理数 <span class="arithmatex">\(r_{x}\)</span> 和 <span class="arithmatex">\(R_{x}\)</span> 使得 <span class="arithmatex">\(r_{x}&lt;x&lt;R_{x}\)</span>，并且 <span class="arithmatex">\(E\bigcap \left( r_{x},R_{x} \right)\)</span> 至多可数，并且区间端点为有理数的区间只有至多可数个</p>
+<p>那么利用 <span class="arithmatex">\(E=A\bigcup \left( E-A \right)\)</span>，并且 <span class="arithmatex">\(E-A=\bigcup\limits_{x\in E-A}E\bigcap \left( r_{x},R_{x} \right)\)</span> 是至多可数集(至多可数个至多可数集的并还是至多可数集)，由假设得 <span class="arithmatex">\(A\)</span> 是可数集，因此 <span class="arithmatex">\(E\)</span> 也是至多可数集，与原题设矛盾</p>
+<p>综上：<span class="arithmatex">\(A\)</span> 是不可数集</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 15</p>
-<p>设<span class="arithmatex">\(\{x_{n}\}_{n\geqslant 1}\)</span>是可数个实数. 试具体写出一个单增函数<span class="arithmatex">\(f\)</span>, 它以<span class="arithmatex">\(\{x_{n}\}_{n\geqslant 1}\)</span>为其间断点全体.</p>
+<p>设 <span class="arithmatex">\(\{x_{n}\}_{n\geqslant 1}\)</span> 是可数个实数. 试具体写出一个单增函数 <span class="arithmatex">\(f\)</span>, 它以 <span class="arithmatex">\(\{x_{n}\}_{n\geqslant 1}\)</span> 为其间断点全体.</p>
 </div>
 <p><code>Sol.</code></p>
-<p>考虑收敛级数<span class="arithmatex">\(\sum\limits \frac{1}{n^{2}}\)</span>，那么定义<span class="arithmatex">\(f(x)=\sum\limits_{n:x_{n}&lt;x} \frac{1}{n^{2}}\)</span></p>
-<p>显然的有<span class="arithmatex">\(f(x_{n_{0}}^{+})-f(x_{n_{0}})= \frac{1}{n_{0}^{2}}\)</span></p>
-<p>注1：这个构造比较巧妙，但是我想应当也可以给出一个解释，要想构造单增函数并且还需要以<span class="arithmatex">\(x_{n}\)</span>为间断点，很自然会想到阶梯函数(经验分布函数！)所以下面这种构造实际是有道理的，并且为了避免溢出我们最好选择收敛的级数.</p>
-<p>注2：显然的构造方式不止这一种，但是需要注意的是不太能做到为<span class="arithmatex">\(x_{n}\)</span>排序并且选取最小的那个，因为很有可能涉及无穷操作，这种证明是危险的.</p>
+<p>考虑收敛级数 <span class="arithmatex">\(\sum\limits \frac{1}{n^{2}}\)</span>，那么定义 <span class="arithmatex">\(f(x)=\sum\limits_{n:x_{n}&lt;x} \frac{1}{n^{2}}\)</span></p>
+<p>显然的有 <span class="arithmatex">\(f(x_{n_{0}}^{+})-f(x_{n_{0}})= \frac{1}{n_{0}^{2}}\)</span></p>
+<p>注 1：这个构造比较巧妙，但是我想应当也可以给出一个解释，要想构造单增函数并且还需要以 <span class="arithmatex">\(x_{n}\)</span> 为间断点，很自然会想到阶梯函数(经验分布函数！)所以下面这种构造实际是有道理的，并且为了避免溢出我们最好选择收敛的级数.</p>
+<p>注 2：显然的构造方式不止这一种，但是需要注意的是不太能做到为 <span class="arithmatex">\(x_{n}\)</span> 排序并且选取最小的那个，因为很有可能涉及无穷操作，这种证明是危险的.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 16</p>
-<p>证明:<span class="arithmatex">\(\mathbb{R}\)</span>上的实函数<span class="arithmatex">\(f\)</span>的第一类间断点(即左右极限存在有限的间断点)是至多可数的.</p>
+<p>证明:<span class="arithmatex">\(\mathbb{R}\)</span> 上的实函数 <span class="arithmatex">\(f\)</span> 的第一类间断点(即左右极限存在有限的间断点)是至多可数的.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">+ Hint</p>
-<p>证明<span class="arithmatex">\(\left\{ x:\lvert f(x)-f(x^{+}) \rvert&gt; \frac{1}{n} \right\}\)</span>是至多可数集</p>
+<p>证明 <span class="arithmatex">\(\left\{ x:\lvert f(x)-f(x^{+}) \rvert&gt; \frac{1}{n} \right\}\)</span> 是至多可数集</p>
 </div>
 <p><code>Proof.</code></p>
 <p>先明确研究目标：<span class="arithmatex">\(\left\{ x:\lvert f(x)-f(x+0) \rvert&gt;0 \right\}\bigcup \left\{ x:\lvert f(x)-f(x-0) \rvert&gt;0 \right\}\)</span>，我们很自然会考虑进行集合表示(常用的一个分解式)</p>
@@ -2016,13 +2016,13 @@ x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&amp;=A_{k}-\bigcup\
 \left\{ x:\lvert f(x)-f(x+0) \rvert&gt;0 \right\}=\bigcup\limits_{n=1}^{\infty} \left\{ x:\lvert f(x^{+})-f(x) \rvert&gt; \frac{1}{n} \right\}
 \]</div>
 <p>下面开始正式的证明：</p>
-<p>先定义<span class="arithmatex">\(E=\left\{ x:f(x^{-}),f(x^{+})都存在 \right\}\)</span>不妨讨论右极限，左极限同理</p>
-<p>设右极限为<span class="arithmatex">\(f(x^{+})\)</span>，那么定义<span class="arithmatex">\(A=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert&gt; 0 \right\}\)</span>，</p>
-<p>将集合进行分解<span class="arithmatex">\(A=\bigcup\limits_{k=1}^{\infty}A_{k},A_{k}=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert&gt; \frac{1}{k} \right\}\)</span></p>
-<p>再证明<span class="arithmatex">\(A_{k}\)</span>至多可数</p>
-<p>根据右极限定义，对于任意的<span class="arithmatex">\(x\in A_{k}\)</span>，<span class="arithmatex">\(\exists\delta_{x}&gt;0,x&lt;y&lt;x+\delta_{x}\)</span>都有<span class="arithmatex">\(\lvert f(y)-f(x^{+}) \rvert&lt; \frac{1}{4k}\)</span> ，对于任意的<span class="arithmatex">\(x_{1},x_{2}\in \left( x,x+\delta _{x} \right)\)</span>，事实上可以直接由柯西收敛定理结合右极限的存在性直接得到下面的式子而不用通过三角不等式，<span class="arithmatex">\(\lvert f(x_{1})-f(x_{2}) \rvert\leq\lvert f(x_{1})-f(x^{+}) \rvert+\lvert f(x_{2})-f(x^{+}) \rvert&lt; \frac{1}{2k}\)</span></p>
-<p>再来说明<span class="arithmatex">\(A_{k}\bigcap \left( x,x+\delta_{x} \right)=\emptyset\)</span>.这事实上是显然的，右极限的存在性保证了<span class="arithmatex">\(x\)</span>右端的弱连续性由此可知不可能出现符合<span class="arithmatex">\(A_{k}\)</span>条件的点</p>
-<p>反证法，如果存在<span class="arithmatex">\(x_{0}\in A_{k}\bigcap \left( x,x+\delta_{x} \right)\)</span>,有<span class="arithmatex">\(\lvert f(x_{0}^{+})-f(x_{0}) \rvert&gt; \frac{1}{k}\)</span>，那么也存在<span class="arithmatex">\(\delta_{0},s.t.y_{0}\in \left( x_{0},x_{0}+\delta_{0} \right),x_{0}+\delta_{0}&lt;x+\delta_{x}\)</span>,<span class="arithmatex">\(\lvert f(y_{0})-f(x_{0}^{+}) \rvert&lt; \frac{1}{2k}\)</span></p>
+<p>先定义 <span class="arithmatex">\(E=\left\{ x:f(x^{-}),f(x^{+})都存在 \right\}\)</span> 不妨讨论右极限，左极限同理</p>
+<p>设右极限为 <span class="arithmatex">\(f(x^{+})\)</span>，那么定义 <span class="arithmatex">\(A=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert&gt; 0 \right\}\)</span>，</p>
+<p>将集合进行分解 <span class="arithmatex">\(A=\bigcup\limits_{k=1}^{\infty}A_{k},A_{k}=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert&gt; \frac{1}{k} \right\}\)</span></p>
+<p>再证明 <span class="arithmatex">\(A_{k}\)</span> 至多可数</p>
+<p>根据右极限定义，对于任意的 <span class="arithmatex">\(x\in A_{k}\)</span>，<span class="arithmatex">\(\exists\delta_{x}&gt;0,x&lt;y&lt;x+\delta_{x}\)</span> 都有 <span class="arithmatex">\(\lvert f(y)-f(x^{+}) \rvert&lt; \frac{1}{4k}\)</span> ，对于任意的 <span class="arithmatex">\(x_{1},x_{2}\in \left( x,x+\delta _{x} \right)\)</span>，事实上可以直接由柯西收敛定理结合右极限的存在性直接得到下面的式子而不用通过三角不等式，<span class="arithmatex">\(\lvert f(x_{1})-f(x_{2}) \rvert\leq\lvert f(x_{1})-f(x^{+}) \rvert+\lvert f(x_{2})-f(x^{+}) \rvert&lt; \frac{1}{2k}\)</span></p>
+<p>再来说明 <span class="arithmatex">\(A_{k}\bigcap \left( x,x+\delta_{x} \right)=\emptyset\)</span>.这事实上是显然的，右极限的存在性保证了 <span class="arithmatex">\(x\)</span> 右端的弱连续性由此可知不可能出现符合 <span class="arithmatex">\(A_{k}\)</span> 条件的点</p>
+<p>反证法，如果存在 <span class="arithmatex">\(x_{0}\in A_{k}\bigcap \left( x,x+\delta_{x} \right)\)</span>,有 <span class="arithmatex">\(\lvert f(x_{0}^{+})-f(x_{0}) \rvert&gt; \frac{1}{k}\)</span>，那么也存在 <span class="arithmatex">\(\delta_{0},s.t.y_{0}\in \left( x_{0},x_{0}+\delta_{0} \right),x_{0}+\delta_{0}&lt;x+\delta_{x}\)</span>,<span class="arithmatex">\(\lvert f(y_{0})-f(x_{0}^{+}) \rvert&lt; \frac{1}{2k}\)</span></p>
 <div class="arithmatex">\[
 \lvert f(x_{0})-f(y_{0}) \rvert \geq \lvert \lvert f(x_{0}^{+})-f(x_{0}) \rvert - \lvert f(x_{0}^{+})-f(y_{0}) \rvert \rvert &gt; \frac{1}{2k}
 \]</div>
@@ -2071,7 +2071,7 @@ x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&amp;=A_{k}-\bigcup\
 </div>
 <p><code>Proof.</code></p>
 <p>我们不妨设 <span class="arithmatex">\(A \cup B=\mathbf{R}^{2}, A\)</span> 和 <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(\mathbf{R}^{2}\)</span> （平面）中的两个子集， <span class="arithmatex">\(\mathbf{R}^{2}\)</span> 中的点用 <span class="arithmatex">\((x, y)\)</span> 来表示。现显然有 <span class="arithmatex">\(\bar{A} \leqslant c\)</span> 及 <span class="arithmatex">\(\bar{B} \leqslant c\)</span>. 今假设 <span class="arithmatex">\(\bar{A}&lt;c\)</span> 及 <span class="arithmatex">\(\bar{B}&lt;c\)</span>. 于是有 <span class="arithmatex">\(x_{0} \in \mathbf{R}\)</span>,使对一切 <span class="arithmatex">\(y \in \mathbf{R}\)</span> 有 <span class="arithmatex">\((x_{0}, y) \notin A\)</span>;</p>
-<p>注：可以考虑反面，<span class="arithmatex">\(\forall x\in \mathbb{R},\exists y_{0}\in \mathbb{R},(x,y_{0})\in A\)</span>，那么可以将这些点都映射到<span class="arithmatex">\(x\)</span>轴上使得<span class="arithmatex">\(A\)</span>有连续统势与假设矛盾.</p>
+<p>注：可以考虑反面，<span class="arithmatex">\(\forall x\in \mathbb{R},\exists y_{0}\in \mathbb{R},(x,y_{0})\in A\)</span>，那么可以将这些点都映射到 <span class="arithmatex">\(x\)</span> 轴上使得 <span class="arithmatex">\(A\)</span> 有连续统势与假设矛盾.</p>
 <p>同样有 <span class="arithmatex">\(y_{0} \in \mathbf{R}\)</span>, 使对一切 <span class="arithmatex">\(x \in \mathbf{R}\)</span> 有 <span class="arithmatex">\((x, y_{0}) \notin B\)</span>. 这样 <span class="arithmatex">\((x_{0}, y_{0}) \notin A \cup B=\mathbf{R}^{2}\)</span>, 矛盾.</p>
 <h2 id="21-30">21-30<a class="headerlink" href="#21-30" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
@@ -2079,56 +2079,56 @@ x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&amp;=A_{k}-\bigcup\
 <p>设 <span class="arithmatex">\(\bigcup\limits_{n=1}^{\infty} A_{n}\)</span> 有连续统势. 求证: 至少有一个 <span class="arithmatex">\(A_{n}\)</span> 有连续统势.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>注：这里需要知道<span class="arithmatex">\(\overline{\overline{\mathbb{R}^{\infty}}}=c\)</span>，然后就可以仿照上面的了</p>
-<p>直接利用20题的结论，仿照上面的证明即可，每个<span class="arithmatex">\(A_{n}\)</span>都没有连续统势</p>
+<p>注：这里需要知道 <span class="arithmatex">\(\overline{\overline{\mathbb{R}^{\infty}}}=c\)</span>，然后就可以仿照上面的了</p>
+<p>直接利用 20 题的结论，仿照上面的证明即可，每个 <span class="arithmatex">\(A_{n}\)</span> 都没有连续统势</p>
 <div class="admonition example">
 <p class="admonition-title"><span class="arithmatex">\(\mathbb{R}^{\infty}\)</span></p>
 <p><span class="arithmatex">\(\forall x\in \mathbb{R}^{\infty},x=(x_{1},x_{2},\dots,x_{k}\dots)\)</span></p>
 <div class="arithmatex">\[f(x)=\left\{ \left\{ (k,r) \right\} ,k\to x_{k},r\in \mathbb{Q},r&lt;x_{k} \right\} \]</div>
-<p>这样定义了一个从<span class="arithmatex">\(\mathbb{R}^{\infty}\to P(N\times \mathbb{Q})\)</span>的单射，另一边显然有它的势大于<span class="arithmatex">\(\mathbb{R}\)</span>那么可得它有连续统势</p>
+<p>这样定义了一个从 <span class="arithmatex">\(\mathbb{R}^{\infty}\to P(N\times \mathbb{Q})\)</span> 的单射，另一边显然有它的势大于 <span class="arithmatex">\(\mathbb{R}\)</span> 那么可得它有连续统势</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Ch1 22</p>
 <p>具体构造下列集之间的一个完全一一映射<br />
-(i)<span class="arithmatex">\(\left[ 0,1 \right]\)</span>与<span class="arithmatex">\(\left( 0,1 \right)\)</span><br />
-(ii)<span class="arithmatex">\((0,1]\)</span>与<span class="arithmatex">\((0,1]\times(0,1]\)</span><br />
+(i)<span class="arithmatex">\(\left[ 0,1 \right]\)</span> 与 <span class="arithmatex">\(\left( 0,1 \right)\)</span><br />
+(ii)<span class="arithmatex">\((0,1]\)</span> 与 <span class="arithmatex">\((0,1]\times(0,1]\)</span><br />
 (iii)正整数列全体与严格单增正整数列全体</p>
 </div>
 <p><code>Proof.</code></p>
 <p>注：构造方式均为无理点不动、有理点平移</p>
 <p>(i):</p>
-<p>我们将<span class="arithmatex">\(\left[ 0,1 \right]\)</span>分为<span class="arithmatex">\(0,1\)</span>和<span class="arithmatex">\((0,1)\)</span>内的有理数和无理数，</p>
-<p>对无理数部分构造一个无理数的恒等映射也就是当<span class="arithmatex">\(x\in (0,1),x\not\in Q\)</span>时，<span class="arithmatex">\(f(x)\equiv x\)</span> </p>
-<p>对有理数部分先证明它是可数集，首先全体有理数是可数集，而开区间内的有理数有无限个，根据可数集的无限子集也是可数集，我们知道<span class="arithmatex">\((0,1)\)</span>内的有理数一定也是可数集.这样就可以进行排列:对于所有的<span class="arithmatex">\(x\in(0,1),x\in Q\)</span>都可以用<span class="arithmatex">\(\left\{ x_{n} \right\}_{n \geq 1}\)</span>表示.</p>
-<p>然后构造有理数部分的映射<span class="arithmatex">\(f(x_{1})=0,f(x_{2})=1,f(x_{n})=x_{n-2},n \geq 3\)</span></p>
-<p>这样就得到了<span class="arithmatex">\(\left( 0,1 \right)\to[0,1]\)</span>的完全一一映射，下面进行分别验证.</p>
-<p>从构造过程中可以知道<span class="arithmatex">\(\forall x\in[0,1]\)</span>，都有<span class="arithmatex">\(y\in(0,1)\)</span>使得<span class="arithmatex">\(f(y)=x\)</span>(<span class="arithmatex">\(x=0,y=x_{1};x=1,y=x_{2}\)</span>).</p>
-<p><span class="arithmatex">\(x \not\in Q,y=x;x \in Q-\left\{ 0,1 \right\} ,\exists k \geq 1,s.t.x=x_{k},y=x_{k+2}\)</span>所以<span class="arithmatex">\(f\)</span>是满射</p>
-<p>根据构造过程，若是<span class="arithmatex">\(x_{1} \neq x_{2}\)</span>，必有<span class="arithmatex">\(f(x_{1}) \neq f(x_{2})\)</span>，所以得到<span class="arithmatex">\(f\)</span>是单射，综上所述：<span class="arithmatex">\(f\)</span>是完全一一映射.</p>
+<p>我们将 <span class="arithmatex">\(\left[ 0,1 \right]\)</span> 分为 <span class="arithmatex">\(0,1\)</span> 和 <span class="arithmatex">\((0,1)\)</span> 内的有理数和无理数，</p>
+<p>对无理数部分构造一个无理数的恒等映射也就是当 <span class="arithmatex">\(x\in (0,1),x\not\in Q\)</span> 时，<span class="arithmatex">\(f(x)\equiv x\)</span> </p>
+<p>对有理数部分先证明它是可数集，首先全体有理数是可数集，而开区间内的有理数有无限个，根据可数集的无限子集也是可数集，我们知道 <span class="arithmatex">\((0,1)\)</span> 内的有理数一定也是可数集.这样就可以进行排列:对于所有的 <span class="arithmatex">\(x\in(0,1),x\in Q\)</span> 都可以用 <span class="arithmatex">\(\left\{ x_{n} \right\}_{n \geq 1}\)</span> 表示.</p>
+<p>然后构造有理数部分的映射 <span class="arithmatex">\(f(x_{1})=0,f(x_{2})=1,f(x_{n})=x_{n-2},n \geq 3\)</span></p>
+<p>这样就得到了 <span class="arithmatex">\(\left( 0,1 \right)\to[0,1]\)</span> 的完全一一映射，下面进行分别验证.</p>
+<p>从构造过程中可以知道 <span class="arithmatex">\(\forall x\in[0,1]\)</span>，都有 <span class="arithmatex">\(y\in(0,1)\)</span> 使得 <span class="arithmatex">\(f(y)=x\)</span>(<span class="arithmatex">\(x=0,y=x_{1};x=1,y=x_{2}\)</span>).</p>
+<p><span class="arithmatex">\(x \not\in Q,y=x;x \in Q-\left\{ 0,1 \right\} ,\exists k \geq 1,s.t.x=x_{k},y=x_{k+2}\)</span> 所以 <span class="arithmatex">\(f\)</span> 是满射</p>
+<p>根据构造过程，若是 <span class="arithmatex">\(x_{1} \neq x_{2}\)</span>，必有 <span class="arithmatex">\(f(x_{1}) \neq f(x_{2})\)</span>，所以得到 <span class="arithmatex">\(f\)</span> 是单射，综上所述：<span class="arithmatex">\(f\)</span> 是完全一一映射.</p>
 <p>(ii):</p>
 <p>这是一位学长的解答：</p>
-<p>考虑<span class="arithmatex">\(\forall x\in(0,1]\)</span>，无限小数不允许某位后全为0，做十进制分解</p>
-<p>例如<span class="arithmatex">\(0.100100234\dots\implies 1,001,002,3,4\dots\implies 0.10024\dots ,0.0013\dots\)</span></p>
-<p>这样按照0出现的位置进行一个拆分将奇数段和偶数段分别映射到不同的集合中，相反则是拼接，容易知道这就是一种双射.</p>
-<p>注：应该也可以仿照<span class="arithmatex">\(\mathbb{R}\to \mathbb{R}^{2}\)</span>，例如下面这种方式：</p>
-<p>对于<span class="arithmatex">\(x=0.a_{1}b_{1}a_{2}b_{2}\dots\implies x_{1}=0.a_{1}a_{2}\dots,x_{2}=0.b_{1}b_{2}\dots\)</span></p>
+<p>考虑 <span class="arithmatex">\(\forall x\in(0,1]\)</span>，无限小数不允许某位后全为 0，做十进制分解</p>
+<p>例如 <span class="arithmatex">\(0.100100234\dots\implies 1,001,002,3,4\dots\implies 0.10024\dots ,0.0013\dots\)</span></p>
+<p>这样按照 0 出现的位置进行一个拆分将奇数段和偶数段分别映射到不同的集合中，相反则是拼接，容易知道这就是一种双射.</p>
+<p>注：应该也可以仿照 <span class="arithmatex">\(\mathbb{R}\to \mathbb{R}^{2}\)</span>，例如下面这种方式：</p>
+<p>对于 <span class="arithmatex">\(x=0.a_{1}b_{1}a_{2}b_{2}\dots\implies x_{1}=0.a_{1}a_{2}\dots,x_{2}=0.b_{1}b_{2}\dots\)</span></p>
 <p>(iii):</p>
-<p>直接考虑一阶差分即可<span class="arithmatex">\(a_{1}=b_{1},b_{n+1}=b_{n}+a_{n}\)</span></p>
+<p>直接考虑一阶差分即可 <span class="arithmatex">\(a_{1}=b_{1},b_{n+1}=b_{n}+a_{n}\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 23</p>
-<p>求证：<span class="arithmatex">\(\mathbb{R}\)</span>上实函数全体有基数<span class="arithmatex">\(2^{c}\)</span></p>
+<p>求证：<span class="arithmatex">\(\mathbb{R}\)</span> 上实函数全体有基数 <span class="arithmatex">\(2^{c}\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>思考：显然我们可以考虑使用Berstein定理，而<span class="arithmatex">\(\mathbb{R}\)</span>有连续统势那么可以考虑构造<span class="arithmatex">\(\mathbb{R}\)</span>上实函数与<span class="arithmatex">\(\mathbb{R}^{2}\)</span>之间的单射</p>
-<p>容易看出<span class="arithmatex">\(\mathbb{R}\)</span>上的任一实函数可以由<span class="arithmatex">\(\mathbb{R}^{2}\)</span>的一个子集表示<span class="arithmatex">\((x,f(x))\)</span>，而<span class="arithmatex">\(\mathbb{R}^{2}\)</span>和<span class="arithmatex">\(\mathbb{R}\)</span>都有连续统势，那么可以得到<span class="arithmatex">\(\mathbb{R}\)</span>上实函数全体的势一定小于等于<span class="arithmatex">\(2^{c}\)</span></p>
-<p>另一方面，对于<span class="arithmatex">\(\mathbb{R}\)</span>的任一子集<span class="arithmatex">\(A\)</span>，构造特征函数<span class="arithmatex">\(\chi_{A}(x)=1(x \in A)\)</span>，即得是一个单射，那么<span class="arithmatex">\(2^{c}=\overline{\overline{P(A)}}\leqslant \mathbb{R}\)</span>上实函数的势</p>
+<p>思考：显然我们可以考虑使用 Bernstein 定理，而 <span class="arithmatex">\(\mathbb{R}\)</span> 有连续统势那么可以考虑构造 <span class="arithmatex">\(\mathbb{R}\)</span> 上实函数与 <span class="arithmatex">\(\mathbb{R}^{2}\)</span> 之间的单射</p>
+<p>容易看出 <span class="arithmatex">\(\mathbb{R}\)</span> 上的任一实函数可以由 <span class="arithmatex">\(\mathbb{R}^{2}\)</span> 的一个子集表示 <span class="arithmatex">\((x,f(x))\)</span>，而 <span class="arithmatex">\(\mathbb{R}^{2}\)</span> 和 <span class="arithmatex">\(\mathbb{R}\)</span> 都有连续统势，那么可以得到 <span class="arithmatex">\(\mathbb{R}\)</span> 上实函数全体的势一定小于等于 <span class="arithmatex">\(2^{c}\)</span></p>
+<p>另一方面，对于 <span class="arithmatex">\(\mathbb{R}\)</span> 的任一子集 <span class="arithmatex">\(A\)</span>，构造特征函数 <span class="arithmatex">\(\chi_{A}(x)=1(x \in A)\)</span>，即得是一个单射，那么 <span class="arithmatex">\(2^{c}=\overline{\overline{P(A)}}\leqslant \mathbb{R}\)</span> 上实函数的势</p>
 <p>综上可证.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 24</p>
-<p>若<span class="arithmatex">\(A \cap B=\varnothing\)</span>，求证：<span class="arithmatex">\(\bar{A} \cap B^{\circ }=\varnothing\)</span>。</p>
+<p>若 <span class="arithmatex">\(A \cap B=\varnothing\)</span>，求证：<span class="arithmatex">\(\bar{A} \cap B^{\circ }=\varnothing\)</span>。</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证法，假设<span class="arithmatex">\(\exists x_{0}\in \overline{A}\bigcap B^{\circ}\)</span>，那么根据内部的定义，<span class="arithmatex">\(x_{0}\in B^{\circ}\implies \exists\epsilon, V(x_{0},\epsilon)\subset B\)</span>，再根据闭包的定义<span class="arithmatex">\(x_{0}\in \overline{A} \implies  V(x_{0},\epsilon)\bigcap A \neq \emptyset\)</span>，综上<span class="arithmatex">\(\exists x_{1}\in V(x_{0},\epsilon)\bigcap A,x_{1}\in B,x_{1}\in A\bigcap B\)</span>，与题设矛盾，即证<span class="arithmatex">\(\bar{A} \cap B^{\circ }=\varnothing\)</span></p>
+<p>反证法，假设 <span class="arithmatex">\(\exists x_{0}\in \overline{A}\bigcap B^{\circ}\)</span>，那么根据内部的定义，<span class="arithmatex">\(x_{0}\in B^{\circ}\implies \exists\epsilon, V(x_{0},\epsilon)\subset B\)</span>，再根据闭包的定义 <span class="arithmatex">\(x_{0}\in \overline{A} \implies  V(x_{0},\epsilon)\bigcap A \neq \emptyset\)</span>，综上 <span class="arithmatex">\(\exists x_{1}\in V(x_{0},\epsilon)\bigcap A,x_{1}\in B,x_{1}\in A\bigcap B\)</span>，与题设矛盾，即证 <span class="arithmatex">\(\bar{A} \cap B^{\circ }=\varnothing\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">25</p>
 <p>求证：<br />
@@ -2175,7 +2175,7 @@ x\in \overline{A\bigcap B} &amp; \iff  \forall\epsilon,V(x,\epsilon)\bigcap \lef
 \end{aligned}
 \]</div>
 <p>(v)</p>
-<p>显然可以依据定义<span class="arithmatex">\(x\in A^{\circ}\bigcup B^{\circ}\)</span>，那么<span class="arithmatex">\(x\in A^{\circ}\)</span>或<span class="arithmatex">\(x\in B^{\circ}\)</span>，不妨设是<span class="arithmatex">\(x\in A^{\circ}\)</span>另一种情况同理可得，<span class="arithmatex">\(\exists\delta,V(x,\delta)\subset A\subset \left( A\bigcup B \right)\implies x\in\left( A\bigcup B \right)^{\circ}\)</span></p>
+<p>显然可以依据定义 <span class="arithmatex">\(x\in A^{\circ}\bigcup B^{\circ}\)</span>，那么 <span class="arithmatex">\(x\in A^{\circ}\)</span> 或 <span class="arithmatex">\(x\in B^{\circ}\)</span>，不妨设是 <span class="arithmatex">\(x\in A^{\circ}\)</span> 另一种情况同理可得，<span class="arithmatex">\(\exists\delta,V(x,\delta)\subset A\subset \left( A\bigcup B \right)\implies x\in\left( A\bigcup B \right)^{\circ}\)</span></p>
 <p>(vi)</p>
 <p>显然也可以按照定义：</p>
 <div class="arithmatex">\[
@@ -2187,14 +2187,14 @@ x\in\left( A\bigcap B \right)^{\circ}&amp;\iff \exists\delta&gt;0,V(x,\delta)\su
 \]</div>
 <div class="admonition question">
 <p class="admonition-title">Ch1 26</p>
-<p>设A为开集。求证：为使<span class="arithmatex">\(A \subset \overline{B}\)</span>，充要条件是A的任一非空开子集与B有非空交。</p>
+<p>设 A 为开集。求证：为使 <span class="arithmatex">\(A \subset \overline{B}\)</span>，充要条件是 A 的任一非空开子集与 B 有非空交。</p>
 </div>
 <p><code>Proof.</code></p>
 <p><span class="arithmatex">\(\implies\)</span></p>
-<p>必要性是显然的，对于任一A的非空开子集C，<span class="arithmatex">\(C \subset A\subset  \overline{B}\)</span>，根据闭包的定义C的每一点的任意邻域都与B与非空交，从而得证</p>
+<p>必要性是显然的，对于任一 A 的非空开子集 C，<span class="arithmatex">\(C \subset A\subset  \overline{B}\)</span>，根据闭包的定义 C 的每一点的任意邻域都与 B 有非空交，从而得证</p>
 <p><span class="arithmatex">\(\impliedby\)</span></p>
-<p>反证法，假设存在<span class="arithmatex">\(x_{1}\)</span>，使得<span class="arithmatex">\(x_{1}\in A,x_{1}\not\in  \overline{B}\)</span>，那么有<span class="arithmatex">\(x_{1}\in (\overline{B})^{c}\)</span>，因为<span class="arithmatex">\(( \overline{B} )^{c}\)</span>是一个开集，可知<span class="arithmatex">\(\exists\delta,V(x_{1},\delta)\bigcap  \overline{B}=\emptyset,B\subset  \overline{B},V(x_{1},\delta)\bigcap B=\emptyset\)</span>，因为<span class="arithmatex">\(A\)</span>为开集，<span class="arithmatex">\(\exists\delta',V(x_{1},\delta')\subset A\)</span>，它是<span class="arithmatex">\(A\)</span>的非空开子集</p>
-<p>取<span class="arithmatex">\(\delta''=min(\delta,\delta'),V(x_{1},\delta'')\bigcap B=\emptyset\)</span>与题设矛盾</p>
+<p>反证法，假设存在 <span class="arithmatex">\(x_{1}\)</span>，使得 <span class="arithmatex">\(x_{1}\in A,x_{1}\not\in  \overline{B}\)</span>，那么有 <span class="arithmatex">\(x_{1}\in (\overline{B})^{c}\)</span>，因为 <span class="arithmatex">\(( \overline{B} )^{c}\)</span> 是一个开集，可知 <span class="arithmatex">\(\exists\delta,V(x_{1},\delta)\bigcap  \overline{B}=\emptyset,B\subset  \overline{B},V(x_{1},\delta)\bigcap B=\emptyset\)</span>，因为 <span class="arithmatex">\(A\)</span> 为开集，<span class="arithmatex">\(\exists\delta',V(x_{1},\delta')\subset A\)</span>，它是 <span class="arithmatex">\(A\)</span> 的非空开子集</p>
+<p>取 <span class="arithmatex">\(\delta''=min(\delta,\delta'),V(x_{1},\delta'')\bigcap B=\emptyset\)</span> 与题设矛盾</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 27</p>
 <p>设 <span class="arithmatex">\(A\)</span> 为开集. 求证: <span class="arithmatex">\(A \cap \overline{B} \subset \overline{A \cap B}\)</span>.</p>
@@ -2208,7 +2208,7 @@ x\in A\bigcap  \overline{B}&amp;\iff x\in A ,x\in  \overline{B}\\
 &amp;\implies x\in \overline{A\bigcap B}
 \end{aligned}
 \]</div>
-<p>注：其实只需要说明<span class="arithmatex">\(x_{0}\)</span>一定属于<span class="arithmatex">\(A\)</span>即可(讨论半径即可)，也可以直接将<span class="arithmatex">\(\delta_{1}\)</span>作为一个固定的数处理，当半径大于<span class="arithmatex">\(\delta_{1}\)</span>时，选取在<span class="arithmatex">\(\delta_{1}\)</span>内的一个点<span class="arithmatex">\(x_{1}\in A\bigcap B\)</span>，如果半径小于<span class="arithmatex">\(\delta_{1}\)</span>那么也显然.</p>
+<p>注：其实只需要说明 <span class="arithmatex">\(x_{0}\)</span> 一定属于 <span class="arithmatex">\(A\)</span> 即可(讨论半径即可)，也可以直接将 <span class="arithmatex">\(\delta_{1}\)</span> 作为一个固定的数处理，当半径大于 <span class="arithmatex">\(\delta_{1}\)</span> 时，选取在 <span class="arithmatex">\(\delta_{1}\)</span> 内的一个点 <span class="arithmatex">\(x_{1}\in A\bigcap B\)</span>，如果半径小于 <span class="arithmatex">\(\delta_{1}\)</span> 那么也显然.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 28</p>
 <p>(i) 若 <span class="arithmatex">\(A\)</span> 为开集, 求证: <span class="arithmatex">\(A \subset(\bar{A})^{\circ}\)</span>;<br />
@@ -2216,7 +2216,7 @@ x\in A\bigcap  \overline{B}&amp;\iff x\in A ,x\in  \overline{B}\\
 </div>
 <p><code>Proof.</code></p>
 <p>(i)利用开集的性质即可</p>
-<p><span class="arithmatex">\(x \in A,\exists\delta&gt;0,\bigcup(x,\delta)\subset A\subset  \overline{A}\implies x \in(\overline{A})^{\circ}\)</span>，那么肯定有<span class="arithmatex">\(A\subset(\overline{A})^{\circ}\)</span></p>
+<p><span class="arithmatex">\(x \in A,\exists\delta&gt;0,\bigcup(x,\delta)\subset A\subset  \overline{A}\implies x \in(\overline{A})^{\circ}\)</span>，那么肯定有 <span class="arithmatex">\(A\subset(\overline{A})^{\circ}\)</span></p>
 <p>(ii)</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -2225,14 +2225,14 @@ x\in A\bigcap  \overline{B}&amp;\iff x\in A ,x\in  \overline{B}\\
 \]</div>
 <div class="admonition question">
 <p class="admonition-title">Ch1 29</p>
-<p>求证：<span class="arithmatex">\(R^{n}\)</span>中任一集的导集是闭集</p>
+<p>求证：<span class="arithmatex">\(R^{n}\)</span> 中任一集的导集是闭集</p>
 </div>
 <p><code>Proof.</code></p>
-<p>根据<span class="arithmatex">\(\overline{A'}=A'\bigcup (A')'\)</span>，得如果能证明<span class="arithmatex">\((A')'\subset A'\)</span>，即可证明<span class="arithmatex">\(A'\)</span>是闭集(<span class="arithmatex">\(\overline{A'}=A'\)</span>)</p>
-<p>因此我们考虑<span class="arithmatex">\((A')'\subset A'\)</span>，即可证明导集为闭，如果<span class="arithmatex">\(x_{0}\in(A')',(V(x_{0},\epsilon)\setminus \left\{ x_{0} \right\})\bigcap A'\neq \emptyset\)</span></p>
-<p>在<span class="arithmatex">\(V(x_{0},\epsilon)\)</span>中取异于<span class="arithmatex">\(x_{0}\)</span>的一点<span class="arithmatex">\(x_{1}\in A'\)</span>，那么再根据导集的定义有，<span class="arithmatex">\((V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset\)</span></p>
-<p>注意令<span class="arithmatex">\(\epsilon'=min(d(x_{0},x_{1}),\epsilon-d(x_{0},x_{1}))\)</span>，仍然有<span class="arithmatex">\((V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset\)</span>，再找出一个<span class="arithmatex">\(x_{2}\)</span>异于<span class="arithmatex">\(x_{1}\)</span>,且<span class="arithmatex">\(x_{2}\in A\)</span></p>
-<p><span class="arithmatex">\(d(x_{0},x_{2})\leqslant d(x_{0},x_{1})+d(x_{1},x_{2})\leqslant d(x_{0},x_{1})+\epsilon-d(x_{0},x_{1})=\epsilon\)</span>，根据选取方式可知，<span class="arithmatex">\(x_{2}\)</span>异于点<span class="arithmatex">\(x_{0},x_{1}\)</span>，且在<span class="arithmatex">\(x_{0}\)</span>的非空邻域中，得<span class="arithmatex">\(x_{0}\in A',(A')'\subset A'\)</span></p>
+<p>根据 <span class="arithmatex">\(\overline{A'}=A'\bigcup (A')'\)</span>，得如果能证明 <span class="arithmatex">\((A')'\subset A'\)</span>，即可证明 <span class="arithmatex">\(A'\)</span> 是闭集(<span class="arithmatex">\(\overline{A'}=A'\)</span>)</p>
+<p>因此我们考虑 <span class="arithmatex">\((A')'\subset A'\)</span>，即可证明导集为闭，如果 <span class="arithmatex">\(x_{0}\in(A')',(V(x_{0},\epsilon)\setminus \left\{ x_{0} \right\})\bigcap A'\neq \emptyset\)</span></p>
+<p>在 <span class="arithmatex">\(V(x_{0},\epsilon)\)</span> 中取异于 <span class="arithmatex">\(x_{0}\)</span> 的一点 <span class="arithmatex">\(x_{1}\in A'\)</span>，那么再根据导集的定义有，<span class="arithmatex">\((V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset\)</span></p>
+<p>注意令 <span class="arithmatex">\(\epsilon'=min(d(x_{0},x_{1}),\epsilon-d(x_{0},x_{1}))\)</span>，仍然有 <span class="arithmatex">\((V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset\)</span>，再找出一个 <span class="arithmatex">\(x_{2}\)</span> 异于 <span class="arithmatex">\(x_{1}\)</span>,且 <span class="arithmatex">\(x_{2}\in A\)</span></p>
+<p><span class="arithmatex">\(d(x_{0},x_{2})\leqslant d(x_{0},x_{1})+d(x_{1},x_{2})\leqslant d(x_{0},x_{1})+\epsilon-d(x_{0},x_{1})=\epsilon\)</span>，根据选取方式可知，<span class="arithmatex">\(x_{2}\)</span> 异于点 <span class="arithmatex">\(x_{0},x_{1}\)</span>，且在 <span class="arithmatex">\(x_{0}\)</span> 的非空邻域中，得 <span class="arithmatex">\(x_{0}\in A',(A')'\subset A'\)</span></p>
 <p>证毕</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 30</p>
@@ -2248,7 +2248,7 @@ x\in A\bigcap  \overline{B}&amp;\iff x\in A ,x\in  \overline{B}\\
 B\subset A\implies B'\subset A'\implies B'\subset A'\subset B
 \]</div>
 <p>根据一个非常基础的集合拆分式：<span class="arithmatex">\(\overline{A}=A'\bigcup A\)</span></p>
-<p>那么一下得到<span class="arithmatex">\(\overline{B}=B'\bigcup B=B\)</span></p>
+<p>那么一下得到 <span class="arithmatex">\(\overline{B}=B'\bigcup B=B\)</span></p>
 <h2 id="31-40">31-40<a class="headerlink" href="#31-40" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Ch1 31</p>
@@ -2271,62 +2271,62 @@ x_{0} \in\left( A\bigcap B \right)'&amp;\iff \forall\delta&gt;0,V(x_{0},\delta)\
 &amp;\iff x_{0}\in A'\bigcap B'
 \end{aligned}
 \]</div>
-<p>由于<span class="arithmatex">\(A\bigcap B\)</span>有可能是空集，所以<span class="arithmatex">\(x_{0}\)</span>实际上可能不存在所以是单边的</p>
+<p>由于 <span class="arithmatex">\(A\bigcap B\)</span> 有可能是空集，所以 <span class="arithmatex">\(x_{0}\)</span> 实际上可能不存在所以是单边的</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 32</p>
-<p>求证: <span class="arithmatex">\(R^n\)</span>中任一集的孤立点是至多可数的.</p>
+<p>求证: <span class="arithmatex">\(R^n\)</span> 中任一集的孤立点是至多可数的.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>由孤立点的定义可知，可以构造一个半径为<span class="arithmatex">\(\epsilon\)</span>的开球，使得开球内除了孤立点外与原集合无交，又由于<span class="arithmatex">\(Q^n\)</span>的稠密性，可在每个开球内选取一个有理点，又由于两两不交，有理点互不相同，这样就建立起了全体孤立点到<span class="arithmatex">\(R^{n}\)</span>中<span class="arithmatex">\(Q^n\)</span>的一个单射，全体孤立点势一定小于<span class="arithmatex">\(Q^n\)</span>，又由于<span class="arithmatex">\(R^{n}\)</span>中的<span class="arithmatex">\(Q^n\)</span>是至多可数集，得证命题成立.</p>
-<p>注：需要check两两孤立点的开球之间不交</p>
+<p>由孤立点的定义可知，可以构造一个半径为 <span class="arithmatex">\(\epsilon\)</span> 的开球，使得开球内除了孤立点外与原集合无交，又由于 <span class="arithmatex">\(Q^n\)</span> 的稠密性，可在每个开球内选取一个有理点，又由于两两不交，有理点互不相同，这样就建立起了全体孤立点到 <span class="arithmatex">\(R^{n}\)</span> 中 <span class="arithmatex">\(Q^n\)</span> 的一个单射，全体孤立点势一定小于 <span class="arithmatex">\(Q^n\)</span>，又由于 <span class="arithmatex">\(R^{n}\)</span> 中的 <span class="arithmatex">\(Q^n\)</span> 是至多可数集，得证命题成立.</p>
+<p>注：需要 check 两两孤立点的开球之间不交</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 33</p>
 <p>若 <span class="arithmatex">\(A\)</span> 不可数, 求证: <span class="arithmatex">\(A^{\prime}\)</span> 也不可数.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>利用32，孤立点集是至多可数集，<span class="arithmatex">\(A=A'\bigcup(A-A')\)</span>，其中孤立点集为<span class="arithmatex">\(A-A'\)</span></p>
-<p>那么显然有<span class="arithmatex">\(A'\)</span>是不可数的</p>
+<p>利用 32，孤立点集是至多可数集，<span class="arithmatex">\(A=A'\bigcup(A-A')\)</span>，其中孤立点集为 <span class="arithmatex">\(A-A'\)</span></p>
+<p>那么显然有 <span class="arithmatex">\(A'\)</span> 是不可数的</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 34</p>
-<p>设对每一整数<span class="arithmatex">\(n,F_n\)</span>是<span class="arithmatex">\([n,n+1)\)</span>中的闭集.求证：<span class="arithmatex">\(\bigcup\limits_{n=-\infty}^{\infty}F_n\)</span>是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的闭集.</p>
+<p>设对每一整数 <span class="arithmatex">\(n,F_n\)</span> 是 <span class="arithmatex">\([n,n+1)\)</span> 中的闭集.求证：<span class="arithmatex">\(\bigcup\limits_{n=-\infty}^{\infty}F_n\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的闭集.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>思考：利用闭集的充要条件，如果<span class="arithmatex">\(F_{n}\)</span>是闭集那么有<span class="arithmatex">\(\forall \left\{ x_{n} \right\}\in F_{n},x_{n}\to x,x\in F_{n}\)</span></p>
-<p>任取<span class="arithmatex">\(\left\{ x_{n} \right\}\in\bigcup\limits_{n=-\infty}^{\infty}F_{n},x_{n}\to x(n\to \infty)\)</span>,取<span class="arithmatex">\(\epsilon=\frac{1}{2},\exists N,\forall n&gt;N,\lvert x_{n}-x \rvert&lt; \frac{1}{2}=\epsilon\)</span>，由于<span class="arithmatex">\(R=\bigcup\limits_{n=-\infty}^{\infty}[n,n+1),\exists !k,s.t. x\in[k,k+1)\)</span>，那么可以得出<span class="arithmatex">\(n&gt;N\)</span>的<span class="arithmatex">\(\left\{ x_{n} \right\}\in \bigcup\limits_{i=k-1}^{k+1} F_{i}\)</span>，因为有限个闭集的并仍然为闭集则<span class="arithmatex">\(\bigcup\limits_{i=k-1}^{k+1} F_{i}\)</span>为闭集，再根据闭集充要条件得出<span class="arithmatex">\(x\in\bigcup\limits_{i=k-1}^{k+1} F_{i}\subset \bigcup\limits_{n=-\infty}^{\infty}F_n\)</span></p>
-<p>综上所述：<span class="arithmatex">\(\bigcup\limits_{n=-\infty}^{\infty}F_n\)</span>是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的闭集.</p>
+<p>思考：利用闭集的充要条件，如果 <span class="arithmatex">\(F_{n}\)</span> 是闭集那么有 <span class="arithmatex">\(\forall \left\{ x_{n} \right\}\in F_{n},x_{n}\to x,x\in F_{n}\)</span></p>
+<p>任取 <span class="arithmatex">\(\left\{ x_{n} \right\}\in\bigcup\limits_{n=-\infty}^{\infty}F_{n},x_{n}\to x(n\to \infty)\)</span>,取 <span class="arithmatex">\(\epsilon=\frac{1}{2},\exists N,\forall n&gt;N,\lvert x_{n}-x \rvert&lt; \frac{1}{2}=\epsilon\)</span>，由于 <span class="arithmatex">\(R=\bigcup\limits_{n=-\infty}^{\infty}[n,n+1),\exists !k,s.t. x\in[k,k+1)\)</span>，那么可以得出 <span class="arithmatex">\(n&gt;N\)</span> 的 <span class="arithmatex">\(\left\{ x_{n} \right\}\in \bigcup\limits_{i=k-1}^{k+1} F_{i}\)</span>，因为有限个闭集的并仍然为闭集则 <span class="arithmatex">\(\bigcup\limits_{i=k-1}^{k+1} F_{i}\)</span> 为闭集，再根据闭集充要条件得出 <span class="arithmatex">\(x\in\bigcup\limits_{i=k-1}^{k+1} F_{i}\subset \bigcup\limits_{n=-\infty}^{\infty}F_n\)</span></p>
+<p>综上所述：<span class="arithmatex">\(\bigcup\limits_{n=-\infty}^{\infty}F_n\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的闭集.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 35</p>
-<p>设<span class="arithmatex">\(A\subset \mathbb{R}^{n}\)</span>，若对任何<span class="arithmatex">\(x\in \mathbb{R}^{n}\)</span>，必有<span class="arithmatex">\(a_{x}\in A\)</span>使<span class="arithmatex">\(d(x,a_{x})=d(x,A)\)</span><br />
-求证：<span class="arithmatex">\(A\)</span>是闭集.</p>
+<p>设 <span class="arithmatex">\(A\subset \mathbb{R}^{n}\)</span>，若对任何 <span class="arithmatex">\(x\in \mathbb{R}^{n}\)</span>，必有 <span class="arithmatex">\(a_{x}\in A\)</span> 使 <span class="arithmatex">\(d(x,a_{x})=d(x,A)\)</span><br />
+求证：<span class="arithmatex">\(A\)</span> 是闭集.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>反证，若<span class="arithmatex">\(A\)</span>不是闭集，那么一定有<span class="arithmatex">\(x\in A'-A\)</span>，<span class="arithmatex">\(\left\{ x_{n} \right\}\subset A,x_{n}\to x\)</span></p>
+<p>反证，若 <span class="arithmatex">\(A\)</span> 不是闭集，那么一定有 <span class="arithmatex">\(x\in A'-A\)</span>，<span class="arithmatex">\(\left\{ x_{n} \right\}\subset A,x_{n}\to x\)</span></p>
 <div class="arithmatex">\[
 \begin{aligned}
 d(x,A)&amp;=\inf \left\{ d(x,y),y\in A \right\} \leqslant\left\{ d(x,x_{n}) \right\} \to 0\\0&amp;=d(x,a_{x})\iff x=a_{x}\in A,A'\subset A
 \end{aligned}
 \]</div>
-<p>注：这是闭集一个非常重要的性质，仍然是利用<span class="arithmatex">\(A'\subset A\)</span></p>
+<p>注：这是闭集一个非常重要的性质，仍然是利用 <span class="arithmatex">\(A'\subset A\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 36</p>
-<p>设<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(\mathbb{R}\)</span> 上单增.求证:<span class="arithmatex">\(E=\{x:\)</span>对任何<span class="arithmatex">\(\varepsilon&gt;0\)</span>有<span class="arithmatex">\(f(x+\varepsilon)-f(x-\varepsilon)&gt;0\}\)</span>是闭集.</p>
+<p>设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上单增.求证:<span class="arithmatex">\(E=\{x:\)</span> 对任何 <span class="arithmatex">\(\varepsilon&gt;0\)</span> 有 <span class="arithmatex">\(f(x+\varepsilon)-f(x-\varepsilon)&gt;0\}\)</span> 是闭集.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>考虑证明<span class="arithmatex">\(E^{c}\)</span>是开集，对于任意点<span class="arithmatex">\(x\)</span>属于<span class="arithmatex">\(E^{c},\exists\epsilon&gt;0,s.t.f(x+\epsilon)\leqslant f(x-\epsilon)\)</span>.</p>
-<p>又因为函数是单调递增的有<span class="arithmatex">\(f(x+\epsilon)\geqslant f(x-\epsilon)\to f(x+\epsilon)=f(x-\epsilon)=A\to \forall x\in(x-\epsilon,x+\epsilon),f(x)\equiv A\)</span></p>
-<p>根据开集的定义选取<span class="arithmatex">\(\delta=\frac{\epsilon}{2},V(x,\delta)\subset (x-\epsilon,x+\epsilon)\)</span>，又因为<span class="arithmatex">\(\forall x'\in V(x,\delta),\delta'= \frac{\epsilon}{4},V(x',\delta')\subset(x-\epsilon,x+\epsilon)\)</span>，易知<span class="arithmatex">\(x'\in E^{c}\)</span>，那么有<span class="arithmatex">\(V(x,\delta)\subset E^{c}\)</span>,由<span class="arithmatex">\(x\)</span>的任意性知<span class="arithmatex">\(E^{c}\)</span>为开集，<span class="arithmatex">\(E\)</span>为闭集.</p>
+<p>考虑证明 <span class="arithmatex">\(E^{c}\)</span> 是开集，对于任意点 <span class="arithmatex">\(x\)</span> 属于 <span class="arithmatex">\(E^{c},\exists\epsilon&gt;0,s.t.f(x+\epsilon)\leqslant f(x-\epsilon)\)</span>.</p>
+<p>又因为函数是单调递增的有 <span class="arithmatex">\(f(x+\epsilon)\geqslant f(x-\epsilon)\to f(x+\epsilon)=f(x-\epsilon)=A\to \forall x\in(x-\epsilon,x+\epsilon),f(x)\equiv A\)</span></p>
+<p>根据开集的定义选取 <span class="arithmatex">\(\delta=\frac{\epsilon}{2},V(x,\delta)\subset (x-\epsilon,x+\epsilon)\)</span>，又因为 <span class="arithmatex">\(\forall x'\in V(x,\delta),\delta'= \frac{\epsilon}{4},V(x',\delta')\subset(x-\epsilon,x+\epsilon)\)</span>，易知 <span class="arithmatex">\(x'\in E^{c}\)</span>，那么有 <span class="arithmatex">\(V(x,\delta)\subset E^{c}\)</span>,由 <span class="arithmatex">\(x\)</span> 的任意性知 <span class="arithmatex">\(E^{c}\)</span> 为开集，<span class="arithmatex">\(E\)</span> 为闭集.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 37</p>
-<p>设<span class="arithmatex">\(F\subset\mathbf{R}^n\)</span>是一个无限集.求证；为使<span class="arithmatex">\(F\)</span>是有界闭集，充要条件是对<span class="arithmatex">\(F\)</span>的任一无限子集<span class="arithmatex">\(E\)</span>有<span class="arithmatex">\(E^\prime\bigcap F\neq\emptyset.\)</span></p>
+<p>设 <span class="arithmatex">\(F\subset\mathbf{R}^n\)</span> 是一个无限集.求证；为使 <span class="arithmatex">\(F\)</span> 是有界闭集，充要条件是对 <span class="arithmatex">\(F\)</span> 的任一无限子集 <span class="arithmatex">\(E\)</span> 有 <span class="arithmatex">\(E^\prime\bigcap F\neq\emptyset.\)</span></p>
 </div>
 <p><code>Proof.</code></p>
 <p><span class="arithmatex">\(\implies\)</span>
-假设有界闭集，那么<span class="arithmatex">\(E\subset F,F'\subset F,E'\subset F'\subset F\to E'\bigcap F\neq \emptyset\)</span>(或者根据聚点定理)</p>
+假设有界闭集，那么 <span class="arithmatex">\(E\subset F,F'\subset F,E'\subset F'\subset F\to E'\bigcap F\neq \emptyset\)</span>(或者根据聚点定理)</p>
 <p><span class="arithmatex">\(\impliedby\)</span>
 Step 1
-假设无界，那么可以取<span class="arithmatex">\(\left\{ x_{n} \right\}_{n\geqslant 1},s.t.\lvert x_{n} \rvert&gt;n,\lvert x_{n}-x_{n'} \rvert&gt;1(n\neq n')\)</span>，否则有界，那么可以知道该无限子集导集为空(全为孤立点)，那么与条件<span class="arithmatex">\(E'\bigcap F\neq \emptyset\)</span>矛盾</p>
+假设无界，那么可以取 <span class="arithmatex">\(\left\{ x_{n} \right\}_{n\geqslant 1},s.t.\lvert x_{n} \rvert&gt;n,\lvert x_{n}-x_{n'} \rvert&gt;1(n\neq n')\)</span>，否则有界，那么可以知道该无限子集导集为空(全为孤立点)，那么与条件 <span class="arithmatex">\(E'\bigcap F\neq \emptyset\)</span> 矛盾</p>
 <p>Step 2
-选取一个收敛点列<span class="arithmatex">\(\left\{ x_{n} \right\}_{n\geqslant {1}}\subset F,x_{n}\to x\)</span>，那么设<span class="arithmatex">\(E=\left\{ x_{n} \right\}_{n\geqslant 1}，E'=\left\{ x \right\},x\in F\left( E'\bigcap F \neq \emptyset \right)\)</span></p>
+选取一个收敛点列 <span class="arithmatex">\(\left\{ x_{n} \right\}_{n\geqslant {1}}\subset F,x_{n}\to x\)</span>，那么设 <span class="arithmatex">\(E=\left\{ x_{n} \right\}_{n\geqslant 1}，E'=\left\{ x \right\},x\in F\left( E'\bigcap F \neq \emptyset \right)\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 38</p>
 <p>设 <span class="arithmatex">\(E \subset \mathbf{R}\)</span>. 若 <span class="arithmatex">\(E\)</span> 被一个区间族 <span class="arithmatex">\(\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}\)</span> 所覆盖, 求证: <span class="arithmatex">\(E\)</span> 可被 <span class="arithmatex">\(\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}\)</span> 的一个可数子族所覆盖.</p>
@@ -2339,16 +2339,16 @@ Step 1
 <p><code>Proof.</code></p>
 <p>令 <span class="arithmatex">\(a_{\lambda}\)</span> 和 <span class="arithmatex">\(b_{\lambda}\)</span> 分别是 <span class="arithmatex">\(I_{\lambda}\)</span> 的左、右端点,<span class="arithmatex">\(A=\left\{a_{\lambda}\right\}_{\lambda \in \Lambda}, B=\left\{b_{\lambda}\right\}_{\lambda \in \Lambda}, C=\bigcup\limits_{\lambda \in \Lambda}\left(a_{\lambda}, b_{\lambda}\right)\)</span>. </p>
 <p>Step 1 证明 <span class="arithmatex">\(A-C\)</span> 和 <span class="arithmatex">\(B-C\)</span> 都是至多可数集, 从而问题化为 <span class="arithmatex">\(I_{\lambda}\)</span> 都是开区间的情形.</p>
-<p>对于任意不同的两个指标<span class="arithmatex">\(\lambda_{1},\lambda_{2}\in A,a_{\lambda_{1}}=a_{\lambda_{2}}=x\)</span>，由于不属于<span class="arithmatex">\(C\)</span>那么这种情况下，区间两两不相交</p>
-<p>注：点集拓扑中的一个很重要的定理叫做<span class="arithmatex">\(Lind elof\)</span>定理，可以抽象出一个<span class="arithmatex">\(Lind elof\)</span>空间，答案可以在任何一本点集拓扑书中找到.</p>
+<p>对于任意不同的两个指标 <span class="arithmatex">\(\lambda_{1},\lambda_{2}\in A,a_{\lambda_{1}}=a_{\lambda_{2}}=x\)</span>，由于不属于 <span class="arithmatex">\(C\)</span> 那么这种情况下，区间两两不相交</p>
+<p>注：点集拓扑中的一个很重要的定理叫做 <span class="arithmatex">\(Lind elof\)</span> 定理，可以抽象出一个 <span class="arithmatex">\(Lind elof\)</span> 空间，答案可以在任何一本点集拓扑书中找到.</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 39</p>
-<p>设<span class="arithmatex">\(F_1\)</span>和<span class="arithmatex">\(F_2\)</span>是两个闭集，其中一个有界. 求证：必有<span class="arithmatex">\(x_1\in F_1\)</span>及<span class="arithmatex">\(x_2\in F_2\)</span>使<span class="arithmatex">\(d(x_1,x_2)=\inf\{d(y_1,y_2):y_1\in F_1,y_2\in F_2\}.\)</span></p>
+<p>设 <span class="arithmatex">\(F_1\)</span> 和 <span class="arithmatex">\(F_2\)</span> 是两个闭集，其中一个有界. 求证：必有 <span class="arithmatex">\(x_1\in F_1\)</span> 及 <span class="arithmatex">\(x_2\in F_2\)</span> 使 <span class="arithmatex">\(d(x_1,x_2)=\inf\{d(y_1,y_2):y_1\in F_1,y_2\in F_2\}.\)</span></p>
 </div>
 <p><code>Proof.</code></p>
-<p>不妨设<span class="arithmatex">\(F_{1}\)</span>有界，利用下确界性质，<span class="arithmatex">\(\exists x_{n}',y_{n}',s.t.d(F_{1},F_{2})\leqslant d(x_{n}',y_{n}')\leqslant d(F_{1},F_{2})+\frac{1}{n}\)</span>，按照这种选取方式构造无穷点集</p>
-<p>利用Bolzano-Weierstrass定理，取<span class="arithmatex">\(\left\{ x_{n}' \right\}\)</span>的收敛子列<span class="arithmatex">\(\left\{ x_{n_{k}}' \right\},x_{n_{k}}'\to x_{1},k\to \infty\)</span>,又由于闭集性质<span class="arithmatex">\(x_{1}\in F_{1}\)</span>
-那么有<span class="arithmatex">\(d(x_{1},y_{n_{k}}')\to d(F_{1},F_{2})\)</span>，再利用三角不等式，<span class="arithmatex">\(d(y_{n_{k}}',0)\leqslant d(x_{n_{k}}',y_{n_{k}}')+d(x_{n_{k}}',0)\)</span>也有界(其中一个是有界闭集)，那么仿照<span class="arithmatex">\(F_{1}\)</span>中子列的证明，即可证得<span class="arithmatex">\(F_{2}\)</span>存在收敛子列使得<span class="arithmatex">\(k\to \infty,y_{n_{k}}'\to x_{2},d(x_{1},x_{2})=d(F_{1},F_{2})\)</span>，</p>
+<p>不妨设 <span class="arithmatex">\(F_{1}\)</span> 有界，利用下确界性质，<span class="arithmatex">\(\exists x_{n}',y_{n}',s.t.d(F_{1},F_{2})\leqslant d(x_{n}',y_{n}')\leqslant d(F_{1},F_{2})+\frac{1}{n}\)</span>，按照这种选取方式构造无穷点集</p>
+<p>利用 Bolzano-Weierstrass 定理，取 <span class="arithmatex">\(\left\{ x_{n}' \right\}\)</span> 的收敛子列 <span class="arithmatex">\(\left\{ x_{n_{k}}' \right\},x_{n_{k}}'\to x_{1},k\to \infty\)</span>,又由于闭集性质 <span class="arithmatex">\(x_{1}\in F_{1}\)</span>
+那么有 <span class="arithmatex">\(d(x_{1},y_{n_{k}}')\to d(F_{1},F_{2})\)</span>，再利用三角不等式，<span class="arithmatex">\(d(y_{n_{k}}',0)\leqslant d(x_{n_{k}}',y_{n_{k}}')+d(x_{n_{k}}',0)\)</span> 也有界(其中一个是有界闭集)，那么仿照 <span class="arithmatex">\(F_{1}\)</span> 中子列的证明，即可证得 <span class="arithmatex">\(F_{2}\)</span> 存在收敛子列使得 <span class="arithmatex">\(k\to \infty,y_{n_{k}}'\to x_{2},d(x_{1},x_{2})=d(F_{1},F_{2})\)</span>，</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 40</p>
 <p>求证: 闭区间不能表示成两个不相交非空闭集的并.</p>
@@ -2372,7 +2372,7 @@ Step 1
 </ol>
 <div class="admonition question">
 <p class="admonition-title">Ch1 44</p>
-<p>设<span class="arithmatex">\(\left\{f_k\right\}_{k \geqslant 1}\)</span>是R上一列连续函数。求证：<span class="arithmatex">\(\left\{\underline\lim\limits_{k\to\infty}f_k(x)&gt;0\right\}\)</span>是可数个闭集的并，<span class="arithmatex">\(\left\{\overline\lim\limits_{k\to\infty}f_k(x)=\infty\right\}\)</span>是可数个开集的交。</p>
+<p>设 <span class="arithmatex">\(\left\{f_k\right\}_{k \geqslant 1}\)</span> 是 R 上一列连续函数。求证：<span class="arithmatex">\(\left\{\underline\lim\limits_{k\to\infty}f_k(x)&gt;0\right\}\)</span> 是可数个闭集的并，<span class="arithmatex">\(\left\{\overline\lim\limits_{k\to\infty}f_k(x)=\infty\right\}\)</span> 是可数个开集的交。</p>
 </div>
 <p><code>Proof.</code></p>
 <p>考虑构造:</p>
@@ -2387,7 +2387,7 @@ Step 1
      &amp; =\bigcup\limits_{n=1}^{\infty} \bigcup\limits_{m=1}^{\infty} \bigcap\limits_{k=m}^{\infty} \left\{  f_k(x)\geqslant\frac{1}{n}\right\}
     \end{aligned}
 \]</div>
-<p>由于<span class="arithmatex">\(\left\{  f_k(x)\geqslant\frac{1}{n}\right\}\)</span>是闭集，交后仍为闭集，再进行可数并故原式为可数个闭集的并</p>
+<p>由于 <span class="arithmatex">\(\left\{  f_k(x)\geqslant\frac{1}{n}\right\}\)</span> 是闭集，交后仍为闭集，再进行可数并故原式为可数个闭集的并</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \left\{\varlimsup\limits_{k\to\infty}f_k(x)=\infty\right\} &amp; =\bigcap\limits_{n=1}^{\infty}\left\{ \varlimsup\limits_{k\to\infty}f_k(x)&gt; n\right\} \\
@@ -2401,33 +2401,33 @@ Step 1
 </div>
 <p><code>Proof.</code></p>
 <p>注：<strong>相当重要的一个结论</strong>，可以使用振幅考虑</p>
-<p>定义一个振幅 <span class="arithmatex">\(w_{f(x_{0})}=\lim\limits_{ \delta \to 0 }\sup\left\{  \lvert f(x')-f(x'') \rvert|:x',x'' \in B_{\delta}(x_{0})\right\}\)</span>，如果 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x_{0}\)</span> 连续显然有振幅为 0，那么<span class="arithmatex">\(x_{0}\in \bigcap\limits_{n=1}^{\infty}\left\{ x\in \mathbb{R}:w_{f(x)}&lt; \frac{1}{n} \right\}\)</span></p>
+<p>定义一个振幅 <span class="arithmatex">\(w_{f(x_{0})}=\lim\limits_{ \delta \to 0 }\sup\left\{  \lvert f(x')-f(x'') \rvert|:x',x'' \in B_{\delta}(x_{0})\right\}\)</span>，如果 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(x_{0}\)</span> 连续显然有振幅为 0，那么 <span class="arithmatex">\(x_{0}\in \bigcap\limits_{n=1}^{\infty}\left\{ x\in \mathbb{R}:w_{f(x)}&lt; \frac{1}{n} \right\}\)</span></p>
 <div class="arithmatex">\[\begin{aligned}
 &amp;\forall x_{1}\in \left\{ x\in \mathbb{R},w_{f(x)}&lt; \frac{1}{n} \right\},w_{f(x_{1})}&lt; \frac{1}{n}\\&amp;\implies \exists\delta_{1}&gt;0,\lvert f(x_{1}')-f(x_{1}'') \rvert&lt; \frac{1}{n}(x',x''\in(x_{1}-\delta_{1},x_{1}+\delta_{1}))\\
 &amp;\implies \forall x\in(x_{1}-\delta_{1},x_{1}+\delta_{1}),w_{f(x)}\leqslant w_{f(x_{1})}&lt; \frac{1}{n}\\
 &amp;\implies(x_{1}-\delta_{1},x_{1}+\delta_{1})\subset \left\{ x\in \mathbb{R}:w_{f(x)}&lt; \frac{1}{n} \right\} 
 \end{aligned}\]</div>
-<p>从而可知<span class="arithmatex">\(\left\{ x\in \mathbb{R},w_{f(x)}&lt; \frac{1}{n} \right\}\)</span>是一个开集，那么可以得到它是可数个开集的交</p>
+<p>从而可知 <span class="arithmatex">\(\left\{ x\in \mathbb{R},w_{f(x)}&lt; \frac{1}{n} \right\}\)</span> 是一个开集，那么可以得到它是可数个开集的交</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 46</p>
 <p>求证: 闭集是可数个开集的交, 开集是可数个闭集的并.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>注：只需要证前半部分,后面可以用De Morgan公式得出，构造如下<span class="arithmatex">\(E\)</span>是闭集</p>
+<p>注：只需要证前半部分,后面可以用 De Morgan 公式得出，构造如下 <span class="arithmatex">\(E\)</span> 是闭集</p>
 <div class="arithmatex">\[
 E=\bigcap\limits_{n=1}^{\infty} E_{n}=\bigcap\limits_{n=1}^{\infty} \left\{ x:d(x,E) &lt; \frac{1}{n}\right\} 
 \]</div>
-<p>首先我们证明距离函数是一个连续函数，那么令<span class="arithmatex">\(f(x)=d(x,E)\)</span>我们有：</p>
-<p><span class="arithmatex">\(\forall z\in E,f(x)\leqslant d(x,z)\leqslant d(x,y)+d(y,z)\)</span>那么有<span class="arithmatex">\(f(x)-d(x,y)\leqslant d(y,z)\leqslant d(y,E)+\varepsilon\)</span></p>
-<p>可以得到<span class="arithmatex">\(f(x)-f(y)\leqslant d(x,y)+\varepsilon\implies \lvert f(x)-f(y) \rvert\leqslant d(x,y)\)</span></p>
-<p><span class="arithmatex">\(\forall x\in E,d(x,E)=0\)</span>属于交集显然成立，<span class="arithmatex">\(E\subset \bigcap\limits_{n=1}^{\infty}E_{n}\)</span></p>
-<p>若是有<span class="arithmatex">\(d(x,E)&lt; \frac{1}{n},n\to \infty,d(x,E)=0\)</span></p>
+<p>首先我们证明距离函数是一个连续函数，那么令 <span class="arithmatex">\(f(x)=d(x,E)\)</span> 我们有：</p>
+<p><span class="arithmatex">\(\forall z\in E,f(x)\leqslant d(x,z)\leqslant d(x,y)+d(y,z)\)</span> 那么有 <span class="arithmatex">\(f(x)-d(x,y)\leqslant d(y,z)\leqslant d(y,E)+\varepsilon\)</span></p>
+<p>可以得到 <span class="arithmatex">\(f(x)-f(y)\leqslant d(x,y)+\varepsilon\implies \lvert f(x)-f(y) \rvert\leqslant d(x,y)\)</span></p>
+<p><span class="arithmatex">\(\forall x\in E,d(x,E)=0\)</span> 属于交集显然成立，<span class="arithmatex">\(E\subset \bigcap\limits_{n=1}^{\infty}E_{n}\)</span></p>
+<p>若是有 <span class="arithmatex">\(d(x,E)&lt; \frac{1}{n},n\to \infty,d(x,E)=0\)</span></p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 47</p>
-<p>设<span class="arithmatex">\(F_1\)</span>和<span class="arithmatex">\(F_2\)</span>是两个不相交的闭集. 求证: 有不相交开集<span class="arithmatex">\(G_1\)</span>和<span class="arithmatex">\(G_2\)</span>, 使 <span class="arithmatex">\(F_1\subset G_1, F_2\subset G_2\)</span>.</p>
+<p>设 <span class="arithmatex">\(F_1\)</span> 和 <span class="arithmatex">\(F_2\)</span> 是两个不相交的闭集. 求证: 有不相交开集 <span class="arithmatex">\(G_1\)</span> 和 <span class="arithmatex">\(G_2\)</span>, 使 <span class="arithmatex">\(F_1\subset G_1, F_2\subset G_2\)</span>.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>令<span class="arithmatex">\(f(x)=d(x,F_{1})-d(x,F_{2})\)</span></p>
+<p>令 <span class="arithmatex">\(f(x)=d(x,F_{1})-d(x,F_{2})\)</span></p>
 <p><span class="arithmatex">\(\forall x\in F_{1},f(x)=-d(x,F_{2})&lt;0,\forall x\in F_{2},f(x)=d(x,F_{1})&gt;0\)</span></p>
 <p>取 <span class="arithmatex">\(G_{1}=f^{-1}(&lt;0),G_{2}=f^{-1}(&gt;0)\)</span> 根据上面有 <span class="arithmatex">\(F_{1}\subset G_{1},F_{2}\subset G_{2}\)</span>，连续函数保证两个集合均为开集，那么证毕</p>
 <p>注：在点集拓扑中有相关的背景，这是 <span class="arithmatex">\(T_{4}\)</span> 的空间，两个不相交的闭集，可以通过两个不相交的开集来分离，实际上任何一个度量空间都是 <span class="arithmatex">\(T_{4}\)</span> 的</p>
@@ -2466,8 +2466,8 @@ E=\bigcap\limits_{n=1}^{\infty} E_{n}=\bigcap\limits_{n=1}^{\infty} \left\{ x:d(
 <p><code>Proof.</code></p>
 <p>令满足 13 中条件的点构成的集合为 <span class="arithmatex">\(Y\)</span>，欲证 <span class="arithmatex">\(Y\)</span> 是完备集即证 <span class="arithmatex">\(Y\)</span> 是闭集且无孤立点，根据 14 可以知道这个集合是不可数集</p>
 <p><span class="arithmatex">\(1^{\circ}\)</span> 闭集：证明 <span class="arithmatex">\(Y^{c}\)</span> 是开集，取 <span class="arithmatex">\(y\in Y^{c}\)</span> 那么有 <span class="arithmatex">\(\delta_{y},s.t.(y-\delta_{y},y+\delta_{y})\bigcap E\)</span> 至多可数，于是有 <span class="arithmatex">\((y-\delta_{y},y+\delta_{y})\in Y^{c}\)</span> 即开集，得到原集合闭集</p>
-<p><span class="arithmatex">\(2^{\circ}\)</span> 无孤立点：任取 <span class="arithmatex">\(Y\)</span> 中的点记为 <span class="arithmatex">\(x_{0},\forall\delta\)</span>,<span class="arithmatex">\((x_{0}-\delta,x_{0}+\delta)\bigcap E\)</span> 不可数，再构造两个新的集合 <span class="arithmatex">\(E_{1}=\left\{ \left[ (x_{0}-\delta,x_{0})\bigcup(x_{0},x_{0}+\delta) \right]\bigcap E \right\}\)</span>，容易知道 <span class="arithmatex">\(E_{1}\)</span> 不可数且含于 <span class="arithmatex">\(E\)</span>，利用 13 的结论构造类似 <span class="arithmatex">\(Y\)</span> 的集合 <span class="arithmatex">\(Y_{1}:=\left\{ x:\forall\delta&gt;0,(x-\delta,x+\delta)\bigcap E_{1}\text{不可数} \right\}\)</span>，集合 <span class="arithmatex">\(Y_{1}\bigcap E_{1}\)</span> 非空 (13)，那么其中假设有一点<span class="arithmatex">\(x_{1},\lvert x_{1}-x_{0} \rvert&lt;\delta\)</span>，且<span class="arithmatex">\(x_{1}\in Y\)</span>，与假设矛盾，所以无孤立点.</p>
-<p>证法2：利用Lindelof性，可以找到一个可数覆盖</p>
+<p><span class="arithmatex">\(2^{\circ}\)</span> 无孤立点：任取 <span class="arithmatex">\(Y\)</span> 中的点记为 <span class="arithmatex">\(x_{0},\forall\delta\)</span>,<span class="arithmatex">\((x_{0}-\delta,x_{0}+\delta)\bigcap E\)</span> 不可数，再构造两个新的集合 <span class="arithmatex">\(E_{1}=\left\{ \left[ (x_{0}-\delta,x_{0})\bigcup(x_{0},x_{0}+\delta) \right]\bigcap E \right\}\)</span>，容易知道 <span class="arithmatex">\(E_{1}\)</span> 不可数且含于 <span class="arithmatex">\(E\)</span>，利用 13 的结论构造类似 <span class="arithmatex">\(Y\)</span> 的集合 <span class="arithmatex">\(Y_{1}:=\left\{ x:\forall\delta&gt;0,(x-\delta,x+\delta)\bigcap E_{1}\text{不可数} \right\}\)</span>，集合 <span class="arithmatex">\(Y_{1}\bigcap E_{1}\)</span> 非空 (13)，那么其中假设有一点 <span class="arithmatex">\(x_{1},\lvert x_{1}-x_{0} \rvert&lt;\delta\)</span>，且 <span class="arithmatex">\(x_{1}\in Y\)</span>，与假设矛盾，所以无孤立点.</p>
+<p>证法 2：利用 Lindelof 性，可以找到一个可数覆盖</p>
 <ol>
 <li>求证: <span class="arithmatex">\(\mathbf{R}\)</span> 中任一不可数闭集必是一个完备集与一个至多可数集的并.</li>
 </ol>
@@ -2494,7 +2494,7 @@ E=\bigcap\limits_{n=1}^{\infty} E_{n}=\bigcap\limits_{n=1}^{\infty} \left\{ x:d(
 <p>若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0,1]\)</span> 中所有有理点处连续. 求证: <span class="arithmatex">\(f\)</span> 至少在一个无理点处连续.</p>
 </div>
 <p><code>Proof.</code></p>
-<p>利用45题的结论：</p>
+<p>利用 45 题的结论：</p>
 <div class="admonition question">
 <p class="admonition-title">Ch1 59</p>
 <p>例 设对任何 <span class="arithmatex">\(x, y \in \mathbf{R}, f(x+y)=f(x)+f(y)\)</span>. 现若 <span class="arithmatex">\(f\)</span> 不是连续函数<br />

@@ -278,7 +278,7 @@ Obsidian 的 `[[双链]]` 在 Zensical/MkDocs 中**不支持**。必须转换为
 - [ ] 每个 `$$` 块前后有空行？
 - [ ] YAML frontmatter 完整？
 - [ ] 无 `[[wikilink]]` 残留？
-- [ ] Admonition 格式正确（`> [!type]`）？
+- [ ] Admonition 格式正确（`!!! type "标题"`，正文缩进 4 个空格）？
 - [ ] Mermaid 块语言标记为 `mermaid`？
 - [ ] 图片路径相对于 `docs/`？（如 `images/xiaoju.jpg`）
 - [ ] 许可证声明？（CC BY-SA 4.0）

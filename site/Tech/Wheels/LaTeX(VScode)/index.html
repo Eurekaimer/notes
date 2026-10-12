@@ -29,7 +29,7 @@
     
     
       
-        <title>LaTeX(VScode) - Notes</title>
+        <title>LaTeX (VSCode) - Notes</title>
       
     
     
@@ -159,7 +159,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#latexvscode" class="md-skip">
+        <a href="#latex-vscode" class="md-skip">
           跳转至
         </a>
       
@@ -195,7 +195,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LaTeX(VScode)
+              LaTeX (VSCode)
             
           </span>
         </div>
@@ -1117,7 +1117,7 @@
   <a href="#vscode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下载 VScode
+        下载 VSCode
       
     </span>
   </a>
@@ -1125,10 +1125,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#texlive" class="md-nav__link">
+  <a href="#tex-live" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下载 texlive
+        下载 TeX Live
       
     </span>
   </a>
@@ -1662,7 +1662,7 @@
   <a href="#vscode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下载 VScode
+        下载 VSCode
       
     </span>
   </a>
@@ -1670,10 +1670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#texlive" class="md-nav__link">
+  <a href="#tex-live" class="md-nav__link">
     <span class="md-ellipsis">
       
-        下载 texlive
+        下载 TeX Live
       
     </span>
   </a>
@@ -1816,22 +1816,22 @@
   
 
 
-<h1 id="latexvscode">LaTeX(VScode)<a class="headerlink" href="#latexvscode" title="Permanent link">⚓︎</a></h1>
-<p>对于每个学习理工科的学生而言，熟练使用 <span class="arithmatex">\(\LaTeX\)</span> 都是一项<strong>必备</strong>的技能点，下面将介绍如何在 VScode 上使用 <span class="arithmatex">\(\LaTeX\)</span> 以及环境配置</p>
+<h1 id="latex-vscode">LaTeX (VSCode)<a class="headerlink" href="#latex-vscode" title="Permanent link">⚓︎</a></h1>
+<p>对于每个学习理工科的学生而言，熟练使用 <span class="arithmatex">\(\LaTeX\)</span> 都是一项<strong>必备</strong>的技能点，下面将介绍如何在 VSCode 上使用 <span class="arithmatex">\(\LaTeX\)</span> 以及环境配置</p>
 <blockquote>
-<p>这份安装手册当时使用的 OS 为 Windows11，但是我确信 NixOS 等 Linux 发行版都可以很好的运行 <span class="arithmatex">\(\LaTeX\)</span>，并且也十分的方便</p>
+<p>这份安装手册当时使用的 OS 为 Windows 11，但是我确信 NixOS 等 Linux 发行版都可以很好地运行 <span class="arithmatex">\(\LaTeX\)</span>，并且也十分方便</p>
 </blockquote>
 <p>主要步骤如下：</p>
 <ul>
-<li>安装世界上最伟大的 IDE <strong>VScode</strong></li>
-<li>下载 Texlive（实质的排版引擎叫做 Tex，而 <span class="arithmatex">\(\LaTeX\)</span> 是一个宏命令的集合，其本身无法独立运行，需要一个编译它的工具，一个打包好的完整环境，这里我们选择主流的 Texlive）</li>
-<li>在 VScode 中配置 Tex 环境（如今你已经可以让 AI 帮你写配置文件，每个 custom 参数的含义可以自行查询）</li>
+<li>安装世界上最伟大的 IDE <strong>VSCode</strong></li>
+<li>下载 TeX Live（实质的排版引擎叫做 TeX，而 <span class="arithmatex">\(\LaTeX\)</span> 是一个宏命令的集合，其本身无法独立运行，需要一个编译它的工具，一个打包好的完整环境，这里我们选择主流的 TeX Live）</li>
+<li>在 VSCode 中配置 TeX 环境（如今你已经可以让 AI 帮你写配置文件，每个 custom 参数的含义可以自行查询）</li>
 </ul>
-<p>关于 Tex、<span class="arithmatex">\(\LaTeX\)</span>、Texlive 关系的进一步阐述：</p>
+<p>关于 TeX、<span class="arithmatex">\(\LaTeX\)</span>、TeX Live 关系的进一步阐述：</p>
 <pre class="mermaid"><code>graph LR
     Tex --&gt; LaTeX
     LaTeX --&gt; Texlive</code></pre>
-<h2 id="vscode">下载 VScode<a class="headerlink" href="#vscode" title="Permanent link">⚓︎</a></h2>
+<h2 id="vscode">下载 VSCode<a class="headerlink" href="#vscode" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">小记</p>
 <p>向世界上最伟大的 IDE 致敬</p>
@@ -1843,10 +1843,10 @@
 <li>LaTeX Workshop（这个是非常重要的）</li>
 <li>GitHub Copilot</li>
 </ul>
-<h2 id="texlive">下载 texlive<a class="headerlink" href="#texlive" title="Permanent link">⚓︎</a></h2>
-<p>关于 texlive 的基本知识可以在大多数有关 LaTeX 书籍上找到，在此不做过多的赘述，笔者这里选择<a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/">清华源</a>下载，下载需要比较长的时间(建议你在安装的时候不要安装过多语言的包，尽量简化你的安装内容，全部安装需要非常长的时间)，得到一个基本的iso文件后运行即可安装</p>
-<p>主要参考这篇文章即可(<a href="https://zhuanlan.zhihu.com/p/166523064">知乎文章</a>)，后编：AI时代没必要参考任何固定的文章，你只需要让AI解释清楚每一步的原因然后自己稍微检索即可(本文现在主要是方便小白做一个了解和基本的扩展？)，大多数人使用的是Overleaf这种在线的编辑器，但是对于头脑比较清晰的人来说不会把自己的全部鸡蛋放在一个篮子里，没有说Overleaf不好的意思，只是你有必要保留一个本地化无限制时间的方案去应对诸如网站崩溃和超时的问题)</p>
-<p>其实当你下载好 Texlive 并且安装好扩展之后就可以使用了，下面的环境只是说按照文档固定了一些参数的设置，其中比较关键的几种编译工具是 <code>XeLaTeX</code> 和 <code>PDFLaTeX</code> 至于引用时使用的 <code>bibtex</code> 和专门方便使用的 <code>latexmk</code> 可以询问 AI，比较关键的问题是你需要清楚哪些对于中文内容支持更好 (ctex)，哪些很适合全英文使用。</p>
+<h2 id="tex-live">下载 TeX Live<a class="headerlink" href="#tex-live" title="Permanent link">⚓︎</a></h2>
+<p>关于 TeX Live 的基本知识可以在大多数有关 LaTeX 书籍上找到，在此不做过多的赘述，笔者这里选择<a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/">清华源</a>下载，下载需要比较长的时间（建议你在安装的时候不要安装过多语言的包，尽量简化你的安装内容，全部安装需要非常长的时间），得到一个基本的 iso 文件后运行即可安装</p>
+<p>主要参考这篇文章即可（<a href="https://zhuanlan.zhihu.com/p/166523064">知乎文章</a>），后编：AI 时代没必要参考任何固定的文章，你只需要让 AI 解释清楚每一步的原因然后自己稍微检索即可（本文现在主要是方便小白做一个了解和基本的扩展？），大多数人使用的是 Overleaf 这种在线的编辑器，但是对于头脑比较清晰的人来说不会把自己的全部鸡蛋放在一个篮子里，没有说 Overleaf 不好的意思，只是你有必要保留一个本地化无限制时间的方案去应对诸如网站崩溃和超时的问题</p>
+<p>其实当你下载好 TeX Live 并且安装好扩展之后就可以使用了，下面的环境只是说按照文档固定了一些参数的设置，其中比较关键的几种编译工具是 <code>XeLaTeX</code> 和 <code>PDFLaTeX</code>，至于引用时使用的 <code>bibtex</code> 和专门方便使用的 <code>latexmk</code> 可以询问 AI，比较关键的问题是你需要清楚哪些对于中文内容支持更好 (ctex)，哪些很适合全英文使用。</p>
 <h2 id="_1">环境配置<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
 <h3 id="_2">基本参数<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
 <p>在 <code>Settings</code> 中修改</p>
@@ -1966,7 +1966,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>只要你是数学物理系的学生或是大多数理工科的同学，都也许会想要使用 <span class="arithmatex">\(\LaTeX\)</span> 进行笔记写作，论文排版，完成课程作业，不管你的目的是什么，只要你使用过 Tex 书写代码，哪怕只是使用 markdown 中内嵌的 <span class="arithmatex">\(\LaTeX\)</span> 公式，你一定曾经困惑于 <span class="arithmatex">\(\LaTeX\)</span> 代码的复杂和大量重复的 dirty work，消耗大量的时间但是完成的内容并不多，这个时候你会思考如何减少重复的代码量以提高生产效率，你也许见过一位国外小哥使用 Vim+LaTeX 实现在课上写出十分工整的数学笔记甚至使用 Tikz 完成绘图(<a href="https://castel.dev/post/lecture-notes-1/">原文</a>)，但是想要积累如此多的代码片段和熟练使用Vim并不是一般的理科学生能够做到的，笔者在这里通过<strong>在Vscode中撰写Snippets的方式复现Obsidian中的LaTeX Suite插件的方式</strong>，以尽可能小的成本实现效率的尽可能大的提高.</p>
+<p>只要你是数学物理系的学生或是大多数理工科的同学，都也许会想要使用 <span class="arithmatex">\(\LaTeX\)</span> 进行笔记写作、论文排版、完成课程作业，不管你的目的是什么，只要你使用过 TeX 书写代码，哪怕只是使用 Markdown 中内嵌的 <span class="arithmatex">\(\LaTeX\)</span> 公式，你一定曾经困惑于 <span class="arithmatex">\(\LaTeX\)</span> 代码的复杂和大量重复的 dirty work，消耗大量的时间但是完成的内容并不多，这个时候你会思考如何减少重复的代码量以提高生产效率，你也许见过一位国外小哥使用 Vim+LaTeX 实现在课上写出十分工整的数学笔记甚至使用 TikZ 完成绘图（<a href="https://castel.dev/post/lecture-notes-1/">原文</a>），但是想要积累如此多的代码片段和熟练使用 Vim 并不是一般的理科学生能够做到的，笔者在这里通过<strong>在 VSCode 中撰写 Snippets 的方式复现 Obsidian 中的 LaTeX Suite 插件</strong>，以尽可能小的成本实现效率的尽可能大的提高。</p>
 </blockquote>
 <p>补一个笔者自己的配置，只想快速使用 LaTeX 不需要配置</p>
 <h2 id="snippets">Snippets 配置（可选）<a class="headerlink" href="#snippets" title="Permanent link">⚓︎</a></h2>
@@ -3049,7 +3049,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>如果想要更好的使用体验，你当然应该自己写更多的自定义宏，但是时刻牢记掌握更多的工具是提高效率的方法但是沉迷工具反而会让你远离工作！</p>
+<p>如果想要更好的使用体验，你当然应该自己写更多的自定义宏，但是时刻牢记掌握更多的工具是提高效率的方法，但是沉迷工具反而会让你远离工作！</p>
 </blockquote>
 
 

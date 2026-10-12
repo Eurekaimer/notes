@@ -87,21 +87,21 @@ $(x,y)\in(A_{1}-A_{2})\times B_{1}\subset A_{1}\times B_{1},x \not\in A_{2},(x,y
 
 $\forall r,\exists n\geqslant 1,\forall k \geqslant n, \lvert f_{k}(x)-f(x) \rvert< \frac{1}{r}$
 
-而对于连续的定义$\varepsilon>0,\exists r,s.t. \frac{1}{r}<\varepsilon$
+而对于连续的定义 $\varepsilon>0,\exists r,s.t. \frac{1}{r}<\varepsilon$
 
 注：这个题目实际是相当重要的，蕴含了集合分解和集合表示的思想，还给出了并和交隐含的存在与任意的技巧.
 
 !!! question "Ch1 4"
     证明：
-    (i)对任何集$A$和$B$，必有集$C$，使$A\Delta C=B$
+    (i)对任何集 $A$ 和 $B$，必有集 $C$，使 $A\Delta C=B$
     (ii)$A\Delta(B\Delta C)=(A\Delta B)\Delta C$
     (iii)$A_{1}\Delta A_{2}\Delta\dots\Delta A_{n}=\left\{ x:x\text{属于且仅属于}\left\{ A_{k} \right\}_{1\leqslant k \leqslant n}\text{中奇数个}A_{k} \right\}$
 
 `Proof.`
 
-(i)这个构造实际上可以通过Venn图分析得到
+(i)这个构造实际上可以通过 Venn 图分析得到
 
-注意到$A\Delta A=\emptyset,\emptyset\Delta A=A\implies C=A\Delta B$
+注意到 $A\Delta A=\emptyset,\emptyset\Delta A=A\implies C=A\Delta B$
 
 (ii)这个只需要集合表示一下就行
 
@@ -116,21 +116,21 @@ $$
 
 (iii)可以使用归纳法
 
-$n=1,n=2$，可以将目标转变为$x\in(A_{1}\Delta\dots\Delta A_{n-1})\Delta A_{n}$，这样我们就可以运用归纳的结果了，若$x\in(A_{1}\Delta\dots\Delta A_{n-1}),x\not\in A_{n}$，由归纳假设只属于前面的奇数个项，而另一种情况只属于$A_{n}$和前面的偶数个项相加知道也是奇数情况，由此可得结论成立.
+$n=1,n=2$，可以将目标转变为 $x\in(A_{1}\Delta\dots\Delta A_{n-1})\Delta A_{n}$，这样我们就可以运用归纳的结果了，若 $x\in(A_{1}\Delta\dots\Delta A_{n-1}),x\not\in A_{n}$，由归纳假设只属于前面的奇数个项，而另一种情况只属于 $A_{n}$ 和前面的偶数个项相加知道也是奇数情况，由此可得结论成立.
 
 !!! question "Ch1 5"
-    设$\left\{ A_{n} \right\}_{n\geq_{1}}$是一个集列，令$B_{1}=A_{1},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},n\geq 2$
-    求证：$\left\{ B_{n} \right\}_{n\geq{1}}$两两不相交且$\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
+    设 $\left\{ A_{n} \right\}_{n\geq_{1}}$ 是一个集列，令 $B_{1}=A_{1},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},n\geq 2$
+    求证：$\left\{ B_{n} \right\}_{n\geq{1}}$ 两两不相交且 $\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
 
 `Proof.`
 
-先证明两两不相交，假设$B_{m},B_{n},m<n$，若其中$m=1$，显然有$x\in B_{n}(n \geq 2),x \not\in A_{1}=B_{1}$
+先证明两两不相交，假设 $B_{m},B_{n},m<n$，若其中 $m=1$，显然有 $x\in B_{n}(n \geq 2),x \not\in A_{1}=B_{1}$
 
-若$m \neq 1$，对于$B_{m}=A_{m}-\bigcup\limits_{k=1}^{m-1}A_{k},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},\bigcup\limits_{k=1}^{m-1}A_{k}\subset \bigcup\limits_{k=1}^{n-1}A_{k}$，假设存在$y\in B_{m}\bigcap B_{n},y\in B_{n},y \not\in \bigcup\limits_{k=1}^{n-1}A_{k},y \not\in A_{m}(m<n)\implies y \not\in B_{m}$，矛盾，所以两两不相交，这是极其显然的.
+若 $m \neq 1$，对于 $B_{m}=A_{m}-\bigcup\limits_{k=1}^{m-1}A_{k},B_{n}=A_{n}-\bigcup\limits_{k=1}^{n-1}A_{k},\bigcup\limits_{k=1}^{m-1}A_{k}\subset \bigcup\limits_{k=1}^{n-1}A_{k}$，假设存在 $y\in B_{m}\bigcap B_{n},y\in B_{n},y \not\in \bigcup\limits_{k=1}^{n-1}A_{k},y \not\in A_{m}(m<n)\implies y \not\in B_{m}$，矛盾，所以两两不相交，这是极其显然的.
 
-再证明$\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
+再证明 $\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
 
-首先根据$B_{n}\subset A_{n}\implies \bigcup\limits_{n=1}^{\infty}B_{n}\subset \bigcup\limits_{n=1}^{\infty}A_{n}$
+首先根据 $B_{n}\subset A_{n}\implies \bigcup\limits_{n=1}^{\infty}B_{n}\subset \bigcup\limits_{n=1}^{\infty}A_{n}$
 
 $$\begin{aligned}
 x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&=A_{k}-\bigcup\limits_{n=1}^{k-1}A_{n} \\
@@ -138,9 +138,9 @@ x\in \bigcup\limits_{n=1}^{\infty}B_{n},\exists k,x\in B_{k}&=A_{k}-\bigcup\limi
 &\implies\bigcup\limits_{n=1}^{\infty}B_{n}\subset\bigcup\limits_{n=1}^{\infty}A_{n}
 \end{aligned}$$
 
-同理若是$x\in \bigcup\limits_{n=1}^{\infty}A_{n},\exists k,x\in A_{k}$，构造一个集合$S=\left\{ n:x\in A_{n} \right\}$，已知该集合非空，那么根据非空集合必有最小元素的性质，将最小元素记为$m$，
+同理若是 $x\in \bigcup\limits_{n=1}^{\infty}A_{n},\exists k,x\in A_{k}$，构造一个集合 $S=\left\{ n:x\in A_{n} \right\}$，已知该集合非空，那么根据非空集合必有最小元素的性质，将最小元素记为 $m$，
 
-那么$x\in B_{m}=A_{m}-\bigcup\limits_{n=1}^{m-1}A_{n}\implies x\in \bigcup\limits_{n=1}^{\infty}B_{n}\implies\bigcup\limits_{n=1}^{\infty}B_{n}\supset\bigcup\limits_{n=1}^{\infty}A_{n}$
+那么 $x\in B_{m}=A_{m}-\bigcup\limits_{n=1}^{m-1}A_{n}\implies x\in \bigcup\limits_{n=1}^{\infty}B_{n}\implies\bigcup\limits_{n=1}^{\infty}B_{n}\supset\bigcup\limits_{n=1}^{\infty}A_{n}$
 
 或者也可以用下面这种写法
 
@@ -152,12 +152,12 @@ $$
 \end{aligned}
 $$
 
-两边$n$同时取无穷也可以得到
+两边 $n$ 同时取无穷也可以得到
 
 综上所述：$\bigcup\limits_{n=1}^{\infty}B_{n}=\bigcup\limits_{n=1}^{\infty}A_{n}$
 
 !!! question "Ch1 6"
-    设$\left\{ A_{n} \right\}$是一列集合.求证：
+    设 $\left\{ A_{n} \right\}$ 是一列集合.求证：
     (i)$\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)$
     (ii)$\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)$
 
@@ -166,23 +166,23 @@ $$
 (i):
 
 根据上极限的定义可知，$\varlimsup\limits_{ n \to \infty }A_{n}=\bigcap\limits_{i=1}^{\infty}\bigcup\limits_{n=i}^{\infty}A_{n}$，无穷多个集合含有其中元素.
-若$x\in \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=1),\forall N,\exists n,n>N\implies \chi_{A_{n}}(x)=1，\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)$
-若$x\notin \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=0)$，只有有限多个集合含有$x$,那么$\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)$
-综上所述：证得$\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)$
+若 $x\in \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=1),\forall N,\exists n,n>N\implies \chi_{A_{n}}(x)=1，\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)$
+若 $x\notin \varlimsup\limits_{ n \to \infty }A_{n}(\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)=0)$，只有有限多个集合含有 $x$,那么 $\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varlimsup\limits_{ n \to \infty }A_{n}}(x)$
+综上所述：证得 $\chi_{\varlimsup\limits_{n\to \infty}A_{n}}(x)=\varlimsup\limits_{ n \to \infty }\chi_{A_{n}}(x)$
 
 (ii):
 
 根据下极限的定义可知，$\varliminf\limits_{ n \to \infty }A_{n}=\bigcup\limits_{i=1}^{\infty}\bigcap\limits_{n=i}^{\infty}A_{n}$，只有有限个集合不含有其中元素.
-若$x\in \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=1),\exists N,n>N\implies \chi_{A_{n}}(x)=1，\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)$
-若$x\notin \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=0)$，有无穷多个集合不含有$x$，那么$\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)$
-综上所述：证得$\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)$
+若 $x\in \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=1),\exists N,n>N\implies \chi_{A_{n}}(x)=1，\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=1=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)$
+若 $x\notin \varliminf\limits_{ n \to \infty }A_{n}(\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)=0)$，有无穷多个集合不含有 $x$，那么 $\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)=0=\chi_{\varliminf\limits_{ n \to \infty }A_{n}}(x)$
+综上所述：证得 $\chi_{\varliminf\limits_{n\to \infty}A_{n}}(x)=\varliminf\limits_{ n \to \infty }\chi_{A_{n}}(x)$
 
 !!! question "Ch1 7"
-    设映射$f:X\to Y$，求证：
-    (i)若$A \subset X$, 则$A \subset f^{-1}[f(A)]$, 并且当$f$为一一映射时$A=f^{-1}[f(A)]$;
-    (ii)若$B\subset Y$，则$f\left[ f^{-1}(B) \right]=B\bigcap f(X)$且$f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$
-    (iii)当且仅当$f$为一一映射时，对任何$A,B\subset X$有$f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
-    (iv)当且仅当$f$为完全一一映射时, 对任何$A \subset X$有$f\left(A^{c}\right)=\left[f(A)\right]^{c}$.
+    设映射 $f:X\to Y$，求证：
+    (i)若 $A \subset X$, 则 $A \subset f^{-1}[f(A)]$, 并且当 $f$ 为一一映射时 $A=f^{-1}[f(A)]$;
+    (ii)若 $B\subset Y$，则 $f\left[ f^{-1}(B) \right]=B\bigcap f(X)$ 且 $f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$
+    (iii)当且仅当 $f$ 为一一映射时，对任何 $A,B\subset X$ 有 $f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
+    (iv)当且仅当 $f$ 为完全一一映射时, 对任何 $A \subset X$ 有 $f\left(A^{c}\right)=\left[f(A)\right]^{c}$.
 
 `Proof.`
 
@@ -190,27 +190,27 @@ $$
 
 $x\in A,f(x)\in f(A)\implies x\in f^{-1}\left( f(A) \right)\implies A\subset f^{-1}[f(A)]$
 
-反证若是$A\subset f^{-1}[f(A)],A\neq f^{-1}[f(A)],\exists y\in f^{-1}[f(A)]-A$
+反证若是 $A\subset f^{-1}[f(A)],A\neq f^{-1}[f(A)],\exists y\in f^{-1}[f(A)]-A$
 
-从而有$f(y) \in f(A)\implies \exists x\in A,f(x)\in f(A)\implies y=x$即得矛盾
+从而有 $f(y) \in f(A)\implies \exists x\in A,f(x)\in f(A)\implies y=x$ 即得矛盾
 
 (ii):
 
-先证明$f\left[ f^{-1}(B) \right]=B\bigcap f(X)$:
+先证明 $f\left[ f^{-1}(B) \right]=B\bigcap f(X)$:
 
-取任意$y\in f\left[ f^{-1}(B) \right]$，存在$x\in f^{-1}(B),f(x)=y\implies f(x)\in B ,y\in B$
+取任意 $y\in f\left[ f^{-1}(B) \right]$，存在 $x\in f^{-1}(B),f(x)=y\implies f(x)\in B ,y\in B$
 
-同时有$x\in X,y\in f(X)$,那么得到$f\left[ f^{-1}(B) \right]\subset B\bigcap f(X)$
+同时有 $x\in X,y\in f(X)$,那么得到 $f\left[ f^{-1}(B) \right]\subset B\bigcap f(X)$
 
-相应的，$y\in B \bigcap f(X) \implies \exists x\in X,f(x)=y\in B,x=f^{-1}(B)$，因此$y=f(x)\in\left[ f^{-1}(B) \right]$
+相应的，$y\in B \bigcap f(X) \implies \exists x\in X,f(x)=y\in B,x=f^{-1}(B)$，因此 $y=f(x)\in\left[ f^{-1}(B) \right]$
 
-那么得到$f\left[ f^{-1}(B) \right]\supset B\bigcap f(X)$
+那么得到 $f\left[ f^{-1}(B) \right]\supset B\bigcap f(X)$
 
 综上所述：$f\left[ f^{-1}(B) \right]=B\bigcap f(X)$
 
-再证明$f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$:
+再证明 $f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$:
 
-取任意$x\in f^{-1}(B^{c}),f(x)\in B^{c}(f(x)\not\in B)\implies x\not\in f^{-1}(B),x\in \left[ f^{-1}(B) \right]^{c}$，即$f^{-1}(B^{c})\subset\left[ f^{-1}(B) \right]^{c}$，相应的取$x\in \left[ f^{-1}(B) \right]^{c},x \not\in f^{-1}(B),f(x)\not\in B\implies f(x)\in B^{c},x\in f^{-1}(B^{c})$，即$f^{-1}(B^{c})\supset\left[ f^{-1}(B) \right]^{c}$
+取任意 $x\in f^{-1}(B^{c}),f(x)\in B^{c}(f(x)\not\in B)\implies x\not\in f^{-1}(B),x\in \left[ f^{-1}(B) \right]^{c}$，即 $f^{-1}(B^{c})\subset\left[ f^{-1}(B) \right]^{c}$，相应的取 $x\in \left[ f^{-1}(B) \right]^{c},x \not\in f^{-1}(B),f(x)\not\in B\implies f(x)\in B^{c},x\in f^{-1}(B^{c})$，即 $f^{-1}(B^{c})\supset\left[ f^{-1}(B) \right]^{c}$
 
 综上所述：$f^{-1}(B^{c})=\left[ f^{-1}(B) \right]^{c}$
 
@@ -218,70 +218,70 @@ $x\in A,f(x)\in f(A)\implies x\in f^{-1}\left( f(A) \right)\implies A\subset f^{
 
 必要性证明：
 
-已知$f$为一一映射,当$x\in A\bigcap B,f(x)\in f(A),f(x)\in f(B),f\left( A\bigcap B \right)\subset f(A)\bigcap f(B)$.
+已知 $f$ 为一一映射,当 $x\in A\bigcap B,f(x)\in f(A),f(x)\in f(B),f\left( A\bigcap B \right)\subset f(A)\bigcap f(B)$.
 
-任取$y\in f(A)\bigcap f(B),\exists a\in A,b\in B,s.t.f(a)=y,f(b)=y$，又根据单射的定义，得$a=b\in A\bigcap B$
+任取 $y\in f(A)\bigcap f(B),\exists a\in A,b\in B,s.t.f(a)=y,f(b)=y$，又根据单射的定义，得 $a=b\in A\bigcap B$
 
 综上所述：$f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
 
 充分性证明：
 
-反证法，若不是一一映射假设存在$x_{1}\neq x_{2}$,使得$f(x_{1})=f(x_{2})=C$，
-构造$A=\left\{ x_{1} \right\},B=\left\{ x_{2} \right\}$，根据题设$f\left( A\bigcap B \right)=f(\emptyset)=\emptyset\neq f(A)\bigcap f(B)=C$，矛盾，$f$为单射
+反证法，若不是一一映射假设存在 $x_{1}\neq x_{2}$,使得 $f(x_{1})=f(x_{2})=C$，
+构造 $A=\left\{ x_{1} \right\},B=\left\{ x_{2} \right\}$，根据题设 $f\left( A\bigcap B \right)=f(\emptyset)=\emptyset\neq f(A)\bigcap f(B)=C$，矛盾，$f$ 为单射
 
-综上所述:当且仅当$f$为一一映射时，对任何$A,B\subset X$有$f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
+综上所述:当且仅当 $f$ 为一一映射时，对任何 $A,B\subset X$ 有 $f\left( A\bigcap B \right)=f(A)\bigcap f(B)$
 
 (iv):
 
-$x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，也就是$f(A^{c})\subset[f(A)]^{c}$，由于是双射可以考虑$f^{-1}$，$f(x)\not\in f(A),x\not\in A^{c}$即得$f(A^{c})\supset[f(A)]^{c}$
+$x\in A^{c},f(x)\not\in f(A)$，否则有 $y\in A,f(x)=f(y)\implies x=y$ 矛盾，也就是 $f(A^{c})\subset[f(A)]^{c}$，由于是双射可以考虑 $f^{-1}$，$f(x)\not\in f(A),x\not\in A^{c}$ 即得 $f(A^{c})\supset[f(A)]^{c}$
 
-再证明另一侧，取$A=X,f(A)^{c}=\emptyset,f(A)=Y$，这步证明了满性，取$y\neq x,A=\left\{ x \right\},y\in A^{c}$，因此由$f(A^{c})=f(A)^{c}\implies f(y)\in f(A)^{c}\implies f(y)\neq f(x)$，这就证明了单性，综上所述可知双射.
+再证明另一侧，取 $A=X,f(A)^{c}=\emptyset,f(A)=Y$，这步证明了满性，取 $y\neq x,A=\left\{ x \right\},y\in A^{c}$，因此由 $f(A^{c})=f(A)^{c}\implies f(y)\in f(A)^{c}\implies f(y)\neq f(x)$，这就证明了单性，综上所述可知双射.
 
 注：很容易把自己绕晕，可以多看看，尤其是对于任意的条件通过取不同集合证明不同的条件可以积累取特殊集合的技巧.
 
 !!! question "Ch1 8"
-    设$f$ 是 $\mathbb{R}$上的实函数.若有 $M >0$，使对任何有限个两两不等的实数 $x_1,\dots,x_{n}$有$\left\lvert  \sum\limits_{k=1}^{n}f(x_{k})  \right\rvert\le M$.
-    求证:$\left\{ x:f(x) \neq 0 \right\}$是至多可数集.
+    设 $f$ 是 $\mathbb{R}$ 上的实函数.若有 $M >0$，使对任何有限个两两不等的实数 $x_1,\dots,x_{n}$ 有 $\left\lvert  \sum\limits_{k=1}^{n}f(x_{k})  \right\rvert\le M$.
+    求证:$\left\{ x:f(x) \neq 0 \right\}$ 是至多可数集.
 
 `Proof.`
 
-反证法，假设$\left\{ x:f(x) \neq 0 \right\}$并非至多可数，那么根据$\left\{ x:f(x) \neq 0 \right\}=\bigcup\limits_{n=1}^{\infty}\left\{ x:\lvert f(x) \rvert > \frac{1}{n} \right\}$
+反证法，假设 $\left\{ x:f(x) \neq 0 \right\}$ 并非至多可数，那么根据 $\left\{ x:f(x) \neq 0 \right\}=\bigcup\limits_{n=1}^{\infty}\left\{ x:\lvert f(x) \rvert > \frac{1}{n} \right\}$
 
 其中必有一个不可数集，否则可数个至多可数集的并仍是至多可数集，与假设矛盾
 
-不妨设$\left\{ x:\lvert f(x) \rvert> \frac{1}{k} \right\}$是不可数集，那么再将集合分解为$\left\{ x: f(x)> \frac{1}{k} \right\}\bigcup\left\{ x: f(x) < -\frac{1}{k} \right\}$，其中一定有一个不可数集，否则两个至多可数集的并仍是至多可数集，矛盾.
+不妨设 $\left\{ x:\lvert f(x) \rvert> \frac{1}{k} \right\}$ 是不可数集，那么再将集合分解为 $\left\{ x: f(x)> \frac{1}{k} \right\}\bigcup\left\{ x: f(x) < -\frac{1}{k} \right\}$，其中一定有一个不可数集，否则两个至多可数集的并仍是至多可数集，矛盾.
 
-不妨设$\left\{ x: f(x) > \frac{1}{k} \right\}$是不可数集，从中选取出一个可数子集记为$A$，再从$A$中选择$[kM]+1$个元素，$\left\lvert  \sum\limits_{i=1}^{[kM]+1}f(x_{i})  \right\rvert>kM \cdot \frac{1}{k}=M$
+不妨设 $\left\{ x: f(x) > \frac{1}{k} \right\}$ 是不可数集，从中选取出一个可数子集记为 $A$，再从 $A$ 中选择 $[kM]+1$ 个元素，$\left\lvert  \sum\limits_{i=1}^{[kM]+1}f(x_{i})  \right\rvert>kM \cdot \frac{1}{k}=M$
 
-得到矛盾，那么得证$\left\{ x:f(x)\neq 0 \right\}$是至多可数集
+得到矛盾，那么得证 $\left\{ x:f(x)\neq 0 \right\}$ 是至多可数集
 
-注：这里也运用了集合分解的技术，导出矛盾的思路是，固定一个$\frac{1}{k}$然后才能通过题目给出的有限个条件制造出一个大于$M$的数
+注：这里也运用了集合分解的技术，导出矛盾的思路是，固定一个 $\frac{1}{k}$ 然后才能通过题目给出的有限个条件制造出一个大于 $M$ 的数
 
 !!! question "Ch1 9"
-    求证:$\mathbb{R}$上单调函数的间断点是至多可数的.
+    求证:$\mathbb{R}$ 上单调函数的间断点是至多可数的.
 
 `Proof.`
 
-由于是$\mathbb{R}$上单调函数$f$应当是单射，那么不妨先设单调递增，由此可知两边极限存在，任意选择$\mathbb{R}$上的一个间断点记为$x_{0}$，那么根据函数的单调性知道$f(x_{0}^{-})\le f(x_{0}^{+})$，如果不等那么取$(f(x_{0}^{-}),f(x_{0}^{+}))$中的一个有理点$q_{x_{0}}$，如果相等也就是可去间断点取$f(x_{0}^{-})$的小邻域内的有理数，这样就构成了间断点和有理数的一个单射，而全体有理数是至多可数的，那么间断点也一定是至多可数的.
+由于是 $\mathbb{R}$ 上单调函数 $f$ 应当是单射，那么不妨先设单调递增，由此可知两边极限存在，任意选择 $\mathbb{R}$ 上的一个间断点记为 $x_{0}$，那么根据函数的单调性知道 $f(x_{0}^{-})\le f(x_{0}^{+})$，如果不等那么取 $(f(x_{0}^{-}),f(x_{0}^{+}))$ 中的一个有理点 $q_{x_{0}}$，如果相等也就是可去间断点取 $f(x_{0}^{-})$ 的小邻域内的有理数，这样就构成了间断点和有理数的一个单射，而全体有理数是至多可数的，那么间断点也一定是至多可数的.
 
 !!! question "Ch1 10"
-    设$f$是$[a,b]$上单增实值函数，$f([a,b])$是区间$[f(a),f(b)]$的稠子集，求证：$f$连续.
+    设 $f$ 是 $[a,b]$ 上单增实值函数，$f([a,b])$ 是区间 $[f(a),f(b)]$ 的稠子集，求证：$f$ 连续.
 
 `Proof.`
 
-反证法，假设$f$有不连续点，那么设存在不连续点$x_{0}(x_{0}\in [a,b])$，使得$f(x_{0}^{-})<f(x_{0}^{+})$,若是端点则选取单侧极限。
-由于$f([a,b])$是区间$[f(a),f(b)]$的稠子集，$\forall I\subset f([a,b]),I\bigcap [f(a),f(b)]\neq \emptyset$，然而取$\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)$，有$\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)\subset \left[ f(a),f(b) \right]$，因为单调递增有$f(a)\leqslant f(x_{0}^{-})\leqslant f(x_{0}^{+})\leqslant f(b)$.但是$f([a,b])\bigcap(f(x_{0}^{-}),f(x_{0}^{+}))=\emptyset$，所以矛盾，得知假设不成立，$f$连续
+反证法，假设 $f$ 有不连续点，那么设存在不连续点 $x_{0}(x_{0}\in [a,b])$，使得 $f(x_{0}^{-})<f(x_{0}^{+})$,若是端点则选取单侧极限。
+由于 $f([a,b])$ 是区间 $[f(a),f(b)]$ 的稠子集，$\forall I\subset f([a,b]),I\bigcap [f(a),f(b)]\neq \emptyset$，然而取 $\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)$，有 $\left( f(x_{0}^{-}),f(x_{0}^{+}) \right)\subset \left[ f(a),f(b) \right]$，因为单调递增有 $f(a)\leqslant f(x_{0}^{-})\leqslant f(x_{0}^{+})\leqslant f(b)$.但是 $f([a,b])\bigcap(f(x_{0}^{-}),f(x_{0}^{+}))=\emptyset$，所以矛盾，得知假设不成立，$f$ 连续
 
 ## 11-20
 
 !!! question "Ch1 11"
-    若$A_{2} \subset A_{1}, B_{2} \subset B_{1}, A_{2} \sim B_{2}, A_{1} \sim B_{1}$, 试问是否必有 $A_{1}-A_{2} \sim B_{1}-B_{2}$ ?
+    若 $A_{2} \subset A_{1}, B_{2} \subset B_{1}, A_{2} \sim B_{2}, A_{1} \sim B_{1}$, 试问是否必有 $A_{1}-A_{2} \sim B_{1}-B_{2}$ ?
 
 `Sol.`
 
-构造思路：可以考虑$A_{1}=A_{2}$这样就可以使$A_{1}-A_{2}=\emptyset$，然后使得$B_{1}-B_{2}\neq \emptyset$即可
+构造思路：可以考虑 $A_{1}=A_{2}$ 这样就可以使 $A_{1}-A_{2}=\emptyset$，然后使得 $B_{1}-B_{2}\neq \emptyset$ 即可
 
-令$A_{1}=A_{2}=\mathbb{Q},B_{2}=\mathbb{Z},B_{1}=\mathbb{Q}$
+令 $A_{1}=A_{2}=\mathbb{Q},B_{2}=\mathbb{Z},B_{1}=\mathbb{Q}$
 
 注：经典的反例题，可以适当积累一下
 
@@ -290,54 +290,54 @@ $x\in A^{c},f(x)\not\in f(A)$，否则有$y\in A,f(x)=f(y)\implies x=y$矛盾，
 
 `Proof.`
 
-不妨设可数集为$\mathbb{Q}$，只需要证明$\mathbb{Q}^{2}$后续使用归纳法，$\mathbb{Q}^{n}=\mathbb{Q}^{n-1}\times \mathbb{Q}$
+不妨设可数集为 $\mathbb{Q}$，只需要证明 $\mathbb{Q}^{2}$ 后续使用归纳法，$\mathbb{Q}^{n}=\mathbb{Q}^{n-1}\times \mathbb{Q}$
 
-我们知道$\mathbb{Q}\times \mathbb{Q}=\bigcup\limits_{k=1}^{\infty}\mathbb{Q}\times \left\{ r_{k} \right\},\mathbb{Q}=\left\{ r_{1},r_{2},\dots,r_{n}\dots \right\}$
+我们知道 $\mathbb{Q}\times \mathbb{Q}=\bigcup\limits_{k=1}^{\infty}\mathbb{Q}\times \left\{ r_{k} \right\},\mathbb{Q}=\left\{ r_{1},r_{2},\dots,r_{n}\dots \right\}$
 
 这样可以得到一个至多可数集，而可数集的可数并是可数的
 
-至于无限个可数集，反例是容易举的，例如可数个整数集就相当于是$n$元数列全体的一个超集，而$n$元数列全体是具有连续统势的，所以应当不可数(即便是可数无穷也无法可数)
+至于无限个可数集，反例是容易举的，例如可数个整数集就相当于是 $n$ 元数列全体的一个超集，而 $n$ 元数列全体是具有连续统势的，所以应当不可数(即便是可数无穷也无法可数)
 
 !!! question "Ch1 13"
-    例 设实数集$E$不可数. 求证: 有$x$, 使对任何$\delta>0, E \cap(x-\delta, x+\delta)$不可数.
+    例 设实数集 $E$ 不可数. 求证: 有 $x$, 使对任何 $\delta>0, E \cap(x-\delta, x+\delta)$ 不可数.
 
 `Proof.`
 
 用反证法. 不然对任何 $x \in E$, 必有 $\delta_{x}>0$ 使 $E \cap\left(x-\delta_{x}, x+\delta_{x}\right)$ 至多可数. 从而对每一 $x \in E$, 必有满足 $r_{x}<x<r_{x}$ 的有理数 $r_{x}$ 和 $R_{x}$, 使 $E \cap\left(r_{x}, R_{x}\right)$ 至多可数. 由题 12, $\left\{\left(r_{x}, R_{x}\right)\right\}_{x \in E}$ 中至多只有可数个开区间. 从而 $E=\bigcup_{x \in E}\left[E \cap\left(r_{x}, R_{x}\right)\right]$ 是一个至多可数集, 此与题设矛盾.
 
-注：很重要的题目，需要掌握取有理数这种证明手法，与之相关的题可以结合起来看如14，
+注：很重要的题目，需要掌握取有理数这种证明手法，与之相关的题可以结合起来看如 14，
 
 !!! question "Ch1 14"
-    求证：$E$中满足题13中条件的点$x$的全体是不可数集
+    求证：$E$ 中满足题 13 中条件的点 $x$ 的全体是不可数集
 
 `Proof.`
 
-反证法，假设满足条件的全体为至多可数集，记为$A$
+反证法，假设满足条件的全体为至多可数集，记为 $A$
 
-那么对于$x\in E-A$，利用条件，存在$\delta_{x}>0,s.t.E\bigcap \left( x-\delta_{x},x+\delta_{x} \right)$至多可数，可以找到有理数$r_{x}$和$R_{x}$使得$r_{x}<x<R_{x}$，并且$E\bigcap \left( r_{x},R_{x} \right)$至多可数，并且区间端点为有理数的区间只有至多可数个
+那么对于 $x\in E-A$，利用条件，存在 $\delta_{x}>0,s.t.E\bigcap \left( x-\delta_{x},x+\delta_{x} \right)$ 至多可数，可以找到有理数 $r_{x}$ 和 $R_{x}$ 使得 $r_{x}<x<R_{x}$，并且 $E\bigcap \left( r_{x},R_{x} \right)$ 至多可数，并且区间端点为有理数的区间只有至多可数个
 
-那么利用$E=A\bigcup \left( E-A \right)$，并且$E-A=\bigcup\limits_{x\in E-A}E\bigcap \left( r_{x},R_{x} \right)$是至多可数集(至多可数个至多可数集的并还是至多可数集)，由假设得$A$是可数集，因此$E$也是至多可数集，与原题设矛盾
+那么利用 $E=A\bigcup \left( E-A \right)$，并且 $E-A=\bigcup\limits_{x\in E-A}E\bigcap \left( r_{x},R_{x} \right)$ 是至多可数集(至多可数个至多可数集的并还是至多可数集)，由假设得 $A$ 是可数集，因此 $E$ 也是至多可数集，与原题设矛盾
 
-综上：$A$是不可数集
+综上：$A$ 是不可数集
 
 !!! question "Ch1 15"
-    设$\{x_{n}\}_{n\geqslant 1}$是可数个实数. 试具体写出一个单增函数$f$, 它以$\{x_{n}\}_{n\geqslant 1}$为其间断点全体.
+    设 $\{x_{n}\}_{n\geqslant 1}$ 是可数个实数. 试具体写出一个单增函数 $f$, 它以 $\{x_{n}\}_{n\geqslant 1}$ 为其间断点全体.
 
 `Sol.`
 
-考虑收敛级数$\sum\limits \frac{1}{n^{2}}$，那么定义$f(x)=\sum\limits_{n:x_{n}<x} \frac{1}{n^{2}}$
+考虑收敛级数 $\sum\limits \frac{1}{n^{2}}$，那么定义 $f(x)=\sum\limits_{n:x_{n}<x} \frac{1}{n^{2}}$
 
-显然的有$f(x_{n_{0}}^{+})-f(x_{n_{0}})= \frac{1}{n_{0}^{2}}$
+显然的有 $f(x_{n_{0}}^{+})-f(x_{n_{0}})= \frac{1}{n_{0}^{2}}$
 
-注1：这个构造比较巧妙，但是我想应当也可以给出一个解释，要想构造单增函数并且还需要以$x_{n}$为间断点，很自然会想到阶梯函数(经验分布函数！)所以下面这种构造实际是有道理的，并且为了避免溢出我们最好选择收敛的级数.
+注 1：这个构造比较巧妙，但是我想应当也可以给出一个解释，要想构造单增函数并且还需要以 $x_{n}$ 为间断点，很自然会想到阶梯函数(经验分布函数！)所以下面这种构造实际是有道理的，并且为了避免溢出我们最好选择收敛的级数.
 
-注2：显然的构造方式不止这一种，但是需要注意的是不太能做到为$x_{n}$排序并且选取最小的那个，因为很有可能涉及无穷操作，这种证明是危险的.
+注 2：显然的构造方式不止这一种，但是需要注意的是不太能做到为 $x_{n}$ 排序并且选取最小的那个，因为很有可能涉及无穷操作，这种证明是危险的.
 
 !!! question "Ch1 16"
-    证明:$\mathbb{R}$上的实函数$f$的第一类间断点(即左右极限存在有限的间断点)是至多可数的.
+    证明:$\mathbb{R}$ 上的实函数 $f$ 的第一类间断点(即左右极限存在有限的间断点)是至多可数的.
 
 !!! tip "+ Hint"
-    证明$\left\{ x:\lvert f(x)-f(x^{+}) \rvert> \frac{1}{n} \right\}$是至多可数集
+    证明 $\left\{ x:\lvert f(x)-f(x^{+}) \rvert> \frac{1}{n} \right\}$ 是至多可数集
 
 `Proof.`
 
@@ -349,19 +349,19 @@ $$
 
 下面开始正式的证明：
 
-先定义$E=\left\{ x:f(x^{-}),f(x^{+})都存在 \right\}$不妨讨论右极限，左极限同理
+先定义 $E=\left\{ x:f(x^{-}),f(x^{+})都存在 \right\}$ 不妨讨论右极限，左极限同理
 
-设右极限为$f(x^{+})$，那么定义$A=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert> 0 \right\}$，
+设右极限为 $f(x^{+})$，那么定义 $A=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert> 0 \right\}$，
 
-将集合进行分解$A=\bigcup\limits_{k=1}^{\infty}A_{k},A_{k}=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert> \frac{1}{k} \right\}$
+将集合进行分解 $A=\bigcup\limits_{k=1}^{\infty}A_{k},A_{k}=\left\{ x\in E:\lvert f(x^{+})-f(x) \rvert> \frac{1}{k} \right\}$
 
-再证明$A_{k}$至多可数
+再证明 $A_{k}$ 至多可数
 
-根据右极限定义，对于任意的$x\in A_{k}$，$\exists\delta_{x}>0,x<y<x+\delta_{x}$都有$\lvert f(y)-f(x^{+}) \rvert< \frac{1}{4k}$ ，对于任意的$x_{1},x_{2}\in \left( x,x+\delta _{x} \right)$，事实上可以直接由柯西收敛定理结合右极限的存在性直接得到下面的式子而不用通过三角不等式，$\lvert f(x_{1})-f(x_{2}) \rvert\leq\lvert f(x_{1})-f(x^{+}) \rvert+\lvert f(x_{2})-f(x^{+}) \rvert< \frac{1}{2k}$
+根据右极限定义，对于任意的 $x\in A_{k}$，$\exists\delta_{x}>0,x<y<x+\delta_{x}$ 都有 $\lvert f(y)-f(x^{+}) \rvert< \frac{1}{4k}$ ，对于任意的 $x_{1},x_{2}\in \left( x,x+\delta _{x} \right)$，事实上可以直接由柯西收敛定理结合右极限的存在性直接得到下面的式子而不用通过三角不等式，$\lvert f(x_{1})-f(x_{2}) \rvert\leq\lvert f(x_{1})-f(x^{+}) \rvert+\lvert f(x_{2})-f(x^{+}) \rvert< \frac{1}{2k}$
 
-再来说明$A_{k}\bigcap \left( x,x+\delta_{x} \right)=\emptyset$.这事实上是显然的，右极限的存在性保证了$x$右端的弱连续性由此可知不可能出现符合$A_{k}$条件的点
+再来说明 $A_{k}\bigcap \left( x,x+\delta_{x} \right)=\emptyset$.这事实上是显然的，右极限的存在性保证了 $x$ 右端的弱连续性由此可知不可能出现符合 $A_{k}$ 条件的点
 
-反证法，如果存在$x_{0}\in A_{k}\bigcap \left( x,x+\delta_{x} \right)$,有$\lvert f(x_{0}^{+})-f(x_{0}) \rvert> \frac{1}{k}$，那么也存在$\delta_{0},s.t.y_{0}\in \left( x_{0},x_{0}+\delta_{0} \right),x_{0}+\delta_{0}<x+\delta_{x}$,$\lvert f(y_{0})-f(x_{0}^{+}) \rvert< \frac{1}{2k}$
+反证法，如果存在 $x_{0}\in A_{k}\bigcap \left( x,x+\delta_{x} \right)$,有 $\lvert f(x_{0}^{+})-f(x_{0}) \rvert> \frac{1}{k}$，那么也存在 $\delta_{0},s.t.y_{0}\in \left( x_{0},x_{0}+\delta_{0} \right),x_{0}+\delta_{0}<x+\delta_{x}$,$\lvert f(y_{0})-f(x_{0}^{+}) \rvert< \frac{1}{2k}$
 
 $$
 \lvert f(x_{0})-f(y_{0}) \rvert \geq \lvert \lvert f(x_{0}^{+})-f(x_{0}) \rvert - \lvert f(x_{0}^{+})-f(y_{0}) \rvert \rvert > \frac{1}{2k}
@@ -432,7 +432,7 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 
 我们不妨设 $A \cup B=\mathbf{R}^{2}, A$ 和 $B$ 是 $\mathbf{R}^{2}$ （平面）中的两个子集， $\mathbf{R}^{2}$ 中的点用 $(x, y)$ 来表示。现显然有 $\bar{A} \leqslant c$ 及 $\bar{B} \leqslant c$. 今假设 $\bar{A}<c$ 及 $\bar{B}<c$. 于是有 $x_{0} \in \mathbf{R}$,使对一切 $y \in \mathbf{R}$ 有 $(x_{0}, y) \notin A$;
 
-注：可以考虑反面，$\forall x\in \mathbb{R},\exists y_{0}\in \mathbb{R},(x,y_{0})\in A$，那么可以将这些点都映射到$x$轴上使得$A$有连续统势与假设矛盾.
+注：可以考虑反面，$\forall x\in \mathbb{R},\exists y_{0}\in \mathbb{R},(x,y_{0})\in A$，那么可以将这些点都映射到 $x$ 轴上使得 $A$ 有连续统势与假设矛盾.
 
 同样有 $y_{0} \in \mathbf{R}$, 使对一切 $x \in \mathbf{R}$ 有 $(x, y_{0}) \notin B$. 这样 $(x_{0}, y_{0}) \notin A \cup B=\mathbf{R}^{2}$, 矛盾.
 
@@ -443,21 +443,21 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 
 `Proof.`
 
-注：这里需要知道$\overline{\overline{\mathbb{R}^{\infty}}}=c$，然后就可以仿照上面的了
+注：这里需要知道 $\overline{\overline{\mathbb{R}^{\infty}}}=c$，然后就可以仿照上面的了
 
-直接利用20题的结论，仿照上面的证明即可，每个$A_{n}$都没有连续统势
+直接利用 20 题的结论，仿照上面的证明即可，每个 $A_{n}$ 都没有连续统势
 
 !!! example "$\mathbb{R}^{\infty}$"
     $\forall x\in \mathbb{R}^{\infty},x=(x_{1},x_{2},\dots,x_{k}\dots)$
 
     $$f(x)=\left\{ \left\{ (k,r) \right\} ,k\to x_{k},r\in \mathbb{Q},r<x_{k} \right\} $$
 
-    这样定义了一个从$\mathbb{R}^{\infty}\to P(N\times \mathbb{Q})$的单射，另一边显然有它的势大于$\mathbb{R}$那么可得它有连续统势
+    这样定义了一个从 $\mathbb{R}^{\infty}\to P(N\times \mathbb{Q})$ 的单射，另一边显然有它的势大于 $\mathbb{R}$ 那么可得它有连续统势
 
 !!! question "Ch1 22"
     具体构造下列集之间的一个完全一一映射
-    (i)$\left[ 0,1 \right]$与$\left( 0,1 \right)$
-    (ii)$(0,1]$与$(0,1]\times(0,1]$
+    (i)$\left[ 0,1 \right]$ 与 $\left( 0,1 \right)$
+    (ii)$(0,1]$ 与 $(0,1]\times(0,1]$
     (iii)正整数列全体与严格单增正整数列全体
 
 `Proof.`
@@ -466,59 +466,59 @@ $$E\bigcap S(x_{0},r)\bigcap S(x_{1},r_{1})=\bigcup\limits_{r_{2}\in Q^{+}}E\big
 
 (i):
 
-我们将$\left[ 0,1 \right]$分为$0,1$和$(0,1)$内的有理数和无理数，
+我们将 $\left[ 0,1 \right]$ 分为 $0,1$ 和 $(0,1)$ 内的有理数和无理数，
 
-对无理数部分构造一个无理数的恒等映射也就是当$x\in (0,1),x\not\in Q$时，$f(x)\equiv x$ 
+对无理数部分构造一个无理数的恒等映射也就是当 $x\in (0,1),x\not\in Q$ 时，$f(x)\equiv x$ 
 
-对有理数部分先证明它是可数集，首先全体有理数是可数集，而开区间内的有理数有无限个，根据可数集的无限子集也是可数集，我们知道$(0,1)$内的有理数一定也是可数集.这样就可以进行排列:对于所有的$x\in(0,1),x\in Q$都可以用$\left\{ x_{n} \right\}_{n \geq 1}$表示.
+对有理数部分先证明它是可数集，首先全体有理数是可数集，而开区间内的有理数有无限个，根据可数集的无限子集也是可数集，我们知道 $(0,1)$ 内的有理数一定也是可数集.这样就可以进行排列:对于所有的 $x\in(0,1),x\in Q$ 都可以用 $\left\{ x_{n} \right\}_{n \geq 1}$ 表示.
 
-然后构造有理数部分的映射$f(x_{1})=0,f(x_{2})=1,f(x_{n})=x_{n-2},n \geq 3$
+然后构造有理数部分的映射 $f(x_{1})=0,f(x_{2})=1,f(x_{n})=x_{n-2},n \geq 3$
 
-这样就得到了$\left( 0,1 \right)\to[0,1]$的完全一一映射，下面进行分别验证.
+这样就得到了 $\left( 0,1 \right)\to[0,1]$ 的完全一一映射，下面进行分别验证.
 
-从构造过程中可以知道$\forall x\in[0,1]$，都有$y\in(0,1)$使得$f(y)=x$($x=0,y=x_{1};x=1,y=x_{2}$).
+从构造过程中可以知道 $\forall x\in[0,1]$，都有 $y\in(0,1)$ 使得 $f(y)=x$($x=0,y=x_{1};x=1,y=x_{2}$).
 
-$x \not\in Q,y=x;x \in Q-\left\{ 0,1 \right\} ,\exists k \geq 1,s.t.x=x_{k},y=x_{k+2}$所以$f$是满射
+$x \not\in Q,y=x;x \in Q-\left\{ 0,1 \right\} ,\exists k \geq 1,s.t.x=x_{k},y=x_{k+2}$ 所以 $f$ 是满射
 
-根据构造过程，若是$x_{1} \neq x_{2}$，必有$f(x_{1}) \neq f(x_{2})$，所以得到$f$是单射，综上所述：$f$是完全一一映射.
+根据构造过程，若是 $x_{1} \neq x_{2}$，必有 $f(x_{1}) \neq f(x_{2})$，所以得到 $f$ 是单射，综上所述：$f$ 是完全一一映射.
 
 (ii):
 
 这是一位学长的解答：
 
-考虑$\forall x\in(0,1]$，无限小数不允许某位后全为0，做十进制分解
+考虑 $\forall x\in(0,1]$，无限小数不允许某位后全为 0，做十进制分解
 
-例如$0.100100234\dots\implies 1,001,002,3,4\dots\implies 0.10024\dots ,0.0013\dots$
+例如 $0.100100234\dots\implies 1,001,002,3,4\dots\implies 0.10024\dots ,0.0013\dots$
 
-这样按照0出现的位置进行一个拆分将奇数段和偶数段分别映射到不同的集合中，相反则是拼接，容易知道这就是一种双射.
+这样按照 0 出现的位置进行一个拆分将奇数段和偶数段分别映射到不同的集合中，相反则是拼接，容易知道这就是一种双射.
 
-注：应该也可以仿照$\mathbb{R}\to \mathbb{R}^{2}$，例如下面这种方式：
+注：应该也可以仿照 $\mathbb{R}\to \mathbb{R}^{2}$，例如下面这种方式：
 
-对于$x=0.a_{1}b_{1}a_{2}b_{2}\dots\implies x_{1}=0.a_{1}a_{2}\dots,x_{2}=0.b_{1}b_{2}\dots$
+对于 $x=0.a_{1}b_{1}a_{2}b_{2}\dots\implies x_{1}=0.a_{1}a_{2}\dots,x_{2}=0.b_{1}b_{2}\dots$
 
 (iii):
 
-直接考虑一阶差分即可$a_{1}=b_{1},b_{n+1}=b_{n}+a_{n}$
+直接考虑一阶差分即可 $a_{1}=b_{1},b_{n+1}=b_{n}+a_{n}$
 
 !!! question "Ch1 23"
-    求证：$\mathbb{R}$上实函数全体有基数$2^{c}$
+    求证：$\mathbb{R}$ 上实函数全体有基数 $2^{c}$
 
 `Proof.`
 
-思考：显然我们可以考虑使用Berstein定理，而$\mathbb{R}$有连续统势那么可以考虑构造$\mathbb{R}$上实函数与$\mathbb{R}^{2}$之间的单射
+思考：显然我们可以考虑使用 Bernstein 定理，而 $\mathbb{R}$ 有连续统势那么可以考虑构造 $\mathbb{R}$ 上实函数与 $\mathbb{R}^{2}$ 之间的单射
 
-容易看出$\mathbb{R}$上的任一实函数可以由$\mathbb{R}^{2}$的一个子集表示$(x,f(x))$，而$\mathbb{R}^{2}$和$\mathbb{R}$都有连续统势，那么可以得到$\mathbb{R}$上实函数全体的势一定小于等于$2^{c}$
+容易看出 $\mathbb{R}$ 上的任一实函数可以由 $\mathbb{R}^{2}$ 的一个子集表示 $(x,f(x))$，而 $\mathbb{R}^{2}$ 和 $\mathbb{R}$ 都有连续统势，那么可以得到 $\mathbb{R}$ 上实函数全体的势一定小于等于 $2^{c}$
 
-另一方面，对于$\mathbb{R}$的任一子集$A$，构造特征函数$\chi_{A}(x)=1(x \in A)$，即得是一个单射，那么$2^{c}=\overline{\overline{P(A)}}\leqslant \mathbb{R}$上实函数的势
+另一方面，对于 $\mathbb{R}$ 的任一子集 $A$，构造特征函数 $\chi_{A}(x)=1(x \in A)$，即得是一个单射，那么 $2^{c}=\overline{\overline{P(A)}}\leqslant \mathbb{R}$ 上实函数的势
 
 综上可证.
 
 !!! question "Ch1 24"
-    若$A \cap B=\varnothing$，求证：$\bar{A} \cap B^{\circ }=\varnothing$。
+    若 $A \cap B=\varnothing$，求证：$\bar{A} \cap B^{\circ }=\varnothing$。
 
 `Proof.`
 
-反证法，假设$\exists x_{0}\in \overline{A}\bigcap B^{\circ}$，那么根据内部的定义，$x_{0}\in B^{\circ}\implies \exists\epsilon, V(x_{0},\epsilon)\subset B$，再根据闭包的定义$x_{0}\in \overline{A} \implies  V(x_{0},\epsilon)\bigcap A \neq \emptyset$，综上$\exists x_{1}\in V(x_{0},\epsilon)\bigcap A,x_{1}\in B,x_{1}\in A\bigcap B$，与题设矛盾，即证$\bar{A} \cap B^{\circ }=\varnothing$
+反证法，假设 $\exists x_{0}\in \overline{A}\bigcap B^{\circ}$，那么根据内部的定义，$x_{0}\in B^{\circ}\implies \exists\epsilon, V(x_{0},\epsilon)\subset B$，再根据闭包的定义 $x_{0}\in \overline{A} \implies  V(x_{0},\epsilon)\bigcap A \neq \emptyset$，综上 $\exists x_{1}\in V(x_{0},\epsilon)\bigcap A,x_{1}\in B,x_{1}\in A\bigcap B$，与题设矛盾，即证 $\bar{A} \cap B^{\circ }=\varnothing$
 
 !!! question "25"
     求证：
@@ -575,7 +575,7 @@ $$
 
 (v)
 
-显然可以依据定义$x\in A^{\circ}\bigcup B^{\circ}$，那么$x\in A^{\circ}$或$x\in B^{\circ}$，不妨设是$x\in A^{\circ}$另一种情况同理可得，$\exists\delta,V(x,\delta)\subset A\subset \left( A\bigcup B \right)\implies x\in\left( A\bigcup B \right)^{\circ}$
+显然可以依据定义 $x\in A^{\circ}\bigcup B^{\circ}$，那么 $x\in A^{\circ}$ 或 $x\in B^{\circ}$，不妨设是 $x\in A^{\circ}$ 另一种情况同理可得，$\exists\delta,V(x,\delta)\subset A\subset \left( A\bigcup B \right)\implies x\in\left( A\bigcup B \right)^{\circ}$
 
 (vi)
 
@@ -590,19 +590,19 @@ x\in\left( A\bigcap B \right)^{\circ}&\iff \exists\delta>0,V(x,\delta)\subset\le
 $$
 
 !!! question "Ch1 26"
-    设A为开集。求证：为使$A \subset \overline{B}$，充要条件是A的任一非空开子集与B有非空交。
+    设 A 为开集。求证：为使 $A \subset \overline{B}$，充要条件是 A 的任一非空开子集与 B 有非空交。
 
 `Proof.`
 
 $\implies$
 
-必要性是显然的，对于任一A的非空开子集C，$C \subset A\subset  \overline{B}$，根据闭包的定义C的每一点的任意邻域都与B与非空交，从而得证
+必要性是显然的，对于任一 A 的非空开子集 C，$C \subset A\subset  \overline{B}$，根据闭包的定义 C 的每一点的任意邻域都与 B 有非空交，从而得证
 
 $\impliedby$
 
-反证法，假设存在$x_{1}$，使得$x_{1}\in A,x_{1}\not\in  \overline{B}$，那么有$x_{1}\in (\overline{B})^{c}$，因为$( \overline{B} )^{c}$是一个开集，可知$\exists\delta,V(x_{1},\delta)\bigcap  \overline{B}=\emptyset,B\subset  \overline{B},V(x_{1},\delta)\bigcap B=\emptyset$，因为$A$为开集，$\exists\delta',V(x_{1},\delta')\subset A$，它是$A$的非空开子集
+反证法，假设存在 $x_{1}$，使得 $x_{1}\in A,x_{1}\not\in  \overline{B}$，那么有 $x_{1}\in (\overline{B})^{c}$，因为 $( \overline{B} )^{c}$ 是一个开集，可知 $\exists\delta,V(x_{1},\delta)\bigcap  \overline{B}=\emptyset,B\subset  \overline{B},V(x_{1},\delta)\bigcap B=\emptyset$，因为 $A$ 为开集，$\exists\delta',V(x_{1},\delta')\subset A$，它是 $A$ 的非空开子集
 
-取$\delta''=min(\delta,\delta'),V(x_{1},\delta'')\bigcap B=\emptyset$与题设矛盾
+取 $\delta''=min(\delta,\delta'),V(x_{1},\delta'')\bigcap B=\emptyset$ 与题设矛盾
 
 !!! question "Ch1 27"
     设 $A$ 为开集. 求证: $A \cap \overline{B} \subset \overline{A \cap B}$.
@@ -618,7 +618,7 @@ x\in A\bigcap  \overline{B}&\iff x\in A ,x\in  \overline{B}\\
 \end{aligned}
 $$
 
-注：其实只需要说明$x_{0}$一定属于$A$即可(讨论半径即可)，也可以直接将$\delta_{1}$作为一个固定的数处理，当半径大于$\delta_{1}$时，选取在$\delta_{1}$内的一个点$x_{1}\in A\bigcap B$，如果半径小于$\delta_{1}$那么也显然.
+注：其实只需要说明 $x_{0}$ 一定属于 $A$ 即可(讨论半径即可)，也可以直接将 $\delta_{1}$ 作为一个固定的数处理，当半径大于 $\delta_{1}$ 时，选取在 $\delta_{1}$ 内的一个点 $x_{1}\in A\bigcap B$，如果半径小于 $\delta_{1}$ 那么也显然.
 
 !!! question "Ch1 28"
     (i) 若 $A$ 为开集, 求证: $A \subset(\bar{A})^{\circ}$;
@@ -628,7 +628,7 @@ $$
 
 (i)利用开集的性质即可
 
-$x \in A,\exists\delta>0,\bigcup(x,\delta)\subset A\subset  \overline{A}\implies x \in(\overline{A})^{\circ}$，那么肯定有$A\subset(\overline{A})^{\circ}$
+$x \in A,\exists\delta>0,\bigcup(x,\delta)\subset A\subset  \overline{A}\implies x \in(\overline{A})^{\circ}$，那么肯定有 $A\subset(\overline{A})^{\circ}$
 
 (ii)
 
@@ -639,19 +639,19 @@ $$
 $$
 
 !!! question "Ch1 29"
-    求证：$R^{n}$中任一集的导集是闭集
+    求证：$R^{n}$ 中任一集的导集是闭集
 
 `Proof.`
 
-根据$\overline{A'}=A'\bigcup (A')'$，得如果能证明$(A')'\subset A'$，即可证明$A'$是闭集($\overline{A'}=A'$)
+根据 $\overline{A'}=A'\bigcup (A')'$，得如果能证明 $(A')'\subset A'$，即可证明 $A'$ 是闭集($\overline{A'}=A'$)
 
-因此我们考虑$(A')'\subset A'$，即可证明导集为闭，如果$x_{0}\in(A')',(V(x_{0},\epsilon)\setminus \left\{ x_{0} \right\})\bigcap A'\neq \emptyset$
+因此我们考虑 $(A')'\subset A'$，即可证明导集为闭，如果 $x_{0}\in(A')',(V(x_{0},\epsilon)\setminus \left\{ x_{0} \right\})\bigcap A'\neq \emptyset$
 
-在$V(x_{0},\epsilon)$中取异于$x_{0}$的一点$x_{1}\in A'$，那么再根据导集的定义有，$(V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset$
+在 $V(x_{0},\epsilon)$ 中取异于 $x_{0}$ 的一点 $x_{1}\in A'$，那么再根据导集的定义有，$(V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset$
 
-注意令$\epsilon'=min(d(x_{0},x_{1}),\epsilon-d(x_{0},x_{1}))$，仍然有$(V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset$，再找出一个$x_{2}$异于$x_{1}$,且$x_{2}\in A$
+注意令 $\epsilon'=min(d(x_{0},x_{1}),\epsilon-d(x_{0},x_{1}))$，仍然有 $(V(x_{1},\epsilon')\setminus \left\{ x_{1} \right\})\bigcap A\neq \emptyset$，再找出一个 $x_{2}$ 异于 $x_{1}$,且 $x_{2}\in A$
 
-$d(x_{0},x_{2})\leqslant d(x_{0},x_{1})+d(x_{1},x_{2})\leqslant d(x_{0},x_{1})+\epsilon-d(x_{0},x_{1})=\epsilon$，根据选取方式可知，$x_{2}$异于点$x_{0},x_{1}$，且在$x_{0}$的非空邻域中，得$x_{0}\in A',(A')'\subset A'$
+$d(x_{0},x_{2})\leqslant d(x_{0},x_{1})+d(x_{1},x_{2})\leqslant d(x_{0},x_{1})+\epsilon-d(x_{0},x_{1})=\epsilon$，根据选取方式可知，$x_{2}$ 异于点 $x_{0},x_{1}$，且在 $x_{0}$ 的非空邻域中，得 $x_{0}\in A',(A')'\subset A'$
 
 证毕
 
@@ -675,7 +675,7 @@ $$
 
 根据一个非常基础的集合拆分式：$\overline{A}=A'\bigcup A$
 
-那么一下得到$\overline{B}=B'\bigcup B=B$
+那么一下得到 $\overline{B}=B'\bigcup B=B$
 
 ## 31-40
 
@@ -702,44 +702,44 @@ x_{0} \in\left( A\bigcap B \right)'&\iff \forall\delta>0,V(x_{0},\delta)\bigcap\
 \end{aligned}
 $$
 
-由于$A\bigcap B$有可能是空集，所以$x_{0}$实际上可能不存在所以是单边的
+由于 $A\bigcap B$ 有可能是空集，所以 $x_{0}$ 实际上可能不存在所以是单边的
 
 !!! question "Ch1 32"
-    求证: $R^n$中任一集的孤立点是至多可数的.
+    求证: $R^n$ 中任一集的孤立点是至多可数的.
 
 `Proof.`
 
-由孤立点的定义可知，可以构造一个半径为$\epsilon$的开球，使得开球内除了孤立点外与原集合无交，又由于$Q^n$的稠密性，可在每个开球内选取一个有理点，又由于两两不交，有理点互不相同，这样就建立起了全体孤立点到$R^{n}$中$Q^n$的一个单射，全体孤立点势一定小于$Q^n$，又由于$R^{n}$中的$Q^n$是至多可数集，得证命题成立.
+由孤立点的定义可知，可以构造一个半径为 $\epsilon$ 的开球，使得开球内除了孤立点外与原集合无交，又由于 $Q^n$ 的稠密性，可在每个开球内选取一个有理点，又由于两两不交，有理点互不相同，这样就建立起了全体孤立点到 $R^{n}$ 中 $Q^n$ 的一个单射，全体孤立点势一定小于 $Q^n$，又由于 $R^{n}$ 中的 $Q^n$ 是至多可数集，得证命题成立.
 
-注：需要check两两孤立点的开球之间不交
+注：需要 check 两两孤立点的开球之间不交
 
 !!! question "Ch1 33"
     若 $A$ 不可数, 求证: $A^{\prime}$ 也不可数.
 
 `Proof.`
 
-利用32，孤立点集是至多可数集，$A=A'\bigcup(A-A')$，其中孤立点集为$A-A'$
+利用 32，孤立点集是至多可数集，$A=A'\bigcup(A-A')$，其中孤立点集为 $A-A'$
 
-那么显然有$A'$是不可数的
+那么显然有 $A'$ 是不可数的
 
 !!! question "Ch1 34"
-    设对每一整数$n,F_n$是$[n,n+1)$中的闭集.求证：$\bigcup\limits_{n=-\infty}^{\infty}F_n$是 $\mathbb{R}$ 中的闭集.
+    设对每一整数 $n,F_n$ 是 $[n,n+1)$ 中的闭集.求证：$\bigcup\limits_{n=-\infty}^{\infty}F_n$ 是 $\mathbb{R}$ 中的闭集.
 
 `Proof.`
 
-思考：利用闭集的充要条件，如果$F_{n}$是闭集那么有$\forall \left\{ x_{n} \right\}\in F_{n},x_{n}\to x,x\in F_{n}$
+思考：利用闭集的充要条件，如果 $F_{n}$ 是闭集那么有 $\forall \left\{ x_{n} \right\}\in F_{n},x_{n}\to x,x\in F_{n}$
 
-任取$\left\{ x_{n} \right\}\in\bigcup\limits_{n=-\infty}^{\infty}F_{n},x_{n}\to x(n\to \infty)$,取$\epsilon=\frac{1}{2},\exists N,\forall n>N,\lvert x_{n}-x \rvert< \frac{1}{2}=\epsilon$，由于$R=\bigcup\limits_{n=-\infty}^{\infty}[n,n+1),\exists !k,s.t. x\in[k,k+1)$，那么可以得出$n>N$的$\left\{ x_{n} \right\}\in \bigcup\limits_{i=k-1}^{k+1} F_{i}$，因为有限个闭集的并仍然为闭集则$\bigcup\limits_{i=k-1}^{k+1} F_{i}$为闭集，再根据闭集充要条件得出$x\in\bigcup\limits_{i=k-1}^{k+1} F_{i}\subset \bigcup\limits_{n=-\infty}^{\infty}F_n$
+任取 $\left\{ x_{n} \right\}\in\bigcup\limits_{n=-\infty}^{\infty}F_{n},x_{n}\to x(n\to \infty)$,取 $\epsilon=\frac{1}{2},\exists N,\forall n>N,\lvert x_{n}-x \rvert< \frac{1}{2}=\epsilon$，由于 $R=\bigcup\limits_{n=-\infty}^{\infty}[n,n+1),\exists !k,s.t. x\in[k,k+1)$，那么可以得出 $n>N$ 的 $\left\{ x_{n} \right\}\in \bigcup\limits_{i=k-1}^{k+1} F_{i}$，因为有限个闭集的并仍然为闭集则 $\bigcup\limits_{i=k-1}^{k+1} F_{i}$ 为闭集，再根据闭集充要条件得出 $x\in\bigcup\limits_{i=k-1}^{k+1} F_{i}\subset \bigcup\limits_{n=-\infty}^{\infty}F_n$
 
-综上所述：$\bigcup\limits_{n=-\infty}^{\infty}F_n$是 $\mathbb{R}$ 中的闭集.
+综上所述：$\bigcup\limits_{n=-\infty}^{\infty}F_n$ 是 $\mathbb{R}$ 中的闭集.
 
 !!! question "Ch1 35"
-    设$A\subset \mathbb{R}^{n}$，若对任何$x\in \mathbb{R}^{n}$，必有$a_{x}\in A$使$d(x,a_{x})=d(x,A)$
-    求证：$A$是闭集.
+    设 $A\subset \mathbb{R}^{n}$，若对任何 $x\in \mathbb{R}^{n}$，必有 $a_{x}\in A$ 使 $d(x,a_{x})=d(x,A)$
+    求证：$A$ 是闭集.
 
 `Proof.`
 
-反证，若$A$不是闭集，那么一定有$x\in A'-A$，$\left\{ x_{n} \right\}\subset A,x_{n}\to x$
+反证，若 $A$ 不是闭集，那么一定有 $x\in A'-A$，$\left\{ x_{n} \right\}\subset A,x_{n}\to x$
 
 $$
 \begin{aligned}
@@ -747,33 +747,33 @@ d(x,A)&=\inf \left\{ d(x,y),y\in A \right\} \leqslant\left\{ d(x,x_{n}) \right\}
 \end{aligned}
 $$
 
-注：这是闭集一个非常重要的性质，仍然是利用$A'\subset A$
+注：这是闭集一个非常重要的性质，仍然是利用 $A'\subset A$
 
 !!! question "Ch1 36"
-    设$f$在$\mathbb{R}$ 上单增.求证:$E=\{x:$对任何$\varepsilon>0$有$f(x+\varepsilon)-f(x-\varepsilon)>0\}$是闭集.
+    设 $f$ 在 $\mathbb{R}$ 上单增.求证:$E=\{x:$ 对任何 $\varepsilon>0$ 有 $f(x+\varepsilon)-f(x-\varepsilon)>0\}$ 是闭集.
 
 `Proof.`
 
-考虑证明$E^{c}$是开集，对于任意点$x$属于$E^{c},\exists\epsilon>0,s.t.f(x+\epsilon)\leqslant f(x-\epsilon)$.
+考虑证明 $E^{c}$ 是开集，对于任意点 $x$ 属于 $E^{c},\exists\epsilon>0,s.t.f(x+\epsilon)\leqslant f(x-\epsilon)$.
 
-又因为函数是单调递增的有$f(x+\epsilon)\geqslant f(x-\epsilon)\to f(x+\epsilon)=f(x-\epsilon)=A\to \forall x\in(x-\epsilon,x+\epsilon),f(x)\equiv A$
+又因为函数是单调递增的有 $f(x+\epsilon)\geqslant f(x-\epsilon)\to f(x+\epsilon)=f(x-\epsilon)=A\to \forall x\in(x-\epsilon,x+\epsilon),f(x)\equiv A$
 
-根据开集的定义选取$\delta=\frac{\epsilon}{2},V(x,\delta)\subset (x-\epsilon,x+\epsilon)$，又因为$\forall x'\in V(x,\delta),\delta'= \frac{\epsilon}{4},V(x',\delta')\subset(x-\epsilon,x+\epsilon)$，易知$x'\in E^{c}$，那么有$V(x,\delta)\subset E^{c}$,由$x$的任意性知$E^{c}$为开集，$E$为闭集.
+根据开集的定义选取 $\delta=\frac{\epsilon}{2},V(x,\delta)\subset (x-\epsilon,x+\epsilon)$，又因为 $\forall x'\in V(x,\delta),\delta'= \frac{\epsilon}{4},V(x',\delta')\subset(x-\epsilon,x+\epsilon)$，易知 $x'\in E^{c}$，那么有 $V(x,\delta)\subset E^{c}$,由 $x$ 的任意性知 $E^{c}$ 为开集，$E$ 为闭集.
 
 !!! question "Ch1 37"
-    设$F\subset\mathbf{R}^n$是一个无限集.求证；为使$F$是有界闭集，充要条件是对$F$的任一无限子集$E$有$E^\prime\bigcap F\neq\emptyset.$
+    设 $F\subset\mathbf{R}^n$ 是一个无限集.求证；为使 $F$ 是有界闭集，充要条件是对 $F$ 的任一无限子集 $E$ 有 $E^\prime\bigcap F\neq\emptyset.$
 
 `Proof.`
 
 $\implies$
-假设有界闭集，那么$E\subset F,F'\subset F,E'\subset F'\subset F\to E'\bigcap F\neq \emptyset$(或者根据聚点定理)
+假设有界闭集，那么 $E\subset F,F'\subset F,E'\subset F'\subset F\to E'\bigcap F\neq \emptyset$(或者根据聚点定理)
 
 $\impliedby$
 Step 1
-假设无界，那么可以取$\left\{ x_{n} \right\}_{n\geqslant 1},s.t.\lvert x_{n} \rvert>n,\lvert x_{n}-x_{n'} \rvert>1(n\neq n')$，否则有界，那么可以知道该无限子集导集为空(全为孤立点)，那么与条件$E'\bigcap F\neq \emptyset$矛盾
+假设无界，那么可以取 $\left\{ x_{n} \right\}_{n\geqslant 1},s.t.\lvert x_{n} \rvert>n,\lvert x_{n}-x_{n'} \rvert>1(n\neq n')$，否则有界，那么可以知道该无限子集导集为空(全为孤立点)，那么与条件 $E'\bigcap F\neq \emptyset$ 矛盾
 
 Step 2
-选取一个收敛点列$\left\{ x_{n} \right\}_{n\geqslant {1}}\subset F,x_{n}\to x$，那么设$E=\left\{ x_{n} \right\}_{n\geqslant 1}，E'=\left\{ x \right\},x\in F\left( E'\bigcap F \neq \emptyset \right)$
+选取一个收敛点列 $\left\{ x_{n} \right\}_{n\geqslant {1}}\subset F,x_{n}\to x$，那么设 $E=\left\{ x_{n} \right\}_{n\geqslant 1}，E'=\left\{ x \right\},x\in F\left( E'\bigcap F \neq \emptyset \right)$
 
 !!! question "Ch1 38"
     设 $E \subset \mathbf{R}$. 若 $E$ 被一个区间族 $\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}$ 所覆盖, 求证: $E$ 可被 $\left\{I_{\lambda}\right\}_{\lambda \in \Lambda}$ 的一个可数子族所覆盖.
@@ -788,19 +788,19 @@ Step 2
 
 Step 1 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lambda}$ 都是开区间的情形.
 
-对于任意不同的两个指标$\lambda_{1},\lambda_{2}\in A,a_{\lambda_{1}}=a_{\lambda_{2}}=x$，由于不属于$C$那么这种情况下，区间两两不相交
+对于任意不同的两个指标 $\lambda_{1},\lambda_{2}\in A,a_{\lambda_{1}}=a_{\lambda_{2}}=x$，由于不属于 $C$ 那么这种情况下，区间两两不相交
 
-注：点集拓扑中的一个很重要的定理叫做$Lind elof$定理，可以抽象出一个$Lind elof$空间，答案可以在任何一本点集拓扑书中找到.
+注：点集拓扑中的一个很重要的定理叫做 $Lind elof$ 定理，可以抽象出一个 $Lind elof$ 空间，答案可以在任何一本点集拓扑书中找到.
 
 !!! question "Ch1 39"
-    设$F_1$和$F_2$是两个闭集，其中一个有界. 求证：必有$x_1\in F_1$及$x_2\in F_2$使$d(x_1,x_2)=\inf\{d(y_1,y_2):y_1\in F_1,y_2\in F_2\}.$
+    设 $F_1$ 和 $F_2$ 是两个闭集，其中一个有界. 求证：必有 $x_1\in F_1$ 及 $x_2\in F_2$ 使 $d(x_1,x_2)=\inf\{d(y_1,y_2):y_1\in F_1,y_2\in F_2\}.$
 
 `Proof.`
 
-不妨设$F_{1}$有界，利用下确界性质，$\exists x_{n}',y_{n}',s.t.d(F_{1},F_{2})\leqslant d(x_{n}',y_{n}')\leqslant d(F_{1},F_{2})+\frac{1}{n}$，按照这种选取方式构造无穷点集
+不妨设 $F_{1}$ 有界，利用下确界性质，$\exists x_{n}',y_{n}',s.t.d(F_{1},F_{2})\leqslant d(x_{n}',y_{n}')\leqslant d(F_{1},F_{2})+\frac{1}{n}$，按照这种选取方式构造无穷点集
 
-利用Bolzano-Weierstrass定理，取$\left\{ x_{n}' \right\}$的收敛子列$\left\{ x_{n_{k}}' \right\},x_{n_{k}}'\to x_{1},k\to \infty$,又由于闭集性质$x_{1}\in F_{1}$
-那么有$d(x_{1},y_{n_{k}}')\to d(F_{1},F_{2})$，再利用三角不等式，$d(y_{n_{k}}',0)\leqslant d(x_{n_{k}}',y_{n_{k}}')+d(x_{n_{k}}',0)$也有界(其中一个是有界闭集)，那么仿照$F_{1}$中子列的证明，即可证得$F_{2}$存在收敛子列使得$k\to \infty,y_{n_{k}}'\to x_{2},d(x_{1},x_{2})=d(F_{1},F_{2})$，
+利用 Bolzano-Weierstrass 定理，取 $\left\{ x_{n}' \right\}$ 的收敛子列 $\left\{ x_{n_{k}}' \right\},x_{n_{k}}'\to x_{1},k\to \infty$,又由于闭集性质 $x_{1}\in F_{1}$
+那么有 $d(x_{1},y_{n_{k}}')\to d(F_{1},F_{2})$，再利用三角不等式，$d(y_{n_{k}}',0)\leqslant d(x_{n_{k}}',y_{n_{k}}')+d(x_{n_{k}}',0)$ 也有界(其中一个是有界闭集)，那么仿照 $F_{1}$ 中子列的证明，即可证得 $F_{2}$ 存在收敛子列使得 $k\to \infty,y_{n_{k}}'\to x_{2},d(x_{1},x_{2})=d(F_{1},F_{2})$，
 
 !!! question "Ch1 40"
     求证: 闭区间不能表示成两个不相交非空闭集的并.
@@ -823,7 +823,7 @@ Step 1 证明 $A-C$ 和 $B-C$ 都是至多可数集, 从而问题化为 $I_{\lam
 43. 证明定理 1.5.15.
 
 !!! question "Ch1 44"
-    设$\left\{f_k\right\}_{k \geqslant 1}$是R上一列连续函数。求证：$\left\{\underline\lim\limits_{k\to\infty}f_k(x)>0\right\}$是可数个闭集的并，$\left\{\overline\lim\limits_{k\to\infty}f_k(x)=\infty\right\}$是可数个开集的交。
+    设 $\left\{f_k\right\}_{k \geqslant 1}$ 是 R 上一列连续函数。求证：$\left\{\underline\lim\limits_{k\to\infty}f_k(x)>0\right\}$ 是可数个闭集的并，$\left\{\overline\lim\limits_{k\to\infty}f_k(x)=\infty\right\}$ 是可数个开集的交。
 
 `Proof.`
 
@@ -843,7 +843,7 @@ $$
     \end{aligned}
 $$
 
-由于$\left\{  f_k(x)\geqslant\frac{1}{n}\right\}$是闭集，交后仍为闭集，再进行可数并故原式为可数个闭集的并
+由于 $\left\{  f_k(x)\geqslant\frac{1}{n}\right\}$ 是闭集，交后仍为闭集，再进行可数并故原式为可数个闭集的并
 
 $$
 \begin{aligned}
@@ -861,7 +861,7 @@ $$
 
 注：**相当重要的一个结论**，可以使用振幅考虑
 
-定义一个振幅 $w_{f(x_{0})}=\lim\limits_{ \delta \to 0 }\sup\left\{  \lvert f(x')-f(x'') \rvert|:x',x'' \in B_{\delta}(x_{0})\right\}$，如果 $f$ 在 $x_{0}$ 连续显然有振幅为 0，那么$x_{0}\in \bigcap\limits_{n=1}^{\infty}\left\{ x\in \mathbb{R}:w_{f(x)}< \frac{1}{n} \right\}$
+定义一个振幅 $w_{f(x_{0})}=\lim\limits_{ \delta \to 0 }\sup\left\{  \lvert f(x')-f(x'') \rvert|:x',x'' \in B_{\delta}(x_{0})\right\}$，如果 $f$ 在 $x_{0}$ 连续显然有振幅为 0，那么 $x_{0}\in \bigcap\limits_{n=1}^{\infty}\left\{ x\in \mathbb{R}:w_{f(x)}< \frac{1}{n} \right\}$
 
 $$\begin{aligned}
 &\forall x_{1}\in \left\{ x\in \mathbb{R},w_{f(x)}< \frac{1}{n} \right\},w_{f(x_{1})}< \frac{1}{n}\\&\implies \exists\delta_{1}>0,\lvert f(x_{1}')-f(x_{1}'') \rvert< \frac{1}{n}(x',x''\in(x_{1}-\delta_{1},x_{1}+\delta_{1}))\\
@@ -869,35 +869,35 @@ $$\begin{aligned}
 &\implies(x_{1}-\delta_{1},x_{1}+\delta_{1})\subset \left\{ x\in \mathbb{R}:w_{f(x)}< \frac{1}{n} \right\} 
 \end{aligned}$$
 
-从而可知$\left\{ x\in \mathbb{R},w_{f(x)}< \frac{1}{n} \right\}$是一个开集，那么可以得到它是可数个开集的交
+从而可知 $\left\{ x\in \mathbb{R},w_{f(x)}< \frac{1}{n} \right\}$ 是一个开集，那么可以得到它是可数个开集的交
 
 !!! question "Ch1 46"
     求证: 闭集是可数个开集的交, 开集是可数个闭集的并.
 
 `Proof.`
 
-注：只需要证前半部分,后面可以用De Morgan公式得出，构造如下$E$是闭集
+注：只需要证前半部分,后面可以用 De Morgan 公式得出，构造如下 $E$ 是闭集
 
 $$
 E=\bigcap\limits_{n=1}^{\infty} E_{n}=\bigcap\limits_{n=1}^{\infty} \left\{ x:d(x,E) < \frac{1}{n}\right\} 
 $$
 
-首先我们证明距离函数是一个连续函数，那么令$f(x)=d(x,E)$我们有：
+首先我们证明距离函数是一个连续函数，那么令 $f(x)=d(x,E)$ 我们有：
 
-$\forall z\in E,f(x)\leqslant d(x,z)\leqslant d(x,y)+d(y,z)$那么有$f(x)-d(x,y)\leqslant d(y,z)\leqslant d(y,E)+\varepsilon$
+$\forall z\in E,f(x)\leqslant d(x,z)\leqslant d(x,y)+d(y,z)$ 那么有 $f(x)-d(x,y)\leqslant d(y,z)\leqslant d(y,E)+\varepsilon$
 
-可以得到$f(x)-f(y)\leqslant d(x,y)+\varepsilon\implies \lvert f(x)-f(y) \rvert\leqslant d(x,y)$
+可以得到 $f(x)-f(y)\leqslant d(x,y)+\varepsilon\implies \lvert f(x)-f(y) \rvert\leqslant d(x,y)$
 
-$\forall x\in E,d(x,E)=0$属于交集显然成立，$E\subset \bigcap\limits_{n=1}^{\infty}E_{n}$
+$\forall x\in E,d(x,E)=0$ 属于交集显然成立，$E\subset \bigcap\limits_{n=1}^{\infty}E_{n}$
 
-若是有$d(x,E)< \frac{1}{n},n\to \infty,d(x,E)=0$
+若是有 $d(x,E)< \frac{1}{n},n\to \infty,d(x,E)=0$
 
 !!! question "Ch1 47"
-    设$F_1$和$F_2$是两个不相交的闭集. 求证: 有不相交开集$G_1$和$G_2$, 使 $F_1\subset G_1, F_2\subset G_2$.
+    设 $F_1$ 和 $F_2$ 是两个不相交的闭集. 求证: 有不相交开集 $G_1$ 和 $G_2$, 使 $F_1\subset G_1, F_2\subset G_2$.
 
 `Proof.`
 
-令$f(x)=d(x,F_{1})-d(x,F_{2})$
+令 $f(x)=d(x,F_{1})-d(x,F_{2})$
 
 $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 
@@ -950,9 +950,9 @@ $\forall x\in F_{1},f(x)=-d(x,F_{2})<0,\forall x\in F_{2},f(x)=d(x,F_{1})>0$
 
 $1^{\circ}$ 闭集：证明 $Y^{c}$ 是开集，取 $y\in Y^{c}$ 那么有 $\delta_{y},s.t.(y-\delta_{y},y+\delta_{y})\bigcap E$ 至多可数，于是有 $(y-\delta_{y},y+\delta_{y})\in Y^{c}$ 即开集，得到原集合闭集
 
-$2^{\circ}$ 无孤立点：任取 $Y$ 中的点记为 $x_{0},\forall\delta$,$(x_{0}-\delta,x_{0}+\delta)\bigcap E$ 不可数，再构造两个新的集合 $E_{1}=\left\{ \left[ (x_{0}-\delta,x_{0})\bigcup(x_{0},x_{0}+\delta) \right]\bigcap E \right\}$，容易知道 $E_{1}$ 不可数且含于 $E$，利用 13 的结论构造类似 $Y$ 的集合 $Y_{1}:=\left\{ x:\forall\delta>0,(x-\delta,x+\delta)\bigcap E_{1}\text{不可数} \right\}$，集合 $Y_{1}\bigcap E_{1}$ 非空 (13)，那么其中假设有一点$x_{1},\lvert x_{1}-x_{0} \rvert<\delta$，且$x_{1}\in Y$，与假设矛盾，所以无孤立点.
+$2^{\circ}$ 无孤立点：任取 $Y$ 中的点记为 $x_{0},\forall\delta$,$(x_{0}-\delta,x_{0}+\delta)\bigcap E$ 不可数，再构造两个新的集合 $E_{1}=\left\{ \left[ (x_{0}-\delta,x_{0})\bigcup(x_{0},x_{0}+\delta) \right]\bigcap E \right\}$，容易知道 $E_{1}$ 不可数且含于 $E$，利用 13 的结论构造类似 $Y$ 的集合 $Y_{1}:=\left\{ x:\forall\delta>0,(x-\delta,x+\delta)\bigcap E_{1}\text{不可数} \right\}$，集合 $Y_{1}\bigcap E_{1}$ 非空 (13)，那么其中假设有一点 $x_{1},\lvert x_{1}-x_{0} \rvert<\delta$，且 $x_{1}\in Y$，与假设矛盾，所以无孤立点.
 
-证法2：利用Lindelof性，可以找到一个可数覆盖
+证法 2：利用 Lindelof 性，可以找到一个可数覆盖
 
 53. 求证: $\mathbf{R}$ 中任一不可数闭集必是一个完备集与一个至多可数集的并.
 
@@ -976,7 +976,7 @@ $2^{\circ}$ 无孤立点：任取 $Y$ 中的点记为 $x_{0},\forall\delta$,$(x_
 
 `Proof.`
 
-利用45题的结论：
+利用 45 题的结论：
 
 !!! question "Ch1 59"
     例 设对任何 $x, y \in \mathbf{R}, f(x+y)=f(x)+f(y)$. 现若 $f$ 不是连续函数

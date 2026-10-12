@@ -2088,7 +2088,7 @@
 <p>Programmers dream of Abstraction, recursion, and Typing really fast.</p>
 <p>In this project, you will write a program that measures typing speed. Additionally, you will implement typing autocorrect, which is a feature that attempts to correct the spelling of a word after a user types it. This project is inspired by <a href="https://play.typeracer.com/">typeracer</a>.</p>
 </blockquote>
-<p>大约需要 4h</p>
+<p>大约需要 4 h</p>
 <h2 id="phase-1-typing">Phase 1: Typing<a class="headerlink" href="#phase-1-typing" title="Permanent link">⚓︎</a></h2>
 <h3 id="problem-1-1-pt">Problem 1 (1 pt)<a class="headerlink" href="#problem-1-1-pt" title="Permanent link">⚓︎</a></h3>
 <p>Implement <code>pick</code>. This function selects which paragraph the user will type.</p>
@@ -2127,13 +2127,13 @@ s  4  0  0  0  0
  s 4  3  4  3  2
 </code></pre></div>
 <p>实际上就是利用二维数组的思路，然后结合<strong>递推公式</strong>填充矩阵即可，动态规划类型。</p>
-<p>关于这个算法的正确性证明我翻了很多中文平台都没有看到写的比较像人的，如果理解不了为什么这样做就是最小的还是看一下这篇<a href="https://dl.acm.org/doi/pdf/10.1145/321796.321811">paper</a>，这里也贴一个本人的理解，首先我们需要对三种操作都进行分析，三种操作分别是替换，插入，删除权重相同，并且三种操作可选取的位置都是任意的，那么就会出现一个问题，采用<strong>逆向思维</strong>，再进行<strong>最后一步操作</strong>的时候恰好两个字符串对齐，那么String1和String2的大半部分一定已经相同了(一定存在一个特别大程度相似的公共字符串)</p>
+<p>关于这个算法的正确性证明我翻了很多中文平台都没有看到写得比较像人的，如果理解不了为什么这样做就是最小的还是看一下这篇 <a href="https://dl.acm.org/doi/pdf/10.1145/321796.321811">paper</a>，这里也贴一个本人的理解，首先我们需要对三种操作都进行分析，三种操作分别是替换、插入、删除，权重相同，并且三种操作可选取的位置都是任意的，那么就会出现一个问题，采用<strong>逆向思维</strong>，在进行<strong>最后一步操作</strong>的时候恰好两个字符串对齐，那么 String1 和 String2 的大半部分一定已经相同了（一定存在一个特别大程度相似的公共字符串）</p>
 <p>下面开始分类讨论：</p>
 <ul>
-<li>替换：只需要一步替换就可以完成的话，两个字符串的长度一定已经相同并且替换位点的后续已经对齐，前面也是对齐的，那么不妨假设前面有 <span class="arithmatex">\(i\)</span> 个，那么问题就是前面 <span class="arithmatex">\(i\)</span> 个对齐的最小次数+1</li>
+<li>替换：只需要一步替换就可以完成的话，两个字符串的长度一定已经相同并且替换位点的后续已经对齐，前面也是对齐的，那么不妨假设前面有 <span class="arithmatex">\(i\)</span> 个，那么问题就是前面 <span class="arithmatex">\(i\)</span> 个对齐的最小次数 + 1</li>
 <li>插入、删除：长度相差 1，同样对位点考虑即可，后续问题即变为一个小矩阵，以那个位点为新的顶点进行递归</li>
 </ul>
-<p>可以参考 Leetcode 72 虽然我觉得题解写的也不清楚</p>
+<p>可以参考 LeetCode 72，虽然我觉得题解写得也不清楚</p>
 <h3 id="optional-extension-final-diff-0-pts">(Optional) Extension: Final Diff (0 pts)<a class="headerlink" href="#optional-extension-final-diff-0-pts" title="Permanent link">⚓︎</a></h3>
 <h2 id="phase-3-multiplayer">Phase 3: Multiplayer<a class="headerlink" href="#phase-3-multiplayer" title="Permanent link">⚓︎</a></h2>
 <h3 id="problem-8-2-pts">Problem 8 (2 pts)<a class="headerlink" href="#problem-8-2-pts" title="Permanent link">⚓︎</a></h3>

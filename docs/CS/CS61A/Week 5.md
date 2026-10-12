@@ -2,9 +2,9 @@
 
 ## Summary
 
-大概需要 5h，不包括完成 Project 的时间，终于进入了 Python 比较核心的部分，有了 Lists, Slicing, Container 等概念，发现软件老师使用的例子与 61A 的例子一模一样。
+大概需要 5 h，不包括完成 Project 的时间，终于进入了 Python 比较核心的部分，有了 Lists、Slicing、Container 等概念，发现软件老师使用的例子与 61A 的例子一模一样。
 
-总的来说，抽象化的教学还是有益的，虽然前期进展的很慢，但是培养了比较良好的习惯，比如 Absraction Barriers 方便后续维护的这种意识。
+总的来说，抽象化的教学还是有益的，虽然前期进展得很慢，但是培养了比较良好的习惯，比如 Abstraction Barriers 方便后续维护的这种意识。
 
 ## Videos(2h)
 
@@ -12,7 +12,7 @@
 
 #### Lists
 
-Note that the begining index is 0 not 1, and elements of lists can be various
+Note that the beginning index is 0, not 1, and elements of lists can vary.
 
 #### Containers
 
@@ -51,7 +51,7 @@ def divisions(n):
 		 return s[0] + sum_list(s[1:])
  ```
 
-A case more complex but can be done.
+A more complex case, but it can be done.
 
 ```Python
 def large(s, n):
@@ -71,17 +71,17 @@ def large(s, n):
 			return without_s0
 ```
 
-Remark: Like conditional probability trick used in probability theory, we get complex situation easier by make proper condition or division events.
+Remark: Like the conditional probability trick used in probability theory, we handle complex situations more easily by choosing proper conditions or dividing events.
 
 ### Containers
 
 #### Box-and-Pointer Notation
 
-Just a way like environmental diagram to explain the list operations.
+Just a way like an environment diagram to explain list operations.
 
 #### Slicing
 
-Very important skill used in python and we can see some cases:
+A very important skill used in Python, and we can see some cases:
 
 ```Python
 >>> odds = [3, 5, 7, 9, 11]
@@ -91,7 +91,7 @@ Very important skill used in python and we can see some cases:
 
 #### Processing Container Values
 
-sum, max and all function, and these functions can be found in R also.
+The sum, max, and all functions can also be found in R.
 
 #### Strings
 
@@ -99,7 +99,7 @@ sum, max and all function, and these functions can be found in R also.
 
 #### Dictionaries
 
-mentioned **unhashable**(leave for 61b)
+Mentioned **unhashable** (leave for 61b)
 
 ```Python
 {<key exp>: <value exp> for <name> in <iter exp> if <filter exp>}
@@ -128,7 +128,7 @@ Isolate two parts of data
 1
 ```
 
-We have two ways to access the elements of list.
+We have two ways to access the elements of a list.
 
 #### Abstraction Barriers
 
@@ -273,4 +273,4 @@ def sums(n, m):
     return result
 ```
 
-Remark: Slicing 操作简直是为 Recursion 准备的，非常好用!
+Remark: Slicing 操作简直是为 Recursion 准备的，非常好用！

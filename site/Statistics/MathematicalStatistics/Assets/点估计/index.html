@@ -1092,12 +1092,12 @@
   <a href="#em" class="md-nav__link">
     <span class="md-ellipsis">
       
-        最大似然估计与EM算法
+        最大似然估计与 EM 算法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="最大似然估计与EM算法">
+    <nav class="md-nav" aria-label="最大似然估计与 EM 算法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1946,12 +1946,12 @@
   <a href="#em" class="md-nav__link">
     <span class="md-ellipsis">
       
-        最大似然估计与EM算法
+        最大似然估计与 EM 算法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="最大似然估计与EM算法">
+    <nav class="md-nav" aria-label="最大似然估计与 EM 算法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2306,12 +2306,12 @@
 <p>无偏估计没有系统偏差，也就是将所有误差加起来求平均的值为 0</p>
 <div class="admonition example">
 <p class="admonition-title">一些例子</p>
-<p>样本均值是总体均值的无偏估计，总体 <span class="arithmatex">\(k\)</span> 阶矩存在时，样本 <span class="arithmatex">\(k\)</span> 阶原点矩就是总体的无偏估计，但中心矩则不同，例如样本方差就不是总体方差的无偏估计而是渐进无偏估计因为在样本量趋于无穷时可近似看作 <span class="arithmatex">\(\sigma^{2}\)</span> 的无偏估计</p>
+<p>样本均值是总体均值的无偏估计，总体 <span class="arithmatex">\(k\)</span> 阶矩存在时，样本 <span class="arithmatex">\(k\)</span> 阶原点矩就是总体的无偏估计，但中心矩则不同，例如样本方差就不是总体方差的无偏估计而是渐近无偏估计，因为在样本量趋于无穷时可近似看作 <span class="arithmatex">\(\sigma^{2}\)</span> 的无偏估计</p>
 </div>
 <p>那么为了修正原本的样本方差 <span class="arithmatex">\(s_{n}^{2}\)</span>，将系数减一得到新的样本方差 <span class="arithmatex">\(s^{2}\)</span>，在小样本的场合更多使用 <span class="arithmatex">\(s^{2}\)</span> 估计 <span class="arithmatex">\(\sigma^{2}\)</span></p>
 <p>大偏差通常被视为估计的不足，刀切法就是一种缩小偏差的方法</p>
 <div class="admonition info">
-<p class="admonition-title">刀切法,jackknife(Quenouile,named after Tukey)</p>
+<p class="admonition-title">刀切法,jackknife(Quenouille,named after Tukey)</p>
 <p>设 <span class="arithmatex">\(T(x)\)</span> 是基于样本 <span class="arithmatex">\(x=\left( x_{1},\dots,x_{n} \right)\)</span> 的关于参数 <span class="arithmatex">\(g(\theta)\)</span> 的估计量，且满足关系 <span class="arithmatex">\(E_{\theta}\left( T(x) \right)=g(\theta)+O\left( \frac{1}{n} \right)\)</span>.以 <span class="arithmatex">\(x_{(-i)}\)</span> 表示从样本中删去 <span class="arithmatex">\(x_{i}\)</span> 后的向量，定义刀切统计量为</p>
 <div class="arithmatex">\[
 T_{j}(x)=nT(x)- \frac{n-1}{n}\sum\limits_{i=1}^{n} T(x_{(-i)})
@@ -2352,16 +2352,16 @@ T_{j}(x)=nT(x)- \frac{n-1}{n}\sum\limits_{i=1}^{n} T(x_{(-i)})
 <p>则 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的相合估计</p>
 </div>
 <p><code>Proof.</code></p>
-<p>利用 Chebyshev 不等式把期望转换成方差，将<span class="arithmatex">\(\lvert \hat{\theta}_{n}-E(\hat{\theta}_{n}) \rvert&lt; \frac{\epsilon}{2}\implies \lvert \hat{\theta}_{n}-E(\hat{\theta}_{n}) \rvert&lt; \frac{\epsilon}{2}\)</span>修改为概率不等式的形式即可</p>
+<p>利用 Chebyshev 不等式把期望转换成方差，将 <span class="arithmatex">\(\lvert \hat{\theta}_{n}-E(\hat{\theta}_{n}) \rvert&lt; \frac{\epsilon}{2}\implies \lvert \hat{\theta}_{n}-E(\hat{\theta}_{n}) \rvert&lt; \frac{\epsilon}{2}\)</span> 修改为概率不等式的形式即可</p>
 <div class="admonition tip">
 <p class="admonition-title">TH6.2.2</p>
-<p>若<span class="arithmatex">\(\hat{\theta}_{n_{1}},\dots,\hat{\theta}_{n_{k}}\)</span>分别是<span class="arithmatex">\(\theta_{1},\dots,\theta _k\)</span>的相合估计，<span class="arithmatex">\(\eta=g\left( \theta_{1},\dots,\theta_{k} \right)\)</span>是<span class="arithmatex">\(\theta_{1},\dots,\theta_{k}\)</span>的连续函数，则<span class="arithmatex">\(\hat{\eta}_{n}=g\left( \hat{\theta}_{n_{1}},\dots,\hat{\theta}_{n_{k}} \right)\)</span>是<span class="arithmatex">\(\eta\)</span>的相合估计</p>
+<p>若 <span class="arithmatex">\(\hat{\theta}_{n_{1}},\dots,\hat{\theta}_{n_{k}}\)</span> 分别是 <span class="arithmatex">\(\theta_{1},\dots,\theta _k\)</span> 的相合估计，<span class="arithmatex">\(\eta=g\left( \theta_{1},\dots,\theta_{k} \right)\)</span> 是 <span class="arithmatex">\(\theta_{1},\dots,\theta_{k}\)</span> 的连续函数，则 <span class="arithmatex">\(\hat{\eta}_{n}=g\left( \hat{\theta}_{n_{1}},\dots,\hat{\theta}_{n_{k}} \right)\)</span> 是 <span class="arithmatex">\(\eta\)</span> 的相合估计</p>
 </div>
 <p>接下来就可以开始介绍一些实用的统计量</p>
-<h2 id="em">最大似然估计与EM算法<a class="headerlink" href="#em" title="Permanent link">⚓︎</a></h2>
-<p>最大似然估计(MLE)最早由Gauss在1821针对正态分布提出，由R·A·Fisher再次提出并证明了它的一些性质使之得到了广泛的应用.</p>
+<h2 id="em">最大似然估计与 EM 算法<a class="headerlink" href="#em" title="Permanent link">⚓︎</a></h2>
+<p>最大似然估计(MLE)最早由 Gauss 在 1821 针对正态分布提出，由 R·A·Fisher 再次提出并证明了它的一些性质使之得到了广泛的应用.</p>
 <blockquote>
-<p>本节给出最大似然估计的定义与计算和在某些复杂情况下 MLE 的一种有效算法——EM 算法，并介绍最大似然估计的渐进正态性</p>
+<p>本节给出最大似然估计的定义与计算和在某些复杂情况下 MLE 的一种有效算法——EM 算法，并介绍最大似然估计的渐近正态性</p>
 </blockquote>
 <h3 id="_10">最大似然估计<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
 <h2 id="_11">矩估计<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h2>
@@ -2380,7 +2380,7 @@ P\left\{ X=x|\hat{p(x)} \right\} \geq P\left\{ X=x|p' \right\},\forall p',\foral
 \]</div>
 <h4 id="_13">似然函数<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h4>
 <div class="admonition note">
-<p class="admonition-title">似然函数(likehood function)</p>
+<p class="admonition-title">似然函数(likelihood function)</p>
 <p>对于给定的样本观测值 <span class="arithmatex">\(x=\left( x_{1},x_{2},\dots,x_{n} \right)\)</span>，称 <span class="arithmatex">\(f(x,\theta)\)</span> 为 <span class="arithmatex">\(\theta\)</span> 的似然函数，简称为似然函数，记为 <span class="arithmatex">\(L(\theta,x)=f(x,\theta),\forall\theta\in\Theta\)</span></p>
 </div>
 <p>极大似然估计也就是选取 <span class="arithmatex">\(\hat{\theta}\)</span> 后似然函数取到最大值，实际求某个参数的 MLE 也就是求似然函数的极值问题，如果 <span class="arithmatex">\(L(\theta,x)\)</span> 关于 <span class="arithmatex">\(\theta\)</span> 可微，则 <span class="arithmatex">\(\theta\)</span> 的 MLE 可以通过求偏导得到。</p>
@@ -2399,7 +2399,7 @@ P\left\{ X=x|\hat{p(x)} \right\} \geq P\left\{ X=x|p' \right\},\forall p',\foral
 <p><img alt="关键图片" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/%E5%B9%BF%E4%B9%89MLE%E5%AE%9A%E4%B9%89.png" /></p>
 <p>这个定理的内容本身十分直观，如下：</p>
 <div class="admonition note">
-<p class="admonition-title">MLE的不变性</p>
+<p class="admonition-title">MLE 的不变性</p>
 <p>若 <span class="arithmatex">\(\hat{\theta}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的 MLE，则对于 <span class="arithmatex">\(\theta\)</span> 的任何函数 <span class="arithmatex">\(\tau(\theta)\)</span>,<span class="arithmatex">\(\tau(\hat{\theta})\)</span> 是 <span class="arithmatex">\(\tau(\theta)\)</span> 的 MLE.</p>
 </div>
 <p><code>Proof.</code></p>
@@ -2423,7 +2423,7 @@ M(g(\hat{\theta});x)&amp;=\sup\limits_{\theta\in G(g(\hat{\theta}))}L(\theta|x)=
 注 2：建议想更深入一点还是去看 Casella，前置门槛也不高（NKU 教材省略过多在作者眼里可能不值一提的细节，导致虽然本身内涵丰富但是阅读的难度被无端拉高）</p>
 <h3 id="mle">MLE 的相合性<a class="headerlink" href="#mle" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Fisher信息量</p>
+<p class="admonition-title">Fisher 信息量</p>
 <p>Contents</p>
 </div>
 <h3 id="em_2">EM 算法<a class="headerlink" href="#em_2" title="Permanent link">⚓︎</a></h3>

@@ -2,7 +2,7 @@
 
 ## Summary
 
-大概需要 2.5 小时，Lab 质量相当高，可以很好的弥补理解上的一些问题
+大概需要 2.5 小时，Lab 质量相当高，可以很好地弥补理解上的一些问题
 
 ## Videos(1h)
 
@@ -10,7 +10,7 @@
 
 #### Lambda Function Environments
 
-This is main case:
+This is the main case:
 
 ```Python
 a = 1
@@ -48,13 +48,13 @@ sqrt = inverse(square)
 
 #### Abstraction
 
-Choose a name for valued function or parameters.
+Choose a name for a valued function or parameter.
 
-Some name guideline.
+Some naming guidelines.
 
 #### Errors & Tracebacks
 
-Teach you check some errors and read tracebacks
+Teaches you to check some errors and read tracebacks
 
 ### Function Examples
 
@@ -82,7 +82,7 @@ print(delay(print)()(4))
 # 同理分析即可
 ```
 
-Last example but a litttle difficult
+The last example is a little difficult
 
 ```Python
 def horse(mask):
@@ -96,7 +96,7 @@ mask = lambda horse: horse(2)
 horse(mask)
 ```
 
-有一种当年玩指针的美感（只要正确的指向就可以明白，这里的环境图确实是加进理解的一种手段）
+有一种当年玩指针的美感（只要正确地指向就可以明白，这里的环境图确实是加深理解的一种手段）
 
 ![env-horse-mask](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/horse-mask)
 
@@ -107,7 +107,7 @@ Strategy:
 + Read the description
 + Verify the example & pick a simple one
 + If the template is helpful, use it
-+ Write cide to compute the result
++ Write code to compute the result
 
 A case
 
@@ -122,7 +122,7 @@ def remove(n, digit):
 	return kept
 ```
 
-#### Decoraters
+#### Decorators
 
 ```Python
 def trace1(fn):
@@ -174,7 +174,7 @@ negate(lambda x: x * x, 3)
 
 >If `and` and `or` do not _short-circuit_, they just return the last value; another way to remember this is that `and` and `or` always return the last thing they evaluate, whether they short circuit or not. Keep in mind that `and` and `or` don't always return booleans when using values other than `True` and `False`.
 
-Used above info.
+Use the above information.
 
 ```Python
 # 有点阴的例子

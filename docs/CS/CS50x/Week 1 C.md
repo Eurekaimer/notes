@@ -24,11 +24,11 @@ int main(void) //void -no input
 }
 ```
 
-The computer can onlrecy ognize the binary numbers so we need a compiler（编译器）to make the higher level language to a lower level language.
+The computer can only recognize binary numbers, so we need a compiler（编译器）to translate a higher-level language into a lower-level language.
 
 ![[compiler.svg]]
 
-use a cloud(best) [URL](https://cs50.dev) or you can use VS code in your computer
+Use a cloud environment (best) [URL](https://cs50.dev), or you can use VS Code on your computer.
 
 Some words you should know: GUI CLI
 
@@ -65,9 +65,9 @@ and get the
 hello world$(\n)
 ```
 
-### Library(Header Files)
+### Library (Header Files)
 
-We can use the code others write before via library and for example we can find the stdio.h
+We can use code others have written before via a library. For example, we can find stdio.h here:
 [Manual Pages](https://manual.cs50.io/#stdio.h)
 
 ```c
@@ -87,7 +87,7 @@ int main(void)
 }
 ```
 
-**Error:** get_string is not claimed.
+**Error:** get_string is not declared.
 
 Case 2
 
@@ -102,11 +102,11 @@ int main(void)
 }
 ```
 
-Here gets so many cases and we can design the programs so that it can be more efficient.
+There are so many cases here, and we can design the programs so that they can be more efficient.
 
 ### Terminal Commands
 
-*We can know more about them by Google.*
+*We can learn more about them by Googling.*
 
 In the terminal window, some common command-line arguments we may use include:
 
@@ -118,7 +118,7 @@ In the terminal window, some common command-line arguments we may use include:
 - `rm`, for removing (deleting) files
 - `rmdir`, for removing (deleting) directories
 
-### Types of the variablews
+### Types of variables
 
 Types with which you might interact during this course include:
 
@@ -130,13 +130,13 @@ Types with which you might interact during this course include:
 - `long`, integers with more bits, so they can count higher than an int
 - `string`, a string of characters
 
-Followings are make the Scratch codes to C.
+The following examples translate Scratch code into C.
 
 ### Conditionals
 
 Some tips:
-	Don't make some unnecessary operations.
-	Focus on how to design the better structure of codes.
+	Don't perform unnecessary operations.
+	Focus on how to design a better code structure.
 
 ```c
 if (x < y)
@@ -153,12 +153,12 @@ else
 }
 ```
 
-But not make the three ifs because it will waste the time.
+But don't use three ifs, because it will waste time.
 
 ### Loop
 
-Motivation: We want to let the vsc meows like the Scratch and how should we do?
-Answer: We can make a loop to decrease our codes.
+Motivation: We want to make VS Code meow like Scratch. How should we do it?
+Answer: We can make a loop to reduce our code.
 
 ```c
 #include <cs50.h>
@@ -192,9 +192,9 @@ void meow(int n)
 
 ### Functions
 
-An inspiring idea is to make the repeating parts a new role that we can use them by include or write the function's name.
+An inspiring idea is to make the repeating parts into a new function that we can use by including it or writing the function's name.
 
-Here's a example from Mario（循环嵌套）.
+Here's an example from Mario（循环嵌套）.
 Notice how printing a row is accomplished through a new function.
 
 ```c
@@ -336,7 +336,7 @@ int main(void)
 - About predefined **functions** that come natively with C.
 - How to use variables, **conditionals**, and **loops**.
 - How to create your own functions to simplify and improve your code.
-- How to er codevaluate you on three axes: correctness, design, and style.
+- How to evaluate your code on three axes: correctness, design, and style.
 - How to integrate comments into your code.
 - How to utilize types and operators and the implications of your choices.
 
@@ -515,9 +515,4 @@ int main(void)
     }
 }
 ```
-
-
-
-
-
 

@@ -17,11 +17,11 @@ tags:
 ## 古灵精怪
 
 + [地狱通信](https://www.acgist.com/demo/jigoku/write_hate.html)
-+ [Zlibrary](https://zh.z-lib.gs/)：很好用的电子书网站可以疯狂下PDF
++ [Zlibrary](https://zh.z-lib.gs/)：很好用的电子书网站可以疯狂下 PDF
 + [MCM/ICM](https://www.contest.comap.com/undergraduate/contests/index.html)：美赛官网
 + [樱花动漫](https://www.295k.cc/dongmanplay/2340-1-1.html)：盗版的动漫网站，尽可能保证链接畅通
 + [fotor](https://www.fotor.com/cn/features/resize/)：免费在线图片尺寸修改
-+ [EMOJI 网站](https://www.unicode.org/emoji/charts/full-emoji-list.html)：官方的EMOJI网站
++ [EMOJI 网站](https://www.unicode.org/emoji/charts/full-emoji-list.html)：官方的 EMOJI 网站
 + [ACG 盒子](https://www.acgbox.link/#term-5)：内含多个二次元相关的网站，是一个中转站
 + [教员的话](https://www.marxists.org/chinese/maozedong/index.htm)
 

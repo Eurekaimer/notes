@@ -793,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    初等概率论(Elementary Probability Theory)
+    初等概率论 (Elementary Probability Theory)
   
 
     
@@ -1908,31 +1908,31 @@
 <p>利用平均返回时间可以进一步对常返状态分类</p>
 <div class="admonition note">
 <p class="admonition-title">Definition 6.2(正常返)</p>
-<p>假设状态 <span class="arithmatex">\(i\)</span> 常返，如果它的平均返回时间是有限的，也就是<span class="arithmatex">\(\mu_{ii}&lt;\infty\)</span>，就称状态<span class="arithmatex">\(i\)</span>是正常返的(Positive recurrent)，否则，<span class="arithmatex">\(M_{ii}=\infty\)</span>，我们则称<span class="arithmatex">\(i\)</span>为零常返(Null recurrent)</p>
+<p>假设状态 <span class="arithmatex">\(i\)</span> 常返，如果它的平均返回时间是有限的，也就是 <span class="arithmatex">\(\mu_{ii}&lt;\infty\)</span>，就称状态 <span class="arithmatex">\(i\)</span> 是正常返的(Positive recurrent)，否则，<span class="arithmatex">\(M_{ii}=\infty\)</span>，我们则称 <span class="arithmatex">\(i\)</span> 为零常返(Null recurrent)</p>
 </div>
 <h3 id="_3">弱遍历定理<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Theorem 6.3(弱遍历定理)</p>
-<p>设<span class="arithmatex">\(\left\{ X_{n} \right\}\)</span>是不可约常返Markov链，那么对<span class="arithmatex">\(\forall i,j\)</span>状态</p>
+<p>设 <span class="arithmatex">\(\left\{ X_{n} \right\}\)</span> 是不可约常返 Markov 链，那么对 <span class="arithmatex">\(\forall i,j\)</span> 状态</p>
 <div class="arithmatex">\[\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} P_{ij}^{(k)}= \frac{1}{\mu_{jj}}\]</div>
 </div>
 <p><code>Proof.</code></p>
 <p>先给出一个引理(不加证明)</p>
 <div class="admonition note">
 <p class="admonition-title">Lemma 6.4(Hardy&amp;Littlewood)</p>
-<p>设<span class="arithmatex">\(\forall n ,a_{n}\geqslant 0\)</span>，记幂级数<span class="arithmatex">\(A(z)\)</span>为<span class="arithmatex">\(\sum\limits_{n=0}^{\infty}a_{n}z^{n},0\leqslant z&lt;1\)</span><br />
+<p>设 <span class="arithmatex">\(\forall n ,a_{n}\geqslant 0\)</span>，记幂级数 <span class="arithmatex">\(A(z)\)</span> 为 <span class="arithmatex">\(\sum\limits_{n=0}^{\infty}a_{n}z^{n},0\leqslant z&lt;1\)</span><br />
 则有</p>
 <div class="arithmatex">\[\lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} a_{k}=\lim\limits_{ z \to 1^{-} }(1-z)A(z)\]</div>
 </div>
-<p>设<span class="arithmatex">\(P_{ij}(z)\overset{\Delta}{=}\sum\limits_{n=0}^{\infty}P_{ij}^{(n)}z^{n}\)</span>，由引理得</p>
+<p>设 <span class="arithmatex">\(P_{ij}(z)\overset{\Delta}{=}\sum\limits_{n=0}^{\infty}P_{ij}^{(n)}z^{n}\)</span>，由引理得</p>
 <div class="arithmatex">\[
 \lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}=\lim\limits_{ z \to 1^{-} }(1-z)\sum\limits_{n=0}^{\infty} P_{ij}^{(k)}z^{n}
 \]</div>
-<p>回顾Theorem 5.11的证明中</p>
+<p>回顾 Theorem 5.11 的证明中</p>
 <div class="arithmatex">\[
 \sum\limits_{n=0}^{\infty} P_{ij}^{(n)}z^{n}=\delta_{ij}+\sum\limits_{k=1}^{\infty} \left( f_{ij}^{(k)}z^{k} \right) \sum\limits_{k=0}^{\infty} \left( P_{ij}^{(k)}z^{k} \right) 
 \]</div>
-<p>设<span class="arithmatex">\(F_{ij}(z)\overset{\Delta}{=}\sum\limits_{n=1}^{\infty}f_{ij}^{(n)}z^{n}\)</span>，当<span class="arithmatex">\(i\neq j\)</span>时，由Abel定理可得</p>
+<p>设 <span class="arithmatex">\(F_{ij}(z)\overset{\Delta}{=}\sum\limits_{n=1}^{\infty}f_{ij}^{(n)}z^{n}\)</span>，当 <span class="arithmatex">\(i\neq j\)</span> 时，由 Abel 定理可得</p>
 <div class="arithmatex">\[
 F_{ij}(1^{-})=\lim\limits_{ z \to 1^{-} } \sum\limits_{n=1}^{\infty} f_{ij}^{(n)}z^{n}=\sum\limits_{n=1}^{\infty} f_{ij}^{(n)}=1
 \]</div>
@@ -1943,18 +1943,18 @@ F_{ij}(1^{-})=\lim\limits_{ z \to 1^{-} } \sum\limits_{n=1}^{\infty} f_{ij}^{(n)
 &amp;=\lim\limits_{ z \to 1^{-} }  \frac{1-z}{1-F_{jj}(z)}
 \end{aligned}
 \]</div>
-<p>当<span class="arithmatex">\(i=j\)</span>时，直接有</p>
+<p>当 <span class="arithmatex">\(i=j\)</span> 时，直接有</p>
 <div class="arithmatex">\[
 \lim\limits_{ z \to 1^{-} } (1-z)P_{jj}(z)=\lim\limits_{ z \to 1^{-} } \frac{1-z}{1-F_{jj}(z)}
 \]</div>
-<p>无论是否有<span class="arithmatex">\(i=j\)</span>，即<span class="arithmatex">\(\forall i\)</span>都有</p>
+<p>无论是否有 <span class="arithmatex">\(i=j\)</span>，即 <span class="arithmatex">\(\forall i\)</span> 都有</p>
 <div class="arithmatex">\[
 \begin{aligned}
 \lim\limits_{ z \to 1^{-} } (1-z)P_{ij}(z)=\lim\limits_{ z \to 1^{-} } \frac{1-z}{1-F_{jj}(z)}\\
 \overset{L'Hospital}{=}\lim\limits_{ z \to 1^{-} } \frac{1}{F_{jj}'(z)}
 \end{aligned}
 \]</div>
-<p>由Abel定理(结合上面的所有等式可得)</p>
+<p>由 Abel 定理(结合上面的所有等式可得)</p>
 <div class="arithmatex">\[
 \lim\limits_{ n \to \infty } \frac{1}{n}\sum\limits_{k=0}^{n-1} P_{ij}^{(k)}=\lim\limits_{ z \to 1^{-} } \frac{1}{\sum\limits_{n=1}^{\infty} nf_{jj}^{(n)}z^{n-1}}=\frac{1}{\mu_{jj}}
 \]</div>
@@ -1963,135 +1963,135 @@ F_{ij}(1^{-})=\lim\limits_{ z \to 1^{-} } \sum\limits_{n=1}^{\infty} f_{ij}^{(n)
 \frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}&amp; =\frac{1}{n}\sum_{k=0}^{n-1}\mathbb{E}(\mathbf{I}_{[X_{k}=j|X_{0}=i]}) \\
 &amp;=\frac1n\mathbb{E}(\#\{n&gt;k\geqslant0:X_{k}=j|X_{0}=i\})
 \end{aligned}\]</div>
-<p>其中#A表示<strong>集合A中元素的个数</strong>。所以<span class="arithmatex">\(\dfrac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\)</span>表示在<span class="arithmatex">\(n-1\)</span>步转移中，处于状态<span class="arithmatex">\(j\)</span>的次数与记录状态总数<span class="arithmatex">\(n\)</span> 的比值。</p>
+<p>其中#A 表示<strong>集合 A 中元素的个数</strong>。所以 <span class="arithmatex">\(\dfrac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\)</span> 表示在 <span class="arithmatex">\(n-1\)</span> 步转移中，处于状态 <span class="arithmatex">\(j\)</span> 的次数与记录状态总数 <span class="arithmatex">\(n\)</span> 的比值。</p>
 <h3 id="_4">正常返的简单性质<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h3>
 <p>和常返性一样，正常返也具有类的性质，即下面命题：</p>
 <div class="admonition note">
 <p class="admonition-title">Proposition 6.5</p>
-<p>若<span class="arithmatex">\(i\)</span>正常返,<span class="arithmatex">\(i\to j\)</span>,那么<span class="arithmatex">\(j\)</span> 也正常返。</p>
+<p>若 <span class="arithmatex">\(i\)</span> 正常返,<span class="arithmatex">\(i\to j\)</span>,那么 <span class="arithmatex">\(j\)</span> 也正常返。</p>
 </div>
 <p><code>Proof</code></p>
-<p>由于<span class="arithmatex">\(i\to j\)</span>，那么存在<span class="arithmatex">\(m\)</span>，使得<span class="arithmatex">\(P_{ij}^{(m)}&gt;0\)</span> ，由<strong>CK方程</strong>，</p>
+<p>由于 <span class="arithmatex">\(i\to j\)</span>，那么存在 <span class="arithmatex">\(m\)</span>，使得 <span class="arithmatex">\(P_{ij}^{(m)}&gt;0\)</span> ，由 <strong>CK 方程</strong>，</p>
 <div class="arithmatex">\[P_{kj}^{(l+m)}=\sum_{s\in E}P_{ks}^{(l)}P_{sj}^{(m)}\geqslant P_{ki}^{(l)}P_{ij}^{(m)}\]</div>
-<p>不等式两端对<span class="arithmatex">\(l\)</span>求和平均，</p>
+<p>不等式两端对 <span class="arithmatex">\(l\)</span> 求和平均，</p>
 <div class="arithmatex">\[\frac{1}{n}\sum\limits_{l=0}^{n-1}P_{kj}^{(l+m)}\geqslant\frac{1}{n}\sum\limits_{l=0}^{n-1}P_{ki}^{(l)}P_{ij}^{(m)}\]</div>
-<p>两端同时令<span class="arithmatex">\(n\to\infty\)</span>取极限，利用弱遍历定理：</p>
+<p>两端同时令 <span class="arithmatex">\(n\to\infty\)</span> 取极限，利用弱遍历定理：</p>
 <div class="arithmatex">\[\frac{1}{\mu_{jj}}\geqslant\frac{P_{ij}^{(m)}}{\mu_{ii}}&gt;0\]</div>
-<p>故<span class="arithmatex">\(\mu_{jj}&lt;\infty\)</span>，所以<span class="arithmatex">\(j\)</span>正常返。</p>
-<p>进一步，如果Markov链的状态是有限的，和常返性一样，有下面结论：</p>
+<p>故 <span class="arithmatex">\(\mu_{jj}&lt;\infty\)</span>，所以 <span class="arithmatex">\(j\)</span> 正常返。</p>
+<p>进一步，如果 Markov 链的状态是有限的，和常返性一样，有下面结论：</p>
 <div class="admonition note">
 <p class="admonition-title">Proposition 6.6</p>
-<p>有限状态Markov链必然存在正常返态</p>
+<p>有限状态 Markov 链必然存在正常返态</p>
 </div>
 <p><code>Proof</code></p>
-<p>反证法，若命题不成立。设状态空间<span class="arithmatex">\(E=\{1,2,\ldots,N\}\)</span>，则所有状态都是暂留的或者零常返的。固定状态<span class="arithmatex">\(i\)</span>，对任意<span class="arithmatex">\(j\)</span>，由弱遍历定理，</p>
+<p>反证法，若命题不成立。设状态空间 <span class="arithmatex">\(E=\{1,2,\ldots,N\}\)</span>，则所有状态都是暂留的或者零常返的。固定状态 <span class="arithmatex">\(i\)</span>，对任意 <span class="arithmatex">\(j\)</span>，由弱遍历定理，</p>
 <div class="arithmatex">\[\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\to0,\quad n\to\infty \]</div>
-<p>那么对有限的N，</p>
+<p>那么对有限的 N，</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{j=1}^N\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}\to0,\quad n\to\infty\end{aligned}\]</div>
-<p>然而，由概率转移矩阵的性质：对任意<span class="arithmatex">\(k\)</span>，<span class="arithmatex">\(\sum\limits_{j=1}^{N}P_{ij}^{(k)}=1\)</span></p>
+<p>然而，由概率转移矩阵的性质：对任意 <span class="arithmatex">\(k\)</span>，<span class="arithmatex">\(\sum\limits_{j=1}^{N}P_{ij}^{(k)}=1\)</span></p>
 <div class="arithmatex">\[\begin{aligned}\frac{1}{n}\sum_{j=1}^{N}\sum_{k=0}^{n-1}P_{ij}^{(k)}=1\end{aligned}\]</div>
-<p>矛盾(按假设应当趋于0)！故命题成立。</p>
-<p>注.结合推论6.5可知，状态有限的不可约Markov链，所有状态都是正常返态。</p>
+<p>矛盾(按假设应当趋于 0)！故命题成立。</p>
+<p>注.结合推论 6.5 可知，状态有限的不可约 Markov 链，所有状态都是正常返态。</p>
 <h2 id="_5">不变分布的存在唯一性<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <h3 id="_6">基本问题<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h3>
 <p>本节我们利用弱遍历定理回答关于不变分布的问题：</p>
 <p>1.如果不变分布存在，什么条件下具有唯一性？</p>
 <p>便于研究随机动力系统</p>
 <p>2.不变分布在什么条件下存在？</p>
-<p>3.如果存在且唯一那么那个Markov链的收敛速度有多快？如何刻画这个速度？(Next Lecture)</p>
+<p>3.如果存在且唯一那么那个 Markov 链的收敛速度有多快？如何刻画这个速度？(Next Lecture)</p>
 <h3 id="_7">不变分布的唯一性<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h3>
-<p>首先回答第一个问题，即下面定理(仍然研究不可约常返的Markov链)</p>
+<p>首先回答第一个问题，即下面定理(仍然研究不可约常返的 Markov 链)</p>
 <div class="admonition note">
 <p class="admonition-title">Theorem 6.7</p>
-<p>设<span class="arithmatex">\(\{X_n\}\)</span> 是不可约常返的Markov链， <span class="arithmatex">\(\pi\)</span>是<span class="arithmatex">\(P\)</span>的一个不变分布，即满足不变方程<span class="arithmatex">\(\pi=\pi P\)</span>，则对任意状态<span class="arithmatex">\(j\)</span>，都有<span class="arithmatex">\(\pi_j&gt;0\)</span>，且</p>
+<p>设 <span class="arithmatex">\(\{X_n\}\)</span> 是不可约常返的 Markov 链， <span class="arithmatex">\(\pi\)</span> 是 <span class="arithmatex">\(P\)</span> 的一个不变分布，即满足不变方程 <span class="arithmatex">\(\pi=\pi P\)</span>，则对任意状态 <span class="arithmatex">\(j\)</span>，都有 <span class="arithmatex">\(\pi_j&gt;0\)</span>，且</p>
 <div class="arithmatex">\[\pi_j=\frac{1}{\mu_{jj}}\]</div>
 </div>
 <p><code>Proof.</code></p>
-<p>先给出一个引理-有界收敛定理(实际是控制收敛定理的一个特例，M也就是控制函数，控制收敛定理可以在实变函数中得到证明，但有界收敛定理只需要初等概率论的知识)</p>
+<p>先给出一个引理-有界收敛定理(实际是控制收敛定理的一个特例，M 也就是控制函数，控制收敛定理可以在实变函数中得到证明，但有界收敛定理只需要初等概率论的知识)</p>
 <hr />
 <div class="admonition note">
 <p class="admonition-title">Lemma 6.8(有界收敛定理)</p>
-<p>设<span class="arithmatex">\(X_{1},X_{2},\ldots\)</span>.为随机变量序列，依概率收敛于<span class="arithmatex">\(X\)</span>。若存在<span class="arithmatex">\(M&gt;\)</span> 0，使得对任意<span class="arithmatex">\(n\geq1\)</span>，<span class="arithmatex">\(P(|X_n|\leq M)=1\)</span>，那么</p>
+<p>设 <span class="arithmatex">\(X_{1},X_{2},\ldots\)</span>.为随机变量序列，依概率收敛于 <span class="arithmatex">\(X\)</span>。若存在 <span class="arithmatex">\(M&gt;\)</span> 0，使得对任意 <span class="arithmatex">\(n\geq1\)</span>，<span class="arithmatex">\(P(|X_n|\leq M)=1\)</span>，那么</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\mathbb{E}[X_n]=\mathbb{E}[\lim\limits_{n\to\infty}X_n]=\mathbb{E}[X]\]</div>
-<p>依概率收敛，记为<span class="arithmatex">\(X_n\stackrel{\mathrm{P}}{\longrightarrow}X\)</span>，如果对于<span class="arithmatex">\(\varepsilon&gt;0\)</span></p>
+<p>依概率收敛，记为 <span class="arithmatex">\(X_n\stackrel{\mathrm{P}}{\longrightarrow}X\)</span>，如果对于 <span class="arithmatex">\(\varepsilon&gt;0\)</span></p>
 <div class="arithmatex">\[\mathrm{P}(\omega:|X_n(\omega)-X(\omega)|&gt;\varepsilon)\to0,n\to\infty.\]</div>
 </div>
 <p><code>Proof</code></p>
-<p>首先，由于<span class="arithmatex">\(X_{n}\)</span> 依概率收敛于<span class="arithmatex">\(X\)</span> ，且<span class="arithmatex">\(P(|X_{n}|\leq M)=1\)</span> ，所以对任意<span class="arithmatex">\(\epsilon&gt;0\)</span></p>
+<p>首先，由于 <span class="arithmatex">\(X_{n}\)</span> 依概率收敛于 <span class="arithmatex">\(X\)</span> ，且 <span class="arithmatex">\(P(|X_{n}|\leq M)=1\)</span> ，所以对任意 <span class="arithmatex">\(\epsilon&gt;0\)</span></p>
 <div class="arithmatex">\[P(|X|&gt;M+\epsilon)\leq P(|X_n-X|&gt;\epsilon)\to0\]</div>
-<p>即<span class="arithmatex">\(P(|X|\leq M)=1\)</span> ．其次，对任意<span class="arithmatex">\(\varepsilon&gt;0\)</span></p>
+<p>即 <span class="arithmatex">\(P(|X|\leq M)=1\)</span> ．其次，对任意 <span class="arithmatex">\(\varepsilon&gt;0\)</span></p>
 <div class="arithmatex">\[\begin{aligned}
 \mathbb{E}[|X_{n}-X|]&amp; =\mathbb{E}[\left|X_{n}-X\right|\mathbf{I}_{\left|X_{n}-X\right|&gt;\varepsilon}]+\mathbb{E}[\left|X_{n}-X\right|\mathbf{I}_{\left|X_{n}-X\right|\leqslant\varepsilon}] \\
 &amp;\leq\mathbb{E}[(|X_{n}|+|X|)\mathbf{I}_{|X_{n}-X|&gt;\varepsilon}]+\varepsilon \\
 &amp;\leqslant2MP\left(|X_{n}-X|&gt;\varepsilon\right)+\varepsilon.
 \end{aligned}\]</div>
-<p>最后，令<span class="arithmatex">\(n\to\infty\)</span> 可得，</p>
+<p>最后，令 <span class="arithmatex">\(n\to\infty\)</span> 可得，</p>
 <div class="arithmatex">\[\lim\sup\limits_{n\to\infty}\mathbb{E}|X_n-X|\leqslant\varepsilon \]</div>
-<p>再令<span class="arithmatex">\(\varepsilon\rightarrow0\)</span> 即证。</p>
+<p>再令 <span class="arithmatex">\(\varepsilon\rightarrow0\)</span> 即证。</p>
 <hr />
-<p>回到原命题，对任意状态<span class="arithmatex">\(i\)</span>，由于<span class="arithmatex">\(\sum\limits_{s\in E}\pi_{s}=1\)</span>，所以存在<span class="arithmatex">\(j\in S\)</span>，使得<span class="arithmatex">\(\pi_j&gt;0\)</span>。对于任意状态<span class="arithmatex">\(i\)</span>，由于<span class="arithmatex">\(\{X_n\}\)</span> 不可约，所以<span class="arithmatex">\(j\to i\)</span>，故存在<span class="arithmatex">\(n\)</span> ，使得<span class="arithmatex">\(P_{ji}^{(n)}&gt;0\)</span>，那么根据不变方程：</p>
+<p>回到原命题，对任意状态 <span class="arithmatex">\(i\)</span>，由于 <span class="arithmatex">\(\sum\limits_{s\in E}\pi_{s}=1\)</span>，所以存在 <span class="arithmatex">\(j\in S\)</span>，使得 <span class="arithmatex">\(\pi_j&gt;0\)</span>。对于任意状态 <span class="arithmatex">\(i\)</span>，由于 <span class="arithmatex">\(\{X_n\}\)</span> 不可约，所以 <span class="arithmatex">\(j\to i\)</span>，故存在 <span class="arithmatex">\(n\)</span> ，使得 <span class="arithmatex">\(P_{ji}^{(n)}&gt;0\)</span>，那么根据不变方程：</p>
 <div class="arithmatex">\[\pi_i=\sum_{k\in E}\pi_kP_{ki}^{(n)}\ge\pi_jP_{ji}^{(n)}&gt;0\]</div>
 <p>命题第一部分得证(<span class="arithmatex">\(\forall i,\pi_{i}&gt;0\)</span>)。</p>
-<p>不妨考虑<span class="arithmatex">\(\{X_{n}\}\)</span>初始分布为<span class="arithmatex">\(\pi\)</span>，由于<span class="arithmatex">\(\pi\)</span>是不变分布，所以对任意<span class="arithmatex">\(k\)</span>， <span class="arithmatex">\(P(X_{k}=j)=\pi_{j}\)</span> ，那么</p>
+<p>不妨考虑 <span class="arithmatex">\(\{X_{n}\}\)</span> 初始分布为 <span class="arithmatex">\(\pi\)</span>，由于 <span class="arithmatex">\(\pi\)</span> 是不变分布，所以对任意 <span class="arithmatex">\(k\)</span>， <span class="arithmatex">\(P(X_{k}=j)=\pi_{j}\)</span> ，那么</p>
 <div class="arithmatex">\[\begin{aligned}
 \mathbb{E}_{X_{0}\sim\pi}\left[{\frac{1}{n}}\sum_{k=0}^{n-1}P_{ij}^{(k)}\right]&amp; =\mathbb{E}_{X_{0}\sim\pi}\left[\frac{1}{n}\sum_{k=0}^{n-1}\mathbb{E}[\mathbf{I}_{X_{k}=j|X_{0}=i}]\right] \\
 &amp;=\frac{1}{n}\sum_{k=0}^{n-1}P(X_{k}=j)=\pi_{j}
 \end{aligned}\]</div>
-<p>由于<span class="arithmatex">\(0\leqslant\dfrac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\leqslant 1\)</span>，所以由有界收敛定理+弱遍历定理</p>
+<p>由于 <span class="arithmatex">\(0\leqslant\dfrac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\leqslant 1\)</span>，所以由有界收敛定理+弱遍历定理</p>
 <div class="arithmatex">\[\begin{aligned}
 \pi_{j}&amp; =\lim_{n\to\infty}\mathbb{E}_{X_{0}\sim\pi}\left[\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}\right] \\
 &amp;=\mathbb{E}_{X_{0}\sim\pi}\left[\operatorname*{lim}_{n\to\infty}\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}\right]=\mathbb{E}_{X_{0}\sim\pi}\left[\frac{1}{\mu_{jj}}\right]=\frac{1}{\mu_{jj}}
 \end{aligned}\]</div>
-<p>注．上面的命题表明，对于不可约常返Markov链，不变分布如果存在，则是唯一的，并<span class="arithmatex">\(\exists\pi_{j}=\frac{1}{\mu_{jj}}&gt;0\)</span> ，那么对任意状态<span class="arithmatex">\(j\)</span></p>
+<p>注．上面的命题表明，对于不可约常返 Markov 链，不变分布如果存在，则是唯一的，并 <span class="arithmatex">\(\exists\pi_{j}=\frac{1}{\mu_{jj}}&gt;0\)</span> ，那么对任意状态 <span class="arithmatex">\(j\)</span></p>
 <div class="arithmatex">\[\mu_{jj}=\frac{1}{\pi_{j}}&lt;\infty \]</div>
 <p>这说明：如果不变分布存在，就有所有状态都是正常返的。</p>
-<p>下面我们证明其逆命题，也就是若<span class="arithmatex">\(\mu_{jj}&lt;\infty\)</span> ，令<span class="arithmatex">\(\pi_{i}=\frac{1}{\mu_{jj}}\)</span> ，则<span class="arithmatex">\(\pi\)</span> 就是不变分布，这回答了：不变分布在什么条件下存在？</p>
+<p>下面我们证明其逆命题，也就是若 <span class="arithmatex">\(\mu_{jj}&lt;\infty\)</span> ，令 <span class="arithmatex">\(\pi_{i}=\frac{1}{\mu_{jj}}\)</span> ，则 <span class="arithmatex">\(\pi\)</span> 就是不变分布，这回答了：不变分布在什么条件下存在？</p>
 <h3 id="_8">不变分布的存在性<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Theorem 6.9</p>
-<p>不可约正常返的Markov链存在平稳分布。</p>
+<p>不可约正常返的 Markov 链存在平稳分布。</p>
 </div>
 <p><code>Proof</code></p>
-<p>由弱遍历定理，对不可约正常返Markov链中的任意状态<span class="arithmatex">\(i,j\)</span></p>
+<p>由弱遍历定理，对不可约正常返 Markov 链中的任意状态 <span class="arithmatex">\(i,j\)</span></p>
 <div class="arithmatex">\[\begin{aligned}\lim_{n\to\infty}\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}=\frac{1}{\mu_{jj}}\triangleq p_j&gt;0\end{aligned}\]</div>
-<p>我们下面证明<span class="arithmatex">\(p=(p_{0},p_{1},\ldots)\)</span> 为一个不变分布，即满足不变方程<span class="arithmatex">\(p=pP\)</span> ，且是一个概率分布。</p>
-<p>先证不变方程<span class="arithmatex">\(p=pP\)</span> 成立。由C-K方程</p>
+<p>我们下面证明 <span class="arithmatex">\(p=(p_{0},p_{1},\ldots)\)</span> 为一个不变分布，即满足不变方程 <span class="arithmatex">\(p=pP\)</span> ，且是一个概率分布。</p>
+<p>先证不变方程 <span class="arithmatex">\(p=pP\)</span> 成立。由 C-K 方程</p>
 <div class="arithmatex">\[\begin{aligned}\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k+1)}=\sum_{l\in E}\left(\frac{1}{n}\sum_{k=0}^{n-1}P_{il}^{(k)}\right)P_{lj}\end{aligned}\]</div>
-<p>由于<span class="arithmatex">\(\frac{1}{n}(P_{ij}^{(n)}-P_{ij}^{(0)})\to0\)</span> <span class="arithmatex">\(n\to\infty\)</span></p>
+<p>由于 <span class="arithmatex">\(\frac{1}{n}(P_{ij}^{(n)}-P_{ij}^{(0)})\to0\)</span> <span class="arithmatex">\(n\to\infty\)</span></p>
 <div class="arithmatex">\[\begin{aligned}p_j=\lim_{n\to\infty}\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}=\lim_{n\to\infty}\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k+1)}\end{aligned}\]</div>
-<p>由于<span class="arithmatex">\(0\leqslant\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\leqslant1\)</span> ，所以由有界收敛定理</p>
+<p>由于 <span class="arithmatex">\(0\leqslant\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}\leqslant1\)</span> ，所以由有界收敛定理</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k+1)}=\sum\limits_{l\in E}\left(\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{il}^{(k)}\right)P_{lj}\]</div>
 <p>即得不变方程</p>
 <div class="arithmatex">\[\begin{aligned}p_j=\sum_{l\in E}p_lP_{lj}\end{aligned}\]</div>
-<p>再证<span class="arithmatex">\(p\)</span>是一个概率分布，即<span class="arithmatex">\(\sum_{l\in E}p_{l}=1\)</span> ．由于对任意<span class="arithmatex">\(k\)</span></p>
+<p>再证 <span class="arithmatex">\(p\)</span> 是一个概率分布，即 <span class="arithmatex">\(\sum_{l\in E}p_{l}=1\)</span> ．由于对任意 <span class="arithmatex">\(k\)</span></p>
 <div class="arithmatex">\[p=pP\Longrightarrow p=pP^k\]</div>
 <p>所以</p>
 <div class="arithmatex">\[p_j=\sum_{l\in E}p_l\left(\frac{1}{n}\sum_{k=0}^{n-1}P_{lj}^{(k)}\right)\]</div>
-<p>由于<span class="arithmatex">\(0\leq\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}\leq1\)</span> ，所以由有界收敛定理</p>
+<p>由于 <span class="arithmatex">\(0\leq\frac{1}{n}\sum_{k=0}^{n-1}P_{ij}^{(k)}\leq1\)</span> ，所以由有界收敛定理</p>
 <div class="arithmatex">\[\begin{aligned}
 \text{p} &amp;=\lim_{n\to\infty}p_{j}=\lim_{n\to\infty}\sum_{l\in E}p_{l}\left(\frac{1}{n}\sum_{k=0}^{n-1}P_{lj}^{(k)}\right) \\
 &amp;=\sum_{l\in E}p_{l}\left(\operatorname*{lim}_{n\to\infty}\frac{1}{n}\sum_{k=0}^{n-1}P_{lj}^{(k)}\right)=p_{j}\sum_{l\in E}p_{l}
 \end{aligned}\]</div>
-<p>所以<span class="arithmatex">\(\sum\limits_{l\in E}p_{l}=1\)</span></p>
+<p>所以 <span class="arithmatex">\(\sum\limits_{l\in E}p_{l}=1\)</span></p>
 <h3 id="_9">弱遍历定理的另一形式<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h3>
 <p>我们已经知道了弱遍历极限和不变分布的关系，可以得到弱遍历定理的另一个形式</p>
 <div class="admonition note">
 <p class="admonition-title">Theorem 6.10(弱遍历定理)</p>
-<p>设<span class="arithmatex">\(\{X_{n}\}\)</span> 是不可约正常返的Markov链，<span class="arithmatex">\(\pi\)</span> 是不变分布，那么对任意状态<span class="arithmatex">\(i,j\)</span>，</p>
+<p>设 <span class="arithmatex">\(\{X_{n}\}\)</span> 是不可约正常返的 Markov 链，<span class="arithmatex">\(\pi\)</span> 是不变分布，那么对任意状态 <span class="arithmatex">\(i,j\)</span>，</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(k)}=\pi_j\]</div>
 </div>
 <h3 id="_10">平均遍历定理<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h3>
 <p>更一般地，可以得到下面的(平均)遍历定理(证明比较复杂课上略过)</p>
 <div class="admonition note">
 <p class="admonition-title">Theorem 6.11(遍历定理）</p>
-<p>设<span class="arithmatex">\(\{X_n\}\)</span> 是不可约常返的Markov链， <span class="arithmatex">\(\pi\)</span>是不变分布， <span class="arithmatex">\(f\)</span>是<span class="arithmatex">\(E\)</span>上的函数，满足<span class="arithmatex">\(\sum\limits_{i\in E}\pi_{i}|f(i)|&lt;\infty\)</span>，则</p>
+<p>设 <span class="arithmatex">\(\{X_n\}\)</span> 是不可约常返的 Markov 链， <span class="arithmatex">\(\pi\)</span> 是不变分布， <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(E\)</span> 上的函数，满足 <span class="arithmatex">\(\sum\limits_{i\in E}\pi_{i}|f(i)|&lt;\infty\)</span>，则</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}f(X_k)=\sum\limits_{i\in E}\pi_if(i)\]</div>
 </div>
 <p><code>Proof</code></p>
 <p>参考《应用随机过程》，陈大岳、章复熹，北京大学出版社，2023，P118，P124-P128.</p>
-<p>注1.遍历定理说明了长时间尺度下，函数<span class="arithmatex">\(f\)</span>的<strong>时间平均</strong>，等于在<strong>空间上平均</strong>。这意味着系统的长期统计行为可以由其稳态分布完全描述。此外，在计算数学中，经常会处理高维空间上积分计算的问题，即<span class="arithmatex">\(E\)</span>是高维空间，那么由遍历定理，即可通过构造随机动力系统(遍历的Markov过程)，通过计算时间上的一维积分，取极限得到高维积分的结果。</p>
+<p>注 1.遍历定理说明了长时间尺度下，函数 <span class="arithmatex">\(f\)</span> 的<strong>时间平均</strong>，等于在<strong>空间上平均</strong>。这意味着系统的长期统计行为可以由其稳态分布完全描述。此外，在计算数学中，经常会处理高维空间上积分计算的问题，即 <span class="arithmatex">\(E\)</span> 是高维空间，那么由遍历定理，即可通过构造随机动力系统(遍历的 Markov 过程)，通过计算时间上的一维积分，取极限得到高维积分的结果。</p>
 <p>Addition：刘军 -《科学计算中的蒙特卡洛策略》- 科学出版社</p>
-<p>注2.<strong>遍历定理</strong>可以视为大<strong>数定律在Markov依赖结构下的推广</strong>。大数定律适用于独立同分布的随机变量，表明样本均值收敛到期望：而遍历定理适用于具有Markov性的序列，表明时间平均收敛到平稳分布下的期望。两者都揭示了“平均行为的稳定性”，但遍历定理处理的是更一般的Markov依赖的情况。</p>
+<p>注 2.<strong>遍历定理</strong>可以视为大<strong>数定律在 Markov 依赖结构下的推广</strong>。大数定律适用于独立同分布的随机变量，表明样本均值收敛到期望：而遍历定理适用于具有 Markov 性的序列，表明时间平均收敛到平稳分布下的期望。两者都揭示了“平均行为的稳定性”，但遍历定理处理的是更一般的 Markov 依赖的情况。</p>
 <p>回顾大数定律：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -2100,48 +2100,48 @@ F_{ij}(1^{-})=\lim\limits_{ z \to 1^{-} } \sum\limits_{n=1}^{\infty} f_{ij}^{(n)
 \end{aligned}
 \]</div>
 <h2 id="_11">强遍历定理<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h2>
-<p>常返性和弱遍历定理虽然给出了随Markov链转移状态的渐近规律，但是当<span class="arithmatex">\(n\rightarrow\infty\)</span>时，转移概率<span class="arithmatex">\(P_{ij}^{(n)}\)</span>的极限情况我们仍然不清楚。先看一个例子。</p>
+<p>常返性和弱遍历定理虽然给出了随 Markov 链转移状态的渐近规律，但是当 <span class="arithmatex">\(n\rightarrow\infty\)</span> 时，转移概率 <span class="arithmatex">\(P_{ij}^{(n)}\)</span> 的极限情况我们仍然不清楚。先看一个例子。</p>
 <div class="admonition example">
-<p class="admonition-title">Example 6.12(两状态的Markov链III)</p>
-<p>考虑Markov链，状态空间为<span class="arithmatex">\(\{0,1\}\)</span> ，转移矩阵为</p>
+<p class="admonition-title">Example 6.12(两状态的 Markov 链 III)</p>
+<p>考虑 Markov 链，状态空间为 <span class="arithmatex">\(\{0,1\}\)</span> ，转移矩阵为</p>
 <div class="arithmatex">\[P=\left(\begin{array}{cc}1-\alpha&amp;\alpha\\\beta&amp;1-\beta\end{array}\right)\]</div>
-<p>其中<span class="arithmatex">\(\alpha,\beta\in(0,1)\)</span></p>
+<p>其中 <span class="arithmatex">\(\alpha,\beta\in(0,1)\)</span></p>
 </div>
 <div class="arithmatex">\[P^n=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}\beta&amp;\alpha\\\beta&amp;\alpha\end{array}\right)+\frac{(1-\alpha-\beta)^n}{\alpha+\beta}\left(\begin{matrix}\alpha&amp;-\alpha\\-\beta&amp;\beta\end{matrix}\right)\]</div>
 <p>转移概率的极限：</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}P^{(n)}=\frac{1}{\alpha+\beta}\left(\begin{array}{cc}\beta&amp;\alpha\\\beta&amp;\alpha\end{array}\right)=\left(\begin{array}{c}\pi\\\pi\end{array}\right),\]</div>
-<p>即<span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{ij}^{(n)}=\pi_{j}\)</span>.但是，如果<span class="arithmatex">\(\alpha=\beta=1\)</span>，即</p>
+<p>即 <span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{ij}^{(n)}=\pi_{j}\)</span>.但是，如果 <span class="arithmatex">\(\alpha=\beta=1\)</span>，即</p>
 <div class="arithmatex">\[P=\left(\begin{array}{cc}0&amp;1\\1&amp;0\end{array}\right)\]</div>
 <p>计算容易发现规律</p>
 <div class="arithmatex">\[P_{00}^{(n)}=P_{11}^{(n)}=\left\{\begin{array}{ll}1,&amp;n=2k\\[6pt]0,&amp;n=2k-1\end{array}\right.\]</div>
 <p>有</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{00}^{(n)}=\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{11}^{(n)}=\frac{1}{2}\]</div>
-<p>该Markov链正常返，平均返回时间为2。然而，<span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{00}^{(n)}\)</span> 和<span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{11}^{(n)}\)</span>都不存在</p>
-<p>这个例子说明了弱遍历性无法得到<span class="arithmatex">\(P_{ij}^{(n)}\)</span> 的极限性质，即</p>
+<p>该 Markov 链正常返，平均返回时间为 2。然而，<span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{00}^{(n)}\)</span> 和 <span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{11}^{(n)}\)</span> 都不存在</p>
+<p>这个例子说明了弱遍历性无法得到 <span class="arithmatex">\(P_{ij}^{(n)}\)</span> 的极限性质，即</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\frac{1}{n}\sum\limits_{k=0}^{n-1}P_{ij}^{(n)}=\pi_j\nRightarrow\lim\limits_{n\to\infty}P_{ij}^{(n)}=\pi_j\]</div>
-<p>也就是说，对于正常返的Markov链，<span class="arithmatex">\(P_{ij}^{(n)}\)</span> 的极限也可能不存在。事实上，状态的周期性对于转移概率的极限是否存在起着关键作用。</p>
+<p>也就是说，对于正常返的 Markov 链，<span class="arithmatex">\(P_{ij}^{(n)}\)</span> 的极限也可能不存在。事实上，状态的周期性对于转移概率的极限是否存在起着关键作用。</p>
 <p>这个定理的证明将使用到概率论中的耦合方法(Very Important)</p>
 <div class="admonition note">
 <p class="admonition-title">Theorem 6.13(强遍历定理)</p>
-<p>设<span class="arithmatex">\(\{X_{n}\}\)</span> 是不可约非周期的Markov链，若<span class="arithmatex">\(\pi\)</span>是<span class="arithmatex">\(P\)</span>的不变分布， 那么</p>
+<p>设 <span class="arithmatex">\(\{X_{n}\}\)</span> 是不可约非周期的 Markov 链，若 <span class="arithmatex">\(\pi\)</span> 是 <span class="arithmatex">\(P\)</span> 的不变分布， 那么</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}\sum\limits_{j\in E}\lvert P_{ij}^{(n)}-\pi_{j}\lvert=0,\quad\forall i\in E.\]</div>
 <p>那么自然有</p>
 <div class="arithmatex">\[\lim\limits_{n\to\infty}P_{ij}^{(n)}=\pi_j\]</div>
 </div>
 <p><code>Proof</code></p>
-<p>设<span class="arithmatex">\(\{X_{n}:n\geqslant0\}\)</span>和<span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span>是<span class="arithmatex">\(E\)</span> 上以<span class="arithmatex">\(P\)</span> 为转移矩阵的相互独立的Markov链，初分布分别为<span class="arithmatex">\(\mu\)</span>和<span class="arithmatex">\(\nu\)</span>令</p>
-<p>Remark：<span class="arithmatex">\(Y_{n}\)</span>的存在性需要保证，但是存在性证明比较复杂所以跳过</p>
+<p>设 <span class="arithmatex">\(\{X_{n}:n\geqslant0\}\)</span> 和 <span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span> 是 <span class="arithmatex">\(E\)</span> 上以 <span class="arithmatex">\(P\)</span> 为转移矩阵的相互独立的 Markov 链，初分布分别为 <span class="arithmatex">\(\mu\)</span> 和 <span class="arithmatex">\(\nu\)</span> 令</p>
+<p>Remark：<span class="arithmatex">\(Y_{n}\)</span> 的存在性需要保证，但是存在性证明比较复杂所以跳过</p>
 <p>下面这个构造方法叫做<strong>耦合方法</strong>(概率论研究的常用方法)：</p>
 <div class="arithmatex">\[\{Z_n=(X_n,Y_n):n\geqslant0\}\]</div>
-<p>则它为<span class="arithmatex">\(E\times E\)</span> 上以<span class="arithmatex">\(\mu\times\nu\)</span>为初分布的马氏链，转移矩阵记为</p>
-<p>Remark：<span class="arithmatex">\(\mu \times \nu\)</span>是乘积测度(Measure Theory)</p>
+<p>则它为 <span class="arithmatex">\(E\times E\)</span> 上以 <span class="arithmatex">\(\mu\times\nu\)</span> 为初分布的马氏链，转移矩阵记为</p>
+<p>Remark：<span class="arithmatex">\(\mu \times \nu\)</span> 是乘积测度(Measure Theory)</p>
 <div class="arithmatex">\[\overline{P}\triangleq P\otimes P,\]</div>
 <div class="arithmatex">\[A\otimes B=\begin{bmatrix}a_{11}B&amp;\cdots&amp;a_{1n}B\\\vdots&amp;\ddots&amp;\vdots\\a_{m1}B&amp;\cdots&amp;a_{mn}B\end{bmatrix}.\]</div>
-<p>其中<span class="arithmatex">\(\otimes\)</span>表示Kronecker积，即</p>
+<p>其中 <span class="arithmatex">\(\otimes\)</span> 表示 Kronecker 积，即</p>
 <div class="arithmatex">\[\overline{P}_{(i,j)(k,l)}=P_{ik}P_{jl}\quad\forall(i,j)(k,l)\in E\times E\]</div>
-<p>自行验证<span class="arithmatex">\(\overline{P}_{(i,j)(k,l)}^{(n)}=P_{ik}^{(n)}P_{jl}^{(n)}\)</span></p>
-<p><strong>Step1.</strong> 证明<span class="arithmatex">\(Z_{n}\)</span>不可约非周期</p>
-<p>由于<span class="arithmatex">\(P\)</span>不可约，所以存在<span class="arithmatex">\(N_{1},N_{2}\)</span>,使得<span class="arithmatex">\(\forall(i,j)(k,l)\in E\times E\)</span></p>
+<p>自行验证 <span class="arithmatex">\(\overline{P}_{(i,j)(k,l)}^{(n)}=P_{ik}^{(n)}P_{jl}^{(n)}\)</span></p>
+<p><strong>Step1.</strong> 证明 <span class="arithmatex">\(Z_{n}\)</span> 不可约非周期</p>
+<p>由于 <span class="arithmatex">\(P\)</span> 不可约，所以存在 <span class="arithmatex">\(N_{1},N_{2}\)</span>,使得 <span class="arithmatex">\(\forall(i,j)(k,l)\in E\times E\)</span></p>
 <div class="arithmatex">\[P_{ik}^{(n_1)}&gt;0,\:P_{jl}^{(n_2)}&gt;0,\quad\forall n_1&gt;N_1,\:n_2&gt;N_2\]</div>
 <p>当 <span class="arithmatex">\(n&gt;\max\{N_{1},N_{2}\}\)</span> 时，</p>
 <div class="arithmatex">\[\overline{P}_{(i,j)(k,l)}^{(n)}=P_{ik}^{(n)}P_{jl}^{(n)}&gt;0\]</div>
@@ -2159,22 +2159,22 @@ F_{ij}(1^{-})=\lim\limits_{ z \to 1^{-} } \sum\limits_{n=1}^{\infty} f_{ij}^{(n)
 <div class="arithmatex">\[\tau=\inf\{n\geqslant0:X_n=Y_n\}.\]</div>
 <p>它是 <span class="arithmatex">\(\{X_{n}:n\geqslant0\)</span> 与 <span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span> 的相遇时刻，即 <span class="arithmatex">\(\{Z_{n}:n\geqslant0\}\)</span> 首达对角线</p>
 <div class="arithmatex">\[\overline D\triangleq\{(i,i):i\in E\}\]</div>
-<p>的时间，他<strong>不会超过</strong><span class="arithmatex">\(Z_{n}\)</span> 首达某个具体状态 <span class="arithmatex">\((i,i)\)</span> 的时间，即</p>
+<p>的时间，他<strong>不会超过</strong> <span class="arithmatex">\(Z_{n}\)</span> 首达某个具体状态 <span class="arithmatex">\((i,i)\)</span> 的时间，即</p>
 <div class="arithmatex">\[\tau\leqslant\tau_{(i,i)}\triangleq\inf\{n\geq0:Z_n=(i,i)\}\]</div>
 <p>由于 <span class="arithmatex">\(Z_n\)</span> 常返，所以</p>
 <div class="arithmatex">\[P(\tau_{(i,i)}&lt;\infty)=1.\]</div>
-<p>那么<span class="arithmatex">\(P(\tau&lt;\infty)=1\)</span></p>
-<p><strong>Step4.</strong> 证明在<span class="arithmatex">\(\{X_{n}:n\geqslant0\}\)</span>与<span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span>相遇之后，它们有同样的分布(unbelievable)，即</p>
+<p>那么 <span class="arithmatex">\(P(\tau&lt;\infty)=1\)</span></p>
+<p><strong>Step4.</strong> 证明在 <span class="arithmatex">\(\{X_{n}:n\geqslant0\}\)</span> 与 <span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span> 相遇之后，它们有同样的分布(unbelievable)，即</p>
 <div class="arithmatex">\[P(X_n=j,\tau\leqslant n)=P(Y_n=j,\tau\leqslant n)\]</div>
-<p>假设<span class="arithmatex">\(\{X_{n}:n\geqslant0\}\)</span> 与<span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span> 在时刻<span class="arithmatex">\(m\)</span> 相遇于状态<span class="arithmatex">\(i\)</span>。</p>
-<p>直观上，那么从时刻<span class="arithmatex">\(m\)</span>开始重新计时的话，它们都是从<span class="arithmatex">\(i\)</span>出发以<span class="arithmatex">\(P\)</span> 为转移矩阵的马氏链，从而它们在任何时刻有相同的分布。严格的证明如下：</p>
+<p>假设 <span class="arithmatex">\(\{X_{n}:n\geqslant0\}\)</span> 与 <span class="arithmatex">\(\{Y_{n}:n\geqslant0\}\)</span> 在时刻 <span class="arithmatex">\(m\)</span> 相遇于状态 <span class="arithmatex">\(i\)</span>。</p>
+<p>直观上，那么从时刻 <span class="arithmatex">\(m\)</span> 开始重新计时的话，它们都是从 <span class="arithmatex">\(i\)</span> 出发以 <span class="arithmatex">\(P\)</span> 为转移矩阵的马氏链，从而它们在任何时刻有相同的分布。严格的证明如下：</p>
 <div class="arithmatex">\[\begin{aligned}
 P(X_{n}=j,\tau\leqslant n)&amp; =\sum_{m=0}^{n}\sum_{i\in E}P(X_{n}=j,\tau=m,Z_{m}=(i,i))  \\
 &amp;=\sum_{m=0}^n\sum_{i\in E}P(\tau=m,Z_m=(i,i))P(X_n=j|\tau=m,Z_m=(i,i)).
 \end{aligned}\]</div>
 <p>注意到</p>
 <div class="arithmatex">\[\{\tau=m,Z_m=(i,i)\}=\{Z_0,\cdots,Z_{m-1}\notin\overline D,Z_m=(i,i)\}.\]</div>
-<p>把<span class="arithmatex">\(m\)</span>视为现在的时间，由<span class="arithmatex">\(Z_{n}\)</span>的Markov性</p>
+<p>把 <span class="arithmatex">\(m\)</span> 视为现在的时间，由 <span class="arithmatex">\(Z_{n}\)</span> 的 Markov 性</p>
 <div class="arithmatex">\[\begin{aligned}
 P(X_{n}=j|\tau=m,Z_{m}=(i,i))&amp; =P(X_{n}=j|Z_{m}=(i,i))  \\
 &amp;=P(X_{n}=j|X_{m}=i,Y_{m}=i) \\
@@ -2186,7 +2186,7 @@ P(X_{n}=j|\tau=m,Z_{m}=(i,i))&amp; =P(X_{n}=j|Z_{m}=(i,i))  \\
 <div class="arithmatex">\[\begin{aligned}
 P(Y_{n}=j,\tau\leqslant n)&amp;=\sum_{m=0}^{n}\sum_{i\in E}P(\tau=m,Z_{m}=(i,i))P(Y_{n}=j|Z_{m}=(i,i))\\
 &amp;=\sum_{m=0}^{n}\sum_{i\in E}P(\tau=m,Z_{m}=(i,i))P_{ij}^{(n-m)}.\end{aligned}\]</div>
-<p>因此<span class="arithmatex">\(P(X_{n}=j,\tau\leqslant n)=P(Y_{n}=j,\tau\leqslant n).\)</span></p>
+<p>因此 <span class="arithmatex">\(P(X_{n}=j,\tau\leqslant n)=P(Y_{n}=j,\tau\leqslant n).\)</span></p>
 <p><strong>Step5.</strong> 注意到</p>
 <div class="arithmatex">\[\begin{aligned}
 P(X_n=j)&amp;=P(X_n=j,\tau\leq n)+P(X_n=j,\tau&gt;n)\\
@@ -2208,7 +2208,7 @@ P(Y_n=j)&amp;=P(Y_n=j,\tau\leq n)+P(Y_n=j,\tau&gt;n)
 <p>定理 6.13 讨论了正常返、非周期情形 <span class="arithmatex">\(P_{ij}^{(n)}\)</span> 的极限，对于其他情况可以总结为下面定理。</p>
 <div class="admonition note">
 <p class="admonition-title">Theorem 6.14</p>
-<p><span class="arithmatex">\(\{X_{n}\}\)</span> 是不可约常返的 Markou 链，那么</p>
+<p><span class="arithmatex">\(\{X_{n}\}\)</span> 是不可约常返的 Markov 链，那么</p>
 <p>(1) 若 j 是零常返状态，则</p>
 <div class="arithmatex">\[\lim_{n\to\infty}P_{ij}^{(n)}=0;\]</div>
 <p>(2) 若 <span class="arithmatex">\(j\)</span> 是正常返周期状态，周期为 <span class="arithmatex">\(d_{j}\)</span> ，则</p>

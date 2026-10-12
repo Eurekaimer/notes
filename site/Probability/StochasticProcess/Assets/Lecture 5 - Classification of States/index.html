@@ -793,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    初等概率论(Elementary Probability Theory)
+    初等概率论 (Elementary Probability Theory)
   
 
     
@@ -1770,7 +1770,7 @@ A_{d-1,0} &amp; \dots &amp; \dots &amp; \dots &amp; 0
 <p>一步转移矩阵如上，那么 n 步转移矩阵 (<span class="arithmatex">\(P^{2},P^{3},\dots\)</span>)？</p>
 </div>
 <h2 id="_2">常返性<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<p>George Polyo</p>
+<p>George Pólya</p>
 <div class="admonition note">
 <p class="admonition-title">Definition 5.8(首达时)</p>
 <p>设 <span class="arithmatex">\(\left\{ X_{n} \right\}\)</span> 为一个状态空间为 <span class="arithmatex">\(E\)</span> 的 Markov 链，从 <span class="arithmatex">\(n=0\)</span> 出发首次达到状态 <span class="arithmatex">\(j\)</span> 的时刻，我们记为</p>
@@ -1796,12 +1796,12 @@ f_{ij}^{(n)}&amp;\overset{\Delta}{=}P\left( \tau_{j}&lt; \infty\mid X_{0}=i \rig
 \end{aligned}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Definition 5.10(常返性)</p>
-<p>如果<span class="arithmatex">\(f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1\)</span>，则称状态<span class="arithmatex">\(i\)</span>是常返的(Recurrent)，否则称<span class="arithmatex">\(i\)</span>为暂留的(Transient)，或者非常返的(Nonrecurrent)).</p>
+<p>如果 <span class="arithmatex">\(f_{ii}=\sum\limits_{n=1}^{\infty}f_{ii}^{(n)}=1\)</span>，则称状态 <span class="arithmatex">\(i\)</span> 是常返的(Recurrent)，否则称 <span class="arithmatex">\(i\)</span> 为暂留的(Transient)，或者非常返的(Nonrecurrent)).</p>
 </div>
-<p>虽然我们通过<span class="arithmatex">\(f_{ij}\)</span> 来定义常返性，但<span class="arithmatex">\(f_{ij}^{(n)}\)</span> 的计算并不容易，所以我们想要通过n步转移概率<span class="arithmatex">\(P_{ij}^{(n)}\)</span> 来计算，通过<span class="arithmatex">\(P_{ij}^{(n)}\)</span> 来获得状态是否是常返的判据，这即是下面的定理：</p>
+<p>虽然我们通过 <span class="arithmatex">\(f_{ij}\)</span> 来定义常返性，但 <span class="arithmatex">\(f_{ij}^{(n)}\)</span> 的计算并不容易，所以我们想要通过 n 步转移概率 <span class="arithmatex">\(P_{ij}^{(n)}\)</span> 来计算，通过 <span class="arithmatex">\(P_{ij}^{(n)}\)</span> 来获得状态是否是常返的判据，这即是下面的定理：</p>
 <div class="admonition tip">
 <p class="admonition-title">Theorem 5.11</p>
-<p>状态<span class="arithmatex">\(i\)</span>是常返态的充分必要条件是</p>
+<p>状态 <span class="arithmatex">\(i\)</span> 是常返态的充分必要条件是</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty\end{aligned}\]</div>
 </div>
 <p><code>Proof.</code></p>
@@ -1815,7 +1815,7 @@ P_{ij}^{(n)}&amp;=P(X_{n}=j|X_{0}=i) \\
 &amp;\overset{Markov}{=}\sum_{k=1}^{n}P(X_{n}=j|X_{k}=j)P(X_{k}=j,X_{k-1}\neq j,\cdots,X_{1}\neq j|X_{0}=i) \\
 &amp;=\sum_{k=1}^{n}f_{ij}^{(k)}P_{jj}^{(n-k)}
 \end{aligned}\]</div>
-<p>于是根据形式可以考虑卷积<span class="arithmatex">\(\to\)</span>母函数方法(记号：<span class="arithmatex">\(\delta_{ij}=1(i=j)\)</span>，否则为0)</p>
+<p>于是根据形式可以考虑卷积 <span class="arithmatex">\(\to\)</span> 母函数方法(记号：<span class="arithmatex">\(\delta_{ij}=1(i=j)\)</span>，否则为 0)</p>
 <div class="arithmatex">\[\begin{aligned}
 \sum_{n=0}^{\infty}P_{ij}^{(n)}z^{n}&amp; =\delta_{ij}+\sum_{n=1}^{\infty}P_{ij}^{(n)}z^{n}  \\
 &amp;=\delta_{ij}+\sum_{n=1}^{\infty}\sum_{k=1}^{n}f_{ij}^{(k)}P_{jj}^{(n-k)}z^{n} \\
@@ -1823,42 +1823,42 @@ P_{ij}^{(n)}&amp;=P(X_{n}=j|X_{0}=i) \\
 &amp;\overset{Abel}{=}\delta_{ij}+\sum_{k=1}^{\infty}(f_{ij}^{(k)}z^{k})\sum_{n=k}^{\infty}(P_{jj}^{(n-k)}z^{n-k}) \\
 &amp;=\delta_{ij}+\sum_{k=1}^\infty(f_{ij}^{(k)}z^k)\sum_{m=0}^\infty(P_{jj}^{(m)}z^m)
 \end{aligned}\]</div>
-<p>那么令<span class="arithmatex">\(j=i\)</span></p>
+<p>那么令 <span class="arithmatex">\(j=i\)</span></p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=0}^\infty P_{ii}^{(n)}z^n=1+\sum_{k=1}^\infty(f_{ii}^{(k)}z^k)\sum_{n=0}^\infty(P_{ii}^{(n)}z^n)\end{aligned}\]</div>
 <p>即</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=0}^{\infty}P_{ii}^{(n)}z^n=\frac{1}{1-\sum_{k=1}^{\infty}f_{ii}^{(k)}z^k}\end{aligned}\]</div>
-<p>令<span class="arithmatex">\(z\to1^{-}\)</span> ，由<a href="https://en.wikipedia.org/wiki/Abel%27s_theorem">Abel定理</a>可得</p>
+<p>令 <span class="arithmatex">\(z\to1^{-}\)</span> ，由<a href="https://en.wikipedia.org/wiki/Abel%27s_theorem">Abel 定理</a>可得</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=1}^{\infty}P_{ii}^{(n)}&amp;=\frac{1}{1-f_{ii}}\end{aligned}\]</div>
-<p>那么<span class="arithmatex">\(f_{ii}=1\)</span>即等价于<span class="arithmatex">\(\sum\limits_{n=0}^{\infty}P_{ii}^{(n)}=\infty\)</span></p>
-<p>注1．另一种概率方法的证明：</p>
-<p>由<span class="arithmatex">\(f_{ii}\)</span>的定义，Markov链<span class="arithmatex">\(\{X_n\}\)</span>从状态出发，最终能回到的概率为<span class="arithmatex">\(f_{ii}\)</span>，那么一直回不到的概率为<span class="arithmatex">\(1-f_{ii}\)</span></p>
-<p>由于Markov性，所以在回到<span class="arithmatex">\(i\)</span>之后，过程在概率意义下又重新开始，那么<span class="arithmatex">\(X_{0}=i\)</span> 开始，Markov链<span class="arithmatex">\(\{X_n\}\)</span> 恰有<span class="arithmatex">\(n\)</span> 次处于状态<span class="arithmatex">\(i\)</span>服从几何分布，<span class="arithmatex">\(P\{X_n\)</span>处于状态i的次数<span class="arithmatex">\(=n\mid X_{0}=i\}=f_{ii}^{n-1}(1-f_{ii})\)</span></p>
-<p>所以，从<span class="arithmatex">\(i\)</span>出发以后，处于<span class="arithmatex">\(i\)</span>状态的期望为</p>
+<p>那么 <span class="arithmatex">\(f_{ii}=1\)</span> 即等价于 <span class="arithmatex">\(\sum\limits_{n=0}^{\infty}P_{ii}^{(n)}=\infty\)</span></p>
+<p>注 1．另一种概率方法的证明：</p>
+<p>由 <span class="arithmatex">\(f_{ii}\)</span> 的定义，Markov 链 <span class="arithmatex">\(\{X_n\}\)</span> 从状态出发，最终能回到的概率为 <span class="arithmatex">\(f_{ii}\)</span>，那么一直回不到的概率为 <span class="arithmatex">\(1-f_{ii}\)</span></p>
+<p>由于 Markov 性，所以在回到 <span class="arithmatex">\(i\)</span> 之后，过程在概率意义下又重新开始，那么 <span class="arithmatex">\(X_{0}=i\)</span> 开始，Markov 链 <span class="arithmatex">\(\{X_n\}\)</span> 恰有 <span class="arithmatex">\(n\)</span> 次处于状态 <span class="arithmatex">\(i\)</span> 服从几何分布，<span class="arithmatex">\(P\{X_n\)</span> 处于状态 i 的次数 <span class="arithmatex">\(=n\mid X_{0}=i\}=f_{ii}^{n-1}(1-f_{ii})\)</span></p>
+<p>所以，从 <span class="arithmatex">\(i\)</span> 出发以后，处于 <span class="arithmatex">\(i\)</span> 状态的期望为</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=1}^{\infty}nf_{ii}^{n-1}(1-f_{ii})=\frac{1}{1-f_{ii}}\end{aligned}\]</div>
-<p>那么<span class="arithmatex">\(i\)</span>是常返态，当且仅当<span class="arithmatex">\(E[X_{n}\)</span>处于状态i的次数<span class="arithmatex">\(\left|\begin{array}{c}X_{0}=i\end{array}\right]=\infty\)</span>，下面证明期望与所求概率和相等：</p>
-<p>记随机序列<span class="arithmatex">\(I_{n}\)</span>为：当<span class="arithmatex">\(X_{n}=i\)</span>时<span class="arithmatex">\(I_{n}=1\)</span>，否则为0，那么<span class="arithmatex">\(\sum_{n=0}^{\infty}I_{n}\)</span>表示<span class="arithmatex">\(I_{n}\)</span>处于状态<span class="arithmatex">\(i\)</span>的次数，则有</p>
+<p>那么 <span class="arithmatex">\(i\)</span> 是常返态，当且仅当 <span class="arithmatex">\(E[X_{n}\)</span> 处于状态 i 的次数 <span class="arithmatex">\(\left|\begin{array}{c}X_{0}=i\end{array}\right]=\infty\)</span>，下面证明期望与所求概率和相等：</p>
+<p>记随机序列 <span class="arithmatex">\(I_{n}\)</span> 为：当 <span class="arithmatex">\(X_{n}=i\)</span> 时 <span class="arithmatex">\(I_{n}=1\)</span>，否则为 0，那么 <span class="arithmatex">\(\sum_{n=0}^{\infty}I_{n}\)</span> 表示 <span class="arithmatex">\(I_{n}\)</span> 处于状态 <span class="arithmatex">\(i\)</span> 的次数，则有</p>
 <div class="arithmatex">\[\mathbb{E}\left[\sum_{n=1}^\infty I_n|X_0=i\right]=\sum_{n=1}^\infty\mathbb{E}[I_n|X_0=i]=\sum_{n=1}^\infty P(X_n=i|X_0=i)=\sum_{n=1}^\infty P_{ii}^{(n)}\]</div>
-<p>故状态是常返态的充分必要条件是<span class="arithmatex">\(\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty\)</span>(<span class="arithmatex">\(n=0\)</span>时概率有界量不影响证明-无穷大)</p>
-<p>注2．从注1的证明过程中，我们可以看出若状态<span class="arithmatex">\(i\)</span>是暂留的，则Markov链只会有限次处于状态<span class="arithmatex">\(i\)</span> ，可以具体表述为下面推论。</p>
+<p>故状态是常返态的充分必要条件是 <span class="arithmatex">\(\sum_{n=0}^{\infty}P_{ii}^{(n)}=\infty\)</span>(<span class="arithmatex">\(n=0\)</span> 时概率有界量不影响证明-无穷大)</p>
+<p>注 2．从注 1 的证明过程中，我们可以看出若状态 <span class="arithmatex">\(i\)</span> 是暂留的，则 Markov 链只会有限次处于状态 <span class="arithmatex">\(i\)</span> ，可以具体表述为下面推论。</p>
 <div class="admonition note">
 <p class="admonition-title">Corollary 5.12</p>
-<p>如果状态<span class="arithmatex">\(j\)</span>是暂留的，那么对任意状态<span class="arithmatex">\(i\)</span></p>
+<p>如果状态 <span class="arithmatex">\(j\)</span> 是暂留的，那么对任意状态 <span class="arithmatex">\(i\)</span></p>
 <div class="arithmatex">\[P_{ij}^{(n)}\to0,\quad n\to\infty \]</div>
 </div>
 <p><code>Proof</code></p>
-<p>若<span class="arithmatex">\(j=i\)</span> 是暂留的，我们已经证明：</p>
+<p>若 <span class="arithmatex">\(j=i\)</span> 是暂留的，我们已经证明：</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=1}^{\infty}P_{ii}^{(n)}=\frac{1}{1-f_{ii}}&lt;\infty\end{aligned}\]</div>
-<p>所以级数的通项<span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0\)</span>(收敛的必要条件)</p>
-<p>另一方面，若<span class="arithmatex">\(j\neq i\)</span> 是暂留的，我们已经证明：</p>
+<p>所以级数的通项 <span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0\)</span>(收敛的必要条件)</p>
+<p>另一方面，若 <span class="arithmatex">\(j\neq i\)</span> 是暂留的，我们已经证明：</p>
 <div class="arithmatex">\[\begin{aligned}\sum_{n=0}^\infty P_{ij}^{(n)}=\delta_{ij}+\sum_{k=1}^\infty f_{ij}^{(k)}\sum_{n=0}^\infty P_{jj}^{(n)}=\sum_{n=1}^\infty f_{ij}^{(n)}\sum_{n=0}^\infty P_{jj}^{(n)}&lt;\infty\end{aligned}\]</div>
-<p>所以级数的通项<span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0\)</span></p>
-<p>注3．常返与非常返具有类的性质</p>
+<p>所以级数的通项 <span class="arithmatex">\(\lim\limits_{ n \to \infty }P_{ij}^{(n)}=0\)</span></p>
+<p>注 3．常返与非常返具有类的性质</p>
 <div class="admonition note">
 <p class="admonition-title">Corollary 5.13</p>
-<p>若状态<span class="arithmatex">\(i\)</span>是常返的，且<span class="arithmatex">\(i\leftrightarrow j\)</span> ，则<span class="arithmatex">\(j\)</span> 是常返的</p>
+<p>若状态 <span class="arithmatex">\(i\)</span> 是常返的，且 <span class="arithmatex">\(i\leftrightarrow j\)</span> ，则 <span class="arithmatex">\(j\)</span> 是常返的</p>
 </div>
 <p><code>Proof</code></p>
-<p>由于<span class="arithmatex">\(i\leftrightarrow j\)</span> ，则存在<span class="arithmatex">\(m\)</span> 和<span class="arithmatex">\(n\)</span> 使得</p>
+<p>由于 <span class="arithmatex">\(i\leftrightarrow j\)</span> ，则存在 <span class="arithmatex">\(m\)</span> 和 <span class="arithmatex">\(n\)</span> 使得</p>
 <div class="arithmatex">\[P_{ij}^{(n)}&gt;0,\quad P_{ji}^{(m)}&gt;0\]</div>
 <p>对任意 <span class="arithmatex">\(s&gt;0\)</span> ，由 CK 方程有</p>
 <div class="arithmatex">\[P_{jj}^{(m+n+s)}\geq P_{ji}^{(m)}P_{ii}^{(s)}P_{ij}^{(n)}\]</div>
@@ -1880,7 +1880,7 @@ P_{ij}^{(n)}&amp;=P(X_{n}=j|X_{0}=i) \\
 <p>但是由转移概率的性质，对任意 k 有</p>
 <div class="arithmatex">\[\sum_{j=1}^NP_{ij}^{(k)}=1\]</div>
 <p>矛盾！故命题成立。</p>
-<p>注。结合推论 5.13，我们知道：对于状态有限<strong>不可约</strong>Markov 链，所有状态<strong>都是常返态</strong>。</p>
+<p>注。结合推论 5.13，我们知道：对于状态有限<strong>不可约 </strong>Markov 链，所有状态<strong>都是常返态</strong>。</p>
 <div class="admonition example">
 <p class="admonition-title">Example 5.15 ( <span class="arithmatex">\(d\)</span> 维简单随机游走的常返性）</p>
 <p>设 <span class="arithmatex">\(\xi_{1},\xi_{2},\ldots\)</span> .是取值于 <span class="arithmatex">\(E=\mathbb{Z}^{d}\)</span> 独立同分布随机向量，满足</p>

@@ -1778,7 +1778,7 @@
 <p>根据 requirements 文件安装</p>
 <div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<p>缺点是无法识别直接依赖和间接依赖，卸载包之后间接依赖在 <code>requirement.txt</code> 无法被删除</p>
+<p>缺点是无法识别直接依赖和间接依赖，卸载包之后间接依赖在 <code>requirements.txt</code> 中无法被删除</p>
 <p>解决方法是 <code>pyproject.toml</code></p>
 <p>然后就可以直接安装</p>
 <div class="language-Shell highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.

@@ -15,9 +15,9 @@ title: Week 0 Scratch
 
 >Computer is a base-2 system we can use 0 and 1 to represent all of it.
 
-Case: use the hand to count the number by control the finger up and down, how many can you count?
+Case: Use a hand to count by moving the fingers up and down. How high can you count?
 
-The answer is 31 if you start with the 0(we have $2^{5}$ outcomes)
+The answer is 31 if you start with 0 (we have $2^{5}$ outcomes).
 
 #### bit
 
@@ -25,38 +25,38 @@ The answer is 31 if you start with the 0(we have $2^{5}$ outcomes)
 
 binary digit-**BIT**!
 
-we can make the 1 value means on and 0 means off. and use light bulb to represent the fingers' up and down.
+We can make the value 1 mean on and 0 mean off, and use light bulbs to represent the fingers being up and down.
 
 #### decimal
 
 $123=100*1+10*2+1*3$
 
-And we can use this method to understand the bulbs' light and more far from it is the binary. WE can use the 0 and 1 represent the information in computer.
+And we can use this method to understand the bulbs' light, and going further brings us to binary. We can use 0 and 1 to represent information in a computer.
 
-More often used than bit is byte, what is byte?
-A byte is 8 bit(or 8 bulbs) it can represent the 255.
+More often used than a bit is a byte. What is a byte?
+A byte is 8 bits (or 8 bulbs); it can represent 255.
 
 ### ASCII
 
-So how can we use them denote the number A?
-Assign every letter a number -for some reasons the A strats with 65(64+1).
+So how can we use them to denote the letter A?
+Assign every letter a number—for some reason, A starts with 65 (64+1).
 
 ### Unicode
 
 Unicode code point U+1F602
 
 Remark:
-The U+ is a conventional mark for unicode in computer science.
+The U+ is a conventional mark for Unicode in computer science.
 
 ### Color
 
 Zeros and ones can be used to represent color.
 
-Red, green, and blue (called `RGB`) is a combination of three numbers.
+Red, green, and blue (called `RGB`) are a combination of three numbers.
 
-One  pixel dot will ocuppy 3 bits of colors.
+One pixel dot will occupy 3 bits of color.
 
-We will think more things can be represent by 0's and 1's so between the input and output is what?
+We will think about more things that can be represented by 0's and 1's, so what is between the input and output?
 
 It's algorithms!
 
@@ -66,11 +66,11 @@ Case: Find John Harvard in the book and take three algorithms.
 
 1. one step each
 2. two steps each
-3. half of the remainings
+3. half of the remaining entries
 
 We can solve the problem correctly and more efficiently as well.
 
-One graph can draw the efficientcy.
+A graph can show the efficiency.
 
 ```text
 Pick up phone book
@@ -88,17 +88,17 @@ Else
 	Quit 
 ```
 
-They called functions and use conditions.
+They are called functions and use conditions.
 
-**Boolean expression** can give two types answers (0 and 1 or something else)
+**Boolean expressions** can give two types of answers (0 and 1 or something else).
 
-And above it's a loop can go and go.
+And above, there is a loop that can go on and on.
 
 ### Artificial Intelligence
 
-If use simple input the binary question each an answer, it will be difficult.
+If we use simple binary questions as input, each with an answer, it will be difficult.
 
-Large language models(LLMs)
+Large language models (LLMs)
 
 ```c
 #include<stdio.h>
@@ -111,11 +111,11 @@ int main(void)
 
 ### Scratch
 
-Through dragging and dropping some puzzles to make a program.
+Drag and drop some puzzle pieces to make a program.
 
 Very interesting parts.
 
-Ivy's Hardest Game --So difficult!(Can it passed?)
+Ivy's Hardest Game—so difficult! (Can it be passed?)
 
 ## Summing up
 
@@ -144,7 +144,5 @@ This was CS50! Welcome aboard! See you next time!
 - Your project must use at least one custom block that you have made yourself (via **Make a Block**), which must take at least one input.
 - Your project should be more complex than most of those demonstrated in lecture (many of which, though instructive, were quite short) but it can be less complex than [Oscartime](https://scratch.mit.edu/projects/277537196) and [Ivy’s Hardest Game](https://scratch.mit.edu/projects/326129433).
 
-Due the Scratch's high freedom property I pass the problem set(Or make an easy one?).
-
-
+Due to Scratch's high degree of freedom, I pass the problem set (or make an easy one?).
 

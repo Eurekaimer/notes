@@ -1759,7 +1759,7 @@ G_2 &amp;= \{z \in X : d(z, A_2) &lt; \frac{r}{2} \} = \bigcup_{y \in A_2} U(y, 
 <p><strong>详细证明：</strong></p>
 <ol>
 <li><strong>点点有界性：</strong>
-    对于任意固定的<span class="arithmatex">\(f \in X^\star\)</span>，已知数列 <span class="arithmatex">\(\{f(x_n)\}\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的 Cauchy 列。因为<span class="arithmatex">\(\mathbb{R}\)</span>是完备的，所以<span class="arithmatex">\(\{f(x_n)\}\)</span>是收敛数列。收敛数列必有界，故存在常数<span class="arithmatex">\(M_f &gt; 0\)</span>（依赖于 <span class="arithmatex">\(f\)</span>），使得<span class="arithmatex">\(\sup_{n} |f(x_n)| \le M_f\)</span>。</li>
+    对于任意固定的 <span class="arithmatex">\(f \in X^\star\)</span>，已知数列 <span class="arithmatex">\(\{f(x_n)\}\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的 Cauchy 列。因为 <span class="arithmatex">\(\mathbb{R}\)</span> 是完备的，所以 <span class="arithmatex">\(\{f(x_n)\}\)</span> 是收敛数列。收敛数列必有界，故存在常数 <span class="arithmatex">\(M_f &gt; 0\)</span>（依赖于 <span class="arithmatex">\(f\)</span>），使得 <span class="arithmatex">\(\sup_{n} |f(x_n)| \le M_f\)</span>。</li>
 <li><strong>应用一致有界原理：</strong>
     考虑 <span class="arithmatex">\(X\)</span> 到其二次对偶空间 <span class="arithmatex">\(X^{\star\star}\)</span> 的自然嵌入映射(Canonical Embedding)<span class="arithmatex">\(J: X \to X^{\star\star}\)</span>，定义为 <span class="arithmatex">\(J(x)(f) = f(x)\)</span>。由 Hahn-Banach 定理可知 <span class="arithmatex">\(J\)</span> 是保范同构，即 <span class="arithmatex">\(\|J(x)\| = \|x\|\)</span>。
     令 <span class="arithmatex">\(T_n = J(x_n) \in X^{\star\star}\)</span>。此时 <span class="arithmatex">\(\{T_n\}\)</span> 是 Banach 空间 <span class="arithmatex">\(X^\star\)</span> 上的线性泛函序列。由步骤 1 可知，对任意 <span class="arithmatex">\(f \in X^\star\)</span>，序列 <span class="arithmatex">\(\{T_n(f)\}\)</span> 有界（即 <span class="arithmatex">\(\{f(x_n)\}\)</span> 有界）。根据一致有界原理（Banach-Steinhaus 定理），<span class="arithmatex">\(\{T_n\}\)</span> 的算子范数序列是一致有界的。即存在常数 <span class="arithmatex">\(M &gt; 0\)</span>，使得 <span class="arithmatex">\(\sup_{n} \|T_n\| \le M\)</span>。</li>
@@ -1847,7 +1847,7 @@ G_2 &amp;= \{z \in X : d(z, A_2) &lt; \frac{r}{2} \} = \bigcup_{y \in A_2} U(y, 
 <p>考察算子范数的计算，特别是移位算子的性质。</p>
 </div>
 <p><code>Proof.</code></p>
-<p>实际上就是利用算子范数的等价定义，由于<span class="arithmatex">\(\lVert S^{n} \rVert^{2}=\sup\limits_{\lVert x \rVert_{l^{2}}=1}\lVert S^{n}x \rVert^{2}_{l^{2}}\)</span></p>
+<p>实际上就是利用算子范数的等价定义，由于 <span class="arithmatex">\(\lVert S^{n} \rVert^{2}=\sup\limits_{\lVert x \rVert_{l^{2}}=1}\lVert S^{n}x \rVert^{2}_{l^{2}}\)</span></p>
 <p>那么有下面的等式成立</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1855,7 +1855,7 @@ G_2 &amp;= \{z \in X : d(z, A_2) &lt; \frac{r}{2} \} = \bigcup_{y \in A_2} U(y, 
 &amp;\leqslant \sup\limits_{\lVert x \rVert _{l^{2}}=1}\sum\limits_{k=1}^{\infty} \lVert x_{k} \rVert ^{2}=1
 \end{aligned}
 \]</div>
-<p>并且有取<span class="arithmatex">\(x=(0,\dots,0,1,0,\dots)\)</span>时，得到<span class="arithmatex">\(\sum\limits_{k=1}^{\infty}\lVert x_{2n+k} \rVert^{2}=1\)</span>，所以范数为1</p>
+<p>并且有取 <span class="arithmatex">\(x=(0,\dots,0,1,0,\dots)\)</span> 时，得到 <span class="arithmatex">\(\sum\limits_{k=1}^{\infty}\lVert x_{2n+k} \rVert^{2}=1\)</span>，所以范数为 1</p>
 <div class="admonition question">
 <p class="admonition-title">(6)</p>
 <p><strong>六. （15 分）</strong> 设 <span class="arithmatex">\(f\)</span> 是 Banach 空间 <span class="arithmatex">\(X\)</span> 到 <span class="arithmatex">\(\mathbb{R}\)</span> 上的线性泛函， <span class="arithmatex">\(f\)</span> 不是常数函数，试证 <span class="arithmatex">\(f\)</span> 是开映射。(PS: 我确信没有有界这个条件(PS(我): 你要是有界那不是直接满射然后开映射直接秒掉了吗，你是人类吗))</p>
@@ -1879,7 +1879,7 @@ G_2 &amp;= \{z \in X : d(z, A_2) &lt; \frac{r}{2} \} = \bigcup_{y \in A_2} U(y, 
 <div class="arithmatex">\[ f(x_0 + tz) = f(x_0) + t \cdot f(z) = y_0 + t \cdot C \]</div>
 <p>其中 <span class="arithmatex">\(C = f(z)\)</span> 是一个非零常数。当 <span class="arithmatex">\(t\)</span> 从 <span class="arithmatex">\(-1\)</span> 扫到 <span class="arithmatex">\(1\)</span> 时，这一项 <span class="arithmatex">\(t \cdot C\)</span> 就覆盖了一个以 <span class="arithmatex">\(0\)</span> 为中心的开区间 <span class="arithmatex">\((-|C|, |C|)\)</span>。所以，像 <span class="arithmatex">\(f(L)\)</span> 就覆盖了以 <span class="arithmatex">\(y_0\)</span> 为中心的开区间 <span class="arithmatex">\((y_0 - |C|, y_0 + |C|)\)</span>。
 6.  <strong>结论</strong>：
-因为线性泛函的像集要么是0要么是全集，所以<span class="arithmatex">\(f(U)=\mathbb{R}\)</span>，肯定包含这个开区间。所以 <span class="arithmatex">\(y_0\)</span> 是内点，<span class="arithmatex">\(f(U)\)</span> 是开集。</p>
+因为线性泛函的像集要么是 0 要么是全集，所以 <span class="arithmatex">\(f(U)=\mathbb{R}\)</span>，肯定包含这个开区间。所以 <span class="arithmatex">\(y_0\)</span> 是内点，<span class="arithmatex">\(f(U)\)</span> 是开集。</p>
 </li>
 </ol>
 <div class="admonition question">
