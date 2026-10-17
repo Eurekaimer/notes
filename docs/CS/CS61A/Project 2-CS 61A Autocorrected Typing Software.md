@@ -145,5 +145,5 @@ Implement `fastest_words`, which returns which words each player typed fastest.
 
 很简单的比大小选择
 
-![cats](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/CS61A-Cats)
+![cats](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-02@main/objects/default/sha256/b6/dd/b6dda32c1f6f51d01da09d158e21cdaa4b8a098ff3a022d6f4716d35e8292954.png)
 

@@ -2161,7 +2161,7 @@
 <li>计算新的点函数值然后迭代 </li>
 </ol>
 <p>可以画一个简单的图表示点的复用关系</p>
-<p><img alt="Fibonacci" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/Fibonacci-graph" /></p>
+<p><img alt="Fibonacci" src="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/88/3f/883fc71d46cc27ffd400ba0a5f9933161a98c25a605a83dbf0a3d109a1d7e081.png" /></p>
 <h3 id="0618">0.618 法(黄金分割法)<a class="headerlink" href="#0618" title="Permanent link">⚓︎</a></h3>
 <p>实际上就是 Fibonacci 方法的比值求极限得到黄金分割比，然后利用<strong>黄金分割点的内生性</strong>就可以增加选取点和分割区间的效率(<strong>数学文化</strong>的含金量还在上升)</p>
 <p>不管是黄金分割法还是 Fibonacci 法，选取的点基本都被复用过，这样就提高了效率减少了成本：不要浪费！</p>
@@ -2212,7 +2212,7 @@ x^{(k+1)}&amp;=x^{(k)}- \frac{f'(x^{(k)})}{f''(x^{(k)})}
 \phi(x)=f'(x^{(k)})+ \frac{f'(x^{(k)})-f'(x^{(k-1)})}{x^{(k)}-x^{(k-1)}}(x-x^{(k)})=0
 \]</div>
 <p>如图所示：</p>
-<p><img alt="割线法" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/%E5%89%B2%E7%BA%BF%E6%B3%95.png" /></p>
+<p><img alt="割线法" src="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/f6/35/f635203790cdb5269f9e2ea4da996bea94ec3c9f528acab2615ea5a17510155c.png" /></p>
 <div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">secant_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">iterations</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Return the root calculated using the secant method."""</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations</span><span class="p">):</span>
@@ -2350,7 +2350,7 @@ f(X^{(k)}-\lambda \nabla f(X^{(k)}))\approx f(X^{(k)})-\nabla f(X^{(k)})^{T}\lam
 <p>最速下降法(Steepest descent)是梯度下降法的一种更具体实现形式，其理念为在每次迭代中选择合适的步长 <span class="arithmatex">\(\alpha_{k}\)</span>，使得目标函数值能够得到最大程度的减少。</p>
 <p>每一次迭代都在<strong>梯度的反方向</strong>，我们总可以找到一个新的点使得在这个方向上达到最小值，也就是方向与步长都达到最优(局部上).</p>
 <p>注：每次迭代的路径与上一次垂直，并且如果梯度不等于 0 下一次迭代必定下降</p>
-<p><img alt="最速下降法" src="https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/%E6%9C%80%E9%80%9F%E4%B8%8B%E9%99%8D%E6%B3%95.png" /></p>
+<p><img alt="最速下降法" src="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/da/3b/da3b90ea8bef9f31d59d6889a63113cc41428f219195d40c06536239acb08764.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">最速下降法(算法)</p>
 <p>Step 1 给出 <span class="arithmatex">\(x_{1}\in \mathbb{R}^{n},0\leqslant \varepsilon \ll 1,k:=1\)</span><br />
@@ -2721,7 +2721,7 @@ H_{k+1}=H_{k}- \frac{H_{k}y_{k}y_{k}^{T}H_{k}}{y_{k}^{T}H_{k}y_{k}}+\rho_{k} \fr
     
     
     
-    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/QQ.png" target="_blank" rel="noopener" title="QQ" class="md-social__link">
+    <a href="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/8c/3f/8c3f2287f2b148e2aaacd27dc73a91ae62148fec5ca8d91d6542e71af7563059.png" target="_blank" rel="noopener" title="QQ" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M434.1 420.4c-11.5 1.4-44.9-52.7-44.9-52.7 0 31.3-16.1 72.2-51 101.8 16.8 5.2 54.8 19.2 45.8 34.4-7.3 12.3-125.5 7.9-159.6 4-34.1 3.8-152.3 8.3-159.6-4-9-15.2 28.9-29.2 45.8-34.4-34.9-29.5-51.1-70.4-51.1-101.8 0 0-33.3 54.1-44.9 52.7-5.4-.6-12.4-29.6 9.3-99.7 10.3-33 22-60.5 40.1-105.8C60.9 98 109.2-.1 224.3-.1 338-.1 387.5 96 384.6 214.9c18.1 45.2 29.9 72.9 40.1 105.8 21.8 70.1 14.7 99.1 9.3 99.7z"/></svg>
     </a>
   
@@ -2729,7 +2729,7 @@ H_{k+1}=H_{k}- \frac{H_{k}y_{k}y_{k}^{T}H_{k}}{y_{k}^{T}H_{k}y_{k}}+\rho_{k} \fr
     
     
     
-    <a href="https://raw.githubusercontent.com/Eurekaimer/MyIMGs/refs/heads/main/img/Wechat.jpg" target="_blank" rel="noopener" title="WeChat" class="md-social__link">
+    <a href="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/5d/1b/5d1b2acb60b28b5ced86642d0b84d88dc074db0aca4ddbdcf697a4d4e4a375c0.jpg" target="_blank" rel="noopener" title="WeChat" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.33.33 0 0 0 .167-.054l1.903-1.114a.86.86 0 0 1 .717-.098 10.2 10.2 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348M5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18m5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.72.72 0 0 1 .598.082l1.584.926a.3.3 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.6.6 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982"/></svg>
     </a>
   

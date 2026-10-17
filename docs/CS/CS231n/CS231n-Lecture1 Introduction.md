@@ -27,7 +27,7 @@ The breakthrough happened in the 1980s with FNN's Backprop! (Hinton and LeCun) A
 
 And the following pictures show that hardware plays an essential role in the AI era. (Fuck you, NVIDIA)
 
-![hardware-works](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/20260205034601.png)
+![hardware-works](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/06/36/0636cef0b8df7b4ddae4e23094fef2ca0de841408f09357f5c4612c98b8bdd5b.png)
 
 Human bias (data is produced by humans, so it naturally has bias) also exists, and the issues are not all technical issues (very vital).
 
@@ -48,4 +48,4 @@ Human bias (data is produced by humans, so it naturally has bias) also exists, a
 + Human-Centered Applications and Implications
 	+ You can ask Hinton(AGI)
 
-![20260205044236](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/20260205044236.png)
+![20260205044236](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/a7/f7/a7f723f4d94de312ed73dd0f4988f7efa6a83a0759e0740c05ad1179f9df1391.png)

@@ -184,7 +184,7 @@ def compose1(f, g):
 
 由于它没有 return 部分，使用 lambda 只能创建简单的函数，在 Python 中也不经常用，但是对于其他语言常用（我学 Python 和 R 的，我可以不看吗？）
 
-![lambda-def](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/lambda-def)
+![lambda-def](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/dc/d2/dcd28ab997e3c64c883a419a1cc06f2ddcbaf888e761f19d0128abdf19b4f5c9.png)
 
 Only the def statement gives the function an intrinsic name.
 
@@ -277,7 +277,7 @@ Remark: not calculate all subexpressions
 
 >To express certain general patterns as named concepts, we will need to construct functions that can accept other functions as arguments or return functions as values. **Functions that manipulate functions are called higher-order functions**. This section shows how higher-order functions can serve as powerful abstraction mechanisms, vastly increasing the expressive power of our language.
 
-![higher-order function](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/higher-order-f)
+![higher-order function](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/df/7f/df7f71e07ba518c96bae845f16e50624a49383b1ae9c1932f0ba2b1b3fe44d3c.png)
 
 注：就好像泛函一样，只是这里叫高阶函数
 
@@ -514,7 +514,7 @@ pass
 
 #### Q6: Double Trouble
 
-![env-fig](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/env-fig)
+![env-fig](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/a4/55/a4552adac8a2f3bb3885685c12125224e74bd9d9128340c7c49700e4a48e81d1.png)
 
 ## HW02(30min)
 

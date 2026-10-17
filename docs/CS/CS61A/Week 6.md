@@ -75,7 +75,7 @@ def is_leaf(tree):
 
 >However, we can also develop sequence representations that are not built into Python. A common representation of a sequence constructed from nested pairs is called a _linked list_.
 
-![linked-lists](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/linked-lists)
+![linked-lists](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-02@main/objects/default/sha256/78/ff/78ff739826dad61aef1e0efae4ef267f68b944307a82a9b7c3714de3c1a452d3.png)
 
 Linked lists have recursive structure: the rest of a linked list is a linked list or 'empty'. We can define an abstract data representation to validate, construct, and select the components of linked lists.
 

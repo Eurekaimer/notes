@@ -86,7 +86,7 @@ max(f(2, g(h(1, 5), 3)), 4)
 
 Answer: 3
 
-![hint](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/61a-video-q1)
+![hint](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/66/17/6617469bb616330edfdac1f4a54c13c32ac2e51cd73381873d15f089b8561a1c.png)
 
 #### Environment Diagrams
 
@@ -117,7 +117,7 @@ None  None
 + Pure function
 + Non-pure function
 
-![print](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/non-pure-print)
+![print](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/66/85/66856e3d952dfa0d9a716acde7f25ea10e79a2d965f40095aed0d4d5ac9c6d86.png)
 
 ## Lab 00(10min)
 
@@ -125,7 +125,7 @@ None  None
 
 纪念一下第一次使用 [ok](https://cs61a.org/articles/using-ok/) 的 Lab
 
-![lab00](https://cdn.jsdelivr.net/gh/Eurekaimer/MyIMGs@main/img/CS61a-lab00)
+![lab00](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/bb/6e/bb6ec24ef02770d0b98bce9f7e9151cda34174765f19e9ce22ba99d8d49e951f.png)
 
 ## HW01(15min)
 
