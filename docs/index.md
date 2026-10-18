@@ -51,12 +51,12 @@ hide: title
 </span>
 </div>
 
-[请我喝下午茶](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/10/bb/10bb56e6424a06ca62611719d104d77eb3db1ac38f6920a8cce8048fbaf27570.png){ .md-button .md-button--primary }
+[请我喝下午茶](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/0b/98/0b980a4871d0231bb47a697a04fb9918d09e2fbf1fcef73ce00e0b65f3762cb6.webp){ .md-button .md-button--primary }
 
 </div>
 
 <div style="text-align: right;">
-    <img src="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/bb/6f/bb6fe60daba80c11278bc6b11a010e683392ef4227110276e3d26777cf28e54f.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
+    <img src="https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/bb/6f/bb6fe60daba80c11278bc6b11a010e683392ef4227110276e3d26777cf28e54f.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
 </div>
 
 </div>

@@ -109,7 +109,7 @@ rm -rf mytest
  cat test2.txt|awk '{print $3}'
 ```
 
-![wsl_file_system](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-02@main/objects/default/sha256/d2/8e/d28eca5e815abc3c1a6cdbab8f32a67d6db55da822676235459f7aca268344c1.png)
+![wsl_file_system](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/87/a3/87a30fdfbf74cd3f863adb2827ff0c5ea18b8071d37132041af6a71a3cac3a01.webp)
 
 ## Lab 2
 
@@ -412,7 +412,7 @@ hdfs dfs -ls /output
 hdfs dfs -cat /output/part-r-00000
 ```
 
-![lab2](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/aa/97/aa971571457e4c2029fd93101441444f9bbbce3de88bcdec58a36836f1c4541f.png)
+![lab2](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/6c/ee/6cee71208b79167d4e1fa5ad96253db28ec7191974dfb8e934ac28a1f386971f.webp)
 
 !!! note "彩蛋"
     如果统计结果正确，那么说明你的 Hadoop 伪分布式集群就搭建成功并验证完成了！

@@ -8,7 +8,7 @@ tags:
 
 > 本文总结在 CachyOS 下运行《阴阳师》安卓版的完整流程。核心方案是使用 Waydroid 运行 Android 系统，通过 libhoudini 提供 ARM 应用转译，并使用 waydroid-nvidia 让 NVIDIA 显卡为 Android 游戏提供硬件加速。下面的图片是没有使用显卡的 CPU 情况，请勿模仿。
 
-![CPU + Waydroid](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/15/d9/15d96ca24671e01484e1ba95c7f36f1106767230d608eed4c1e805f8ffc3bc3c.png)
+![CPU + Waydroid](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/79/1a/791a00e462b079cdb3213ebfd97d07ca769aff833a67dbd2b03ab8c4f4c68c90.webp)
 
 我使用的主要环境为：
 

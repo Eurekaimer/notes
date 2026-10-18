@@ -48,7 +48,7 @@ tags:
 
 ## 祖师爷归位
 
-![Fisher](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/4c/3d/4c3dc99b89a7440fed6db7507740f5c5eebf6e6b74232605645caf93cbdc6447.jpg)
+![Fisher](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/42/df/42df50eebc045b7bc48ff9dcd11abeb96a67a6a20863efdec867400d67f1564b.webp)
 
 
 

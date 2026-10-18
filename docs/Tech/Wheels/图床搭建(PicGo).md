@@ -39,7 +39,7 @@ tags:
 !!! warning "token"
     关于如何获取 token，官方的配置手册中已经说得比较详细了，在此不再赘述，但是需要注意一定要对 token 文件进行备份，因为后续如果需要进行多设备配置仍然需要使用这一 token（本人在台式机上配置图床上传工具时就遇到了这一问题），但是没有备份也没有关系，只需要重新生成然后修改之前配置的 token 即可。
 
-![PicGo1](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-02@main/objects/default/sha256/82/91/82915ecc8d1a07bbb7f1f11f33ae27e4b937e4439929afe513e68800294910ea.png)
+![PicGo1](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/17/41/1741f1245e5f9c4c734108dfc1c35d656f7c4243412d1053fee94aa142607473.webp)
 
 !!! info "注意"
     由于版本更新得比较快，只需要对于 PicGo 软件自身的一些设置进行选择就可以达到比较好的使用体验，所以在此删除其他复杂的配置

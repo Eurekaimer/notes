@@ -50,5 +50,5 @@ The video was published on [YouTube](https://www.youtube.com/watch?v=RaHRvnb0dY8
 - 查看所有高亮：按 <kbd>gh</kbd>
 - 删除高亮：点击高亮处 -> 按 <kbd>dh</kbd>
 
-![20260216174454](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-02@main/objects/default/sha256/dc/74/dc7491278264084ef783acd3ffb3d084e1a94566a9cea4c07abf0e6f0fa95d02.png)
+![20260216174454](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/0e/db/0edbc0321b1ab59e780c27ebbc36675b085cf888457d71038f816d5c46ea03e5.webp)
 

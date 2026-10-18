@@ -10,7 +10,7 @@ tags:
 
 最后你会得到下面的结果：
 
-![20260213174002](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/2d/f3/2df3358ae5e034e42c43a6d0442e681569ac1d06fae6cb145085e7c5ebc6724e.png)
+![20260213174002](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/6c/3c/6c3cfe7643ab0ea60a57d84eec8d54fe47bcc1f45110c069c52b4d8da64d0c37.webp)
 
 ## 准备工作：修改系统配置
 
@@ -58,7 +58,7 @@ sudo nixos-rebuild switch --flake .
 - [ ] 打开 Lutris
 - [ ] 设置兼容层（Runner options）
 	- [ ] 在 Wine version 下拉菜单中，选择刚才下载的 dwproton（例如 dwproton-10.0-17）
-	- [ ] ![20260213174103](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-03@main/objects/default/sha256/d8/99/d899217ebec3e03d3a450a279f5a854732187e91f89971789e48f1cc371a0b41.png)
+	- [ ] ![20260213174103](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/3c/c3/3cc3ee6c7dd7606a40b0845a35c8181e08d9a9f9a885250487c24cc00ba45e4c.webp)
 - [ ] 点击左上角的 + 号，选择 Install a Windows game from an executable
 - [ ] 填写游戏名称：Arknights
 - [ ] 点击 Install，选择刚才下载的 .exe 安装包

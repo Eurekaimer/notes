@@ -14,7 +14,7 @@ tags:
 
 ## Workflow
 
-![CS50x-workflow](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-IMGBED-04@main/objects/default/sha256/c9/94/c9940821e97fd7cbef8138b08c36a541dad9d69c0e2d0c5203b60050bbf92620.png)
+![CS50x-workflow](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/0b/a1/0ba121d449d677dc8ab161f4ebe83a855626a27aa85585f1bca3a740cec6be72.webp)
 
 采用如下工作流：
 
