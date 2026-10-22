@@ -135,4 +135,4 @@ return 0 if sus_update(0, score, opponent_score) >= GOAL else 6
 
 在绝对的运气面前策略似乎不太有效呢（欧皇发言 doge）
 
-![hog](https://cdn.jsdelivr.net/gh/Eurekaimer/TOUKO-WEBP-01@main/objects/default/sha256/34/dd/34dd8e5a2f2d11cb3db753886f07a896ffddccad87ef4d2e95c9b6a5a145bbe3.webp)
+![hog](https://img.eurekaimer.icu/objects/default/sha256/34/dd/34dd8e5a2f2d11cb3db753886f07a896ffddccad87ef4d2e95c9b6a5a145bbe3.webp)
