@@ -50,5 +50,5 @@ The video was published on [YouTube](https://www.youtube.com/watch?v=RaHRvnb0dY8
 - 查看所有高亮：按 <kbd>gh</kbd>
 - 删除高亮：点击高亮处 -> 按 <kbd>dh</kbd>
 
-![20260216174454](https://img.eurekaimer.icu/objects/default/sha256/0e/db/0edbc0321b1ab59e780c27ebbc36675b085cf888457d71038f816d5c46ea03e5.webp)
+![20260216174454](https://img.eurekaimer.icu/objects/default/c643f2c7-0e4a-4d71-a410-021a427c5582.webp)
 

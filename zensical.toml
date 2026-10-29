@@ -293,12 +293,12 @@ name = "GitHub"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/qq"
-link = "https://img.eurekaimer.icu/objects/default/sha256/1e/a7/1ea78440f5ed224131662c762a0198a573eb2fd77ce91e83f12156cc3bbdb75b.webp" 
+link = "https://img.eurekaimer.icu/objects/default/a69390b0-3e05-41d0-906f-9ae66a96dd72.webp" 
 name = "QQ"
 
 [[project.extra.social]]
 icon = "simple/wechat"
-link = "https://img.eurekaimer.icu/objects/default/sha256/53/d6/53d681d9a1e5b70cfc6c4d9515c0e3360b62e8f6d244594175d762bc725ccef6.webp" 
+link = "https://img.eurekaimer.icu/objects/default/b463e505-e743-4907-9ec6-9eba211aa5fb.webp" 
 name = "WeChat"
 
 [[project.extra.social]]

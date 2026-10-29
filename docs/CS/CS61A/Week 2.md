@@ -184,7 +184,7 @@ def compose1(f, g):
 
 由于它没有 return 部分，使用 lambda 只能创建简单的函数，在 Python 中也不经常用，但是对于其他语言常用（我学 Python 和 R 的，我可以不看吗？）
 
-![lambda-def](https://img.eurekaimer.icu/objects/default/sha256/1d/fd/1dfd3b370b8a31ca4eda1f6d4cd9d4d91f22f788889038ea1bbb03eff20a3d8f.webp)
+![lambda-def](https://img.eurekaimer.icu/objects/default/8e479925-e64d-437a-aa3d-804f7e7a8269.webp)
 
 Only the def statement gives the function an intrinsic name.
 
@@ -277,7 +277,7 @@ Remark: not calculate all subexpressions
 
 >To express certain general patterns as named concepts, we will need to construct functions that can accept other functions as arguments or return functions as values. **Functions that manipulate functions are called higher-order functions**. This section shows how higher-order functions can serve as powerful abstraction mechanisms, vastly increasing the expressive power of our language.
 
-![higher-order function](https://img.eurekaimer.icu/objects/default/sha256/bf/23/bf233677ea8d29b4a5f783fcb157b727189b607f77e8ce83dc35c2851c2077b4.webp)
+![higher-order function](https://img.eurekaimer.icu/objects/default/642a051a-65e8-407e-82ab-7ca3af98fa6a.webp)
 
 注：就好像泛函一样，只是这里叫高阶函数
 
@@ -514,7 +514,7 @@ pass
 
 #### Q6: Double Trouble
 
-![env-fig](https://img.eurekaimer.icu/objects/default/sha256/a4/55/a4552adac8a2f3bb3885685c12125224e74bd9d9128340c7c49700e4a48e81d1.png)
+![env-fig](https://img.eurekaimer.icu/objects/default/8f8c987c-1b56-44df-b0b3-e09f5046164e.png)
 
 ## HW02(30min)
 
