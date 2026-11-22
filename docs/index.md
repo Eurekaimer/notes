@@ -51,12 +51,12 @@ hide: title
 </span>
 </div>
 
-[请我喝下午茶](https://img.eurekaimer.icu/objects/default/841bce14-4585-4443-8bc4-d9c665e5927e.webp){ .md-button .md-button--primary }
+[请我喝下午茶](https://img.eurekaimer.icu/20261018100051-0019.webp){ .md-button .md-button--primary }
 
 </div>
 
 <div style="text-align: right;">
-    <img src="https://img.eurekaimer.icu/objects/default/ef22dded-dfbc-4ec1-b995-00ecc67cc17f.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
+    <img src="https://img.eurekaimer.icu/20261018100054-0002.png" alt="Eurekaimer Signature" style="width: 220px; opacity: 0.9; mix-blend-mode: multiply;">
 </div>
 
 </div>

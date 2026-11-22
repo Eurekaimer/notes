@@ -14,7 +14,7 @@ tags:
 
 ## Workflow
 
-![CS50x-workflow](https://img.eurekaimer.icu/objects/default/f51c6444-c898-47b1-b4c7-8d57c4a7d9fa.webp)
+![CS50x-workflow](https://img.eurekaimer.icu/20261018100054-0040.webp)
 
 采用如下工作流：
 

@@ -10,7 +10,7 @@ tags:
 
 最后你会得到下面的结果：
 
-![20260213174002](https://img.eurekaimer.icu/objects/default/a71c2309-0c6c-47d7-9244-29bf3c7d05f8.webp)
+![20260213174002](https://img.eurekaimer.icu/20261018100051-0022.webp)
 
 ## 准备工作：修改系统配置
 
@@ -58,7 +58,7 @@ sudo nixos-rebuild switch --flake .
 - [ ] 打开 Lutris
 - [ ] 设置兼容层（Runner options）
 	- [ ] 在 Wine version 下拉菜单中，选择刚才下载的 dwproton（例如 dwproton-10.0-17）
-	- [ ] ![20260213174103](https://img.eurekaimer.icu/objects/default/61c9a889-bd04-4a5a-8fdf-488da053d320.webp)
+	- [ ] ![20260213174103](https://img.eurekaimer.icu/20261018100052-0006.webp)
 - [ ] 点击左上角的 + 号，选择 Install a Windows game from an executable
 - [ ] 填写游戏名称：Arknights
 - [ ] 点击 Install，选择刚才下载的 .exe 安装包

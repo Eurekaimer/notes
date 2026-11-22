@@ -98,7 +98,7 @@ horse(mask)
 
 有一种当年玩指针的美感（只要正确地指向就可以明白，这里的环境图确实是加深理解的一种手段）
 
-![env-horse-mask](https://img.eurekaimer.icu/objects/default/08d7dbb4-622e-4a84-83e3-1d2d453be015.webp)
+![env-horse-mask](https://img.eurekaimer.icu/20261018100050-0001.webp)
 
 #### Implementing Functions
 

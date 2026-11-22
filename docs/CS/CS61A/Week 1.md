@@ -86,7 +86,7 @@ max(f(2, g(h(1, 5), 3)), 4)
 
 Answer: 3
 
-![hint](https://img.eurekaimer.icu/objects/default/88c9763a-ea8e-465b-8dc7-d27c73e635de.webp)
+![hint](https://img.eurekaimer.icu/20261018100054-0021.webp)
 
 #### Environment Diagrams
 
@@ -117,7 +117,7 @@ None  None
 + Pure function
 + Non-pure function
 
-![print](https://img.eurekaimer.icu/objects/default/0bde60da-9477-43ac-a0d3-499ab207f93c.webp)
+![print](https://img.eurekaimer.icu/20261018100054-0001.webp)
 
 ## Lab 00(10min)
 
@@ -125,7 +125,7 @@ None  None
 
 纪念一下第一次使用 [ok](https://cs61a.org/articles/using-ok/) 的 Lab
 
-![lab00](https://img.eurekaimer.icu/objects/default/dde150ef-ffdf-49f6-a5cf-82f0828877e6.png)
+![lab00](https://img.eurekaimer.icu/20261018100052-0000.png)
 
 ## HW01(15min)
 

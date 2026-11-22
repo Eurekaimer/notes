@@ -109,7 +109,7 @@ rm -rf mytest
  cat test2.txt|awk '{print $3}'
 ```
 
-![wsl_file_system](https://img.eurekaimer.icu/objects/default/ad1d6f90-8cc3-45d7-9baf-ce5c2213783d.webp)
+![wsl_file_system](https://img.eurekaimer.icu/20261018100050-0026.webp)
 
 ## Lab 2
 
@@ -412,7 +412,7 @@ hdfs dfs -ls /output
 hdfs dfs -cat /output/part-r-00000
 ```
 
-![lab2](https://img.eurekaimer.icu/objects/default/ac4496d2-e325-4d88-8ed6-04a573a9e458.webp)
+![lab2](https://img.eurekaimer.icu/20261018100054-0027.webp)
 
 !!! note "彩蛋"
     如果统计结果正确，那么说明你的 Hadoop 伪分布式集群就搭建成功并验证完成了！
